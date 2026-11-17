@@ -1,0 +1,17 @@
+{
+  "recordedUTC": "2026-11-16T23:01:11.579372+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> original wild fiber orders and different contributions.",
+  "discharged": "For every original Gamma1 residue field in characteristic two or three away from N, with N greater than three, every positive j place has exact j order twelve or six respectively. Its different order is at least fourteen or seven respectively. Consequently six times the sum of differential orders over the actual original j=0 fiber is at least seven times the signed Gamma1 index in each wild characteristic. The normal fields, finite fiber charts, torsion actions, local differential generation and order divisibility are proved; none is retained as a premise in these endpoints.",
+  "remaining": "The original residue canonical-degree and Hurwitz comparison, the remaining small levels and reverse genus remain open in production. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "route": "The November 16 public-source refresh found no directly reusable complete missing Dubon endpoint within its inspected scope. Native dihedral and order-twelve marks act freely on original exact-order point sign classes for N greater than three, avoiding a new finite-group classification or adapted torsion basis. Native finite normal-field descent, wild different bounds and exact separating-coordinate degree sums force the original local orders and summed contributions. Two independent scratch scopes pass 64 proof-VALUE dependencies, exhaustive public/private/generated axiom checks and sixteen linters per module. Failed versions and diagnostics are retained. Promotion changes imports only; statements, proof bodies and comments stay frozen. Exact ownership reconciliation and sequential foundation/paper verification remain mandatory. Paper, root pins, proof limits and owner-only BAT are unchanged.",
+  "receipts": {
+    "source-marked-wild-different-1-scratch-receipt.json": "580CD8148D8866D29C24D1EB0CF44F08CF2D88017F78F20A25E3BEB02A60EA91",
+    "source-marked-wild-contribution-1-scratch-receipt.json": "832499BDEF972C68C36A12BB067A01CDD829D29AD4D1CC8B723729E342728593"
+  },
+  "modules": 24,
+  "queries": 33,
+  "exhaustiveScratchChecks": 84,
+  "proofValueChecks": 64,
+  "scopes": 2,
+  "productionMutation": false
+}

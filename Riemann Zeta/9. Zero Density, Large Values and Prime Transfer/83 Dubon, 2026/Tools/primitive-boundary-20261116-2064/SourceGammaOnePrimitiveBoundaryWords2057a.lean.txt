@@ -1,0 +1,63 @@
+import SourceGammaOnePrimitiveBoundaryOperators2056a
+
+/-! DUB-17/18 -> all-weight association -> actual quotient character
+-> boundary-annihilating word. The constructed finite boundary operators
+intertwine every word in the original homogeneous Hecke operators.
+Consequently an operator identity in this explicit boundary space gives
+the exact parabolic-range hypothesis of the proved character descent. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology
+open scoped MatrixGroups
+variable (Q N w : ℕ)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+
+/-- The actual good-prime operators on primitive cusp values, retaining
+the original degree-w homogeneous diagonal coefficient action. -/
+def binaryPrimitiveBoundaryPrimeOperators : sourceBinaryHeckePrime (Q * N) →
+    Module.End (ZMod N) ((SL(2, ℤ) ⧸ Gamma1 M) → V) :=
+  fun ell => letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+    primitiveBoundaryHecke M ell.val
+      (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]))
+
+theorem binaryPrimitiveCuspBoundary_word
+    (b : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N))) (x : H1 C) :
+    binaryPrimitiveCuspBoundary Q N w
+      (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b x) =
+      FreeAlgebra.lift ℤ (binaryPrimitiveBoundaryPrimeOperators Q N w) b
+        (binaryPrimitiveCuspBoundary Q N w x) := by
+  apply sourceHeckeWord_intertwine_addHom _ _
+    (binaryPrimitiveCuspBoundary Q N w).toAddMonoidHom
+  intro ell y
+  exact binaryPrimitiveCuspBoundary_prime Q N w ell y
+
+theorem binaryPrimitiveBoundary_word_zero_parabolic
+    (Q p n w : ℕ) [Fact p.Prime] (hlarge : 3 < p)
+    (b : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * p ^ (n + 1))))
+    (hb : FreeAlgebra.lift ℤ (binaryPrimitiveBoundaryPrimeOperators Q (p ^ (n + 1)) w) b = 0)
+    (y : H1 (Rep.trivial (ZMod (p ^ (n + 1))) (Gamma1 (Q * (p ^ (n + 1)) ^ 2))
+      (sourceBinaryCoefficientRep (ZMod (p ^ (n + 1))) Q w))) :
+    FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) w) b y ∈
+      binaryParabolicH1 Q (p ^ (n + 1)) w := by
+  have hzero : (binaryPrimitiveCuspBoundary Q (p ^ (n + 1)) w).comp
+      (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) w) b) = 0 := by
+    apply LinearMap.ext
+    intro x
+    change binaryPrimitiveCuspBoundary Q (p ^ (n + 1)) w
+      (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) w) b x) = 0
+    rw [binaryPrimitiveCuspBoundary_word, hb]
+    rfl
+  exact (binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero Q p n w hlarge b).mpr
+    hzero y
+
+theorem binaryPrimitivePrimePowerBoundary_finite (Q p n w : ℕ)
+    [NeZero Q] [Fact p.Prime] :
+    Finite ((SL(2, ℤ) ⧸ Gamma1 (Q * (p ^ (n + 1)) ^ 2)) →
+      sourceBinaryCoefficientRep (ZMod (p ^ (n + 1))) Q w) := by
+  letI := sourceBinaryPrimePowerCoefficient_finite p n Q w Fact.out
+  infer_instance
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

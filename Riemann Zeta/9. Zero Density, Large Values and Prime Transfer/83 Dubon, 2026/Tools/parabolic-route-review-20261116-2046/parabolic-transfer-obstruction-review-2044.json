@@ -1,0 +1,20 @@
+{
+  "recordedUTC": "2026-11-17T00:20:06.197821+00:00",
+  "sources": [
+    {
+      "url": "https://math.stanford.edu/~conrad/vigregroup/vigre03/moduli.pdf",
+      "author": "James Parson",
+      "section": "8.1",
+      "page": 14,
+      "review": "Web PDF text, lines 798\u2013828: genus one, degree-five etale cover and induced isogeny."
+    },
+    {
+      "url": "https://math.berkeley.edu/~ribet/Articles/icm.pdf",
+      "author": "Kenneth Ribet",
+      "review": "Search-indexed primary PDF passage on Shimura subgroup; direct PDF open had no readable text."
+    }
+  ],
+  "boundary": "Classical obstruction and route assessment, not a formal Lean counterexample. No frozen paper or source acceptance change.",
+  "localFactorization": "SourceGammaOneOriginalLevelFactor2044b.lean",
+  "conditionalCharacterScope": "source-gammaone-boundary-word-1-audit-config.json"
+}

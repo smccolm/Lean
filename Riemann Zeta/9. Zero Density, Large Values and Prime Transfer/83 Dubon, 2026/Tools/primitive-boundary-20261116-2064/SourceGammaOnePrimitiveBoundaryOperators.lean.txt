@@ -1,0 +1,72 @@
+import SourceGammaOnePrimitiveBoundaryHeckeRows
+
+/-! DUB-17/18 -> all-weight association -> actual finite Gamma1
+quotient character -> boundary annihilator. Construct the boundary
+operator from the proved integer rows, on the finite original coset-value
+space. Its exact comparison with native homogeneous H1 is proved below.
+No boundary polynomial or character-value unit is postulated. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology MulAction
+open scoped MatrixGroups
+variable (M d : ℕ) [NeZero d]
+private local instance : (sourceGammaOneHeckeUpper M d).FiniteIndex :=
+  sourceGammaOneHeckeUpper_finiteIndex M d
+private local instance (u : Gamma1 M) :
+    Fintype (orbitRel.Quotient (Subgroup.zpowers u)
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d)) := Fintype.ofFinite _
+
+private def boundaryTarget (q : SL(2, ℤ) ⧸ Gamma1 M) :=
+  Classical.choose (primitiveBoundaryHecke_exists_integer_rows M d q)
+
+private def boundaryMultiplicity (q : SL(2, ℤ) ⧸ Gamma1 M) :=
+  Classical.choose (Classical.choose_spec (primitiveBoundaryHecke_exists_integer_rows M d q))
+
+variable {R A : Type} [CommRing R] [AddCommGroup A] [Module R A]
+
+/-- The genuine integer-row boundary action, with the full supplied
+coefficient endomorphism applied to each original cusp value. -/
+def primitiveBoundaryHecke (b : Module.End R A) :
+    Module.End R ((SL(2, ℤ) ⧸ Gamma1 M) → A) where
+  toFun f q := ∑ o : orbitRel.Quotient (Subgroup.zpowers (primitiveCuspGenerator M q))
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d),
+    boundaryMultiplicity M d q o • b (f (boundaryTarget M d q o))
+  map_add' f g := by
+    funext q
+    simp only [Pi.add_apply, map_add, smul_add, Finset.sum_add_distrib]
+  map_smul' a f := by
+    funext q
+    change (∑ o, boundaryMultiplicity M d q o • b (a • f (boundaryTarget M d q o))) =
+      a • ∑ o, boundaryMultiplicity M d q o • b (f (boundaryTarget M d q o))
+    rw [Finset.smul_sum]
+    apply Finset.sum_congr rfl
+    intro o _
+    rw [map_smul]
+    exact smul_comm _ _ _
+
+theorem primitiveBoundaryHecke_hom_values (b : Module.End R A)
+    (x : H1 (Rep.trivial R (Gamma1 M) A)) :
+    (fun q => (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+      (sourceGammaOneConstantHeckeH1 R A M d b x)
+        (Additive.ofMul (primitiveCuspGenerator M q))) =
+      primitiveBoundaryHecke M d b
+        (fun q => (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x
+          (Additive.ofMul (primitiveCuspGenerator M q))) := by
+  funext q
+  exact (Classical.choose_spec (Classical.choose_spec
+    (primitiveBoundaryHecke_exists_integer_rows M d q))) b x
+
+theorem binaryPrimitiveCuspBoundary_prime (Q N w : ℕ)
+    (ell : sourceBinaryHeckePrime (Q * N))
+    (x : H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2))
+      (sourceBinaryCoefficientRep (ZMod N) Q w))) :
+    letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+    binaryPrimitiveCuspBoundary Q N w (sourceGammaOnePrimeOperators Q N w ell x) =
+      primitiveBoundaryHecke (Q * N ^ 2) ell.val
+        (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]))
+        (binaryPrimitiveCuspBoundary Q N w x) := by
+  letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+  exact primitiveBoundaryHecke_hom_values (Q * N ^ 2) ell.val _ x
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

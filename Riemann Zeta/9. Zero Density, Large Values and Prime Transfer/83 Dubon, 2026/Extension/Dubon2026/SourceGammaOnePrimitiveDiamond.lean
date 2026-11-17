@@ -1,0 +1,59 @@
+import Dubon2026.SourceGammaOnePrimitiveCuspConjugation
+import Dubon2026.SourceGammaOneDiamondH1
+
+/-! DUB-17/18 -> original all-weight association -> joint arithmetic
+realization -> the original diamond normalization. Literal Gamma0
+normalizer conjugation preserves primitive widths, so its native H1
+action has an exact primitive boundary formula even with torsion. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary groupCohomology
+open scoped MatrixGroups
+
+/-- The actual normalizer preserves the primitive cusp width. -/
+theorem primitiveCuspWidth_diamond (M : ℕ) (g : Gamma0 M) (δ : SL(2, ℤ)) :
+    primitiveCuspWidth M (((g.val * δ)⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) =
+      primitiveCuspWidth M ((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) := by
+  apply Nat.dvd_antisymm
+  · rw [primitiveCuspWidth_dvd_iff_translation]
+    have h := sourceGammaOneDiamond_conj_mem M g (primitiveCuspTranslation M δ)
+    convert h using 1
+    change (g.val * δ) * ModularGroup.T ^ _ * (g.val * δ)⁻¹ =
+      g.val * (δ * ModularGroup.T ^ _ * δ⁻¹) * g.val⁻¹
+    group
+  · rw [primitiveCuspWidth_dvd_iff_translation]
+    have h := sourceGammaOneDiamond_conj_mem M g⁻¹ (primitiveCuspTranslation M (g.val * δ))
+    convert h using 1
+    change δ * ModularGroup.T ^ _ * δ⁻¹ =
+      g.val⁻¹ * ((g.val * δ) * ModularGroup.T ^ _ * (g.val * δ)⁻¹) * (g.val⁻¹)⁻¹
+    group
+
+/-- Literal normalizer conjugation carries the primitive loop to the
+primitive loop at the transformed cusp, with no width multiplier. -/
+theorem primitiveCuspTranslation_diamond (M : ℕ) (g : Gamma0 M) (δ : SL(2, ℤ)) :
+    primitiveCuspTranslation M (g.val * δ) =
+      sourceGammaOneDiamondConjugation M g (primitiveCuspTranslation M δ) := by
+  apply Subtype.ext
+  change (g.val * δ) * ModularGroup.T ^
+      primitiveCuspWidth M (((g.val * δ)⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) *
+      (g.val * δ)⁻¹ = g.val * (δ * ModularGroup.T ^
+        primitiveCuspWidth M ((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) * δ⁻¹) * g.val⁻¹
+  rw [primitiveCuspWidth_diamond]
+  group
+
+/-- The native normalizer H1 action has exactly its original primitive
+cusp formula, with the coefficient endomorphism retained. -/
+theorem primitiveCuspValue_native_diamond (R A : Type) [CommRing R]
+    [AddCommGroup A] [Module R A] (M : ℕ) (g : Gamma0 M) (b : Module.End R A)
+    (x : H1 (Rep.trivial R (Gamma1 M) A)) (δ : SL(2, ℤ)) :
+    primitiveCuspValue M ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+      (sourceGammaOneDiamondH1 R A M g b x)) δ =
+      b (primitiveCuspValue M ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x)
+        (g.val * δ)) := by
+  change (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+    (sourceGammaOneDiamondH1 R A M g b x) (Additive.ofMul (primitiveCuspTranslation M δ)) = _
+  rw [sourceGammaOneDiamondH1_hom_apply]
+  simp only [primitiveCuspValue, primitiveCuspTranslation_diamond]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

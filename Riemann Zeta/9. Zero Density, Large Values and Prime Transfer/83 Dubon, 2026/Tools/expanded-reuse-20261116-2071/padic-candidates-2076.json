@@ -1,0 +1,44 @@
+{
+  "checkedUTC": "2026-11-17T01:33:06.576792+00:00",
+  "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "files": [
+    {
+      "path": "PadicHodge/Arithmetic.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/NumberTheory/PadicHodge/Arithmetic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__OAI__NumberTheory__PadicHodge__Arithmetic.lean.txt",
+      "sha256": "8A42AC9E0A08FFE1245366148512551C36ED12886FA3445808FF269063BCEFD5"
+    },
+    {
+      "path": "PadicHodge/GeometricComparison.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/NumberTheory/PadicHodge/GeometricComparison.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__OAI__NumberTheory__PadicHodge__GeometricComparison.lean.txt",
+      "sha256": "B965762749609AE3B69CC10ED0FB746F584E19DBCE599C1AD17D45351993F926"
+    },
+    {
+      "path": "PadicHodge/GeometricComparison/AlgebraicHeckeComparisons.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/NumberTheory/PadicHodge/GeometricComparison/AlgebraicHeckeComparisons.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__OAI__NumberTheory__PadicHodge__GeometricComparison__AlgebraicHeckeComparisons.lean.txt",
+      "sha256": "90A347059DB07BFD432ED2E8F2945808342968A4368CACAFA9D501CCE2FFCFD8"
+    },
+    {
+      "path": "PadicHodge/GeometricComparison/AbelianGlobalFilteredComparisons.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/NumberTheory/PadicHodge/GeometricComparison/AbelianGlobalFilteredComparisons.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__OAI__NumberTheory__PadicHodge__GeometricComparison__AbelianGlobalFilteredComparisons.lean.txt",
+      "sha256": "3F529E2FCE10382D799090DF52795A0BF677D58FBFF8C87B4584326CC9065728"
+    },
+    {
+      "path": "PadicHodge/WeakAdmissibility/Interface.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/NumberTheory/PadicHodge/WeakAdmissibility/Interface.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__OAI__NumberTheory__PadicHodge__WeakAdmissibility__Interface.lean.txt",
+      "sha256": "FACB8093E785E13FF4A7D50C9039924D41E63058AC06350C7527471C506DC0A5"
+    },
+    {
+      "path": "PadicHodge/WeakAdmissibility/FilteredRepresentations.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/NumberTheory/PadicHodge/WeakAdmissibility/FilteredRepresentations.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__OAI__NumberTheory__PadicHodge__WeakAdmissibility__FilteredRepresentations.lean.txt",
+      "sha256": "590F02045F5DEE038A59EC4B884D89A4C4DF7D293C70173269BB38B670461B17"
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

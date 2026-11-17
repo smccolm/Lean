@@ -1,0 +1,50 @@
+import SourceGammaOneGeometricHeckeFamily
+import Dubon2026.SourceGammaOneDiamondQuotientCharacterAssembly
+
+/-! DUB-17/18 -> original all-weight association -> original finite Hecke
+character. The actual quotient operators now follow from proved original
+geometry. This consumer reduces the three geometric/transfer premises of
+the native assembly to the sole remaining parabolic transfer premise.
+The original prime range and exceptional integer are preserved exactly. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+open scoped ValuativeRel
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+attribute [local instance] specializationResidueAlgebra
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+theorem exists_gammaOne_diamond_quotient_original_character_of_transfer
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (hcop : IsCoprime (p : ℤ) (sourcePrimitiveParabolicExceptionalInteger f hk))
+    (hlift : sourceGammaOneIntegralParabolicTransfer Q N w) :
+    sourceQuotientOperatorCharacterData
+      (binaryTateDiamondRelations Q p n w).mkQ (binaryTatePrimeOperators Q p n w)
+      ((sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+        (sourceGammaOneOriginalHeckeWord Q N w).toRingHom) := by
+  obtain ⟨Hq, hH⟩ := exists_gammaOne_diamond_quotient_hecke_family Q p n w
+  refine ⟨Hq, hH, ?_⟩
+  exact binaryDiamondQuotient_original_character_of_transfer_away Q p n f hk hlarge τ hcop
+    Hq hH hlift
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

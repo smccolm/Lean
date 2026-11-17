@@ -1,0 +1,75 @@
+import Dubon2026.SourceGammaOnePrimitiveFixedOrbit
+import Dubon2026.SourceGammaOnePrimitivePrimeOrbits
+import Dubon2026.SourceGammaOnePrimeHeckeCardinality
+import Mathlib.GroupTheory.Transfer
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> primitive boundary Frobenius. The native Hecke-coset count,
+unique fixed coset and prime-period dichotomy give exactly two actual
+cusp orbits. This removes the orbit-count assumption from the impending
+primitive two-term boundary trace; the trace and Galois realization are
+not inferred from the count alone. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup MulAction
+open scoped MatrixGroups
+
+/-- There are exactly two actual primitive cusp orbits in a good-prime
+Gamma1 Hecke correspondence: one fixed orbit and one prime-length orbit. -/
+theorem primitiveCuspHecke_orbit_card_two (M : ℕ) [NeZero M]
+    (q : SL(2, ℤ) ⧸ Gamma1 M) (ell : sourceBinaryHeckePrime M) :
+    Nat.card (orbitRel.Quotient (Subgroup.zpowers (primitiveCuspGenerator M q))
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M ell.val)) = 2 := by
+  classical
+  letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+  let K := sourceGammaOneHeckeUpper M ell.val
+  let u := primitiveCuspGenerator M q
+  let O := orbitRel.Quotient (Subgroup.zpowers u) (Gamma1 M ⧸ K)
+  letI : K.FiniteIndex := sourceGammaOneHeckeUpper_finiteIndex M ell.val
+  letI : Fintype O := Fintype.ofFinite _
+  obtain ⟨x0, hx0⟩ := primitiveCuspHecke_exists_fixed M q ell
+  let o0 : O := Quotient.mk _ x0
+  have hp0 : Function.minimalPeriod (u • ·) x0 = 1 :=
+    Function.minimalPeriod_eq_one_iff_isFixedPt.mpr hx0
+  have hz0 : ∀ z : Subgroup.zpowers u, z • x0 = x0 := by
+    intro z
+    obtain ⟨j, hj⟩ := Subgroup.mem_zpowers_iff.mp z.property
+    change z.val • x0 = x0
+    rw [← hj]
+    apply MulAction.zpow_smul_eq_iff_minimalPeriod_dvd.mpr
+    simpa only [hp0, Nat.cast_one] using (one_dvd j)
+  have hout : o0.out = x0 := by
+    have hrel : o0.out ∈ orbit (Subgroup.zpowers u) x0 :=
+      orbitRel_apply.mp (Quotient.mk_out _)
+    obtain ⟨z, hz⟩ := mem_orbit_iff.mp hrel
+    rw [← hz]
+    exact hz0 z
+  have hpout : Function.minimalPeriod (u • ·) o0.out = 1 := hout ▸ hp0
+  have hother : ∀ o : O, o ≠ o0 → Function.minimalPeriod (u • ·) o.out = ell.val := by
+    intro o hne
+    rcases primitiveCuspHecke_period_one_or_prime M ell.val ell.property.1 q o.out with h | h
+    · have hx := Function.minimalPeriod_eq_one_iff_isFixedPt.mp h
+      have he := primitiveCuspHecke_fixed_unique M q ell hx hx0
+      have ho : o = o0 := by
+        calc
+          o = Quotient.mk _ o.out := (Quotient.out_eq' o).symm
+          _ = Quotient.mk _ x0 := congrArg (Quotient.mk _) he
+          _ = o0 := rfl
+      exact (hne ho).elim
+    · exact h
+  have hsum := Subgroup.index_eq_sum_minimalPeriod K u
+  rw [Subgroup.index_eq_card, gammaOne_prime_hecke_cosets_card M ell.val
+    ell.property.1 ell.property.2] at hsum
+  rw [← Finset.add_sum_erase _ _ (Finset.mem_univ o0), hpout,
+    Finset.sum_congr rfl (fun o ho => hother o (Finset.mem_erase.mp ho).1),
+    Finset.sum_const, smul_eq_mul] at hsum
+  have herase : (Finset.univ.erase o0).card = 1 := by
+    have hp := ell.property.1.pos
+    nlinarith
+  have hcard := Finset.card_erase_add_one (Finset.mem_univ o0)
+  change Nat.card O = 2
+  rw [Nat.card_eq_fintype_card]
+  simpa only [herase, Finset.card_univ] using hcard.symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

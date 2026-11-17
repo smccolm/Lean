@@ -1,0 +1,84 @@
+import Dubon2026.SourceGammaOnePrimitiveCuspBoundary
+
+/-! DUB-17/18 -> original all-weight association -> finite quotient
+Hecke character -> boundary-annihilating word. The actual homogeneous
+Gamma1 H1 module has a finite primitive-cusp boundary map with kernel
+exactly its independently defined parabolic submodule. This identifies
+the concrete operator equation still to prove for the boundary word;
+neither that word nor its unit character value is constructed here. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology
+open scoped MatrixGroups
+variable (Q N w : ℕ)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+
+/-- Evaluate the original H1 class at the primitive cusp generator of
+each actual coset. The coefficient module retains its full degree w. -/
+def binaryPrimitiveCuspBoundary :
+    H1 C →ₗ[ZMod N] ((SL(2, ℤ) ⧸ Gamma1 M) → V) where
+  toFun x q := (H1IsoOfIsTrivial C).hom x
+    (Additive.ofMul (primitiveCuspGenerator M q))
+  map_add' x y := by
+    funext q
+    rw [map_add]
+    rfl
+  map_smul' a x := by
+    funext q
+    rw [map_smul]
+    rfl
+
+theorem binaryPrimitiveCuspBoundary_eq_zero_iff (h2 : IsUnit (2 : ZMod N))
+    (x : H1 C) :
+    binaryPrimitiveCuspBoundary Q N w x = 0 ↔ x ∈ binaryParabolicH1 Q N w := by
+  constructor
+  · intro hx
+    change ∀ γ : Gamma1 M, γ.val.val.trace ^ 2 = 4 →
+      (H1IsoOfIsTrivial C).hom x (Additive.ofMul γ) = 0
+    exact character_parabolic_of_primitive_boundary M h2 ((H1IsoOfIsTrivial C).hom x)
+      (fun q => congrFun hx q)
+  · intro hx
+    funext q
+    exact hx (primitiveCuspGenerator M q) (primitiveCuspGenerator_trace M q)
+
+theorem binaryPrimitiveCuspBoundary_ker (h2 : IsUnit (2 : ZMod N)) :
+    (binaryPrimitiveCuspBoundary Q N w).ker = binaryParabolicH1 Q N w := by
+  ext x
+  exact binaryPrimitiveCuspBoundary_eq_zero_iff Q N w h2 x
+
+theorem binaryHeckeWord_parabolic_iff_primitive_boundary_zero
+    (h2 : IsUnit (2 : ZMod N))
+    (b : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N))) :
+    (∀ y : H1 C, FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b y ∈
+      binaryParabolicH1 Q N w) ↔
+    (binaryPrimitiveCuspBoundary Q N w).comp
+      (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b) = 0 := by
+  constructor
+  · intro hb
+    apply LinearMap.ext
+    intro y
+    exact (binaryPrimitiveCuspBoundary_eq_zero_iff Q N w h2 _).mpr (hb y)
+  · intro hb y
+    apply (binaryPrimitiveCuspBoundary_eq_zero_iff Q N w h2 _).mp
+    exact LinearMap.congr_fun hb y
+
+theorem binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero
+    (Q p n w : ℕ) [Fact p.Prime] (hlarge : 3 < p)
+    (b : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * p ^ (n + 1)))) :
+    (∀ y : H1 (Rep.trivial (ZMod (p ^ (n + 1))) (Gamma1 (Q * (p ^ (n + 1)) ^ 2))
+        (sourceBinaryCoefficientRep (ZMod (p ^ (n + 1))) Q w)),
+      FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) w) b y ∈
+        binaryParabolicH1 Q (p ^ (n + 1)) w) ↔
+    (binaryPrimitiveCuspBoundary Q (p ^ (n + 1)) w).comp
+      (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) w) b) = 0 := by
+  have h6 := sourcePrimePower_six_isUnit p n Fact.out hlarge
+  have h23 : IsUnit ((2 : ZMod (p ^ (n + 1))) * 3) := by
+    norm_num only [show (2 : ZMod (p ^ (n + 1))) * 3 = 6 by norm_num]
+    exact h6
+  exact binaryHeckeWord_parabolic_iff_primitive_boundary_zero Q (p ^ (n + 1)) w
+    (isUnit_of_mul_isUnit_left h23) b
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

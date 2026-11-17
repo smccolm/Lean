@@ -1,0 +1,26 @@
+[
+  {
+    "version": "SourceGammaOnePrimitiveBoundaryOperators2056a",
+    "module": "SourceGammaOnePrimitiveBoundaryOperators",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperators2056a.lean",
+    "originalSha256": "223AF7C5F52B47251F6A8D6D282BCF2DB960970FD066FB2177480FE9A9840926",
+    "canonicalSha256": "55D6016408362F4EBE3840FEB6E55CF8B1453C887224B497549694FB7F72295B",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOnePrimitiveBoundaryWords2057a",
+    "module": "SourceGammaOnePrimitiveBoundaryWords",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords2057a.lean",
+    "originalSha256": "0695FDB6D6297617B953D947F94B653660A2E8B7857459C7C0B8CBA8AE491582",
+    "canonicalSha256": "9A463B7FD79E4BA4396B0663D351B3371F1EDE7FCBE8C7913BF02ACB4DEB718F",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneFiniteBoundaryCharacter2058a",
+    "module": "SourceGammaOneFiniteBoundaryCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryCharacter2058a.lean",
+    "originalSha256": "82B2986A2E5AB84E43C001AC2DE35A098DD079ECE6C47FF39C17FA0A2160D5EA",
+    "canonicalSha256": "884FF86074F456D6D3C9A3E6377B46231C3D1994DD95BBB40BAB3D2D2C1F3993",
+    "mathematicalBodyIdentical": true
+  }
+]

@@ -1,0 +1,47 @@
+import SourceGammaOneFiniteBinaryBoundary
+import Dubon2026.SourceCosetTransfer
+
+/-! DUB-17/18 -> all-weight association -> the original finite Gamma1
+character -> boundary annihilator -> actual primitive-cusp Hecke action.
+The native H1 correspondence is regrouped by its literal cyclic coset
+orbits using Mathlib transfer. Every return time and coefficient action
+is retained; no boundary eigenvalue or annihilating polynomial is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology MulAction
+
+variable (R A : Type) [CommRing R] [AddCommGroup A] [Module R A]
+  (M d : ℕ) [NeZero d]
+private local instance : (sourceGammaOneHeckeUpper M d).FiniteIndex :=
+  sourceGammaOneHeckeUpper_finiteIndex M d
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) :=
+  Fintype.ofFinite _
+
+theorem constantHeckeH1_hom_orbit_sum
+    (b : Module.End R A) (x : H1 (Rep.trivial R (Gamma1 M) A)) (u : Gamma1 M) :
+    letI : Fintype (orbitRel.Quotient (Subgroup.zpowers u)
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d)) := Fintype.ofFinite _
+    (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+      (sourceGammaOneConstantHeckeH1 R A M d b x) (Additive.ofMul u) =
+      ∑ O : orbitRel.Quotient (Subgroup.zpowers u)
+          (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d),
+        b ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x
+          (Additive.ofMul (sourceGammaOneHeckeConjugation M d
+            ⟨O.out.out⁻¹ * u ^ Function.minimalPeriod (u • ·) O.out * O.out.out,
+              QuotientGroup.out_conj_pow_minimalPeriod_mem _ u O.out⟩))) := by
+  classical
+  letI : Fintype (orbitRel.Quotient (Subgroup.zpowers u)
+    (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d)) := Fintype.ofFinite _
+  let φ := b.toAddMonoidHom.comp
+    ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x)
+  let ψ : sourceGammaOneHeckeUpper M d →* Multiplicative A :=
+    (AddMonoidHom.toMultiplicativeRight φ).comp (sourceGammaOneHeckeConjugation M d)
+  have he := MonoidHom.transfer_eq_prod_quotient_orbitRel_zpowers_quot ψ u
+  rw [sourceTransfer_eq_coset_product] at he
+  have ha := congrArg Multiplicative.toAdd he
+  rw [toAdd_prod, toAdd_prod] at ha
+  rw [sourceGammaOneConstantHeckeH1_coefficient_hom_apply]
+  exact ha
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

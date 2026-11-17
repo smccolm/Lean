@@ -1,0 +1,57 @@
+{
+  "recordedUTC": "2026-11-16T22:49:39.382041+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation -> reverse genus -> characteristic-two/three weighted different contribution.",
+  "shorterRoute": "Reuse the existing dihedral and order-twelve finite orbit theorems on actual marked point sign classes. For N greater than three the actual quartic and cubic point identities exclude fixed classes, so the complicated cyclic-subgroup weighted census reduces to orbit sizes six and twelve. Native normal-field order divisibility descends. The original degree sum forces every positive local order to attain the upper bound. The previously audited local different estimates then yield the full weighted contribution.",
+  "assumptionsToDischarge": [
+    "Actual residue charts have no finite-field, torsion-count or inertia-lift premises.",
+    "Native free actions on primitive sign classes give cardinal factors six and twelve.",
+    "Every original positive j order divides six or twelve by restriction from the constructed normal field.",
+    "The finite positive j fiber has total multiplicity equal to the signed Gamma1 index.",
+    "Cardinal and degree equality force orders six or twelve at all positive places.",
+    "The full weighted original-field different contribution follows with no local-order, normal-field or differential certificate."
+  ],
+  "remaining": "Small levels N at most three and reverse genus remain required. Continue original association and higher continuation afterwards. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Sixteen focused modules compile. Exhaustive scratch audit, promotion and assembled verification pending. Both weighted endpoints assume precisely N greater than three and residue characteristic away from the level. No all-level genus claim is made.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+      "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDihedralThreeOrbits.lean",
+      "sha256": "A8D32BC10F6CAAB7F0043D4AE466E8B6411A64CC6C5515E2F310D769BD51264A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDihedralThreeCycles.lean",
+      "sha256": "5CA10136446B123C5FF49A5627E608EF14F37864B643A17902D0CF7782F12384"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharTwoMarkedElements.lean",
+      "sha256": "9C2A821E2D7B8A0BD412038B36CA3A961FFF26C9BBF567107D29419FF2778C51"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharTwoCubicPoint.lean",
+      "sha256": "0AE80C635B61CA39B17F25ACBBB208E0E574599C84BC58E3D5310CF3A2F7666B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeConjugation.lean",
+      "sha256": "AB51F316476EF540CA33C17B1DB16036A7D11A04670DAB64665F568FD81623E9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteEmbeddingRestriction.lean",
+      "sha256": "FD6A2B3D7FBB9559207108D49E2CA24908458B65AD3D63C44BA3A53FC7270D20"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveSeparatingCoordinateDegree.lean",
+      "sha256": "45271748ED6AE2C84B9740F8AC35829997C9ECC76228EFDBC1F0A34CC0D3D9F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+      "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientWildGenusCriterion.lean",
+      "sha256": "B58B6D5B18B3530A21D5B8129FFB7ABD45C4D09784751C1AD54937A486320DD7"
+    }
+  ]
+}

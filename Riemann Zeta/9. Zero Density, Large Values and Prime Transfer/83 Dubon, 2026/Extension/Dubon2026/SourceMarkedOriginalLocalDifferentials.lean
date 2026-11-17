@@ -1,0 +1,76 @@
+import Dubon2026.SourceMarkedOriginalSeparability
+import Dubon2026.SourceModularCoefficientDifferentials
+import Dubon2026.SourceCurveSeparatingLocalFinite
+import Dubon2026.SourceCurveFiniteCoordinateResidues
+import Dubon2026.SourceCurveIntegralDerivatives
+
+/-! DUB-17/18 -> reverse original genus -> wild differential descent.
+The original j series has nonzero q derivative in every characteristic.
+Its proved separability gives rank-one differentials. At a positive j
+place, the existing finite local chart and residue theorem prove that the
+actual uniformizer differential generates. These discharge the original
+field's hypotheses in the native unramified differential-order theorem. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open CongruenceSubgroup GammaOne SourceCurve SourceDifferential KaehlerDifferential
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+/-- The inherited coefficient algebra of the original Laurent field. -/
+private abbrev originalLocalDifferentialAlgebra : Algebra kk F := (F).toSubalgebra.algebra
+attribute [local instance] originalLocalDifferentialAlgebra
+
+omit [NeZero N] in
+theorem original_j_D_ne_zero (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    D kk F x ≠ 0 := by
+  let d : Derivation kk F (LaurentSeries kk) := (qEuler kk).compAlgebraMap F
+  intro h
+  have he : d x = 0 := (d.liftKaehlerDifferential_comp_D x).symm.trans
+    ((congrArg d.liftKaehlerDifferential h).trans (map_zero d.liftKaehlerDifferential))
+  change qEuler kk (x : LaurentSeries kk) = 0 at he
+  rw [hx] at he
+  exact qEuler_jqModC_ne_zero kk he
+
+theorem original_j_differentials_finrank (hℓN : ¬ ℓ ∣ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    Module.finrank F Ω[F⁄kk] = 1 := by
+  letI := valuation_residue_isAlgClosed A
+  letI := original_coordinate_isSeparable A N ℓ hℓN x hx
+  have hxtr : Transcendental kk x := by
+    intro h
+    apply transcendental_jqModC kk
+    rw [← hx]
+    exact h.algHom (F).val
+  exact (finrank_eq_one_iff_of_nonzero _ (original_j_D_ne_zero A N x hx)).mpr
+    (span_D_eq_top_of_transcendental kk x hxtr)
+
+theorem original_positive_place_dCoordGenerates (hℓN : ¬ ℓ ∣ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) (v : Place kk F) (hv : 0 < v.ord x) :
+    v.DCoordGenerates := by
+  letI := valuation_residue_isAlgClosed A
+  letI := original_coordinate_finite A N ℓ hℓN x hx
+  letI := original_coordinate_isSeparable A N ℓ hℓN x hx
+  have hxtr : Transcendental kk x := by
+    intro h
+    apply transcendental_jqModC kk
+    rw [← hx]
+    exact h.algHom (F).val
+  letI := essFiniteType_place_of_separating_coordinate x hxtr v (v.mem_of_ord_nonneg hv.le)
+  letI : Module.Finite v.toValuationSubring Ω[v.toValuationSubring⁄kk] :=
+    KaehlerDifferential.finite kk v.toValuationSubring
+  have hres := place_residue_bijective_of_finite_coordinate x v
+  letI : Module.Finite kk v.ResidueField :=
+    Module.Finite.of_surjective (Algebra.linearMap kk v.ResidueField) hres.surjective
+  letI : Algebra.IsSeparable kk v.ResidueField := inferInstance
+  have hD : v.dCoord ≠ 0 := by
+    intro hz
+    obtain ⟨g, _, hg⟩ := v.exists_integral_D_eq_smul_dCoord (v.mem_of_ord_nonneg hv.le)
+    apply original_j_D_ne_zero A N x hx
+    rw [hg, hz, smul_zero]
+  exact ⟨(finrank_eq_one_iff_of_nonzero _ hD).mp
+    (original_j_differentials_finrank A N ℓ hℓN x hx)⟩
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

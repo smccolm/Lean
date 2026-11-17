@@ -1,0 +1,39 @@
+import Dubon2026.SourceGammaOneArithmeticGenus
+import Dubon2026.SourceGammaOneRealPeriodSurjectivity
+import Dubon2026.SourceCurveFiniteCoordinateRegularGenus
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation -> reverse genus. Identify the
+actual complex cusp dimension with the source H1 genus, then transfer the
+native real Manin upper bound to the arithmetic Gamma1 genus. This provides
+the characteristic-zero side of the required residue-genus comparison, with
+no dimension or constant-field invariance premise. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ) [NeZero N]
+
+theorem gamma1_cusp_dimension_eq_complex_genus :
+    Module.finrank ℂ (CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) =
+      genusFF ℂ (functionFieldOver (Gamma1 N) ℂ) := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  letI := finiteDimensional_jCoordinateOver hT ℂ
+  exact (regularCuspEquiv N).finrank_eq.symm.trans
+    (finite_coordinate_finrank_regular_eq_genusFF (jCoordinateOver (Gamma1 N) ℂ)
+      (transcendental_jCoordinateOver (Gamma1 N) ℂ)
+      (D_jCoordinateOver_ne_zero (Gamma1 N) ℂ))
+
+theorem gamma1_arithmetic_genus_cusp_bound :
+    12 * genusFF Qbar (functionFieldOver (Gamma1 N) Qbar) +
+      6 * Nat.card {P : Place ℂ (functionFieldOver (Gamma1 N) ℂ) //
+        P.ord (jCoordinateOver (Gamma1 N) ℂ) < 0} ≤
+      12 + (plusMinus (Gamma1 N)).index := by
+  have hu := gammaOne_real_parabolic_dimension_upper N
+  rw [sourceGamma1_real_parabolic_dimension_eq, finrank_real_of_complex,
+    gamma1_cusp_dimension_eq_complex_genus, ← gamma1_genus_arithmetic_eq_complex] at hu
+  omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

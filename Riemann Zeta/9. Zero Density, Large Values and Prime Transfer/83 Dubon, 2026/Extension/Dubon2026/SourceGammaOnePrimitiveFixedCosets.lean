@@ -1,0 +1,47 @@
+import Dubon2026.SourceGammaOnePrimitiveWidth
+import Dubon2026.SourceGammaOneHeckeSubgroup
+import Dubon2026.SourceCuspUnipotent
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> primitive boundary Frobenius. Reuse the proved primitive
+width divisibility and the native integral unipotent calculation to
+identify precisely the fixed original Hecke cosets. Together with the
+prime-orbit dichotomy and the native coset count, this is the necessary
+input for the two-term primitive boundary trace. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary
+open scoped MatrixGroups
+
+/-- A coset is fixed by the actual primitive cusp loop exactly when its
+transported primitive column has first coordinate divisible by the prime. -/
+theorem primitiveCuspHecke_fixed_iff (M : ℕ)
+    (q : SL(2, ℤ) ⧸ Gamma1 M) (ell : sourceBinaryHeckePrime M) (r : Gamma1 M) :
+    primitiveCuspGenerator M q •
+        (r : Gamma1 M ⧸ sourceGammaOneHeckeUpper M ell.val) = r ↔
+      (ell.val : ℤ) ∣ (r.val⁻¹ * q.out⁻¹) 0 0 := by
+  have hu : (primitiveCuspGenerator M q).val =
+      unipMat (q.out⁻¹ 0 0) (q.out⁻¹ 1 0) (primitiveCuspWidth M q) := by
+    simpa only [primitiveCuspGenerator, inv_inv, zpow_natCast] using
+      conj_T_zpow_eq_unipMat q.out⁻¹ (primitiveCuspWidth M q)
+  have hp : Prime (ell.val : ℤ) := Nat.prime_iff_prime_int.mp ell.property.1
+  have hw : ¬ (ell.val : ℤ) ∣ (primitiveCuspWidth M q : ℤ) := by
+    intro h
+    exact (ell.property.1.coprime_iff_not_dvd.mp
+      (primitiveCuspWidth_coprime_good_prime M q ell)) (Int.natCast_dvd_natCast.mp h)
+  rw [MulAction.Quotient.smul_coe, smul_eq_mul, QuotientGroup.eq,
+    ← inv_mem_iff, mul_inv_rev, inv_inv]
+  change (((r.val⁻¹ * ((primitiveCuspGenerator M q).val * r.val)) 0 1 : ℤ) :
+    ZMod ell.val) = 0 ↔ _
+  rw [← mul_assoc, hu, inv_mul_unipMat_mul, unipMat_apply_01,
+    ZMod.intCast_zmod_eq_zero_iff_dvd]
+  constructor
+  · intro h
+    rcases hp.dvd_or_dvd h with h | h
+    · exact (hp.dvd_or_dvd h).resolve_left hw
+    · exact h
+  · intro h
+    exact dvd_mul_of_dvd_right h _
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,33 @@
+{
+  "recordedUTC": "2026-11-17T01:46:47.422716+00:00",
+  "licenses": [
+    {
+      "repository": "openai/math",
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/LICENSE",
+      "file": "openai--math__LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "repository": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/LICENSE",
+      "file": "TauCetiProject--TauCetiRoadmap__LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "repository": "CBirkbeck/LeanBridge",
+      "commit": "68efdfc7c81ead718483c75e04bdf513f28cd3e7",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/LeanBridge/68efdfc7c81ead718483c75e04bdf513f28cd3e7/LICENSE",
+      "file": "CBirkbeck--LeanBridge__LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "repository": "CBirkbeck/AINTLIB",
+      "commit": "c3bc9bfafaf32cf281da174a7ec287c1e56acc99",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c3bc9bfafaf32cf281da174a7ec287c1e56acc99/LICENSE",
+      "file": "CBirkbeck--AINTLIB__LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    }
+  ]
+}

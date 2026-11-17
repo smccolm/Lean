@@ -1,0 +1,102 @@
+{
+  "modules": [
+    "SourceGammaOneBoundaryWordKernel",
+    "SourcePrimitiveH1SquareCongruence",
+    "SourceOperatorRangeCharacter",
+    "SourceGammaOneBoundaryQuotient",
+    "SourceGammaOneExactJointRing",
+    "SourceGammaOneExactJointSquare",
+    "SourceGammaOneExactJointFinite",
+    "SourceGammaOneExactJointCharacter",
+    "SourceGammaOneGeometricExactJointCharacter"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square",
+    "Dubon2026.sourceOperatorRangeCharacterData_of_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character"
+  ],
+  "constructions": [
+    "Dubon2026.sourceOperatorRangeCharacterData",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_ring",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square",
+    "Dubon2026.sourceOperatorRangeCharacterData",
+    "Dubon2026.sourceOperatorRangeCharacterData_of_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_ring",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square",
+    "Dubon2026.sourceOperatorRangeCharacterData_of_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_ring",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character",
+    "IsIntegral.of_pow",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+    "Dubon2026.sourceGammaOneConstantH1_finite",
+    "Dubon2026.sourceHeckeWord_intertwine_addHom",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneBoundaryWordKernel": "SourceGammaOneBoundaryWordKernel-2043",
+    "SourcePrimitiveH1SquareCongruence": "SourcePrimitiveH1SquareCongruence-2095",
+    "SourceOperatorRangeCharacter": "SourceOperatorRangeCharacter-2095",
+    "SourceGammaOneBoundaryQuotient": "SourceGammaOneBoundaryQuotient-2095",
+    "SourceGammaOneExactJointRing": "SourceGammaOneExactJointRing-2095",
+    "SourceGammaOneExactJointSquare": "SourceGammaOneExactJointSquare-2095",
+    "SourceGammaOneExactJointFinite": "SourceGammaOneExactJointFinite-2095",
+    "SourceGammaOneExactJointCharacter": "SourceGammaOneExactJointCharacter-2095",
+    "SourceGammaOneGeometricExactJointCharacter": "SourceGammaOneGeometricExactJointCharacter-2095"
+  },
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceOperatorRangeCharacterData",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient"
+  ]
+}

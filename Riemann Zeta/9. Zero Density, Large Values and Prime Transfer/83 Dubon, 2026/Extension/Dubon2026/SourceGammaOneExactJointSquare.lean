@@ -1,0 +1,47 @@
+import Dubon2026.SourceGammaOneBoundaryWordKernel
+import Dubon2026.SourceGammaOneExactJointRing
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+finite joint geometric/boundary-quotient character. A word vanishing on both
+actual operator spaces has square zero on reduced original integral H1.
+The existing full-H1 transfer and boundary-kernel comparison suffice;
+no boundary separator or parabolic transfer surjectivity is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+/-- Simultaneous vanishing on the actual diamond quotient and literal
+boundary quotient annihilates the square on the original coefficient-reduced H1. -/
+theorem binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square
+    (hlarge : 3 < p)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)))
+    (ha : FreeAlgebra.lift ℤ Hq a = 0)
+    (hb : FreeAlgebra.lift ℤ (binaryBoundaryQuotientPrimeOperators Q N w
+      (originalGammaOne_level_ge_four Q p n hlarge)) a = 0)
+    (x : H1 (sourceBinaryCoefficientRep ℤ Q w)) :
+    sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w
+      ((sourceGammaOneOriginalHeckeWord Q N w (a ^ 2)).val x) = 0 := by
+  simpa only [pow_two] using
+    binaryDiamondQuotientOriginalTransfer_boundary_word_kernel Q p n w hlarge Hq hH a
+      (binaryBoundaryQuotient_word_zero_parabolic Q N w
+        (originalGammaOne_level_ge_four Q p n hlarge) a hb) a ha x
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

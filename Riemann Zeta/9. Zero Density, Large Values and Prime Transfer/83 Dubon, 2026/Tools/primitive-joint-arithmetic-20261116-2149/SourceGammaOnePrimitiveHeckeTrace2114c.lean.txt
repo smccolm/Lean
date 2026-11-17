@@ -1,0 +1,124 @@
+import SourceGammaOnePrimitiveOrbitRepresentatives2111b
+import SourceGammaOnePrimitiveDividedTerm2108b
+import SourceGammaOnePrimitiveMultipliedTerm2110a
+import SourceGammaOnePrimitiveTermColumns2113b
+import SourceGammaOnePrimitiveBoundaryOrbit
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> primitive boundary Frobenius. Assemble the actual cyclic
+transfer formula, its two constructed orbits, their integral conjugates
+and the representative-independent primitive values. The result is the
+exact two-term formula for the original Gamma1 cohomology Hecke operator
+with its full coefficient endomorphism and torsion coefficients. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary groupCohomology MulAction
+open scoped MatrixGroups
+
+private def representativeChange (M : ℕ) (δ : SL(2, ℤ)) : Gamma1 M :=
+  let q : SL(2, ℤ) ⧸ Gamma1 M := (δ⁻¹ : SL(2, ℤ))
+  ⟨q.out⁻¹ * δ⁻¹, QuotientGroup.eq.mp (Quotient.out_eq' q)⟩
+
+private theorem representativeChange_cusp (M : ℕ) (δ : SL(2, ℤ)) (r : Gamma1 M) :
+    (((representativeChange M δ)⁻¹ * r).val)⁻¹ * δ =
+      r.val⁻¹ * (((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M).out)⁻¹ := by
+  change (((((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M).out)⁻¹ * δ⁻¹)⁻¹ * r.val)⁻¹ * δ = _
+  group
+
+private theorem orbitTranslation (M : ℕ) (δ : SL(2, ℤ)) (r : Gamma1 M) :
+    primitiveCuspTranslation M ((((representativeChange M δ)⁻¹ * r).val)⁻¹ * δ) =
+      r⁻¹ * primitiveCuspGenerator M
+        ((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) * r := by
+  rw [representativeChange_cusp, primitiveCuspTranslation_conjugate, primitiveCuspTranslation_out]
+
+/-- The full original constant-coefficient Gamma1 Hecke operator has the
+exact primitive two-column formula, including torsion coefficient modules. -/
+theorem primitiveCuspValue_native_hecke (R A : Type) [CommRing R]
+    [AddCommGroup A] [Module R A] (M : ℕ) [NeZero M]
+    (ell : sourceBinaryHeckePrime M) (b : Module.End R A)
+    (x : H1 (Rep.trivial R (Gamma1 M) A)) (δ τ1 τ2 : SL(2, ℤ))
+    (hτ2 : ((τ2 0 0 : ℤ) : ZMod M) * ell.val = δ 0 0 ∧
+      ((τ2 1 0 : ℤ) : ZMod M) = δ 1 0)
+    (hτ1 : ((τ1 0 0 : ℤ) : ZMod M) = δ 0 0 ∧
+      ((τ1 1 0 : ℤ) : ZMod M) = ell.val * (δ 1 0 : ℤ)) :
+    letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+    let φ := (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x
+    primitiveCuspValue M
+      ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+        (sourceGammaOneConstantHeckeH1 R A M ell.val b x)) δ =
+      b (ell.val • primitiveCuspValue M φ τ2 + primitiveCuspValue M φ τ1) := by
+  classical
+  letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+  let q : SL(2, ℤ) ⧸ Gamma1 M := (δ⁻¹ : SL(2, ℤ))
+  let u := primitiveCuspGenerator M q
+  let K := sourceGammaOneHeckeUpper M ell.val
+  let O := orbitRel.Quotient (Subgroup.zpowers u) (Gamma1 M ⧸ K)
+  letI : K.FiniteIndex := sourceGammaOneHeckeUpper_finiteIndex M ell.val
+  letI : Fintype O := Fintype.ofFinite _
+  let φ := (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x
+  let U (o : O) : K :=
+    ⟨o.out.out⁻¹ * u ^ Function.minimalPeriod (u • ·) o.out * o.out.out,
+      QuotientGroup.out_conj_pow_minimalPeriod_mem K u o.out⟩
+  let term (o : O) := b (φ (Additive.ofMul (sourceGammaOneHeckeConjugation M ell.val (U o))))
+  have hsum : primitiveCuspValue M
+      ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+        (sourceGammaOneConstantHeckeH1 R A M ell.val b x)) δ = ∑ o : O, term o := by
+    rw [primitiveCuspValue_generator]
+    exact constantHeckeH1_hom_orbit_sum R A M ell.val b x u
+  obtain ⟨o0, o1, hne, hall, hp0, hp1⟩ := primitiveCuspHecke_exists_two_orbits M q ell
+  let r0 := o0.out.out
+  let r1 := o1.out.out
+  let a0 := (representativeChange M δ)⁻¹ * r0
+  let a1 := (representativeChange M δ)⁻¹ * r1
+  let δ0 := a0.val⁻¹ * δ
+  let δ1 := a1.val⁻¹ * δ
+  have hd0 : (ell.val : ℤ) ∣ δ0 0 0 := by
+    have hx := Function.minimalPeriod_eq_one_iff_isFixedPt.mp hp0
+    have hd := (primitiveCuspHecke_fixed_iff M q ell r0).mp
+      (by simpa only [r0, QuotientGroup.out_eq'] using hx)
+    dsimp only [δ0, a0]
+    rw [representativeChange_cusp]
+    exact hd
+  have hd1 : ¬ (ell.val : ℤ) ∣ δ1 0 0 := by
+    intro hd
+    dsimp only [δ1, a1] at hd
+    rw [representativeChange_cusp] at hd
+    have hx := (primitiveCuspHecke_fixed_iff M q ell r1).mpr hd
+    have hf : u • o1.out = o1.out := by simpa only [r1, QuotientGroup.out_eq'] using hx
+    have hp := Function.minimalPeriod_eq_one_iff_isFixedPt.mpr hf
+    exact ell.property.1.ne_one (hp1.symm.trans hp)
+  have ht0 : term o0 = b (ell.val • primitiveCuspValue M φ τ2) := by
+    obtain ⟨σ, hσ0, hσ1, hv⟩ := primitiveCuspHecke_divided_term M ell δ0 hd0 φ
+    have hc := primitiveCuspValue_divided_column_compare M ell φ δ σ τ2 a0
+      hσ0 hσ1 hτ2.1 hτ2.2
+    have hg : U o0 = ⟨primitiveCuspTranslation M δ0,
+        primitiveCuspTranslation_mem_heckeUpper M ell.val δ0 hd0⟩ := by
+      apply Subtype.ext
+      change r0⁻¹ * u ^ Function.minimalPeriod (u • ·) o0.out * r0 = _
+      rw [hp0, pow_one]
+      exact (orbitTranslation M δ r0).symm
+    change b (φ (Additive.ofMul (sourceGammaOneHeckeConjugation M ell.val (U o0)))) = _
+    rw [hg, hv, hc]
+  have ht1 : term o1 = b (primitiveCuspValue M φ τ1) := by
+    obtain ⟨σ, hσ0, hσ1, hv⟩ := primitiveCuspHecke_multiplied_term M ell δ1 hd1 φ
+    have hc := primitiveCuspValue_multiplied_column_compare M ell φ δ σ τ1 a1
+      hσ0 hσ1 hτ1.1 hτ1.2
+    have hg : U o1 = ⟨primitiveCuspTranslation M δ1 ^ ell.val,
+        primitiveCuspTranslation_pow_mem_heckeUpper M ell.val δ1⟩ := by
+      apply Subtype.ext
+      change r1⁻¹ * u ^ Function.minimalPeriod (u • ·) o1.out * r1 =
+        primitiveCuspTranslation M δ1 ^ ell.val
+      rw [hp1, orbitTranslation M δ r1]
+      rw [conj_pow, inv_inv]
+    change b (φ (Additive.ofMul (sourceGammaOneHeckeConjugation M ell.val (U o1)))) = _
+    rw [hg, hv, hc]
+  have huniv : (Finset.univ : Finset O) = {o0, o1} := by
+    ext o
+    simp only [Finset.mem_univ, Finset.mem_insert, Finset.mem_singleton, true_iff]
+    exact hall o
+  dsimp only
+  rw [hsum, huniv, Finset.sum_pair hne, ht0, ht1]
+  exact (map_add b _ _).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

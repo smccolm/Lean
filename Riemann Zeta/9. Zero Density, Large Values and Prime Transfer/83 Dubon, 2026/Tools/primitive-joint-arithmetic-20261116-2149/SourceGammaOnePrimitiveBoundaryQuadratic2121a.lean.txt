@@ -1,0 +1,67 @@
+import SourceGammaOnePrimitiveUnitHecke2120b
+import Dubon2026.SourceGammaOneHeckeDiamondCoefficient
+
+/-! DUB-17/18 -> original all-weight association -> finite joint
+arithmetic realization -> primitive boundary Frobenius polynomial.
+Reuse the existing exact all-weight coefficient-square theorem. The
+diamond term is retained until the original character kills it. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary ToricCoordinates
+variable (Q N w : ℕ) [NeZero N]
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+
+/-- The product of the two actual prime cusp terms is the original
+weight factor times the genuine finite-column diamond. -/
+theorem binaryPrimitiveColumn_prime_product (ell : sourceBinaryHeckePrime (Q * N))
+    (g : Gamma0 M) (hlabel : (g.val 1 1 : ZMod M) = ell.val) :
+    let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+    binaryPrimitiveColumnFirst Q N w u * binaryPrimitiveColumnSecond Q N w u =
+      (ell.val : ZMod N) ^ (w + 1) • binaryPrimitiveColumnDiamond Q N w g := by
+  dsimp only
+  let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+  have hu : (binaryPrimitiveUnitReduction Q N u : ZMod N) = ell.val :=
+    binaryPrimitiveUnitReduction_prime Q N ell
+  have hd : gamma0Unit M g = u :=
+    Units.ext (hlabel.trans (ZMod.coe_unitOfCoprime _ _).symm)
+  have hn : (g.val 1 1 : ZMod N) = (ell.val : ZMod N) := by
+    have h := congrArg (ZMod.castHom
+      (dvd_mul_of_dvd_right (dvd_pow_self N (by decide : 2 ≠ 0)) Q) (ZMod N)) hlabel
+    simpa only [map_intCast, map_natCast] using h
+  have hb : binaryPrimitiveCoefficientUnits Q N w u =
+      homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]) := by
+    rw [binaryPrimitiveCoefficientUnits_eq, hu]
+  have hs := sourceGammaOneHeckeDiamondCoefficient_square Q N w g ell.val hn
+  apply LinearMap.ext
+  intro f
+  funext c
+  change binaryPrimitiveCoefficientUnits Q N w u
+      ((binaryPrimitiveUnitReduction Q N u : ZMod N) •
+        binaryPrimitiveCoefficientUnits Q N w u (f (scale u⁻¹ 1 (scale 1 u c)))) =
+    (ell.val : ZMod N) ^ (w + 1) •
+      sourceGammaOneBinaryDiamondCoefficient Q N w g
+        (f (scale (gamma0Unit M g)⁻¹ (gamma0Unit M g) c))
+  rw [map_smul, hu, hb, scale_scale, mul_one, one_mul, hd]
+  have hv := LinearMap.congr_fun hs (f (scale u⁻¹ u c))
+  change homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+      (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+        (f (scale u⁻¹ u c))) =
+    (ell.val : ZMod N) ^ w •
+      sourceGammaOneBinaryDiamondCoefficient Q N w g (f (scale u⁻¹ u c)) at hv
+  rw [hv, smul_smul, ← pow_succ']
+
+/-- The original finite primitive boundary satisfies the exact
+Frobenius quadratic with its original diamond determinant term. -/
+theorem binaryPrimitiveColumn_hecke_quadratic (ell : sourceBinaryHeckePrime (Q * N))
+    (g : Gamma0 M) (hlabel : (g.val 1 1 : ZMod M) = ell.val) :
+    let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+    binaryPrimitiveColumnFirst Q N w u * binaryPrimitiveColumnHecke Q N w ell =
+      binaryPrimitiveColumnFirst Q N w u * binaryPrimitiveColumnFirst Q N w u +
+        (ell.val : ZMod N) ^ (w + 1) • binaryPrimitiveColumnDiamond Q N w g := by
+  dsimp only
+  rw [binaryPrimitiveColumnHecke_eq_sum, mul_add,
+    binaryPrimitiveColumn_prime_product Q N w ell g hlabel]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

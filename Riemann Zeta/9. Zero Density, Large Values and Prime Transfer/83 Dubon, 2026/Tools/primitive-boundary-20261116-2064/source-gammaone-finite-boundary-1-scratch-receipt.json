@@ -1,0 +1,86 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitivePrimePowerBoundary_finite"
+  ],
+  "recordedUTC": "2026-11-17T01:04:27.724254+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceGammaOnePrimitiveBoundaryOperators",
+    "SourceGammaOnePrimitiveBoundaryWords",
+    "SourceGammaOneFiniteBoundaryCharacter"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperators.lean",
+      "sha256": "55D6016408362F4EBE3840FEB6E55CF8B1453C887224B497549694FB7F72295B",
+      "oleanSha256": "5E540EC357C02F10F2AAABF123D715361DF7FE16A3386160AA0E43E00C4EEE95",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperators-2059.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperators-2059.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords.lean",
+      "sha256": "9A463B7FD79E4BA4396B0663D351B3371F1EDE7FCBE8C7913BF02ACB4DEB718F",
+      "oleanSha256": "AC7AAA9F4E69114770D81673656105B9CE67BBFCD2C818C2805773EAFCB74DC5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords-2059.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords-2059.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryCharacter.lean",
+      "sha256": "884FF86074F456D6D3C9A3E6377B46231C3D1994DD95BBB40BAB3D2D2C1F3993",
+      "oleanSha256": "ED45DA0F65134944F12B13687236740600ED4ECD970C611532F22D6CD5458652",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryCharacter-2059.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryCharacter-2059.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_hom_values",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundary_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitivePrimePowerBoundary_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_finite_boundary_word"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_hom_values",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundary_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitivePrimePowerBoundary_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_finite_boundary_word"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryPrimeOperators"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryAudit1.log",
+  "logSha256": "5439468102F3B53456D9A04450DF0B9E6F35E72FE2710D298AE6B2C0662AACC3",
+  "auditSha256": "6EFC86DABF2DEDEEE3CEED28AA4C8762D68BED0C9D5436AC0433C96558F309B4",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryScratchOwnership2059.log",
+  "ownershipSha256": "31FA445C5D6B69321B118D232A151A036F5C08593FA3B6F3BD41C5590C0D1501",
+  "exhaustiveTheorems": 24,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBoundaryDependencyAudit1.log",
+  "dependencyAuditSha256": "F28851436A800879388F72034A33F9473B5928001E8F72609FBD60C6D98FF39D",
+  "dependencyAuditSourceSha256": "A7CED73258A98818C632F0A5BD5A39E14995599927DD161BC371417141E57E81",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_finite_boundary_word"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 quotient Hecke character -> boundary-killing Hecke word with unit original eigencharacter value.",
+  "discharged": [
+    "Construct the endomorphism of the actual primitive cusp-value space from the proved integer rows, retaining the original homogeneous diagonal coefficient action.",
+    "Prove exact whole-word boundary intertwining and derive the parabolic-range condition from a zero boundary operator word.",
+    "Reuse the actual prime-power coefficient finiteness and finite Gamma1 cosets to prove that the boundary-value space is finite.",
+    "Apply the independently proved geometric boundary-character theorem to construct the actual quotient character from the finite boundary operator identity and unit original character value."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. A word vanishing in the constructed finite boundary operator algebra with unit original character value has not been constructed. The original all-weight characteristic-zero association, automorphy and literal higher symmetric-power continuation remain unresolved. DUB-17--20 remain OPEN under the full original source contract.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-finite-boundary-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "28624D55AC50B1F0F373894A2DD8ABF12D7EC8A5AD23AD9065BFD896B99C8BCC",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

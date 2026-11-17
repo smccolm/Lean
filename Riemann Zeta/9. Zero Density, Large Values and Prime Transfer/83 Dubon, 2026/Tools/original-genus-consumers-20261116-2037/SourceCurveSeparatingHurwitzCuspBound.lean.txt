@@ -1,0 +1,53 @@
+import SourceCurveSeparatingHurwitzBound
+import SourceCurveSeparatingPoleSums
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation -> reverse genus -> residue Hurwitz.
+The proved full pole sum removes the pole multiplicities from the actual
+Hurwitz bound. Only the cardinality of the actual pole set remains, to be
+bounded by the native original Gamma1 cusp specialization theorem. -/
+namespace Dubon2026.SourceCurve
+noncomputable section
+open IntermediateField KaehlerDifferential
+variable {K F : Type*} [Field K] [IsAlgClosed K] [Field F] [Algebra K F]
+variable (t : F) [FiniteDimensional K⟮t⟯ F] [Algebra.IsSeparable K⟮t⟯ F]
+variable (ht : Transcendental K t) (hDt : D K F t ≠ 0)
+include ht hDt
+
+theorem separating_hurwitz_differential_cusp_bound
+    (S : Finset (Place K F)) (hS : ∀ v ∈ S, 0 ≤ v.ord t) :
+    (∑ v ∈ S, v.ordDifferential (D K F t)) ≤
+      2 * (genusFF K F : ℤ) - 2 + (Module.finrank K⟮t⟯ F : ℤ) +
+        (Nat.card {v : Place K F // v.ord t < 0} : ℤ) := by
+  classical
+  have hp : {v : Place K F | v.ord t < 0}.Finite :=
+    (finite_function_support_of_separating_coordinate t ht t).subset fun _ hv => ne_of_lt hv
+  have h := separating_hurwitz_differential_bound t ht hDt S hS hp.toFinset
+    (fun v hv => (hp.mem_toFinset).mp hv)
+  have he : (∑ v ∈ hp.toFinset, (-v.ord t - 1)) =
+      (Module.finrank K⟮t⟯ F : ℤ) - (Nat.card {v : Place K F // v.ord t < 0} : ℤ) := by
+    rw [Finset.sum_sub_distrib, sum_pole_orders_finset_separating t ht hp.toFinset
+      (fun _ => hp.mem_toFinset)]
+    simp only [Finset.sum_const, nsmul_eq_mul, mul_one]
+    have hcard : Nat.card {v : Place K F // v.ord t < 0} = hp.toFinset.card :=
+      Nat.subtype_card _ (fun _ => hp.mem_toFinset)
+    rw [hcard]
+  rw [he] at h
+  omega
+
+theorem separating_hurwitz_ramification_cusp_bound
+    (S : Finset (Place K F)) (a : Place K F → K)
+    (hS : ∀ v ∈ S, 0 < v.ord (t - algebraMap K F (a v))) :
+    (∑ v ∈ S, (v.ord (t - algebraMap K F (a v)) - 1)) ≤
+      2 * (genusFF K F : ℤ) - 2 + (Module.finrank K⟮t⟯ F : ℤ) +
+        (Nat.card {v : Place K F // v.ord t < 0} : ℤ) := by
+  have hs : ∀ v ∈ S, 0 ≤ v.ord t := by
+    intro v hv
+    apply v.ord_nonneg_of_mem
+    have hm := add_mem (v.mem_of_ord_nonneg (hS v hv).le) (v.algebraMap_mem' (a v))
+    simpa only [sub_add_cancel] using hm
+  refine le_trans ?_ (separating_hurwitz_differential_cusp_bound t ht hDt S hs)
+  exact Finset.sum_le_sum fun v _ => separating_coordinate_ord_sub_one_le_D t ht hDt v (a v)
+
+end
+end Dubon2026.SourceCurve

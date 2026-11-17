@@ -1,0 +1,132 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos"
+  ],
+  "recordedUTC": "2026-11-17T00:56:58.297328+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceGammaOnePrimitiveCuspBoundary",
+    "SourceGammaOneFiniteBinaryBoundary",
+    "SourceGammaOnePrimitiveBoundaryOrbit",
+    "SourceGammaOnePrimitiveCuspCoordinates",
+    "SourceGammaOneBoundaryHeckeTrace",
+    "SourceGammaOnePrimitiveBoundaryHeckeRows"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary.lean",
+      "sha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9",
+      "oleanSha256": "470EAC8BFDD92205833DFD7E085D07DEA75A641AB04328889CED55F1D7792E33",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2055.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2055.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary.lean",
+      "sha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C",
+      "oleanSha256": "B3596CBA44154D3C9DEA292C0609943A36CBF2F1F889F378AAEF6B23339BAC34",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2055.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2055.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit.lean",
+      "sha256": "BF181088605A822D4095ABBB6532E5BBAA7161F819CD72F4E65897A763D3BE6E",
+      "oleanSha256": "3CDA646CB45FF9485A4127BEC20D3F2CD56EF998615E4775F87464DE992AC10C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit-2055.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit-2055.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspCoordinates.lean",
+      "sha256": "CD307B600B16192DF71C3AD96B0FCCC46A391D35E14E059065DAE7D7C936091F",
+      "oleanSha256": "8F5BF8C5C2C0F16570E1F231AD897C350BB6543B51FF94CDC6AF4A82C6A02FEE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspCoordinates-2055.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspCoordinates-2055.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryHeckeTrace.lean",
+      "sha256": "A9D2EA3D8FE00D6ECD1BE108B3341A9EEF6CF1FBCC862738E9EE9A208D947ACC",
+      "oleanSha256": "A164B3EB83DB143BF573CCB31C93027FAFBB490964DFE69299C59FE37433480D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryHeckeTrace-2055.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryHeckeTrace-2055.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryHeckeRows.lean",
+      "sha256": "BE33697AE201D914CBD1048C59A8922F8C2EA8A52809D38B4F4161D17D0DC852",
+      "oleanSha256": "818E53F205C7D8F9FEAE859F85C4543E33E61B4204F24D59DA7594F05037528F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryHeckeRows-2055.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryHeckeRows-2055.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_conjugate_primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_character_primitive_coordinates",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeConjugation_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHeckeOrbit_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_conjugate_primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_character_primitive_coordinates",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeConjugation_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHeckeOrbit_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryAudit2.log",
+  "logSha256": "849CC616B115981DE908ADBA4B905710AB25FA7EABCCE24FE66FD0303B1A24C4",
+  "auditSha256": "4C20350FC58A876598FD062A99DB53D34A3FE37BE4AD74371062CF535DF258F5",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryScratchOwnership2055.log",
+  "ownershipSha256": "82E51BD368A1A28AB44B355EFC1E9458F072683469A358871D842DC442EE0FC4",
+  "exhaustiveTheorems": 49,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDependencyAudit2.log",
+  "dependencyAuditSha256": "878EA79685A115751DD4072276D36FFDFDD6C759D1EDFE77EDD90517BE798718",
+  "dependencyAuditSourceSha256": "C01F3C5A6EC6D5CC2F5DD8FB55B10712C10BE063D9E7EF59E7273A821F9A23AB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 quotient Hecke character -> boundary-annihilating word with unit original character value",
+  "discharged": [
+    "The primitive cusp generator belongs to the actual Gamma1 subgroup.",
+    "Every parabolic group element has a square conjugate inside Gamma1 to an integer power of an actual primitive cusp generator.",
+    "When two is a unit, vanishing at the finite primitive boundary generators implies vanishing on all actual trace-square-four elements, without a coefficient torsion-freeness assumption.",
+    "The native Gamma1 H1 Hecke sum is the exact sum over its actual cyclic coset orbits, by reuse of Mathlib transfer.",
+    "Every orbit contribution has trace two and is conjugate inside the actual Gamma1 group to an integer power of one of its finite primitive cusp generators.",
+    "Those actual generators and powers construct integer rows for the Hecke action on primitive cusp values, uniformly for all additive coefficient modules and all original coefficient endomorphisms."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Neither a boundary-annihilating Hecke word nor a unit value of its original character is asserted. The finite boundary Hecke action, separation/unit condition, original all-weight association, automorphy and higher continuation remain open. DUB-17--20 OPEN; no source contract or final theorem has been weakened.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-boundary-2-reuse-review-20261116.json",
+  "reuseReviewSha256": "5B4AB0F266408410D55860BBAF4082D6EA38C047BB972EC3F1075B5C4CF60E43",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

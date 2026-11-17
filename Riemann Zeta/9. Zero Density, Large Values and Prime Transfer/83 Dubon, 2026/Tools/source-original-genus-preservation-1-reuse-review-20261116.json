@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-16 America/Whitehorse",
+  "sourceDependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-genus-preservation-audit-route-2027.json",
+    "sha256": "1FC368657F4C437043003CC61E7238F106B331C011A22529C05A0423E2780F4A",
+    "review": {
+      "recordedUTC": "2026-11-16T23:25:41.010708+00:00",
+      "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation.",
+      "shorterRoute": "Native trace, rational residues, separating-coordinate degree and genus maximum already apply in every characteristic. Supplying local differential generation from the two separating charts suffices to reuse canonical duality and Hurwitz. Native original cusp bounds and wild/tame fiber contributions then give reverse genus for N greater than three. Native sign-class index comparison and four explicit residue pairs prove small-level genus vanishing, preserving every nonzero level and every prime away from it.",
+      "assumptionsToDischarge": [
+        "Explicit separation of the original j coordinate discharges local generation, finite differential support, global residue vanishing, canonical duality and degree.",
+        "The original Hurwitz bounds derive coordinate degree and residue cusp count, rather than retaining them as premises.",
+        "The actual wild contributions and tame fiber bounds give reverse genus for every residue prime when N greater than three.",
+        "The small levels one, two and three have arithmetic H1 genus zero by a finite signed-index argument and the native Manin bound.",
+        "Native degree preservation identifies the literal residue image; native specialization upper genus proves exact all-level original genus equality."
+      ],
+      "remaining": "The original genus-equality premise is discharged by the endpoint, subject to exhaustive audit and assembled verification. Apply it to the original Hecke-character and arithmetic descent consumers. Parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, all-weight association, automorphy and literal higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+      "boundary": "Eighteen focused modules are to be audited. The unused finite-set ramification variant is separately axiom checked; it is not claimed as a VALUE dependency of the original genus endpoint. Its cusp form is consumed by the actual tame argument. No incidental generalization is pursued.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveSeparatingLocalFinite.lean",
+          "sha256": "5D7D3E25D1F2FD915D086F398563D78472770A2D4F8BD71E69781F00407C666D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+          "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+          "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGlobalResidues.lean",
+          "sha256": "4F62D6BF9784A9C2C935CD5CD4230528907E251E579E351D25F85B8A78532C2D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGlobalTateTrace.lean",
+          "sha256": "AF7C02924E278A90B86CF2714B4B0DAE8D2353E42C8ECB328E65843FA24ADA33"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveSeparatingGenusMaximum.lean",
+          "sha256": "344296E76F73258B9C45491075ABAAEE291F3F9311AC29F0665069CE775F8137"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidueDuality.lean",
+          "sha256": "D8C72859B889ADFE47D2CF805242EAD5E2A3468BAA76E6368CB5929FF4028C78"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonicalDegree.lean",
+          "sha256": "E6E48B592C2C6D0190677D89F4E03F7433BDB0F31944F7E4048438D2A32D8179"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientLocalDifferentials.lean",
+          "sha256": "6A9EAC48F5FEBA59A6E3586ACEE7C3D326D18011E459331AFDF55F1673254328"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientHurwitzDivisor.lean",
+          "sha256": "502AB3953ACB033A00CA83178FDA1167F86033666313D376FEAE10DD57FD6729"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientHurwitzBound.lean",
+          "sha256": "F178FE8813DFE0761FC400573C25FD3FD8CB46903660632DE93827995364FCD0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientJDegreeSums.lean",
+          "sha256": "B047258B97D44AD66DF764669D56DC9A85969D5C8BF2A2872D352FB8948A01CC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientTameGenusCriterion.lean",
+          "sha256": "8D323D5226894C2545ACD197EDBDEA25B989CA64E48D22B27CEC42E15979CCCC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueCuspCount.lean",
+          "sha256": "F24957777CA66B238D4604D14ACAB40AD2BD6CF72467BB412846B5CFCF4E9574"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueGenusUpper.lean",
+          "sha256": "0CB8174717FA7874EBFF64EADF1EBD15B9FBB37A151029BC1C4C712254FD9369"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMarkedTorsionSignedIndex.lean",
+          "sha256": "9FF329AC8A0D14C9250F370B9B2F631E336A67B6E104F3772AD163E42DBA2C5A"
+        }
+      ]
+    }
+  },
+  "discharged": [
+    "Explicit separation of the original j coordinate discharges local generation, finite differential support, global residue vanishing, canonical duality and degree.",
+    "The original Hurwitz bounds derive coordinate degree and residue cusp count, rather than retaining them as premises.",
+    "The actual wild contributions and tame fiber bounds give reverse genus for every residue prime when N greater than three.",
+    "The small levels one, two and three have arithmetic H1 genus zero by a finite signed-index argument and the native Manin bound.",
+    "Native degree preservation identifies the literal residue image; native specialization upper genus proves exact all-level original genus equality."
+  ],
+  "remaining": "The original genus-equality premise is discharged by the endpoint, subject to exhaustive audit and assembled verification. Apply it to the original Hecke-character and arithmetic descent consumers. Parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, all-weight association, automorphy and literal higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

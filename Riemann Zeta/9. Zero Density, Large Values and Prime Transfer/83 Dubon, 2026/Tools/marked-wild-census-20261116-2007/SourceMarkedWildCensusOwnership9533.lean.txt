@@ -1,0 +1,42 @@
+import Dubon2026.SourceMarkedEmbeddingSignKernel
+import Dubon2026.SourceMarkedOriginalNormalField
+import Dubon2026.SourceMarkedOriginalNormalFieldTwo
+import Dubon2026.SourceMarkedOriginalNormalFieldThree
+import Dubon2026.SourceMarkedOriginalLocalDifferentials
+import Dubon2026.SourceMarkedOriginalWildDifferent
+import Dubon2026.SourceMarkedOriginalWildDifferentTwo
+import Dubon2026.SourceMarkedOriginalWildDifferentThree
+import Dubon2026.SourceMarkedDihedralFiberBound
+import Dubon2026.SourceMarkedSignFiberSymmetries
+import Dubon2026.SourceMarkedOriginalWildFiberThree
+import Dubon2026.SourceMarkedOrderTwelveFiberBound
+import Dubon2026.SourceMarkedSignActionHom
+import Dubon2026.SourceMarkedCharTwoSignAction
+import Dubon2026.SourceMarkedOriginalWildFiberTwo
+import Dubon2026.SourceMarkedNormalOrderDescent
+import Dubon2026.SourceMarkedOriginalOrderBoundTwo
+import Dubon2026.SourceMarkedOriginalOrderBoundThree
+import Dubon2026.SourceMarkedOriginalPositiveDegree
+import Dubon2026.SourceMarkedFiberOrderRigidity
+import Dubon2026.SourceMarkedOriginalExactOrderTwo
+import Dubon2026.SourceMarkedOriginalExactOrderThree
+import Dubon2026.SourceMarkedOriginalWildContributionTwo
+import Dubon2026.SourceMarkedOriginalWildContributionThree
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceMarkedEmbeddingSignKernel, `Dubon2026.SourceMarkedOriginalNormalField, `Dubon2026.SourceMarkedOriginalNormalFieldTwo, `Dubon2026.SourceMarkedOriginalNormalFieldThree, `Dubon2026.SourceMarkedOriginalLocalDifferentials, `Dubon2026.SourceMarkedOriginalWildDifferent, `Dubon2026.SourceMarkedOriginalWildDifferentTwo, `Dubon2026.SourceMarkedOriginalWildDifferentThree, `Dubon2026.SourceMarkedDihedralFiberBound, `Dubon2026.SourceMarkedSignFiberSymmetries, `Dubon2026.SourceMarkedOriginalWildFiberThree, `Dubon2026.SourceMarkedOrderTwelveFiberBound, `Dubon2026.SourceMarkedSignActionHom, `Dubon2026.SourceMarkedCharTwoSignAction, `Dubon2026.SourceMarkedOriginalWildFiberTwo, `Dubon2026.SourceMarkedNormalOrderDescent, `Dubon2026.SourceMarkedOriginalOrderBoundTwo, `Dubon2026.SourceMarkedOriginalOrderBoundThree, `Dubon2026.SourceMarkedOriginalPositiveDegree, `Dubon2026.SourceMarkedFiberOrderRigidity, `Dubon2026.SourceMarkedOriginalExactOrderTwo, `Dubon2026.SourceMarkedOriginalExactOrderThree, `Dubon2026.SourceMarkedOriginalWildContributionTwo, `Dubon2026.SourceMarkedOriginalWildContributionThree]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

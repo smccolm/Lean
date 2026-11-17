@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-16 America/Whitehorse",
+  "sourceChain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 quotient Hecke character -> boundary-annihilating word with unit original character value",
+  "currentObligation": "Construct a finite boundary map for the actual Gamma1 H1 module whose kernel is exactly the actual parabolic submodule, including coefficients Z/p^(n+1). This supplies the correct boundary module on which an annihilating Hecke word must be constructed.",
+  "reuse": [
+    "Mathlib.GroupTheory.GroupAction.Period: minimalPeriod and the exact integer-power return-time divisibility criterion",
+    "SourceCuspCorrectionCyclicCosets: existing primitive-generator proof pattern, currently specialized to the free-product presentation",
+    "SourceParabolicClassification: literal signed conjugated-translation classification",
+    "SourceGammaOneBinaryParabolicH1: independently defined original homogeneous-valued parabolic H1 submodule",
+    "SourceCosetTransfer: native trace is Mathlib transfer, with the existing cyclic-orbit formula available for subsequent boundary action"
+  ],
+  "shorterRouteAssessment": "Use the finite original SL2/Gamma1 coset set directly and the native minimal period. A minimal cusp quotient, a new orbit decomposition, and general cohomological duality are unnecessary for this boundary test. Level-multiple translations do not detect torsion boundary classes, so the complex Gamma0 boundary result cannot be substituted.",
+  "assumptionsDischarged": [
+    "The primitive cusp generator belongs to the actual Gamma1 subgroup.",
+    "Every parabolic group element has a square conjugate inside Gamma1 to an integer power of an actual primitive cusp generator.",
+    "When two is a unit, vanishing at the finite primitive boundary generators implies vanishing on all actual trace-square-four elements, without a coefficient torsion-freeness assumption."
+  ],
+  "remaining": "Neither a boundary-annihilating Hecke word nor a unit value of its original character is asserted. The finite boundary Hecke action, separation/unit condition, original all-weight association, automorphy and higher continuation remain open. DUB-17--20 OPEN; no source contract or final theorem has been weakened.",
+  "status": "Focused proof development; no acceptance claim."
+}

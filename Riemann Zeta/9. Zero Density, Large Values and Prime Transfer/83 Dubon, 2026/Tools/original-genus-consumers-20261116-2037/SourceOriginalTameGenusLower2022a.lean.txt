@@ -1,0 +1,52 @@
+import SourceOriginalTameGenusCriterion2021a
+import Dubon2026.SourceMarkedOriginalTameFiberBounds
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation. Finite support and the proved
+actual marked-point fiber bounds discharge the tame census in the original
+Hurwitz criterion. This proves reverse genus for N > 3 in every residue
+characteristic at least five away from the level, without chart, multiplicity,
+finite-field or census premises. Small levels remain separate. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open CongruenceSubgroup GammaOne SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_genus_lower_of_five_le (hℓN : ¬ ℓ ∣ N) (hN : 3 < N) (hℓ : 5 ≤ ℓ) :
+    genusFF Qbar (functionFieldOver (Gamma1 N) Qbar) ≤ genusFF kk F := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  let x : F := ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩
+  letI := original_coordinate_finite A N ℓ hℓN x rfl
+  letI := original_coordinate_isSeparable A N ℓ hℓN x rfl
+  have hxtr : Transcendental kk x := by
+    intro h
+    exact transcendental_jqModC kk (h.algHom (F).val)
+  have hf₀ : {v : Place kk F | 0 < v.ord x}.Finite :=
+    (finite_function_support_of_separating_coordinate x hxtr x).subset fun _ hv => ne_of_gt hv
+  have hf₁ : {v : Place kk F | 0 < v.ord (x - algebraMap kk F 1728)}.Finite :=
+    (finite_function_support_of_separating_coordinate x hxtr
+      (x - algebraMap kk F 1728)).subset fun _ hv => ne_of_gt hv
+  obtain ⟨h2, h3⟩ := SourceEllipticReduction.isUnit_two_three_of_five_le kk kk ℓ hℓ
+  have h1728 : (1728 : kk) ≠ 0 := by
+    have he : (1728 : kk) = 2 ^ 6 * 3 ^ 3 := by norm_num
+    rw [he]
+    exact mul_ne_zero (pow_ne_zero _ h2.ne_zero) (pow_ne_zero _ h3.ne_zero)
+  apply original_genus_lower_of_tame_fiber_bounds A N ℓ hℓN x rfl h1728
+    hf₀.toFinset hf₁.toFinset (fun _ => hf₀.mem_toFinset) (fun _ => hf₁.mem_toFinset)
+  · have hcard : Nat.card {v : Place kk F // 0 < v.ord x} = hf₀.toFinset.card :=
+      Nat.subtype_card _ (fun _ => hf₀.mem_toFinset)
+    rw [← hcard]
+    exact original_three_mul_card_j_zero_fiber_le_of_five_le A N ℓ hℓN hN hℓ x rfl
+  · have hcard : Nat.card {v : Place kk F // 0 < v.ord (x - algebraMap kk F 1728)} =
+        hf₁.toFinset.card := Nat.subtype_card _ (fun _ => hf₁.mem_toFinset)
+    rw [← hcard]
+    exact original_two_mul_card_j_1728_fiber_le_of_five_le A N ℓ hℓN hN hℓ x rfl
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

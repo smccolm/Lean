@@ -1,0 +1,68 @@
+import SourceCurveSeparatingCoordinateCanonicalDegree2012a
+import Dubon2026.SourceCurveEffectiveDivisorSum
+import Dubon2026.SourceCurveDerivativeLowerOrder
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation -> reverse genus -> residue Hurwitz.
+The actual canonical divisor of dt plus twice its pole divisor is effective,
+and its degree is twice the source genus minus two plus twice the coordinate
+degree. Explicit separability and the proved local generation discharge every
+characteristic-dependent premise. The original residue j supplies these inputs. -/
+namespace Dubon2026.SourceCurve
+noncomputable section
+open IntermediateField KaehlerDifferential
+variable {K F : Type*} [Field K] [IsAlgClosed K] [Field F] [Algebra K F]
+variable (t : F) [FiniteDimensional K⟮t⟯ F] [Algebra.IsSeparable K⟮t⟯ F]
+variable (ht : Transcendental K t) (hDt : D K F t ≠ 0)
+
+/-- The actual differential divisor corrected by twice the coordinate pole divisor. -/
+def separatingHurwitzDivisor : Divisor K F :=
+  letI := hasCanonicalDivisor_separating_coordinate t ht hDt
+  canonicalDivisorOf hDt +
+    2 • poleDivisor t (finite_function_support_of_separating_coordinate t ht t)
+
+theorem separatingHurwitzDivisor_apply (v : Place K F) :
+    separatingHurwitzDivisor t ht hDt v =
+      v.ordDifferential (D K F t) + 2 * max (-v.ord t) 0 := by
+  letI := hasCanonicalDivisor_separating_coordinate t ht hDt
+  simp only [separatingHurwitzDivisor, Finsupp.add_apply, Finsupp.smul_apply,
+    canonicalDivisorOf_apply, poleDivisor_apply, nsmul_eq_mul, Nat.cast_ofNat]
+
+theorem separating_coordinate_ord_sub_one_le_D (v : Place K F) (a : K) :
+    v.ord (t - algebraMap K F a) - 1 ≤ v.ordDifferential (D K F t) := by
+  letI := separating_coordinate_place_differentials t ht v
+  letI := finite_coordinate_place_residue t v
+  letI : Algebra.IsSeparable K v.ResidueField := inferInstance
+  letI := separating_coordinate_place_dCoordGenerates t ht hDt v
+  letI : Nontrivial Ω[F⁄K] := nontrivial_of_ne _ _ hDt
+  have he : D K F (t - algebraMap K F a) = D K F t := by
+    rw [map_sub, Derivation.map_algebraMap, sub_zero]
+  simpa only [he] using v.ord_sub_one_le_ordDifferential_D (he ▸ hDt)
+
+theorem separatingHurwitzDivisor_nonneg (v : Place K F) :
+    0 ≤ separatingHurwitzDivisor t ht hDt v := by
+  letI := separating_coordinate_place_differentials t ht v
+  letI := finite_coordinate_place_residue t v
+  letI : Algebra.IsSeparable K v.ResidueField := inferInstance
+  letI := separating_coordinate_place_dCoordGenerates t ht hDt v
+  letI : Nontrivial Ω[F⁄K] := nontrivial_of_ne _ _ hDt
+  rw [separatingHurwitzDivisor_apply]
+  by_cases h : 0 ≤ v.ord t
+  · have hd := v.ordDifferential_D_nonneg_of_mem (v.mem_of_ord_nonneg h)
+    rw [max_eq_right (neg_nonpos.mpr h), mul_zero, add_zero]
+    exact hd
+  · have hd := v.ord_sub_one_le_ordDifferential_D hDt
+    rw [max_eq_left (by omega)]
+    omega
+
+theorem degree_separatingHurwitzDivisor :
+    Divisor.degree (separatingHurwitzDivisor t ht hDt) =
+      2 * (genusFF K F : ℤ) - 2 + 2 * (Module.finrank K⟮t⟯ F : ℤ) := by
+  letI := hasCanonicalDivisor_separating_coordinate t ht hDt
+  rw [separatingHurwitzDivisor, map_add, map_nsmul,
+    separating_coordinate_canonical_degree_eq_genusFF t ht hDt,
+    degree_poleDivisor_eq_finrank_separating t ht]
+  rfl
+
+end
+end Dubon2026.SourceCurve

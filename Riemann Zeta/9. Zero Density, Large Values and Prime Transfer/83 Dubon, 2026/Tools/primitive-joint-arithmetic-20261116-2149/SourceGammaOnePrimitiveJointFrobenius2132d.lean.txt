@@ -1,0 +1,82 @@
+import SourceGammaOnePrimitiveJointGalois2131c
+import Dubon2026.SourceGammaOneGeometricHeckeFamily
+import Dubon2026.SourceGammaOneDiamondQuotientChosenFrobenius
+
+/-! DUB-17/18 -> original all-weight association -> joint arithmetic
+specialization. The proved original local geometry and the primitive
+boundary quadratic give one Frobenius relation in the same finite
+operator ring carrying the original character. No degree or genus
+preservation hypothesis is supplied. The diamond is retained explicitly. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup SourceCuspBoundary CoefficientReduction
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+
+/-- Each original generator has exactly its geometric/boundary pair
+in the literal joint operator image. -/
+theorem binaryPrimitiveJointHeckeDiamondWord_ι
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J) (s : S) :
+    binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ s) =
+      (Sum.elim Hq (fun _ : Gamma0 M => 1) s,
+        binaryPrimitiveBoundaryHeckeDiamondOperators Q N w s) := by
+  change (FreeAlgebra.lift ℤ (Sum.elim Hq (fun _ : Gamma0 M => 1)) (FreeAlgebra.ι ℤ s),
+    FreeAlgebra.lift ℤ (binaryPrimitiveBoundaryHeckeDiamondOperators Q N w) (FreeAlgebra.ι ℤ s)) = _
+  exact Prod.ext (FreeAlgebra.lift_ι_apply (Sum.elim Hq (fun _ : Gamma0 M => 1)) s)
+    (FreeAlgebra.lift_ι_apply (binaryPrimitiveBoundaryHeckeDiamondOperators Q N w) s)
+
+variable (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (ell : sourceBinaryHeckePrime (Q * N))
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure ell.val ell.property.1)
+local notation "A" => sourceRationalLocalValuation (Subtype.val ell) (And.left (Subtype.property ell)) e
+local notation "kk" => IsLocalRing.ResidueField A
+attribute [local instance] specializationResidueAlgebra
+
+/-- The actual joint representation obeys the exact original Hecke
+quadratic at every original good-prime local valuation, with the
+geometric hypotheses proved and the diamond coefficient explicit. -/
+theorem binaryPrimitiveJointGaloisRep_local_frobenius
+    (g : Gamma0 M) (hlabel : (g.val 1 1 : ZMod M) = ell.val)
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ ell.val) :
+    binaryPrimitiveJointGaloisRep Q p n w d.val *
+        binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inl ell)) =
+      binaryPrimitiveJointGaloisRep Q p n w d.val * binaryPrimitiveJointGaloisRep Q p n w d.val +
+        (ell.val : ZMod N) ^ (w + 1) •
+          binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inr g)) := by
+  letI := GaussReduction.residue_charP_of_prime_mem_nonunits A ell.val ell.property.1
+    (sourceRationalLocalValuation_prime ell.val ell.property.1 e)
+  have haway := ell.property.1.coprime_iff_not_dvd.mp (binaryPrimitiveLevelPrime Q N ell).property.2
+  have hgeo := gammaOne_local_degree_and_genus_eq M ell.val ell.property.1 haway e
+  have hp : (p : kk) ≠ 0 := by
+    rw [Ne, CharP.cast_eq_zero_iff _ ell.val]
+    intro h
+    exact (ell.property.1.coprime_iff_not_dvd.mp ell.property.2)
+      (dvd_mul_of_dvd_right (h.trans (dvd_pow_self p (Nat.succ_ne_zero n))) Q)
+  rw [binaryPrimitiveJointHeckeDiamondWord_ι, binaryPrimitiveJointHeckeDiamondWord_ι]
+  apply Prod.ext
+  · exact gammaOne_diamond_quotient_hecke_frobenius_of_intertwining Q p n w A ell
+      hgeo.1 hgeo.2 d hd hp (Hq ell) (hH ell)
+  · exact binaryPrimitiveBoundaryGaloisRep_frobenius Q N w A ell g hlabel d hd
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

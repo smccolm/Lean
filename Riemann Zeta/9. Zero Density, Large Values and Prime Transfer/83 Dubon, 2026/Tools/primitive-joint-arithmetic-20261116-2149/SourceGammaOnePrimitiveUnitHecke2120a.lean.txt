@@ -1,0 +1,74 @@
+import SourceGammaOnePrimitiveUnitActions2119b
+
+/-! DUB-17/18 -> original all-weight association -> finite joint arithmetic
+realization -> primitive boundary Frobenius. The actual prime Hecke
+operator is the sum of the two finite-unit representations; their
+commutation supplies the quadratic calculation without changing carriers. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCuspBoundary
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "F" => P M → V
+
+/-- Residue-unit reduction preserves the actual good-prime value. -/
+theorem binaryPrimitiveUnitReduction_prime (ell : sourceBinaryHeckePrime (Q * N)) :
+    (binaryPrimitiveUnitReduction Q N
+      (ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2) : ZMod N) =
+      ell.val := by
+  change ZMod.castHom _ (ZMod N) (ZMod.unitOfCoprime ell.val _ : ZMod M) = _
+  rw [ZMod.coe_unitOfCoprime, map_natCast]
+
+/-- The unit representation is the literal original diagonal homogeneous action. -/
+theorem binaryPrimitiveCoefficientUnits_eq (u : (ZMod M)ˣ) :
+    binaryPrimitiveCoefficientUnits Q N w u =
+      homogeneousMatrixAction w
+        (Matrix.diagonal ![(binaryPrimitiveUnitReduction Q N u : ZMod N), 1]) := by
+  change homogeneousMatrixAction w
+    (sourceDiagonalUnitPair (binaryPrimitiveUnitReduction Q N) 1 u).val = _
+  rw [sourceDiagonalUnitPair_val]
+  rfl
+
+/-- The actual prime boundary operator splits into the two proved finite-unit actions. -/
+theorem binaryPrimitiveColumnHecke_eq_sum (ell : sourceBinaryHeckePrime (Q * N)) :
+    let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+    binaryPrimitiveColumnHecke Q N w ell =
+      binaryPrimitiveColumnFirst Q N w u + binaryPrimitiveColumnSecond Q N w u := by
+  dsimp only
+  let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+  have hu : (binaryPrimitiveUnitReduction Q N u : ZMod N) = ell.val :=
+    binaryPrimitiveUnitReduction_prime Q N ell
+  have hb : binaryPrimitiveCoefficientUnits Q N w u =
+      homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]) := by
+    rw [binaryPrimitiveCoefficientUnits_eq, hu]
+  apply LinearMap.ext
+  intro f
+  funext c
+  change homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+      (ell.val • f (scale u⁻¹ 1 c) + f (scale 1 u c)) =
+    binaryPrimitiveCoefficientUnits Q N w u (f (scale 1 u c)) +
+      (binaryPrimitiveUnitReduction Q N u : ZMod N) •
+        binaryPrimitiveCoefficientUnits Q N w u (f (scale u⁻¹ 1 c))
+  rw [hb, hu, map_add, map_nsmul, Nat.cast_smul_eq_nsmul, add_comm]
+
+/-- The two genuine finite-unit actions commute, including all homogeneous coefficients. -/
+theorem binaryPrimitiveColumnFirst_second_commute (u v : (ZMod M)ˣ) :
+    Commute (binaryPrimitiveColumnFirst Q N w u) (binaryPrimitiveColumnSecond Q N w v) := by
+  apply LinearMap.ext
+  intro f
+  funext c
+  change binaryPrimitiveCoefficientUnits Q N w u
+      ((binaryPrimitiveUnitReduction Q N v : ZMod N) •
+        binaryPrimitiveCoefficientUnits Q N w v (f (scale v⁻¹ 1 (scale 1 u c)))) =
+    (binaryPrimitiveUnitReduction Q N v : ZMod N) •
+      binaryPrimitiveCoefficientUnits Q N w v
+        (binaryPrimitiveCoefficientUnits Q N w u (f (scale 1 u (scale v⁻¹ 1 c))))
+  rw [map_smul, scale_comm]
+  apply congrArg ((binaryPrimitiveUnitReduction Q N v : ZMod N) • ·)
+  change (binaryPrimitiveCoefficientUnits Q N w u * binaryPrimitiveCoefficientUnits Q N w v) _ =
+    (binaryPrimitiveCoefficientUnits Q N w v * binaryPrimitiveCoefficientUnits Q N w u) _
+  rw [← map_mul, ← map_mul, mul_comm u v]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

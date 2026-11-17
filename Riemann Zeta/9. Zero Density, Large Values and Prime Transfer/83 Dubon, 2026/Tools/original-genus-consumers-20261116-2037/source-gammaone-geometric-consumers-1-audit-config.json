@@ -1,0 +1,49 @@
+{
+  "modules": [
+    "SourceGammaOneLocalGoodReduction",
+    "SourceGammaOneGeometricHeckeFamily",
+    "SourceGammaOneGeometricArithmeticDescent",
+    "SourceGammaOneGeometricCharacter"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_local_degree_and_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_local_degree_and_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_local_degree_and_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_eq_away_level",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level",
+    "Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits",
+    "Dubon2026.sourceRationalLocalValuation_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryDiamondQuotient_original_character_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_normInertia_of_degree_genus_eq"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneLocalGoodReduction": "SourceGammaOneLocalGoodReduction-2032",
+    "SourceGammaOneGeometricHeckeFamily": "SourceGammaOneGeometricHeckeFamily-2032",
+    "SourceGammaOneGeometricArithmeticDescent": "SourceGammaOneGeometricArithmeticDescent-2032",
+    "SourceGammaOneGeometricCharacter": "SourceGammaOneGeometricCharacter-2032"
+  },
+  "separatelyAxiomChecked": []
+}

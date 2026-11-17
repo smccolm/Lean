@@ -1,0 +1,36 @@
+import SourceGammaOnePrimitiveCuspBoundary
+import SourceGammaOnePrimitiveWidth
+import SourceGammaOnePrimitiveWidthColumns
+import SourceGammaOnePrimitiveCuspValues
+import SourceGammaOnePrimitiveCuspConjugation
+import SourceGammaOnePrimitiveDiamond
+import SourceGammaOnePrimitiveUpperColumns
+import SourceGammaOnePrimitiveFixedCosets
+import SourceGammaOnePrimitiveFixedOrbit
+import SourceGammaOnePrimitivePrimeOrbits
+import SourceGammaOnePrimeHeckeCardinality
+import SourceGammaOnePrimitiveTwoOrbits
+import SourceGammaOnePrimitiveOrbitRepresentatives
+import SourceGammaOnePrimitiveDividedTerm
+import SourceGammaOnePrimitiveMultipliedTerm
+import SourceGammaOnePrimitiveTermColumns
+import SourceGammaOneFiniteBinaryBoundary
+import SourceGammaOnePrimitiveBoundaryOrbit
+import SourceGammaOnePrimitiveHeckeTrace
+import SourceGammaOnePrimitiveColumnBoundary
+import SourceGammaOnePrimitiveColumnHecke
+import SourceGammaOnePrimitiveColumnDiamond
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOnePrimitiveCuspBoundary, `SourceGammaOnePrimitiveWidth, `SourceGammaOnePrimitiveWidthColumns, `SourceGammaOnePrimitiveCuspValues, `SourceGammaOnePrimitiveCuspConjugation, `SourceGammaOnePrimitiveDiamond, `SourceGammaOnePrimitiveUpperColumns, `SourceGammaOnePrimitiveFixedCosets, `SourceGammaOnePrimitiveFixedOrbit, `SourceGammaOnePrimitivePrimeOrbits, `SourceGammaOnePrimeHeckeCardinality, `SourceGammaOnePrimitiveTwoOrbits, `SourceGammaOnePrimitiveOrbitRepresentatives, `SourceGammaOnePrimitiveDividedTerm, `SourceGammaOnePrimitiveMultipliedTerm, `SourceGammaOnePrimitiveTermColumns, `SourceGammaOneFiniteBinaryBoundary, `SourceGammaOnePrimitiveBoundaryOrbit, `SourceGammaOnePrimitiveHeckeTrace, `SourceGammaOnePrimitiveColumnBoundary, `SourceGammaOnePrimitiveColumnHecke, `SourceGammaOnePrimitiveColumnDiamond]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

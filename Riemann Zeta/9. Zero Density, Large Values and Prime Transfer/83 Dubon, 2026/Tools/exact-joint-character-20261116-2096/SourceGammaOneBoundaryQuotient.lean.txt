@@ -1,0 +1,52 @@
+import Dubon2026.SourceGammaOneParabolicOperatorAlgebra
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+joint geometric/boundary character. Use the literal H1/parabolic-H1
+quotient. Native parabolic Hecke stability and full-H1 finiteness already
+prove its operator descent and finiteness, avoiding auxiliary cusp-row
+spaces. A zero quotient word sends full H1 into the actual parabolic part. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) V
+local notation "P" => binaryParabolicH1 Q N w
+
+/-- The actual quotient of full homogeneous cohomology by its parabolic part. -/
+abbrev binaryBoundaryQuotient := H1 C ⧸ P
+
+/-- Original Hecke operators descended to the actual boundary quotient. -/
+def binaryBoundaryQuotientPrimeOperators (hlevel : 4 ≤ Q * N ^ 2) :
+    sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) (binaryBoundaryQuotient Q N w) :=
+  fun ell =>
+    letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+    (binaryParabolicH1 Q N w).mapQ P (sourceGammaOnePrimeOperators Q N w ell) (fun _ hx =>
+      binaryParabolicH1_hecke_mem Q N w hlevel ell.val
+        (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])) hx)
+
+/-- Boundary projection intertwines every original integral Hecke word. -/
+theorem binaryBoundaryQuotient_word (hlevel : 4 ≤ Q * N ^ 2)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N))) (x : H1 C) :
+    (binaryParabolicH1 Q N w).mkQ (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) a x) =
+      FreeAlgebra.lift ℤ (binaryBoundaryQuotientPrimeOperators Q N w hlevel) a ((binaryParabolicH1 Q N w).mkQ x) := by
+  exact sourceHeckeWord_intertwine_addHom _ _ (binaryParabolicH1 Q N w).mkQ.toAddMonoidHom (fun _ _ => rfl) a x
+
+/-- Vanishing on the literal boundary quotient gives the exact parabolic range. -/
+theorem binaryBoundaryQuotient_word_zero_parabolic (hlevel : 4 ≤ Q * N ^ 2)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)))
+    (ha : FreeAlgebra.lift ℤ (binaryBoundaryQuotientPrimeOperators Q N w hlevel) a = 0)
+    (x : H1 C) :
+    FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) a x ∈ P := by
+  apply (Submodule.Quotient.mk_eq_zero (binaryParabolicH1 Q N w)).mp
+  change (binaryParabolicH1 Q N w).mkQ (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) a x) = 0
+  rw [binaryBoundaryQuotient_word Q N w hlevel, ha]
+  rfl
+
+/-- The actual boundary quotient is finite by the existing native H1 theorem. -/
+theorem binaryBoundaryQuotient_finite : Finite (binaryBoundaryQuotient Q N w) := by
+  letI := sourceGammaOneConstantH1_finite Q N w
+  exact Finite.of_surjective (binaryParabolicH1 Q N w).mkQ (binaryParabolicH1 Q N w).mkQ_surjective
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

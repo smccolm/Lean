@@ -1,0 +1,154 @@
+{
+  "recordedUTC": "2026-11-17T03:22:46.526431+00:00",
+  "exactUnresolvedTheorems": [
+    "DUB-17: source Theorem 2.6, original non-CM modular-form concentration application",
+    "DUB-18: source Corollary 8.2, original level-one application"
+  ],
+  "chain": "Literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite Galois realizations of the original character -> actual geometric/boundary Frobenius relation -> primitive cusp two-term Hecke trace.",
+  "necessaryObstacle": "The existing native Gamma0 formula uses level-multiple loops. Multiplication by the level can kill genuine torsion boundary information. The primitive-loop calculation is required to connect the literal H1/parabolic quotient to an arithmetic finite-column operator family.",
+  "reuseDecision": "Reuse native principal reduction, coset equivalences, unipotent matrices, finite primitive columns and integral Hecke conjugation. Do not add a second modular-symbol carrier, a general open-curve theory or an arbitrary extension of the boundary operators. Adapt only the actual primitive-loop trace needed here.",
+  "discharged": [
+    "Every primitive Gamma1 cusp width divides the original level and is prime to every good Hecke prime.",
+    "The actual primitive Hecke action has one fixed coset, all other orbit lengths equal to the Hecke prime, and exactly two cyclic orbits in total.",
+    "Independent unit rescaling of the cusp coordinates preserves the primitive width.",
+    "Primitive cusp values descend to the existing finite residue-column carrier; its actual homogeneous H1 boundary has exactly parabolic H1 as kernel, including torsion coefficients when two is a unit.",
+    "Original Gamma1 conjugation preserves the primitive width, loop and character value."
+  ],
+  "remaining": [
+    "Identify both literal diagonal-conjugation orbit terms and prove the two-term primitive Hecke formula.",
+    "Construct the corresponding genuine cyclotomic boundary operators and prove the normalized Frobenius relation.",
+    "Retain the actual diamond factor in the boundary determinant until the original diamond-one character is proved to descend on the enlarged joint algebra. The current prime-word character alone does not justify dropping this factor.",
+    "Construct the compatible finite arithmetic realization, recover the original two-dimensional characteristic-zero representation, handle coefficient primes two and three and close the full association, automorphy and higher-continuation obligations."
+  ],
+  "status": "Individual focused compilations only for the listed ten modules; full scratch axiom, ownership, VALUE-closure and linter audits, production promotion and assembled verification are pending. No acceptance gate is newly closed.",
+  "productionScope": "The separate nine-module exact joint-character scope is already integrated at 9568. Aggregate, production focused axiom/linter and VALUE audits and exact ownership comparison passed; sequential foundation/paper verification is running.",
+  "modules": [
+    {
+      "module": "SourceGammaOnePrimitiveWidth2097b",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097b.lean",
+      "sha256": "6C17E9920963855108CE2458FB77D7C1CBCB397239DF253C1299E24A10FF0394",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitivePrimeOrbits2098c",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098c.lean",
+      "sha256": "93E8C58E5C0ADBD5D3D4C969721E624C2795310B9F2D9214DA8042DD19BA6FAF",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimeHeckeCardinality2099b",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099b.lean",
+      "sha256": "545B7266F555B0145EA0EE9104DC0DDFA70E397C6475510648E9346D3EB7532C",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveFixedCosets2101a",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets2101a.lean",
+      "sha256": "1C2173AEA75F259F4209295685582CEF6BF6020A761BBEDC5F316935630EC0A8",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveFixedOrbit2102b",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102b.lean",
+      "sha256": "77FD0B84CF189298E5EA70B98BE3BB18F8F9E44CF4F4D7D5F56819B1BB9C1480",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveTwoOrbits2103b",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103b.lean",
+      "sha256": "7E1FA2271943057DB5C45DA8FAE7E799632BA84091486A141610788CC72ABC67",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveWidthColumns2104c",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104c.lean",
+      "sha256": "2666E3C12A9E461486067CBED576B6F430777AB709FFADE770396A4ADAED4E26",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveCuspValues2105b",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105b.lean",
+      "sha256": "52AE05E7A493B14B53B7CD820F82C196B61A46C7AABBE5A04287FA630558AB91",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveColumnBoundary2106a",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary2106a.lean",
+      "sha256": "2CC23B3E332C8E9497B43B2D6036632D904E3337F793EEDFD2FD938EDAC226D7",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    },
+    {
+      "module": "SourceGammaOnePrimitiveCuspConjugation2107a",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation2107a.lean",
+      "sha256": "7BE41A5FE78F1F4C30125C56F9F3215240EA2CCCBB8675CF065C9DB35803B715",
+      "focusedExit": 0,
+      "focusedDiagnostics": 0
+    }
+  ],
+  "reuseReviewed": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrincipalCoprimeReduction.lean",
+      "sha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCoverHeckeCosets.lean",
+      "sha256": "9FA73B8E8C0E9A12C43F9ECA3FEC325B39D31745CCC8339CCF4220958B538220"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeUpperCosets.lean",
+      "sha256": "E1B567625B4E9F2677271CA99D6B7A6AB89324F7FD61E41B0271B941053EABC5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspUnipotent.lean",
+      "sha256": "6CEFE5D3E957FF43F80E77D04DB7DC01CE43655DB91DAEE806CE7BA2B28A9833"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspPrimeOrbits.lean",
+      "sha256": "1E5A0FADF6B8A142E93655E8CC2ABD5DBC91475AAB7E012AA05D7EB831674A4E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspHeckeTerms.lean",
+      "sha256": "7D62143D30774B1505C001967FEF4546C616DE6319E8BD2B00E28496F70D5FF8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspHeckeSum.lean",
+      "sha256": "2E967AEBD546143653FD56ED2D60EE2548C46F24BC6BD94F19EB2970DEEB65F8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceNativeCuspHecke.lean",
+      "sha256": "5EC9953F13914F8EDDD49C2B70CAD61FCFD57BD1DE0964193B4B4B04761821E8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCuspBoundary.lean",
+      "sha256": "E6125B4FE9C92B91BEFD04CD45A0ABDD843F8F397B21D9BAA25C8B3BFCC14EA4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBoundaryGaloisRepresentation.lean",
+      "sha256": "844D2B9DDD98352BFBC3BF67D4FC21558B960CCF9EC2F9C9634F54F10521F554"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeDiamondWords.lean",
+      "sha256": "0C4CBE2224DB6FCBB9245523D11F1EF34EA7A2E09FA80684C8EB168CA68F35AF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondQuotientChosenFrobenius.lean",
+      "sha256": "45D94399F017A98B8AD0E7FE6BAA126D9D4F749DA662B7273DE2631CFDD43134"
+    }
+  ],
+  "acceptance": "16/20; DUB-17--20 OPEN",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

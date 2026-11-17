@@ -1,0 +1,136 @@
+import SourceGammaOnePrimitiveCuspBoundary
+import SourceGammaOnePrimitiveWidth
+import SourceGammaOnePrimitiveWidthColumns
+import SourceGammaOnePrimitiveCuspValues
+import SourceGammaOnePrimitiveCuspConjugation
+import SourceGammaOnePrimitiveDiamond
+import SourceGammaOnePrimitiveUpperColumns
+import SourceGammaOnePrimitiveFixedCosets
+import SourceGammaOnePrimitiveFixedOrbit
+import SourceGammaOnePrimitivePrimeOrbits
+import SourceGammaOnePrimeHeckeCardinality
+import SourceGammaOnePrimitiveTwoOrbits
+import SourceGammaOnePrimitiveOrbitRepresentatives
+import SourceGammaOnePrimitiveDividedTerm
+import SourceGammaOnePrimitiveMultipliedTerm
+import SourceGammaOnePrimitiveTermColumns
+import SourceGammaOneFiniteBinaryBoundary
+import SourceGammaOnePrimitiveBoundaryOrbit
+import SourceGammaOnePrimitiveHeckeTrace
+import SourceGammaOnePrimitiveColumnBoundary
+import SourceGammaOnePrimitiveColumnHecke
+import SourceGammaOnePrimitiveColumnDiamond
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_coprime_good_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_iff_translation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_eq_of_unit_columns
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_generator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_congr
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_unipMat
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_conjugate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_conjugate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_conjugate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_eq_of_upper_columns
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_unique
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_fixed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_pow_mem_principal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_pow_fixes
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_period_one_or_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_hecke_cosets_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_orbit_card_two
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_out
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_two_orbits
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_mem_heckeUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_divided_term
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_pow_mem_heckeUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_multiplied_term
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_divided_column_compare
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_multiplied_column_compare
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_toP
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveLevelPrime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnHecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_normalizer_column
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_diamond
+
+private def runGammaOnePrimitiveColumnAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOnePrimitiveCuspBoundary, `SourceGammaOnePrimitiveWidth, `SourceGammaOnePrimitiveWidthColumns, `SourceGammaOnePrimitiveCuspValues, `SourceGammaOnePrimitiveCuspConjugation, `SourceGammaOnePrimitiveDiamond, `SourceGammaOnePrimitiveUpperColumns, `SourceGammaOnePrimitiveFixedCosets, `SourceGammaOnePrimitiveFixedOrbit, `SourceGammaOnePrimitivePrimeOrbits, `SourceGammaOnePrimeHeckeCardinality, `SourceGammaOnePrimitiveTwoOrbits, `SourceGammaOnePrimitiveOrbitRepresentatives, `SourceGammaOnePrimitiveDividedTerm, `SourceGammaOnePrimitiveMultipliedTerm, `SourceGammaOnePrimitiveTermColumns, `SourceGammaOneFiniteBinaryBoundary, `SourceGammaOnePrimitiveBoundaryOrbit, `SourceGammaOnePrimitiveHeckeTrace, `SourceGammaOnePrimitiveColumnBoundary, `SourceGammaOnePrimitiveColumnHecke, `SourceGammaOnePrimitiveColumnDiamond]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace, `Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_level, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_coprime_good_prime, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_iff_translation, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_eq_of_unit_columns, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_generator, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_congr, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_unipMat, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_eq_of_upper_columns, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_iff, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_unique, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_fixed, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_pow_mem_principal, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_pow_fixes, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_period_one_or_prime, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_hecke_cosets_card, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_orbit_card_two, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_out, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_two_orbits, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_mem_heckeUpper, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_divided_term, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_pow_mem_heckeUpper, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_multiplied_term, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_divided_column_compare, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_multiplied_column_compare, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_toP, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_hecke, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_normalizer_column, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_diamond]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveLevelPrime, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnHecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnDiamond]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive column postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive column theorems discovered"
+  logInfo m!"SOURCE GAMMAONE PRIMITIVE COLUMN AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runGammaOnePrimitiveColumnAudit
+
+#lint in SourceGammaOnePrimitiveCuspBoundary
+#lint in SourceGammaOnePrimitiveWidth
+#lint in SourceGammaOnePrimitiveWidthColumns
+#lint in SourceGammaOnePrimitiveCuspValues
+#lint in SourceGammaOnePrimitiveCuspConjugation
+#lint in SourceGammaOnePrimitiveDiamond
+#lint in SourceGammaOnePrimitiveUpperColumns
+#lint in SourceGammaOnePrimitiveFixedCosets
+#lint in SourceGammaOnePrimitiveFixedOrbit
+#lint in SourceGammaOnePrimitivePrimeOrbits
+#lint in SourceGammaOnePrimeHeckeCardinality
+#lint in SourceGammaOnePrimitiveTwoOrbits
+#lint in SourceGammaOnePrimitiveOrbitRepresentatives
+#lint in SourceGammaOnePrimitiveDividedTerm
+#lint in SourceGammaOnePrimitiveMultipliedTerm
+#lint in SourceGammaOnePrimitiveTermColumns
+#lint in SourceGammaOneFiniteBinaryBoundary
+#lint in SourceGammaOnePrimitiveBoundaryOrbit
+#lint in SourceGammaOnePrimitiveHeckeTrace
+#lint in SourceGammaOnePrimitiveColumnBoundary
+#lint in SourceGammaOnePrimitiveColumnHecke
+#lint in SourceGammaOnePrimitiveColumnDiamond

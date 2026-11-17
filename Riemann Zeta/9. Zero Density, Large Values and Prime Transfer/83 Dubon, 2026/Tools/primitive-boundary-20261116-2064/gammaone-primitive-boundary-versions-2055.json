@@ -1,0 +1,51 @@
+[
+  {
+    "version": "SourceGammaOnePrimitiveCuspBoundary2047d",
+    "module": "SourceGammaOnePrimitiveCuspBoundary",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047d.lean",
+    "originalSha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9",
+    "canonicalSha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneFiniteBinaryBoundary2048c",
+    "module": "SourceGammaOneFiniteBinaryBoundary",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048c.lean",
+    "originalSha256": "4B3E61C4DDAE758AA9C2E52C0731E57E59BEAD398852343F8C7AD920936F1F00",
+    "canonicalSha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C",
+    "mathematicalBodyIdentical": true,
+    "importAliasRepair": "The retained 2047c mathematical body has exactly two documentation strings added in 2047d; import the corrected canonical module, avoiding duplicate declarations."
+  },
+  {
+    "version": "SourceGammaOnePrimitiveBoundaryOrbit2051a",
+    "module": "SourceGammaOnePrimitiveBoundaryOrbit",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit2051a.lean",
+    "originalSha256": "18A91E77F1CDF177F6F20E1508E4904F5A45C9031AF744811438391EA8ACAEE9",
+    "canonicalSha256": "BF181088605A822D4095ABBB6532E5BBAA7161F819CD72F4E65897A763D3BE6E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOnePrimitiveCuspCoordinates2052b",
+    "module": "SourceGammaOnePrimitiveCuspCoordinates",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspCoordinates2052b.lean",
+    "originalSha256": "CD307B600B16192DF71C3AD96B0FCCC46A391D35E14E059065DAE7D7C936091F",
+    "canonicalSha256": "CD307B600B16192DF71C3AD96B0FCCC46A391D35E14E059065DAE7D7C936091F",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneBoundaryHeckeTrace2053a",
+    "module": "SourceGammaOneBoundaryHeckeTrace",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryHeckeTrace2053a.lean",
+    "originalSha256": "3A4681AA0F063A1DF6BBCCDD9F0CA5765E896C6E22B4980781C6A9A70385B474",
+    "canonicalSha256": "A9D2EA3D8FE00D6ECD1BE108B3341A9EEF6CF1FBCC862738E9EE9A208D947ACC",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOnePrimitiveBoundaryHeckeRows2054a",
+    "module": "SourceGammaOnePrimitiveBoundaryHeckeRows",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryHeckeRows2054a.lean",
+    "originalSha256": "719807F1B27546306397C659D5491EBDE60554E8F4E6921257B6452F4BFBADC8",
+    "canonicalSha256": "BE33697AE201D914CBD1048C59A8922F8C2EA8A52809D38B4F4161D17D0DC852",
+    "mathematicalBodyIdentical": true
+  }
+]

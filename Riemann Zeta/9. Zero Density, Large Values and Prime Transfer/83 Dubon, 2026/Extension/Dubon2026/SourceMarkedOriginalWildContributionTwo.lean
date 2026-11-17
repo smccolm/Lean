@@ -1,0 +1,42 @@
+import Dubon2026.SourceMarkedOriginalExactOrderTwo
+import Dubon2026.SourceMarkedOriginalWildDifferentTwo
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-two wild
+contribution. The actual original j fiber has exact local order twelve,
+and the constructed normal-field argument gives different order at least
+fourteen. Summing over the proved finite fiber yields the required weighted
+contribution without any local-order, chart or different hypothesis. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open CongruenceSubgroup GammaOne SourceCurve KaehlerDifferential
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+    [CharP (IsLocalRing.ResidueField A) 2]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_char_two_differential_contribution
+    (haway : ¬ 2 ∣ N) (hN : 3 < N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    7 * ((plusMinus (Gamma1 N)).index : ℤ) ≤
+      6 * (∑ᶠ v : {v : Place kk F // 0 < v.ord x},
+        v.val.ordDifferential (D kk F x)) := by
+  classical
+  letI : Fact (Nat.Prime 2) := ⟨Nat.prime_two⟩
+  obtain ⟨hfinite, hdegree⟩ := original_positive_j_fiber_finite_and_degree A N 2 haway x hx
+  letI := hfinite
+  letI : Fintype {v : Place kk F // 0 < v.ord x} := Fintype.ofFinite _
+  have hlocal (v : {v : Place kk F // 0 < v.ord x}) :
+      7 * v.val.ord x ≤ 6 * v.val.ordDifferential (D kk F x) := by
+    have horder := original_positive_j_order_eq_twelve A N haway hN x hx v.val v.property
+    have hd := original_fourteen_le_different_of_j_order_twelve A N haway (by omega)
+      x hx v.val horder
+    rw [horder]
+    omega
+  have hs := Finset.sum_le_sum (s := Finset.univ) (fun v _ => hlocal v)
+  rw [finsum_eq_sum_of_fintype] at hdegree ⊢
+  simpa only [← Finset.mul_sum, hdegree] using hs
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

@@ -1,0 +1,100 @@
+import SourceGammaOnePrimitiveBoundaryWords2124a
+import Dubon2026.SourceGammaOneBoundaryWordKernel
+
+/-! DUB-17/18 -> original all-weight association -> joint arithmetic
+realization -> original character with diamond value one. A word in the
+actual prime and diamond generators which vanishes on the geometric
+diamond quotient and explicit primitive boundary has square zero after
+original integral coefficient reduction. Native transfer is reused. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+/-- The genuine geometric quotient transfer intertwines prime/diamond
+words with the original Gamma0 words, where the diamonds act as one. -/
+theorem binaryDiamondQuotientOriginalTransfer_extended_word
+    (hlarge : 3 < p)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (a : FreeAlgebra ℤ S)
+    (z : (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w) :
+    binaryDiamondQuotientOriginalTransfer Q p n w hlarge
+        (FreeAlgebra.lift ℤ (Sum.elim Hq (fun _ : Gamma0 M => 1)) a z) =
+      FreeAlgebra.lift ℤ (Sum.elim
+        (fun ell => sourceBinaryH1PrimeOperators (ZMod N) Q w
+          (sourceGammaOneHeckePrimeForget Q N ell)) (fun _ : Gamma0 M => 1)) a
+        (binaryDiamondQuotientOriginalTransfer Q p n w hlarge z) := by
+  apply sourceHeckeWord_intertwine_addHom _ _
+    (binaryDiamondQuotientOriginalTransfer Q p n w hlarge).toAddMonoidHom
+  intro s x
+  cases s with
+  | inl ell =>
+    exact LinearMap.congr_fun
+      (binaryDiamondQuotientOriginalTransfer_hecke_of_intertwining Q p n w hlarge ell
+        (Hq ell) (hH ell)) x
+  | inr g => rfl
+
+/-- Simultaneous vanishing on the genuine geometric and primitive
+boundary spaces kills the square on the original reduced integral H1. -/
+theorem binaryPrimitiveJoint_original_kernel_square
+    (hlarge : 3 < p)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (a : FreeAlgebra ℤ S)
+    (ha : FreeAlgebra.lift ℤ (Sum.elim Hq (fun _ : Gamma0 M => 1)) a = 0)
+    (hb : FreeAlgebra.lift ℤ (binaryPrimitiveBoundaryHeckeDiamondOperators Q N w) a = 0)
+    (x : H1 (sourceBinaryCoefficientRep ℤ Q w)) :
+    sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w
+      ((sourceGammaOneOriginalHeckeDiamondWord Q N w (a ^ 2)).val x) = 0 := by
+  have h6 := sourcePrimePower_six_isUnit p n Fact.out hlarge
+  have h23 : IsUnit ((2 : ZMod N) * 3) := by
+    norm_num only [show (2 : ZMod N) * 3 = 6 by norm_num]
+    exact h6
+  obtain ⟨y, hy⟩ := sourceGammaOneConstantH1Transfer_surjective Q N w h6
+    (sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x)
+  let z : binaryParabolicH1 Q N w :=
+    ⟨FreeAlgebra.lift ℤ (sourceGammaOneHeckeDiamondOperators Q N w) a y,
+      binaryPrimitiveBoundaryHeckeDiamond_word_zero_parabolic Q N w
+        (isUnit_of_mul_isUnit_left h23) a hb y⟩
+  let E := binaryTateH1Equiv Q p n w hlarge
+  let q := (binaryTateDiamondRelations Q p n w).mkQ
+  let β := binaryDiamondQuotientOriginalTransfer Q p n w hlarge
+  let u := Sum.elim (fun ell => sourceBinaryH1PrimeOperators (ZMod N) Q w
+    (sourceGammaOneHeckePrimeForget Q N ell)) (fun _ : Gamma0 M => 1)
+  have hz : β (q (E.symm z)) = sourceGammaOneConstantH1Transfer Q N w z.val := by
+    rw [binaryDiamondQuotientOriginalTransfer_mk]
+    change sourceGammaOneConstantH1Transfer Q N w ((E (E.symm z)).val) = _
+    rw [LinearEquiv.apply_symm_apply]
+  have hw := binaryDiamondQuotientOriginalTransfer_extended_word Q p n w hlarge Hq hH a
+    (q (E.symm z))
+  have h0 := LinearMap.congr_fun ha (q (E.symm z))
+  have hzero : FreeAlgebra.lift ℤ u a (β (q (E.symm z))) = 0 :=
+    hw.symm.trans ((congrArg β h0).trans (map_zero β))
+  rw [hz] at hzero
+  change FreeAlgebra.lift ℤ u a
+    (sourceGammaOneConstantH1Transfer Q N w
+      (FreeAlgebra.lift ℤ (sourceGammaOneHeckeDiamondOperators Q N w) a y)) = 0 at hzero
+  rw [sourceGammaOneHeckeDiamondWord_transfer, hy] at hzero
+  rw [sourceGammaOneOriginalHeckeDiamondWord_change, pow_two a, map_mul]
+  exact hzero
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,18 @@
+{
+  "status": "Prepared only; predecessor9509 canonical PASS and archive are mandatory preflight inputs.",
+  "modules": 24,
+  "queries": 33,
+  "theorems": 30,
+  "constructions": 3,
+  "exhaustiveScratchChecks": 84,
+  "proofValueChecks": 64,
+  "scopes": 2,
+  "receipts": {
+    "source-marked-wild-different-1-scratch-receipt.json": "580CD8148D8866D29C24D1EB0CF44F08CF2D88017F78F20A25E3BEB02A60EA91",
+    "source-marked-wild-contribution-1-scratch-receipt.json": "832499BDEF972C68C36A12BB067A01CDD829D29AD4D1CC8B723729E342728593"
+  },
+  "expectedConsumers": 27672,
+  "expectedConstructions": 3054,
+  "fullGoal": "The original residue canonical-degree and Hurwitz comparison, the remaining small levels and reverse genus remain open in production. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "productionMutation": false
+}

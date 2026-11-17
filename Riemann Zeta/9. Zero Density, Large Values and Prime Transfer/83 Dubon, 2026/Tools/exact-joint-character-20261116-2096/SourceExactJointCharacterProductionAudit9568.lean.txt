@@ -1,0 +1,82 @@
+import Dubon2026.SourceGammaOneBoundaryWordKernel
+import Dubon2026.SourcePrimitiveH1SquareCongruence
+import Dubon2026.SourceOperatorRangeCharacter
+import Dubon2026.SourceGammaOneBoundaryQuotient
+import Dubon2026.SourceGammaOneExactJointRing
+import Dubon2026.SourceGammaOneExactJointSquare
+import Dubon2026.SourceGammaOneExactJointFinite
+import Dubon2026.SourceGammaOneExactJointCharacter
+import Dubon2026.SourceGammaOneGeometricExactJointCharacter
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square
+#print axioms Dubon2026.sourceOperatorRangeCharacterData
+#print axioms Dubon2026.sourceOperatorRangeCharacterData_of_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.instRingBinaryExactJointOperatorRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneBoundaryWordKernel, `Dubon2026.SourcePrimitiveH1SquareCongruence, `Dubon2026.SourceOperatorRangeCharacter, `Dubon2026.SourceGammaOneBoundaryQuotient, `Dubon2026.SourceGammaOneExactJointRing, `Dubon2026.SourceGammaOneExactJointSquare, `Dubon2026.SourceGammaOneExactJointFinite, `Dubon2026.SourceGammaOneExactJointCharacter, `Dubon2026.SourceGammaOneGeometricExactJointCharacter]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel, `Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square, `Dubon2026.sourceOperatorRangeCharacterData_of_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word, `Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic, `Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite, `Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square, `Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite, `Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character]
+  let constructions : Array Name := #[`Dubon2026.sourceOperatorRangeCharacterData, `Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient, `Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators, `Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing, `Dubon2026.SourceFunctionField.GammaOne.instRingBinaryExactJointOperatorRing, `Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE EXACT JOINT CHARACTER AUDIT PASS: {count} theorems including private/generated declarations. Original finite character on exact joint geometric/boundary algebra proved. Arithmetic realization and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneBoundaryWordKernel
+
+#lint in Dubon2026.SourcePrimitiveH1SquareCongruence
+
+#lint in Dubon2026.SourceOperatorRangeCharacter
+
+#lint in Dubon2026.SourceGammaOneBoundaryQuotient
+
+#lint in Dubon2026.SourceGammaOneExactJointRing
+
+#lint in Dubon2026.SourceGammaOneExactJointSquare
+
+#lint in Dubon2026.SourceGammaOneExactJointFinite
+
+#lint in Dubon2026.SourceGammaOneExactJointCharacter
+
+#lint in Dubon2026.SourceGammaOneGeometricExactJointCharacter

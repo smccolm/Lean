@@ -1,0 +1,68 @@
+import Dubon2026.SourceGammaOneConormDimension
+import Dubon2026.SourceCurvePositiveDivisorStabilization
+import Dubon2026.SourceCurveRepartitionIndex
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation -> reverse genus. The actual
+arithmetic and complex Gamma1 genera agree. Conorm degree and section-dimension
+preservation, together with native separating-coordinate genus stabilization,
+discharge the constant-field comparison without a genus-invariance premise.
+The positive-characteristic reverse inequality remains a separate obligation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ) [NeZero N]
+
+private theorem genus_eq_maximum
+    (L : Type*) [Field L] [Algebra ℚ L] [IsAlgClosed L]
+    {γ : ℤ} {D₀ : Divisor L (functionFieldOver (Gamma1 N) L)}
+    (h : RiemannGenusReachedAt γ D₀) :
+    (genusFF L (functionFieldOver (Gamma1 N) L) : ℤ) = γ := by
+  letI : CharZero L := charZero_of_injective_algebraMap (algebraMap ℚ L).injective
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  letI := finiteDimensional_jCoordinateOver hT L
+  letI := gamma1_isCurveOver N L
+  rw [genusFF_eq_zero_index]
+  exact separating_coordinate_index_zero_eq_maximum (jCoordinateOver (Gamma1 N) L)
+    (transcendental_jCoordinateOver (Gamma1 N) L) h
+
+theorem gamma1_genus_arithmetic_eq_complex :
+    genusFF Qbar (functionFieldOver (Gamma1 N) Qbar) =
+      genusFF ℂ (functionFieldOver (Gamma1 N) ℂ) := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  letI := finiteDimensional_jCoordinateOver hT Qbar
+  letI := finiteDimensional_jCoordinateOver hT ℂ
+  letI := gamma1_isCurveOver N Qbar
+  letI := gamma1_isCurveOver N ℂ
+  let tq := jCoordinateOver (Gamma1 N) Qbar
+  let tc := jCoordinateOver (Gamma1 N) ℂ
+  have htq : Transcendental Qbar tq := transcendental_jCoordinateOver (Gamma1 N) Qbar
+  have htc : Transcendental ℂ tc := transcendental_jCoordinateOver (Gamma1 N) ℂ
+  obtain ⟨γQ, DQ, hQ⟩ := separating_coordinate_degree_dimension_maximum tq htq
+  obtain ⟨γC, DC, hC⟩ := separating_coordinate_degree_dimension_maximum tc htc
+  let P := (exists_poleDivisorPackage_of_separating_coordinate tq htq
+    (finite_function_support_of_separating_coordinate tq htq tq)).some
+  have hp : 0 < Divisor.degree P.B := by rw [P.degB_eq]; exact_mod_cast P.hn_pos
+  letI : ∀ v : Place Qbar (functionFieldOver (Gamma1 N) Qbar),
+      Module.Finite Qbar v.ResidueField := finite_coordinate_place_residue tq
+  letI : ∀ v : Place ℂ (functionFieldOver (Gamma1 N) ℂ),
+      Module.Finite ℂ v.ResidueField := finite_coordinate_place_residue tc
+  letI := finite_lSpace_of_separating_coordinate tq htq 0
+  letI := finite_lSpace_of_separating_coordinate tc htc 0
+  obtain ⟨mq, hq⟩ := hQ.exists_forall_degree_nsmul_sub_ell_eq hp
+  have hpc : 0 < Divisor.degree (ConstantField.conorm N P.B) := by
+    rw [ConstantField.degree_conorm]
+    exact hp
+  obtain ⟨mc, hc⟩ := hC.exists_forall_degree_nsmul_sub_ell_eq hpc
+  have hqm := hq (max mq mc) (le_max_left _ _)
+  have hcm := hc (max mq mc) (le_max_right _ _)
+  have hmap : ConstantField.conorm N (max mq mc • P.B) =
+      max mq mc • ConstantField.conorm N P.B := by rw [map_nsmul]
+  rw [← hmap, ConstantField.degree_conorm, ConstantField.ell_conorm] at hcm
+  have heQ := genus_eq_maximum N Qbar hQ
+  have heC := genus_eq_maximum N ℂ hC
+  omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

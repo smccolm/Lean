@@ -1,0 +1,52 @@
+import SourceGammaOneConormDivisorSpaces
+import SourceGammaOneConormDimension
+import SourceGammaOneArithmeticGenus
+import SourceGammaOneArithmeticGenusBound
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound
+
+private def runGammaOneGenusComparisonAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneConormDivisorSpaces, `SourceGammaOneConormDimension, `SourceGammaOneArithmeticGenus, `SourceGammaOneArithmeticGenusBound]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm, `Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex, `Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus, `Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Marked algebraic chart postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Marked algebraic chart theorems discovered"
+  logInfo m!"SOURCE GAMMAONE GENUS COMPARISON AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runGammaOneGenusComparisonAudit
+
+#lint in SourceGammaOneConormDivisorSpaces
+#lint in SourceGammaOneConormDimension
+#lint in SourceGammaOneArithmeticGenus
+#lint in SourceGammaOneArithmeticGenusBound

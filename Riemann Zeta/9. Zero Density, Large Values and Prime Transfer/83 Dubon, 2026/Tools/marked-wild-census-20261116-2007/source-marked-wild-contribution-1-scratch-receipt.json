@@ -1,0 +1,221 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-11-16T23:00:10.309156+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceMarkedDihedralFiberBound",
+    "SourceMarkedSignFiberSymmetries",
+    "SourceMarkedOriginalWildFiberThree",
+    "SourceMarkedOrderTwelveFiberBound",
+    "SourceMarkedSignActionHom",
+    "SourceMarkedCharTwoSignAction",
+    "SourceMarkedOriginalWildFiberTwo",
+    "SourceMarkedNormalOrderDescent",
+    "SourceMarkedOriginalOrderBoundTwo",
+    "SourceMarkedOriginalOrderBoundThree",
+    "SourceMarkedOriginalPositiveDegree",
+    "SourceMarkedFiberOrderRigidity",
+    "SourceMarkedOriginalExactOrderTwo",
+    "SourceMarkedOriginalExactOrderThree",
+    "SourceMarkedOriginalWildContributionTwo",
+    "SourceMarkedOriginalWildContributionThree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedDihedralFiberBound.lean",
+      "sha256": "2C7D86C86367744798A72FFB137061DD0A428E1504C53689787E35A85BDB04C2",
+      "oleanSha256": "DF8E8183CC0C58953FB6CB6D8689FAEE579C324656C6319FCAD5819CF7DB24D6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedDihedralFiberBound-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedDihedralFiberBound-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberSymmetries.lean",
+      "sha256": "E3DC484F4D49E3416FB0F699FC3F52E4DF418482EFBD976E84793138A6D11964",
+      "oleanSha256": "AF906B2432FC1592949DA2C7B0D075F590123C0F049DEBF8F41594603F86385D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberSymmetries-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberSymmetries-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberThree.lean",
+      "sha256": "7E271D277FA064EBCF376EE22927F710CEB8D01C1989135F3504987CBE69B553",
+      "oleanSha256": "4A71F6CEC23CAC93196920D044B3753E01F27C532815EB00867D7E5C160F50BE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberThree-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberThree-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrderTwelveFiberBound.lean",
+      "sha256": "B8AAC3AF20388C983A439D98CFECF4A9C37A208238D6BE2142DD84C9C28FA55D",
+      "oleanSha256": "B65EEE216155CCFDC770D2F6420CAEE299EFE8CE240F904FA99EC2227DF9D040",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrderTwelveFiberBound-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrderTwelveFiberBound-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignActionHom.lean",
+      "sha256": "F9E24C40A08D258E3898061E7A5F9BD9F453040BAD5312BD6E12FAE96522E758",
+      "oleanSha256": "280ABF38FD2CE6CD200A3B40033B3A357EA1EB9C1EC10175BDED06FB8B43E1C5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignActionHom-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignActionHom-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCharTwoSignAction.lean",
+      "sha256": "AC9AF58BFDBA466078AB23A4698A186F0486C7D4A43D605B1D35BDB46A77BFFF",
+      "oleanSha256": "1E0B1604A7038BC8243A40C738BC0FC7DEC0CDD89F366D1B88F7A0532039CDC5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCharTwoSignAction-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCharTwoSignAction-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberTwo.lean",
+      "sha256": "22E9C2DF65F29A13AF0445045D7318AD3671272601A1DFCDE9590A1853DFC17D",
+      "oleanSha256": "20B48AFEC68F9F0BE75D6924591F460B27154D5C0A7415034A49E0456E6A3A07",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberTwo-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberTwo-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNormalOrderDescent.lean",
+      "sha256": "E64EFD1F6491A0635DFEA820E0433F96DD7630B7114B5B34288D13CAB2E6C879",
+      "oleanSha256": "19FFDD48613147835CD7FF86E7BE360957E07D855FE956F8DD2CDD570BDF4082",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNormalOrderDescent-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNormalOrderDescent-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundTwo.lean",
+      "sha256": "3FFC16B3B4EF6D19F72693E1A4D772673A36CFD649539C21096DCFE60E093079",
+      "oleanSha256": "B3A5C534C79B19E8A5F91E8C1538135587CD0C2C056F8F3940BFC79B3FB218A4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundTwo-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundTwo-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundThree.lean",
+      "sha256": "ECA60D8E8C29D6181F631396563A07AD13497FB9B63CE8B7B18459DFD2DBE510",
+      "oleanSha256": "E5F95B8F991396102F9A08C6C0FA3CA27A903B354278D9090B11FA020F24C463",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundThree-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundThree-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPositiveDegree.lean",
+      "sha256": "FBDCA50070DB220AED90E6DA176EFDB79DC4A5CD4F6AE91B915F902C8E4060AB",
+      "oleanSha256": "8D7574156BFF61DF203EF50A3B6D2FA34E1F88C5199EFAE25528538B008E1390",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPositiveDegree-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPositiveDegree-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberOrderRigidity.lean",
+      "sha256": "897F7C5F325A357774FA8D01067F6027F77ECDECF46919954C0EB2AD7930EBE0",
+      "oleanSha256": "C5B4D6AAA96B8B87336FE8FEF75F6BAC7ED22ABF81AE6EC5053642E79F459D90",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberOrderRigidity-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberOrderRigidity-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderTwo.lean",
+      "sha256": "DDE723FBBBE72182496B2B23C9E2B54F5C96499AE552C6E7D13C13A28BBBDCAD",
+      "oleanSha256": "D34A5AEE1DB403AF30ACC047FCD41EF3E599C009614BDD26708C7397FEDD04E1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderTwo-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderTwo-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderThree.lean",
+      "sha256": "71334C9871EE39832D67E32A70782F751995E54C75E2440D64C6C09B4CC61A48",
+      "oleanSha256": "105DEC910C743771FC4EF53EFED593C1515917B6D67086208344156380288D93",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderThree-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderThree-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionTwo.lean",
+      "sha256": "6469571644C5F5DFD55C167D263E698E63199089899392925679FA2AD4DAFF8D",
+      "oleanSha256": "F6C26E0006620C99C075B4C12B1E0ECB9ED0B84335AA154A9BAA7B2C12F69A9C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionTwo-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionTwo-2002.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionThree.lean",
+      "sha256": "22149F4312F3CFB25DDE9789F8DDDF740F0B65249274DACE011BB3D6633F0A40",
+      "oleanSha256": "DFF6491C77E02C7DAAE18A7015E122250080697B4B6C20BB543AE9D8543D0BF1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionThree-2002.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionThree-2002.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedTorsion.six_mul_card_fiber_le_of_free_dihedral",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClass_fiber_factor_invariant",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_conjugation",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_six_mul_card_j_zero_fiber_le_of_char_three",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.twelve_mul_card_fiber_le_of_free_marks",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesPermHom",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_eq_self_of_negation",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwoMarkedStabilizerAction",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_sign_le_marked_action_kernel",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwoMarkedSignAction",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_signProjection_marked_smul",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_quartic_marked_ne_self",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_cubic_marked_ne_self",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_twelve_mul_card_j_zero_fiber_le_of_char_two",
+    "Dubon2026.SourceFunctionField.MarkedChart.coordinate_order_dvd_of_normal_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_fiber_finite_and_degree",
+    "Dubon2026.SourceFunctionField.MarkedChart.eq_const_of_finsum_and_card_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_eq_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_eq_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_char_two_differential_contribution",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_char_three_differential_contribution"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.MarkedTorsion.six_mul_card_fiber_le_of_free_dihedral",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClass_fiber_factor_invariant",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_conjugation",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_six_mul_card_j_zero_fiber_le_of_char_three",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.twelve_mul_card_fiber_le_of_free_marks",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_eq_self_of_negation",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_sign_le_marked_action_kernel",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_signProjection_marked_smul",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_quartic_marked_ne_self",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwo_cubic_marked_ne_self",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_twelve_mul_card_j_zero_fiber_le_of_char_two",
+    "Dubon2026.SourceFunctionField.MarkedChart.coordinate_order_dvd_of_normal_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_fiber_finite_and_degree",
+    "Dubon2026.SourceFunctionField.MarkedChart.eq_const_of_finsum_and_card_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_eq_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_j_order_eq_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_char_two_differential_contribution",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_char_three_differential_contribution"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesPermHom",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwoMarkedStabilizerAction",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.charTwoMarkedSignAction"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedWildContributionAudit1.log",
+  "logSha256": "7E6FC3F8BD433F41EF71EFE21D2E02575D3E87190B256AEB7797361CB55A6869",
+  "auditSha256": "A3ECF3F437C3EEF5933F28B066CD39C327650D1E7B96E6B698CA9AE5AC3FDDF7",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedWildContributionScratchOwnership2002.log",
+  "ownershipSha256": "7BCBD57835E9F5F870AED7947208C52B00E8DA70808AF41690CEBE720B14BFD4",
+  "exhaustiveTheorems": 56,
+  "linterScopes": 16,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 41,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedWildContributionDependencyAudit1.log",
+  "dependencyAuditSha256": "31D8A1DA3275052EC5117AEE705735A40D08DA63B52E2BFF611158021014E3A3",
+  "dependencyAuditSourceSha256": "8B56BCDDD91A5D581E437254B8BF67E55809A27BE04C022926B0BAC0EBC4937F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_char_two_differential_contribution",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_char_three_differential_contribution"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation -> reverse genus -> characteristic-two/three weighted different contribution.",
+  "discharged": [
+    "Actual residue charts have no finite-field, torsion-count or inertia-lift premises.",
+    "Native free actions on primitive sign classes give cardinal factors six and twelve.",
+    "Every original positive j order divides six or twelve by restriction from the constructed normal field.",
+    "The finite positive j fiber has total multiplicity equal to the signed Gamma1 index.",
+    "Cardinal and degree equality force orders six or twelve at all positive places.",
+    "The full weighted original-field different contribution follows with no local-order, normal-field or differential certificate."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Small levels N at most three and reverse genus remain required. Continue original association and higher continuation afterwards. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-wild-contribution-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "65230660BD1062C122BB33E95311E2FC93A6D6217966A776B5D2497085463570",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

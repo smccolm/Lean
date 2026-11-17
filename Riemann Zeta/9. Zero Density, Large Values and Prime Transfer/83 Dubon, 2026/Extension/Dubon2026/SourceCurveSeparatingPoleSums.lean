@@ -1,0 +1,61 @@
+import Dubon2026.SourceCurveSeparatingGenusMaximum
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation -> reverse genus -> residue Hurwitz.
+Native separating-coordinate degree applied to the inverse coordinate computes
+the total pole order on the actual field. Its finite-set form removes the pole
+multiplicity sum from the original residue Hurwitz bound without a degree or
+pole-count premise. -/
+
+noncomputable section
+
+namespace Dubon2026.SourceCurve
+
+open IntermediateField
+open scoped IntermediateField
+
+variable {K F : Type*} [Field K] [IsAlgClosed K] [Field F] [Algebra K F]
+variable (t : F) [FiniteDimensional K⟮t⟯ F] [Algebra.IsSeparable K⟮t⟯ F]
+variable (ht : Transcendental K t)
+include ht
+
+/-- The total pole order equals the actual separating-coordinate degree. -/
+theorem sum_pole_orders_eq_finrank_separating :
+    (∑ᶠ v : {v : Place K F // v.ord t < 0},
+      -v.1.ord t) = (Module.finrank K⟮t⟯ F : ℤ) := by
+  have ht : Transcendental K t⁻¹ :=
+    fun h => ht (IsAlgebraic.inv_iff.mp h)
+  haveI : FiniteDimensional K⟮t⁻¹⟯ F := by
+    rw [adjoin_singleton_inv_eq]
+    infer_instance
+  haveI : Algebra.IsSeparable K⟮t⁻¹⟯ F := by
+    rw [adjoin_singleton_inv_eq]
+    infer_instance
+  have h := sum_positive_orders_eq_finrank_separating _ ht
+  have hr : ∀ v : Place K F, Module.finrank K v.ResidueField = 1 :=
+    fun v => Module.finrank_of_bijective_algebraMap (place_residue_bijective_of_finite_coordinate t v)
+  simp only [hr, Nat.cast_one, mul_one] at h
+  rw [adjoin_singleton_inv_eq] at h
+  let e : {v : Place K F // 0 < v.ord t⁻¹} ≃
+      {v : Place K F // v.ord t < 0} :=
+    Equiv.subtypeEquivRight fun v => by rw [v.ord_inv, neg_pos]
+  rw [← finsum_comp_equiv e]
+  change (∑ᶠ v : {v : Place K F // 0 < v.ord t⁻¹},
+    -v.1.ord t) = _
+  simpa only [Place.ord_inv] using h
+
+/-- The complete finite pole set has total multiplicity equal to the coordinate degree. -/
+theorem sum_pole_orders_finset_separating
+    (S : Finset (Place K F))
+    (hS : ∀ v, v ∈ S ↔ v.ord t < 0) :
+    (∑ v ∈ S, -v.ord t) = (Module.finrank K⟮t⟯ F : ℤ) := by
+  have h := sum_pole_orders_eq_finrank_separating t ht
+  have he : {v : Place K F | v.ord t < 0} =
+      (S : Set _) := Set.ext fun v => (hS v).symm
+  have h' := (finsum_set_coe_eq_finsum_mem
+    (f := fun v : Place K F => -v.ord t)
+    {v | v.ord t < 0}).symm.trans h
+  rw [he, finsum_mem_coe_finset] at h'
+  exact h'
+
+end Dubon2026.SourceCurve

@@ -1,0 +1,44 @@
+import Dubon2026.SourceGammaOneConormDivisorSpaces
+import Dubon2026.SourceGammaOneConormDimension
+import Dubon2026.SourceGammaOneArithmeticGenus
+import Dubon2026.SourceGammaOneArithmeticGenusBound
+import Dubon2026.SourceCurveSeparatingCoordinateGeometry
+import Dubon2026.SourceCurveSeparatingCoordinateCanonical
+import Dubon2026.SourceCurveSeparatingCoordinateGlobalResidues
+import Dubon2026.SourceCurveSeparatingCoordinateResidueDuality
+import Dubon2026.SourceCurveSeparatingCoordinateCanonicalDegree
+import Dubon2026.SourceCurveSeparatingCoordinateHurwitz
+import Dubon2026.SourceCurveSeparatingHurwitzBound
+import Dubon2026.SourceCurveSeparatingPoleSums
+import Dubon2026.SourceCurveSeparatingHurwitzCuspBound
+import Dubon2026.SourceOriginalResidueHurwitz
+import Dubon2026.SourceOriginalWildGenusLower
+import Dubon2026.SourceCurveSeparatingFiberSums
+import Dubon2026.SourceOriginalTameGenusCriterion
+import Dubon2026.SourceOriginalTameGenusLower
+import Dubon2026.SourceOriginalLargeLevelGenusLower
+import Dubon2026.SourceGammaOneSmallLevelIndex
+import Dubon2026.SourceGammaOneSmallLevelGenus
+import Dubon2026.SourceOriginalGammaOneGenusPreservation
+import Dubon2026.SourceGammaOneLocalGoodReduction
+import Dubon2026.SourceGammaOneGeometricHeckeFamily
+import Dubon2026.SourceGammaOneGeometricArithmeticDescent
+import Dubon2026.SourceGammaOneGeometricCharacter
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneConormDivisorSpaces, `Dubon2026.SourceGammaOneConormDimension, `Dubon2026.SourceGammaOneArithmeticGenus, `Dubon2026.SourceGammaOneArithmeticGenusBound, `Dubon2026.SourceCurveSeparatingCoordinateGeometry, `Dubon2026.SourceCurveSeparatingCoordinateCanonical, `Dubon2026.SourceCurveSeparatingCoordinateGlobalResidues, `Dubon2026.SourceCurveSeparatingCoordinateResidueDuality, `Dubon2026.SourceCurveSeparatingCoordinateCanonicalDegree, `Dubon2026.SourceCurveSeparatingCoordinateHurwitz, `Dubon2026.SourceCurveSeparatingHurwitzBound, `Dubon2026.SourceCurveSeparatingPoleSums, `Dubon2026.SourceCurveSeparatingHurwitzCuspBound, `Dubon2026.SourceOriginalResidueHurwitz, `Dubon2026.SourceOriginalWildGenusLower, `Dubon2026.SourceCurveSeparatingFiberSums, `Dubon2026.SourceOriginalTameGenusCriterion, `Dubon2026.SourceOriginalTameGenusLower, `Dubon2026.SourceOriginalLargeLevelGenusLower, `Dubon2026.SourceGammaOneSmallLevelIndex, `Dubon2026.SourceGammaOneSmallLevelGenus, `Dubon2026.SourceOriginalGammaOneGenusPreservation, `Dubon2026.SourceGammaOneLocalGoodReduction, `Dubon2026.SourceGammaOneGeometricHeckeFamily, `Dubon2026.SourceGammaOneGeometricArithmeticDescent, `Dubon2026.SourceGammaOneGeometricCharacter]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

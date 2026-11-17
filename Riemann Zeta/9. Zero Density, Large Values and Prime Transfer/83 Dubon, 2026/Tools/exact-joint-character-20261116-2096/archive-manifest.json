@@ -1,0 +1,649 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Exact Joint Character Assessment 2026-11-16.md",
+      "path": "Tools/exact-joint-character-20261116-2096/Dubon Exact Joint Character Assessment 2026-11-16.md.txt",
+      "sha256": "41A47551AFAB2424C46B08179A7F162ACE84509C0E64EF2446BAD629991967A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient.lean.txt",
+      "sha256": "F2746945BBE1FA6751C0D505D1A30633703A37BE0AD068FD4838431AE99CEDDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089a.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089a.lean.txt",
+      "sha256": "485C6BBC78945BF2D62582AA49FCEAE46DB79738444F13A8FCA2276E7BBC0404"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089a.log",
+      "sha256": "19215F86BB50C1CBD63883111CF236097A4B45FC9BF3A3BDC59E9A1BF72AC5D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089b.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089b.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089b.lean.txt",
+      "sha256": "3C1C12D8D4FDC97D393065D56A361B46E4F3D294B5DD5A13D809600B34089820"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089b.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089b.log",
+      "sha256": "41565073917B1E192E27639ED03189560ACE61FB2B71A7B78A1152520F44302B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089c.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089c.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089c.lean.txt",
+      "sha256": "F2746945BBE1FA6751C0D505D1A30633703A37BE0AD068FD4838431AE99CEDDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089c.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryQuotient2089c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel-2043.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel-2043.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel-2043.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel-2043.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel.lean.txt",
+      "sha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040a.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040a.lean.txt",
+      "sha256": "F3BE24D84B54BCE2ADF0A93D4BCC0379B7F9BE46D400BDDE430B6BBE926CC6C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040a.log",
+      "sha256": "4359F2AF2CA539767C67757F05955FC1F96BB288E78AB24CF0690C18320650B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040b.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040b.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040b.lean.txt",
+      "sha256": "E0B11549A24E410B8207BC7987E153754670545F80478DD342E62B4DBB726D30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040b.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040b.log",
+      "sha256": "14868A95FF6610DF05350EB1CE22483D3CF0E1FCB73A939121DA569FA0B89668"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040c.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040c.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040c.lean.txt",
+      "sha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040c.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneBoundaryWordKernel2040c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter-2100.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter-2100.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter-2100.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter-2100.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter.lean.txt",
+      "sha256": "96483EC691472B9A07A74A5CF90202768E088E766A910595913482CBFFB867F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter2092a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter2092a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter2092a.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter2092a.lean.txt",
+      "sha256": "115D955213A91E8ED4AD1F9C05A7F06BE113138A7EF7702E096F167CE611F155"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter2092a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacter2092a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit1.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit1.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterAudit1.lean.txt",
+      "sha256": "3814AB6CBB5911BDDF640A36AA67A822C0F6BE85484C545A6C3304A069CDE232"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit1.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterAudit1.log",
+      "sha256": "414EF6A28F92CB4E309ED5A72051B2888F6E9EFC7DFFE5832B1C6328FD4F7CEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit2.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit2.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterAudit2.lean.txt",
+      "sha256": "70CB0A275BC81FA4D91CF092A512BCBA062E1272868CE08F494A20C0543E359D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit2.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterAudit2.log",
+      "sha256": "FD780871EC00EDCBBEA1CC21CDF2C9BFDA579B96F2E8095151128C2628737829"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterDependencyAudit1.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterDependencyAudit1.lean.txt",
+      "sha256": "961BDB9EDFD278C024785CFD86537F9AF39B394A796A39AD75597FD8B9EAFB43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterDependencyAudit2.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterDependencyAudit2.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterDependencyAudit2.lean.txt",
+      "sha256": "1EF3B2BF524E97EA9FDE8BF200261050F40DA259E1452640D9A0D8E864B9260D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterDependencyAudit2.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterDependencyAudit2.log",
+      "sha256": "5AFC08E663DDB6459E43E1972FE53B891D1EFF6C032CCCE45F9E384D68371856"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterScratchOwnership2095.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterScratchOwnership2095.lean.txt",
+      "sha256": "EBC7D59A3D3B7F6A4C9DCF8F8EF0F112D0B7988CF40A1DECC60886273450A109"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterScratchOwnership2100.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterScratchOwnership2100.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterScratchOwnership2100.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterScratchOwnership2100.lean.txt",
+      "sha256": "EBC7D59A3D3B7F6A4C9DCF8F8EF0F112D0B7988CF40A1DECC60886273450A109"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterScratchOwnership2100.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointCharacterScratchOwnership2100.log",
+      "sha256": "C2822865CEB5F43A0219BC68080C72B1BD99EBF2586068B1C1F8E59189123E0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite-2100.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite-2100.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite-2100.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite-2100.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite.lean.txt",
+      "sha256": "27C6C3DADC777A254519CAE3E8535D19DF008F1F97C33C1C33C584F57BF360D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094a.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094a.lean.txt",
+      "sha256": "810D193034C9EA81464C4322A417252D02AC88DEE8AE08FC283DE2CC22E5F4A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094a.log",
+      "sha256": "2559948886D4CED6A3FEE99DFAD8F931DF57EE3F2AAAAED38B59273D7DEFD896"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094b.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094b.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094b.lean.txt",
+      "sha256": "1476EDA9D4B591EF1E365FCFAFBE81B9D52256750D02C9593EEB667247E2799A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094b.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094c.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094c.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094c.lean.txt",
+      "sha256": "3F1F75A920066EB6A82B80A93C1F9412F0C4A46F2F8C1909CF564C195F4E2E89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094c.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointFinite2094c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing-2100.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing-2100.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing-2100.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing-2100.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing.lean.txt",
+      "sha256": "083654CB52EC487E0BEDDF064D2C9041CF3D1D0468D0D4C35D8AB826D4AD4AA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing2090a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing2090a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing2090a.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing2090a.lean.txt",
+      "sha256": "971FC6F395E27871E2ACC7E552AF378320A18970D311ED5130950E5BADDA9888"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing2090a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing2090a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing2090b.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing2090b.lean.txt",
+      "sha256": "ECEB80FAD171F866757034DBF9045E656301232DB9DA4512E090A078802BC9F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing2095Failed.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointRing2095Failed.lean.txt",
+      "sha256": "DCCC5FBD7A6C1D6196264DF2679F506B86C6C74D65C2C2495521DFE297991057"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare-2100.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare-2100.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare-2100.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare-2100.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare.lean.txt",
+      "sha256": "51D29098CB2189757D49300B685BF6F45743010E8933EE538E150A3EE5BAA7D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare2091a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare2091a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare2091a.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare2091a.lean.txt",
+      "sha256": "10313951763B5BAEE78FD4098B735323EE4A718B683900422685793E19326A12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare2091a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneExactJointSquare2091a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter-2100.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter-2100.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter-2100.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter-2100.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter.lean.txt",
+      "sha256": "45573A1412307AAE9C2D43A57CB78D2F0A826A33B63BBBDC33B6DB1180667B8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093a.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093a.lean.txt",
+      "sha256": "93FBD55BECF37EDB6146A0A3F188B0D61460E097A658A39CEFB85BAE4D8EC2A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093a.log",
+      "sha256": "3E218D000C39F5F05CA26A229E71C06C25862BA06B92FB1BA8E5AD9A9A7B479D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093b.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093b.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093b.lean.txt",
+      "sha256": "97E55AA2A877B6F5C54A8919CC56F911C439AFE6AE5127EB83B8B2E85F1F276D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093b.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093b.log",
+      "sha256": "3A9CBB587BAC41165423079762B0F3B1B3B3C6B97F1C329DBFCCC57E5654636C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093c.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093c.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093c.lean.txt",
+      "sha256": "512C541339A35633780A894D75BDE4A2D0FD618AED72D137831C885A740ACC4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093c.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneGeometricExactJointCharacter2093c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointOperatorRing2088a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneJointOperatorRing2088a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointOperatorRing2088a.lean.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneJointOperatorRing2088a.lean.txt",
+      "sha256": "5793BCC258A9F516BB2A2D6346C1BD297AF9BAAF6E7FD3015C5183B622694D54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointOperatorRing2088a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneJointOperatorRing2088a.log",
+      "sha256": "59BD28BAC98CC26F003DCFA91C0083091CB1DD1C364D69D71544899301278483"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointOperatorRing2088b.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneJointOperatorRing2088b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointOperatorRing2088b.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneJointOperatorRing2088b.lean.txt",
+      "sha256": "6C2C16C774CA7D49A8C7AA9881CCAC1246006CD185D4FF7295EC7370BC62D798"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointOperatorRing2088b.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceGammaOneJointOperatorRing2088b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceOperatorRangeCharacter-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceOperatorRangeCharacter-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceOperatorRangeCharacter.lean.txt",
+      "sha256": "8C931C644646EDFC78750608E12AF63022096EB1A5A4B92A9B2BB4FE2A457B22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter2086a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceOperatorRangeCharacter2086a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter2086a.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceOperatorRangeCharacter2086a.lean.txt",
+      "sha256": "6D1891A68FBE08ACBA656C8B6971A95844A3C7C9E423B8600DAD96A7C1C026B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter2086a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourceOperatorRangeCharacter2086a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence-2095.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourcePrimitiveH1SquareCongruence-2095.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence-2095.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourcePrimitiveH1SquareCongruence-2095.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourcePrimitiveH1SquareCongruence.lean.txt",
+      "sha256": "A2F05A623196AFBE03294F9C9EF24CA2A9BEE380E6677EA92B531BAC0AE11B4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence2080a.exit",
+      "path": "Tools/exact-joint-character-20261116-2096/SourcePrimitiveH1SquareCongruence2080a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence2080a.lean",
+      "path": "Tools/exact-joint-character-20261116-2096/SourcePrimitiveH1SquareCongruence2080a.lean.txt",
+      "sha256": "2FE6C56E9BF31FCFC506A6FEFB563073652D44D88715E75CFC99854F0AB65EE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence2080a.log",
+      "path": "Tools/exact-joint-character-20261116-2096/SourcePrimitiveH1SquareCongruence2080a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gammaone_exact_joint_character_2095.ps1",
+      "path": "Tools/exact-joint-character-20261116-2096/audit_gammaone_exact_joint_character_2095.ps1",
+      "sha256": "B5E1603BBBBDA1CC375B10317A7F13F7A9DA96C58CC2A882538ACC4B7239A8BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gammaone_exact_joint_character_2100.ps1",
+      "path": "Tools/exact-joint-character-20261116-2096/audit_gammaone_exact_joint_character_2100.ps1",
+      "sha256": "C2B45ADE088ED0C2FC34F41F0EC2C810FB5D9D46259977A0B5E9D7AEB1C9270A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gammaone_exact_joint_character_canonical_2095.ps1",
+      "path": "Tools/exact-joint-character-20261116-2096/build_gammaone_exact_joint_character_canonical_2095.ps1",
+      "sha256": "EC81986FC59D38CFEF9900E2A1346AC1601E5ED1348C5A13A3BBA5B43A224677"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gammaone_exact_joint_character_canonical_2100.ps1",
+      "path": "Tools/exact-joint-character-20261116-2096/build_gammaone_exact_joint_character_canonical_2100.ps1",
+      "sha256": "1575FE71D8298A96EB79C17D2B6CDE8EA7D3C1C5797DEDE313911FD7D4140893"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\exact-joint-character-promotion-route-2096.json",
+      "path": "Tools/exact-joint-character-20261116-2096/exact-joint-character-promotion-route-2096.json",
+      "sha256": "1AEA40E7D5D27D9EAAAF6806B35071809AAFF7B60C277B976C488F3B203867B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\expanded-reuse-assessment-2079.md.txt",
+      "path": "Tools/exact-joint-character-20261116-2096/expanded-reuse-20261116-2071/expanded-reuse-assessment-2079.md.txt",
+      "sha256": "5768A1EBB69C8CD9A7601A47A47862629C5E81B60F37AFF60BFB999F4071D091"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\publication-manifest-2079.json",
+      "path": "Tools/exact-joint-character-20261116-2096/expanded-reuse-20261116-2071/publication-manifest-2079.json",
+      "sha256": "E894E902BBD1D06AA0D706267A5E6A9C2E06DF9564499AE2AA5EC5F83B79B917"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gammaone-exact-joint-character-versions-2095.json",
+      "path": "Tools/exact-joint-character-20261116-2096/gammaone-exact-joint-character-versions-2095.json",
+      "sha256": "92530BF53E33F2C392F35717CA13A70424F76DE3B14B798563E82D311CCAE0D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_exact_joint_character_audit_2095.py",
+      "path": "Tools/exact-joint-character-20261116-2096/prepare_exact_joint_character_audit_2095.py",
+      "sha256": "C1E60C1F9CF43A4EA1393754C32FBA5FB010DC61AF1E91BEE2D317FB2DD3A819"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gammaone_exact_joint_character_2095.py",
+      "path": "Tools/exact-joint-character-20261116-2096/record_gammaone_exact_joint_character_2095.py",
+      "sha256": "97B7D2BB0A126B0B176CC6A33C4A35ADDE8A6194D9EC2FDFA89924995732FE13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gammaone_exact_joint_character_2100.py",
+      "path": "Tools/exact-joint-character-20261116-2096/record_gammaone_exact_joint_character_2100.py",
+      "sha256": "3F8CA537B2EA27EBE12A0F80A6CAD56EA048E50DA2B269764549E4CE65393614"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\repair_exact_joint_character_linter_2100.py",
+      "path": "Tools/exact-joint-character-20261116-2096/repair_exact_joint_character_linter_2100.py",
+      "sha256": "EE8051731D9084AA9A87F50BE5CDFABC5292665B2F888394D993EF422A08B2D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-1-audit-config.json",
+      "path": "Tools/exact-joint-character-20261116-2096/source-gammaone-exact-joint-character-1-audit-config.json",
+      "sha256": "923474EDF1AA3970DEE8D3AB3D004E178B40CD9A616E2C4FC9136F2EA12D33E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-2-audit-config.json",
+      "path": "Tools/exact-joint-character-20261116-2096/source-gammaone-exact-joint-character-2-audit-config.json",
+      "sha256": "E72AFFE2A3DCCDD4E58DDE3EC73FB3256DA226F669D5A864749391540946130B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-2-reuse-review-20261116.json",
+      "path": "Tools/exact-joint-character-20261116-2096/source-gammaone-exact-joint-character-2-reuse-review-20261116.json",
+      "sha256": "3146E60AA53F41BFFB2C83A2FAE6DCF74052858903A2BA1C383B34E37A9C8457"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-2-scratch-receipt.json",
+      "path": "Tools/exact-joint-character-20261116-2096/source-gammaone-exact-joint-character-2-scratch-receipt.json",
+      "sha256": "29095882168BBDFAA253131A2F97076AF2182890B670E9FF4AF925C76F3DF89E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-audit-route-2095.json",
+      "path": "Tools/exact-joint-character-20261116-2096/source-gammaone-exact-joint-character-audit-route-2095.json",
+      "sha256": "E92577700A155B56ED5F7C556CDA5B4B3E5E37E258C85A75047D6A2306634949"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-audit-route-2100.json",
+      "path": "Tools/exact-joint-character-20261116-2096/source-gammaone-exact-joint-character-audit-route-2100.json",
+      "sha256": "07D7AF0901BA1CAD376020D79131B0A15D4C951D68974E23CA5DDB3DE4D17BF3"
+    }
+  ]
+}

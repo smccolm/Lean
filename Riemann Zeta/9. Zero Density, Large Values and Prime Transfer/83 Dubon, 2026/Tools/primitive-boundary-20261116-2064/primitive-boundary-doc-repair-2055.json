@@ -1,0 +1,24 @@
+{
+  "failedAudit": "SourceGammaOnePrimitiveBoundaryAudit1.log",
+  "reason": "Two missing definition documentation strings; exhaustive axiom checks passed but docBlame failed. Exact two-comment insertion; no statement or proof altered.",
+  "retained": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary.lean",
+      "sha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527",
+      "retained": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2050-retained.lean.txt"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary.lean",
+      "sha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C",
+      "retained": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2050-retained.lean.txt"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryAudit1.lean",
+      "sha256": "B9337F917908D0E172E09E073A6191B41A723E2FD6A282A30B0C09D6B236B001",
+      "retained": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryAudit1-2050-retained.lean.txt"
+    }
+  ],
+  "sourceBeforeSha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527",
+  "sourceAfterSha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9",
+  "fullAuditRequired": true
+}

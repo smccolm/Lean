@@ -1,0 +1,641 @@
+{
+  "repository": "TauCetiProject/TauCetiRoadmap",
+  "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+  "date": "2026-11-16T23:08:16Z",
+  "complete": true,
+  "blobCount": 1440,
+  "selected": [
+    {
+      "path": "Completed/CloseoutAudit-20261030/inputs/hopf-boundary-index-acceptance.lean.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4b34eddd47f65c337b505aa1bfb57b317479e0a",
+      "size": 3442,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/f4b34eddd47f65c337b505aa1bfb57b317479e0a"
+    },
+    {
+      "path": "Completed/CloseoutAudit-20261030/logs/hopf-boundary-index-acceptance.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "TauCetiRoadmap/ArithmeticGaloisRepresentations/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f05aeaed4495d1f8b41328f8c3ffde347f5e10f2",
+      "size": 452801,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/f05aeaed4495d1f8b41328f8c3ffde347f5e10f2"
+    },
+    {
+      "path": "TauCetiRoadmap/ArithmeticGaloisRepresentations/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78dde681255e61bc376b96c26c7ffb51f3a1e35d",
+      "size": 29579,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/78dde681255e61bc376b96c26c7ffb51f3a1e35d"
+    },
+    {
+      "path": "TauCetiRoadmap/ArithmeticGaloisRepresentations/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b06a0658fc82a897ade82fde48247d5554a00b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/35b06a0658fc82a897ade82fde48247d5554a00b"
+    },
+    {
+      "path": "TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8244bd0b7d7b157fce2db161345a70ae615d7bb",
+      "size": 309295,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/d8244bd0b7d7b157fce2db161345a70ae615d7bb"
+    },
+    {
+      "path": "TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93651442daf86343e64e0b49a98bef8eb6424379",
+      "size": 3518,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/93651442daf86343e64e0b49a98bef8eb6424379"
+    },
+    {
+      "path": "TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b06a0658fc82a897ade82fde48247d5554a00b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/35b06a0658fc82a897ade82fde48247d5554a00b"
+    },
+    {
+      "path": "TauCetiRoadmap/CoboundaryExpansion/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c78313d865ce53748490ae026edea1aea00ef51",
+      "size": 2972,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/9c78313d865ce53748490ae026edea1aea00ef51"
+    },
+    {
+      "path": "TauCetiRoadmap/CoboundaryExpansion/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e7c00adcb19cffea7fe98575927ed39fc2dda63",
+      "size": 46461,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/2e7c00adcb19cffea7fe98575927ed39fc2dda63"
+    },
+    {
+      "path": "TauCetiRoadmap/CoboundaryExpansion/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b413496d051d1d949f2bc4f08df36594c394fc5d",
+      "size": 5689,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/b413496d051d1d949f2bc4f08df36594c394fc5d"
+    },
+    {
+      "path": "TauCetiRoadmap/CoboundaryExpansion/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a8c4d4e61e4b3a0c770f0a2a9d33ed4459c7e4c",
+      "size": 12877,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/0a8c4d4e61e4b3a0c770f0a2a9d33ed4459c7e4c"
+    },
+    {
+      "path": "TauCetiRoadmap/CoboundaryExpansion/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d9c4c2f3dc9dc989ac1efd0371324e6aa34ed1e",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/0d9c4c2f3dc9dc989ac1efd0371324e6aa34ed1e"
+    },
+    {
+      "path": "TauCetiRoadmap/CrystallineCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75b40b0321cac830d5355a0bede63ab05a5b151d",
+      "size": 820605,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/75b40b0321cac830d5355a0bede63ab05a5b151d"
+    },
+    {
+      "path": "TauCetiRoadmap/CrystallineCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3e3d713de388e303150706050451d474668ee47",
+      "size": 4507,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/c3e3d713de388e303150706050451d474668ee47"
+    },
+    {
+      "path": "TauCetiRoadmap/CrystallineCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e5d9af59500644db046e9c7b7736451e6414cf",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/93e5d9af59500644db046e9c7b7736451e6414cf"
+    },
+    {
+      "path": "TauCetiRoadmap/DeRhamCohomologyAndDuality/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b75d121d51e12202783775f89b7f438fe4303c7",
+      "size": 2937,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/3b75d121d51e12202783775f89b7f438fe4303c7"
+    },
+    {
+      "path": "TauCetiRoadmap/DeRhamCohomologyAndDuality/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1aaa73065521356b44418ba874397058c5c37cb",
+      "size": 104429,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/e1aaa73065521356b44418ba874397058c5c37cb"
+    },
+    {
+      "path": "TauCetiRoadmap/DeRhamCohomologyAndDuality/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d239ef782f1a659e769b44fd732f0b1b44699b14",
+      "size": 6154,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/d239ef782f1a659e769b44fd732f0b1b44699b14"
+    },
+    {
+      "path": "TauCetiRoadmap/DeRhamCohomologyAndDuality/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "894ba77558a9933c80cef8515f2b1f33e9db085c",
+      "size": 13295,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/894ba77558a9933c80cef8515f2b1f33e9db085c"
+    },
+    {
+      "path": "TauCetiRoadmap/DeRhamCohomologyAndDuality/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de33392514c17c4e93f6b1db257cef18d4810394",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/de33392514c17c4e93f6b1db257cef18d4810394"
+    },
+    {
+      "path": "TauCetiRoadmap/DerivedDeRhamCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5a9a92d98f0f488a424500ebed039ce955dd7ca",
+      "size": 392140,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/c5a9a92d98f0f488a424500ebed039ce955dd7ca"
+    },
+    {
+      "path": "TauCetiRoadmap/DerivedDeRhamCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c676e2de4c9242181d065843e7fecf17f50c7c3",
+      "size": 10839,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/5c676e2de4c9242181d065843e7fecf17f50c7c3"
+    },
+    {
+      "path": "TauCetiRoadmap/DerivedDeRhamCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e5d9af59500644db046e9c7b7736451e6414cf",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/93e5d9af59500644db046e9c7b7736451e6414cf"
+    },
+    {
+      "path": "TauCetiRoadmap/EllipticCohomology/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae6664e20e1b589a92dc1d6a8517a39eff9b398c",
+      "size": 4146,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/ae6664e20e1b589a92dc1d6a8517a39eff9b398c"
+    },
+    {
+      "path": "TauCetiRoadmap/EllipticCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee812fc588fc01cdc034f3c3dc76d372558eef7",
+      "size": 119037,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/2ee812fc588fc01cdc034f3c3dc76d372558eef7"
+    },
+    {
+      "path": "TauCetiRoadmap/EllipticCohomology/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7166e7c02d809d2260563ccba7f676b11b664de8",
+      "size": 8041,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/7166e7c02d809d2260563ccba7f676b11b664de8"
+    },
+    {
+      "path": "TauCetiRoadmap/EllipticCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77f8c65121f1347fafed939f83d1251892f0130",
+      "size": 3960,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/b77f8c65121f1347fafed939f83d1251892f0130"
+    },
+    {
+      "path": "TauCetiRoadmap/EllipticCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "659accec2743549e4939ff9b875c4e6b86746668",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/659accec2743549e4939ff9b875c4e6b86746668"
+    },
+    {
+      "path": "TauCetiRoadmap/EtaleCohomologyFoundations/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86d0f671454b88f20a38c46bdc0efe2b56e72cc7",
+      "size": 7667,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/86d0f671454b88f20a38c46bdc0efe2b56e72cc7"
+    },
+    {
+      "path": "TauCetiRoadmap/EtaleCohomologyFoundations/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "899f6a2c08356a17c43c00dae2b37c648e8e2277",
+      "size": 225049,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/899f6a2c08356a17c43c00dae2b37c648e8e2277"
+    },
+    {
+      "path": "TauCetiRoadmap/EtaleCohomologyFoundations/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d60f259356d64fba2cc3458c6382b590db11d2",
+      "size": 7815,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/b8d60f259356d64fba2cc3458c6382b590db11d2"
+    },
+    {
+      "path": "TauCetiRoadmap/EtaleCohomologyFoundations/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e82bc632528018c5b120350fc51bcc628615e9a",
+      "size": 11280,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/7e82bc632528018c5b120350fc51bcc628615e9a"
+    },
+    {
+      "path": "TauCetiRoadmap/EtaleCohomologyFoundations/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e5d9af59500644db046e9c7b7736451e6414cf",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/93e5d9af59500644db046e9c7b7736451e6414cf"
+    },
+    {
+      "path": "TauCetiRoadmap/GeneralizedCohomology/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6388b306bd39647de0230d313bc2ee945b096edc",
+      "size": 10419,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/6388b306bd39647de0230d313bc2ee945b096edc"
+    },
+    {
+      "path": "TauCetiRoadmap/GeneralizedCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "909e3284d4b1bb010c303b880947fdc5676b7a96",
+      "size": 194193,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/909e3284d4b1bb010c303b880947fdc5676b7a96"
+    },
+    {
+      "path": "TauCetiRoadmap/GeneralizedCohomology/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d498f09ffce3b03f9f6ee46adf01915b57f2a1ff",
+      "size": 7340,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/d498f09ffce3b03f9f6ee46adf01915b57f2a1ff"
+    },
+    {
+      "path": "TauCetiRoadmap/GeneralizedCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10db7c460171f1084854562cee81f49bd08d90b",
+      "size": 36252,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/e10db7c460171f1084854562cee81f49bd08d90b"
+    },
+    {
+      "path": "TauCetiRoadmap/GeneralizedCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "659accec2743549e4939ff9b875c4e6b86746668",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/659accec2743549e4939ff9b875c4e6b86746668"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularCurves/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f968ce203b8c1986736e0789f987b7f7808852e6",
+      "size": 33113,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/f968ce203b8c1986736e0789f987b7f7808852e6"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularCurves/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2382e34c620d0c530c20783b49863828dabe4c9b",
+      "size": 340787,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/2382e34c620d0c530c20783b49863828dabe4c9b"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularCurves/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc262a090a0952df2d38cbd32a1a28677eebb791",
+      "size": 8506,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/dc262a090a0952df2d38cbd32a1a28677eebb791"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularCurves/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6d7bffc2d448a6533d6e0fcdfd3b4130b12dd49",
+      "size": 74799,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/e6d7bffc2d448a6533d6e0fcdfd3b4130b12dd49"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularCurves/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b06a0658fc82a897ade82fde48247d5554a00b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/35b06a0658fc82a897ade82fde48247d5554a00b"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularForms/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06103480ad7d0a77f056a6c22b4ebdd002349320",
+      "size": 57210,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/06103480ad7d0a77f056a6c22b4ebdd002349320"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularForms/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad4a031d1ddd8d5a0db8f0b24de62ae666e0ab16",
+      "size": 108619,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/ad4a031d1ddd8d5a0db8f0b24de62ae666e0ab16"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularForms/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "439ec8207a0f341ce82d7c5d1af0d3c20aaaeec4",
+      "size": 8725,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/439ec8207a0f341ce82d7c5d1af0d3c20aaaeec4"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularForms/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b4703b704562aa5a1974488183d384fc2d13617",
+      "size": 8445,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/9b4703b704562aa5a1974488183d384fc2d13617"
+    },
+    {
+      "path": "TauCetiRoadmap/ModularForms/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b06a0658fc82a897ade82fde48247d5554a00b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/35b06a0658fc82a897ade82fde48247d5554a00b"
+    },
+    {
+      "path": "TauCetiRoadmap/NoncongruenceModularForms/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ed0aaf4a503b7110862b43bb0d6730e77f90458",
+      "size": 3230,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/7ed0aaf4a503b7110862b43bb0d6730e77f90458"
+    },
+    {
+      "path": "TauCetiRoadmap/NoncongruenceModularForms/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7879b3d357727d079c6f7b75d652ac452a83a5dc",
+      "size": 141065,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/7879b3d357727d079c6f7b75d652ac452a83a5dc"
+    },
+    {
+      "path": "TauCetiRoadmap/NoncongruenceModularForms/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59a641719afcbe7689d6dd949930c48c832f2a1d",
+      "size": 6871,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/59a641719afcbe7689d6dd949930c48c832f2a1d"
+    },
+    {
+      "path": "TauCetiRoadmap/NoncongruenceModularForms/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6dd63ab8ef109d4510b06289ee1b098cc153655",
+      "size": 26927,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/f6dd63ab8ef109d4510b06289ee1b098cc153655"
+    },
+    {
+      "path": "TauCetiRoadmap/NoncongruenceModularForms/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b06a0658fc82a897ade82fde48247d5554a00b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/35b06a0658fc82a897ade82fde48247d5554a00b"
+    },
+    {
+      "path": "TauCetiRoadmap/PhiGammaModulesAndIwasawaCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00a17da9228688bcf62d2d2f9f31d7209ccea2a6",
+      "size": 240373,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/00a17da9228688bcf62d2d2f9f31d7209ccea2a6"
+    },
+    {
+      "path": "TauCetiRoadmap/PhiGammaModulesAndIwasawaCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d928198ebf5be65154642105453b709bc048232e",
+      "size": 4620,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/d928198ebf5be65154642105453b709bc048232e"
+    },
+    {
+      "path": "TauCetiRoadmap/PhiGammaModulesAndIwasawaCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b06a0658fc82a897ade82fde48247d5554a00b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/35b06a0658fc82a897ade82fde48247d5554a00b"
+    },
+    {
+      "path": "TauCetiRoadmap/ProfiniteCohomology/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c533b25b48c2668dcf12089bad454203b36f2558",
+      "size": 45993,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/c533b25b48c2668dcf12089bad454203b36f2558"
+    },
+    {
+      "path": "TauCetiRoadmap/ProfiniteCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e085fba12f4163ec81c879ba503cadc7eabf670f",
+      "size": 326070,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/e085fba12f4163ec81c879ba503cadc7eabf670f"
+    },
+    {
+      "path": "TauCetiRoadmap/ProfiniteCohomology/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c91b7064c0728b545913890b0daf747ab2a524d5",
+      "size": 8715,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/c91b7064c0728b545913890b0daf747ab2a524d5"
+    },
+    {
+      "path": "TauCetiRoadmap/ProfiniteCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2a6ccb6c81e30b99d6c07e8048dcdd8a6fb8569",
+      "size": 35641,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/a2a6ccb6c81e30b99d6c07e8048dcdd8a6fb8569"
+    },
+    {
+      "path": "TauCetiRoadmap/ProfiniteCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5389e3f5e47f7be80ad023e63f745c270f0e22b",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/c5389e3f5e47f7be80ad023e63f745c270f0e22b"
+    },
+    {
+      "path": "TauCetiRoadmap/RepresentationTheory/ModularInduction/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0368e9447d59ecc58541347dc47c86d0fd8a07c1",
+      "size": 30806,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/0368e9447d59ecc58541347dc47c86d0fd8a07c1"
+    },
+    {
+      "path": "TauCetiRoadmap/RepresentationTheory/ModularInduction/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d58f2362824a13e6d2190e0f42c760b7b952702d",
+      "size": 19188,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/d58f2362824a13e6d2190e0f42c760b7b952702d"
+    },
+    {
+      "path": "TauCetiRoadmap/SpecialFunctionsParabolicCylinder/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd7521c5be885c75b941cb1417b13f40d57e0680",
+      "size": 3076,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/dd7521c5be885c75b941cb1417b13f40d57e0680"
+    },
+    {
+      "path": "TauCetiRoadmap/SpecialFunctionsParabolicCylinder/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9ce6696d33179ef515202444b1d7f1c0a3238fe",
+      "size": 73641,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/a9ce6696d33179ef515202444b1d7f1c0a3238fe"
+    },
+    {
+      "path": "TauCetiRoadmap/SpecialFunctionsParabolicCylinder/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34f5b3d16ce02a42446d6f0ee66ef60b90cb8ba1",
+      "size": 6112,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/34f5b3d16ce02a42446d6f0ee66ef60b90cb8ba1"
+    },
+    {
+      "path": "TauCetiRoadmap/SpecialFunctionsParabolicCylinder/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13274660bbc164f9cfeb971a491726120368e920",
+      "size": 31595,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/13274660bbc164f9cfeb971a491726120368e920"
+    },
+    {
+      "path": "TauCetiRoadmap/SpecialFunctionsParabolicCylinder/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e9953aee5b773e68351e5553bcddb74ce37862",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/f5e9953aee5b773e68351e5553bcddb74ce37862"
+    },
+    {
+      "path": "TauCetiRoadmap/TauberianBoundaryConvergence/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d75e6999f0e3a514042930990386bb4584a6df6",
+      "size": 6617,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/4d75e6999f0e3a514042930990386bb4584a6df6"
+    },
+    {
+      "path": "TauCetiRoadmap/TauberianBoundaryConvergence/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afd1f28f486f25a2ac43254abcede33d575c8fd1",
+      "size": 10917,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/afd1f28f486f25a2ac43254abcede33d575c8fd1"
+    },
+    {
+      "path": "TauCetiRoadmap/TauberianBoundaryConvergence/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad694b93dc6fb73a31fe53e6051e5f19fc22a12b",
+      "size": 8281,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/ad694b93dc6fb73a31fe53e6051e5f19fc22a12b"
+    },
+    {
+      "path": "TauCetiRoadmap/TauberianBoundaryConvergence/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72956a77d1a62142249d8db59a02ca0535890306",
+      "size": 2160,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/72956a77d1a62142249d8db59a02ca0535890306"
+    },
+    {
+      "path": "TauCetiRoadmap/TauberianBoundaryConvergence/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e9953aee5b773e68351e5553bcddb74ce37862",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/f5e9953aee5b773e68351e5553bcddb74ce37862"
+    },
+    {
+      "path": "TauCetiRoadmap/TopologicalSheafCohomology/PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02ffbde8b9de72173b86ed198fb408aa61af1333",
+      "size": 3260,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/02ffbde8b9de72173b86ed198fb408aa61af1333"
+    },
+    {
+      "path": "TauCetiRoadmap/TopologicalSheafCohomology/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a2a1e0eb0dca81bcdc54df2a11f31156504256a",
+      "size": 42188,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/0a2a1e0eb0dca81bcdc54df2a11f31156504256a"
+    },
+    {
+      "path": "TauCetiRoadmap/TopologicalSheafCohomology/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10cb084b90346b12b15997a18784c313eb1c8c34",
+      "size": 7695,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/10cb084b90346b12b15997a18784c313eb1c8c34"
+    },
+    {
+      "path": "TauCetiRoadmap/TopologicalSheafCohomology/Suggested.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "420f38b851eb3c7b7524fda92fffdad178634b98",
+      "size": 3312,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/420f38b851eb3c7b7524fda92fffdad178634b98"
+    },
+    {
+      "path": "TauCetiRoadmap/TopologicalSheafCohomology/metadata.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "659accec2743549e4939ff9b875c4e6b86746668",
+      "size": 18,
+      "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/blobs/659accec2743549e4939ff9b875c4e6b86746668"
+    }
+  ]
+}

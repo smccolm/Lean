@@ -1,0 +1,72 @@
+import SourceGammaOnePrimitiveJointCharacter2127b
+
+/-! DUB-17/18 -> original all-weight association -> joint arithmetic
+specialization. The proved whole-word pullback gives the exact original
+Fourier values and diamond value one on the same finite joint image.
+These are conditional value lemmas for the character already constructed
+by the preceding original-object consumer, not assumed existence data. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+open scoped ValuativeRel
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "d" => 2 * n + 1
+local notation "N" => p ^ (d + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (d + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+variable (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p d w))
+local notation "θ" => binaryPrimitiveJointHeckeDiamondWord Q p d w Hq
+local notation "C" => 𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1)
+variable (χ : θ.range →+* C)
+    (hχ : χ.comp θ.rangeRestrict =
+      (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+        (sourceGammaOneOriginalHeckeDiamondWord Q N w).toRingHom)
+
+include hχ in
+/-- Every original normalizer diamond has value one in the constructed
+joint character; the full original word equality discharges this value. -/
+theorem binaryPrimitiveJoint_character_diamond (g : Gamma0 M) :
+    χ (θ.rangeRestrict (FreeAlgebra.ι ℤ (Sum.inr g))) = 1 := by
+  have h := RingHom.congr_fun hχ (FreeAlgebra.ι ℤ (Sum.inr g))
+  change χ (θ.rangeRestrict (FreeAlgebra.ι ℤ (Sum.inr g))) =
+    sourcePrimitiveH1AdicQuotientCharacter f hk τ n
+      (sourceGammaOneOriginalHeckeDiamondWord Q N w (FreeAlgebra.ι ℤ (Sum.inr g))) at h
+  simpa only [sourceGammaOneOriginalHeckeDiamondWord, FreeAlgebra.lift_ι_apply,
+    Sum.elim_inr, map_one] using h
+
+include hχ in
+/-- The prime value of the same joint character is the literal original
+Fourier coefficient in the prescribed embedding and adic quotient. -/
+theorem binaryPrimitiveJoint_character_hecke (ell : sourceBinaryHeckePrime (Q * N)) :
+    χ (θ.rangeRestrict (FreeAlgebra.ι ℤ (Sum.inl ell))) =
+      Ideal.Quotient.mk ((IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1))
+        ⟨τ (sourcePrimitiveFieldCoefficient f ell.val),
+          sourcePrimitiveCoefficient_valuation_le_one f hk τ ell.val⟩ := by
+  have h := RingHom.congr_fun hχ (FreeAlgebra.ι ℤ (Sum.inl ell))
+  have hw : sourceGammaOneOriginalHeckeDiamondWord Q N w (FreeAlgebra.ι ℤ (Sum.inl ell)) =
+      ⟨sourceBinaryH1PrimeOperators ℤ Q w (sourceGammaOneHeckePrimeForget Q N ell),
+        Algebra.subset_adjoin ⟨sourceGammaOneHeckePrimeForget Q N ell, rfl⟩⟩ :=
+    FreeAlgebra.lift_ι_apply _ (Sum.inl ell)
+  change χ (θ.rangeRestrict (FreeAlgebra.ι ℤ (Sum.inl ell))) =
+    sourcePrimitiveH1AdicQuotientCharacter f hk τ n
+      (sourceGammaOneOriginalHeckeDiamondWord Q N w (FreeAlgebra.ι ℤ (Sum.inl ell))) at h
+  rw [hw] at h
+  exact h.trans (sourcePrimitiveH1AdicQuotientCharacter_hecke f hk τ n
+    (sourceGammaOneHeckePrimeForget Q N ell))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

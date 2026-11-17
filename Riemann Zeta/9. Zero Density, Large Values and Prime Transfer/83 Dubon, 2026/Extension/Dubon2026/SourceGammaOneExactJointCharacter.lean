@@ -1,0 +1,61 @@
+import Dubon2026.SourceGammaOneExactJointSquare
+import Dubon2026.SourcePrimitiveH1SquareCongruence
+import Dubon2026.SourceOperatorRangeCharacter
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+finite joint geometric/boundary-quotient character. Source depth twice the target
+depth absorbs the square of the joint kernel. The resulting character
+pulls back to the literal original Fourier-field character on every word.
+No parabolic preimage or boundary-unit assumption remains in this descent.
+An arithmetic realization of the joint algebra is still required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+open scoped ValuativeRel
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "d" => 2 * n + 1
+local notation "N" => p ^ (d + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (d + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+/-- The actual joint operator algebra at twice the source precision has
+the original character at the requested precision, with whole-word equality. -/
+theorem binaryExactJoint_original_character
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p d w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p d w).mkQ =
+      (binaryTateDiamondRelations Q p d w).mkQ.comp (binaryTatePrimeOperators Q p d w ell)) :
+    sourceOperatorRangeCharacterData (binaryExactJointHeckeWord Q p d w hlarge Hq)
+      ((sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+        (sourceGammaOneOriginalHeckeWord Q N w).toRingHom) := by
+  let θ := binaryExactJointHeckeWord Q p d w hlarge Hq
+  let ψ := (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+    (sourceGammaOneOriginalHeckeWord Q N w).toRingHom
+  apply sourceOperatorRangeCharacterData_of_kernel θ ψ
+  intro a hz
+  obtain ⟨hq, hb⟩ := (binaryExactJointHeckeWord_eq_zero_iff Q p d w hlarge Hq a).mp hz
+  change sourcePrimitiveH1AdicQuotientCharacter f hk τ n
+    (sourceGammaOneOriginalHeckeWord Q N w a) = 0
+  apply sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square f hk τ p n Fact.out
+  intro x
+  have he : p ^ ((2 * n + 1) + 1) = (p ^ (n + 1)) ^ 2 := by
+    rw [← pow_mul]
+    congr 1
+    omega
+  rw [← he]
+  simpa only [map_pow] using
+    binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square Q p d w hlarge Hq hH a hq hb x
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

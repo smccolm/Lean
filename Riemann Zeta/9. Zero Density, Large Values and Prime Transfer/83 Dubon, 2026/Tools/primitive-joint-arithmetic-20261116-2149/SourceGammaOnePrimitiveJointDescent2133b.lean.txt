@@ -1,0 +1,76 @@
+import SourceGammaOnePrimitiveJointGalois2131c
+import Dubon2026.SourceGammaOneGeometricArithmeticDescent
+
+/-! DUB-17/18 -> original all-weight association -> joint arithmetic
+specialization. Both actual factors kill original norm inertia outside
+Q*p. The proved continuous joint action therefore descends to precisely
+the prescribed arithmetic group, using the existing unramified descent. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup SourceCuspBoundary CoefficientReduction
+open scoped NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+/-- Original norm inertia outside Q*p kills both actual factors of
+the finite joint representation, with original geometry discharged. -/
+theorem binaryPrimitiveJointGaloisRep_normInertia
+    (q : ℕ) (hq : q.Prime) (haway : ¬ q ∣ Q * p)
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+    (g : Gal(rationalPrimeLocalClosure q hq / rationalPrimeLocalField q hq))
+    (hg : g ∈ rationalPrimeNormInertia q hq) :
+    binaryPrimitiveJointGaloisRep Q p n w (embeddedNormalGaloisRestriction e g) = 1 := by
+  have hM : ¬ q ∣ M := by
+    intro h
+    rcases hq.dvd_mul.mp h with hQ | hp
+    · exact haway (dvd_mul_of_dvd_left hQ p)
+    · exact haway (dvd_mul_of_dvd_right (hq.dvd_of_dvd_pow (hq.dvd_of_dvd_pow hp)) Q)
+  have hgeo := gammaOne_local_degree_and_genus_eq M q hq hM e
+  have hT := binaryArithmeticTateGaloisRep_normInertia_of_degree_genus_eq Q p n w
+    q hq haway e hgeo.1 hgeo.2 g hg
+  apply Prod.ext
+  · apply Submodule.linearMap_qext
+    apply LinearMap.ext
+    intro φ
+    change binaryDiamondQuotientGaloisRep Q p n w (embeddedNormalGaloisRestriction e g)
+      ((binaryTateDiamondRelations Q p n w).mkQ φ) = (binaryTateDiamondRelations Q p n w).mkQ φ
+    rw [binaryDiamondQuotientGaloisRep_mk, hT]
+    rfl
+  · exact binaryPrimitiveBoundaryGaloisRep_normInertia Q p n w q hq haway e g hg
+
+/-- The same finite joint action carrying the original Hecke/diamond
+character descends continuously to the prescribed arithmetic group. -/
+theorem binaryPrimitiveJointGaloisRep_arithmetic_descent :
+    let B := binaryPrimitiveJointOperatorRing Q p n w
+    letI : TopologicalSpace B := ⊥
+    ∃ η : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →ₜ* Bˣ,
+      ∀ σ, (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) σ)).val =
+        binaryPrimitiveJointGaloisRep Q p n w σ := by
+  let B := binaryPrimitiveJointOperatorRing Q p n w
+  letI : TopologicalSpace B := ⊥
+  letI : DiscreteTopology B := ⟨rfl⟩
+  let χ : Gal(Qbar/ℚ) →ₜ* B :=
+    ⟨binaryPrimitiveJointGaloisRep Q p n w, binaryPrimitiveJointGaloisRep_continuous Q p n w⟩
+  obtain ⟨η, hη⟩ := absolute_continuous_normInertia_arithmetic_descent (Q * p) χ.toHomUnits
+    (fun q hq haway e g hg => Units.ext
+      (binaryPrimitiveJointGaloisRep_normInertia Q p n w q hq haway e g hg))
+  exact ⟨η, fun σ => congrArg Units.val (hη σ)⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

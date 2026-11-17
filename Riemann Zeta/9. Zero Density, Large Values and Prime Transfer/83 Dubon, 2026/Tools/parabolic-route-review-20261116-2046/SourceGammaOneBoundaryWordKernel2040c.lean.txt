@@ -1,0 +1,75 @@
+import Dubon2026.SourceGammaOneDiamondQuotientWords
+
+/-! DUB-17/18 -> original all-weight association -> original finite Hecke
+character. A concrete Hecke word killing the full Gamma1 cusp boundary
+suffices to turn a zero diamond-quotient word into a zero original H1
+product. Native full-H1 surjectivity and the actual Tate/parabolic
+comparison are reused. Existence of the boundary-killing word is not
+asserted here; global parabolic transfer surjectivity is not assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+private theorem transfer_tate_inverse (hlarge : 3 < p) (z : binaryParabolicH1 Q N w) :
+    binaryDiamondQuotientOriginalTransfer Q p n w hlarge
+      ((binaryTateDiamondRelations Q p n w).mkQ ((binaryTateH1Equiv Q p n w hlarge).symm z)) =
+        sourceGammaOneConstantH1Transfer Q N w z.val := by
+  rw [binaryDiamondQuotientOriginalTransfer_mk]
+  change sourceGammaOneConstantH1Transfer Q N w
+    ((binaryTateH1Equiv Q p n w hlarge ((binaryTateH1Equiv Q p n w hlarge).symm z)).val) = _
+  rw [LinearEquiv.apply_symm_apply]
+
+theorem binaryDiamondQuotientOriginalTransfer_boundary_word_kernel
+    (hlarge : 3 < p)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (b : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)))
+    (hb : ∀ y : H1 C, FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b y ∈
+      binaryParabolicH1 Q N w)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)))
+    (ha : FreeAlgebra.lift ℤ Hq a = 0)
+    (x : H1 (sourceBinaryCoefficientRep ℤ Q w)) :
+    sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w
+      ((sourceGammaOneOriginalHeckeWord Q N w (a * b)).val x) = 0 := by
+  obtain ⟨y, hy⟩ := sourceGammaOneConstantH1Transfer_surjective Q N w
+    (sourcePrimePower_six_isUnit p n Fact.out hlarge)
+    (sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x)
+  let z : binaryParabolicH1 Q N w :=
+    ⟨FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b y, hb y⟩
+  let E := binaryTateH1Equiv Q p n w hlarge
+  let q := (binaryTateDiamondRelations Q p n w).mkQ
+  let β := binaryDiamondQuotientOriginalTransfer Q p n w hlarge
+  let u := fun ell => sourceBinaryH1PrimeOperators (ZMod N) Q w
+    (sourceGammaOneHeckePrimeForget Q N ell)
+  have hz : β (q (E.symm z)) = sourceGammaOneConstantH1Transfer Q N w z.val :=
+    transfer_tate_inverse Q p n w hlarge z
+  have hw := binaryDiamondQuotientOriginalTransfer_word Q p n w hlarge Hq hH a
+    (q (E.symm z))
+  have h0 := LinearMap.congr_fun ha (q (E.symm z))
+  have hzero : FreeAlgebra.lift ℤ u a (β (q (E.symm z))) = 0 :=
+    hw.symm.trans ((congrArg β h0).trans (map_zero β))
+  rw [hz] at hzero
+  change FreeAlgebra.lift ℤ u a
+    (sourceGammaOneConstantH1Transfer Q N w
+      (FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b y)) = 0 at hzero
+  rw [sourceGammaOneHeckeWord_transfer, hy] at hzero
+  rw [sourceGammaOneOriginalHeckeWord_change, map_mul]
+  exact hzero
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

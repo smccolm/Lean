@@ -1,0 +1,53 @@
+import SourceGammaOneBoundaryHeckeTrace
+import SourceGammaOnePrimitiveCuspCoordinates
+
+/-! DUB-17/18 -> all-weight association -> the actual finite Gamma1
+Hecke character -> a boundary-annihilating word. This constructs integer
+rows for the action of the native Hecke correspondence on primitive cusp
+values. The rows come from its actual cyclic coset orbits and primitive
+return times. They work for the original torsion coefficients and retain
+the full homogeneous coefficient endomorphism. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology MulAction
+open scoped MatrixGroups
+
+theorem primitiveBoundaryHecke_exists_integer_rows
+    (M d : ℕ) [NeZero d] (q : SL(2, ℤ) ⧸ Gamma1 M) :
+    let O := orbitRel.Quotient (Subgroup.zpowers (primitiveCuspGenerator M q))
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d)
+    letI : (sourceGammaOneHeckeUpper M d).FiniteIndex :=
+      sourceGammaOneHeckeUpper_finiteIndex M d
+    letI : Fintype O := Fintype.ofFinite _
+    ∃ (target : O → SL(2, ℤ) ⧸ Gamma1 M) (multiplicity : O → ℤ),
+      ∀ {R A : Type} [CommRing R] [AddCommGroup A] [Module R A]
+        (b : Module.End R A) (x : H1 (Rep.trivial R (Gamma1 M) A)),
+        (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom
+          (sourceGammaOneConstantHeckeH1 R A M d b x)
+            (Additive.ofMul (primitiveCuspGenerator M q)) =
+          ∑ o : O, multiplicity o • b
+            ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x
+              (Additive.ofMul (primitiveCuspGenerator M (target o)))) := by
+  classical
+  let O := orbitRel.Quotient (Subgroup.zpowers (primitiveCuspGenerator M q))
+    (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d)
+  letI : (sourceGammaOneHeckeUpper M d).FiniteIndex :=
+    sourceGammaOneHeckeUpper_finiteIndex M d
+  letI : Fintype O := Fintype.ofFinite _
+  let γ (o : O) : Gamma1 M := sourceGammaOneHeckeConjugation M d
+    ⟨o.out.out⁻¹ * primitiveCuspGenerator M q ^
+        Function.minimalPeriod ((primitiveCuspGenerator M q) • ·) o.out * o.out.out,
+      QuotientGroup.out_conj_pow_minimalPeriod_mem _ (primitiveCuspGenerator M q) o.out⟩
+  have hc := fun o : O => trace_two_character_primitive_coordinates M (γ o)
+    (primitiveCuspHeckeOrbit_trace_two M d q o)
+  choose target multiplicity htarget using hc
+  refine ⟨target, multiplicity, ?_⟩
+  intro R A _ _ _ b x
+  rw [constantHeckeH1_hom_orbit_sum]
+  apply Finset.sum_congr rfl
+  intro o _
+  change b ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x (Additive.ofMul (γ o))) = _
+  rw [htarget o ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) A)).hom x), map_zsmul]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

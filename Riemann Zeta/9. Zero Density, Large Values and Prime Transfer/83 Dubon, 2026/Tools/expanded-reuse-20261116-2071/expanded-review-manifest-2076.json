@@ -1,0 +1,391 @@
+{
+  "recordedUTC": "2026-11-17T01:36:13.805955+00:00",
+  "files": [
+    {
+      "file": "aintlib-scope-2074.json",
+      "sha256": "3086FF56440DCC0DF750BBB8E6B26EE8EA27E18F7972CE06362FB0E3DAB8D6C0",
+      "bytes": 24602
+    },
+    {
+      "file": "CBirkbeck--AINTLIB-head.json",
+      "sha256": "B7A1C18406FD1169844FC422C2288D7768DE6331BD7675E06603A14C44129FC1",
+      "bytes": 7178
+    },
+    {
+      "file": "CBirkbeck--AINTLIB-tree.json",
+      "sha256": "11930C18D9DFD57ED2D101632FFE11D64ACD92CECD4AD58F3CBE5DC177CC48E8",
+      "bytes": 1335195
+    },
+    {
+      "file": "CBirkbeck--AINTLIB__lean-toolchain.txt",
+      "sha256": "11C697AEBE5B539D74F5069E497A588E7DFAB1C4EEB74313F28357E351C55CA3",
+      "bytes": 29
+    },
+    {
+      "file": "CBirkbeck--AINTLIB__README.md.txt",
+      "sha256": "C7D58094258F2139B856C7BFE2DA523B7EC42CFCD3F7193807278C12D66DBF35",
+      "bytes": 4943
+    },
+    {
+      "file": "CBirkbeck--LeanBridge-head.json",
+      "sha256": "06A3C532A455EEBBABACA9606758A31065E9FDEC7BDE1DAF49341C658BC2C16D",
+      "bytes": 31686
+    },
+    {
+      "file": "CBirkbeck--LeanBridge-selected.json",
+      "sha256": "269CA8D659A70DB4F29E70CB9D635F264BA3F83DF3C20B61034498A16AD03B22",
+      "bytes": 982139
+    },
+    {
+      "file": "CBirkbeck--LeanBridge-tree.json",
+      "sha256": "70ECA5460359B753705C1922A478BF2755BC9C49378FB31C1E0E7CA70346AF64",
+      "bytes": 1535338
+    },
+    {
+      "file": "CBirkbeck--LeanBridge__lean-toolchain.txt",
+      "sha256": "CA5F1F601D34C49079E38D7E7041EB0F2A9C227FBC1DF0F404820069A052330C",
+      "bytes": 25
+    },
+    {
+      "file": "CBirkbeck--LeanBridge__LeanBridge.lean.txt",
+      "sha256": "E776D511C2C4A02786B8B7620B5C1930EE5B826F183E7D3AC13F251374453513",
+      "bytes": 98318
+    },
+    {
+      "file": "CBirkbeck--LeanBridge__README.md.txt",
+      "sha256": "4B55141A7528BF8A7D68C4A83343C577A772F955DC01D3F25057DA824CFB7453",
+      "bytes": 10233
+    },
+    {
+      "file": "inventory.json",
+      "sha256": "614A7210D53C023BA0F03530FEFBD4F02C8B0A157FC90A48D6CA7891EF285C23",
+      "bytes": 2726898
+    },
+    {
+      "file": "openai--math-ArithmeticGeometry-tree.json",
+      "sha256": "F39341968F9A15E5754FE0D85CA8E41103F008199E5B5E4BB175DF8288422673",
+      "bytes": 156398
+    },
+    {
+      "file": "openai--math-head.json",
+      "sha256": "904380B8A1F378F643CD357DDC4CD11E304A7B43AF8950AE317A169947F2753F",
+      "bytes": 1342224
+    },
+    {
+      "file": "openai--math-lean-shallow.json",
+      "sha256": "72D9164FB360870F322CE2EDCE8A847066AA29F4B046768B32192C51F21E9D24",
+      "bytes": 2697
+    },
+    {
+      "file": "openai--math-NumberTheory-shallow.json",
+      "sha256": "9975517C9C4328678176C699976CB1CD8FA3E2FAB41F1520627228A0339F9446",
+      "bytes": 7906
+    },
+    {
+      "file": "openai--math-NumberTheory-tree.json",
+      "sha256": "6F608B1658B8F868EBD9CD10E74E26CA4460C9562D630EB1B7C23E2C039689BF",
+      "bytes": 7498876
+    },
+    {
+      "file": "openai--math-OAI-shallow.json",
+      "sha256": "AACE6F8316B454E8A7F02B0ACBAB74908843BD312C1A187D9164E739FD5F4CFF",
+      "bytes": 6534
+    },
+    {
+      "file": "openai--math-RepresentationTheory-tree.json",
+      "sha256": "5BFB2A8C565DB580B2927FEFDDE12B62541504B3DD67218604D4291B2520101D",
+      "bytes": 824176
+    },
+    {
+      "file": "openai--math-root-shallow.json",
+      "sha256": "705CD19617E3EA3FC532B91DBCA7661D32295103D67FA04CFA91D76C6237FD8C",
+      "bytes": 2263
+    },
+    {
+      "file": "openai--math-selected.json",
+      "sha256": "54EEAFB4BCA81A7B0A920294F6633154004B63E7F27829602158694A24B758B6",
+      "bytes": 907174
+    },
+    {
+      "file": "openai--math-tree.json",
+      "sha256": "E1EBF48A7290338BA8B710BBBE27ECEEE9E00F568BBB345372FD5C33A8C04024",
+      "bytes": 15115726
+    },
+    {
+      "file": "openai--math__CONTENTS.md.txt",
+      "sha256": "080BADCB677FB80BE0E695C21A8EC88BCB3A46DD3E3078CA10061E6B289BE175",
+      "bytes": 640943
+    },
+    {
+      "file": "openai--math__lean__formalization.yaml.txt",
+      "sha256": "B8E7072AB9AC195A290110D78C3A3497608CE76AC5B67D307685F38408299B39",
+      "bytes": 81913
+    },
+    {
+      "file": "openai--math__lean__lakefile.lean.txt",
+      "sha256": "FC590A5D14923F79E71EA80E29EFD42950BB3EC051481B5209157F0A01F63DE1",
+      "bytes": 16876
+    },
+    {
+      "file": "openai--math__lean__lean-toolchain.txt",
+      "sha256": "D5EDBA4E4B8FAAD9C1BAEADB265716D20D03BE4D1A2647DC5E35B0C0325BEA7B",
+      "bytes": 25
+    },
+    {
+      "file": "openai--math__lean__OAI__NumberTheory__PadicHodge__Arithmetic.lean.txt",
+      "sha256": "8A42AC9E0A08FFE1245366148512551C36ED12886FA3445808FF269063BCEFD5",
+      "bytes": 14792
+    },
+    {
+      "file": "openai--math__lean__OAI__NumberTheory__PadicHodge__GeometricComparison.lean.txt",
+      "sha256": "B965762749609AE3B69CC10ED0FB746F584E19DBCE599C1AD17D45351993F926",
+      "bytes": 8887
+    },
+    {
+      "file": "openai--math__lean__OAI__NumberTheory__PadicHodge__GeometricComparison__AbelianGlobalFilteredComparisons.lean.txt",
+      "sha256": "3F529E2FCE10382D799090DF52795A0BF677D58FBFF8C87B4584326CC9065728",
+      "bytes": 4998
+    },
+    {
+      "file": "openai--math__lean__OAI__NumberTheory__PadicHodge__GeometricComparison__AlgebraicHeckeComparisons.lean.txt",
+      "sha256": "90A347059DB07BFD432ED2E8F2945808342968A4368CACAFA9D501CCE2FFCFD8",
+      "bytes": 2556
+    },
+    {
+      "file": "openai--math__lean__OAI__NumberTheory__PadicHodge__WeakAdmissibility__FilteredRepresentations.lean.txt",
+      "sha256": "590F02045F5DEE038A59EC4B884D89A4C4DF7D293C70173269BB38B670461B17",
+      "bytes": 19586
+    },
+    {
+      "file": "openai--math__lean__OAI__NumberTheory__PadicHodge__WeakAdmissibility__Interface.lean.txt",
+      "sha256": "FACB8093E785E13FF4A7D50C9039924D41E63058AC06350C7527471C506DC0A5",
+      "bytes": 4308
+    },
+    {
+      "file": "openai--math__lean__README.md.txt",
+      "sha256": "292FF9D539F494158DFBF68D989BA85A82782A4343B2FE43088F8FA62525BF1B",
+      "bytes": 650
+    },
+    {
+      "file": "openai--math__README.md.txt",
+      "sha256": "6CB7F0E387B67C051227C6BA27ACA87EE82D9DD2530B6452B86B8681A2E2743A",
+      "bytes": 4417
+    },
+    {
+      "file": "openai-targeted-scope-2073.json",
+      "sha256": "4B4C25F03F15C22B4929FAEC3C356916194F47F348FCD4486D6AD0251446BE4E",
+      "bytes": 5140
+    },
+    {
+      "file": "padic-candidates-2076.json",
+      "sha256": "D2FA01BFDA1B37AC266094FB546A18912C584A440A5278B287542AA8A6F26F0C",
+      "bytes": 3247
+    },
+    {
+      "file": "source-receipt-2072.json",
+      "sha256": "2EC0A3F0AE2BE663E716E1D32ED4A2F5939F6BCB354B2321E2034C96702DAF68",
+      "bytes": 23533
+    },
+    {
+      "file": "TauCetiProject--TauCeti-head.json",
+      "sha256": "F82CB3D1D794ABB1381A28C9E7B9294F7A7BF9E79979CA5D03AA8060B97CEF56",
+      "bytes": 17899
+    },
+    {
+      "file": "TauCetiProject--TauCeti-selected.json",
+      "sha256": "12CDC904649772235BAFED2B7AF9AEE3A568A294B143C15CB67D9A21A62FA9C4",
+      "bytes": 578857
+    },
+    {
+      "file": "TauCetiProject--TauCeti-tree.json",
+      "sha256": "570DC512F84A5EFB0BFB4C0B4BD63D3D58DFEFC4BF357DF81E3AF772BAE63A10",
+      "bytes": 10243066
+    },
+    {
+      "file": "TauCetiProject--TauCeti__lake-manifest.json.txt",
+      "sha256": "7E5FDD67FE9775284CB2A2FC9DDC5B6739963C7F4A430BD0C806CDC351E6A18F",
+      "bytes": 3194
+    },
+    {
+      "file": "TauCetiProject--TauCeti__lean-toolchain.txt",
+      "sha256": "11C697AEBE5B539D74F5069E497A588E7DFAB1C4EEB74313F28357E351C55CA3",
+      "bytes": 29
+    },
+    {
+      "file": "TauCetiProject--TauCeti__LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__EichlerIntegral__Basic.lean.txt",
+      "sha256": "24805D9913C1683CB2989EC2FB05366ECA21937A1D77F84F210C25CCB71FEB68",
+      "bytes": 17908
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__EichlerIntegral__Integral.lean.txt",
+      "sha256": "77701092DB29C968B66F477212E4269C2612CE85A7DCAFB5634151E6E1019DA3",
+      "bytes": 13647
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__EichlerIntegral__Transformation.lean.txt",
+      "sha256": "062EAFC91D13670D4DB026A3325B859C8266192A444AEB043DDB8EAB602F0162",
+      "bytes": 12033
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__GaloisProd.lean.txt",
+      "sha256": "400E1EC901B42E7526494B1AD652E2A14F62949258BD31FFE24A7509B134964A",
+      "bytes": 10676
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__LevelOne__PeriodPolynomial__EichlerShimura.lean.txt",
+      "sha256": "953701077D5D978FB4134C5432D26E6C42FD8CEAA865E587388714F23B565E7A",
+      "bytes": 33780
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Basic.lean.txt",
+      "sha256": "E7F88B0006D11B32B3F77B214CD7361ED3C572ADB01B0B5FBF0319C16412BC73",
+      "bytes": 24494
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Boundary.lean.txt",
+      "sha256": "FE051154E2E8CA47B32F1403949134740789E9BA7BDA2690A2396D5E428C5268",
+      "bytes": 13439
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Basic.lean.txt",
+      "sha256": "19DCC245E2CA2BF4BB13CD08CF6F23256CA06B40C65DA218AE2065744F7056BB",
+      "bytes": 18842
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Commutation.lean.txt",
+      "sha256": "7F03AF71133D7E34960F5376A62FFEFBC4BD07B70E2D29C475C4EB9BC746A614",
+      "bytes": 7993
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Composition.lean.txt",
+      "sha256": "39595E9044EDBE6DB225AD41CFC5BD04CFE1D5DE0D9BCCF27F2FD4C5F8010BF6",
+      "bytes": 24150
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Diamond.lean.txt",
+      "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703",
+      "bytes": 8000
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Finite.lean.txt",
+      "sha256": "382082B2596898E9998F06EE2DC75F85427F564A192ED6862EA893F79B3B0946",
+      "bytes": 3578
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Manin.lean.txt",
+      "sha256": "290E7BC72B91C5501B1B41A0DEDB5714DF1C36A6216D9B77FD30F677BC957E9F",
+      "bytes": 5776
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Hecke.lean.txt",
+      "sha256": "2EED34DF4E2202930616C4CA35557D9155C631B27E0C891AF361E0F904525193",
+      "bytes": 7581
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Injective.lean.txt",
+      "sha256": "E069D71C59CDA9D6A38CB4143A5D2AB9073BE32479E5D39BB362C60B27ACA01B",
+      "bytes": 8323
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Integral.lean.txt",
+      "sha256": "E49F028DB2A1D512706C6CB58A65F0667295446F0247E8AECA6298B49CF93AC5",
+      "bytes": 30645
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Map.lean.txt",
+      "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD",
+      "bytes": 6418
+    },
+    {
+      "file": "TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Pairing.lean.txt",
+      "sha256": "729287A8A4E80CFB3F0813EC747C8BAC3A988F0203DA33ACC44E4778208D0DC7",
+      "bytes": 7372
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap-head.json",
+      "sha256": "D21B48115C2793562D36B35468F77BFDC37641B8E7F35B44C2E514624FFC3C34",
+      "bytes": 7211
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap-selected.json",
+      "sha256": "0A25A12956DE2D18DE9D120F07C6C2FE9658A31BF41D8E9FA3C03A81BEBA4F4F",
+      "bytes": 26985
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap-tree.json",
+      "sha256": "5DF8AF2975BB1019804A50A9B1C76ED4BDBDF0ED79670CA1A4CB35F63E82357C",
+      "bytes": 469278
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ArithmeticGaloisRepresentations__README.md.txt",
+      "sha256": "A73D186A994D42C2F97202F4745D53C952544A976ECB9B06302BF43C125C130E",
+      "bytes": 452801
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ArithmeticGaloisRepresentations__Suggested.lean.txt",
+      "sha256": "3F807A61F1363AFD03B79B83B84A6BDF332281C07CD0752BC60151839A67A70F",
+      "bytes": 29579
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__AutomorphicFormsOnReductiveGroups__README.md.txt",
+      "sha256": "F7340E58B8CFBA20DB014314A8F5FC434AFF014037C69C340189C0BD5B6DEA7D",
+      "bytes": 309295
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__AutomorphicFormsOnReductiveGroups__Suggested.lean.txt",
+      "sha256": "207B29878EF9E9A62BD117CBE019A905FC8EF8601FB7F209A6C77C208EF62FE4",
+      "bytes": 3518
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__PROGRESS.md.txt",
+      "sha256": "C3C50353FFB28ACE85623501799C0E93A0544DBAE9B5E562BF48F2DB3B54D2C4",
+      "bytes": 33113
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__README.md.txt",
+      "sha256": "1D34505279D359ED5A32F42FB2E9323257C61BAF066EFC82663425A2D2EAB1FD",
+      "bytes": 340787
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__STATUS.md.txt",
+      "sha256": "C9E27002FDD33C67C0D61A2CA1911B01FF8CFE8DB22EAF7886CB1E5BCDF713CF",
+      "bytes": 8506
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__Suggested.lean.txt",
+      "sha256": "206DF7C5B9FAF70C9A87529833A46A8435C843D95D0F2F1480963376DA929DEF",
+      "bytes": 74799
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__PROGRESS.md.txt",
+      "sha256": "90C2A1BAEB74ED8569250280231F536A7EEE99DCF702DB342DB8219CCA64A2E5",
+      "bytes": 57210
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__README.md.txt",
+      "sha256": "91486D6B56A377974037A787E36C958F6D0CDCF59F06C6D3BAFFCAF88F5229E2",
+      "bytes": 108619
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__STATUS.md.txt",
+      "sha256": "8C52F1D0616F458549C028ADF8ABBFD7DA65A749D64EE874290EE817C1C44CEE",
+      "bytes": 8725
+    },
+    {
+      "file": "TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__Suggested.lean.txt",
+      "sha256": "4F20C0A8D241BEB7293F391CDFF16BA17BAD914AE9FE4F710B9A4919661D2E01",
+      "bytes": 8445
+    }
+  ],
+  "report": "E:\\Lean\\.tmp\\dubon83\\Dubon Expanded Reuse Assessment 2026-11-16.md",
+  "reportSha256": "C407A55802B6847DDA7A90715265053EF3717F8352FDE1C018ED52E862D3DC3C",
+  "externalBuild": false,
+  "externalImport": false,
+  "scope": "Immutable metadata, filename screens and selected source statements/bodies only; no full semantic or axiom audit of external libraries.",
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

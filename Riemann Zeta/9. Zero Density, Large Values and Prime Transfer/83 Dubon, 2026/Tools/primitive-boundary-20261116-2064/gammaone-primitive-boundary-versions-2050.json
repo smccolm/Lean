@@ -1,0 +1,18 @@
+[
+  {
+    "version": "SourceGammaOnePrimitiveCuspBoundary2047c",
+    "module": "SourceGammaOnePrimitiveCuspBoundary",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047c.lean",
+    "originalSha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527",
+    "canonicalSha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneFiniteBinaryBoundary2048c",
+    "module": "SourceGammaOneFiniteBinaryBoundary",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048c.lean",
+    "originalSha256": "4B3E61C4DDAE758AA9C2E52C0731E57E59BEAD398852343F8C7AD920936F1F00",
+    "canonicalSha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C",
+    "mathematicalBodyIdentical": true
+  }
+]

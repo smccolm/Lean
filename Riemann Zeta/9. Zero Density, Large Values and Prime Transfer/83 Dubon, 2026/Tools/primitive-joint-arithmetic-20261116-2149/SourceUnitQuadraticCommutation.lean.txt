@@ -1,0 +1,51 @@
+import Mathlib.Algebra.FreeAlgebra
+import Mathlib.Algebra.Group.Units.Basic
+import Mathlib.Algebra.Ring.Commute
+import Mathlib.Algebra.Module.NatInt
+
+/-! DUB-17/18 -> original all-weight association -> character specialization.
+An invertible Frobenius and its quadratic recover Hecke commutativity from
+the already proved Galois commutation. Integral word induction then gives
+commutativity of the exact operator image carrying the original character. -/
+namespace Dubon2026
+
+/-- An invertible operator's quadratic transports its commutation with a
+second operator to the Hecke coefficient, provided the determinant commutes. -/
+theorem sourceHecke_commute_of_unit_quadratic {A : Type*} [Ring A]
+    (F H D X : A) (a : ℕ) (hunit : IsUnit F) (hF : Commute F X) (hD : Commute D X)
+    (hpoly : F * H = F * F + a • D) : Commute H X := by
+  have ha : Commute (a • D) X := by
+    simpa only [nsmul_eq_mul] using (Nat.cast_commute a X).mul_left hD
+  change H * X = X * H
+  apply hunit.mul_left_cancel
+  calc
+    F * (H * X) = (F * H) * X := (mul_assoc _ _ _).symm
+    _ = (F * F + a • D) * X := congrArg (· * X) hpoly
+    _ = X * (F * F + a • D) := ((hF.mul_left hF).add_left ha).eq
+    _ = X * (F * H) := congrArg (X * ·) hpoly.symm
+    _ = F * (X * H) := by rw [← mul_assoc, ← hF.eq, mul_assoc]
+
+private theorem word_commute_right {ι A : Type*} [Ring A]
+    (θ : FreeAlgebra ℤ ι →+* A) (x : A)
+    (hx : ∀ i, Commute x (θ (FreeAlgebra.ι ℤ i))) (a : FreeAlgebra ℤ ι) :
+    Commute x (θ a) := by
+  induction a using FreeAlgebra.induction with
+  | grade0 r =>
+    simpa only [algebraMap_int_eq, eq_intCast, map_intCast] using (Int.cast_commute r x).symm
+  | grade1 i => exact hx i
+  | mul a b ha hb => rw [map_mul]; exact ha.mul_right hb
+  | add a b ha hb => rw [map_add]; exact ha.add_right hb
+
+/-- Pairwise commuting original generators make the literal ring-hom image
+commutative; no commutative replacement algebra or character relation is assumed. -/
+theorem sourceIntegralWordRange_isMulCommutative {ι A : Type*} [Ring A]
+    (θ : FreeAlgebra ℤ ι →+* A)
+    (hcomm : ∀ i j, Commute (θ (FreeAlgebra.ι ℤ i)) (θ (FreeAlgebra.ι ℤ j))) :
+    IsMulCommutative θ.range := by
+  refine ⟨⟨?_⟩⟩
+  rintro ⟨_, a, rfl⟩ ⟨_, b, rfl⟩
+  apply Subtype.ext
+  exact (word_commute_right θ (θ a)
+    (fun i => (word_commute_right θ (θ (FreeAlgebra.ι ℤ i)) (hcomm i) a).symm) b).eq
+
+end Dubon2026

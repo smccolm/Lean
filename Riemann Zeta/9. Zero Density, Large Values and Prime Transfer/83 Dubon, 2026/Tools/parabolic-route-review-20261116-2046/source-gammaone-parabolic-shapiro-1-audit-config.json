@@ -1,0 +1,59 @@
+{
+  "modules": [
+    "SourceParabolicShapiroPotentials",
+    "SourceOriginalCoinducedLocalCoboundary",
+    "SourceParabolicTracePowers",
+    "SourceGammaOneParabolicShapiro",
+    "SourceGammaOneParabolicShapiroComparison"
+  ],
+  "theorems": [
+    "Dubon2026.sourceTrivialShapiro_local_coboundary",
+    "Dubon2026.sourceOriginalShapiro_local_coboundary",
+    "Dubon2026.SourceParabolic.trace_sq_zpow",
+    "Dubon2026.SourceParabolic.trace_sq_conjugate_zpow",
+    "Dubon2026.sourceGammaOneShapiroLift_parabolic",
+    "Dubon2026.sourceGammaOneShapiroH1_parabolic_of_evaluation",
+    "Dubon2026.sourceGammaOneConstantH1Iso_parabolic_preimage",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_parabolic"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceTrivialShapiro_local_coboundary",
+    "Dubon2026.sourceOriginalShapiro_local_coboundary",
+    "Dubon2026.SourceParabolic.trace_sq_zpow",
+    "Dubon2026.SourceParabolic.trace_sq_conjugate_zpow",
+    "Dubon2026.sourceGammaOneShapiroLift_parabolic",
+    "Dubon2026.sourceGammaOneShapiroH1_parabolic_of_evaluation",
+    "Dubon2026.sourceGammaOneConstantH1Iso_parabolic_preimage",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_parabolic"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneConstantH1Transfer_parabolic"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceTrivialShapiro_local_coboundary",
+    "Dubon2026.sourceOriginalShapiro_local_coboundary",
+    "Dubon2026.SourceParabolic.trace_sq_zpow",
+    "Dubon2026.SourceParabolic.trace_sq_conjugate_zpow",
+    "Dubon2026.sourceGammaOneShapiroLift_parabolic",
+    "Dubon2026.sourceGammaOneShapiroH1_parabolic_of_evaluation",
+    "Dubon2026.sourceGammaOneConstantH1Iso_parabolic_preimage",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_parabolic",
+    "Dubon2026.SourceIntegralCharacterLift.exists_potential",
+    "Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro",
+    "Dubon2026.sourceGammaOneDiagonalHom_binary_trivial",
+    "Dubon2026.sourceShapiroH1_evaluation_lift",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceParabolicCocycles_coefficientMap",
+    "Dubon2026.SourceParabolic.classification",
+    "Dubon2026.SourceManin.trace_conj"
+  ],
+  "compileEvidence": {
+    "SourceParabolicShapiroPotentials": "SourceParabolicShapiroPotentials-2039",
+    "SourceOriginalCoinducedLocalCoboundary": "SourceOriginalCoinducedLocalCoboundary-2039",
+    "SourceParabolicTracePowers": "SourceParabolicTracePowers-2039",
+    "SourceGammaOneParabolicShapiro": "SourceGammaOneParabolicShapiro-2039",
+    "SourceGammaOneParabolicShapiroComparison": "SourceGammaOneParabolicShapiroComparison-2039"
+  },
+  "separatelyAxiomChecked": []
+}

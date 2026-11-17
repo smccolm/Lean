@@ -1,0 +1,18 @@
+{
+  "recordedUTC": "2026-11-16T23:50:02.103189+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation and its actual Hecke and arithmetic descent consumers.",
+  "discharged": "For every nonzero original Gamma1 level and every residue prime away from it, including two and three, the literal residue-image genus equals the original arithmetic genus. Native arithmetic-to-complex comparison, all-characteristic separating-coordinate canonical duality and Hurwitz, actual wild and tame fiber contributions, and small-level index bounds discharge every genus premise. At the prescribed rational local valuations, both coordinate degree and genus preservation now supply the actual diamond quotient Hecke operators and arithmetic descent of the homogeneous-valued Tate action. The original quotient-character assembly retains only parabolic transfer alongside its unchanged prime range and exceptional integer.",
+  "remaining": "Parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "route": "Native conorm divisor spaces and separating-coordinate genus stabilization give the original arithmetic-to-complex comparison. Existing local generation, global trace and rational residue proofs extend canonical degree and Hurwitz to every characteristic using explicit separation. Original wild and tame bounds supply reverse genus; finite signed-index calculations settle levels one, two and three. Existing Frobenius, inertia and arithmetic descent consumers then discharge both geometric families without new representation or operator infrastructure. Three scratch scopes pass 75 proof-VALUE dependencies, exhaustive public/private/generated axiom checks and sixteen linters per module. The unused finite-set ramification variant is separately axiom checked and is not claimed as a VALUE dependency. The corrected consumer audit retains all thirteen required edges and fixes only one declaration namespace; its failed predecessor is preserved. Promotion changes imports only. Paper, root pins, proof limits and owner-only BAT are unchanged.",
+  "receipts": {
+    "source-gammaone-genus-comparison-1-scratch-receipt.json": "F7B118B5905BD9106EAA6AB219E4D4637367164771F8BB5F582FDB4F66ED06F3",
+    "source-original-genus-preservation-1-scratch-receipt.json": "281E1B1B28C1E520B5C7BEC13D8495B4C1942066C83C9F7DEC30CAB625274D3E",
+    "source-gammaone-geometric-consumers-1-scratch-receipt.json": "A1C5475B9543910A3A85FE55E4ACF8397F457469A82E6A7536A0C6D95D2AB1E5"
+  },
+  "modules": 26,
+  "queries": 46,
+  "exhaustiveScratchChecks": 110,
+  "proofValueChecks": 75,
+  "scopes": 3,
+  "productionMutation": false
+}

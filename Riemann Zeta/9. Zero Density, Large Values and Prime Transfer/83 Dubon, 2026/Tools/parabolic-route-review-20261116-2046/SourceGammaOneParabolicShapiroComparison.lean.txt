@@ -1,0 +1,84 @@
+import SourceGammaOneParabolicShapiro
+import Dubon2026.SourceGammaOneSubgroupCohomologyMap
+import Dubon2026.SourceGammaOneParabolicRestriction
+import Dubon2026.SourceParabolicCoefficientMap
+
+/-! DUB-17/18 -> original all-weight association -> finite original Hecke
+character -> parabolic transfer. The actual constant-coefficient Gamma1
+comparison sends parabolic classes back to parabolic native coinduced H1.
+The original counit therefore preserves parabolicity. This closes the
+comparison and stability obligations, while surjectivity on the parabolic
+submodule remains required. Native subgroup pullback and coefficient-map
+identities are reused without a second cohomology model. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology CategoryTheory SourceFunctionField.GammaOne
+open scoped MatrixGroups
+variable (Q N w : ℕ) [NeZero N]
+local notation "A" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "S" => MonoidHom.range (sourceGammaOneDiagonalHom Q N)
+local notation "B" => Rep.coind (Subgroup.subtype S) (Rep.res (Subgroup.subtype S) A)
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) A
+
+private theorem subgroupIso_cocycle_value (c : cocycles₁ (Rep.res (S).subtype A))
+    (γ : Gamma1 (Q * N ^ 2)) :
+    (H1IsoOfIsTrivial C).hom ((sourceGammaOneSubgroupH1Iso Q N w).hom (H1π _ c))
+      (Additive.ofMul γ) = c (sourceGammaOneRangeEquiv Q N γ) := by
+  have hm := H1π_comp_map_apply (sourceGammaOneRangeEquiv Q N).toMonoidHom
+    ((Rep.resFunctor (sourceGammaOneRangeEquiv Q N).toMonoidHom).map
+      (sourceGammaOneCoefficientTrivialIso Q N w).hom) c
+  rw [sourceGammaOneSubgroupH1Iso_hom_eq_map]
+  have hv := congrArg (fun x : H1 C => (H1IsoOfIsTrivial C).hom x (Additive.ofMul γ)) hm
+  exact hv.trans (H1IsoOfIsTrivial_H1π_apply_apply _ (Additive.ofMul γ))
+
+private theorem constantIso_cocycle_value (c : cocycles₁ B)
+    (γ : Gamma1 (Q * N ^ 2)) :
+    (H1IsoOfIsTrivial C).hom ((sourceGammaOneConstantH1Iso Q N w).hom (H1π _ c))
+      (Additive.ofMul γ) =
+        sourceShapiroEvaluationCocycles A S c (sourceGammaOneRangeEquiv Q N γ) := by
+  rw [sourceGammaOneConstantH1Iso_factor]
+  change (H1IsoOfIsTrivial C).hom
+    ((sourceGammaOneSubgroupH1Iso Q N w).hom
+      ((coindIso (Rep.res (S).subtype A) 1).hom (H1π _ c))) _ = _
+  rw [sourceShapiroH1_hom_cocycle, subgroupIso_cocycle_value]
+
+theorem sourceGammaOneConstantH1Iso_parabolic_preimage
+    (x : H1 B) (hx : (sourceGammaOneConstantH1Iso Q N w).hom x ∈ binaryParabolicH1 Q N w) :
+    x ∈ sourceParabolicH1 (Gamma0 Q) B := by
+  obtain ⟨c, rfl⟩ := (ModuleCat.epi_iff_surjective (H1π B)).mp inferInstance x
+  apply sourceGammaOneShapiroH1_parabolic_of_evaluation Q N w c
+  intro s hs
+  obtain ⟨γ, rfl⟩ := (sourceGammaOneRangeEquiv Q N).surjective s
+  have hγ : γ.val.val.trace ^ 2 = 4 := by
+    change (sourceGammaOneDiagonalHom Q N γ).val.val.trace ^ 2 = 4 at hs
+    rw [sourceGammaOneDiagonalHom_trace] at hs
+    exact hs
+  have hv := hx γ hγ
+  rw [constantIso_cocycle_value] at hv
+  exact hv
+
+private theorem parabolicH1_coefficient_map {R : Type} [CommRing R]
+    (Γ : Subgroup SL(2, ℤ)) (U V : Rep R Γ) (f : U ⟶ V)
+    {x : H1 U} (hx : x ∈ sourceParabolicH1 Γ U) :
+    (groupCohomology.functor R Γ 1).map f x ∈ sourceParabolicH1 Γ V := by
+  obtain ⟨c, hc, rfl⟩ := hx
+  change groupCohomology.map (MonoidHom.id Γ) f 1 (H1π U c) ∈ sourceParabolicH1 Γ V
+  rw [H1π_comp_map_apply (MonoidHom.id Γ) f c]
+  exact (sourceParabolicH1_cocycle_iff Γ V _).mpr
+    (sourceParabolicCocycles_coefficientMap Γ U V f hc)
+
+theorem sourceGammaOneConstantH1Transfer_parabolic [NeZero Q]
+    {y : H1 C} (hy : y ∈ binaryParabolicH1 Q N w) :
+    sourceGammaOneConstantH1Transfer Q N w y ∈ sourceParabolicH1 (Gamma0 Q) A := by
+  classical
+  letI : (S).FiniteIndex := sourceGammaOneDiagonalHom_range_finiteIndex Q N
+  have hx : (sourceGammaOneConstantH1Iso Q N w).inv y ∈ sourceParabolicH1 (Gamma0 Q) B := by
+    apply sourceGammaOneConstantH1Iso_parabolic_preimage Q N w
+    simpa only [Iso.inv_hom_id_apply] using hy
+  have h := parabolicH1_coefficient_map (Gamma0 Q) B A
+    ((Rep.coindResAdjunction (ZMod N) S).counit.app A) hx
+  unfold sourceGammaOneConstantH1Transfer
+  exact h
+
+end
+end Dubon2026

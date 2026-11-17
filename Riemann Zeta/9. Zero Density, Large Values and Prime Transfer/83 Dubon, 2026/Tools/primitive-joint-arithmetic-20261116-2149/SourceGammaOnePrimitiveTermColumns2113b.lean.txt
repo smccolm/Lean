@@ -1,0 +1,95 @@
+import SourceGammaOnePrimitiveUpperColumns2112a
+import Dubon2026.SourceCuspHeckeSum
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> primitive boundary Frobenius. Remove the actual Gamma1
+Hecke-coset representative from both computed primitive contributions.
+The original subgroup has diagonal residues one; the remaining upper
+entry is absorbed by the proved primitive upper-column invariance.
+No division by a cusp width or eigenvalue is performed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary
+open scoped MatrixGroups
+
+private theorem inverse_column (M : ℕ) (r : Gamma1 M) (δ : SL(2, ℤ)) :
+    colRed M (r.val⁻¹ * δ) =
+      (((δ 0 0 : ℤ) : ZMod M) + ((r.val⁻¹ 0 1 : ℤ) : ZMod M) * (δ 1 0 : ℤ),
+        ((δ 1 0 : ℤ) : ZMod M)) := by
+  have hr : r.val⁻¹ ∈ Gamma1 M := (Gamma1 M).inv_mem r.property
+  obtain ⟨ha, hd, _⟩ := (Gamma1_mem M _).mp hr
+  rw [colRed_mul_of_mem_Gamma0 (Gamma1_in_Gamma0 M hr), ha, hd, one_mul, one_mul]
+
+variable (M : ℕ) [NeZero M] (ell : sourceBinaryHeckePrime M)
+variable {A : Type} [AddCommGroup A]
+
+/-- The divided-column term has the exact value of the global divided
+column, independent of the actual fixed-orbit representative. -/
+theorem primitiveCuspValue_divided_column_compare
+    (φ : Additive (Gamma1 M) →+ A) (δ σ τ : SL(2, ℤ)) (r : Gamma1 M)
+    (hσ0 : σ 0 0 * ell.val = (r.val⁻¹ * δ) 0 0)
+    (hσ1 : σ 1 0 = (r.val⁻¹ * δ) 1 0)
+    (hτ0 : ((τ 0 0 : ℤ) : ZMod M) * ell.val = δ 0 0)
+    (hτ1 : ((τ 1 0 : ℤ) : ZMod M) = δ 1 0) :
+    primitiveCuspValue M φ σ = primitiveCuspValue M φ τ := by
+  let u := ZMod.unitOfCoprime ell.val ell.property.2
+  let b : ZMod M := (r.val⁻¹ 0 1 : ℤ)
+  have hu : (u : ZMod M) = ell.val := ZMod.coe_unitOfCoprime _ _
+  have hr0 := congrArg Prod.fst (inverse_column M r δ)
+  have hr1 := congrArg Prod.snd (inverse_column M r δ)
+  dsimp only [colRed] at hr0 hr1
+  have hs0 := congrArg (fun z : ℤ => (z : ZMod M)) hσ0
+  push_cast at hs0
+  have hs1 := congrArg (fun z : ℤ => (z : ZMod M)) hσ1
+  dsimp only at hs0 hs1
+  have hc : (b * ((u⁻¹ : (ZMod M)ˣ) : ZMod M)) * (δ 1 0 : ℤ) * ell.val =
+      b * (δ 1 0 : ℤ) := by
+    rw [← hu]
+    calc
+      _ = (((u⁻¹ : (ZMod M)ˣ) : ZMod M) * (u : ZMod M)) *
+          (b * (δ 1 0 : ℤ)) := by ring
+      _ = _ := by rw [Units.inv_mul, one_mul]
+  apply primitiveCuspValue_eq_of_upper_columns M φ τ σ
+    (b * ((u⁻¹ : (ZMod M)ˣ) : ZMod M))
+  · change ((σ 0 0 : ℤ) : ZMod M) = (τ 0 0 : ℤ) +
+      (b * ((u⁻¹ : (ZMod M)ˣ) : ZMod M)) * (τ 1 0 : ℤ)
+    apply mul_ell_cancel ell.property.1 (ell.property.1.coprime_iff_not_dvd.mp ell.property.2)
+    rw [hs0, hr0, add_mul, hτ0, hτ1, hc]
+  · exact hs1.trans (hr1.trans hτ1.symm)
+
+/-- The multiplied-column term has the exact value of the global
+multiplied column, independent of the actual nonfixed-orbit representative. -/
+theorem primitiveCuspValue_multiplied_column_compare
+    (φ : Additive (Gamma1 M) →+ A) (δ σ τ : SL(2, ℤ)) (r : Gamma1 M)
+    (hσ0 : σ 0 0 = (r.val⁻¹ * δ) 0 0)
+    (hσ1 : σ 1 0 = ell.val * (r.val⁻¹ * δ) 1 0)
+    (hτ0 : ((τ 0 0 : ℤ) : ZMod M) = δ 0 0)
+    (hτ1 : ((τ 1 0 : ℤ) : ZMod M) = ell.val * (δ 1 0 : ℤ)) :
+    primitiveCuspValue M φ σ = primitiveCuspValue M φ τ := by
+  let u := ZMod.unitOfCoprime ell.val ell.property.2
+  let b : ZMod M := (r.val⁻¹ 0 1 : ℤ)
+  have hu : (u : ZMod M) = ell.val := ZMod.coe_unitOfCoprime _ _
+  have hr0 := congrArg Prod.fst (inverse_column M r δ)
+  have hr1 := congrArg Prod.snd (inverse_column M r δ)
+  dsimp only [colRed] at hr0 hr1
+  have hs0 := congrArg (fun z : ℤ => (z : ZMod M)) hσ0
+  have hs1 := congrArg (fun z : ℤ => (z : ZMod M)) hσ1
+  dsimp only at hs0 hs1
+  push_cast at hs1
+  have hc : (b * ((u⁻¹ : (ZMod M)ˣ) : ZMod M)) * (ell.val * (δ 1 0 : ℤ)) =
+      b * (δ 1 0 : ℤ) := by
+    rw [← hu]
+    calc
+      _ = (((u⁻¹ : (ZMod M)ˣ) : ZMod M) * (u : ZMod M)) *
+          (b * (δ 1 0 : ℤ)) := by ring
+      _ = _ := by rw [Units.inv_mul, one_mul]
+  apply primitiveCuspValue_eq_of_upper_columns M φ τ σ
+    (b * ((u⁻¹ : (ZMod M)ˣ) : ZMod M))
+  · change ((σ 0 0 : ℤ) : ZMod M) = (τ 0 0 : ℤ) +
+      (b * ((u⁻¹ : (ZMod M)ˣ) : ZMod M)) * (τ 1 0 : ℤ)
+    rw [hs0, hr0, hτ0, hτ1, hc]
+  · change ((σ 1 0 : ℤ) : ZMod M) = (τ 1 0 : ℤ)
+    rw [hs1, hr1, hτ1]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,130 @@
+[
+  {
+    "version": "SourceMarkedDihedralFiberBound1985a",
+    "module": "SourceMarkedDihedralFiberBound",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedDihedralFiberBound1985a.lean",
+    "originalSha256": "8B85A94FFC59D6EC17C0ED0AA4545D6E7047A10DFA83CE5959E0C1FD1E4DEE7A",
+    "canonicalSha256": "2C7D86C86367744798A72FFB137061DD0A428E1504C53689787E35A85BDB04C2",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedSignFiberSymmetries1986a",
+    "module": "SourceMarkedSignFiberSymmetries",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberSymmetries1986a.lean",
+    "originalSha256": "2847E5261A8A29ADDD059019E2B2926622DC10DDAC50CD9561539D3B11191272",
+    "canonicalSha256": "E3DC484F4D49E3416FB0F699FC3F52E4DF418482EFBD976E84793138A6D11964",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalWildFiberThree1987a",
+    "module": "SourceMarkedOriginalWildFiberThree",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberThree1987a.lean",
+    "originalSha256": "EC26567F1DFF019F84878710F11BB78298064B3F7CB68650FBEF199B7DAC80C8",
+    "canonicalSha256": "7E271D277FA064EBCF376EE22927F710CEB8D01C1989135F3504987CBE69B553",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOrderTwelveFiberBound1989c",
+    "module": "SourceMarkedOrderTwelveFiberBound",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrderTwelveFiberBound1989c.lean",
+    "originalSha256": "B8AAC3AF20388C983A439D98CFECF4A9C37A208238D6BE2142DD84C9C28FA55D",
+    "canonicalSha256": "B8AAC3AF20388C983A439D98CFECF4A9C37A208238D6BE2142DD84C9C28FA55D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedSignActionHom1990a",
+    "module": "SourceMarkedSignActionHom",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignActionHom1990a.lean",
+    "originalSha256": "AE76C8968C834C062F6E64C20CC3BA5D561C336F9222CD91059BA8815BCB290E",
+    "canonicalSha256": "F9E24C40A08D258E3898061E7A5F9BD9F453040BAD5312BD6E12FAE96522E758",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedCharTwoSignAction1991b",
+    "module": "SourceMarkedCharTwoSignAction",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCharTwoSignAction1991b.lean",
+    "originalSha256": "7748E98DC20B7D814293C42C06FA7F5BFD1BFE120E49B17105EDA7B3600ED553",
+    "canonicalSha256": "AC9AF58BFDBA466078AB23A4698A186F0486C7D4A43D605B1D35BDB46A77BFFF",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalWildFiberTwo1992b",
+    "module": "SourceMarkedOriginalWildFiberTwo",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildFiberTwo1992b.lean",
+    "originalSha256": "1AF92EF9729504E8E651868218C9D37AFA8BCADB01D2D8B2B82254ED8B1E7E12",
+    "canonicalSha256": "22E9C2DF65F29A13AF0445045D7318AD3671272601A1DFCDE9590A1853DFC17D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedNormalOrderDescent1993a",
+    "module": "SourceMarkedNormalOrderDescent",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNormalOrderDescent1993a.lean",
+    "originalSha256": "FE8E7074BB70E938B4DD6327B3AC7FC02A802A2E7438BD60591F55F7C8930926",
+    "canonicalSha256": "E64EFD1F6491A0635DFEA820E0433F96DD7630B7114B5B34288D13CAB2E6C879",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalOrderBoundTwo1994a",
+    "module": "SourceMarkedOriginalOrderBoundTwo",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundTwo1994a.lean",
+    "originalSha256": "34E84CE09AD7221B3B0CC0C8BE69CFF1DFFCCC93642C4BCCC41B804008991DE0",
+    "canonicalSha256": "3FFC16B3B4EF6D19F72693E1A4D772673A36CFD649539C21096DCFE60E093079",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalOrderBoundThree1995a",
+    "module": "SourceMarkedOriginalOrderBoundThree",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOrderBoundThree1995a.lean",
+    "originalSha256": "00FE12C13F23FCE3CAB8B338011FC1A01A602095D8ED20E637A3BDA0EAE53E07",
+    "canonicalSha256": "ECA60D8E8C29D6181F631396563A07AD13497FB9B63CE8B7B18459DFD2DBE510",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalPositiveDegree1996b",
+    "module": "SourceMarkedOriginalPositiveDegree",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPositiveDegree1996b.lean",
+    "originalSha256": "FBDCA50070DB220AED90E6DA176EFDB79DC4A5CD4F6AE91B915F902C8E4060AB",
+    "canonicalSha256": "FBDCA50070DB220AED90E6DA176EFDB79DC4A5CD4F6AE91B915F902C8E4060AB",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedFiberOrderRigidity1997b",
+    "module": "SourceMarkedFiberOrderRigidity",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberOrderRigidity1997b.lean",
+    "originalSha256": "897F7C5F325A357774FA8D01067F6027F77ECDECF46919954C0EB2AD7930EBE0",
+    "canonicalSha256": "897F7C5F325A357774FA8D01067F6027F77ECDECF46919954C0EB2AD7930EBE0",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalExactOrderTwo1998a",
+    "module": "SourceMarkedOriginalExactOrderTwo",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderTwo1998a.lean",
+    "originalSha256": "9D74CD72CAEFC284267A6B95203042A2488BBF1D33FDFE3ABB00A4B380FEAB05",
+    "canonicalSha256": "DDE723FBBBE72182496B2B23C9E2B54F5C96499AE552C6E7D13C13A28BBBDCAD",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalExactOrderThree1999a",
+    "module": "SourceMarkedOriginalExactOrderThree",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalExactOrderThree1999a.lean",
+    "originalSha256": "6435FC364EBC7743478CF59ECBA13340F88C8BAE887B51356E1E5FBB1B60EEAD",
+    "canonicalSha256": "71334C9871EE39832D67E32A70782F751995E54C75E2440D64C6C09B4CC61A48",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalWildContributionTwo2000a",
+    "module": "SourceMarkedOriginalWildContributionTwo",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionTwo2000a.lean",
+    "originalSha256": "B0229073A8EC74407388707A3B499EE7C87B147201F60F5399D6FFC50C21661F",
+    "canonicalSha256": "6469571644C5F5DFD55C167D263E698E63199089899392925679FA2AD4DAFF8D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalWildContributionThree2001a",
+    "module": "SourceMarkedOriginalWildContributionThree",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildContributionThree2001a.lean",
+    "originalSha256": "9BC8C4683131319621D8A348E5B1A854A6810FAE053B2E6CA48A4D209F278034",
+    "canonicalSha256": "22149F4312F3CFB25DDE9789F8DDDF740F0B65249274DACE011BB3D6633F0A40",
+    "mathematicalBodyIdentical": true
+  }
+]

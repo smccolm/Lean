@@ -1,0 +1,327 @@
+{
+  "checkedUTC": "2026-11-17T01:27:29.729212+00:00",
+  "sources": [
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/LICENSE",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__EichlerIntegral__Basic.lean.txt",
+      "sha256": "24805D9913C1683CB2989EC2FB05366ECA21937A1D77F84F210C25CCB71FEB68"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__EichlerIntegral__Integral.lean.txt",
+      "sha256": "77701092DB29C968B66F477212E4269C2612CE85A7DCAFB5634151E6E1019DA3"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__EichlerIntegral__Transformation.lean.txt",
+      "sha256": "062EAFC91D13670D4DB026A3325B859C8266192A444AEB043DDB8EAB602F0162"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/GaloisProd.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/GaloisProd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__GaloisProd.lean.txt",
+      "sha256": "400E1EC901B42E7526494B1AD652E2A14F62949258BD31FFE24A7509B134964A"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/LevelOne/PeriodPolynomial/EichlerShimura.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/LevelOne/PeriodPolynomial/EichlerShimura.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__LevelOne__PeriodPolynomial__EichlerShimura.lean.txt",
+      "sha256": "953701077D5D978FB4134C5432D26E6C42FD8CEAA865E587388714F23B565E7A"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Basic.lean.txt",
+      "sha256": "E7F88B0006D11B32B3F77B214CD7361ED3C572ADB01B0B5FBF0319C16412BC73"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Boundary.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Boundary.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Boundary.lean.txt",
+      "sha256": "FE051154E2E8CA47B32F1403949134740789E9BA7BDA2690A2396D5E428C5268"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Basic.lean.txt",
+      "sha256": "19DCC245E2CA2BF4BB13CD08CF6F23256CA06B40C65DA218AE2065744F7056BB"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Commutation.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Commutation.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Commutation.lean.txt",
+      "sha256": "7F03AF71133D7E34960F5376A62FFEFBC4BD07B70E2D29C475C4EB9BC746A614"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Composition.lean.txt",
+      "sha256": "39595E9044EDBE6DB225AD41CFC5BD04CFE1D5DE0D9BCCF27F2FD4C5F8010BF6"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Diamond.lean.txt",
+      "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Finite.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Finite.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Finite.lean.txt",
+      "sha256": "382082B2596898E9998F06EE2DC75F85427F564A192ED6862EA893F79B3B0946"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Manin.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Manin.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Manin.lean.txt",
+      "sha256": "290E7BC72B91C5501B1B41A0DEDB5714DF1C36A6216D9B77FD30F677BC957E9F"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Hecke.lean.txt",
+      "sha256": "2EED34DF4E2202930616C4CA35557D9155C631B27E0C891AF361E0F904525193"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Injective.lean.txt",
+      "sha256": "E069D71C59CDA9D6A38CB4143A5D2AB9073BE32479E5D39BB362C60B27ACA01B"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Integral.lean.txt",
+      "sha256": "E49F028DB2A1D512706C6CB58A65F0667295446F0247E8AECA6298B49CF93AC5"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Map.lean.txt",
+      "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Pairing.lean.txt",
+      "sha256": "729287A8A4E80CFB3F0813EC747C8BAC3A988F0203DA33ACC44E4778208D0DC7"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "lake-manifest.json",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/lake-manifest.json",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__lake-manifest.json.txt",
+      "sha256": "7E5FDD67FE9775284CB2A2FC9DDC5B6739963C7F4A430BD0C806CDC351E6A18F"
+    },
+    {
+      "repo": "TauCetiProject/TauCeti",
+      "commit": "7b4d5f7042c90b82d76446b6c62c94bbda739af2",
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/7b4d5f7042c90b82d76446b6c62c94bbda739af2/lean-toolchain",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCeti__lean-toolchain.txt",
+      "sha256": "11C697AEBE5B539D74F5069E497A588E7DFAB1C4EEB74313F28357E351C55CA3"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ArithmeticGaloisRepresentations/README.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ArithmeticGaloisRepresentations/README.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ArithmeticGaloisRepresentations__README.md.txt",
+      "sha256": "A73D186A994D42C2F97202F4745D53C952544A976ECB9B06302BF43C125C130E"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ArithmeticGaloisRepresentations/Suggested.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ArithmeticGaloisRepresentations/Suggested.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ArithmeticGaloisRepresentations__Suggested.lean.txt",
+      "sha256": "3F807A61F1363AFD03B79B83B84A6BDF332281C07CD0752BC60151839A67A70F"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/README.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/README.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__AutomorphicFormsOnReductiveGroups__README.md.txt",
+      "sha256": "F7340E58B8CFBA20DB014314A8F5FC434AFF014037C69C340189C0BD5B6DEA7D"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/Suggested.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/AutomorphicFormsOnReductiveGroups/Suggested.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__AutomorphicFormsOnReductiveGroups__Suggested.lean.txt",
+      "sha256": "207B29878EF9E9A62BD117CBE019A905FC8EF8601FB7F209A6C77C208EF62FE4"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularCurves/PROGRESS.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularCurves/PROGRESS.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__PROGRESS.md.txt",
+      "sha256": "C3C50353FFB28ACE85623501799C0E93A0544DBAE9B5E562BF48F2DB3B54D2C4"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularCurves/README.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularCurves/README.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__README.md.txt",
+      "sha256": "1D34505279D359ED5A32F42FB2E9323257C61BAF066EFC82663425A2D2EAB1FD"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularCurves/STATUS.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularCurves/STATUS.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__STATUS.md.txt",
+      "sha256": "C9E27002FDD33C67C0D61A2CA1911B01FF8CFE8DB22EAF7886CB1E5BCDF713CF"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularCurves/Suggested.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularCurves/Suggested.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularCurves__Suggested.lean.txt",
+      "sha256": "206DF7C5B9FAF70C9A87529833A46A8435C843D95D0F2F1480963376DA929DEF"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularForms/PROGRESS.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularForms/PROGRESS.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__PROGRESS.md.txt",
+      "sha256": "90C2A1BAEB74ED8569250280231F536A7EEE99DCF702DB342DB8219CCA64A2E5"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularForms/README.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularForms/README.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__README.md.txt",
+      "sha256": "91486D6B56A377974037A787E36C958F6D0CDCF59F06C6D3BAFFCAF88F5229E2"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularForms/STATUS.md",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularForms/STATUS.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__STATUS.md.txt",
+      "sha256": "8C52F1D0616F458549C028ADF8ABBFD7DA65A749D64EE874290EE817C1C44CEE"
+    },
+    {
+      "repo": "TauCetiProject/TauCetiRoadmap",
+      "commit": "c6ef576569501d342dec5a31a9938c9549dc6a00",
+      "path": "TauCetiRoadmap/ModularForms/Suggested.lean",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/c6ef576569501d342dec5a31a9938c9549dc6a00/TauCetiRoadmap/ModularForms/Suggested.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\TauCetiProject--TauCetiRoadmap__TauCetiRoadmap__ModularForms__Suggested.lean.txt",
+      "sha256": "4F20C0A8D241BEB7293F391CDFF16BA17BAD914AE9FE4F710B9A4919661D2E01"
+    },
+    {
+      "repo": "CBirkbeck/LeanBridge",
+      "commit": "68efdfc7c81ead718483c75e04bdf513f28cd3e7",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/LeanBridge/68efdfc7c81ead718483c75e04bdf513f28cd3e7/README.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\CBirkbeck--LeanBridge__README.md.txt",
+      "sha256": "4B55141A7528BF8A7D68C4A83343C577A772F955DC01D3F25057DA824CFB7453"
+    },
+    {
+      "repo": "CBirkbeck/LeanBridge",
+      "commit": "68efdfc7c81ead718483c75e04bdf513f28cd3e7",
+      "path": "LeanBridge.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/LeanBridge/68efdfc7c81ead718483c75e04bdf513f28cd3e7/LeanBridge.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\CBirkbeck--LeanBridge__LeanBridge.lean.txt",
+      "sha256": "E776D511C2C4A02786B8B7620B5C1930EE5B826F183E7D3AC13F251374453513"
+    },
+    {
+      "repo": "CBirkbeck/LeanBridge",
+      "commit": "68efdfc7c81ead718483c75e04bdf513f28cd3e7",
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/LeanBridge/68efdfc7c81ead718483c75e04bdf513f28cd3e7/lean-toolchain",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\CBirkbeck--LeanBridge__lean-toolchain.txt",
+      "sha256": "CA5F1F601D34C49079E38D7E7041EB0F2A9C227FBC1DF0F404820069A052330C"
+    },
+    {
+      "repo": "openai/math",
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/README.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__README.md.txt",
+      "sha256": "6CB7F0E387B67C051227C6BA27ACA87EE82D9DD2530B6452B86B8681A2E2743A"
+    },
+    {
+      "repo": "openai/math",
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "path": "CONTENTS.md",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/CONTENTS.md",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__CONTENTS.md.txt",
+      "sha256": "080BADCB677FB80BE0E695C21A8EC88BCB3A46DD3E3078CA10061E6B289BE175"
+    },
+    {
+      "repo": "openai/math",
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "path": "lean/lean-toolchain",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/lean-toolchain",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__lean-toolchain.txt",
+      "sha256": "D5EDBA4E4B8FAAD9C1BAEADB265716D20D03BE4D1A2647DC5E35B0C0325BEA7B"
+    },
+    {
+      "repo": "openai/math",
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "path": "lean/lakefile.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/lakefile.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\openai--math__lean__lakefile.lean.txt",
+      "sha256": "FC590A5D14923F79E71EA80E29EFD42950BB3EC051481B5209157F0A01F63DE1"
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

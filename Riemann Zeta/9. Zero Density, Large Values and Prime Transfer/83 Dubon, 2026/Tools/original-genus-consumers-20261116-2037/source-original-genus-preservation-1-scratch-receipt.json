@@ -1,0 +1,261 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceCurve.separating_hurwitz_ramification_bound"
+  ],
+  "recordedUTC": "2026-11-16T23:39:23.183358+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceCurveSeparatingCoordinateGeometry",
+    "SourceCurveSeparatingCoordinateCanonical",
+    "SourceCurveSeparatingCoordinateGlobalResidues",
+    "SourceCurveSeparatingCoordinateResidueDuality",
+    "SourceCurveSeparatingCoordinateCanonicalDegree",
+    "SourceCurveSeparatingCoordinateHurwitz",
+    "SourceCurveSeparatingHurwitzBound",
+    "SourceCurveSeparatingPoleSums",
+    "SourceCurveSeparatingHurwitzCuspBound",
+    "SourceOriginalResidueHurwitz",
+    "SourceOriginalWildGenusLower",
+    "SourceCurveSeparatingFiberSums",
+    "SourceOriginalTameGenusCriterion",
+    "SourceOriginalTameGenusLower",
+    "SourceOriginalLargeLevelGenusLower",
+    "SourceGammaOneSmallLevelIndex",
+    "SourceGammaOneSmallLevelGenus",
+    "SourceOriginalGammaOneGenusPreservation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry.lean",
+      "sha256": "A8456CE3A3B59D590C6A117AD7CF6CD8F49794504D3E4D25A9A32A096DD36F48",
+      "oleanSha256": "E610B9960EA8BD32D497C6A3563C6551EAF04FDD77087E74D8E667C817BCB7E2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical.lean",
+      "sha256": "E1E0CE591B28A303D66905BA7A7C87C8D391066730A034E4DEEDBAADF0794580",
+      "oleanSha256": "BEED969FFA98C403F68A445E49903FA18AB5C532D1C11EA5E9F8375B735EEAC3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues.lean",
+      "sha256": "60F21F8BDA95DD27C8E934079CD253F894F4BF1A145BFA11E40D3EFEB6CFA54B",
+      "oleanSha256": "2DF6E05238AF4B955EF771E9BEAB48D1ACD116EEA7E2C7752C3E344E984DAFF8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality.lean",
+      "sha256": "D21BF1776B963B891943099547F920B46A31CCC765B2B63449811AA73AF30D49",
+      "oleanSha256": "AFCC82E9D584AE095CE6A6858376C5EFB27F4C50C4C72DDCA4CE84B795CE7263",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree.lean",
+      "sha256": "42F7658DB870FE31C3D6D9321126D85484A0CFFFB2C88E82B3370424C3C8E5AA",
+      "oleanSha256": "E99A1BAB6FC07A76EFC9D8D5773BCAF1D5BA779332D123FD30D938C345F05BDC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz.lean",
+      "sha256": "8387CB74D871A56B53BD03E14E6E251C3ACDB72099712A6D94CDC898250C9FFD",
+      "oleanSha256": "049BA99E8E4C2FEF3C4F0D664E67D317457D7C80795E818A4B7F992806229C21",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound.lean",
+      "sha256": "554BBD2BA52E73E28CC59B819B050BDEA87E322DEC9067DDFF234476AC92FB0E",
+      "oleanSha256": "3EA9381604A63869663A1DE2ED1D54BF646EDE34E4071890531E20FE04FC5E60",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums.lean",
+      "sha256": "E55BBD540566703D8265F8701580DD810F0542336A4093228E68AD6A87192B12",
+      "oleanSha256": "D9E0134E8EA864C98F95806274717F65182D63B2516E2F9942BA925AF02D8961",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound.lean",
+      "sha256": "965757573C299A2CF4FDADFC940CD45D3DF083581D5FB8A778B4C925B43207C4",
+      "oleanSha256": "B5B286B19D52FF47C4DB0AC56B6C2C69049551AAB6A2B7CDAF711C00A1E15F19",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz.lean",
+      "sha256": "0253932B0F648B904DC24E6D3465C79630178FBAE817F93E7E45CB795AF5D243",
+      "oleanSha256": "6A554C9881A9187E5F658784262D56BE018F84915C18AEDF61B9A46B673E03B8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower.lean",
+      "sha256": "3118AFCC07B81A2DBB075C69834959755986784CA2BBBE32E2E81DE35FDA2663",
+      "oleanSha256": "69B104FE97A6631E79275975FA7BE6F85F74559D786E64D52FEB1FD1FEB4C4D8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums.lean",
+      "sha256": "1D9D4A5A4D8B7566D467EEAE9F06D89DEFCA669DFB3572B615A538760A114C00",
+      "oleanSha256": "F113ECC4BB40DEE0D325456CF9CC99D09CCDB6AFB9FE2CB761146C7345B4BA53",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion.lean",
+      "sha256": "72B02C8C05D24913AB512887802B0EDB1B6C9DD53756D2AE36A84FB8E977A393",
+      "oleanSha256": "266BCD5EE3D139897CE3E47F51F6A2DA3757F99E0C7F6D88231B5A33BABFE348",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower.lean",
+      "sha256": "5FD58BF8978E632B5F2628B07643F425E927C791052202FB0484B2B7691AE028",
+      "oleanSha256": "927132D0A9F020625E2D079746AAB6D7CF4C0C8B9D841C035BE4A3C77FDE8825",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower.lean",
+      "sha256": "AE6D895210FD60AF64B688383B4A700521975DFA24BCF97A8CDF06EFBAF30C1E",
+      "oleanSha256": "2DF792BE0504482C7A3BC17F68861FCA8E9E118A4C16B7D3B5DA45A7970097D1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex.lean",
+      "sha256": "C3319AA32A134AB63451B52681319C72F5C620FAA9FFF516EAD44D0E137AED0D",
+      "oleanSha256": "DDB1532CED18F47137A125EA310C432F114DAE7B5854140ED7000748DB9F82DE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus.lean",
+      "sha256": "D6CB1FF2901F4ED1335C415F2A93BABC8B82442D0FB45C7AC747D353E7DE52F0",
+      "oleanSha256": "CB0B3DA37553F8583A1E4890BB24AD3455183BD570B91AF81FC916FDAD4FF15C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus-2027.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation.lean",
+      "sha256": "1596927BA82ADC4D70A4EB5C3BA1A9A6C0966DF0F8DF92ED86794965A23B14F8",
+      "oleanSha256": "A1FA4E53C2A0D2003979191923F153E5D8103264E42307AB1BACE43659C7B8CF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation-2027.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation-2027.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.separating_coordinate_place_essFiniteType",
+    "Dubon2026.SourceCurve.separating_coordinate_place_differentials",
+    "Dubon2026.SourceCurve.separating_coordinate_place_dCoordGenerates",
+    "Dubon2026.SourceCurve.isCurveOver_separating_coordinate",
+    "Dubon2026.SourceCurve.separating_coordinate_D_support",
+    "Dubon2026.SourceCurve.separating_coordinate_differential_support",
+    "Dubon2026.SourceCurve.hasCanonicalDivisor_separating_coordinate",
+    "Dubon2026.SourceCurve.separating_coordinate_tate_support",
+    "Dubon2026.SourceCurve.separating_coordinate_global_tateResidue_zero",
+    "Dubon2026.SourceCurve.separating_coordinate_global_residue_sum_zero",
+    "Dubon2026.SourceCurve.separating_coordinate_index_eq_canonical_complement",
+    "Dubon2026.SourceCurve.separating_coordinate_canonical_degree_eq_genusFF",
+    "Dubon2026.SourceCurve.separatingHurwitzDivisor",
+    "Dubon2026.SourceCurve.separatingHurwitzDivisor_apply",
+    "Dubon2026.SourceCurve.separating_coordinate_ord_sub_one_le_D",
+    "Dubon2026.SourceCurve.separatingHurwitzDivisor_nonneg",
+    "Dubon2026.SourceCurve.degree_separatingHurwitzDivisor",
+    "Dubon2026.SourceCurve.separating_hurwitz_differential_bound",
+    "Dubon2026.SourceCurve.separating_hurwitz_ramification_bound",
+    "Dubon2026.SourceCurve.sum_pole_orders_eq_finrank_separating",
+    "Dubon2026.SourceCurve.sum_pole_orders_finset_separating",
+    "Dubon2026.SourceCurve.separating_hurwitz_differential_cusp_bound",
+    "Dubon2026.SourceCurve.separating_hurwitz_ramification_cusp_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_hurwitz_differential_cusp_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_hurwitz_ramification_cusp_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_char_two",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_char_three",
+    "Dubon2026.SourceCurve.sum_fiber_orders_eq_finrank_separating",
+    "Dubon2026.SourceCurve.sum_fiber_orders_finset_separating",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_tame_fiber_bounds",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_five_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_three_lt",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_small_signed_index_le_four",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_zero_of_le_three",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_eq_away_level"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.separating_coordinate_place_essFiniteType",
+    "Dubon2026.SourceCurve.separating_coordinate_place_differentials",
+    "Dubon2026.SourceCurve.separating_coordinate_place_dCoordGenerates",
+    "Dubon2026.SourceCurve.isCurveOver_separating_coordinate",
+    "Dubon2026.SourceCurve.separating_coordinate_D_support",
+    "Dubon2026.SourceCurve.separating_coordinate_differential_support",
+    "Dubon2026.SourceCurve.hasCanonicalDivisor_separating_coordinate",
+    "Dubon2026.SourceCurve.separating_coordinate_tate_support",
+    "Dubon2026.SourceCurve.separating_coordinate_global_tateResidue_zero",
+    "Dubon2026.SourceCurve.separating_coordinate_global_residue_sum_zero",
+    "Dubon2026.SourceCurve.separating_coordinate_index_eq_canonical_complement",
+    "Dubon2026.SourceCurve.separating_coordinate_canonical_degree_eq_genusFF",
+    "Dubon2026.SourceCurve.separatingHurwitzDivisor_apply",
+    "Dubon2026.SourceCurve.separating_coordinate_ord_sub_one_le_D",
+    "Dubon2026.SourceCurve.separatingHurwitzDivisor_nonneg",
+    "Dubon2026.SourceCurve.degree_separatingHurwitzDivisor",
+    "Dubon2026.SourceCurve.separating_hurwitz_differential_bound",
+    "Dubon2026.SourceCurve.separating_hurwitz_ramification_bound",
+    "Dubon2026.SourceCurve.sum_pole_orders_eq_finrank_separating",
+    "Dubon2026.SourceCurve.sum_pole_orders_finset_separating",
+    "Dubon2026.SourceCurve.separating_hurwitz_differential_cusp_bound",
+    "Dubon2026.SourceCurve.separating_hurwitz_ramification_cusp_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_hurwitz_differential_cusp_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_hurwitz_ramification_cusp_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_char_two",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_char_three",
+    "Dubon2026.SourceCurve.sum_fiber_orders_eq_finrank_separating",
+    "Dubon2026.SourceCurve.sum_fiber_orders_finset_separating",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_tame_fiber_bounds",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_five_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_genus_lower_of_three_lt",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_small_signed_index_le_four",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_zero_of_le_three",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_eq_away_level"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceCurve.separatingHurwitzDivisor"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationAudit1.log",
+  "logSha256": "A41F8B66ECF4EBFBC3FBE25EDCC1FAE5399E7488FBE9875FD23A584A26274B32",
+  "auditSha256": "416193F505F72400262108A0433ACBAD3845F4BAA01520EC747189534BD76D01",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationScratchOwnership2027.log",
+  "ownershipSha256": "7020EE674005B50F1FC64D47F18DD0EB3FE11A19E93C358F6EB81444216666EC",
+  "exhaustiveTheorems": 71,
+  "linterScopes": 18,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 49,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationDependencyAudit1.log",
+  "dependencyAuditSha256": "2B04AF11B3B7099EF969985C5EEAD452DF279D7F43AA536E0235F6263CBD8F13",
+  "dependencyAuditSourceSha256": "4A1C17D756B5BB063DDE418002077CF21FF257CF63A5AEDE9F142681F9EFEA6F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_eq_away_level"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation.",
+  "discharged": [
+    "Explicit separation of the original j coordinate discharges local generation, finite differential support, global residue vanishing, canonical duality and degree.",
+    "The original Hurwitz bounds derive coordinate degree and residue cusp count, rather than retaining them as premises.",
+    "The actual wild contributions and tame fiber bounds give reverse genus for every residue prime when N greater than three.",
+    "The small levels one, two and three have arithmetic H1 genus zero by a finite signed-index argument and the native Manin bound.",
+    "Native degree preservation identifies the literal residue image; native specialization upper genus proves exact all-level original genus equality."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The original genus-equality premise is discharged by the endpoint, subject to exhaustive audit and assembled verification. Apply it to the original Hecke-character and arithmetic descent consumers. Parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, all-weight association, automorphy and literal higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-genus-preservation-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "320FC41588560F099645ADFFA63CA0F6F9C40F81BF0DFAED52639FC6E0137E1D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

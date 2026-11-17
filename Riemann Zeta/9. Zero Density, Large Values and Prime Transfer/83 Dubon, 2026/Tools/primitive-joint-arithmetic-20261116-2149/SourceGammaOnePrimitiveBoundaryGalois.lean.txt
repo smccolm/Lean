@@ -1,0 +1,70 @@
+import SourceGammaOnePrimitiveBoundaryQuadratic
+import Dubon2026.SourceAbsoluteCyclotomicLocal
+
+/-! DUB-17/18 -> original all-weight association -> finite joint
+arithmetic realization -> the actual boundary Galois action. Compose the
+proved finite cusp-unit action with the original continuous cyclotomic
+character. Existing valuation-root results give Frobenius and inertia
+on the very same boundary module. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "B" => Module.End (ZMod N) (P M → V)
+local notation "Qbar" => AlgebraicClosure ℚ
+
+/-- The original arithmetic Galois group acts on the actual finite
+primitive-column module through its genuine cyclotomic exponent. -/
+def binaryPrimitiveBoundaryGaloisRep : (Qbar ≃ₐ[ℚ] Qbar) →* B :=
+  (binaryPrimitiveColumnFirst Q N w).comp
+    (sourceAbsoluteCyclotomicCharacter M).toMonoidHom
+
+/-- The explicit finite cyclotomic factorization proves continuity for
+the discrete operator topology required by arithmetic descent. -/
+theorem binaryPrimitiveBoundaryGaloisRep_continuous :
+    @Continuous _ _ _ ⊥ (binaryPrimitiveBoundaryGaloisRep Q N w).toFun := by
+  letI : TopologicalSpace B := ⊥
+  have hc : Continuous (binaryPrimitiveColumnFirst Q N w) := continuous_of_discreteTopology
+  exact hc.comp (sourceAbsoluteCyclotomicCharacter M).continuous
+
+/-- At the original valuation, the boundary representation has the
+exact original Hecke polynomial, retaining its diamond determinant. -/
+theorem binaryPrimitiveBoundaryGaloisRep_frobenius
+    (A : ValuationSubring Qbar) (ell : sourceBinaryHeckePrime (Q * N))
+    [CharP (IsLocalRing.ResidueField A) ell.val]
+    (g : Gamma0 M) (hlabel : (g.val 1 1 : ZMod M) = ell.val)
+    (d : A.decompositionSubgroup ℚ)
+    (hd : ∀ a : IsLocalRing.ResidueField A, d • a = a ^ ell.val) :
+    binaryPrimitiveBoundaryGaloisRep Q N w d.val * binaryPrimitiveColumnHecke Q N w ell =
+      binaryPrimitiveBoundaryGaloisRep Q N w d.val *
+        binaryPrimitiveBoundaryGaloisRep Q N w d.val +
+      (ell.val : ZMod N) ^ (w + 1) • binaryPrimitiveColumnDiamond Q N w g := by
+  have hM : ((M : ℕ) : IsLocalRing.ResidueField A) ≠ 0 := by
+    rw [Ne, CharP.cast_eq_zero_iff _ ell.val]
+    exact ell.property.1.coprime_iff_not_dvd.mp (binaryPrimitiveLevelPrime Q N ell).property.2
+  have hχ : sourceAbsoluteCyclotomicCharacter M d.val =
+      ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2 := by
+    apply Units.ext
+    exact (sourceAbsoluteCyclotomicCharacter_frobenius A M ell.val hM d hd).trans
+      (ZMod.coe_unitOfCoprime _ _).symm
+  change binaryPrimitiveColumnFirst Q N w (sourceAbsoluteCyclotomicCharacter M d.val) * _ =
+    binaryPrimitiveColumnFirst Q N w (sourceAbsoluteCyclotomicCharacter M d.val) *
+      binaryPrimitiveColumnFirst Q N w (sourceAbsoluteCyclotomicCharacter M d.val) + _
+  rw [hχ]
+  exact binaryPrimitiveColumn_hecke_quadratic Q N w ell g hlabel
+
+/-- Original valuation inertia acts trivially on the actual primitive
+boundary whenever the cusp modulus is residue-invertible. -/
+theorem binaryPrimitiveBoundaryGaloisRep_inertia
+    (A : ValuationSubring Qbar) (hM : ((M : ℕ) : IsLocalRing.ResidueField A) ≠ 0)
+    (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (hσ : σ ∈ (A.inertiaSubgroup ℚ).map (A.decompositionSubgroup ℚ).subtype) :
+    binaryPrimitiveBoundaryGaloisRep Q N w σ = 1 := by
+  obtain ⟨d, hd, rfl⟩ := hσ
+  change binaryPrimitiveColumnFirst Q N w (sourceAbsoluteCyclotomicCharacter M d.val) = 1
+  rw [sourceAbsoluteCyclotomicCharacter_inertia A M hM d hd, map_one]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

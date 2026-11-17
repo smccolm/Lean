@@ -1,0 +1,149 @@
+import Dubon2026.SourceMarkedOriginalSeparability
+import Dubon2026.SourceMarkedSeparableChartValues
+import Dubon2026.SourceMarkedSeparableEmbeddingDescent
+import Dubon2026.SourceMarkedRationalPointDescent
+import Dubon2026.SourceMarkedOriginalAlgebraicChart
+import Dubon2026.SourceMarkedFullTorsionPointLift
+import Dubon2026.SourceMarkedChartNormalExhaustion
+import Dubon2026.SourceMarkedOriginalFullTorsionChart
+import Dubon2026.SourceMarkedChartPlaceOrbits
+import Dubon2026.SourceMarkedOriginalOfJChart
+import Dubon2026.SourceMarkedOriginalPlaceChart
+import Dubon2026.SourceMarkedFullTorsionNonempty
+import Dubon2026.SourceMarkedChartFiberSurjection
+import Dubon2026.SourceMarkedOriginalFiberChart
+import Dubon2026.SourceMarkedSignPermutation
+import Dubon2026.SourceMarkedSignFreeOrbits
+import Dubon2026.SourceMarkedSignFiberFactor
+import Dubon2026.SourceMarkedPeriodicFiberBound
+import Dubon2026.SourceMarkedTorsionReductionEquiv
+import Dubon2026.SourceMarkedQuadraticFiberBounds
+import Dubon2026.SourceMarkedReducedFiberChart
+import Dubon2026.SourceMarkedOriginalResidueFiberFive
+import Dubon2026.SourceMarkedOriginalTameFiberBounds
+import Dubon2026.SourceMarkedFullInertiaLifts
+import Dubon2026.SourceMarkedOriginalResidueFiberTwo
+import Dubon2026.SourceMarkedOriginalResidueFiberThree
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_pair
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_square
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_cube
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_square_neg
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_cubic
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_marked_quartic_orbits
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_marked_cubic_orbits
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.exists_signClass_fiber_factor
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.card_le_periodic_orbits_of_surjective
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_reduction_equiv
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_fiber_le_signClasses
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_fiber_le_signClasses
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_reduced_marked_fiber_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_five_le
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.full_inertia_image_signed_point_lifts
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceMarkedOriginalSeparability, `Dubon2026.SourceMarkedSeparableChartValues, `Dubon2026.SourceMarkedSeparableEmbeddingDescent, `Dubon2026.SourceMarkedRationalPointDescent, `Dubon2026.SourceMarkedOriginalAlgebraicChart, `Dubon2026.SourceMarkedFullTorsionPointLift, `Dubon2026.SourceMarkedChartNormalExhaustion, `Dubon2026.SourceMarkedOriginalFullTorsionChart, `Dubon2026.SourceMarkedChartPlaceOrbits, `Dubon2026.SourceMarkedOriginalOfJChart, `Dubon2026.SourceMarkedOriginalPlaceChart, `Dubon2026.SourceMarkedFullTorsionNonempty, `Dubon2026.SourceMarkedChartFiberSurjection, `Dubon2026.SourceMarkedOriginalFiberChart, `Dubon2026.SourceMarkedSignPermutation, `Dubon2026.SourceMarkedSignFreeOrbits, `Dubon2026.SourceMarkedSignFiberFactor, `Dubon2026.SourceMarkedPeriodicFiberBound, `Dubon2026.SourceMarkedTorsionReductionEquiv, `Dubon2026.SourceMarkedQuadraticFiberBounds, `Dubon2026.SourceMarkedReducedFiberChart, `Dubon2026.SourceMarkedOriginalResidueFiberFive, `Dubon2026.SourceMarkedOriginalTameFiberBounds, `Dubon2026.SourceMarkedFullInertiaLifts, `Dubon2026.SourceMarkedOriginalResidueFiberTwo, `Dubon2026.SourceMarkedOriginalResidueFiberThree]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable, `Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding, `Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding, `Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart, `Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_pair, `Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_square, `Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_cube, `Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_square_neg, `Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_cubic, `Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_marked_quartic_orbits, `Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_marked_cubic_orbits, `Dubon2026.SourceFunctionField.MarkedTorsion.exists_signClass_fiber_factor, `Dubon2026.SourceFunctionField.MarkedTorsion.card_le_periodic_orbits_of_surjective, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_reduction_equiv, `Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_fiber_le_signClasses, `Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_fiber_le_signClasses, `Dubon2026.SourceFunctionField.MarkedChart.exists_reduced_marked_fiber_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_five_le, `Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le, `Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le, `Dubon2026.SourceFunctionField.MarkedChart.full_inertia_image_signed_point_lifts, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE MARKED RESIDUE FIBERS AUDIT PASS: {count} theorems including private/generated declarations. Actual original residue charts and tame elliptic fiber bounds proved. Wild census, small levels, reverse genus and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceMarkedOriginalSeparability
+
+#lint in Dubon2026.SourceMarkedSeparableChartValues
+
+#lint in Dubon2026.SourceMarkedSeparableEmbeddingDescent
+
+#lint in Dubon2026.SourceMarkedRationalPointDescent
+
+#lint in Dubon2026.SourceMarkedOriginalAlgebraicChart
+
+#lint in Dubon2026.SourceMarkedFullTorsionPointLift
+
+#lint in Dubon2026.SourceMarkedChartNormalExhaustion
+
+#lint in Dubon2026.SourceMarkedOriginalFullTorsionChart
+
+#lint in Dubon2026.SourceMarkedChartPlaceOrbits
+
+#lint in Dubon2026.SourceMarkedOriginalOfJChart
+
+#lint in Dubon2026.SourceMarkedOriginalPlaceChart
+
+#lint in Dubon2026.SourceMarkedFullTorsionNonempty
+
+#lint in Dubon2026.SourceMarkedChartFiberSurjection
+
+#lint in Dubon2026.SourceMarkedOriginalFiberChart
+
+#lint in Dubon2026.SourceMarkedSignPermutation
+
+#lint in Dubon2026.SourceMarkedSignFreeOrbits
+
+#lint in Dubon2026.SourceMarkedSignFiberFactor
+
+#lint in Dubon2026.SourceMarkedPeriodicFiberBound
+
+#lint in Dubon2026.SourceMarkedTorsionReductionEquiv
+
+#lint in Dubon2026.SourceMarkedQuadraticFiberBounds
+
+#lint in Dubon2026.SourceMarkedReducedFiberChart
+
+#lint in Dubon2026.SourceMarkedOriginalResidueFiberFive
+
+#lint in Dubon2026.SourceMarkedOriginalTameFiberBounds
+
+#lint in Dubon2026.SourceMarkedFullInertiaLifts
+
+#lint in Dubon2026.SourceMarkedOriginalResidueFiberTwo
+
+#lint in Dubon2026.SourceMarkedOriginalResidueFiberThree

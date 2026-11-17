@@ -1,0 +1,43 @@
+{
+  "modules": [
+    "SourceGammaOneBoundaryWordKernel",
+    "SourceGammaOneBoundaryWordCharacter",
+    "SourceGammaOneGeometricBoundaryCharacter"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_boundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_boundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_boundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_word",
+    "Dubon2026.sourceGammaOneHeckeWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeWord_change",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_eq_away_level"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneBoundaryWordKernel": "SourceGammaOneBoundaryWordKernel-2043",
+    "SourceGammaOneBoundaryWordCharacter": "SourceGammaOneBoundaryWordCharacter-2043",
+    "SourceGammaOneGeometricBoundaryCharacter": "SourceGammaOneGeometricBoundaryCharacter-2043"
+  },
+  "separatelyAxiomChecked": []
+}

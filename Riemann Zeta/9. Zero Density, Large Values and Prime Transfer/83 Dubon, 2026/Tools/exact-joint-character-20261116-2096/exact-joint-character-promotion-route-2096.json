@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-11-17T03:07:21.808480+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> arithmetic realization of the exact joint geometric/boundary operator character.",
+  "discharged": "The literal H1/parabolic-H1 quotient and its original Hecke action are constructed using native parabolic stability. Both this boundary quotient and the actual Tate diamond quotient are finite by existing results. A word that kills both actual operator spaces has square zero on the coefficient-reduced original integral H1. At twice the source precision, native congruence integrality and integrality of powers construct the original character at every requested precision. Proved original geometry supplies the actual quotient operators. The resulting character has whole-word pullback equal to the original Fourier-field character, without a supplied parabolic lift, unit boundary separator, exceptional integer or discrete valuation hypothesis. The prime range remains p greater than three.",
+  "remaining": "Arithmetic Galois realization of this exact joint algebra, primes two and three, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. This does not construct a character on the geometric factor alone. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "route": "The expanded pinned public-source review and a renewed native-code search precede this route. Existing full-H1 transfer and finiteness, parabolic stability, Tate diamond-quotient finiteness, original geometric operators, congruence integrality and Mathlib IsIntegral.of_pow are reused directly. Retaining the literal boundary quotient removes the need for a new cusp-function carrier and a simultaneous boundary annihilator with unit character value in this finite descent. The previously prepared 26-module boundary-character promotion is deferred and was never executed. Only the nine modules consumed by the exact joint character are promoted. A duplicate scratch Tate-finiteness proof is preserved but omitted in favor of the existing theorem. All failed variants and diagnostics remain available. The first full audit rejected the explicit ring-instance name under defsWithUnderscore; its name was corrected and all affected canonical compilations and audits were rerun without suppressing the linter or changing a mathematical statement or value. Promotion changes imports only; accepted mathematical statements and proof bodies stay frozen. Paper, root pins, proof limits and owner-only BAT are unchanged.",
+  "receipts": {
+    "source-gammaone-exact-joint-character-2-scratch-receipt.json": "29095882168BBDFAA253131A2F97076AF2182890B670E9FF4AF925C76F3DF89E"
+  },
+  "modules": 9,
+  "queries": 18,
+  "exhaustiveScratchChecks": 84,
+  "proofValueChecks": 27,
+  "scopes": 1,
+  "productionMutation": false
+}

@@ -1,0 +1,80 @@
+import Dubon2026.SourceGammaOnePrimitiveTwoOrbits
+import Dubon2026.SourceGammaOnePrimitiveCuspConjugation
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> actual two-term primitive Hecke trace. Construct the two
+actual cyclic-orbit indices with their exact return times, from the
+proved orbit count and fixed-coset uniqueness. This supplies the finite
+sum indices required by the native cohomology transfer formula. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup MulAction
+open scoped MatrixGroups
+
+/-- The actual chosen integral representative gives exactly the original
+primitive cusp generator. -/
+theorem primitiveCuspTranslation_out (M : ℕ) (q : SL(2, ℤ) ⧸ Gamma1 M) :
+    primitiveCuspTranslation M q.out⁻¹ = primitiveCuspGenerator M q := by
+  apply Subtype.ext
+  change q.out⁻¹ * ModularGroup.T ^
+      primitiveCuspWidth M (((q.out⁻¹)⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) *
+      (q.out⁻¹)⁻¹ = q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out
+  rw [inv_inv, show (q.out : SL(2, ℤ) ⧸ Gamma1 M) = q from Quotient.out_eq' q]
+
+/-- The native cyclic transfer sum has exactly the constructed fixed
+and prime-length orbit indices, with no additional orbit premise. -/
+theorem primitiveCuspHecke_exists_two_orbits (M : ℕ) [NeZero M]
+    (q : SL(2, ℤ) ⧸ Gamma1 M) (ell : sourceBinaryHeckePrime M) :
+    let O := orbitRel.Quotient (Subgroup.zpowers (primitiveCuspGenerator M q))
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M ell.val)
+    ∃ o0 o1 : O, o0 ≠ o1 ∧ (∀ o : O, o = o0 ∨ o = o1) ∧
+      Function.minimalPeriod (primitiveCuspGenerator M q • ·) o0.out = 1 ∧
+      Function.minimalPeriod (primitiveCuspGenerator M q • ·) o1.out = ell.val := by
+  classical
+  letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+  let K := sourceGammaOneHeckeUpper M ell.val
+  let u := primitiveCuspGenerator M q
+  let O := orbitRel.Quotient (Subgroup.zpowers u) (Gamma1 M ⧸ K)
+  letI : K.FiniteIndex := sourceGammaOneHeckeUpper_finiteIndex M ell.val
+  letI : Fintype O := Fintype.ofFinite _
+  obtain ⟨x0, hx0⟩ := primitiveCuspHecke_exists_fixed M q ell
+  let o0 : O := Quotient.mk _ x0
+  have hp0 : Function.minimalPeriod (u • ·) x0 = 1 :=
+    Function.minimalPeriod_eq_one_iff_isFixedPt.mpr hx0
+  have hout : o0.out = x0 := by
+    have hrel : o0.out ∈ orbit (Subgroup.zpowers u) x0 :=
+      orbitRel_apply.mp (Quotient.mk_out _)
+    obtain ⟨z, hz⟩ := mem_orbit_iff.mp hrel
+    rw [← hz]
+    obtain ⟨j, hj⟩ := Subgroup.mem_zpowers_iff.mp z.property
+    change z.val • x0 = x0
+    rw [← hj]
+    apply MulAction.zpow_smul_eq_iff_minimalPeriod_dvd.mpr
+    simpa only [hp0, Nat.cast_one] using (one_dvd j)
+  have hcard : Fintype.card O = 2 := by
+    rw [← Nat.card_eq_fintype_card]
+    exact primitiveCuspHecke_orbit_card_two M q ell
+  have herase : (Finset.univ.erase o0).card = 1 := by
+    rw [Finset.card_erase_of_mem (Finset.mem_univ o0), Finset.card_univ, hcard]
+  obtain ⟨o1, hsingle⟩ := Finset.card_eq_one.mp herase
+  have hmem : o1 ∈ Finset.univ.erase o0 := by rw [hsingle]; exact Finset.mem_singleton_self _
+  have hne : o1 ≠ o0 := (Finset.mem_erase.mp hmem).1
+  have huniv : (Finset.univ : Finset O) = {o0, o1} := by
+    rw [← Finset.insert_erase (Finset.mem_univ o0), hsingle]
+  have hp1 : Function.minimalPeriod (u • ·) o1.out = ell.val := by
+    rcases primitiveCuspHecke_period_one_or_prime M ell.val ell.property.1 q o1.out with h | h
+    · have hx := Function.minimalPeriod_eq_one_iff_isFixedPt.mp h
+      have he := primitiveCuspHecke_fixed_unique M q ell hx hx0
+      apply (hne ?_).elim
+      calc
+        o1 = Quotient.mk _ o1.out := (Quotient.out_eq' o1).symm
+        _ = Quotient.mk _ x0 := congrArg (Quotient.mk _) he
+        _ = o0 := rfl
+    · exact h
+  refine ⟨o0, o1, hne.symm, ?_, hout ▸ hp0, hp1⟩
+  intro o
+  have hm : o ∈ ({o0, o1} : Finset O) := huniv ▸ Finset.mem_univ o
+  simpa only [Finset.mem_insert, Finset.mem_singleton] using hm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

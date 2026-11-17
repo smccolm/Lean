@@ -1,0 +1,78 @@
+import Dubon2026.SourceGammaOnePrimitiveColumnDiamond
+import Dubon2026.SourceDiagonalUnitPair
+
+/-! DUB-17/18 -> original all-weight association -> finite joint
+arithmetic realization -> primitive boundary Galois action. The two
+actual cusp terms extend to representations of the finite residue-unit
+group, using the existing homogeneous representation and diagonal pair.
+They will be composed with the native arithmetic cyclotomic character. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCuspBoundary
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "F" => P M → V
+
+/-- The actual residue-unit reduction from the cusp level to the
+homogeneous coefficient modulus. -/
+def binaryPrimitiveUnitReduction : (ZMod M)ˣ →* (ZMod N)ˣ :=
+  Units.map (ZMod.castHom
+    (dvd_mul_of_dvd_right (dvd_pow_self N (by decide : 2 ≠ 0)) Q) (ZMod N)).toMonoidHom
+
+/-- The genuine homogeneous action of the diagonal residue unit. -/
+def binaryPrimitiveCoefficientUnits : (ZMod M)ˣ →* Module.End (ZMod N) V :=
+  (homogeneousGLRepresentation w).comp
+    (sourceDiagonalUnitPair (binaryPrimitiveUnitReduction Q N) 1)
+
+/-- The multiplicity-one cusp term as a genuine finite-unit representation. -/
+def binaryPrimitiveColumnFirst : (ZMod M)ˣ →* Module.End (ZMod N) F where
+  toFun u := LinearMap.pi fun c => (binaryPrimitiveCoefficientUnits Q N w u) ∘ₗ
+    (LinearMap.proj (scale 1 u c) : F →ₗ[ZMod N] V)
+  map_one' := by
+    apply LinearMap.ext
+    intro f
+    funext c
+    change binaryPrimitiveCoefficientUnits Q N w 1 (f (scale 1 1 c)) = f c
+    rw [map_one, scale_one]
+    rfl
+  map_mul' u v := by
+    apply LinearMap.ext
+    intro f
+    funext c
+    change binaryPrimitiveCoefficientUnits Q N w (u * v) (f (scale 1 (u * v) c)) =
+      binaryPrimitiveCoefficientUnits Q N w u
+        (binaryPrimitiveCoefficientUnits Q N w v (f (scale 1 v (scale 1 u c))))
+    rw [map_mul, scale_scale, one_mul, mul_comm v u]
+    rfl
+
+/-- The prime-multiplicity cusp term, including its cyclotomic scalar,
+as a genuine representation of the same finite residue-unit group. -/
+def binaryPrimitiveColumnSecond : (ZMod M)ˣ →* Module.End (ZMod N) F where
+  toFun u := (binaryPrimitiveUnitReduction Q N u : ZMod N) •
+    (LinearMap.pi fun c => (binaryPrimitiveCoefficientUnits Q N w u) ∘ₗ
+      (LinearMap.proj (scale u⁻¹ 1 c) : F →ₗ[ZMod N] V))
+  map_one' := by
+    apply LinearMap.ext
+    intro f
+    funext c
+    change (binaryPrimitiveUnitReduction Q N 1 : ZMod N) •
+      binaryPrimitiveCoefficientUnits Q N w 1 (f (scale 1⁻¹ 1 c)) = f c
+    rw [map_one, map_one, Units.val_one, inv_one, scale_one, one_smul]
+    rfl
+  map_mul' u v := by
+    apply LinearMap.ext
+    intro f
+    funext c
+    change (binaryPrimitiveUnitReduction Q N (u * v) : ZMod N) •
+      binaryPrimitiveCoefficientUnits Q N w (u * v) (f (scale (u * v)⁻¹ 1 c)) =
+      (binaryPrimitiveUnitReduction Q N u : ZMod N) •
+        binaryPrimitiveCoefficientUnits Q N w u
+          ((binaryPrimitiveUnitReduction Q N v : ZMod N) •
+            binaryPrimitiveCoefficientUnits Q N w v (f (scale v⁻¹ 1 (scale u⁻¹ 1 c))))
+    rw [map_mul, map_mul, Units.val_mul, map_smul, smul_smul,
+      scale_scale, mul_one, mul_inv_rev]
+    rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

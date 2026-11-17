@@ -1,0 +1,61 @@
+import SourceGammaOnePrimitiveHeckeTrace2114d
+import SourceGammaOnePrimitiveColumnBoundary2106a
+import Dubon2026.SourceGammaOneHeckeWords
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> primitive boundary Frobenius. The original homogeneous
+cohomology boundary intertwines the explicit finite unit-coordinate
+operators, retaining both torsion and the full coefficient action. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary groupCohomology
+open scoped MatrixGroups
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+
+/-- A prime away from the original level and modulus is away from the
+actual Gamma1 level used by the homogeneous coefficient comparison. -/
+def binaryPrimitiveLevelPrime (ell : sourceBinaryHeckePrime (Q * N)) :
+    sourceBinaryHeckePrime M :=
+  ⟨ell.val, ell.property.1,
+    (ell.property.2.of_dvd_right (dvd_mul_right Q N)).mul_right
+      (Nat.Coprime.pow_right 2 (ell.property.2.of_dvd_right (dvd_mul_left N Q)))⟩
+
+/-- The explicit two-term action on the full finite primitive-column
+module, with its original homogeneous coefficient endomorphism. -/
+def binaryPrimitiveColumnHecke (ell : sourceBinaryHeckePrime (Q * N)) :
+    Module.End (ZMod N) (P M → V) :=
+  let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+  let b := homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+  LinearMap.pi fun c => b ∘ₗ
+    (ell.val • LinearMap.proj (scale u⁻¹ 1 c) + LinearMap.proj (scale 1 u c))
+
+/-- The original native Gamma1 Hecke action has the proved finite-column
+arithmetic formula, without a boundary-comparison hypothesis. -/
+theorem binaryPrimitiveColumnBoundary_hecke
+    (ell : sourceBinaryHeckePrime (Q * N)) (x : H1 C) :
+    binaryPrimitiveColumnBoundary Q N w (sourceGammaOnePrimeOperators Q N w ell x) =
+      binaryPrimitiveColumnHecke Q N w ell (binaryPrimitiveColumnBoundary Q N w x) := by
+  let ellM := binaryPrimitiveLevelPrime Q N ell
+  let u := ZMod.unitOfCoprime ell.val ellM.property.2
+  have hu : (u : ZMod M) = ell.val := ZMod.coe_unitOfCoprime _ _
+  funext c
+  apply primitiveCuspValue_native_hecke (ZMod N) V M ellM
+    (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]))
+    x (lift c) (lift (scale 1 u c)) (lift (scale u⁻¹ 1 c))
+  · constructor
+    · change (colRed M (lift (scale u⁻¹ 1 c))).1 * ell.val = (colRed M (lift c)).1
+      rw [colRed_lift, colRed_lift, scale_val_fst, ← hu, mul_right_comm,
+        Units.inv_mul, one_mul]
+    · change (colRed M (lift (scale u⁻¹ 1 c))).2 = (colRed M (lift c)).2
+      rw [colRed_lift, colRed_lift, scale_val_snd, Units.val_one, one_mul]
+  · constructor
+    · change (colRed M (lift (scale 1 u c))).1 = (colRed M (lift c)).1
+      rw [colRed_lift, colRed_lift, scale_val_fst, Units.val_one, one_mul]
+    · change (colRed M (lift (scale 1 u c))).2 = ell.val * (colRed M (lift c)).2
+      rw [colRed_lift, colRed_lift, scale_val_snd, hu]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

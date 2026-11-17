@@ -1,0 +1,431 @@
+{
+  "recordedUTC": "2026-11-17T00:55:11.416123+00:00",
+  "files": [
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/audit_gammaone_boundary_word_2043.ps1",
+      "sha256": "25304C061C81D5E4ADFD2EF33FE10CE9A874D88B7D94260E7C2E68407D92CDCD"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/audit_gammaone_parabolic_shapiro_2039.ps1",
+      "sha256": "C3E383EB650C9192078686076463EF3BF82D10D396B30DCCDA038D4D3FB8414B"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/audit_original_level_factor_2045.ps1",
+      "sha256": "D02BC95BF125A39A8A96CA0171200D440626D0073BB9E3EF21C979A96CFE1383"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/build_gammaone_boundary_word_canonical_2043.ps1",
+      "sha256": "5B6F4F419F3AAF933656979415237531A8109FCEDA41A30515C247DB24E3845D"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/build_gammaone_parabolic_shapiro_canonical_2039.ps1",
+      "sha256": "2979273DF01D56E86D51A184DEF412BC2FE602BDD5E45D987EDAE390EC9A4E9D"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/gammaone-boundary-word-route-2040.json",
+      "sha256": "08ABB5D5C98A27E96BD739C79318F9DF1F584802DE7D1CDC14F25BAAA169BD27"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/gammaone-boundary-word-versions-2043.json",
+      "sha256": "6FA8C1285E8047E09D3FAD8BAB108D78532406950CBB58716EC2863FF04A81A4"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/gammaone-parabolic-shapiro-versions-2039.json",
+      "sha256": "600565A0614040738E2D8E740F245F9747B6C553F16AFEA3F6A76EE9FB7B4CBA"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/parabolic-transfer-obstruction-review-2044.json",
+      "sha256": "9B30778461BE8CBBF0CF66138DD579877B589BD30325839A04AFA60B5329786F"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/prepare_gammaone_boundary_word_audit_2043.py",
+      "sha256": "AD2E22CDA9A8A14E8C661C412213D2B7B7BB5DAE57586DE12C535FB130CB6595"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/prepare_gammaone_parabolic_shapiro_audit_2039.py",
+      "sha256": "A912FEFF485D6F49F62BAE9292907F83C38C9546BF2842F37C32D3F561CB41E3"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/record_gammaone_boundary_word_2043.py",
+      "sha256": "43C834DC9DF8E209D31203915FECD6EB61E9873022052C1FA5049033E1E810AB"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/record_gammaone_parabolic_shapiro_2039.py",
+      "sha256": "28A4ECDD001B68176DEBEA8CCD3921D4C8B096649B7CEFBA4696C0CB1D4D2722"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-boundary-word-1-audit-config.json",
+      "sha256": "DBE889C402C75FABDD8D78A329D3C70555C383AC45A0F769EB951937F17088B2"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-boundary-word-1-reuse-review-20261116.json",
+      "sha256": "51BE46C0C5D2109D674C76D963538C3A3778673842BE8314BD7B6B4219D48F77"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-boundary-word-1-scratch-receipt.json",
+      "sha256": "245985B8AA9DE74C5E5D1C714BDFBB6B43B7C73FA21CA18F89E8308034C0CB2A"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-boundary-word-audit-route-2043.json",
+      "sha256": "AAB7E7ED0CB53AC92FA62D35623572F716D7A9081B5B8C9629AE68569CF7F09F"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-parabolic-shapiro-1-audit-config.json",
+      "sha256": "41BEABAA1EE099614C899A5C25F6934614E1650B5D36E368545916C19774890D"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-parabolic-shapiro-1-reuse-review-20261116.json",
+      "sha256": "3425D74A3D6BFF8A824352ACD6778AE53FC36184C82C1559C3775338382FEB51"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-parabolic-shapiro-1-scratch-receipt.json",
+      "sha256": "F94284CAC3CEFC38E2F2C98FF3CAFF73D2DC8EC348B1DAFBA2FABEC3B7325412"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/source-gammaone-parabolic-shapiro-audit-route-2039.json",
+      "sha256": "B68E3989126DBE86EBE8F3AE790FA55E90CEE134B45466458A833BA97D218428"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordAudit1.lean.txt",
+      "sha256": "BFE90ACCD7E3F42CEE41ED7626685CDA02612B432AC056869A1E6297C6A1BBAC"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordAudit1.log",
+      "sha256": "21DB34469CCA6A2092AD2323E2BE5F68E9DFC5816732B22D70EB9AF5690BF3F8"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter-2043.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter-2043.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter.lean.txt",
+      "sha256": "0B37C7D36CCD552712F43E5CC43D8F251EE4518AD091FEA6007859536C48A011"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter2041a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter2041a.lean.txt",
+      "sha256": "DB1B8564E623FEE3678B181178874BBC7FB5A1C20A3296A920D6B3E9BE43FD2C"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter2041a.log",
+      "sha256": "DC20D469F9F6BA30C5512DBC7F43A6E9F85E3A25BA985A4EBD619EC07663DD4A"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter2041b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter2041b.lean.txt",
+      "sha256": "E42B5E723D9C5D24BF967E09ABA03FC0FC0405C763BC5D99B3CCB07E62BB8AF9"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordCharacter2041b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordDependencyAudit1.lean.txt",
+      "sha256": "BB5639B5C006F7BBFD7423B898325C2EDCEE149F6B494DFB0D59109AF2AA59A3"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordDependencyAudit1.log",
+      "sha256": "479332F9B62E7B1E6AB7D2AF5157AA09305FCAB79E0BCF4F833557492D00C531"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel-2043.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel-2043.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel.lean.txt",
+      "sha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040a.lean.txt",
+      "sha256": "F3BE24D84B54BCE2ADF0A93D4BCC0379B7F9BE46D400BDDE430B6BBE926CC6C7"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040a.log",
+      "sha256": "4359F2AF2CA539767C67757F05955FC1F96BB288E78AB24CF0690C18320650B1"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040b.lean.txt",
+      "sha256": "E0B11549A24E410B8207BC7987E153754670545F80478DD342E62B4DBB726D30"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040b.log",
+      "sha256": "14868A95FF6610DF05350EB1CE22483D3CF0E1FCB73A939121DA569FA0B89668"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040c.lean.txt",
+      "sha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordKernel2040c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordScratchOwnership2043.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordScratchOwnership2043.lean.txt",
+      "sha256": "90381E74A7705CDE3065F782BF826DBDCA58F6D1EE73039E14AFAF05F99CD3AC"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneBoundaryWordScratchOwnership2043.log",
+      "sha256": "2F86407EE2092AB7B50C6282E9290292A219BD69A718E35587B9BCE0EDBFB856"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneGeometricBoundaryCharacter-2043.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneGeometricBoundaryCharacter-2043.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneGeometricBoundaryCharacter.lean.txt",
+      "sha256": "34D01328FF3296B6ADCF56837170F4F4A0C413CC26EF15317E5545AC87F11C18"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneGeometricBoundaryCharacter2042a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneGeometricBoundaryCharacter2042a.lean.txt",
+      "sha256": "21D37A2640809CAAA602FB32CAC2E80F6B2D327B65D835E7BA5D46B1A379799E"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneGeometricBoundaryCharacter2042a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactor2044a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactor2044a.lean.txt",
+      "sha256": "74E5DF1B19EB8AA5F5BDD98E1382BD30C84AF90329AD6EC21378E44C9DB31D8A"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactor2044a.log",
+      "sha256": "094BBC1966BCE91DE381F8562B3BC9D71229472CF72DE95765022435A85CE15F"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactor2044b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactor2044b.lean.txt",
+      "sha256": "EE1FB17219F494B4DEB114A3D008306E6EDAB81BB7C40CFFB75BDB25CD6A193C"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactor2044b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactorAudit2045.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactorAudit2045.lean.txt",
+      "sha256": "407038BDD78A14E4B7441D01AA553A9476B53291790B8C0B91148F911BC96A80"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneOriginalLevelFactorAudit2045.log",
+      "sha256": "98C0E31D59FC6FD6E18D976FC254141D4F46FB3FF491EC8A0B9C416AA8BE9896"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiro-2039.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiro-2039.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiro.lean.txt",
+      "sha256": "F0AA90EEE63F25110E11CA569D1DBB78BF662C4E34DD9A38CD0FE52FC23A6D6D"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiro2036b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiro2036b.lean.txt",
+      "sha256": "FC5C20F86AD4ED6C3AE183FAAD098BF0FD1603F90032901A1FC9CFACD36A72FA"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiro2036b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroAudit1.lean.txt",
+      "sha256": "AA2D0316803E7B9133772DCE85DB7FA6E8ED63DF95AA0E667E3564B4855BB8C1"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroAudit1.log",
+      "sha256": "490B7E0FDD45593516AF170C6C1F1934E0B41C4D0097F1E666F0D5A19134DD56"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroComparison-2039.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroComparison-2039.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroComparison.lean.txt",
+      "sha256": "C5515D7668AFA68BC2A303B18C486EAA907AC4EACD53AB15FDB1A560997DF8AD"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroComparison2038d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroComparison2038d.lean.txt",
+      "sha256": "263CFE6F6745BB9DD619A1A3F5989515F8BC0472FA8EE4D898950E51BFFC7716"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroComparison2038d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroDependencyAudit1.lean.txt",
+      "sha256": "599FA1DCCE2FEA4F8D68196D6769FF4021492E12226CC7EDF041C3AB2A8A973A"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroDependencyAudit1.log",
+      "sha256": "21ED183A4F4D9B9E4C5E5FAB95D337EA9F6C2E91920CCCC7E55A161E6C8AC4A1"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroScratchOwnership2039.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroScratchOwnership2039.lean.txt",
+      "sha256": "40E194942AE85F9F5931B2D148666E0FCBF0618D4903897CC55752A0585608E3"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceGammaOneParabolicShapiroScratchOwnership2039.log",
+      "sha256": "47FDB4FA9A659E1C83F9E10C9F8FB22EF82E358BA56FDF35ACB3A78466CF5440"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceOriginalCoinducedLocalCoboundary-2039.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceOriginalCoinducedLocalCoboundary-2039.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceOriginalCoinducedLocalCoboundary.lean.txt",
+      "sha256": "9753E5C09686100F67D1161768D47869A5D920F431D92179FB8AA7D91C3CFB8B"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceOriginalCoinducedLocalCoboundary2034b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceOriginalCoinducedLocalCoboundary2034b.lean.txt",
+      "sha256": "F8E64BFC82731EAB0D39B3F0E8B6077A9C381294C4A828CEB1E505F5C1783BEB"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceOriginalCoinducedLocalCoboundary2034b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicShapiroPotentials-2039.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicShapiroPotentials-2039.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicShapiroPotentials.lean.txt",
+      "sha256": "18019B3FC3B803A3D31C3A75AA414755D0353C62459F00A5A94642BB11B8AAAF"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicShapiroPotentials2033c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicShapiroPotentials2033c.lean.txt",
+      "sha256": "18019B3FC3B803A3D31C3A75AA414755D0353C62459F00A5A94642BB11B8AAAF"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicShapiroPotentials2033c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicTracePowers-2039.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicTracePowers-2039.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicTracePowers.lean.txt",
+      "sha256": "A4ACBE1A325361DC3A13D8EF071219572A4A64DAACAC60120E43B3C3334403DD"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicTracePowers2035a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicTracePowers2035a.lean.txt",
+      "sha256": "A4ACBE1A325361DC3A13D8EF071219572A4A64DAACAC60120E43B3C3334403DD"
+    },
+    {
+      "path": "Tools/parabolic-route-review-20261116-2046/SourceParabolicTracePowers2035a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "report": {
+    "path": "Dubon Parabolic Transfer Route Assessment 2026-11-16.md",
+    "sha256": "AE64DBC826302046694F70F217384ECDE2E0083A53E960E65D06DA8229AF80A4"
+  },
+  "status": "Scratch proof and route-review evidence only; production promotion pending. The source-backed cohomological obstruction is a mathematical inference, not a Lean counterexample. No accepted theorem or source criterion is weakened.",
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

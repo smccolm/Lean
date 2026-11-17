@@ -1,0 +1,167 @@
+{
+  "files": [
+    {
+      "version": "SourceGammaOnePrimitiveBoundaryWords2124a",
+      "module": "SourceGammaOnePrimitiveHeckeDiamondWords",
+      "sourceSha256": "DD3C295ED100E2A6026D12851584077FDA57D5681927F204145F3AE6E48A3C40",
+      "canonicalSha256": "7E4B3AFA8CF179B82DB9443F71BF7DFB07F2884BB4FB4169EAE3996B908E5DDD",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointSquare2125b",
+      "module": "SourceGammaOnePrimitiveJointSquare",
+      "sourceSha256": "380182EAB2193950EB019A5E92708346039999EDC169F54605CF79AA30AEC327",
+      "canonicalSha256": "B135CFE7F4A0CF8E4241C1A178F1785697EDFA34E28CFB2ED9B3811887A39C0A",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveUnitActions2119b",
+      "module": "SourceGammaOnePrimitiveUnitActions",
+      "sourceSha256": "324C4D9FA17CFE17535AE547D2E0CF08CE42BCFFC3F07B932CF17965201166E3",
+      "canonicalSha256": "ECE3BE7DF3AB497B388CB9EBD56A0E5A5F6CF3197B6CD02F8D0AA0B9EBDEA4F4",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveUnitHecke2120b",
+      "module": "SourceGammaOnePrimitiveUnitHecke",
+      "sourceSha256": "EB5FE05ECD31040917F6209957FD7F90915B1B5C36112DBF0FDA27A206CC0E30",
+      "canonicalSha256": "49BDE32D62F5AF6FE1952B0F4D71D11A5DB0D0F41F12CD9450E3DF8CEAA2221E",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveBoundaryQuadratic2121a",
+      "module": "SourceGammaOnePrimitiveBoundaryQuadratic",
+      "sourceSha256": "9DDF7544B701B13D52231503ED8CBB6DF789E7870E331F38593A9A094CF94116",
+      "canonicalSha256": "3F690B3E95F1210028422EAEC16301036763355F48DBBADDA8A6D5D2501EE6C4",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveBoundaryGalois2122b",
+      "module": "SourceGammaOnePrimitiveBoundaryGalois",
+      "sourceSha256": "EF967517F391DDD4479643F433DF6C44324FFFA86FE66F310E3EB4D653F4FE06",
+      "canonicalSha256": "32ACB41BA35D21A0D031149CC601DF9F1B1F73F2B443EE793BCF394FCD455811",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveBoundaryDescent2123a",
+      "module": "SourceGammaOnePrimitiveBoundaryDescent",
+      "sourceSha256": "0FF7C1CFF5BF66A7EE65F11D06E74A0E28A466FD7E8E856C900E5529DF913CB8",
+      "canonicalSha256": "F819197B1B53A0C63008613ABE7A52258DE544ECEE26FF7490217FDBC1A3B776",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointRing2126b",
+      "module": "SourceGammaOnePrimitiveJointRing",
+      "sourceSha256": "E0DB8EAE823A4B6FB62FC19D0ACBEFC23BE9751573692DEE1165EE04D64D415C",
+      "canonicalSha256": "4B127292CB630C3B600CD906862D728E99F651D10170B80771DE5E9CDB8E0D85",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointCharacter2127b",
+      "module": "SourceGammaOnePrimitiveJointCharacter",
+      "sourceSha256": "333D320E0DC241496F8C30AF34894170A1293DEF9902212BD0A69285EC3F10B7",
+      "canonicalSha256": "BC092986B79C045B580B7D7C05EBDE5EB2E828AC0891E29DCD0FF45D360FC505",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointCharacterValues2134c",
+      "module": "SourceGammaOnePrimitiveJointCharacterValues",
+      "sourceSha256": "C57418B1C7BCC6DA3D8AA7B28A5E34F7561EC4CF18F00C253377581FC82D5DDE",
+      "canonicalSha256": "A314FBA3820B6C3F2FB64CE923FD664499702CE019D7285E9520EDE880F50E01",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveBoundaryGaloisWords2130a",
+      "module": "SourceGammaOnePrimitiveBoundaryGaloisWords",
+      "sourceSha256": "4429D472553782476C3BEFBFEF70A434E6C34695655858FF1597D2FC19C8AA47",
+      "canonicalSha256": "99E49BB3ADBEB542D5DB592ACCFC08541C442C021EE4F52AF3E5E039628C2133",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointGalois2131c",
+      "module": "SourceGammaOnePrimitiveJointGalois",
+      "sourceSha256": "D81597E54FB4526ADBB5E3D424FDB2E708E306A2E39DF64AD442F176127C3FA2",
+      "canonicalSha256": "C22D8915FED56F8195B11F96356FFC7AB1551BD0DE3EAA9FDDAF0DB16CDBA1DA",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointDescent2133c",
+      "module": "SourceGammaOnePrimitiveJointDescent",
+      "sourceSha256": "2ED7D3A4D7A380DFCC0911CA1519DFEAB1F973D2C6175FDFA4F2B50E540331D6",
+      "canonicalSha256": "CEFFCF25DC6C307DBA52EA2C2AA1C2E45BCBBAF6D81F16DF5BC30A4DBDA522C8",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneGeometricPrimitiveJointCharacter2129a",
+      "module": "SourceGammaOneGeometricPrimitiveJointCharacter",
+      "sourceSha256": "B6B8752534C18F26C917A462AD40D849451D6472FD20BA92881AEF7AAA0D6615",
+      "canonicalSha256": "10A0A6B70AAAA2E3B0246773810129665331D840CA82B5C6499C226E21C9B5AC",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveJointFrobenius2132i",
+      "module": "SourceGammaOnePrimitiveJointFrobenius",
+      "sourceSha256": "A7C473B31D7603B460D5558FE6AF1160D24464EB1A499B72F881C65FD3E00B72",
+      "canonicalSha256": "407D7EC9ED63F8D816FFF757CCE617612B05F6B72C66C0E015DC28183199EA04",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOnePrimitiveBoundaryOperatorCommute2136a",
+      "module": "SourceGammaOnePrimitiveBoundaryOperatorCommute",
+      "sourceSha256": "2FE109F1548038540FE28A5F624F3AB55345859E9730D61BAE1B5D62147C51B5",
+      "canonicalSha256": "56BCC8CD19E7DDF4F157261880C6E75BE3F5F875A4EA4C7A9549F058A3E0DDAC",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceUnitQuadraticCommutation2138b",
+      "module": "SourceUnitQuadraticCommutation",
+      "sourceSha256": "D9AE4DF8025FEF3F1F0AAA18855E8DDAD038B1FBCE42635DD0EEE78D828ECD43",
+      "canonicalSha256": "2E685815BC2211B28F751DA1B5AC5D4684A43E578B575A8FE0606C9422720840",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "modules": [
+    "SourceGammaOnePrimitiveHeckeDiamondWords",
+    "SourceGammaOnePrimitiveJointSquare",
+    "SourceGammaOnePrimitiveUnitActions",
+    "SourceGammaOnePrimitiveUnitHecke",
+    "SourceGammaOnePrimitiveBoundaryQuadratic",
+    "SourceGammaOnePrimitiveBoundaryGalois",
+    "SourceGammaOnePrimitiveBoundaryDescent",
+    "SourceGammaOnePrimitiveJointRing",
+    "SourceGammaOnePrimitiveJointCharacter",
+    "SourceGammaOnePrimitiveJointCharacterValues",
+    "SourceGammaOnePrimitiveBoundaryGaloisWords",
+    "SourceGammaOnePrimitiveJointGalois",
+    "SourceGammaOnePrimitiveJointDescent",
+    "SourceGammaOneGeometricPrimitiveJointCharacter",
+    "SourceGammaOnePrimitiveJointFrobenius",
+    "SourceGammaOnePrimitiveBoundaryOperatorCommute",
+    "SourceUnitQuadraticCommutation"
+  ],
+  "importsFromAcceptedPrimitiveColumnScope": {
+    "SourceGammaOnePrimitiveCuspBoundary": "SourceGammaOnePrimitiveCuspBoundary",
+    "SourceGammaOnePrimitiveWidth2097b": "SourceGammaOnePrimitiveWidth",
+    "SourceGammaOnePrimitiveWidthColumns2104c": "SourceGammaOnePrimitiveWidthColumns",
+    "SourceGammaOnePrimitiveCuspValues2105b": "SourceGammaOnePrimitiveCuspValues",
+    "SourceGammaOnePrimitiveCuspConjugation2107a": "SourceGammaOnePrimitiveCuspConjugation",
+    "SourceGammaOnePrimitiveDiamond2116b": "SourceGammaOnePrimitiveDiamond",
+    "SourceGammaOnePrimitiveUpperColumns2112a": "SourceGammaOnePrimitiveUpperColumns",
+    "SourceGammaOnePrimitiveFixedCosets2101a": "SourceGammaOnePrimitiveFixedCosets",
+    "SourceGammaOnePrimitiveFixedOrbit2102b": "SourceGammaOnePrimitiveFixedOrbit",
+    "SourceGammaOnePrimitivePrimeOrbits2098c": "SourceGammaOnePrimitivePrimeOrbits",
+    "SourceGammaOnePrimeHeckeCardinality2099b": "SourceGammaOnePrimeHeckeCardinality",
+    "SourceGammaOnePrimitiveTwoOrbits2103b": "SourceGammaOnePrimitiveTwoOrbits",
+    "SourceGammaOnePrimitiveOrbitRepresentatives2111b": "SourceGammaOnePrimitiveOrbitRepresentatives",
+    "SourceGammaOnePrimitiveDividedTerm2108b": "SourceGammaOnePrimitiveDividedTerm",
+    "SourceGammaOnePrimitiveMultipliedTerm2110a": "SourceGammaOnePrimitiveMultipliedTerm",
+    "SourceGammaOnePrimitiveTermColumns2113b": "SourceGammaOnePrimitiveTermColumns",
+    "SourceGammaOneFiniteBinaryBoundary": "SourceGammaOneFiniteBinaryBoundary",
+    "SourceGammaOnePrimitiveBoundaryOrbit": "SourceGammaOnePrimitiveBoundaryOrbit",
+    "SourceGammaOnePrimitiveHeckeTrace2114d": "SourceGammaOnePrimitiveHeckeTrace",
+    "SourceGammaOnePrimitiveColumnBoundary2106a": "SourceGammaOnePrimitiveColumnBoundary",
+    "SourceGammaOnePrimitiveColumnHecke2115c": "SourceGammaOnePrimitiveColumnHecke",
+    "SourceGammaOnePrimitiveColumnDiamond2117b": "SourceGammaOnePrimitiveColumnDiamond"
+  },
+  "canonicalNameDisambiguation": "SourceGammaOnePrimitiveHeckeDiamondWords retains the new prime/diamond word scope. The earlier deferred SourceGammaOnePrimitiveBoundaryWords and its evidence remain unchanged."
+}

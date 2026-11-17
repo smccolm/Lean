@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-16 America/Whitehorse",
+  "sourceDependency": "DUB-17 source Theorem 2.6 / DUB-18 source Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> original finite arithmetic systems and compatible character specialization",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-joint-arithmetic-route-2141.json",
+    "sha256": "D2E45C303696E3DB844888C6A29A250F65BFF1CAEFE8CB64349E10CBDC17B28B",
+    "review": {
+      "recordedUTC": "2026-11-17T04:46:10.014968+00:00",
+      "date": "2026-11-16 America/Whitehorse",
+      "chain": "DUB-17 source Theorem 2.6 / DUB-18 source Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> original finite arithmetic systems and compatible character specialization",
+      "reuseChecked": [
+        {
+          "module": "SourceGammaOneGeometricHeckeFamily",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGeometricHeckeFamily.lean",
+          "sha256": "2B3EA68A791A1DE5E75D4CF090C2EAC66B4D80991A15ECEFBA43254B4377ED25"
+        },
+        {
+          "module": "SourceGammaOneGeometricArithmeticDescent",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGeometricArithmeticDescent.lean",
+          "sha256": "D10322858F6389A8BE16D5A3B7188CDE9077D3423458DB2BDA1094CFD6F9D323"
+        },
+        {
+          "module": "SourceGammaOneDiamondQuotientChosenFrobenius",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondQuotientChosenFrobenius.lean",
+          "sha256": "45D94399F017A98B8AD0E7FE6BAA126D9D4F749DA662B7273DE2631CFDD43134"
+        },
+        {
+          "module": "SourceGammaOneDiamondQuotientGaloisHecke",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondQuotientGaloisHecke.lean",
+          "sha256": "47BDAD7B29819DEA65E61D11B8B9A10EBBB14E43B55569BF41EC37753ACB7516"
+        },
+        {
+          "module": "SourceAbsoluteArithmeticDescent",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+          "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+        },
+        {
+          "module": "SourceAbsoluteCyclotomicLocal",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicLocal.lean",
+          "sha256": "C50D072FDAD31B04D91D6A43B2CDBBEEFF06CB79E9FC87EBFFFB0184D164306D"
+        },
+        {
+          "module": "SourceGammaOneHeckeDiamondCoefficient",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeDiamondCoefficient.lean",
+          "sha256": "0C58D6D166A713C64F4D3ED8E0397AF80A5A5B98E443F06E4AA0FCFA303E4DA6"
+        },
+        {
+          "module": "SourcePrimitiveH1SquareCongruence",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveH1SquareCongruence.lean",
+          "sha256": "A2F05A623196AFBE03294F9C9EF24CA2A9BEE380E6677EA92B531BAC0AE11B4E"
+        },
+        {
+          "module": "SourceOperatorRangeCharacter",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOperatorRangeCharacter.lean",
+          "sha256": "8C931C644646EDFC78750608E12AF63022096EB1A5A4B92A9B2BB4FE2A457B22"
+        },
+        {
+          "module": "SourceRationalLocalFrobenius",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalFrobenius.lean",
+          "sha256": "36DD523C5BBB1FDFF4E6A244FA4ACBE821B1846DE87144A8B3A72AC9A5FC8F0A"
+        },
+        {
+          "module": "SourceGammaOneDiamondLabels",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondLabels.lean",
+          "sha256": "00942ACD69317C0C7D4655948D5FB0D0D88CE3D4CE61854FE1110046FAE2BDAC"
+        },
+        {
+          "module": "SourceFaithfulCharacterFiber",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFaithfulCharacterFiber.lean",
+          "sha256": "2DBDF93A1A8781C046AE8805CB6ED77C07D8C9EF358F4D0BC1EB55AA72E37B70"
+        },
+        {
+          "module": "SourceOperatorCharacterTensorEigenvector",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOperatorCharacterTensorEigenvector.lean",
+          "sha256": "BB00269F8F06F01D361F39DEE5267C213B795F70F634E58A2EE9FB216A1A5AB7"
+        },
+        {
+          "module": "SourceBinaryH1HeckeCommute",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1HeckeCommute.lean",
+          "sha256": "B9F4619802B9E9EB92C4A1753F675CF4BA96DF44B095BF53045262AFCDF6CC64"
+        },
+        {
+          "module": "SourceRankTwoQuadraticTrace",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRankTwoQuadraticTrace.lean",
+          "sha256": "1A2B8FF1B740B3ADAB3FE0BCFC631DE3A21A41338227DDBE7CB05B4E706CC8AE"
+        },
+        {
+          "module": "SourceOriginalPrimitiveFrobeniusQuadraticRealization",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+          "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+        },
+        {
+          "module": "ChebotarevFiniteFactorPrime",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ChebotarevFiniteFactorPrime.lean",
+          "sha256": "24B12A11C1569965A03455591CB6BD35DB9A2524DE14ADA91867C0BF9AED6EB3"
+        },
+        {
+          "module": "ChebotarevRationalPrime",
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ChebotarevRationalPrime.lean",
+          "sha256": "F2B632D9E224385F9B1BCC994CD5145AE05AEBC21C77322D7A03ED9DE9DF3C2E"
+        }
+      ],
+      "mathematicalObligations": [
+        "Actual primitive-column Hecke and diamond intertwining, including torsion, identifies the faithful boundary kernel with native parabolic H1.",
+        "The original joint square-kernel character construction applies to the explicit arithmetic boundary at twice the source precision; its entire word pullback preserves original Fourier and diamond values.",
+        "Native cyclotomic actions supply boundary Frobenius and inertia; original geometry supplies the geometric quotient operators, Frobenius and inertia.",
+        "The same finite joint action descends to the prescribed arithmetic group and commutes with the whole original word image.",
+        "Actual local Frobenius and original Gamma0 diamond lifts discharge witness existence.",
+        "The unit Frobenius quadratic and existing Galois/word commutation prove joint generator commutativity; integral word induction gives the exact range commutativity."
+      ],
+      "routeChoices": [
+        "Reuse the exact existing homogeneous Hecke/diamond coefficient-square theorem instead of extending a generic scalar-matrix theory.",
+        "Use the actual finite-unit column actions and the original cyclotomic character; no new arithmetic model is introduced.",
+        "Retain the original diamond term until character evaluation proves its value is one.",
+        "Use the Frobenius quadratic to prove Hecke commutativity; no new Gamma1 double-coset composition development is needed.",
+        "The existing faithful character-fiber theorem is for field-valued specialization and does not establish compatible realizations at every adic precision. Before expanding that route, assess direct specialization of central trace identities using native Chebotarev finite-factor results. No trace realization or compatibility is yet claimed."
+      ],
+      "remaining": "Original compatible character/trace specialization, rank-two characteristic-zero realization, primes two and three, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "verification": "Primitive-column scope has its separate exhaustive scratch receipt. Arithmetic scope has focused compiled components; final consumer, exhaustive audit, production promotion and assembled verification are pending. Frozen mathematical statements and proof bodies are normalized only in import paths.",
+      "externalFollowup": {
+        "queries": [
+          "Lean 4 pseudocharacter dimension two Galois representation github",
+          "site:github.com lean pseudorepresentation Cayley Hamilton trace representation",
+          "site:github.com \"lean\" \"pseudocharacter\""
+        ],
+        "results": [
+          {
+            "url": "https://github.com/SuvirRathore/lambda_adic_slice/blob/main/README.md",
+            "read": "Primary README explicitly says companion existence is admitted and the scope is function fields over finite fields. Not a proved number-field all-weight association or reusable endpoint. Moving branch; no code imported or dependency audit claimed."
+          },
+          {
+            "url": "https://github.com/leanprover-community/mathlib4/blob/master/Mathlib/RepresentationTheory/Character.lean",
+            "read": "Primary file defines traces of already supplied representations and ordinary character operations. This inspected file is not a construction of representations from pseudocharacters. Moving branch; no version upgrade or imported code."
+          },
+          {
+            "url": "https://gaetan.chenevier.perso.math.cnrs.fr/coursIHP/chenevier_lecture3.pdf",
+            "read": "Search result suggests relevant pseudocharacter converse theorems; direct fetch timed out. Contents and applicability not verified; no proof claim or import."
+          }
+        ],
+        "coverage": "Targeted public web search only, not exhaustive absence of pseudocharacter formalizations. The previous five-repository pinned review remains the broader reuse record."
+      },
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "productionMutation": false
+    }
+  },
+  "discharged": [
+    "Actual primitive-column Hecke and diamond intertwining, including torsion, identifies the faithful boundary kernel with native parabolic H1.",
+    "The original joint square-kernel character construction applies to the explicit arithmetic boundary at twice the source precision; its entire word pullback preserves original Fourier and diamond values.",
+    "Native cyclotomic actions supply boundary Frobenius and inertia; original geometry supplies the geometric quotient operators, Frobenius and inertia.",
+    "The same finite joint action descends to the prescribed arithmetic group and commutes with the whole original word image.",
+    "Actual local Frobenius and original Gamma0 diamond lifts discharge witness existence.",
+    "The unit Frobenius quadratic and existing Galois/word commutation prove joint generator commutativity; integral word induction gives the exact range commutativity."
+  ],
+  "remaining": "Original compatible character/trace specialization, rank-two characteristic-zero realization, primes two and three, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Original compatible character/trace specialization, rank-two characteristic-zero realization, primes two and three, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

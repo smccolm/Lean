@@ -1,0 +1,53 @@
+import SourceGammaOneJointHeckeWord2082d
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+joint operator character. A type synonym fixes the ring instance of the
+literal product of the actual Tate-quotient and primitive-boundary
+endomorphisms. It changes neither space nor operator; the zero criterion
+is the exact conjunction of the two original operator identities. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "B" => (Matrix.SpecialLinearGroup (Fin 2) ℤ ⧸ Gamma1 M) → V
+
+/-- The literal product of the two actual endomorphism rings. -/
+def binaryJointOperatorRing : Type :=
+  Module.End (ZMod N) J × Module.End (ZMod N) B
+
+/-- The ordinary product ring on the actual joint operators. -/
+instance binaryJointOperatorRing_ring : Ring (binaryJointOperatorRing Q p n w) :=
+  inferInstanceAs (Ring (Module.End (ZMod N) J × Module.End (ZMod N) B))
+
+/-- The original pair of Hecke-word actions in its fixed product ring. -/
+def binaryJointHeckeWord
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J) :
+    FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)) →+* binaryJointOperatorRing Q p n w :=
+  binaryTateBoundaryHeckeWord Q p n w Hq
+
+/-- Zero in the joint image is exactly zero in both actual operator spaces. -/
+theorem binaryJointHeckeWord_eq_zero_iff
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N))) :
+    binaryJointHeckeWord Q p n w Hq a = 0 ↔
+      FreeAlgebra.lift ℤ Hq a = 0 ∧
+        FreeAlgebra.lift ℤ (binaryPrimitiveBoundaryPrimeOperators Q N w) a = 0 := by
+  change (_, _) = (0, 0) ↔ _
+  exact Prod.mk.inj_iff
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

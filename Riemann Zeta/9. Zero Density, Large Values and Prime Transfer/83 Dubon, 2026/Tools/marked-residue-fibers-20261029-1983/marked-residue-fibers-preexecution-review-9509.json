@@ -1,0 +1,19 @@
+{
+  "status": "Prepared only; predecessor9483 canonical PASS and archive are mandatory preflight inputs.",
+  "modules": 26,
+  "queries": 34,
+  "theorems": 33,
+  "constructions": 1,
+  "exhaustiveScratchChecks": 63,
+  "proofValueChecks": 65,
+  "scopes": 3,
+  "receipts": {
+    "source-marked-algebraic-chart-1-scratch-receipt.json": "A753AA9704401026CA18678FEFA515AB88CA987F1596E5BB17F80751381E0700",
+    "source-marked-fiber-chart-2-scratch-receipt.json": "EBB74AF21B0CFD61E848B5142F169776DB19A06AD7A536DB7059E2F00B8E4A98",
+    "source-marked-exceptional-fibers-1-scratch-receipt.json": "5F5C09B89D4B3B6D544B8488F13136F8A1583BB3AE5B4463DAFDC127959D19A7"
+  },
+  "expectedConsumers": 27642,
+  "expectedConstructions": 3051,
+  "fullGoal": "Wild characteristic-two and characteristic-three numerical fiber/different census, the remaining small levels and reverse genus remain open in production. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "productionMutation": false
+}

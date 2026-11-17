@@ -1,0 +1,2224 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Primitive Joint Arithmetic Assessment 2026-11-16.md",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/Dubon Primitive Joint Arithmetic Assessment 2026-11-16.md.txt",
+      "sha256": "0D813586A3D85E016E19BE38CF9F765C11B33C5494010CA35670109A001D8D02"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2050-retained.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2050-retained.lean.txt",
+      "sha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2050.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2050.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2050.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2050.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2055.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2055.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary.lean.txt",
+      "sha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048a.lean.txt",
+      "sha256": "C1CB8211650E452A049F3E8C95C19A00FAF9E64355723FF93AA4779F0B4C5763"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048a.log",
+      "sha256": "6CB4ED4A2E2FD0D2E5697BBA8B9852DFC96B8F76A474BD9D9E062C786A04CA58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048b.lean.txt",
+      "sha256": "2330ED8A40C57A9D6CC1F3C1154528FA92A4ADFB9FDC17F41900E20A262B4E5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048b.log",
+      "sha256": "190E6D92175357EB9CEB049300ABDD50C79F6AA60878234AEA76EF1A485BD735"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048c.lean.txt",
+      "sha256": "4B3E61C4DDAE758AA9C2E52C0731E57E59BEAD398852343F8C7AD920936F1F00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteBinaryBoundary2048c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneFiniteBinaryBoundary2048c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricPrimitiveJointCharacter-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneGeometricPrimitiveJointCharacter-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricPrimitiveJointCharacter-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneGeometricPrimitiveJointCharacter-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricPrimitiveJointCharacter.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneGeometricPrimitiveJointCharacter.lean.txt",
+      "sha256": "30CF6CAEA99BDD13DB68F86F27ED4F309E18E8449FD5C64ACC9138FD7002D775"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricPrimitiveJointCharacter2129a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneGeometricPrimitiveJointCharacter2129a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricPrimitiveJointCharacter2129a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneGeometricPrimitiveJointCharacter2129a.lean.txt",
+      "sha256": "B6B8752534C18F26C917A462AD40D849451D6472FD20BA92881AEF7AAA0D6615"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricPrimitiveJointCharacter2129a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOneGeometricPrimitiveJointCharacter2129a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality.lean.txt",
+      "sha256": "545B7266F555B0145EA0EE9104DC0DDFA70E397C6475510648E9346D3EB7532C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality2099a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality2099a.lean.txt",
+      "sha256": "9CC023BD926D24D28A18A7503F9FA576A540AD149261EB29709F136AFDA45670"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality2099a.log",
+      "sha256": "47C01656EFACB1A935D73FCD08775C5CCEFDFE645A2169247027B9E91E035BA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality2099b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality2099b.lean.txt",
+      "sha256": "545B7266F555B0145EA0EE9104DC0DDFA70E397C6475510648E9346D3EB7532C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeCardinality2099b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimeHeckeCardinality2099b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticAudit1.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticAudit1.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticAudit1.lean.txt",
+      "sha256": "F18099DEEE01924C318DB040472F724C3D091FFC476A132899E045B42C004B18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticAudit1.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticAudit1.log",
+      "sha256": "9102AA059CCE0C360020AE104E5EE2956C0DEE40FDEFE669A0D38C7525454202"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticDependencyAudit1.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticDependencyAudit1.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticDependencyAudit1.lean.txt",
+      "sha256": "77513725778D4E50D200A3F98AB88482601B4B5F5CD5EA220559523BD071660F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticDependencyAudit1.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticDependencyAudit1.log",
+      "sha256": "2F0A639DB7B0E31DEC2D037D11436D289F9DCF7CEA3D16E275CA676E5C556A1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticScratchOwnership2143.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticScratchOwnership2143.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticScratchOwnership2143.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticScratchOwnership2143.lean.txt",
+      "sha256": "8295858694F55D1FC8287CCCB8FD47D4C974F0BB512165A63C19AF24713B7FF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveArithmeticScratchOwnership2143.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveArithmeticScratchOwnership2143.log",
+      "sha256": "39DC2286B55435A88BD00F2A8F7D874596EC76C9D97F2C6C54428228E3AC8D4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDescent-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryDescent-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDescent-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryDescent-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDescent.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryDescent.lean.txt",
+      "sha256": "18F11A842DB2A36D8A1ECB3C526F220494268B1F533ADB60BB342983583F514E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDescent2123a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryDescent2123a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDescent2123a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryDescent2123a.lean.txt",
+      "sha256": "0FF7C1CFF5BF66A7EE65F11D06E74A0E28A466FD7E8E856C900E5529DF913CB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryDescent2123a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryDescent2123a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois.lean.txt",
+      "sha256": "CC000FD87F7D88D72014FD4980F9EEBD210D024456847DBFF0AF8A9E95A05ACD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois2122a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois2122a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois2122a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois2122a.lean.txt",
+      "sha256": "140D55D55ABFD3768A86FDF9A310B0C3F24B29450350C0F45215B279C23769E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois2122a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois2122a.log",
+      "sha256": "4914A3D187F2FC07028DE966E0FE17F2047818570082DE56FA077AC16A7F383C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois2122b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois2122b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois2122b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois2122b.lean.txt",
+      "sha256": "EF967517F391DDD4479643F433DF6C44324FFFA86FE66F310E3EB4D653F4FE06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGalois2122b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGalois2122b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGaloisWords-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGaloisWords-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGaloisWords-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGaloisWords-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGaloisWords.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGaloisWords.lean.txt",
+      "sha256": "7DAA9E1AD58C8B011ECD4D8E66C285D0BEB63914F0C62EB312C0C5D7F82B275D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGaloisWords2130a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGaloisWords2130a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGaloisWords2130a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGaloisWords2130a.lean.txt",
+      "sha256": "4429D472553782476C3BEFBFEF70A434E6C34695655858FF1597D2FC19C8AA47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryGaloisWords2130a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryGaloisWords2130a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperatorCommute-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOperatorCommute-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperatorCommute-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOperatorCommute-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperatorCommute.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOperatorCommute.lean.txt",
+      "sha256": "CA5D3FA2738B4512ABBEC415B72AACF6FDB5130F577396B9D165A234F69B2553"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperatorCommute2136a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOperatorCommute2136a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperatorCommute2136a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOperatorCommute2136a.lean.txt",
+      "sha256": "2FE109F1548038540FE28A5F624F3AB55345859E9730D61BAE1B5D62147C51B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOperatorCommute2136a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOperatorCommute2136a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit-2055.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit-2055.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit.lean.txt",
+      "sha256": "BF181088605A822D4095ABBB6532E5BBAA7161F819CD72F4E65897A763D3BE6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit2051a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit2051a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit2051a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit2051a.lean.txt",
+      "sha256": "18A91E77F1CDF177F6F20E1508E4904F5A45C9031AF744811438391EA8ACAEE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryOrbit2051a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryOrbit2051a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryQuadratic-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryQuadratic-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryQuadratic-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryQuadratic-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryQuadratic.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryQuadratic.lean.txt",
+      "sha256": "3DF49EFBA034F886D57201D5C7E0A6CC42376661C344FFA7E61DC5267943F50C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryQuadratic2121a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryQuadratic2121a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryQuadratic2121a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryQuadratic2121a.lean.txt",
+      "sha256": "9DDF7544B701B13D52231503ED8CBB6DF789E7870E331F38593A9A094CF94116"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryQuadratic2121a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryQuadratic2121a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords2124a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryWords2124a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords2124a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryWords2124a.lean.txt",
+      "sha256": "DD3C295ED100E2A6026D12851584077FDA57D5681927F204145F3AE6E48A3C40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveBoundaryWords2124a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveBoundaryWords2124a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnAudit1.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnAudit1.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnAudit1.lean.txt",
+      "sha256": "280E979FEEC7A6BE6E4C1B97BD89F76E6BE8861A6A24586D227113AC3BE6F41E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnAudit1.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnAudit1.log",
+      "sha256": "0B57499A427C13438E877649903F9537F1E51A73DF36E62E50961496B40E1E29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnBoundary-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnBoundary-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnBoundary.lean.txt",
+      "sha256": "7CD34772CADEAA2FD91799BDB38BEACC5971796FF1D1C488601BD82C17589A98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary2106a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnBoundary2106a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary2106a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnBoundary2106a.lean.txt",
+      "sha256": "2CC23B3E332C8E9497B43B2D6036632D904E3337F793EEDFD2FD938EDAC226D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnBoundary2106a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnBoundary2106a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDependencyAudit1.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDependencyAudit1.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDependencyAudit1.lean.txt",
+      "sha256": "21E21F5FE88645C537AE2022F9BBE84F5553B39E825D80BA3C8AC411C9E610E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDependencyAudit1.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDependencyAudit1.log",
+      "sha256": "E507B4D6B4EA3CDC5CDDE6C9C998720BA4C4CAE4C2CED886EA9B33C2D181416B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDependencyAudit2.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDependencyAudit2.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDependencyAudit2.lean.txt",
+      "sha256": "23F2AD2125F47A05AEA1BE93FC29F400FF47DE24E17E7E4E86C574D52C635008"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDependencyAudit2.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDependencyAudit2.log",
+      "sha256": "A691F1185DF35613DEC0D2522F619DC728777493EFBE054D1909883F45932FDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond.lean.txt",
+      "sha256": "4BB8B340328DD438A76BB8420EA7125AE18B04BB713B8B7B6E4799DAB0501517"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond2117a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond2117a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond2117a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond2117a.lean.txt",
+      "sha256": "12CE55ABA3248ECEBBF4F81A9149E7AD2F13745C0B86214774240B02A6728B16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond2117a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond2117a.log",
+      "sha256": "004C1D25DE2CD080A3C20AD6714BBF4C44272582CE02FE191FB77BDD3481BC27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond2117b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond2117b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond2117b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond2117b.lean.txt",
+      "sha256": "8552F322029A8B689A842A11999ADC90376C8CF073C8B18CFE59E6013F715256"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnDiamond2117b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnDiamond2117b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke.lean.txt",
+      "sha256": "E071187A40A10C305F17AD41F3A054BA07F0C8D69324510DB896A44D81297745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115a.lean.txt",
+      "sha256": "A70C61E9BA6E02E46CBC5FE317E4D8C1B2864432D2F683B116F489CE15BA36A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115a.log",
+      "sha256": "C90A4D6E12F872FF0A63502D98C0BD9FA41B9FC4CDD5F2563D9B41420F7408B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115b.lean.txt",
+      "sha256": "DA79E30876CAB623B1B525C9363056B4F462FBC659C837A09DB28CE68BF7E90D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115b.log",
+      "sha256": "D663787094315AF85D4E3F114E14AA762F55182ACF6A0436C88B103373ED65DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115c.lean.txt",
+      "sha256": "4A49A48FC007BE0E1290D382A9BC20591084C6DBAFA9E5C1CD1068E75E65833B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnHecke2115c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnHecke2115c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnScratchOwnership2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnScratchOwnership2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnScratchOwnership2118.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnScratchOwnership2118.lean.txt",
+      "sha256": "47F83A95183206E1595DBAF5E691C410BCC3D7FED73DB1F0C1294EB4B41643AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveColumnScratchOwnership2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveColumnScratchOwnership2118.log",
+      "sha256": "494267F7851395969CFAE5E1966F3E0FA6B2AF6D2A0BDD022E9EA363F31D0076"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2050-retained.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2050-retained.lean.txt",
+      "sha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2050.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2050.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2050.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2050.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2055.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2055.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary.lean.txt",
+      "sha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047a.lean.txt",
+      "sha256": "B46CE81C55F08F60654A35C2634A15D9FAEAB244D0C4E220DE5E6C87AB9F4FC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047a.log",
+      "sha256": "7680101B2F866F8AF3B911F10BC79F7ECA1482B7F0495B57A70D5248E1CAB616"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047b.lean.txt",
+      "sha256": "F311256CE7F5D13BC75ACCB54F66777AA825981306B100FB5581F67DA624505A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047b.log",
+      "sha256": "324E532161397D954D336719C7152434EE931480EE0173F9C92F6E514C7F9914"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047c.lean.txt",
+      "sha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047d.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047d.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047d.lean.txt",
+      "sha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspBoundary2047d.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspBoundary2047d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspConjugation-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspConjugation-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspConjugation.lean.txt",
+      "sha256": "17C89A55E2D545B890066FCEB9F4C9F1988374FA363F6781AEF8A41688934F13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation2107a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspConjugation2107a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation2107a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspConjugation2107a.lean.txt",
+      "sha256": "7BE41A5FE78F1F4C30125C56F9F3215240EA2CCCBB8675CF065C9DB35803B715"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspConjugation2107a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspConjugation2107a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues.lean.txt",
+      "sha256": "302AC4667C1E45131DA3CF26E044530342E7530D80F06D7F6E3DC8BD84F4C6E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues2105a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues2105a.lean.txt",
+      "sha256": "51A0212A4AB1754E1C5E15213BA71D158A50ED62AC9094D15A3AD3285E27C4C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues2105a.log",
+      "sha256": "88385A994166161BC4E8111B3FA173993027ECD597FDE72311310736EF9F8D80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues2105b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues2105b.lean.txt",
+      "sha256": "52AE05E7A493B14B53B7CD820F82C196B61A46C7AABBE5A04287FA630558AB91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveCuspValues2105b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveCuspValues2105b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond.lean.txt",
+      "sha256": "604BAC9EDDA34AC034C9EFAFABC007CE4792D5AC87757949AB315426413873D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond2116a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond2116a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond2116a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond2116a.lean.txt",
+      "sha256": "C95168830A39A1DED3F71B466132EDC377F5C31D9E71C6EC1193ABE7E93B31E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond2116a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond2116a.log",
+      "sha256": "78A7F3F2ABA04487CF3366E84DDA144F73223E85991B359E83D65FBAC6C06F86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond2116b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond2116b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond2116b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond2116b.lean.txt",
+      "sha256": "E42275C580996CE1A00FAA1DA550510D37C4EDE1B59ECB0FEB43ADD8E4B5822C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDiamond2116b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDiamond2116b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm.lean.txt",
+      "sha256": "6CB6C205C3C6F46FFDDFEF80AF082E75D5089C8FB393B661859286B6B943B2BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm2108a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm2108a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm2108a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm2108a.lean.txt",
+      "sha256": "BEE38A2EC4F1D4CA0B67E7DE34DB6A45880B5B59D12B2A7856BD978417CFBC09"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm2108a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm2108a.log",
+      "sha256": "822F81DBC3D69C43AD4CDB94DBC4032BD1C04456A74F9CC50D89EB6DFD2B1C05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm2108b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm2108b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm2108b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm2108b.lean.txt",
+      "sha256": "B7861A5D3863241B38C4F789867B9BD4D9BF15B8781BCDAF27BE977821209D52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveDividedTerm2108b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveDividedTerm2108b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedCosets-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedCosets-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedCosets.lean.txt",
+      "sha256": "61CC1E673BECB1B1B8AD359C3A1DE6C08BF283E3FF7820FC92C4881D6C71CC58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets2101a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedCosets2101a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets2101a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedCosets2101a.lean.txt",
+      "sha256": "1C2173AEA75F259F4209295685582CEF6BF6020A761BBEDC5F316935630EC0A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedCosets2101a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedCosets2101a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit.lean.txt",
+      "sha256": "077D284E7052F75E1B033AC49D90CAFD7DB1D9BF4B23DE73687C20A4C614C967"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit2102a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit2102a.lean.txt",
+      "sha256": "B84BBECF25D7203753752F46F6CEF105287559674515D856E313943F16B36339"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit2102a.log",
+      "sha256": "7A606A07C424075A0A82830EFDBA6F72EEA9E1F043E93C5A73F31B6F85180EB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit2102b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit2102b.lean.txt",
+      "sha256": "77FD0B84CF189298E5EA70B98BE3BB18F8F9E44CF4F4D7D5F56819B1BB9C1480"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveFixedOrbit2102b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveFixedOrbit2102b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeDiamondWords-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeDiamondWords-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeDiamondWords-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeDiamondWords-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeDiamondWords.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeDiamondWords.lean.txt",
+      "sha256": "F1FBD54DB66EB232D866CB95500862993BC359DE6C22BA8B0A8B4645102C9CEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace.lean.txt",
+      "sha256": "C262CF39EA68A2A088F47AA45C83C97ED1874986EEA27B3D748F5B6973F3BA3B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114a.lean.txt",
+      "sha256": "7EA9694F314F8A70C83045060C6C677EADE08A6A8E021265EC08C52997CD5F4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114a.log",
+      "sha256": "F81F1C1D46284D61EC5F6CCE5878C0163C66C110B5581C29E206AF3F246141BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114b.lean.txt",
+      "sha256": "B28781ACE758133A664FBAA2E800F15571F0A850BE6D80A808A3B4D20F39158F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114b.log",
+      "sha256": "2D90562FB773B352F6941682FB642D25E78BB0F44C7844447115DE4AFE5910D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114c.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114c.lean.txt",
+      "sha256": "05B4AC30B6201B6AEE1431777C9FB3853F525D69ABEA9E16353D391CECF5FDAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114c.log",
+      "sha256": "3C5695079AF67C9F3204F498CB622EE6C2A01F87AE5AC11BF8403C332BE8294F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114d.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114d.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114d.lean.txt",
+      "sha256": "0356556B7792F19517A7BC67E78CCC6F32997533252B99B462056AC7285C49F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveHeckeTrace2114d.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveHeckeTrace2114d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData-2143.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData-2143.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData-2143.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData-2143.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData.lean.txt",
+      "sha256": "C8970B74F4C423FCB7038FF0D466627A8D02FFCE3DF52CB7ACEB4A94F60BD745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData2142a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData2142a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData2142a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData2142a.lean.txt",
+      "sha256": "D762B2F8E5E65849FE3029178D278B8B39B6B39732B638DEAE42CAEC18EB70A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData2142a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData2142a.log",
+      "sha256": "EC98D361054FB8577E5D858BD5A3423BC88AD14A7A745CFCEEA7DED40D098586"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData2142b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData2142b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData2142b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData2142b.lean.txt",
+      "sha256": "E5B8779C4DF614E64A23EDD90829F15BFDA9E30CF21C2DD0D76580281EA7BE5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticData2142b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticData2142b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem-2143.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem-2143.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem-2143.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem-2143.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem.lean.txt",
+      "sha256": "6855B273D1995BB802F9D2B2DDCD0382AF02AE839FB8EE61ACB6FBF7E8F5D31E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137a.lean.txt",
+      "sha256": "040993BFAC1B56ABDCA29380605F79FFF264F723619E2AD30FDCA994000241A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137a.log",
+      "sha256": "84FE1DFFA0A7014171D8007E147F47C35D5A0BA8EFBDF38A52F565D45650186F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137b.lean.txt",
+      "sha256": "9D23A3FF37F9DEE9ED5371794617D28E552CCDE5AE199B6529261B6220451D0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137b.log",
+      "sha256": "C7346350D9AD61EDA597F2DED1E494A903627C4E047235E2E1F48AC3099A0671"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137c.lean.txt",
+      "sha256": "E6F9C27C1FE964F2BEE3E9A5B36363AFBE9AAC135D2BC9F4F27915C9C00F4015"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointArithmeticSystem2137c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointArithmeticSystem2137c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter.lean.txt",
+      "sha256": "A129B12D4140BE33E1BE139F83FB73DBF38C416BA8CE2922286BCE4AB57D8EC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter2127a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter2127a.lean.txt",
+      "sha256": "CC2E40BD045B5AF5661CE5522D7914E637514C11088E599EDA3A475F0BC60978"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter2127b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter2127b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter2127b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter2127b.lean.txt",
+      "sha256": "333D320E0DC241496F8C30AF34894170A1293DEF9902212BD0A69285EC3F10B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacter2127b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacter2127b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues.lean.txt",
+      "sha256": "E969C8358120E457BCABE06294C0358ED7E3E6B3EB2548C07A040ACD9B5D578E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134a.lean.txt",
+      "sha256": "BB93B782A8A295E9287F6C31FC3D51BA25BE9E3355BCC01D6CA64C65D66817CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134a.log",
+      "sha256": "976AD68771E1ECD253A46C21BA09417550E4FFB90637633B80EB9FE47E30C153"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134b.lean.txt",
+      "sha256": "7CB29C696815ABFD82BEB191F39B3369B57507A318819869C0AF5BA9C27EF7A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134b.log",
+      "sha256": "913EAF9B708D480FB17517E82035BFBEFC761494634562BACCC71A9EF1B9687A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134c.lean.txt",
+      "sha256": "C57418B1C7BCC6DA3D8AA7B28A5E34F7561EC4CF18F00C253377581FC82D5DDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCharacterValues2134c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCharacterValues2134c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCommutativity-2143.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCommutativity-2143.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCommutativity-2143.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCommutativity-2143.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCommutativity.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCommutativity.lean.txt",
+      "sha256": "ADA8A2FCA1C937D186C40A8CB36D92FF8A29CE14E99B3421E42C94A694258469"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCommutativity2139a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCommutativity2139a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCommutativity2139a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCommutativity2139a.lean.txt",
+      "sha256": "A38C23D67D8A38AAEE9D73D936CF610DED4D52FA5DE89CE4055E95EE9A3B1D16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointCommutativity2139a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointCommutativity2139a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent.lean.txt",
+      "sha256": "72305B00720471E8AC11AB066437481C55DFFB5518C8D1176A59C4A7CEFEF09C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133a.lean.txt",
+      "sha256": "9AAB42830CECFAFDBDC30D139BE8AD468ADF5ECB35D1315ADCF8AD9FD78DE864"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133b.lean.txt",
+      "sha256": "67EF491C58E34029B3D546B56B0F6FE530FD95473FFD0D84EC0BDD334817F0B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133b.log",
+      "sha256": "92FEB5657BCB566AB1830F6CDD3C523017A2A7F52991237458456BD408CDC40D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133c.lean.txt",
+      "sha256": "2ED7D3A4D7A380DFCC0911CA1519DFEAB1F973D2C6175FDFA4F2B50E540331D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDescent2133c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointDescent2133c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius.lean.txt",
+      "sha256": "DCA43F17560CBBD989BE572605A975AF89957A99C23A325D71A086C574365F62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132a.lean.txt",
+      "sha256": "6B615206591038F64767A5A9C676B70DFDB465E6F3F38C67AF87755A0C279BB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132b.lean.txt",
+      "sha256": "E670106E18F40AEB8EF65666F13AE94EA978CA103A423F95A2921D07F4DBEE2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132c.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132c.lean.txt",
+      "sha256": "F0259536EDE1371AF01D5E8BE243F81899DAEC2EC56D82183D83E873D75BBBCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132c.log",
+      "sha256": "9D0453B1874F5B9860D359DD6A6DCB91430819D4689B86E2354220AD255CAD07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132d.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132d.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132d.lean.txt",
+      "sha256": "1334CDDDF5572554FA4D5C292D887A172C0A660565FE2288ACF1A183D25E6FEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132d.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132d.log",
+      "sha256": "2A764FAB16066754854196645AECC8350AE8CA90DF5129955364E139867BFAAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132e.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132e.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132e.lean.txt",
+      "sha256": "E15639D06DFC1D75A78F1C6AE30F216F8F157362B27FD1F2EE7968E897519D35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132e.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132e.log",
+      "sha256": "3CB800D0E87ACA48C1AD434380109E4E387925383DC2C5763FA7EA2BE0398A6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132f.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132f.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132f.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132f.lean.txt",
+      "sha256": "7BE77AD76E8B60D2255B351DC62DD69078F868F006B77CFC2ADA52BB8339A1EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132f.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132f.log",
+      "sha256": "9151003202F4DB1C64FA3AF9E69A3AF09FC4D72B2A86F5CC7FA26D0ADF3C7957"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132g.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132g.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132g.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132g.lean.txt",
+      "sha256": "74D8B19899D538DA47D6F6AAE6C45A5A4617F3A478B0B8DCCE3B144AF9EF7ABF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132g.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132g.log",
+      "sha256": "28558806F2439222156605FB17B922D55BA568D6461CD95097E483A7C7049879"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132h.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132h.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132h.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132h.lean.txt",
+      "sha256": "16853A5963BBF954D8672BE20DDF4F711AE8D1BF11F9683A018361E9FBBC0210"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132h.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132h.log",
+      "sha256": "2BECA4A11B4CFA27B979414F392788413C1FDA8622675B41E5A11F1CCF3593D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132i.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132i.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132i.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132i.lean.txt",
+      "sha256": "A7C473B31D7603B460D5558FE6AF1160D24464EB1A499B72F881C65FD3E00B72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobenius2132i.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobenius2132i.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobeniusWitness-2143.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobeniusWitness-2143.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobeniusWitness-2143.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobeniusWitness-2143.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobeniusWitness.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobeniusWitness.lean.txt",
+      "sha256": "F503F5942CE671C760B55294223209649DBD35C1ED8456A0A563A3CB265B8146"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobeniusWitness2135a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobeniusWitness2135a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobeniusWitness2135a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobeniusWitness2135a.lean.txt",
+      "sha256": "05C497D182D6658E24738BA6965417D5E07AED1D856075D278E0A98AEB6882F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointFrobeniusWitness2135a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointFrobeniusWitness2135a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois.lean.txt",
+      "sha256": "8DA2D7764706E41F0075463949BD4780358E866F22298D2F69ED2BED97DF7DBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131a.lean.txt",
+      "sha256": "F0FBA04E9D37C9E90FD7FDC77943782CF8F65565CEF86F649CB30CD8FBBDB082"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131a.log",
+      "sha256": "B052982B60515885A351E96C9E00E142CF05AF3DC72153EA6F70D8738610FF30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131b.lean.txt",
+      "sha256": "C3D1B132A4849EDBEC2E20C0DBA16958D1EA8125428E956431D11BCFF5941763"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131b.log",
+      "sha256": "54BE981CCD2C06C3E3BD22E07A77A0C8C07FF5C3198BBDD1296F9124FD6CCF50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131c.lean.txt",
+      "sha256": "D81597E54FB4526ADBB5E3D424FDB2E708E306A2E39DF64AD442F176127C3FA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointGalois2131c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointGalois2131c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing.lean.txt",
+      "sha256": "FDDDAE041EFD2957F3DA93BD36AB405C707D208E48B3887D8EE3725A23817D08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing2126a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing2126a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing2126a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing2126a.lean.txt",
+      "sha256": "8FB57AF0CAD0C7F5255B6DD1058CE181ACCB53F4D7FC6CE39B7DF63C63EDAF8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing2126a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing2126a.log",
+      "sha256": "2238C9A158322595416FE1353B21FA8B9361F05AAFF5D4419B79301907606A78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing2126b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing2126b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing2126b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing2126b.lean.txt",
+      "sha256": "E0DB8EAE823A4B6FB62FC19D0ACBEFC23BE9751573692DEE1165EE04D64D415C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointRing2126b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointRing2126b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare.lean.txt",
+      "sha256": "286B775A6B6C4E9FB5D3D89CCEE28AA4329A2CFF24DC6770CFC994C5925402CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare2125a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare2125a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare2125a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare2125a.lean.txt",
+      "sha256": "CBD30A040983F4C1B3509C44232D593FB39A1A4F0C269E227357634B982520D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare2125a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare2125a.log",
+      "sha256": "9E91717185F10C2E36F01E929F5A3284757880DF27C315E48A60698BDB55CB75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare2125b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare2125b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare2125b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare2125b.lean.txt",
+      "sha256": "380182EAB2193950EB019A5E92708346039999EDC169F54605CF79AA30AEC327"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointSquare2125b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveJointSquare2125b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveMultipliedTerm-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveMultipliedTerm-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveMultipliedTerm-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveMultipliedTerm-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveMultipliedTerm.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveMultipliedTerm.lean.txt",
+      "sha256": "72A60F432B4563117F84D7B94107249F6D8A414FF3E907192DA479EC031D8163"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveMultipliedTerm2110a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveMultipliedTerm2110a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveMultipliedTerm2110a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveMultipliedTerm2110a.lean.txt",
+      "sha256": "5FF6D5A472D7B83590125B665FEB225C665A5867ED698CF000139B9530F3953B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveMultipliedTerm2110a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveMultipliedTerm2110a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives.lean.txt",
+      "sha256": "E05DF259E70FA3FB4A0CCA33C45FEB2211EB0E7D7E3A0A293AD55C1635C43A2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives2111a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives2111a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives2111a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives2111a.lean.txt",
+      "sha256": "26C8D7BADA0B976E2FE3177DD8DBEEFB20132DB5D3620E4AC0A340ED154E3F03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives2111a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives2111a.log",
+      "sha256": "4D37999F54F7FCF473F7183B99006E0C70EB8891B4463275460D68EEB1EEDAE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives2111b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives2111b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives2111b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives2111b.lean.txt",
+      "sha256": "61DE8205595A3DA81CE99DCDDFD2327F7D172F679939D7BD07F797DA0B7189DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveOrbitRepresentatives2111b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveOrbitRepresentatives2111b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits.lean.txt",
+      "sha256": "93E8C58E5C0ADBD5D3D4C969721E624C2795310B9F2D9214DA8042DD19BA6FAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098a.lean.txt",
+      "sha256": "58AF35DC820192CC8C30F0D8BC34C53CA7D8A1198F21CCB40B4CDE9114047F3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098a.log",
+      "sha256": "EA434AD6F9017D9D8461A69EF8F2AF71CC2A511F8271F3E91F692E57BA7E6BE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098b.lean.txt",
+      "sha256": "5FE4368F777BAB6101EA6DF00BE5F260E0002EE877872AB559E4F139460E02C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098b.log",
+      "sha256": "C5E236A59995427D4DA99EEFE21E4054EDD9FFA5E4C0CF2B7A1048C9AB5B2498"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098c.lean.txt",
+      "sha256": "93E8C58E5C0ADBD5D3D4C969721E624C2795310B9F2D9214DA8042DD19BA6FAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitivePrimeOrbits2098c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitivePrimeOrbits2098c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns.lean.txt",
+      "sha256": "013DE9364838E155A9E0FC89502E0673905070C0863E830EADF821D6F988D33A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns2113a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns2113a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns2113a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns2113a.lean.txt",
+      "sha256": "E402F38E52B7C2D52B3D154ED3A562A1597655D3802A9274B846F0257D7BB264"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns2113a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns2113a.log",
+      "sha256": "2A19800C3ED145FDDE76D7413B5E4346A7453C3890E20BFA2989C1F985A465BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns2113b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns2113b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns2113b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns2113b.lean.txt",
+      "sha256": "30C097AF879A10CEF3E7F11968A3C66DD1DBDF4B8660C885A6D3076126A718F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTermColumns2113b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTermColumns2113b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits.lean.txt",
+      "sha256": "15670D60D4FE2BB737CFB222891D619D4E41F42CC24B0703B5E249B99E87C387"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits2103a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits2103a.lean.txt",
+      "sha256": "A4ADE2419F04638A12E12F111997440E26D14561C0F6D84BCA3F287D41956873"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits2103a.log",
+      "sha256": "4B98732DDA0675A8838820D058FC2322911F7D8EEF3F2B1416BB858BBB30D30C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits2103b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits2103b.lean.txt",
+      "sha256": "7E1FA2271943057DB5C45DA8FAE7E799632BA84091486A141610788CC72ABC67"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTwoOrbits2103b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveTwoOrbits2103b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions.lean.txt",
+      "sha256": "A47965BFDFC65E03BA7D1B838AACE7651E95A169DE5202AB7A3FEE1CE92A1F6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions2119a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions2119a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions2119a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions2119a.lean.txt",
+      "sha256": "3BBBC8F0BB81BD01D381D86940C63B075DA97CC083A2774D5BCF2C5D2E64D866"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions2119a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions2119a.log",
+      "sha256": "F8EDF5410E96413E906A0091B0CD8D304636493B68D435BD0FBA67E4A104864A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions2119b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions2119b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions2119b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions2119b.lean.txt",
+      "sha256": "324C4D9FA17CFE17535AE547D2E0CF08CE42BCFFC3F07B932CF17965201166E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitActions2119b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitActions2119b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke.lean.txt",
+      "sha256": "98373CA9BD2C16671302EFFFF9DF7507C123FEC2C0FC2D92EC842E6DEB318312"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke2120a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke2120a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke2120a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke2120a.lean.txt",
+      "sha256": "DC5217F1BDFFD6BF99D8A6EEF8EA94F41FEA92FBCED79B0546A118C4867D2E8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke2120a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke2120a.log",
+      "sha256": "FF38E8356D3AA63DE81D3E7CF0AC0D4448E93832BF13D34EB305FB4CD4802539"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke2120b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke2120b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke2120b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke2120b.lean.txt",
+      "sha256": "EB5FE05ECD31040917F6209957FD7F90915B1B5C36112DBF0FDA27A206CC0E30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitHecke2120b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUnitHecke2120b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUpperColumns-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUpperColumns-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUpperColumns-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUpperColumns-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUpperColumns.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUpperColumns.lean.txt",
+      "sha256": "6AB021BBF4BC50D2520C996EB7C42FB4B600BD96B8AFDFC833A7CBEAB868F4ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUpperColumns2112a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUpperColumns2112a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUpperColumns2112a.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUpperColumns2112a.lean.txt",
+      "sha256": "8EBBA4A36D78CC634921F6C15D4C15D1D7AA6205214C41BC34C31B2C66A09F57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUpperColumns2112a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveUpperColumns2112a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth.lean.txt",
+      "sha256": "6C17E9920963855108CE2458FB77D7C1CBCB397239DF253C1299E24A10FF0394"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth2097a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth2097a.lean.txt",
+      "sha256": "C39A3C7D065D00D6DA761225F747807C937EA13A5B23CF8C7C1CAB37CC573867"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth2097a.log",
+      "sha256": "C1E24515A8692F1FD7F4550ED0AFFB84CF6FBEA489EB65FA6F4A4E5E65B420AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth2097b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth2097b.lean.txt",
+      "sha256": "6C17E9920963855108CE2458FB77D7C1CBCB397239DF253C1299E24A10FF0394"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidth2097b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidth2097b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns-2118.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns-2118.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns-2118.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns-2118.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns.lean.txt",
+      "sha256": "6D4370C8056B6E4506C12A5CE2B9AB44F1A19D80671B9AB20FDCA59EFA22AD0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104a.lean.txt",
+      "sha256": "D9D8FABE864F46449B6B24117A92F6F08EB76F49A13561CA612F7D554BD2B3AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104a.log",
+      "sha256": "7F366285CD0D7D58B5FB2D5971E3756AE694EA730B2764D93E501ACE73C28713"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104b.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104b.lean.txt",
+      "sha256": "33E7A819EA923B8E2A1242DDA7EC0FF6C31965D1AC08461725FFFEB4A212BDE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104b.log",
+      "sha256": "F9CB8FB91C145555571F5A33E4B3BA0CDD4F23C4A9E0D6DCB6297ABB17E42352"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104c.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104c.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104c.lean.txt",
+      "sha256": "2666E3C12A9E461486067CBED576B6F430777AB709FFADE770396A4ADAED4E26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveWidthColumns2104c.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceGammaOnePrimitiveWidthColumns2104c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation-2140.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation-2140.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation-2140.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation-2140.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation.lean.txt",
+      "sha256": "D9AE4DF8025FEF3F1F0AAA18855E8DDAD038B1FBCE42635DD0EEE78D828ECD43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation2138a.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation2138a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation2138a.lean.txt",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation2138a.lean.txt",
+      "sha256": "E4EF23F26810738562358BBA8465F6E90C665CE1F41940AEEC3FC2E082A1CCC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation2138a.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation2138a.log",
+      "sha256": "6082363CCA2975F73944F3980CE2B28E6B68410A481E18F9CFF0F0B981B18E4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation2138b.exit",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation2138b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation2138b.lean",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation2138b.lean.txt",
+      "sha256": "D9AE4DF8025FEF3F1F0AAA18855E8DDAD038B1FBCE42635DD0EEE78D828ECD43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitQuadraticCommutation2138b.log",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/SourceUnitQuadraticCommutation2138b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_arithmetic_audit_2143.py",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/prepare_primitive_arithmetic_audit_2143.py",
+      "sha256": "B82CC741663B575F2A7FAFF94E89DAB82E772F8905018A147BD11F7ABCE16B33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_column_audit_2118.py",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/prepare_primitive_column_audit_2118.py",
+      "sha256": "3D470308636BDBF7DCC0E4218928717E988C14696C48DF38DDE9F1183AC6110D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-arithmetic-audit-config-2143.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-arithmetic-audit-config-2143.json",
+      "sha256": "DF1D3D1CE4A2CADF46468FD72ED7F4410E8422520D5D48AEBD74E8D93FA47523"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-arithmetic-core-2140.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-arithmetic-core-2140.json",
+      "sha256": "2A13D628237110C68274D76879EEE9D55A4175FBC248FD5CD6742030119694AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-boundary-arithmetic-route-2109.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-boundary-arithmetic-route-2109.json",
+      "sha256": "311583113B9CEDF0AB4ABC122E123F918B4AD3498A21EE132E149E676DD8BA86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-column-audit-config-2118.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-column-audit-config-2118.json",
+      "sha256": "EDEDB6E7A84A3DD0493CA704D826764A62640A9DB0E05CCD23CBAE90FAB7B5F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-column-audit-config-2118b.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-column-audit-config-2118b.json",
+      "sha256": "E1CDD34867EA9DAABFB4295AD1F820E8CBDCD16026DA48FEF390A17D47C4AF0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-column-audit-route-2128.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-column-audit-route-2128.json",
+      "sha256": "2A53FD19E94A6006E4AF198111C07F96362AE6160E3E4E8AC4601CF0A1C8CF5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-joint-arithmetic-promotion-route-2149.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-joint-arithmetic-promotion-route-2149.json",
+      "sha256": "FA6B8666426A2C6CE138D4CA5565193C28291FEA2759FE2AA576CE3166B5A729"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-joint-arithmetic-route-2141.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/primitive-joint-arithmetic-route-2141.json",
+      "sha256": "D2E45C303696E3DB844888C6A29A250F65BFF1CAEFE8CB64349E10CBDC17B28B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_arithmetic_audit_2148.py",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/record_primitive_arithmetic_audit_2148.py",
+      "sha256": "8725DB86F10A038EE1D49947913B188A9584F53BF1731934355816C00CC08D57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_column_audit_2128.py",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/record_primitive_column_audit_2128.py",
+      "sha256": "A8C24FCE9509A03D08086BE4B3F57A5E855E6E1D78547D2ACDD1B2AC1831C93F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-arithmetic-1-reuse-review-20261116.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/source-gammaone-primitive-arithmetic-1-reuse-review-20261116.json",
+      "sha256": "3917EF7BBC32A52B712045D042C971A9E1304766398086C0C62877DCC92B5D2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-arithmetic-1-scratch-receipt.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/source-gammaone-primitive-arithmetic-1-scratch-receipt.json",
+      "sha256": "59445EE93CA79E90ECD30A97B210DFD4B78155BDA4DE2D4D68E419C7DD33B65C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-column-1-reuse-review-20261116.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/source-gammaone-primitive-column-1-reuse-review-20261116.json",
+      "sha256": "5D0214DCA3FCA90013303A11E7514E485DD3DD5CD1C2275CA98C9FC6DAEB0DE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-column-1-scratch-receipt.json",
+      "path": "Tools/primitive-joint-arithmetic-20261116-2149/source-gammaone-primitive-column-1-scratch-receipt.json",
+      "sha256": "BF7E2E30BC1AF90ECBCB939A48CA0C6796E11DB4F916BF5128D1829EAE822816"
+    }
+  ]
+}

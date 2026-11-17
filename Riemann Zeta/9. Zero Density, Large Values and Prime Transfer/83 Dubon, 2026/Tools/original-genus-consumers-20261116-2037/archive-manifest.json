@@ -1,0 +1,1309 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Genus and Consumers Assessment 2026-11-16.md",
+      "path": "Tools/original-genus-consumers-20261116-2037/Dubon Original Genus and Consumers Assessment 2026-11-16.md.txt",
+      "sha256": "A33B935DA221D4620DF7F839055B34F10CF47914F5E81342CF5D379ACA25982C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonical-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonical-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonical.lean.txt",
+      "sha256": "E1E0CE591B28A303D66905BA7A7C87C8D391066730A034E4DEEDBAADF0794580"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical2009a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonical2009a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical2009a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonical2009a.lean.txt",
+      "sha256": "8549BD3DB47847B7B18B50C459EEDFA5049B6E52413E8353D12D5A0372319A59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical2009a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonical2009a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonicalDegree-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonicalDegree-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonicalDegree.lean.txt",
+      "sha256": "42F7658DB870FE31C3D6D9321126D85484A0CFFFB2C88E82B3370424C3C8E5AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree2012a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonicalDegree2012a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree2012a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonicalDegree2012a.lean.txt",
+      "sha256": "345CEAFD3AFD374A585B8171B7F9CBC84851FF4849F5796FC481BAAB3DA9A683"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree2012a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateCanonicalDegree2012a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGeometry-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGeometry-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGeometry.lean.txt",
+      "sha256": "A8456CE3A3B59D590C6A117AD7CF6CD8F49794504D3E4D25A9A32A096DD36F48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry2008a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGeometry2008a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry2008a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGeometry2008a.lean.txt",
+      "sha256": "A8456CE3A3B59D590C6A117AD7CF6CD8F49794504D3E4D25A9A32A096DD36F48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry2008a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGeometry2008a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGlobalResidues-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGlobalResidues-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGlobalResidues.lean.txt",
+      "sha256": "60F21F8BDA95DD27C8E934079CD253F894F4BF1A145BFA11E40D3EFEB6CFA54B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues2010a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGlobalResidues2010a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues2010a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGlobalResidues2010a.lean.txt",
+      "sha256": "89E75E180F2034093411EADC3643911DFC1043060F95C101BCAF609121BDD4AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues2010a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateGlobalResidues2010a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz.lean.txt",
+      "sha256": "8387CB74D871A56B53BD03E14E6E251C3ACDB72099712A6D94CDC898250C9FFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013a.lean.txt",
+      "sha256": "231D87943D11B10F8AC6478A548E1736A79F84EB6098AFE215549DDAB86FACF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013a.log",
+      "sha256": "DC41BE75E97EB96DD6AEF19F083B5FBB14FE9663675DBB0F92F9E1F1BF3A82B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013b.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013b.lean.txt",
+      "sha256": "A1EABD63327C9F34C71F975CD93E801AC53F75242646AF65A632973AE6AD1E9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013b.log",
+      "sha256": "F7C593206948D0CCF0F8461D1A7CB95A7847BB65EC6AD5B17102A5B0FD18BA5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013c.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013c.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013c.lean.txt",
+      "sha256": "0A27A1EC6C50A897B7D4C1AFB9BC89DA19E3CD1A710BE4E0348F760CA9A7E759"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013c.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateHurwitz2013c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality.lean.txt",
+      "sha256": "D21BF1776B963B891943099547F920B46A31CCC765B2B63449811AA73AF30D49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality2011a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality2011a.lean.txt",
+      "sha256": "F012D7E07BAAC72FC9B2B056230EB44C0F465124B71D3A98795A4E04DA024E61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality2011a.log",
+      "sha256": "357EAEBB7D5AC0935DF9A9DD16D88562E40F2E71E27299D8310108271B79EC47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality2011b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality2011b.lean.txt",
+      "sha256": "55658B63D3A23DE0B28C383724FA676A8A91775E0375F13A354ED3A670B9BAE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingCoordinateResidueDuality2011b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums.lean.txt",
+      "sha256": "1D9D4A5A4D8B7566D467EEAE9F06D89DEFCA669DFB3572B615A538760A114C00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums2020a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums2020a.lean.txt",
+      "sha256": "3B62717CED74E1BE109859DA189CE1E64FCD03084A8E615CA9ECFD517865A407"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums2020a.log",
+      "sha256": "24C788CB01038FAE5871D9608FF033B8D6CD3E96E9782010BEEF38E1ECBB3B66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums2020b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums2020b.lean.txt",
+      "sha256": "1D9D4A5A4D8B7566D467EEAE9F06D89DEFCA669DFB3572B615A538760A114C00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingFiberSums2020b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzBound-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzBound-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzBound.lean.txt",
+      "sha256": "554BBD2BA52E73E28CC59B819B050BDEA87E322DEC9067DDFF234476AC92FB0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound2015a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzBound2015a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound2015a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzBound2015a.lean.txt",
+      "sha256": "9E7202D2BB0083A0F2ADD80D7CA040429DC8261C299DBC5E64A5CDCF7F7EDC3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound2015a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzBound2015a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound.lean.txt",
+      "sha256": "965757573C299A2CF4FDADFC940CD45D3DF083581D5FB8A778B4C925B43207C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound2017a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound2017a.lean.txt",
+      "sha256": "7911B6FF3FB6B9FD4761310D12C35832D5ED9065CA8CFFCDE2DCF017DFD01F5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound2017a.log",
+      "sha256": "D5ACAD4E8E45C8D367DE3AE98EDB43F170D3C14A401212DC973ECD247CD15F25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound2017b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound2017b.lean.txt",
+      "sha256": "571F1D80A17160823B5C23BF7B35BD3A7404C5671B5E09D92AA58A6590630C56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingHurwitzCuspBound2017b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums.lean.txt",
+      "sha256": "E55BBD540566703D8265F8701580DD810F0542336A4093228E68AD6A87192B12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums2016a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums2016a.lean.txt",
+      "sha256": "FADCD008664942F6F63D6CBF2ADB398B2BE161150ED4673F7A6C8CCA40C72A12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums2016a.log",
+      "sha256": "90ADD5160686B07FC58F3EA9A3F2C5F05B767764FE4102D1C7349A8DA227DEDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums2016b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums2016b.lean.txt",
+      "sha256": "E55BBD540566703D8265F8701580DD810F0542336A4093228E68AD6A87192B12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceCurveSeparatingPoleSums2016b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus-2014.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenus-2014.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus-2014.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenus-2014.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenus.lean.txt",
+      "sha256": "AF4958B23AC666CAD6BAE0ADCD5A6C5E3691B2BA1944BCD3BDE69B22911926D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus2005a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenus2005a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus2005a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenus2005a.lean.txt",
+      "sha256": "3B371D68C45D938C1BDCE5F3C343FFF812F095380CB48605375E8BD8CE957ED4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus2005a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenus2005a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound-2014.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenusBound-2014.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound-2014.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenusBound-2014.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenusBound.lean.txt",
+      "sha256": "01D464B969D9CBE9FEF6E6C2E5ABA025DF75F4A5B2F37C9F092DF45DC62D2396"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound2006a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenusBound2006a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound2006a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenusBound2006a.lean.txt",
+      "sha256": "730CC5FD5F3E7E1A12A5AD25A56B0899F833DC71C4A15532EE2FFDEBFC6D659B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound2006a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneArithmeticGenusBound2006a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension-2014.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension-2014.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension-2014.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension-2014.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension.lean.txt",
+      "sha256": "D88BA6A2D9B5FC879F6789578A37DF3B9769DF24AB4B6B4AE4F67D23EFC6FC88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension2004a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension2004a.lean.txt",
+      "sha256": "F2CD4FF30ED0A90F8CAA2B2E9B926F9AEC755151793F26C3320EB17134BEE4F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension2004a.log",
+      "sha256": "050E2091A684FDBD7E3AC708F32EC31A956A89BDEC522EB8358D3EDC87C915C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension2004b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension2004b.lean.txt",
+      "sha256": "D95027C3DC06ADDE46998314BBFC0077CB4A2A475570E63FD3B575283D00BA8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDimension2004b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces-2014.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDivisorSpaces-2014.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces-2014.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDivisorSpaces-2014.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDivisorSpaces.lean.txt",
+      "sha256": "658011CAC76F793B08D4ECA204C3CEF6BB3300C42C2E57B5D266EFC8BF4C9A49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces2003a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDivisorSpaces2003a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces2003a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDivisorSpaces2003a.lean.txt",
+      "sha256": "658011CAC76F793B08D4ECA204C3CEF6BB3300C42C2E57B5D266EFC8BF4C9A49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces2003a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneConormDivisorSpaces2003a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonAudit1.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonAudit1.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonAudit1.lean.txt",
+      "sha256": "1BE07A22A067BD40AE99D0F694DB7CDC2A272F735B592D2AA6C54C2B2E324CC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonAudit1.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonAudit1.log",
+      "sha256": "ED7A8ACF48B0626BEC9CC83BD77C82C999702CEE5E341545F7A66F77A90FBF68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonDependencyAudit1.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonDependencyAudit1.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonDependencyAudit1.lean.txt",
+      "sha256": "ED1F49868649F2F89B0CAFAE7C1684EC88AF5C429C1D92F2593DE931EF273A06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonDependencyAudit1.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonDependencyAudit1.log",
+      "sha256": "42DDE60FC79B97E5689F69DC2DFAAC682D0762678B30ADC01A230F00E0E9F49C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonScratchOwnership2014.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonScratchOwnership2014.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonScratchOwnership2014.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonScratchOwnership2014.lean.txt",
+      "sha256": "666A81C42C0E367A8D1FB78969152F84EA0F1A2F080D4F33F2DC8EA65CED0BA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonScratchOwnership2014.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGenusComparisonScratchOwnership2014.log",
+      "sha256": "D118E7754563AE5FDE513450A73166E2BDACEEEACC8AC8B4F7F9CB9FB0EE3A1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent-2032.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricArithmeticDescent-2032.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent-2032.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricArithmeticDescent-2032.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricArithmeticDescent.lean.txt",
+      "sha256": "F3F89F2FF05C1F1A06CEFC4DD5E10F349F53C3FE631ADA80175DB728F48CF61F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent2030a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricArithmeticDescent2030a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent2030a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricArithmeticDescent2030a.lean.txt",
+      "sha256": "869FBFDDA368F1B9E3EFE54CDA134625D34CBBF5BE40A773A63D23273DACCBC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent2030a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricArithmeticDescent2030a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter-2032.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricCharacter-2032.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter-2032.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricCharacter-2032.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricCharacter.lean.txt",
+      "sha256": "80B7D812349B4ECD4104146EFBE22A5054BAA1888ADF814EE5573E25A4B7CE72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter2031a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricCharacter2031a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter2031a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricCharacter2031a.lean.txt",
+      "sha256": "2436BFC85B00058CDDF33F359ACD789E99968EE812096A5CE0088DDD86CC688E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter2031a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricCharacter2031a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersAudit1.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersAudit1.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersAudit1.lean.txt",
+      "sha256": "D0DD859C4B38F4E5DE2C0F0D264152C57F8D80E716A9015A373F3E4C84386A90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersAudit1.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersAudit1.log",
+      "sha256": "848FC0574BDE411E7C74E5AAA5B6A9599AFDC90E378F309E7E0A0148F9A0B00E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersDependencyAudit1.lean.txt",
+      "sha256": "83FF619F7E3A69D70F6D271DE0D0FD9000104AB6F8D61920FD0913D35C40DD0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersDependencyAudit1.log",
+      "sha256": "8F77DFF750A96AEE32A5668AD9135FBB07984DA797392B6EFFBFD3384C006226"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersDependencyAudit1b.lean.txt",
+      "sha256": "DBD71ABC8CF9C95296C063219217359F6E5004AED184C33094F20BB27F8EA0F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersDependencyAudit1b.log",
+      "sha256": "FA96B891A0BD4CBFA1AA83FCA77F8829941BADA9C29866AD5813021E55C46A66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersScratchOwnership2032.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersScratchOwnership2032.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersScratchOwnership2032.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersScratchOwnership2032.lean.txt",
+      "sha256": "8CBE9822DD37120EF37439AE7119B18ECD737AA314866C470DD8423C1C16240C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersScratchOwnership2032.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricConsumersScratchOwnership2032.log",
+      "sha256": "A1083FD71642BDC565D93B75EF1717CE9468A5D0DE0199F157CDA69A8023FC7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily-2032.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricHeckeFamily-2032.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily-2032.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricHeckeFamily-2032.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricHeckeFamily.lean.txt",
+      "sha256": "25193604FB571F9CD37F44223253F1E38C68C49AD0CD8E7A78149EB907DAED11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily2029a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricHeckeFamily2029a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily2029a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricHeckeFamily2029a.lean.txt",
+      "sha256": "EF77A9DB1BDE8B43AC05D664859E00A88607236B3E09C0EC10B920ABDE700842"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily2029a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneGeometricHeckeFamily2029a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction-2032.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction-2032.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction-2032.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction-2032.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction.lean.txt",
+      "sha256": "CFBBDDD5D8D843A411B387B78BE1751EDEC7FF56FA92C8BA45249AA2970A0E90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction2028a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction2028a.lean.txt",
+      "sha256": "59E2A855F20BC4ADBFBE082B11EF9409AF88EF532A16434D53FD9E591A21712F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction2028a.log",
+      "sha256": "ADA09804A0121334D1D1A8E0BB4194EFDE051093BECD129C15492970739D92A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction2028b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction2028b.lean.txt",
+      "sha256": "4AA3D8F192D1245E3DA8CCDB254A779C6DB3CD3793F237A7B89A617C09EC9D9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneLocalGoodReduction2028b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelGenus-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelGenus-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelGenus.lean.txt",
+      "sha256": "D6CB1FF2901F4ED1335C415F2A93BABC8B82442D0FB45C7AC747D353E7DE52F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus2025a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelGenus2025a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus2025a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelGenus2025a.lean.txt",
+      "sha256": "78984ED7A5AEBD9B9C49F9132E340CAED996AB574D66E15E40651764A0725525"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus2025a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelGenus2025a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex.lean.txt",
+      "sha256": "C3319AA32A134AB63451B52681319C72F5C620FAA9FFF516EAD44D0E137AED0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex2024a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex2024a.lean.txt",
+      "sha256": "789D3D5975E476B7630DC6395032472568A3F2B45C4BD39493C1B4BC1D4434EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex2024a.log",
+      "sha256": "988454E53B138B16EFF8C129F89BC48ED777C465971A7D48FD54A63E242C7853"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex2024b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex2024b.lean.txt",
+      "sha256": "C3319AA32A134AB63451B52681319C72F5C620FAA9FFF516EAD44D0E137AED0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceGammaOneSmallLevelIndex2024b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation.lean.txt",
+      "sha256": "1596927BA82ADC4D70A4EB5C3BA1A9A6C0966DF0F8DF92ED86794965A23B14F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation2026a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation2026a.lean.txt",
+      "sha256": "037D4C7A36EE880963B799A2724363C4ABA79FE8D6F5688E90E9C30D58355739"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation2026a.log",
+      "sha256": "79DB4634F3951368F9FFF676A25D8CC4E058338ADA5DDD068E80847F0FAA404D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation2026b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026b.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation2026b.lean.txt",
+      "sha256": "66FA4FFA8C3DB21838E9CED3DCBB58ADF0AAF10AD4B0C393B9D237A7082CD8D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGammaOneGenusPreservation2026b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationAudit1.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationAudit1.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationAudit1.lean.txt",
+      "sha256": "416193F505F72400262108A0433ACBAD3845F4BAA01520EC747189534BD76D01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationAudit1.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationAudit1.log",
+      "sha256": "A41F8B66ECF4EBFBC3FBE25EDCC1FAE5399E7488FBE9875FD23A584A26274B32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationDependencyAudit1.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationDependencyAudit1.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationDependencyAudit1.lean.txt",
+      "sha256": "4A1C17D756B5BB063DDE418002077CF21FF257CF63A5AEDE9F142681F9EFEA6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationDependencyAudit1.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationDependencyAudit1.log",
+      "sha256": "2B04AF11B3B7099EF969985C5EEAD452DF279D7F43AA536E0235F6263CBD8F13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationScratchOwnership2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationScratchOwnership2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationScratchOwnership2027.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationScratchOwnership2027.lean.txt",
+      "sha256": "28DE2063BC60EE55CF5B84013EE8F90587E6FB6E7415162689B132E3CBE7D2BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusPreservationScratchOwnership2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalGenusPreservationScratchOwnership2027.log",
+      "sha256": "7020EE674005B50F1FC64D47F18DD0EB3FE11A19E93C358F6EB81444216666EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalLargeLevelGenusLower-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalLargeLevelGenusLower-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalLargeLevelGenusLower.lean.txt",
+      "sha256": "AE6D895210FD60AF64B688383B4A700521975DFA24BCF97A8CDF06EFBAF30C1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower2023a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalLargeLevelGenusLower2023a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower2023a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalLargeLevelGenusLower2023a.lean.txt",
+      "sha256": "D5841BB6D3ACBE514E4578EC36E6085C3FA945A172E049452FCC09C7B96B7383"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower2023a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalLargeLevelGenusLower2023a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalResidueHurwitz-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalResidueHurwitz-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalResidueHurwitz.lean.txt",
+      "sha256": "0253932B0F648B904DC24E6D3465C79630178FBAE817F93E7E45CB795AF5D243"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz2018a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalResidueHurwitz2018a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz2018a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalResidueHurwitz2018a.lean.txt",
+      "sha256": "05E21D310EA3A85CBB4F4F99C2C669FD97C4F5E6BEB54A060F26182F10FF92E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz2018a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalResidueHurwitz2018a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusCriterion-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusCriterion-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusCriterion.lean.txt",
+      "sha256": "72B02C8C05D24913AB512887802B0EDB1B6C9DD53756D2AE36A84FB8E977A393"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion2021a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusCriterion2021a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion2021a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusCriterion2021a.lean.txt",
+      "sha256": "19E547DD4B86B7872AC196F1ED38DFBA63E7B74F94D0276CCDE32FA0A091E30C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion2021a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusCriterion2021a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusLower-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusLower-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusLower.lean.txt",
+      "sha256": "5FD58BF8978E632B5F2628B07643F425E927C791052202FB0484B2B7691AE028"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower2022a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusLower2022a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower2022a.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusLower2022a.lean.txt",
+      "sha256": "A22465AC8E040A5B21CCAF7307D104FC440C799B4D053816EF95AC0654209CD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower2022a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalTameGenusLower2022a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower-2027.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower-2027.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower-2027.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower-2027.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower.lean.txt",
+      "sha256": "3118AFCC07B81A2DBB075C69834959755986784CA2BBBE32E2E81DE35FDA2663"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019a.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019a.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019a.lean.txt",
+      "sha256": "60C969E0CF81E27C5463DE85C7ED7DC798A8E616797FCA4E9235F43CECB2458C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019a.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019a.log",
+      "sha256": "BF43C311B84505C90BEE3DE682080629E215E38F8B9239EE557EB561CBDA4EE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019b.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019b.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019b.lean.txt",
+      "sha256": "D6E3956AA64233E5B2AD248735B96028A9372370D971E5F100F8812A24FF06E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019b.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019b.log",
+      "sha256": "F40C5B33FD4BCB887855E8A347E1A60CC355F5675EDF55FB19332EE1C5330403"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019c.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019c.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019c.lean.txt",
+      "sha256": "E18FE974B18D65F5E2EDB9F3BADDBF1026E2834D44A5274111234AA4E8A1396D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019c.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019c.log",
+      "sha256": "14D5C19E4CC5E47CCA0F8DFCCCC26BD61FE7B561EE7FEC726C83B5D38EDB3826"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019d.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019d.lean.txt",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019d.lean.txt",
+      "sha256": "FCD88E583C4BB3CED790D7C5056CDEE594FF6D1DC54A0E876D510C22F62D771A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019d.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019d.log",
+      "sha256": "FE9223C1E41E4B7027778AD48B34C4D8D51C16536C51E0F60FDC216B118AFE1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019e.exit",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019e.lean",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019e.lean.txt",
+      "sha256": "F6C241C10B3A02E66AA93EBDBEF89E3EAC163FD1E518DFD3911A12FC6BE3962B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019e.log",
+      "path": "Tools/original-genus-consumers-20261116-2037/SourceOriginalWildGenusLower2019e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gammaone_genus_comparison_2014.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/audit_gammaone_genus_comparison_2014.ps1",
+      "sha256": "B7E459D4F72C7C8DD09641785FE3796D4B0A13B594636D8BB0F81B21B8F4C553"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gammaone_geometric_consumers_2032.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/audit_gammaone_geometric_consumers_2032.ps1",
+      "sha256": "25CA95CEE69FD9361162E802BE63610C108ED1E65DA0BAB62F83EC3A1D7E04AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gammaone_geometric_consumers_2032b.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/audit_gammaone_geometric_consumers_2032b.ps1",
+      "sha256": "692BD53FB696A289BB28671027B294B718D78368DAF8E12CF1829A10C27A1CBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_genus_preservation_2027.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/audit_original_genus_preservation_2027.ps1",
+      "sha256": "3BB81B5F3EB003824CE4A6D0742ADEB60393BD6D93442204B3FC20709CC2EED6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gammaone_genus_comparison_canonical_2014.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/build_gammaone_genus_comparison_canonical_2014.ps1",
+      "sha256": "4B4AE4B5BE6DF22B9A848D93E30A43140C41D1D4EC0C7BDA27E7E09534F499DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gammaone_geometric_consumers_canonical_2032.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/build_gammaone_geometric_consumers_canonical_2032.ps1",
+      "sha256": "A9F7AD0BEE8B2B1D71DAA65BB4E13915B3B2381F9F3E1293A2726F421797FD8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_original_genus_preservation_canonical_2027.ps1",
+      "path": "Tools/original-genus-consumers-20261116-2037/build_original_genus_preservation_canonical_2027.ps1",
+      "sha256": "9EF027F601E0678486566EC0C2E5E42113C3E964CB7B28D0B9501AAA283937E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gammaone-genus-comparison-versions-2014.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/gammaone-genus-comparison-versions-2014.json",
+      "sha256": "853950BADFBC850FFFF66DFDB04293BF4828C6AF17D6FABA798580557A8DFF51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gammaone-geometric-consumers-versions-2032.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/gammaone-geometric-consumers-versions-2032.json",
+      "sha256": "6C9554ABCDF45A2650AAF05138B9D23ED361DA58C12B3A87B652E0F1718DC6EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-genus-consumers-promotion-route-2037.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/original-genus-consumers-promotion-route-2037.json",
+      "sha256": "D3BC89C165A8B6306460C5E4CB9E80B030B1E35F3B0E4968F4E8D25C3A8C9027"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-genus-preservation-audit-selection-2027.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/original-genus-preservation-audit-selection-2027.json",
+      "sha256": "3D6F550E8B50E345FBAADF2F167878121C4C367F48CB26F3B8C7625750DFED95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-genus-preservation-versions-2027.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/original-genus-preservation-versions-2027.json",
+      "sha256": "FAC77C8924D74034E8DE283B5DA04A4101807CB891888BEBD302F8BFD7DC1050"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gammaone_genus_comparison_audit_2014.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/prepare_gammaone_genus_comparison_audit_2014.py",
+      "sha256": "DA9440701D492BF60053CC2AB0385F4FAA0C975DF5BAA45F59239F75DAE7476D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gammaone_geometric_consumers_audit_2032.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/prepare_gammaone_geometric_consumers_audit_2032.py",
+      "sha256": "25FE4CDB43E90A49CB6BE126609F0B760CC781285B0E2FFF22EDC3C7CC3AB27E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_genus_preservation_audit_2027.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/prepare_original_genus_preservation_audit_2027.py",
+      "sha256": "09F00FDD9DD8630865348491EFD6146428D1013508CF510BC554196F844C0026"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gammaone_genus_comparison_2014.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/record_gammaone_genus_comparison_2014.py",
+      "sha256": "4C25B8771FE2ECF57EE94289E409CB4CF1CCA4CD1307BC512FB116A9E387967E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gammaone_geometric_consumers_2032.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/record_gammaone_geometric_consumers_2032.py",
+      "sha256": "3F40AC3E9E2BA04BD8EB3269143808E17579BA8076F2178D3A1727953CD67CD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gammaone_geometric_consumers_2032b.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/record_gammaone_geometric_consumers_2032b.py",
+      "sha256": "95CBEEBF036022CE4B0F5D664CCCFA5262E83B8AE01455484E27F3F32EB7FF73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_genus_preservation_2027.py",
+      "path": "Tools/original-genus-consumers-20261116-2037/record_original_genus_preservation_2027.py",
+      "sha256": "B3CFB40EB4EA7CB069FC2B89DBC88AA98108204292ACBE3BB58C299C03ED5E75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-genus-comparison-1-audit-config.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-genus-comparison-1-audit-config.json",
+      "sha256": "86093339D7FB61042EB83A5281DA9168902BC67168C90467092541DF18735326"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-genus-comparison-1-reuse-review-20261116.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-genus-comparison-1-reuse-review-20261116.json",
+      "sha256": "7B73835B1292576CB2F4E1266C2706224D3E083AE46BAEB8E42AD846FABD044C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-genus-comparison-1-scratch-receipt.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-genus-comparison-1-scratch-receipt.json",
+      "sha256": "F7B118B5905BD9106EAA6AB219E4D4637367164771F8BB5F582FDB4F66ED06F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-genus-comparison-audit-route-2014.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-genus-comparison-audit-route-2014.json",
+      "sha256": "C32F988F3D750E1B0EF3DD0B8943194A312B071431DD9ABDBED7E2CE06DC6DA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-geometric-consumers-1-audit-config.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-geometric-consumers-1-audit-config.json",
+      "sha256": "157E3857C1B615DA3D2DF14B5A9EAE61C458066E372C2722F4E07F853289EB5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-geometric-consumers-1-reuse-review-20261116.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-geometric-consumers-1-reuse-review-20261116.json",
+      "sha256": "966094735389577DAA3885A90AAF2398CC3B7ADA3C660131799E701716F633A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-geometric-consumers-1-scratch-receipt.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-geometric-consumers-1-scratch-receipt.json",
+      "sha256": "A1C5475B9543910A3A85FE55E4ACF8397F457469A82E6A7536A0C6D95D2AB1E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-geometric-consumers-1b-audit-config.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-geometric-consumers-1b-audit-config.json",
+      "sha256": "33A18B890F4DFE9DCF9BDC484A4B04E45410498806725CAB081E50DC36F897DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-geometric-consumers-audit-route-2032.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-gammaone-geometric-consumers-audit-route-2032.json",
+      "sha256": "6675341174098ACC395B396B05D12F691306CF8F9E8267B7B757E778FB1EA4F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-genus-preservation-1-audit-config.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-original-genus-preservation-1-audit-config.json",
+      "sha256": "9951FB20E98F8E7ED93C06E0DA5CEFD085E8A5FA6A2F7D13C0114A8E52160C2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-genus-preservation-1-reuse-review-20261116.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-original-genus-preservation-1-reuse-review-20261116.json",
+      "sha256": "320FC41588560F099645ADFFA63CA0F6F9C40F81BF0DFAED52639FC6E0137E1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-genus-preservation-1-scratch-receipt.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-original-genus-preservation-1-scratch-receipt.json",
+      "sha256": "281E1B1B28C1E520B5C7BEC13D8495B4C1942066C83C9F7DEC30CAB625274D3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-genus-preservation-audit-route-2027.json",
+      "path": "Tools/original-genus-consumers-20261116-2037/source-original-genus-preservation-audit-route-2027.json",
+      "sha256": "1FC368657F4C437043003CC61E7238F106B331C011A22529C05A0423E2780F4A"
+    }
+  ]
+}

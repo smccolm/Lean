@@ -1,0 +1,60 @@
+import SourceGammaOnePrimitiveCuspBoundary
+
+/-! DUB-17/18 -> all-weight association -> actual Gamma1 quotient
+character -> primitive boundary Hecke action. Each positive parabolic
+element is conjugate inside the original group to an integer power of
+one of the finite primitive cusp generators. Thus every term of the
+native cyclic Hecke trace has genuine integer boundary coordinates. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (M : ℕ)
+
+theorem trace_two_conjugate_primitiveCuspGenerator (γ : Gamma1 M)
+    (hγ : γ.val.val.trace = 2) :
+    ∃ (q : SL(2, ℤ) ⧸ Gamma1 M) (j : ℤ) (η : Gamma1 M),
+      γ = η⁻¹ * primitiveCuspGenerator M q ^ j * η := by
+  obtain ⟨δ, h, he⟩ := SourceParabolic.exists_conj_T_zpow_of_trace_eq_two hγ
+  let g := δ⁻¹
+  let q : SL(2, ℤ) ⧸ Gamma1 M := g
+  have hfix : ModularGroup.T ^ h • q = q := by
+    change ((ModularGroup.T ^ h * g : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) = q
+    apply QuotientGroup.eq.mpr
+    apply (Gamma1 M).inv_mem_iff.mp
+    have hm := γ.property
+    rw [he] at hm
+    simpa only [g, mul_inv_rev, inv_inv, mul_assoc] using hm
+  have hd : (primitiveCuspWidth M q : ℤ) ∣ h :=
+    MulAction.zpow_smul_eq_iff_minimalPeriod_dvd.mp hfix
+  obtain ⟨j, hj⟩ := hd
+  have hg : q.out⁻¹ * g ∈ Gamma1 M := QuotientGroup.eq.mp (Quotient.out_eq' q)
+  let η : Gamma1 M := ⟨q.out⁻¹ * g, hg⟩
+  refine ⟨q, j, η, ?_⟩
+  apply Subtype.ext
+  rw [he]
+  change δ * ModularGroup.T ^ h * δ⁻¹ =
+    (q.out⁻¹ * g)⁻¹ *
+      (q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out) ^ j * (q.out⁻¹ * g)
+  have hp : (q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out) ^ j =
+      q.out⁻¹ * ModularGroup.T ^ h * q.out := by
+    have hh := conj_zpow q.out⁻¹ (ModularGroup.T ^ primitiveCuspWidth M q) j
+    simpa only [inv_inv, ← zpow_natCast, ← zpow_mul, ← hj] using hh
+  rw [hp]
+  dsimp only [g]
+  group
+
+theorem trace_two_character_primitive_coordinates (γ : Gamma1 M)
+    (hγ : γ.val.val.trace = 2) :
+    ∃ (q : SL(2, ℤ) ⧸ Gamma1 M) (j : ℤ),
+      ∀ {A : Type} [AddCommGroup A] (φ : Additive (Gamma1 M) →+ A),
+        φ (Additive.ofMul γ) = j • φ (Additive.ofMul (primitiveCuspGenerator M q)) := by
+  obtain ⟨q, j, η, he⟩ := trace_two_conjugate_primitiveCuspGenerator M γ hγ
+  refine ⟨q, j, ?_⟩
+  intro A _ φ
+  rw [he]
+  simp only [ofMul_mul, ofMul_inv, ofMul_zpow, map_add, map_neg, map_zsmul]
+  abel
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

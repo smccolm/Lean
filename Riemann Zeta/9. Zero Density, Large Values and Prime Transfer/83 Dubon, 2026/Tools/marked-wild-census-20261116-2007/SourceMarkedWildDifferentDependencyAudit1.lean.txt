@@ -1,0 +1,35 @@
+import SourceMarkedEmbeddingSignKernel
+import SourceMarkedOriginalNormalField
+import SourceMarkedOriginalNormalFieldTwo
+import SourceMarkedOriginalNormalFieldThree
+import SourceMarkedOriginalLocalDifferentials
+import SourceMarkedOriginalWildDifferent
+import SourceMarkedOriginalWildDifferentTwo
+import SourceMarkedOriginalWildDifferentThree
+import Mathlib.Tactic
+
+open Lean
+
+private def runMarkedWildDifferentDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve, `Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six]
+  let localModules : Array Name := #[`SourceMarkedEmbeddingSignKernel, `SourceMarkedOriginalNormalField, `SourceMarkedOriginalNormalFieldTwo, `SourceMarkedOriginalNormalFieldThree, `SourceMarkedOriginalLocalDifferentials, `SourceMarkedOriginalWildDifferent, `SourceMarkedOriginalWildDifferentTwo, `SourceMarkedOriginalWildDifferentThree, `SourceMarkedOriginalOfJChart, `SourceMarkedOriginalFullTorsionChart1952a, `SourceMarkedOriginalAlgebraicChart1948d, `SourceMarkedOriginalNaturalChart1938b, `SourceMarkedChartOriginalStabilizerEquality1932b, `SourceMarkedChartOriginalSignOrbit1928a, `SourceMarkedChartOriginalDiamond1923b, `SourceMarkedChartOriginalStabilizer, `SourceMarkedChartOriginalConstruction, `SourceMarkedChartCoordinateEmbedding, `SourceMarkedChartResidueDegree, `SourceMarkedChartEmbeddingBound, `SourceMarkedChartDescendedPoint, `SourceMarkedChartEqualJTransfer, `SourceTateOriginalJCoordinate, `SourceTateEisensteinInvariants, `SourceTateIntegralCurve, `SourceTateIntegralCoefficients, `SourceTateA4Series, `SourceMarkedChartVariableInvariants, `SourceToricMarkedPointCoordinates, `SourceToricExactOrderPoint, `SourceToricFieldDivisionIdentities, `SourceToricResidueMultiplicationIdentity, `SourceToricResidueDivisionIdentity, `SourceToricLocalizedSeries, `SourceToricCoefficientLocalization, `SourceToricComplexSeriesDivision, `SourceToricCuspDivisionIdentity, `SourceToricCuspExpansionHom, `SourceToricAnalyticDivisionRoot, `SourceToricAnalyticTorsion, `SourceToricAnalyticCurve, `SourceTateCoefficientNormalization, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneNormalizedDivisionForm, `SourceGammaOneDivisionDivisorCoefficients, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionToricForms, `SourceToricIntegralCoefficientPolynomials, `SourceToricIntegerFourierTransform, `SourceToricFourierCharacters, `SourceToricIntegerCoefficientFamilies, `SourceToricAnalyticMultiplication, `SourceGammaOneOriginalToricCoordinates, `SourceGammaOneToricCoordinateDiamond, `SourceGammaOneToricOriginalCoordinateValues, `SourceGammaOneToricOriginalCoordinates, `SourceGammaOneToricOriginalRatios, `SourceGammaOneIntegralToricForms, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneToricRatioDiamond, `SourceIntegralDiamondScalarRatioAction, `SourceMarkedChartFieldDescent, `SourceMarkedChartTorsionDescent, `SourceMarkedChartStabilizerInclusion, `SourceMarkedChartInvariantSeparation, `SourceMarkedChartEmbeddingConjugacy1920b, `SourceMarkedChartPointTransport1921a, `SourceMarkedChartDiamondNormalization1922b, `SourceMarkedPointSignTransitivity1927a, `SourceMarkedCyclicGeneratorConjugacy1925b, `SourceMarkedCyclicRootTransitivity1924b, `SourceMarkedTorsionGeneratorUnit1926a, `SourceMarkedTorsionSignClasses1916a, `SourceMarkedChartStabilizerEquality1931b, `SourceMarkedChartStabilizerActions1929e, `SourceMarkedStabilizerIndexComparison1930b, `SourceMarkedTorsionActualCount1918b, `SourceMarkedTorsionSignedIndex1917b, `SourceMarkedSignChartDiamond1937a, `SourceMarkedNaturalSignChart1936a, `SourceMarkedOrbitMap1935a, `SourceMarkedOriginalSeparability1944b, `SourceMarkedRationalPointDescent1947b, `SourceMarkedSeparableEmbeddingDescent1946b, `SourceMarkedSeparableChartValues1945b, `SourceMarkedFullTorsionPointLift1949a, `SourceMarkedChartNormalExhaustion1951a, `SourceMarkedFullTorsionNonempty]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_fixed_of_torsion_sign, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_of_torsion_sign_kernel, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_twelve, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_six, `Dubon2026.SourceFunctionField.MarkedChart.original_j_D_ne_zero, `Dubon2026.SourceFunctionField.MarkedChart.original_j_differentials_finrank, `Dubon2026.SourceFunctionField.MarkedChart.original_positive_place_dCoordGenerates, `Dubon2026.SourceFunctionField.MarkedChart.original_wild_different_of_normal_order_bound, `Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve, `Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable, `Dubon2026.SourceCurve.coordinateEmbeddingFixingField, `Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField, `Dubon2026.SourceCurve.coordinateEmbedding_fixingField_isGalois, `Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField_coordinate, `Dubon2026.SourceCurve.coordinateEmbedding_fixingField_fixed, `Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_inertia_sign, `Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation, `Dubon2026.SourceCurve.Place.normal_coordinate_order_dvd_of_inertia_kernel, `Dubon2026.SourceCurve.Place.rational_wild_different_bound, `Dubon2026.SourceCurve.Place.ordDifferential_map_of_ramificationIndex_one_all_char]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE MARKED WILD DIFFERENT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the original Gamma1 different bounds fourteen and seven. Inertia sign kernels construct the normal fields; local differential hypotheses are proved. Wild fiber census, small levels and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runMarkedWildDifferentDependencyAudit

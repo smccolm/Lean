@@ -1,0 +1,74 @@
+[
+  {
+    "version": "SourceGammaOneBoundaryWordKernel2040c",
+    "module": "SourceGammaOneBoundaryWordKernel",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040c.lean",
+    "originalSha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564",
+    "canonicalSha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourcePrimitiveH1SquareCongruence2080a",
+    "module": "SourcePrimitiveH1SquareCongruence",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence2080a.lean",
+    "originalSha256": "2FE6C56E9BF31FCFC506A6FEFB563073652D44D88715E75CFC99854F0AB65EE6",
+    "canonicalSha256": "A2F05A623196AFBE03294F9C9EF24CA2A9BEE380E6677EA92B531BAC0AE11B4E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOperatorRangeCharacter2086a",
+    "module": "SourceOperatorRangeCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter2086a.lean",
+    "originalSha256": "6D1891A68FBE08ACBA656C8B6971A95844A3C7C9E423B8600DAD96A7C1C026B9",
+    "canonicalSha256": "8C931C644646EDFC78750608E12AF63022096EB1A5A4B92A9B2BB4FE2A457B22",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneBoundaryQuotient2089c",
+    "module": "SourceGammaOneBoundaryQuotient",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient2089c.lean",
+    "originalSha256": "F2746945BBE1FA6751C0D505D1A30633703A37BE0AD068FD4838431AE99CEDDA",
+    "canonicalSha256": "F2746945BBE1FA6751C0D505D1A30633703A37BE0AD068FD4838431AE99CEDDA",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneExactJointRing2090a",
+    "module": "SourceGammaOneExactJointRing",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing2090a.lean",
+    "originalSha256": "971FC6F395E27871E2ACC7E552AF378320A18970D311ED5130950E5BADDA9888",
+    "canonicalSha256": "DCCC5FBD7A6C1D6196264DF2679F506B86C6C74D65C2C2495521DFE297991057",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneExactJointSquare2091a",
+    "module": "SourceGammaOneExactJointSquare",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare2091a.lean",
+    "originalSha256": "10313951763B5BAEE78FD4098B735323EE4A718B683900422685793E19326A12",
+    "canonicalSha256": "51D29098CB2189757D49300B685BF6F45743010E8933EE538E150A3EE5BAA7D5",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneExactJointFinite2094c",
+    "module": "SourceGammaOneExactJointFinite",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite2094c.lean",
+    "originalSha256": "3F1F75A920066EB6A82B80A93C1F9412F0C4A46F2F8C1909CF564C195F4E2E89",
+    "canonicalSha256": "27C6C3DADC777A254519CAE3E8535D19DF008F1F97C33C1C33C584F57BF360D6",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneExactJointCharacter2092a",
+    "module": "SourceGammaOneExactJointCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter2092a.lean",
+    "originalSha256": "115D955213A91E8ED4AD1F9C05A7F06BE113138A7EF7702E096F167CE611F155",
+    "canonicalSha256": "96483EC691472B9A07A74A5CF90202768E088E766A910595913482CBFFB867F2",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneGeometricExactJointCharacter2093c",
+    "module": "SourceGammaOneGeometricExactJointCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter2093c.lean",
+    "originalSha256": "512C541339A35633780A894D75BDE4A2D0FD618AED72D137831C885A740ACC4F",
+    "canonicalSha256": "45573A1412307AAE9C2D43A57CB78D2F0A826A33B63BBBDC33B6DB1180667B8B",
+    "mathematicalBodyIdentical": true
+  }
+]

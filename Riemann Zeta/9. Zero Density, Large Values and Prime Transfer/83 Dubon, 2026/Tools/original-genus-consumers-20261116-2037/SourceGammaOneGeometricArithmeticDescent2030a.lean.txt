@@ -1,0 +1,56 @@
+import SourceGammaOneLocalGoodReduction2028b
+import Dubon2026.SourceGammaOneTwistedArithmeticDescent
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+arithmetic descent of the actual homogeneous-valued Tate action. Native
+unramified descent is reused, with both original local geometric equalities
+proved at every prime away from Q*p. No degree, genus, inertia-triviality,
+or arithmetic quotient factorization is assumed. Character realization
+and the later association and continuation obligations remain separate. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+open scoped NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+private theorem prime_away_power_level (Q p n q : ℕ) (hq : q.Prime)
+    (haway : ¬ q ∣ Q * p) : ¬ q ∣ Q * (p ^ (n + 1)) ^ 2 := by
+  intro h
+  rcases hq.dvd_mul.mp h with hQ | hp
+  · exact haway (dvd_mul_of_dvd_left hQ p)
+  · exact haway (dvd_mul_of_dvd_right (hq.dvd_of_dvd_pow (hq.dvd_of_dvd_pow hp)) Q)
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+attribute [local instance] specializationResidueAlgebra
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem binaryArithmeticTateGaloisRep_arithmetic_descent :
+    let B := Module.End (ZMod N) (T →ₗ[ℤ_[p]] V)
+    letI : TopologicalSpace B := ⊥
+    ∃ η : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →ₜ* Bˣ,
+      ∀ σ, (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) σ)).val =
+        binaryArithmeticTateGaloisRep Q p n w σ := by
+  apply binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq Q p n w
+  · intro q hq haway e
+    exact (gammaOne_local_degree_and_genus_eq M q hq
+      (prime_away_power_level Q p n q hq haway) e).1
+  · intro q hq haway e
+    exact (gammaOne_local_degree_and_genus_eq M q hq
+      (prime_away_power_level Q p n q hq haway) e).2
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

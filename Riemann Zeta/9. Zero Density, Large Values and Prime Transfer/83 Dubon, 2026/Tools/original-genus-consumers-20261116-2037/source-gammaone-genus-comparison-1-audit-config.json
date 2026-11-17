@@ -1,0 +1,50 @@
+{
+  "modules": [
+    "SourceGammaOneConormDivisorSpaces",
+    "SourceGammaOneConormDimension",
+    "SourceGammaOneArithmeticGenus",
+    "SourceGammaOneArithmeticGenusBound"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_span_of_regular_off_image",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_linearIndependent",
+    "Dubon2026.SourceCurve.separating_coordinate_degree_dimension_maximum",
+    "Dubon2026.SourceCurve.separating_coordinate_index_zero_eq_maximum",
+    "Dubon2026.SourceCurve.finite_coordinate_finrank_regular_eq_genusFF",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneConormDivisorSpaces": "SourceGammaOneConormDivisorSpaces-2014",
+    "SourceGammaOneConormDimension": "SourceGammaOneConormDimension-2014",
+    "SourceGammaOneArithmeticGenus": "SourceGammaOneArithmeticGenus-2014",
+    "SourceGammaOneArithmeticGenusBound": "SourceGammaOneArithmeticGenusBound-2014"
+  },
+  "separatelyAxiomChecked": []
+}

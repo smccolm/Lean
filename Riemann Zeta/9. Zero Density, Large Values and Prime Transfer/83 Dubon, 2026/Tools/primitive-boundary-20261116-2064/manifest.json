@@ -1,0 +1,499 @@
+{
+  "recordedUTC": "2026-11-17T01:06:48.501257+00:00",
+  "files": [
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/audit_gammaone_finite_boundary_2059.ps1",
+      "sha256": "1A94BD8B5523ECB054C5575A779D55926433614C1C3281D6146B838B970BCED4"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/audit_gammaone_primitive_boundary_2050.ps1",
+      "sha256": "B56A07F793D39E371D70609509572634B9272DD7BC77EB53C79E60BEFCBDD89F"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/audit_gammaone_primitive_boundary_2055.ps1",
+      "sha256": "8C873A3E18BE3655C334DFF790410595708327A78703696FA7B60836EA360410"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/build_gammaone_finite_boundary_canonical_2059.ps1",
+      "sha256": "E0AABDC21460033A6913634E657CBD2CE6F6BE0A653BF0CABC089779EE0EC4CD"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/build_gammaone_primitive_boundary_canonical_2050.ps1",
+      "sha256": "542F19332FE2DBFDE1088305A2D3561718244F8751AE47E3539D17A08DE6C41B"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/build_gammaone_primitive_boundary_canonical_2055.ps1",
+      "sha256": "361F761A9D4E308ABDD3200E76C38CE84B63EA6A276D059F2E88896417425B59"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/gammaone-finite-boundary-versions-2059.json",
+      "sha256": "69008C57FF8A553DE20074D9508558F979ACF5952413E231F4DC546F3E045871"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/gammaone-primitive-boundary-versions-2050.json",
+      "sha256": "4040072CE937B570300932903D8C80EB55BA0274DC0CBB7239AF3E73B0EF1B18"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/gammaone-primitive-boundary-versions-2055.json",
+      "sha256": "7AD9607D6C716323706D9601400CF85BD1014EE083FA3BB1272E9495F8545A95"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/prepare_gammaone_finite_boundary_audit_2059.py",
+      "sha256": "CF52E2604FD99E68A1F6A8B1D50B63A4C75FB33D544CE2693FC80F42CF14BFBF"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/prepare_gammaone_primitive_boundary_audit_2050.py",
+      "sha256": "AB1BE9C665700B9D126808ED4F9231BD9B2323E1FB7665AD8CD02B07F8DE1CD1"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/prepare_gammaone_primitive_boundary_audit_2055.py",
+      "sha256": "A1F0985F31EB1624732B413B480F2C75AB9B487D326790965946C968EA6B5AC0"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/primitive-boundary-doc-repair-2055.json",
+      "sha256": "60DBC6FBE1139FE9353EBF3CDF5D5712E90A52BCD5DAE7373A51A06D73F07D1A"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/primitive-cusp-boundary-route-2047.json",
+      "sha256": "03D8938550E17EBAC036A32F4C5166BC5E8614E49C179621200F4FBFCBCBF329"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/record_gammaone_finite_boundary_2059.py",
+      "sha256": "6E7C4FF6F5E5F133A97C54B49F193839CA62D7E5183DC35B42E5D44F6959FC82"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/record_gammaone_primitive_boundary_2050.py",
+      "sha256": "636275FB408593409035B7322AADAF04741D2A93E9DB70ED12C479DC266CCDEE"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/record_gammaone_primitive_boundary_2055.py",
+      "sha256": "2953415443B6E01E94BA8686B2A21B62E8EC068DE0906171FB3E2B492034ABBF"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-finite-boundary-1-audit-config.json",
+      "sha256": "B011B463E1095B6A1FD2EA911FBFA4990EB941775DFB6B8FF44CC5EB7646A597"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-finite-boundary-1-reuse-review-20261116.json",
+      "sha256": "28624D55AC50B1F0F373894A2DD8ABF12D7EC8A5AD23AD9065BFD896B99C8BCC"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-finite-boundary-1-scratch-receipt.json",
+      "sha256": "069861514790B25EC3C7F8B717B1694CE80BFD086A7DF1F5D6E4D37DFD79D6BB"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-finite-boundary-audit-route-2059.json",
+      "sha256": "ACAFB8946E573F3C0878487A5E013ECF5438238A197EB4FDEB56C993BDAA043C"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-primitive-boundary-1-audit-config.json",
+      "sha256": "67DA73D900A47524C309EE1B9CCA95B50206D52368FDC64AE1C8EFE19E626F78"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-primitive-boundary-2-audit-config.json",
+      "sha256": "DB1B0E30CDD1145A4C3A74BE28FB2EEF0E74FE33A357E0A2E8408550ED993859"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-primitive-boundary-2-reuse-review-20261116.json",
+      "sha256": "5B4AB0F266408410D55860BBAF4082D6EA38C047BB972EC3F1075B5C4CF60E43"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-primitive-boundary-2-scratch-receipt.json",
+      "sha256": "81CAB661BDEBDB2EB5912340B3C9F190DCD7B4591FA24A986D16B14D8AACB120"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-primitive-boundary-audit-route-2050.json",
+      "sha256": "39E579A821853312D9839A98F9597D1AEE7E8BF3314110309FBD805B321194E9"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/source-gammaone-primitive-boundary-audit-route-2055.json",
+      "sha256": "B1C9A7FFFD83DC88AD3ABEA6D682953A1EA5BD700E6B0875C1E88DFF24F34069"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneBoundaryHeckeTrace-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneBoundaryHeckeTrace-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneBoundaryHeckeTrace.lean.txt",
+      "sha256": "A9D2EA3D8FE00D6ECD1BE108B3341A9EEF6CF1FBCC862738E9EE9A208D947ACC"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneBoundaryHeckeTrace2053a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneBoundaryHeckeTrace2053a.lean.txt",
+      "sha256": "3A4681AA0F063A1DF6BBCCDD9F0CA5765E896C6E22B4980781C6A9A70385B474"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneBoundaryHeckeTrace2053a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary-2050-retained.lean.txt",
+      "sha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary.lean.txt",
+      "sha256": "853BBF7109AF455739DED5B223E15A9A7F5D420D06933056CA872A7DC26BA74C"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048a.lean.txt",
+      "sha256": "C1CB8211650E452A049F3E8C95C19A00FAF9E64355723FF93AA4779F0B4C5763"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048a.log",
+      "sha256": "6CB4ED4A2E2FD0D2E5697BBA8B9852DFC96B8F76A474BD9D9E062C786A04CA58"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048b.lean.txt",
+      "sha256": "2330ED8A40C57A9D6CC1F3C1154528FA92A4ADFB9FDC17F41900E20A262B4E5A"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048b.log",
+      "sha256": "190E6D92175357EB9CEB049300ABDD50C79F6AA60878234AEA76EF1A485BD735"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048c.lean.txt",
+      "sha256": "4B3E61C4DDAE758AA9C2E52C0731E57E59BEAD398852343F8C7AD920936F1F00"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBinaryBoundary2048c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryAudit1.lean.txt",
+      "sha256": "6EFC86DABF2DEDEEE3CEED28AA4C8762D68BED0C9D5436AC0433C96558F309B4"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryAudit1.log",
+      "sha256": "5439468102F3B53456D9A04450DF0B9E6F35E72FE2710D298AE6B2C0662AACC3"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryCharacter-2059.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryCharacter-2059.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryCharacter.lean.txt",
+      "sha256": "884FF86074F456D6D3C9A3E6377B46231C3D1994DD95BBB40BAB3D2D2C1F3993"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryCharacter2058a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryCharacter2058a.lean.txt",
+      "sha256": "82B2986A2E5AB84E43C001AC2DE35A098DD079ECE6C47FF39C17FA0A2160D5EA"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryCharacter2058a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryDependencyAudit1.lean.txt",
+      "sha256": "A7CED73258A98818C632F0A5BD5A39E14995599927DD161BC371417141E57E81"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryDependencyAudit1.log",
+      "sha256": "F28851436A800879388F72034A33F9473B5928001E8F72609FBD60C6D98FF39D"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryScratchOwnership2059.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryScratchOwnership2059.lean.txt",
+      "sha256": "4757D05BC5E31BB774038208D17450E21BA2114F116B3DC9AB93373791EB75E7"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOneFiniteBoundaryScratchOwnership2059.log",
+      "sha256": "31FA445C5D6B69321B118D232A151A036F5C08593FA3B6F3BD41C5590C0D1501"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryAudit1-2050-retained.lean.txt",
+      "sha256": "B9337F917908D0E172E09E073A6191B41A723E2FD6A282A30B0C09D6B236B001"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryAudit1.log",
+      "sha256": "11E20746C2BB1873DE0691BCE96C8B5444971164960295B844A47F0F92E2A712"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryAudit2.lean.txt",
+      "sha256": "4C20350FC58A876598FD062A99DB53D34A3FE37BE4AD74371062CF535DF258F5"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryAudit2.log",
+      "sha256": "849CC616B115981DE908ADBA4B905710AB25FA7EABCCE24FE66FD0303B1A24C4"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryDependencyAudit2.lean.txt",
+      "sha256": "C01F3C5A6EC6D5CC2F5DD8FB55B10712C10BE063D9E7EF59E7273A821F9A23AB"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryDependencyAudit2.log",
+      "sha256": "878EA79685A115751DD4072276D36FFDFDD6C759D1EDFE77EDD90517BE798718"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryHeckeRows-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryHeckeRows-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryHeckeRows.lean.txt",
+      "sha256": "BE33697AE201D914CBD1048C59A8922F8C2EA8A52809D38B4F4161D17D0DC852"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryHeckeRows2054a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryHeckeRows2054a.lean.txt",
+      "sha256": "719807F1B27546306397C659D5491EBDE60554E8F4E6921257B6452F4BFBADC8"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryHeckeRows2054a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOperators-2059.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOperators-2059.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOperators.lean.txt",
+      "sha256": "55D6016408362F4EBE3840FEB6E55CF8B1453C887224B497549694FB7F72295B"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOperators2056a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOperators2056a.lean.txt",
+      "sha256": "223AF7C5F52B47251F6A8D6D282BCF2DB960970FD066FB2177480FE9A9840926"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOperators2056a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOrbit-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOrbit-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOrbit.lean.txt",
+      "sha256": "BF181088605A822D4095ABBB6532E5BBAA7161F819CD72F4E65897A763D3BE6E"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOrbit2051a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOrbit2051a.lean.txt",
+      "sha256": "18A91E77F1CDF177F6F20E1508E4904F5A45C9031AF744811438391EA8ACAEE9"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryOrbit2051a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryScratchOwnership2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryScratchOwnership2055.lean.txt",
+      "sha256": "04E5D30AE79FD6325A45829172A2DA31E00FA0B20C4BAAC120A6147CE49EC61B"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryScratchOwnership2055.log",
+      "sha256": "82E51BD368A1A28AB44B355EFC1E9458F072683469A358871D842DC442EE0FC4"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryWords-2059.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryWords-2059.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryWords.lean.txt",
+      "sha256": "9A463B7FD79E4BA4396B0663D351B3371F1EDE7FCBE8C7913BF02ACB4DEB718F"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryWords2057a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryWords2057a.lean.txt",
+      "sha256": "0695FDB6D6297617B953D947F94B653660A2E8B7857459C7C0B8CBA8AE491582"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveBoundaryWords2057a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary-2050-retained.lean.txt",
+      "sha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary.lean.txt",
+      "sha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047a.lean.txt",
+      "sha256": "B46CE81C55F08F60654A35C2634A15D9FAEAB244D0C4E220DE5E6C87AB9F4FC5"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047a.log",
+      "sha256": "7680101B2F866F8AF3B911F10BC79F7ECA1482B7F0495B57A70D5248E1CAB616"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047b.lean.txt",
+      "sha256": "F311256CE7F5D13BC75ACCB54F66777AA825981306B100FB5581F67DA624505A"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047b.log",
+      "sha256": "324E532161397D954D336719C7152434EE931480EE0173F9C92F6E514C7F9914"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047c.lean.txt",
+      "sha256": "0395B999EF2F7E9000AC782DE9F6874A5B8AC7ADC9579A4A5C13CB8B03780527"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047d.lean.txt",
+      "sha256": "BFCD6A316FED5C4B6157DE911B2A1A31EE68589BF9D136265F352DB0A1414FB9"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspBoundary2047d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates-2055.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates-2055.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates.lean.txt",
+      "sha256": "CD307B600B16192DF71C3AD96B0FCCC46A391D35E14E059065DAE7D7C936091F"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates2052a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates2052a.lean.txt",
+      "sha256": "780F5F882D6B65679C9A21DA4218500838D0EBF3B07A0ECFA2A66E76BBF33CA7"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates2052a.log",
+      "sha256": "157601DD281F7972D77C79E6473E86E3E78F7388F9E65F9CD0ED3DE8FEB4A700"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates2052b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates2052b.lean.txt",
+      "sha256": "CD307B600B16192DF71C3AD96B0FCCC46A391D35E14E059065DAE7D7C936091F"
+    },
+    {
+      "path": "Tools/primitive-boundary-20261116-2064/SourceGammaOnePrimitiveCuspCoordinates2052b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "report": {
+    "path": "Dubon Primitive Boundary Assessment 2026-11-16.md",
+    "sha256": "6B1EB75980E952ED254BB53F57FB8A66537A4BEC7B2DF168E5954D97779F12F7"
+  },
+  "status": "Scratch-verified primitive finite boundary and operator scopes only; production promotion pending. The first scope failed two missing docstrings; exact two-comment repair and fresh full audits are retained. No accepted mathematical body, source theorem or verification condition is weakened.",
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

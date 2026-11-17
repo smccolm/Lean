@@ -1,0 +1,32 @@
+import SourceCurveSeparatingCoordinateGeometry
+import SourceCurveSeparatingCoordinateCanonical
+import SourceCurveSeparatingCoordinateGlobalResidues
+import SourceCurveSeparatingCoordinateResidueDuality
+import SourceCurveSeparatingCoordinateCanonicalDegree
+import SourceCurveSeparatingCoordinateHurwitz
+import SourceCurveSeparatingHurwitzBound
+import SourceCurveSeparatingPoleSums
+import SourceCurveSeparatingHurwitzCuspBound
+import SourceOriginalResidueHurwitz
+import SourceOriginalWildGenusLower
+import SourceCurveSeparatingFiberSums
+import SourceOriginalTameGenusCriterion
+import SourceOriginalTameGenusLower
+import SourceOriginalLargeLevelGenusLower
+import SourceGammaOneSmallLevelIndex
+import SourceGammaOneSmallLevelGenus
+import SourceOriginalGammaOneGenusPreservation
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceCurveSeparatingCoordinateGeometry, `SourceCurveSeparatingCoordinateCanonical, `SourceCurveSeparatingCoordinateGlobalResidues, `SourceCurveSeparatingCoordinateResidueDuality, `SourceCurveSeparatingCoordinateCanonicalDegree, `SourceCurveSeparatingCoordinateHurwitz, `SourceCurveSeparatingHurwitzBound, `SourceCurveSeparatingPoleSums, `SourceCurveSeparatingHurwitzCuspBound, `SourceOriginalResidueHurwitz, `SourceOriginalWildGenusLower, `SourceCurveSeparatingFiberSums, `SourceOriginalTameGenusCriterion, `SourceOriginalTameGenusLower, `SourceOriginalLargeLevelGenusLower, `SourceGammaOneSmallLevelIndex, `SourceGammaOneSmallLevelGenus, `SourceOriginalGammaOneGenusPreservation]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

@@ -1,0 +1,62 @@
+import SourceMarkedOriginalResidueFiberThree1972c
+import SourceMarkedSignFreeOrbits1962c
+import SourceMarkedSignFiberSymmetries
+import SourceMarkedDihedralFiberBound
+import Dubon2026.SourceEllipticCharThreeConjugation
+import Dubon2026.SourceEllipticExceptionalJValues
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-three fiber.
+The native quartic and translation identities give a free six-element
+action on exact-order point sign classes for N greater than three.
+The actual original residue chart is invariant under both generators,
+so six times the j=0 fiber cardinal is at most the signed Gamma1 index. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup SourceCurve SourceEllipticStabilizer
+open SourceEllipticExceptional MarkedTorsion GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+    [CharP (IsLocalRing.ResidueField A) 3]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_six_mul_card_j_zero_fiber_le_of_char_three
+    (h3N : ¬ 3 ∣ N) (hN : 3 < N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    6 * Nat.card {v : Place kk F // 0 < v.ord x} ≤ (plusMinus (Gamma1 N)).index := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  letI : (EA (-1 : kk)).IsElliptic := isElliptic_EA_neg_one_of_char_three
+  have hNK : (N : kk) ≠ 0 := fun h => h3N ((CharP.cast_eq_zero_iff kk 3 N).mp h)
+  obtain ⟨u, hu⟩ := exists_quartic_scaling (K := kk)
+  let α := stabilizerPointEquiv (EA (-1 : kk)) ⟨u, 0, 0, 0⟩ (quartic_change_fixes u hu (-1))
+  let β := charThreeTranslation (K := kk)
+  obtain ⟨g, hg, hneg, hcurve⟩ := exists_original_residue_marked_fiber_of_char_three
+    A N h3N (by omega) x hx
+  obtain ⟨f, hf, hpair, hfa⟩ := exists_signClass_fiber_factor N g hg hneg α
+    (hcurve ⟨u, 0, 0, 0⟩ (quartic_change_fixes u hu (-1)))
+  have hfb := signClass_fiber_factor_invariant N g f hpair β
+    (hcurve ⟨1, 1, 0, 0⟩ char_three_translation_fixes)
+  have hc : Nat.card (SignClasses (EA (-1 : kk)).toAffine.Point N) =
+      (plusMinus (Gamma1 N)).index := by
+    simpa only [WeierstrassCurve.baseChange, Algebra.algebraMap_self, WeierstrassCurve.map_id]
+      using actual_point_signClasses_card (EA (-1 : kk)) N hNK
+  letI : Finite (SignClasses (EA (-1 : kk)).toAffine.Point N) :=
+    Nat.finite_of_card_ne_zero (hc.trans_ne Subgroup.FiniteIndex.index_ne_zero)
+  have ha := signClassesEquiv_square N α (quartic_action_square (-1) u hu)
+  have hb := signClassesEquiv_cube N β charThreeTranslation_quadratic
+  have hbound := six_mul_card_fiber_le_of_free_dihedral
+    (signClassesEquiv N α) (signClassesEquiv N β)
+    (fun s => by simpa only [pow_two, Equiv.Perm.mul_apply, Equiv.Perm.one_apply]
+      using congrArg (fun e => e s) ha)
+    (fun s => by simpa only [pow_succ, pow_two, pow_zero, Equiv.Perm.mul_apply,
+      Equiv.Perm.one_apply] using congrArg (fun e => e s) hb)
+    (signClassesEquiv_conjugation N α β (charThreeTranslation_conjugation u hu))
+    (signClassesEquiv_ne_self_of_square_neg N hN α (quartic_action_square (-1) u hu))
+    (signClassesEquiv_ne_self_of_cubic N hN β charThreeTranslation_quadratic)
+    f hf hfa hfb
+  rwa [hc] at hbound
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

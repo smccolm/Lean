@@ -1,0 +1,35 @@
+import SourceGammaOnePrimitiveHeckeDiamondWords
+import SourceGammaOnePrimitiveJointSquare
+import SourceGammaOnePrimitiveUnitActions
+import SourceGammaOnePrimitiveUnitHecke
+import SourceGammaOnePrimitiveBoundaryQuadratic
+import SourceGammaOnePrimitiveBoundaryGalois
+import SourceGammaOnePrimitiveBoundaryDescent
+import SourceGammaOnePrimitiveJointRing
+import SourceGammaOnePrimitiveJointCharacter
+import SourceGammaOnePrimitiveJointCharacterValues
+import SourceGammaOnePrimitiveBoundaryGaloisWords
+import SourceGammaOnePrimitiveJointGalois
+import SourceGammaOnePrimitiveJointDescent
+import SourceGammaOneGeometricPrimitiveJointCharacter
+import SourceGammaOnePrimitiveJointFrobenius
+import SourceGammaOnePrimitiveBoundaryOperatorCommute
+import SourceUnitQuadraticCommutation
+import SourceGammaOnePrimitiveJointFrobeniusWitness
+import SourceGammaOnePrimitiveJointArithmeticData
+import SourceGammaOnePrimitiveJointArithmeticSystem
+import SourceGammaOnePrimitiveJointCommutativity
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOnePrimitiveHeckeDiamondWords, `SourceGammaOnePrimitiveJointSquare, `SourceGammaOnePrimitiveUnitActions, `SourceGammaOnePrimitiveUnitHecke, `SourceGammaOnePrimitiveBoundaryQuadratic, `SourceGammaOnePrimitiveBoundaryGalois, `SourceGammaOnePrimitiveBoundaryDescent, `SourceGammaOnePrimitiveJointRing, `SourceGammaOnePrimitiveJointCharacter, `SourceGammaOnePrimitiveJointCharacterValues, `SourceGammaOnePrimitiveBoundaryGaloisWords, `SourceGammaOnePrimitiveJointGalois, `SourceGammaOnePrimitiveJointDescent, `SourceGammaOneGeometricPrimitiveJointCharacter, `SourceGammaOnePrimitiveJointFrobenius, `SourceGammaOnePrimitiveBoundaryOperatorCommute, `SourceUnitQuadraticCommutation, `SourceGammaOnePrimitiveJointFrobeniusWitness, `SourceGammaOnePrimitiveJointArithmeticData, `SourceGammaOnePrimitiveJointArithmeticSystem, `SourceGammaOnePrimitiveJointCommutativity]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

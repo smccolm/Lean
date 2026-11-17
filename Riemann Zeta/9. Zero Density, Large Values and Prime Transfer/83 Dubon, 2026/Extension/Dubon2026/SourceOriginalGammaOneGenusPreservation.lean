@@ -1,0 +1,39 @@
+import Dubon2026.SourceOriginalLargeLevelGenusLower
+import Dubon2026.SourceGammaOneSmallLevelGenus
+import Dubon2026.SourceGammaOneResidueGenusUpper
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+Hecke-character realization -> original genus preservation. The large-level
+wild and tame reverse inequalities and the proved small-level genus vanishing
+combine with native degree preservation and specialization upper genus. Thus
+the literal original coefficient residue image has the same source H1 genus
+as the actual arithmetic Gamma1 field at every prime away from the nonzero
+level. No genus, chart, cusp, local-order or differential certificate remains. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open CongruenceSubgroup GammaOne GammaOne.CoefficientReduction SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance (B : IntermediateField kk (LaurentSeries kk)) : Algebra kk B :=
+  B.toSubalgebra.algebra
+
+theorem gammaOne_residue_genus_eq_away_level (hℓN : ¬ ℓ ∣ N) :
+    genusFF kk (residueImage A (Gamma1 N)) =
+      genusFF Qbar (functionFieldOver (Gamma1 N) Qbar) := by
+  have hlo : genusFF Qbar (functionFieldOver (Gamma1 N) Qbar) ≤
+      genusFF kk (qExpFunctionFieldC kk (Gamma1 N)) := by
+    by_cases hN : 3 < N
+    · exact MarkedChart.original_genus_lower_of_three_lt A N ℓ hℓN hN
+    · rw [gamma1_arithmetic_genus_zero_of_le_three N (by omega)]
+      exact Nat.zero_le _
+  have hfield := (gammaOne_degree_and_residueField_away_level A N ℓ hℓN).2
+  have hgen := congrArg (fun B : IntermediateField kk (LaurentSeries kk) => genusFF kk B) hfield
+  apply le_antisymm (gammaOne_residue_genus_le_away_level A N ℓ hℓN)
+  change genusFF kk (residueImage A (Gamma1 N)) =
+    genusFF kk (qExpFunctionFieldC kk (Gamma1 N)) at hgen
+  exact hlo.trans_eq hgen.symm
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

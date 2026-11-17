@@ -1,0 +1,26 @@
+[
+  {
+    "version": "SourceGammaOneBoundaryWordKernel2040c",
+    "module": "SourceGammaOneBoundaryWordKernel",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel2040c.lean",
+    "originalSha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564",
+    "canonicalSha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneBoundaryWordCharacter2041b",
+    "module": "SourceGammaOneBoundaryWordCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordCharacter2041b.lean",
+    "originalSha256": "E42B5E723D9C5D24BF967E09ABA03FC0FC0405C763BC5D99B3CCB07E62BB8AF9",
+    "canonicalSha256": "0B37C7D36CCD552712F43E5CC43D8F251EE4518AD091FEA6007859536C48A011",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneGeometricBoundaryCharacter2042a",
+    "module": "SourceGammaOneGeometricBoundaryCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricBoundaryCharacter2042a.lean",
+    "originalSha256": "21D37A2640809CAAA602FB32CAC2E80F6B2D327B65D835E7BA5D46B1A379799E",
+    "canonicalSha256": "34D01328FF3296B6ADCF56837170F4F4A0C413CC26EF15317E5545AC87F11C18",
+    "mathematicalBodyIdentical": true
+  }
+]

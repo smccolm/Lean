@@ -1,0 +1,72 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-11-17T00:26:00.699147+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceGammaOneBoundaryWordKernel",
+    "SourceGammaOneBoundaryWordCharacter",
+    "SourceGammaOneGeometricBoundaryCharacter"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel.lean",
+      "sha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564",
+      "oleanSha256": "DDFFE8E6FCA03C0948E69026DF0FDF87339889CA32E1DFB012335F0244889E65",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel-2043.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel-2043.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordCharacter.lean",
+      "sha256": "0B37C7D36CCD552712F43E5CC43D8F251EE4518AD091FEA6007859536C48A011",
+      "oleanSha256": "DCF43AC6208868C75D6CE075AA1C3BDE3C41A64B064BF67125E997AA69BEB3D3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordCharacter-2043.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordCharacter-2043.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricBoundaryCharacter.lean",
+      "sha256": "34D01328FF3296B6ADCF56837170F4F4A0C413CC26EF15317E5545AC87F11C18",
+      "oleanSha256": "60BB9B8FEE0565AE2C2EE46F9A3012E73BB9100246E66FBBAB0ECDB32C865A75",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricBoundaryCharacter-2043.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricBoundaryCharacter-2043.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_boundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_boundary_word",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordAudit1.log",
+  "logSha256": "21DB34469CCA6A2092AD2323E2BE5F68E9DFC5816732B22D70EB9AF5690BF3F8",
+  "auditSha256": "BFE90ACCD7E3F42CEE41ED7626685CDA02612B432AC056869A1E6297C6A1BBAC",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordScratchOwnership2043.log",
+  "ownershipSha256": "2F86407EE2092AB7B50C6282E9290292A219BD69A718E35587B9BCE0EDBFB856",
+  "exhaustiveTheorems": 24,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordDependencyAudit1.log",
+  "dependencyAuditSha256": "479332F9B62E7B1E6AB7D2AF5157AA09305FCAB79E0BCF4F833557492D00C531",
+  "dependencyAuditSourceSha256": "BB5639B5C006F7BBFD7423B898325C2EDCEE149F6B494DFB0D59109AF2AA59A3",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_boundary_word"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 quotient Hecke character -> boundary-killing Hecke word with unit original eigencharacter value.",
+  "discharged": [
+    "A zero actual quotient word, multiplied by a concrete boundary-annihilating Hecke word, kills every original integral H1 class after reduction; derive this using actual full-H1 transfer and Tate/parabolic comparison.",
+    "Native full-H1 congruence and a unit value of the boundary word imply exact character descent to the actual quotient algebra.",
+    "Existing proved original geometry constructs the full quotient Hecke family."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The concrete boundary-annihilating word and unit original character value remain unconstructed. This conditional alternative neither proves global parabolic surjectivity nor closes the original all-weight association, automorphy or higher continuation. The entire original source contract remains in force; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-boundary-word-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "51BE46C0C5D2109D674C76D963538C3A3778673842BE8314BD7B6B4219D48F77",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

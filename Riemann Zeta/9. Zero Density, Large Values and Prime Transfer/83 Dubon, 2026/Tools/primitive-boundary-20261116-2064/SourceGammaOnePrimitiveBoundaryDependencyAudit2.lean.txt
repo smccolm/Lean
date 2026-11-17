@@ -1,0 +1,33 @@
+import SourceGammaOnePrimitiveCuspBoundary
+import SourceGammaOneFiniteBinaryBoundary
+import SourceGammaOnePrimitiveBoundaryOrbit
+import SourceGammaOnePrimitiveCuspCoordinates
+import SourceGammaOneBoundaryHeckeTrace
+import SourceGammaOnePrimitiveBoundaryHeckeRows
+import Mathlib.Tactic
+
+open Lean
+
+private def runGammaOnePrimitiveBoundaryDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows]
+  let localModules : Array Name := #[`SourceGammaOnePrimitiveCuspBoundary, `SourceGammaOneFiniteBinaryBoundary, `SourceGammaOnePrimitiveBoundaryOrbit, `SourceGammaOnePrimitiveCuspCoordinates, `SourceGammaOneBoundaryHeckeTrace, `SourceGammaOnePrimitiveBoundaryHeckeRows]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace, `Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum, `Dubon2026.SourceFunctionField.GammaOne.trace_two_conjugate_primitiveCuspGenerator, `Dubon2026.SourceFunctionField.GammaOne.trace_two_character_primitive_coordinates, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace_two, `Dubon2026.SourceFunctionField.GammaOne.heckeConjugation_trace, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHeckeOrbit_trace_two, `Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows, `Dubon2026.SourceParabolic.classification, `MulAction.zpow_smul_eq_iff_minimalPeriod_dvd, `Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow, `Dubon2026.sourcePrimePower_six_isUnit, `MonoidHom.transfer_eq_prod_quotient_orbitRel_zpowers_quot, `Dubon2026.sourceTransfer_eq_coset_product, `Dubon2026.sourceGammaOneConstantHeckeH1_coefficient_hom_apply, `Dubon2026.SourceParabolic.exists_conj_T_zpow_of_trace_eq_two]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMAONE PRIMITIVE BOUNDARY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual homogeneous H1 boundary kernel and prime-power word criterion. Native primitive periods and signed trace classification are consumed. The boundary word and its unit value remain unconstructed; DUB17--20 OPEN."
+
+#eval runGammaOnePrimitiveBoundaryDependencyAudit

@@ -1,0 +1,23 @@
+import SourceGammaOneBoundaryWordKernel
+import SourcePrimitiveH1SquareCongruence
+import SourceOperatorRangeCharacter
+import SourceGammaOneBoundaryQuotient
+import SourceGammaOneExactJointRing
+import SourceGammaOneExactJointSquare
+import SourceGammaOneExactJointFinite
+import SourceGammaOneExactJointCharacter
+import SourceGammaOneGeometricExactJointCharacter
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneBoundaryWordKernel, `SourcePrimitiveH1SquareCongruence, `SourceOperatorRangeCharacter, `SourceGammaOneBoundaryQuotient, `SourceGammaOneExactJointRing, `SourceGammaOneExactJointSquare, `SourceGammaOneExactJointFinite, `SourceGammaOneExactJointCharacter, `SourceGammaOneGeometricExactJointCharacter]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

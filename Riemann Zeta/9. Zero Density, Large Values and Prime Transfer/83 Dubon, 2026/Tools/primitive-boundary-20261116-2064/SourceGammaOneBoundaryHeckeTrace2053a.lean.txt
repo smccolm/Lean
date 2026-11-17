@@ -1,0 +1,48 @@
+import SourceGammaOnePrimitiveBoundaryOrbit2051a
+import Dubon2026.SourceManinCuspStabilizer
+
+/-! DUB-17/18 -> all-weight association -> actual Gamma1 finite character
+-> primitive boundary Hecke action. Every literal orbit contribution is
+positive parabolic in the trace sense: its integral matrix has trace two.
+This permits its primitive integer cusp coordinates to be constructed,
+without assuming a boundary-action comparison. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology MulAction
+open scoped MatrixGroups
+
+theorem primitiveCuspGenerator_trace_two (M : ℕ) (q : SL(2, ℤ) ⧸ Gamma1 M) :
+    (primitiveCuspGenerator M q).val.val.trace = 2 := by
+  change (q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out : SL(2, ℤ)).val.trace = 2
+  simpa only [inv_inv, zpow_natCast] using
+    SourceIntegralCharacterLift.trace_conj_T_zpow q.out⁻¹ (primitiveCuspWidth M q : ℤ)
+
+private theorem trace_two_pow (γ : SL(2, ℤ)) (hγ : γ.val.trace = 2) (n : ℕ) :
+    (γ ^ n : SL(2, ℤ)).val.trace = 2 := by
+  obtain ⟨δ, h, rfl⟩ := SourceParabolic.exists_conj_T_zpow_of_trace_eq_two hγ
+  rw [conj_pow, ← zpow_natCast, ← zpow_mul]
+  exact SourceIntegralCharacterLift.trace_conj_T_zpow δ _
+
+theorem heckeConjugation_trace (M d : ℕ) [NeZero d]
+    (γ : sourceGammaOneHeckeUpper M d) :
+    (sourceGammaOneHeckeConjugation M d γ).val.val.trace = γ.val.val.val.trace := by
+  rw [Matrix.trace_fin_two, Matrix.trace_fin_two]
+  rfl
+
+theorem primitiveCuspHeckeOrbit_trace_two (M d : ℕ) [NeZero d]
+    (q : SL(2, ℤ) ⧸ Gamma1 M)
+    (O : orbitRel.Quotient (Subgroup.zpowers (primitiveCuspGenerator M q))
+      (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d)) :
+    (sourceGammaOneHeckeConjugation M d
+      ⟨O.out.out⁻¹ * primitiveCuspGenerator M q ^
+          Function.minimalPeriod ((primitiveCuspGenerator M q) • ·) O.out * O.out.out,
+        QuotientGroup.out_conj_pow_minimalPeriod_mem _ (primitiveCuspGenerator M q) O.out⟩).val.val.trace = 2 := by
+  rw [heckeConjugation_trace]
+  change ((O.out.out.val⁻¹ * (primitiveCuspGenerator M q).val ^
+      Function.minimalPeriod ((primitiveCuspGenerator M q) • ·) O.out * O.out.out.val :
+        SL(2, ℤ)).val.trace) = 2
+  rw [SourceManin.trace_conj]
+  exact trace_two_pow _ (primitiveCuspGenerator_trace_two M q) _
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

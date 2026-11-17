@@ -1,0 +1,35 @@
+import SourceParabolicShapiroPotentials2033c
+
+/-! DUB-17/18 -> original homogeneous Gamma1 character -> parabolic
+transfer -> native local Shapiro comparison. Transport the proved trivial
+coinduced coboundary to the original coefficient representation whenever
+its actual subgroup action is trivial. The vector and function space
+remain the native ones; no comparison is assumed. The original Gamma1
+subgroup action is already proved trivial in SourceGammaOneCohomologyTransfer. -/
+namespace Dubon2026
+noncomputable section
+variable {R G : Type} [CommRing R] [Group G] (A : Rep R G) (S : Subgroup G)
+
+theorem sourceOriginalShapiro_local_coboundary (hS : ∀ s : S, A.ρ s.val = 1)
+    (φ : Additive S →+ A) (g : G)
+    (hφ : ∀ (t : G) (z : ℤ) (h : t⁻¹ * g ^ z * t ∈ S),
+      φ (Additive.ofMul ⟨t⁻¹ * g ^ z * t, h⟩) = 0) :
+    let B := Rep.coind S.subtype (Rep.res S.subtype A)
+    ∃ v : B, coinducedShapiroOne A S (fun s => φ (Additive.ofMul s)) g = B.ρ g v - v := by
+  obtain ⟨v₀, hv₀⟩ := sourceTrivialShapiro_local_coboundary (R := R) S φ g hφ
+  let v : Rep.coind S.subtype (Rep.res S.subtype A) := ⟨v₀.val, by
+    intro s t
+    change v₀.val (s.val * t) = A.ρ s.val (v₀.val t)
+    rw [hS]
+    exact v₀.property s t⟩
+  refine ⟨v, ?_⟩
+  apply Subtype.ext
+  funext t
+  have h := congrArg (fun u => u.val t) hv₀
+  dsimp only at h
+  rw [coinducedShapiroOne_apply] at h ⊢
+  rw [hS]
+  exact h
+
+end
+end Dubon2026

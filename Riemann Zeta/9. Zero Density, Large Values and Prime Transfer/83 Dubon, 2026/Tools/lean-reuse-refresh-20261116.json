@@ -1,0 +1,1103 @@
+{
+  "checkedUTC": "2026-11-16T22:44:29.308008+00:00",
+  "heads": {
+    "checkedUTC": "2026-11-16T22:34:08.953438+00:00",
+    "sources": [
+      {
+        "repository": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "date": "2026-09-24T14:06:36Z",
+        "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/main",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\anthropics_fermats-last-theorem-head.json",
+        "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+      },
+      {
+        "repository": "ImperialCollegeLondon/FLT",
+        "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+        "date": "2026-10-22T16:15:55Z",
+        "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/main",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\ImperialCollegeLondon_FLT-head.json",
+        "sha256": "ECFE89978CCCCF6E35EDE111B4D1CE9F58E9724908581AE67E0992B5FB2094E1"
+      },
+      {
+        "repository": "leanprover-community/mathlib4",
+        "commit": "96f6b8b8e029545577421f198a89fb174a4d62e6",
+        "date": "2026-11-16T21:45:44Z",
+        "url": "https://api.github.com/repos/leanprover-community/mathlib4/commits/master",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\leanprover-community_mathlib4-head.json",
+        "sha256": "B06D60FF23581EA4612BAD25144045177FE1BE700C669670CD4781C81DD3A68E"
+      },
+      {
+        "repository": "F-Najman/normalizer-lean",
+        "commit": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+        "date": "2026-10-22T16:04:16Z",
+        "url": "https://api.github.com/repos/F-Najman/normalizer-lean/commits/main",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\F-Najman_normalizer-lean-head.json",
+        "sha256": "F0256A4CBAE99E39045AC9E6936865EF4B5FF8C0C7770A6D5E94B69ED2369A81"
+      }
+    ],
+    "externalBuild": false,
+    "externalImport": false
+  },
+  "mathlibDelta": {
+    "checkedUTC": "2026-11-16T22:36:40.788462+00:00",
+    "head": "96f6b8b8e029545577421f198a89fb174a4d62e6",
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/git/trees/96f6b8b8e029545577421f198a89fb174a4d62e6?recursive=1",
+    "treeSha256": "86019780C96DD49F8658489E106421584C4AB0806D48388A070BA50B6D806C3E",
+    "previousTree": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-refresh-20261029-1724\\leanprover-community--mathlib4-tree.json",
+    "previousTreeSha256": "CFA7EA7027363B350E43453BEC9A4EE4E5AE03CA1881D2FB936600AEBDDEE466",
+    "complete": true,
+    "blobCount": 9500,
+    "changedBlobCount": 5541,
+    "selectedChangedPaths": [
+      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Point.lean",
+      "Mathlib/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Degree.lean",
+      "Mathlib/AlgebraicGeometry/EllipticCurve/IsomOfJ.lean",
+      "Mathlib/AlgebraicGeometry/EllipticCurve/Jacobian/Formula.lean",
+      "Mathlib/AlgebraicGeometry/EllipticCurve/NormalForms.lean",
+      "Mathlib/AlgebraicGeometry/EllipticCurve/Reduction.lean",
+      "Mathlib/AlgebraicGeometry/FunctionField.lean",
+      "Mathlib/Analysis/SpecialFunctions/Bernstein.lean",
+      "Mathlib/Analysis/SpecialFunctions/Bessel.lean",
+      "Mathlib/Analysis/SpecialFunctions/CompareExp.lean",
+      "Mathlib/Analysis/SpecialFunctions/Complex/Arg.lean",
+      "Mathlib/Analysis/SpecialFunctions/Complex/Circle.lean",
+      "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
+      "Mathlib/Analysis/SpecialFunctions/Complex/Log.lean",
+      "Mathlib/Analysis/SpecialFunctions/Complex/LogDeriv.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Abs.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/ConjSqrt.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/IntegralRepresentation.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Isometric.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Measurable.lean",
+      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/RingInverseOrder.lean",
+      "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+      "Mathlib/Analysis/SpecialFunctions/Exponential.lean",
+      "Mathlib/Analysis/SpecialFunctions/Gaussian/FourierTransform.lean",
+      "Mathlib/Analysis/SpecialFunctions/Gaussian/GaussianIntegral.lean",
+      "Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
+      "Mathlib/Analysis/SpecialFunctions/Integrability/Basic.lean",
+      "Mathlib/Analysis/SpecialFunctions/Integrability/Log.lean",
+      "Mathlib/Analysis/SpecialFunctions/Integrals/Basic.lean",
+      "Mathlib/Analysis/SpecialFunctions/Integrals/PosLog.lean",
+      "Mathlib/Analysis/SpecialFunctions/JapaneseBracket.lean",
+      "Mathlib/Analysis/SpecialFunctions/Log/Base.lean",
+      "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "Mathlib/Analysis/SpecialFunctions/Log/Monotone.lean",
+      "Mathlib/Analysis/SpecialFunctions/Log/NegMulLog.lean",
+      "Mathlib/Analysis/SpecialFunctions/Log/Summable.lean",
+      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSq.lean",
+      "Mathlib/Analysis/SpecialFunctions/Pochhammer.lean",
+      "Mathlib/Analysis/SpecialFunctions/PolarCoord.lean",
+      "Mathlib/Analysis/SpecialFunctions/Pow/Complex.lean",
+      "Mathlib/Analysis/SpecialFunctions/Pow/Deriv.lean",
+      "Mathlib/Analysis/SpecialFunctions/Pow/NNReal.lean",
+      "Mathlib/Analysis/SpecialFunctions/Pow/NthRootLemmas.lean",
+      "Mathlib/Analysis/SpecialFunctions/RegularizedHypergeometric.lean",
+      "Mathlib/Analysis/SpecialFunctions/Sigmoid.lean",
+      "Mathlib/Analysis/SpecialFunctions/Stirling.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Arctan.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Bounds.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Chebyshev/Extremal.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Chebyshev/Orthogonality.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Chebyshev/RootsExtrema.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Complex.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/ComplexDeriv.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Cotangent.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/EulerSineProd.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/InverseDeriv.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Meromorphic.lean",
+      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Sinc.lean",
+      "Mathlib/CategoryTheory/Category/GaloisConnection.lean",
+      "Mathlib/CategoryTheory/Galois/Action.lean",
+      "Mathlib/CategoryTheory/Galois/Basic.lean",
+      "Mathlib/CategoryTheory/Galois/ContAction.lean",
+      "Mathlib/CategoryTheory/Galois/Decomposition.lean",
+      "Mathlib/CategoryTheory/Galois/EssSurj.lean",
+      "Mathlib/CategoryTheory/Galois/Examples.lean",
+      "Mathlib/CategoryTheory/Galois/Full.lean",
+      "Mathlib/CategoryTheory/Galois/FullSubcategory.lean",
+      "Mathlib/CategoryTheory/Galois/GaloisObjects.lean",
+      "Mathlib/CategoryTheory/Galois/IsFundamentalgroup.lean",
+      "Mathlib/CategoryTheory/Galois/Prorepresentability.lean",
+      "Mathlib/CategoryTheory/Galois/Topology.lean",
+      "Mathlib/FieldTheory/AbsoluteGaloisGroup.lean",
+      "Mathlib/FieldTheory/Finite/GaloisField.lean",
+      "Mathlib/FieldTheory/Galois/Abelian.lean",
+      "Mathlib/FieldTheory/Galois/Basic.lean",
+      "Mathlib/FieldTheory/Galois/GaloisClosure.lean",
+      "Mathlib/FieldTheory/Galois/Infinite.lean",
+      "Mathlib/FieldTheory/Galois/IsGaloisGroup.lean",
+      "Mathlib/FieldTheory/Galois/NormalBasis.lean",
+      "Mathlib/FieldTheory/Galois/Profinite.lean",
+      "Mathlib/FieldTheory/PolynomialGaloisGroup.lean",
+      "Mathlib/GroupTheory/GroupAction/Basic.lean",
+      "Mathlib/GroupTheory/GroupAction/Blocks.lean",
+      "Mathlib/GroupTheory/GroupAction/ConjAct.lean",
+      "Mathlib/GroupTheory/GroupAction/Defs.lean",
+      "Mathlib/GroupTheory/GroupAction/Embedding.lean",
+      "Mathlib/GroupTheory/GroupAction/FixingSubgroup.lean",
+      "Mathlib/GroupTheory/GroupAction/Hom.lean",
+      "Mathlib/GroupTheory/GroupAction/IterateAct.lean",
+      "Mathlib/GroupTheory/GroupAction/Jordan.lean",
+      "Mathlib/GroupTheory/GroupAction/MultiplePrimitivity.lean",
+      "Mathlib/GroupTheory/GroupAction/MultipleTransitivity.lean",
+      "Mathlib/GroupTheory/GroupAction/OfQuotient.lean",
+      "Mathlib/GroupTheory/GroupAction/Pointwise.lean",
+      "Mathlib/GroupTheory/GroupAction/Primitive.lean",
+      "Mathlib/GroupTheory/GroupAction/SubMulAction.lean",
+      "Mathlib/GroupTheory/GroupAction/SubMulAction/Closure.lean",
+      "Mathlib/GroupTheory/GroupAction/SubMulAction/Combination.lean",
+      "Mathlib/GroupTheory/GroupAction/SubMulAction/OfFixingSubgroup.lean",
+      "Mathlib/GroupTheory/GroupAction/SubMulAction/OfStabilizer.lean",
+      "Mathlib/GroupTheory/GroupAction/SubMulAction/Pointwise.lean",
+      "Mathlib/GroupTheory/GroupAction/Transitive.lean",
+      "Mathlib/GroupTheory/Index.lean",
+      "Mathlib/GroupTheory/IndexNSmul.lean",
+      "Mathlib/GroupTheory/IndexNormal.lean",
+      "Mathlib/MeasureTheory/Function/SpecialFunctions/Arctan.lean",
+      "Mathlib/MeasureTheory/Function/SpecialFunctions/Inner.lean",
+      "Mathlib/MeasureTheory/Function/SpecialFunctions/RCLike.lean",
+      "Mathlib/MeasureTheory/Function/SpecialFunctions/Sinc.lean",
+      "Mathlib/NumberTheory/ArithmeticFunction/LFunction.lean",
+      "Mathlib/NumberTheory/FunctionField.lean",
+      "Mathlib/NumberTheory/LSeries/Convergence.lean",
+      "Mathlib/NumberTheory/LSeries/Dirichlet.lean",
+      "Mathlib/NumberTheory/LSeries/HurwitzZetaEven.lean",
+      "Mathlib/NumberTheory/LSeries/HurwitzZetaValues.lean",
+      "Mathlib/NumberTheory/LSeries/Injectivity.lean",
+      "Mathlib/NumberTheory/LSeries/MellinEqDirichlet.lean",
+      "Mathlib/NumberTheory/LSeries/RiemannZetaLogDeriv.lean",
+      "Mathlib/NumberTheory/LSeries/SumCoeff.lean",
+      "Mathlib/NumberTheory/LSeries/WeakPNT.lean",
+      "Mathlib/NumberTheory/LSeries/WienerIkehara.lean",
+      "Mathlib/NumberTheory/LSeries/ZMod.lean",
+      "Mathlib/NumberTheory/LSeries/ZetaZeros.lean",
+      "Mathlib/NumberTheory/ModularForms/Basic.lean",
+      "Mathlib/NumberTheory/ModularForms/BoundedAtCusp.lean",
+      "Mathlib/NumberTheory/ModularForms/Bounds.lean",
+      "Mathlib/NumberTheory/ModularForms/CongruenceSubgroups.lean",
+      "Mathlib/NumberTheory/ModularForms/Cusps.lean",
+      "Mathlib/NumberTheory/ModularForms/DedekindEta.lean",
+      "Mathlib/NumberTheory/ModularForms/Discriminant.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/Defs.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/E2/Defs.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/E2/Summable.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/E2/Transform.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/IsBoundedAtImInfty.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/MDifferentiable.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/QExpansion.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/Summable.lean",
+      "Mathlib/NumberTheory/ModularForms/EisensteinSeries/UniformConvergence.lean",
+      "Mathlib/NumberTheory/ModularForms/Identities.lean",
+      "Mathlib/NumberTheory/ModularForms/JacobiTheta/Manifold.lean",
+      "Mathlib/NumberTheory/ModularForms/LFunction.lean",
+      "Mathlib/NumberTheory/ModularForms/LevelOne/Basic.lean",
+      "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean",
+      "Mathlib/NumberTheory/ModularForms/OrderAtInfty.lean",
+      "Mathlib/NumberTheory/ModularForms/Petersson.lean",
+      "Mathlib/NumberTheory/ModularForms/ProperlyDiscontinuous.lean",
+      "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+      "Mathlib/NumberTheory/ModularForms/SlashActions.lean",
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/Galois.lean",
+      "Mathlib/NumberTheory/NumberField/HeckeLFunction.lean",
+      "Mathlib/NumberTheory/RamificationInertia/Basic.lean",
+      "Mathlib/NumberTheory/RamificationInertia/Galois.lean",
+      "Mathlib/NumberTheory/RamificationInertia/HilbertTheory.lean",
+      "Mathlib/NumberTheory/RamificationInertia/Inertia.lean",
+      "Mathlib/NumberTheory/RamificationInertia/Ramification.lean",
+      "Mathlib/NumberTheory/RamificationInertia/Unramified.lean",
+      "Mathlib/Order/GaloisConnection/Basic.lean",
+      "Mathlib/Order/RelSeries.lean",
+      "Mathlib/RingTheory/Invariant/Galois.lean",
+      "Mathlib/RingTheory/IsGaloisGroup/Basic.lean",
+      "Mathlib/RingTheory/IsGaloisGroup/Defs.lean",
+      "Mathlib/RingTheory/Kaehler/Basic.lean",
+      "Mathlib/RingTheory/Kaehler/JacobiZariski.lean",
+      "Mathlib/RingTheory/Kaehler/Polynomial.lean",
+      "Mathlib/RingTheory/Kaehler/TensorProduct.lean",
+      "Mathlib/RingTheory/RamificationInertia/Basic.lean",
+      "Mathlib/RingTheory/RamificationInertia/Ramification.lean",
+      "Mathlib/RingTheory/Smooth/Kaehler.lean"
+    ],
+    "deletedPaths": [
+      ".github/workflows/nightly_bump_toolchain.yml",
+      ".github/workflows/nightly_detect_failure.yml",
+      ".github/workflows/nightly_merge_master.yml",
+      ".github/zulip-emoji-config-nightly.json",
+      "Archive/Wiedijk100Theorems/HeronsFormula.lean",
+      "Mathlib/Algebra/Field/Power.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing.lean",
+      "Mathlib/AlgebraicTopology/SingularHomology/HomotopyInvarianceTopCat.lean",
+      "Mathlib/Analysis/Normed/Operator/Compact.lean",
+      "Mathlib/Analysis/Normed/Operator/FredholmAlternative.lean",
+      "Mathlib/CategoryTheory/Monoidal/Cartesian/Grp_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Cartesian/Mod_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Cartesian/Mon_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Grp_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Internal/Types/Grp_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Mod_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Mon_.lean",
+      "Mathlib/CategoryTheory/Monoidal/Opposite/Mon_.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Coloring.lean",
+      "Mathlib/Combinatorics/SimpleGraph/ConcreteColorings.lean",
+      "Mathlib/Combinatorics/SimpleGraph/EdgeLabeling.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Basic.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Counting.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Decomp.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Maps.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Operations.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Subwalks.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Walks/Traversal.lean",
+      "Mathlib/Condensed/CartesianClosed.lean",
+      "Mathlib/Condensed/Light/CartesianClosed.lean",
+      "Mathlib/Data/NNRat/Order.lean",
+      "Mathlib/Order/Bounded.lean",
+      "Mathlib/RingTheory/Regular/Depth.lean",
+      "Mathlib/Tactic/Inclusion/Extension/Interval.lean",
+      "Mathlib/Topology/Algebra/Module/StrongTopology.lean",
+      "Mathlib/Topology/Algebra/Module/WeakDual.lean"
+    ],
+    "externalBuild": false,
+    "externalImport": false
+  },
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\anthropics_fermats-last-theorem-head.json",
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\F-Najman_normalizer-lean-head.json",
+      "sha256": "F0256A4CBAE99E39045AC9E6936865EF4B5FF8C0C7770A6D5E94B69ED2369A81"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\head-receipt.json",
+      "sha256": "06B29094DE02E3A3D2D67E050174A2670481E6BDC6B21EB6B75F1FCDDC74E201"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\ImperialCollegeLondon_FLT-head.json",
+      "sha256": "ECFE89978CCCCF6E35EDE111B4D1CE9F58E9724908581AE67E0992B5FB2094E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\leanprover-community_mathlib4-head.json",
+      "sha256": "B06D60FF23581EA4612BAD25144045177FE1BE700C669670CD4781C81DD3A68E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\mathlib-complete-tree.json",
+      "sha256": "86019780C96DD49F8658489E106421584C4AB0806D48388A070BA50B6D806C3E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\mathlib-delta-review.json",
+      "sha256": "63227156CCCB3A5057715C0D5B0FBDF8AA70E6D94BDD8D479ACDE2732130DE40"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__EllipticCurve__Affine__Point.lean.txt",
+      "sha256": "D4E40CAFF67A5F45D1426B803A5734B41E603279D0BB202A23E3ABEC0DA1869D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__EllipticCurve__DivisionPolynomial__Degree.lean.txt",
+      "sha256": "B13AEDE119C71B5708217EA401BBF401B99BB614131A7187E0D6F0233E08A265"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__EllipticCurve__IsomOfJ.lean.txt",
+      "sha256": "9D2D41259CCCCEE5E7D2C686BB5C166C92009C0E9F34A3A46DC9BBEA1C48A346"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__EllipticCurve__Jacobian__Formula.lean.txt",
+      "sha256": "335EAB83E5578B3A26E6914F4FD66B501C91F181C65DB1EBE827912176E958D0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__EllipticCurve__NormalForms.lean.txt",
+      "sha256": "ACBFC57712FA26C27CFCCC19DAD230838D361886BD01B9907CF2130FDFC42CAC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__EllipticCurve__Reduction.lean.txt",
+      "sha256": "B16E2DEE1207368B283BDF4155871EFBDB7D7512B66938053AE2D76FB9472ADA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__AlgebraicGeometry__FunctionField.lean.txt",
+      "sha256": "227263BE79A5EB4C620955BE68C040BC5EAC97293561DD41A79DE99C21575740"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Bernstein.lean.txt",
+      "sha256": "3B8F8870A16EEDF8755936EC7B5CE4378DAB955A9E087238ED1376FEA541F200"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Bessel.lean.txt",
+      "sha256": "A7EDFF3298066E189E40D4FA928B5578067D43BCBB0C227E6F8CCB5E3D38947C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__CompareExp.lean.txt",
+      "sha256": "D7E382EC90C8E30C7B9AAF9307B5FAB8C40A8EB9220B84E27AC3C117289F6413"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Complex__Arg.lean.txt",
+      "sha256": "A54A5EF5BE5622350AE819E3E03CD1130873B707972D0DE9E6F82774D1CD74F7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Complex__Circle.lean.txt",
+      "sha256": "B55679B6BCC80536D2B3CE3E2B81A3F3BA12AD6BE5DDB2E69C91A9E687923885"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Complex__CircleMap.lean.txt",
+      "sha256": "9A4F504CECF716474BE9EC3E7B168DC002BCC5AA2A3624FB4922864403524CF9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Complex__Log.lean.txt",
+      "sha256": "84822BC45822117431CA9281A7CF057EF9421E938F477E0FB3B67D282D16B3D0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Complex__LogDeriv.lean.txt",
+      "sha256": "16AB4D0CB8A095ABF581831FAFEB7B9DD7A8B99A789D5A162BABDFD825724B98"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Abs.lean.txt",
+      "sha256": "EE9686B8CC1B04970B53789B80A56A7B5E8DD4189EAC22A82F9F49B7A7CB27D6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Rpow__Basic.lean.txt",
+      "sha256": "1A7FC143A411CF8BBDFED456D5D3882CFE95B72B8CC7DB596CB64C8A76ADC3B8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Rpow__ConjSqrt.lean.txt",
+      "sha256": "4E9E011AD9B25772AE93BAAFF852631E2440C21B4FAA84F2C7E35E4EFF126A69"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Rpow__IntegralRepresentation.lean.txt",
+      "sha256": "EFB492669C6E6CD922ED89210CB8E6F0D201FD31492EAA78ECAFEE3688454B90"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Rpow__Isometric.lean.txt",
+      "sha256": "0D595B1BF93C8FF5E2E508AFA29684B7415A818E3AB5CFDEEB1D4A468A485480"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Rpow__Measurable.lean.txt",
+      "sha256": "96CE485AE60311584AA25D4B5D6921BCDFEC70850801A12923FE75D06A3A95CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ContinuousFunctionalCalculus__Rpow__RingInverseOrder.lean.txt",
+      "sha256": "3B4BBF620D77357B9C5F5816CF79A5578A10FA9EBBA9A5D4A5A94920A0085681"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Elliptic__Weierstrass.lean.txt",
+      "sha256": "31B241555731D98AC3867282C1341210A63C95F4EDB4487CEEF0F07DD4356D67"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Exponential.lean.txt",
+      "sha256": "F4DEE78B166838A4BEC5C47EF19F77E71DEBD5AF54C6E18B9CE4B4656B1C875C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Gaussian__FourierTransform.lean.txt",
+      "sha256": "7149638F2C77538923189B2D29B0343E8B1E3FBB50E27EAF24264F90B35A6A22"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Gaussian__GaussianIntegral.lean.txt",
+      "sha256": "A1E7BD31E2C9BE1FC6B9CDA182C5BE18F457523752D4F60FFDA981C536B9EDF4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__ImproperIntegrals.lean.txt",
+      "sha256": "D0DCBD1FB1C3047330CD0F49AC14B478BD10B5314ACF7E7180E20F78E6DE709C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Integrability__Basic.lean.txt",
+      "sha256": "9D7EF638E8F5414C29B677638AE940A64ADC3D0D271F655AA588628CBBEB11DB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Integrability__Log.lean.txt",
+      "sha256": "5C49481709775D2416D3644799E1BAAE76A0E205C839A48E27B911E7D3B721FE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Integrals__Basic.lean.txt",
+      "sha256": "F92024B6638E9B84828138AD5AF800FA00C619DA7396F072756963F3373FC847"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Integrals__PosLog.lean.txt",
+      "sha256": "7B9F63523E42003537212E744968599F7BCE8111607390A47B4310C793085116"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__JapaneseBracket.lean.txt",
+      "sha256": "F1BFF1D98BACCB247DA92BFA32132A9A1E6515C66CBD8169E77EC6A46EC476AC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Log__Base.lean.txt",
+      "sha256": "BDFACB6022AA30D3BF035F58AFB7A65938E040DA2E86C669C80B746C1B93D3FD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Log__Basic.lean.txt",
+      "sha256": "976B114BB2BF3DCDA408467DC14F7E7E96CBA123314560E34AA719DAA02F8682"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Log__Monotone.lean.txt",
+      "sha256": "3C1E7502871A391845D479F4AC4158FB93337814F2F747CB9CF06568885BDC95"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Log__NegMulLog.lean.txt",
+      "sha256": "D87C3DD3A292A41007D4FD21C90F7A70FE4ECBC1EC2A902B585AB6D46368884F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Log__Summable.lean.txt",
+      "sha256": "E3EA9D8BCA7C235991E1B2692D108A0FF6700E6A79DB51ABBE423EF3F8B0193A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__MulExpNegMulSq.lean.txt",
+      "sha256": "109835C57BB370DB640BAC477B66E615BD42AB0C7316B85B2DFD06AC01E0A522"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Pochhammer.lean.txt",
+      "sha256": "EFC75BCAD88F7827A7E6B4640AF57BE05C2E1F4BDE5169657FFE8702711C152E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__PolarCoord.lean.txt",
+      "sha256": "3C1DF21D790D5C89C6723CACC0A249CFA9619B62746B8C11D788C039247C70ED"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Pow__Complex.lean.txt",
+      "sha256": "67FAF56806FB3B277F7300A4E2F48C86EEAAF078BDA7E81FF6D9D2AD4746E715"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Pow__Deriv.lean.txt",
+      "sha256": "2CCFE2DB507F19F462342C943BF4338177C5572FC2810783D0E8257B4FEA6CF9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Pow__NNReal.lean.txt",
+      "sha256": "97460D19D443DA6C056E9644B995AA53A500C3406536E95821840FDDC864357A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Pow__NthRootLemmas.lean.txt",
+      "sha256": "BE6678DBF13DCFCE9DA07480E8FE75BED5E5AF3DAE19B4DB765CE9370D0202F5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__RegularizedHypergeometric.lean.txt",
+      "sha256": "E80A46BD78502C33C81769CF7D71CE98A00BF23254DA5745876B8548A1E1F486"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Sigmoid.lean.txt",
+      "sha256": "ADEEB312356F24F37BAE3905CA66801CDC1DE7D61A2DAA4232180B95A4BE5F44"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Stirling.lean.txt",
+      "sha256": "FDFCEB85F0660C51702337302A6AF204580810514B1430F23682A581242B8F51"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Arctan.lean.txt",
+      "sha256": "AD057C570F139CE5E9FCF132F92061A1016BE6AD8268F9E0D8DE761E68E661C2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Bounds.lean.txt",
+      "sha256": "8C7F381874241A7F27B8EA351867BF509412D5039D00654AC1BB418C16E6E745"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Chebyshev__Extremal.lean.txt",
+      "sha256": "1136396B32C164624C5C6D67202D2568E8598DEBCB498A5BFD737E63AE39F99F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Chebyshev__Orthogonality.lean.txt",
+      "sha256": "A00C1FDA3FB9EF21088D33BBAA6EDCF6CA18FDB8DDD59CD802AB983E0AB26208"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Chebyshev__RootsExtrema.lean.txt",
+      "sha256": "312D975AFC753663EF148A798DDF26472FE11B68B8CA90F92B06FB597A910D1F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Complex.lean.txt",
+      "sha256": "15E116F2CE4C73558699BC96FBAD9190BDEE60A5A38A75AFC88E91625491B788"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__ComplexDeriv.lean.txt",
+      "sha256": "A82E4439B6DD5A54F778B3917BD55E4B68AF02AA381D91084AF6A80A303C3F94"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Cotangent.lean.txt",
+      "sha256": "BD4474E55D32662BD3D087322E2C6C9B5FD37E27375C1D18EA287E57DF31243E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__EulerSineProd.lean.txt",
+      "sha256": "65CF60D065151DE92C978D30A988617ED15A4E10A99A58696732DB42ABD1332F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__InverseDeriv.lean.txt",
+      "sha256": "463175404D7008EF1D9AF3162F2E475A7AD8D685CD428FCDDE10CDF3F9BFA602"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Meromorphic.lean.txt",
+      "sha256": "AC7AAD8968CAD7F56DD163B48881FA8AE6E66D7C6181CFE70E4AE0892BDCA0C9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Analysis__SpecialFunctions__Trigonometric__Sinc.lean.txt",
+      "sha256": "A5C8F07A9F6B4F17C15A4FCA2892E41702E9EBC62769DDF6A8A1C7DA44801575"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Category__GaloisConnection.lean.txt",
+      "sha256": "29C7173820CCC577706335D0B6B2880337CE83DCC0FEABFD63E910E1ECDC2532"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Action.lean.txt",
+      "sha256": "2BDF45D5550193B5F0ED23EB7AB35BB6F106E63CFEC42C83F1AB467FCE813BCF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Basic.lean.txt",
+      "sha256": "FC1C1F5F0408D9AA72C2200E5F2AC1AB0AD39214AB15FDCFCB098814BC44F2C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__ContAction.lean.txt",
+      "sha256": "5AD7A1FB47D7953622BE9403EA6FD784C1F1FCB8D8196B01BFC362D34FD8C92F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Decomposition.lean.txt",
+      "sha256": "78A3733F55D45D1BE9094A2EDC762D3654A166635FC7A2707EF6233623B7F6DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__EssSurj.lean.txt",
+      "sha256": "5D9ACFC9DEF54619B710682AD81CEC5A3A576267AC00675CEF8CBF0E33666DAC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Examples.lean.txt",
+      "sha256": "DA5DF6B8FC0276986886232BA1EE8014B94FBCBD78F3BB4299CBAC37B46B48E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Full.lean.txt",
+      "sha256": "FCDF1E66CF8D889D9939CD202B89E779CC51F34C4D12BE50584D8CC4A4E88860"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__FullSubcategory.lean.txt",
+      "sha256": "4D4272A9DEB7F797BCEF5307105725EBAB01D5233BC8C1144180D5013003274B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__GaloisObjects.lean.txt",
+      "sha256": "F56D30F80385CB277096DE4A69FE80705EB36F34E100E4BA6F47C54AC978092D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__IsFundamentalgroup.lean.txt",
+      "sha256": "0FCBB4AE2568BA65BCA4981F138D0BD062EF3C2271959E21A852811FFBEA4618"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Prorepresentability.lean.txt",
+      "sha256": "CCAAFAD9D065F1A6B7A42FCD72A9F1CD4838204C1AD92F64A0F241E9BBDA81C8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__CategoryTheory__Galois__Topology.lean.txt",
+      "sha256": "EB194516095A0797A64C8C30383875B3110CAB9546C16FA26C5400A0F9AA7070"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__AbsoluteGaloisGroup.lean.txt",
+      "sha256": "78F1B974858CA761B1E822343625EF36C96D4DCB86929E756E140794FF1DFD18"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Finite__GaloisField.lean.txt",
+      "sha256": "676582715805F00BBF0972372E1C9F593F9C9B863F4F3921D3D6FA8111BC178D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__Abelian.lean.txt",
+      "sha256": "F455CD58DC89E4F1C318942AEAA416D21B0CA217ED335B730D8FC923D63C976B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__Basic.lean.txt",
+      "sha256": "D45DFE20CE41527C0D16EFE463BB85BA0487EC738224B751DA3DD4FE70CABDD3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__GaloisClosure.lean.txt",
+      "sha256": "D238CE53FA79DB3D41E96CD6C5525837012CAFB1CB7590CCBB888BEE4750D18C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__Infinite.lean.txt",
+      "sha256": "394E50FE3C08858810517C00BC8C75726F43C76EE0E5576710EB41D98C595CC8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__IsGaloisGroup.lean.txt",
+      "sha256": "5485C09E62ABBA84C2430667BD53EE2A79C7157CFD4296DE1A23E7D9E436FABD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__NormalBasis.lean.txt",
+      "sha256": "57AB6F7BAE2CDC678B07958BB9C35057A47D8127E38B15DA68B58D9ACD7F6E52"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__Galois__Profinite.lean.txt",
+      "sha256": "E7125738B1B154789B6CBEEE4A441CC8A665F988C2F6C32D8DE304A2481C99D8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__FieldTheory__PolynomialGaloisGroup.lean.txt",
+      "sha256": "0C24F8DD9D446D7F852E42F9C413A0B2E3863D7A224DA46C4D498FDED072B170"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Basic.lean.txt",
+      "sha256": "7F73B17E11FBF0F4CF0D1D8EE368991EA283A0D6FF4209F91B7624EA1EC7D6DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Blocks.lean.txt",
+      "sha256": "1FD581DC781B12E27704FFBFEDF655A08E5B0E9E3162E933D3B56DD2E4F1CE06"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__ConjAct.lean.txt",
+      "sha256": "D24DCCBCC4D4D957CA961A78299CB59348EC08397156FA5E9A258799AB111240"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Defs.lean.txt",
+      "sha256": "7C416EECC26EAF9D3B9524C18410A8A6BC220EE8866FB0F0288627DDD7786D8B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Embedding.lean.txt",
+      "sha256": "D4C96CF1E4EBE3F87C5A8A1CBAC70A664EA72BFD299775CA7E4D1226B5F34726"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__FixingSubgroup.lean.txt",
+      "sha256": "2D5CD31581ED322DFA5761395FB587375DC254CADB9F8B37605817C744AC972D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Hom.lean.txt",
+      "sha256": "A77B08C311DAEEAD9593D095B02AEC42DAF8FBA2AB6913FC0222EC3B5C898D37"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__IterateAct.lean.txt",
+      "sha256": "1B8C2AD85486977C3C6E10EB488EC6AA9062C9B453B751C05986DCF1BA9D5F3C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Jordan.lean.txt",
+      "sha256": "F1901EB500A60E031556BDC386B80C334E0BDECEBF838B7C148306D25E088EAC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__MultiplePrimitivity.lean.txt",
+      "sha256": "0CF191F0F0F9827F7DDEA516D1F3FA4192F6EB6A6BD54E47E2BAAF142975C964"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__MultipleTransitivity.lean.txt",
+      "sha256": "CDB1926ADAD9D449639325CA04CC5CC63D8F971D1B33C911E82E939CB401B04C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__OfQuotient.lean.txt",
+      "sha256": "B414EF7B3140B76A17B50FD052BC87780B9F9A9378569BDEA6683B631B5758BD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Pointwise.lean.txt",
+      "sha256": "AC00BCAA701CD8FCDAEB18EB0B7A99D5ABC67DFB7AC5BFF2DC850A7C01D05B78"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Primitive.lean.txt",
+      "sha256": "B58515B79847D6958CA25B0D0E39973B44D76FEE561437EA915ABEAB27962990"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__SubMulAction.lean.txt",
+      "sha256": "4EAF0E8020953B0B29C783A59875F8B9B6C590382F2CC833CCD68C62A094C4CE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__SubMulAction__Closure.lean.txt",
+      "sha256": "8C50B5C64B0239AC191C08D55913136E5F172182036C115667B8E49D4E2778CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__SubMulAction__Combination.lean.txt",
+      "sha256": "17E11EFCD6FA0113576172BD06BE38C7200BD444ADA860AAF22BFDBA07C453EE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__SubMulAction__OfFixingSubgroup.lean.txt",
+      "sha256": "C8E9C4188C8BCB0062F5AB252CECAE3A5DF0242E4343706A3B38FC379137E8EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__SubMulAction__OfStabilizer.lean.txt",
+      "sha256": "2AE38D1374BC8CE17F3659962297D5240141A367F01BBD0F7D05CCEA91CA824A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__SubMulAction__Pointwise.lean.txt",
+      "sha256": "900E5D00841CCF5A40CD4514DA0CADBF614E11E142932276BD7F50E0A789B067"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__GroupAction__Transitive.lean.txt",
+      "sha256": "357271CC57EC730F1284F3B220AE49A75D1ED07E47D5831D82F6270A6931F95D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__Index.lean.txt",
+      "sha256": "B6AD57B53889791F8A992BF6D647D9BCCFDE414E0112961C785766D1E900B9AF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__IndexNormal.lean.txt",
+      "sha256": "A9A299BB8B733F1F9ADA55DC6C4C6A821F4C4EEE621A38FDF414CDAD60A3C750"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__GroupTheory__IndexNSmul.lean.txt",
+      "sha256": "9A17C6C99DF751F66F5FC5AFB17C1812F85BA6DB201522C981B30CAFA1211503"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__MeasureTheory__Function__SpecialFunctions__Arctan.lean.txt",
+      "sha256": "E4B8017E98C1095E3FCF94AE26BEBA496B4EF9362CC7C288F21270DEA8AB3FA0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__MeasureTheory__Function__SpecialFunctions__Inner.lean.txt",
+      "sha256": "F74A22DF62FF8D013877DCB71D4058E18237E6899739CF389DF9BB72284A0276"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__MeasureTheory__Function__SpecialFunctions__RCLike.lean.txt",
+      "sha256": "477C04026CE66D59C28E154FB8C07E9B61D8C05C94F1487593FB0D0DC546B917"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__MeasureTheory__Function__SpecialFunctions__Sinc.lean.txt",
+      "sha256": "F5FB54C2351C8D0A9C1F725544208619F7594F707F8261CCAD3413C3941E208A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ArithmeticFunction__LFunction.lean.txt",
+      "sha256": "FE28C8084693C72B7C84EB16047CE27BC1A6E9B7562A6F75B173EAC2552321CA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__FunctionField.lean.txt",
+      "sha256": "6145CBB176729F803301C90A98298E20669CAE27F202ED83B535F26AC922CBB6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__Convergence.lean.txt",
+      "sha256": "AE29E550F10DAD4FEC80F93C84ED18DB17639E30AA72180803AF0C9AFAD35C1F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__Dirichlet.lean.txt",
+      "sha256": "6447B5430AEDBD850847BEFE8A589FFFEEECDD9D51CFA095292860EE73D009D5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__HurwitzZetaEven.lean.txt",
+      "sha256": "A2500B3E70FCFFB63A18FCFF774608C816CE9823D7D7FA07B2DA8F64626CF083"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__HurwitzZetaValues.lean.txt",
+      "sha256": "9B2CE7945E05DA1058E1591280A487BEC576AF4595111BB994C821AFA84364D0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__Injectivity.lean.txt",
+      "sha256": "FF763264A08DA07F698C80B38026FD0EE054A27258E375C0014CED64A534682F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__MellinEqDirichlet.lean.txt",
+      "sha256": "1BC79262278F440B1CE0343688F940F29A3A9D8ECF8FC8259DAB3CA75622F3DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__RiemannZetaLogDeriv.lean.txt",
+      "sha256": "CF958ADC9041184E5C62D009EECE27AF3D0525C4842A3723F91EFF51A4C60520"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__SumCoeff.lean.txt",
+      "sha256": "F88C811C729C6037DE5453D00F7DF92DB3D0510C7909CE0A2C0521BF0AFA09E5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__WeakPNT.lean.txt",
+      "sha256": "BD640757904EF7308AEC299B7F54F145F51D23B35D5226C200063A108767DA1F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__WienerIkehara.lean.txt",
+      "sha256": "9B9CA1808E4ADE0B5F451A28E97C0BB1EB633F0248C32294CB265B51D642FE61"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__ZetaZeros.lean.txt",
+      "sha256": "2C990BE535C723599E8719751DA720140B61BE80E6746D48347E96DF785B88B1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__LSeries__ZMod.lean.txt",
+      "sha256": "4763A37FD163811AC9B1701F6C082DD9FD5D117714389723EC0A74F0837863D4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__Basic.lean.txt",
+      "sha256": "9E7CFF74A05EAA3E715C0259D56C2CC9108B223A8708E36A81AB9666052E7FC5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__BoundedAtCusp.lean.txt",
+      "sha256": "E8D69B1A344A1E91A8C446BF38364F110069B27AA728D14B87086417CD1F84CA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "2BCB819FE2F310FE8AF0AB847F9E726EF79B760E3A800A038A455C62EE29FF79"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__CongruenceSubgroups.lean.txt",
+      "sha256": "AE677814534D3A7DAD2EB52F3EEC14CD0538F7E3700E3D09A24C3955BBFA2F10"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "694236DFE9533FD16D08E5E2DE02FC8148A72A59D5BB2D8255E41AEB1E3E69BA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__DedekindEta.lean.txt",
+      "sha256": "561352B95AFE81E83A3C7F86F3B2C04182ED06B543F49C616F335C0801B93A75"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__Discriminant.lean.txt",
+      "sha256": "E9F57259045114B7F93B42B543DEDD2353230549C9E56B1095983A6F1C408031"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__Defs.lean.txt",
+      "sha256": "917C2907FC105427363C2512E1DE6BA9B96271A72FB2A89E1AC842158DE5B476"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__E2__Defs.lean.txt",
+      "sha256": "E5EB71ABAE9D74BFD7EF9C09E83CFE1B186EAFE49D96407EC34D4DF83F7A37AF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__E2__Summable.lean.txt",
+      "sha256": "E314ACF24CF144941E33DBA49AB29AB5183C5EDA8D5E0E4A2AB6F7B965688C34"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__E2__Transform.lean.txt",
+      "sha256": "B5ADC04DA1DC9BF76D455DC167B17E42226B81875D960C9874D5B9641E0EC829"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__IsBoundedAtImInfty.lean.txt",
+      "sha256": "E78E7A3E51A4FBE432D374758DB1B7E64267535A1180408CE905BFB5FD286AA2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__MDifferentiable.lean.txt",
+      "sha256": "4E360FBACA9867F1091049C295A469303199B8CD1F985C564662F8FD1FA75237"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__QExpansion.lean.txt",
+      "sha256": "A6F92BAF23ACAD01DA796DBE993287B03A1A96CA4D247391E9C1F0054DADE7CB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__Summable.lean.txt",
+      "sha256": "E8CFF51ECCACC325073F7E30101D922822FEBECE0A529C43673FE7794247B80C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__EisensteinSeries__UniformConvergence.lean.txt",
+      "sha256": "59B651A3A86CBD55D4E026316639DDC458475F5F21BA8C3D65740181A8B585F6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__Identities.lean.txt",
+      "sha256": "D37D32129A161DC13A8C01E60BB65748F1EC476FAF1A279E8220A524AD481A61"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__JacobiTheta__Manifold.lean.txt",
+      "sha256": "3A41E3572AC011678B62BAECDC60B8C4838439D7B7E8AEDFF60D701359AE755A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__LevelOne__Basic.lean.txt",
+      "sha256": "CB7F0AC6E15131D4A848257045923CC702371594D464F074E1921D8F476FDA0E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__LevelOne__GradedRing.lean.txt",
+      "sha256": "9907372D9500F199CC8D187E43A0D02A62C96A7AD2391324012484CA5E3CF93C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "A6B8BF26079CDE2872FECAA43D7BA2F993C70E1B596F6F15E08CFB30B1FAFD67"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__OrderAtInfty.lean.txt",
+      "sha256": "97918E9827D645683BAD5B4E89AE665C8F78F720ADB0E59A9EEA5650E9EF32CF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__Petersson.lean.txt",
+      "sha256": "E475DBC1F7FF08869375408707C248FE2B839B6B82D3F040B8E8E4614A63C5D4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__ProperlyDiscontinuous.lean.txt",
+      "sha256": "9873A56AFFE807FC2510253914624D4E4CCD33D9D92C180461E85800A99D8AD9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "835956F251E6A04095F61E9FC252ABB7732F3EE2F16C404E5A864F0F20624D99"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__ModularForms__SlashActions.lean.txt",
+      "sha256": "19A406F5D7B177BDE362BABB0F961CD4C9C52F356D4A74CAD24857F48EA394AF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__NumberField__Cyclotomic__Galois.lean.txt",
+      "sha256": "4A0A94A538F6603532C249E2E86513A1FD87B16A04E5F306BB13A138FBB8B096"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__NumberField__HeckeLFunction.lean.txt",
+      "sha256": "3FA8B281B93826F6231D76981108091E014928FDCC7005661315BDF2F2DBA09C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "504EF552A75C9ECFDD4D58F2BD5E6E859661FD8CF2767C114DFA9DBCB1C8BDFA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__RamificationInertia__Galois.lean.txt",
+      "sha256": "76B0EEF79299C965D93D9DA453E9ACB2D98E0F31753B5845F5FDF0C143FA8E34"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "D7C6B59C0FC9599CC5A9D9D6521E15B69B735F00DEF977DC7DEF0221927AFDCB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__RamificationInertia__Inertia.lean.txt",
+      "sha256": "4FD0238EDF1FB210F930D23DA3576111D5F804801BC7FC0A71ABD7AFF7B7590F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__RamificationInertia__Ramification.lean.txt",
+      "sha256": "A022CB19CFDA133CBA148FB95210080EECA26C1F4DDF29E8B55D5C99A02F20EA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "D62420D6D4F623318A430A50385CADBDD95445BB3BA9DF522D5A9B50E23F8C7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Order__GaloisConnection__Basic.lean.txt",
+      "sha256": "26A06DFF6E8F43269937FAE30C61D1B00018157069BDBEDB49273E62BB416592"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__Order__RelSeries.lean.txt",
+      "sha256": "5B52445E591A4D2B66020E971A6245833200849499725F4BCBC5FDC135BF5122"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__Invariant__Galois.lean.txt",
+      "sha256": "46AC8C035FFFAE0826308EA76B735F49A44EE4336355ECA9CD57A1FF2088D57A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__IsGaloisGroup__Basic.lean.txt",
+      "sha256": "5C67C474E9E69A466B52B3FD37876DFEC4F2BE4ADCC3EDAC5112EBAF409C47D7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__IsGaloisGroup__Defs.lean.txt",
+      "sha256": "A15EC99529395DDC84D0E1B3B1A995E7AC3F2107F43DFC36BDE6A08239E4173C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__Kaehler__Basic.lean.txt",
+      "sha256": "CBFB114629CFD6A34F0B4C5BE733A5FB4E2BCB90ABAE47004D0FFD235591F344"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__Kaehler__JacobiZariski.lean.txt",
+      "sha256": "5160502F3C6E33E3A1ABD89FFA89D3448D20997567F30ECD0D37A0938B89AD0D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__Kaehler__Polynomial.lean.txt",
+      "sha256": "0872DE3B74866EF5696ABAF905DBA0AA51924EF4AB197008E32F1C3F4455F319"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__Kaehler__TensorProduct.lean.txt",
+      "sha256": "D0B4E6B779A098CAE04E5B7386293B84A6634CFCBC474A975D693180D24902EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "22320804DECD754356F20955C088C4787E1D651DDE282A5640A4ED15E833C53B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__RamificationInertia__Ramification.lean.txt",
+      "sha256": "8258E0C91737A20B782AA1A6191294B89C338F3AF517ADC2BA57D858AC74025E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261116-1988\\Mathlib__RingTheory__Smooth__Kaehler.lean.txt",
+      "sha256": "9CF04B0214AF1D58B4B5F48B23B83F32310E8F990FE4A7A8581E045659C270C4"
+    }
+  ],
+  "selectedSemanticReview": [
+    "Mathlib/NumberTheory/ModularForms/LFunction.lean",
+    "Mathlib/NumberTheory/ModularForms/Bounds.lean",
+    "Mathlib/NumberTheory/ModularForms/Cusps.lean",
+    "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+    "Mathlib/NumberTheory/NumberField/HeckeLFunction.lean",
+    "Mathlib/AlgebraicGeometry/EllipticCurve/Reduction.lean",
+    "Mathlib/AlgebraicGeometry/FunctionField.lean"
+  ],
+  "reviewBoundary": "Complete nontruncated file index compared with October29; broad filename screen fetched 170 changed files including incidental substring matches. New declaration names screened against local pin; selected exact source statements read. This is not a full external build or transitive axiom audit.",
+  "findings": [
+    "Anthropic FLT, Imperial FLT and Najman normalizer heads unchanged from October29.",
+    "Current Mathlib ordinary modular-form L-function and q-expansion bounds concern degree-two L-functions; they do not supply higher symmetric-power continuation.",
+    "Current number-field HeckeLFunction file defines idele-class characters, local Euler factors and their L-series; it does not prove the required higher continuation or automorphic association.",
+    "New integral elliptic variable-change descent and scheme function-field germ APIs do not replace the actual original Gamma1 residue genus argument. Existing native place, inertia, degree and finite orbit results give the shorter remaining route."
+  ],
+  "sourceDependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation -> reverse genus -> actual wild fiber orders/differents.",
+  "reuseApplied": "Native dihedral six-element orbits and order-twelve marks now give original marked fiber bounds six and twelve for N greater than three; native normal coordinate and differential transport give orders dividing six/twelve and different bounds seven/fourteen. New final fiber endpoints focused-compiled only; exhaustive audit pending. Wild-different scope is independently scratch-audited with28 exhaustive theorems and23 VALUE edges.",
+  "acceptance": "16/20; DUB17--20 OPEN; all original completion criteria unchanged.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "targetedWebFollowup": {
+    "recordedUTC": "2026-11-16T23:51:24.987944+00:00",
+    "queries": [
+      "Lean formalization symmetric power automorphy Newton Thorne 2026 github",
+      "Lean Deligne Galois representation modular form characteristic zero formalization 2026 github",
+      "Lean parabolic transfer Gamma1 cohomology proof 2026"
+    ],
+    "sources": [
+      {
+        "url": "https://anr-false.github.io/",
+        "scope": "Project homepage",
+        "finding": "Deligne association remains a stated project objective."
+      },
+      {
+        "url": "https://github.com/SuvirRathore/lambda_adic_slice/blob/main/README.md",
+        "scope": "Current README",
+        "finding": "Companion theorem explicitly admitted; supporting lemmas do not establish required endpoint."
+      },
+      {
+        "url": "https://github.com/dozenalist/ModularFormsMod",
+        "scope": "Repository README",
+        "finding": "Coefficient-ring modular forms, reductions and partition congruences; no stated needed parabolic transfer or higher symmetric-power endpoint."
+      },
+      {
+        "url": "https://beta.prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875",
+        "scope": "Search result and failed live page fetch, compared with retained October28 review",
+        "finding": "Complex-coefficient Shapiro candidate; accepted proof body still unverified and not the required finite counit lifting."
+      }
+    ],
+    "limitations": "Primary project-page/README screening only. No immutable code snapshot, build or transitive axiom audit for these follow-up candidates. No code imported; no global nonexistence claim."
+  },
+  "parabolicFollowup2039": {
+    "recordedUTC": "2026-11-17T00:07:39.767024+00:00",
+    "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-parabolic-shapiro-1-scratch-receipt.json",
+    "receiptSha256": "F94284CAC3CEFC38E2F2C98FF3CAFF73D2DC8EC348B1DAFBA2FABEC3B7325412",
+    "status": "Scratch audit PASS; production pending; stability proved, surjectivity open",
+    "queries": [
+      "\"Lean\" \"parabolic\" \"surjective\" \"cohomology\"",
+      "\"parabolic cohomology\" \"corestriction\" surjective",
+      "Lean \"symmetric power\" \"automorphy\" proof github November 2026",
+      "Lean \"Sato-Tate\" proved formalization github 2026",
+      "Lean \"Deligne\" \"Galois\" github proof 2026",
+      "Lean \"parabolic cohomology\" GitHub 2026"
+    ],
+    "primarySourceReview": {
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean",
+      "finding": "Exact public solution statement is for CuspForm (Gamma1 M) 2; not an all-weight association endpoint.",
+      "scope": "Reread retained immutable statement; no fresh external build or transitive axiom audit."
+    },
+    "routeAssessment": "E:\\Lean\\.tmp\\dubon83\\gammaone-boundary-word-route-2040.json",
+    "boundary": "Actual boundary-annihilating Hecke word and unit character value are not yet constructed. No acceptance gate closed; full source scope preserved."
+  },
+  "parabolicRouteArchive": {
+    "path": "Tools/parabolic-route-review-20261116-2046/manifest.json",
+    "sha256": "3CDC5372CA994297C3C43BE6C6BAA6B59BFBB67ACB7FE208986231CE25F50E09",
+    "report": "Dubon Parabolic Transfer Route Assessment 2026-11-16.md"
+  },
+  "currentVerification": {
+    "recordedUTC": "2026-11-17T00:56:29.948265+00:00",
+    "canonical": 9533,
+    "manifest": "Tools/marked-wild-census-20261116-2007/canonical-evidence-9533.json",
+    "manifestSha256": "72CDE97EED7F54C2297BB077370B071F47769A5EB6E680F77C173B3DCDC2266E",
+    "nextAssembly": 9559,
+    "nextAssemblyStatus": "26 modules integrated import-only; aggregate, focused and sequential canonical verification running; acceptance 16/20, DUB-17--20 OPEN"
+  },
+  "primitiveBoundaryFollowup": {
+    "route": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-boundary-audit-route-2055.json",
+    "finiteOperatorRoute": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-finite-boundary-audit-route-2059.json",
+    "status": "Full scratch audit PASS for scopes 2055 and 2059; nine modules, 73 exhaustive public/private/generated theorem checks, 41 proof-value dependency checks, sixteen linters per module, exact ownership. Archived under Tools/primitive-boundary-20261116-2064. Production promotion remains pending; no simultaneous annihilator/unit word constructed.",
+    "receipts": [
+      {
+        "name": "source-gammaone-primitive-boundary-2-scratch-receipt.json",
+        "sha256": "81CAB661BDEBDB2EB5912340B3C9F190DCD7B4591FA24A986D16B14D8AACB120"
+      },
+      {
+        "name": "source-gammaone-finite-boundary-1-scratch-receipt.json",
+        "sha256": "069861514790B25EC3C7F8B717B1694CE80BFD086A7DF1F5D6E4D37DFD79D6BB"
+      }
+    ]
+  },
+  "latestTargetedQueries": [
+    "Lean Gamma1 parabolic cohomology Hecke Eisenstein boundary proof GitHub",
+    "parabolic cohomology coinduced surjectivity weight reduction modulo prime powers Ash Stevens"
+  ],
+  "latestPrimaryFollowup": [
+    {
+      "url": "https://arxiv.org/html/math/0511115v3",
+      "finding": "Reviewed exact finite-field and weight restrictions; no all-positive-prime-power counit lifting theorem supplied."
+    },
+    {
+      "url": "https://beta.prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875",
+      "finding": "Search again exposes complex-coefficient subgroup-to-coinduced parabolic lifting statement; direct page fetch failed. No proof body imported."
+    }
+  ],
+  "primitiveBoundaryArchive": {
+    "path": "Tools/primitive-boundary-20261116-2064/manifest.json",
+    "sha256": "129466E84C8DF85DDC53AB62366EEF6AFCBCC2AE6A39983FF77446DCA36B1CE2",
+    "report": "Dubon Primitive Boundary Assessment 2026-11-16.md"
+  },
+  "expandedRepositoryReview": {
+    "metadata": "Tools/lean-expanded-reuse-20261116.json",
+    "sha256": "64A7B780D0AFEF0C310E620239F60E11463EBB7DCA280A729F60FC87A2F4B9DE",
+    "assessment": "Dubon Expanded Reuse Assessment 2026-11-16.md",
+    "manifest": "Tools/expanded-reuse-20261116-2071/publication-manifest-2079.json",
+    "manifestSha256": "E894E902BBD1D06AA0D706267A5E6A9C2E06DF9564499AE2AA5EC5F83B79B917"
+  }
+}

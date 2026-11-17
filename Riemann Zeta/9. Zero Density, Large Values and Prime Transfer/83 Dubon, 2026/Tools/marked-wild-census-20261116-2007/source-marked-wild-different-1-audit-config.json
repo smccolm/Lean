@@ -1,0 +1,77 @@
+{
+  "modules": [
+    "SourceMarkedEmbeddingSignKernel",
+    "SourceMarkedOriginalNormalField",
+    "SourceMarkedOriginalNormalFieldTwo",
+    "SourceMarkedOriginalNormalFieldThree",
+    "SourceMarkedOriginalLocalDifferentials",
+    "SourceMarkedOriginalWildDifferent",
+    "SourceMarkedOriginalWildDifferentTwo",
+    "SourceMarkedOriginalWildDifferentThree"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_fixed_of_torsion_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_of_torsion_sign_kernel",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_D_ne_zero",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_differentials_finrank",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_place_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_wild_different_of_normal_order_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_fixed_of_torsion_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_of_torsion_sign_kernel",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_D_ne_zero",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_differentials_finrank",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_place_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_wild_different_of_normal_order_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_fixed_of_torsion_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_of_torsion_sign_kernel",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_D_ne_zero",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_differentials_finrank",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_place_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_wild_different_of_normal_order_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+    "Dubon2026.SourceCurve.coordinateEmbeddingFixingField",
+    "Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField",
+    "Dubon2026.SourceCurve.coordinateEmbedding_fixingField_isGalois",
+    "Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField_coordinate",
+    "Dubon2026.SourceCurve.coordinateEmbedding_fixingField_fixed",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_inertia_sign",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation",
+    "Dubon2026.SourceCurve.Place.normal_coordinate_order_dvd_of_inertia_kernel",
+    "Dubon2026.SourceCurve.Place.rational_wild_different_bound",
+    "Dubon2026.SourceCurve.Place.ordDifferential_map_of_ramificationIndex_one_all_char"
+  ],
+  "compileEvidence": {
+    "SourceMarkedEmbeddingSignKernel": "SourceMarkedEmbeddingSignKernel-1984",
+    "SourceMarkedOriginalNormalField": "SourceMarkedOriginalNormalField-1984",
+    "SourceMarkedOriginalNormalFieldTwo": "SourceMarkedOriginalNormalFieldTwo-1984",
+    "SourceMarkedOriginalNormalFieldThree": "SourceMarkedOriginalNormalFieldThree-1984",
+    "SourceMarkedOriginalLocalDifferentials": "SourceMarkedOriginalLocalDifferentials-1984",
+    "SourceMarkedOriginalWildDifferent": "SourceMarkedOriginalWildDifferent-1984",
+    "SourceMarkedOriginalWildDifferentTwo": "SourceMarkedOriginalWildDifferentTwo-1984",
+    "SourceMarkedOriginalWildDifferentThree": "SourceMarkedOriginalWildDifferentThree-1984"
+  },
+  "separatelyAxiomChecked": []
+}

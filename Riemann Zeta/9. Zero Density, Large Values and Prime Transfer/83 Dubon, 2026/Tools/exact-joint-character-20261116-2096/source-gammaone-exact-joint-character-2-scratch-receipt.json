@@ -1,0 +1,155 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceOperatorRangeCharacterData",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient"
+  ],
+  "recordedUTC": "2026-11-17T03:06:33.507979+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceGammaOneBoundaryWordKernel",
+    "SourcePrimitiveH1SquareCongruence",
+    "SourceOperatorRangeCharacter",
+    "SourceGammaOneBoundaryQuotient",
+    "SourceGammaOneExactJointRing",
+    "SourceGammaOneExactJointSquare",
+    "SourceGammaOneExactJointFinite",
+    "SourceGammaOneExactJointCharacter",
+    "SourceGammaOneGeometricExactJointCharacter"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel.lean",
+      "sha256": "E29122A7A46D2CA98375814B1177D3B738889788E5BC833EB4DFCFB5D25B5564",
+      "oleanSha256": "DDFFE8E6FCA03C0948E69026DF0FDF87339889CA32E1DFB012335F0244889E65",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel-2043.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryWordKernel-2043.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence.lean",
+      "sha256": "A2F05A623196AFBE03294F9C9EF24CA2A9BEE380E6677EA92B531BAC0AE11B4E",
+      "oleanSha256": "258783D97B46AB8D365DCAE3A998126C23CF90AD09A01571E1DE7C71C9F4D988",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence-2095.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1SquareCongruence-2095.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter.lean",
+      "sha256": "8C931C644646EDFC78750608E12AF63022096EB1A5A4B92A9B2BB4FE2A457B22",
+      "oleanSha256": "0B0B6A20A448ABD36EB6B37B93FA849A9D06C5F77172A7CCB5CEEF373533B3CD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter-2095.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOperatorRangeCharacter-2095.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient.lean",
+      "sha256": "F2746945BBE1FA6751C0D505D1A30633703A37BE0AD068FD4838431AE99CEDDA",
+      "oleanSha256": "7B281F1082A74A44AD671FA539F246FBB74CF9A4BB5302B9F7592E9315788BB8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient-2095.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBoundaryQuotient-2095.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing.lean",
+      "sha256": "083654CB52EC487E0BEDDF064D2C9041CF3D1D0468D0D4C35D8AB826D4AD4AA5",
+      "oleanSha256": "588C874F3EC91C5D8868344328106AABFF1DDD599C01FDDD7AAB9482F5245AE8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing-2100.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointRing-2100.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare.lean",
+      "sha256": "51D29098CB2189757D49300B685BF6F45743010E8933EE538E150A3EE5BAA7D5",
+      "oleanSha256": "7BAA6AE801310808F313B596A2CEAA0F3DD69CFBB15DF66B0F93C42CFFD21492",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare-2100.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointSquare-2100.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite.lean",
+      "sha256": "27C6C3DADC777A254519CAE3E8535D19DF008F1F97C33C1C33C584F57BF360D6",
+      "oleanSha256": "1D28A03519FCE99BB6F8C867911C1FD20AC11947B8A59B333639F8217F45DA0E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite-2100.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointFinite-2100.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter.lean",
+      "sha256": "96483EC691472B9A07A74A5CF90202768E088E766A910595913482CBFFB867F2",
+      "oleanSha256": "770590F74FE3CC61BABF0D69F4D6F9A0A35AE32758EEE5C8E2E680FF48C3A6EF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter-2100.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacter-2100.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter.lean",
+      "sha256": "45573A1412307AAE9C2D43A57CB78D2F0A826A33B63BBBDC33B6DB1180667B8B",
+      "oleanSha256": "0E3790ADEF939A28EE8A0F63E74B98195634C80831FADC68C035A0218690A928",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter-2100.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricExactJointCharacter-2100.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square",
+    "Dubon2026.sourceOperatorRangeCharacterData",
+    "Dubon2026.sourceOperatorRangeCharacterData_of_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.instRingBinaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_boundary_word_kernel",
+    "Dubon2026.sourcePrimitiveH1Hecke_square_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator_square",
+    "Dubon2026.sourceOperatorRangeCharacterData_of_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_word_zero_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_exact_joint_kernel_square",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJoint_original_character",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceOperatorRangeCharacterData",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotient",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryBoundaryQuotientPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.instRingBinaryExactJointOperatorRing",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryExactJointHeckeWord"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterAudit2.log",
+  "logSha256": "FD780871EC00EDCBBEA1CC21CDF2C9BFDA579B96F2E8095151128C2628737829",
+  "auditSha256": "70CB0A275BC81FA4D91CF092A512BCBA062E1272868CE08F494A20C0543E359D",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterScratchOwnership2100.log",
+  "ownershipSha256": "C2822865CEB5F43A0219BC68080C72B1BD99EBF2586068B1C1F8E59189123E0E",
+  "exhaustiveTheorems": 84,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 27,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactJointCharacterDependencyAudit2.log",
+  "dependencyAuditSha256": "5AFC08E663DDB6459E43E1972FE53B891D1EFF6C032CCCE45F9E384D68371856",
+  "dependencyAuditSourceSha256": "1EF3B2BF524E97EA9FDE8BF200261050F40DA259E1452640D9A0D8E864B9260D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_exact_joint_original_character"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> arithmetic realization of the exact joint geometric/boundary operator character.",
+  "discharged": [
+    "Construct the literal finite boundary quotient and its original Hecke operators using already proved stability and cohomology finiteness.",
+    "Derive square-zero original H1 from simultaneous zero on the two actual quotient operator spaces.",
+    "Descend original congruence integrality from the square at twice the precision, without a discrete valuation hypothesis.",
+    "Construct a finite actual joint operator image character with the entire original pullback using the proved original geometric operators; no lifting or unit separator premise."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic Galois realization of the joint algebra, primes two and three, two-dimensional characteristic-zero realization, all-weight association, local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. This does not assert a character on the geometric factor alone. Acceptance remains 16/20; DUB-17--20 OPEN and the full source contract is unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-exact-joint-character-2-reuse-review-20261116.json",
+  "reuseReviewSha256": "3146E60AA53F41BFFB2C83A2FAE6DCF74052858903A2BA1C383B34E37A9C8457",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

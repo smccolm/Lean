@@ -1,0 +1,54 @@
+import Dubon2026.SourceMarkedTorsionSignedIndex
+import Mathlib.Tactic.FinCases
+import Mathlib.Tactic.NormNum
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> all-level original genus preservation -> small levels. Native
+signed coset/primitive-point comparison bounds the index by four at levels
+one, two and three. At level three four explicit sign pairs cover all nonzero
+residue pairs. This finite kernel argument supplies the small-level arithmetic
+genus vanishing input without a numerical genus formula or changed level range. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup MarkedTorsion
+
+private theorem signed_index_le_square (N : ℕ) [NeZero N] :
+    (plusMinus (Gamma1 N)).index ≤ N ^ 2 := by
+  classical
+  let rep (s : SignClasses (ZMod N × ZMod N) N) := s.property.choose
+  have hinj : Function.Injective rep := by
+    intro s u h
+    apply Subtype.ext
+    exact s.property.choose_spec.2.trans ((congrArg (fun v => ({v, -v} : Set (ZMod N × ZMod N))) h).trans
+      u.property.choose_spec.2.symm)
+  have hc := Nat.card_le_card_of_injective rep hinj
+  rw [natCard_residue_signClasses, Nat.card_eq_fintype_card, Fintype.card_prod,
+    ZMod.card, mul_self_eq_pow_two] at hc
+  exact hc
+
+private theorem signed_index_three_le_four : (plusMinus (Gamma1 3)).index ≤ 4 := by
+  classical
+  let S : Finset (Set (ZMod 3 × ZMod 3)) :=
+    {{(0, 1), (0, 2)}, {(1, 0), (2, 0)}, {(1, 1), (2, 2)}, {(1, 2), (2, 1)}}
+  have hmem (s : SignClasses (ZMod 3 × ZMod 3) 3) : s.val ∈ S := by
+    obtain ⟨⟨a, b⟩, hv, hs⟩ := s.property
+    rw [hs]
+    fin_cases a <;> fin_cases b <;> norm_num [S, Prod.neg_mk, Set.pair_comm] at hv ⊢
+  have hinj : Function.Injective (fun s : SignClasses (ZMod 3 × ZMod 3) 3 =>
+      (⟨s.val, hmem s⟩ : S)) := by
+    intro s u h
+    exact Subtype.ext (congrArg Subtype.val h)
+  have hc := Nat.card_le_card_of_injective _ hinj
+  rw [natCard_residue_signClasses, Nat.card_eq_finsetCard] at hc
+  exact hc.trans Finset.card_le_four
+
+theorem gamma1_small_signed_index_le_four (N : ℕ) [NeZero N] (hN : N ≤ 3) :
+    (plusMinus (Gamma1 N)).index ≤ 4 := by
+  have hn : N ≠ 0 := NeZero.ne N
+  interval_cases N
+  · exact (signed_index_le_square 1).trans (by norm_num)
+  · exact (signed_index_le_square 2).trans (by norm_num)
+  · exact signed_index_three_le_four
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

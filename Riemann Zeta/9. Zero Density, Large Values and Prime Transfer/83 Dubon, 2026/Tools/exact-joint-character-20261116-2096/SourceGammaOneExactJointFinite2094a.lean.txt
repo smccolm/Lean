@@ -1,0 +1,54 @@
+import SourceGammaOneExactJointRing2090a
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+finite exact joint operator character. Reuse native full-H1 finiteness
+and the actual Tate/parabolic equivalence. Both quotient spaces and
+therefore their product endomorphism ring are finite; no new period
+basis or auxiliary cusp-function space is required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "B" => binaryBoundaryQuotient Q N w
+
+private theorem finite_end {R X : Type} [Semiring R] [AddCommMonoid X] [Module R X]
+    [Finite X] : Finite (Module.End R X) :=
+  Finite.of_injective (fun f : Module.End R X => (f : X → X)) DFunLike.coe_injective
+
+/-- The actual Tate diamond quotient is finite, using native H1 finiteness. -/
+theorem binaryTateDiamondQuotient_finite (hlarge : 3 < p) : Finite J := by
+  letI := sourceGammaOneConstantH1_finite Q N w
+  letI : Finite (binaryParabolicH1 Q N w) :=
+    Finite.of_injective Subtype.val Subtype.val_injective
+  letI : Finite (T →ₗ[ℤ_[p]] V) :=
+    Finite.of_injective (binaryTateH1Equiv Q p n w hlarge)
+      (binaryTateH1Equiv Q p n w hlarge).injective
+  exact Finite.of_surjective (binaryTateDiamondRelations Q p n w).mkQ
+    (binaryTateDiamondRelations Q p n w).mkQ_surjective
+
+/-- The literal geometric/boundary-quotient product operator ring is finite. -/
+theorem binaryExactJointOperatorRing_finite (hlarge : 3 < p) :
+    Finite (binaryExactJointOperatorRing Q p n w) := by
+  letI : Finite J := binaryTateDiamondQuotient_finite Q p n w hlarge
+  letI : Finite B := binaryBoundaryQuotient_finite Q N w
+  letI : Finite (Module.End (ZMod N) J) := finite_end
+  letI : Finite (Module.End (ZMod N) B) := finite_end
+  change Finite (Module.End (ZMod N) J × Module.End (ZMod N) B)
+  infer_instance
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

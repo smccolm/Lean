@@ -1,0 +1,64 @@
+import Dubon2026.SourceIntegralCharacterShapiro
+import Dubon2026.SourceShapiroH1CocycleComparison
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+Hecke-character realization -> parabolic transfer -> local native Shapiro
+comparison. Reuse the proved orbit-potential theorem and exact coinduced
+coordinates. Vanishing on conjugates of powers produces a genuine local
+coboundary in the native coinduced representation over the original
+coefficient ring. This proves local compatibility, not transfer surjectivity. -/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory SourceIntegralCharacterLift
+variable {R G V : Type} [CommRing R] [Group G] [AddCommGroup V] [Module R V]
+
+private theorem shapiro_local_potential (S : Subgroup G) (φ : Additive S →+ V) (g : G)
+    (hφ : ∀ (t : G) (z : ℤ) (h : t⁻¹ * g ^ z * t ∈ S),
+      φ (Additive.ofMul ⟨t⁻¹ * g ^ z * t, h⟩) = 0) :
+    ∃ F : G ⧸ S → V, shapiro S φ g = cob F g := by
+  obtain ⟨F, hF⟩ := exists_potential (isCrossed_shapiro S φ) (Subgroup.zpowers g) (by
+    intro k hk q hq
+    obtain ⟨z, rfl⟩ := Subgroup.mem_zpowers_iff.mp hk
+    have hi : (g ^ z)⁻¹ • q = q := by
+      rw [inv_smul_eq_iff, hq]
+    rw [shapiro_apply, hi]
+    have hm : q.out⁻¹ * g ^ z * q.out ∈ S := by
+      have hc := (cosetTransition S (g ^ z) q).property
+      change (g ^ z • q).out⁻¹ * (g ^ z * q.out) ∈ S at hc
+      simpa only [hq, mul_assoc] using hc
+    have he : cosetTransition S (g ^ z) q = ⟨q.out⁻¹ * g ^ z * q.out, hm⟩ := by
+      apply Subtype.ext
+      change (g ^ z • q).out⁻¹ * (g ^ z * q.out) = q.out⁻¹ * g ^ z * q.out
+      rw [hq, mul_assoc]
+    rw [he]
+    exact hφ q.out z hm)
+  exact ⟨F, hF g (Subgroup.mem_zpowers g)⟩
+
+theorem sourceTrivialShapiro_local_coboundary (S : Subgroup G)
+    (φ : Additive S →+ V) (g : G)
+    (hφ : ∀ (t : G) (z : ℤ) (h : t⁻¹ * g ^ z * t ∈ S),
+      φ (Additive.ofMul ⟨t⁻¹ * g ^ z * t, h⟩) = 0) :
+    let A := Rep.trivial R G V
+    let B := Rep.coind S.subtype (Rep.res S.subtype A)
+    ∃ v : B, coinducedShapiroOne A S (fun s => φ (Additive.ofMul s)) g = B.ρ g v - v := by
+  let A := Rep.trivial R G V
+  obtain ⟨F, hF⟩ := shapiro_local_potential S φ g hφ
+  refine ⟨coinducedCosetReconstruct A S (-F), ?_⟩
+  apply coinducedCosetValues_injective A S
+  rw [map_sub, coinducedShapiroOne_values]
+  funext q
+  simp only [Pi.sub_apply]
+  have hrec := coinducedCosetValues_reconstruct A S (-F)
+  have hact := coinducedCosetValues_action A S (coinducedCosetReconstruct A S (-F)) g q
+  rw [hrec] at hact
+  rw [hact, congrFun hrec q]
+  have h := congrFun hF q
+  change φ (Additive.ofMul (cosetTransition S g (g⁻¹ • q))) =
+    F q - F (g⁻¹ • q) at h
+  change φ (Additive.ofMul (cosetTransition S g (g⁻¹ • q))) =
+    -F (g⁻¹ • q) - -F q
+  rw [h]
+  abel
+
+end
+end Dubon2026

@@ -1,0 +1,34 @@
+[
+  {
+    "version": "SourceGammaOneConormDivisorSpaces2003a",
+    "module": "SourceGammaOneConormDivisorSpaces",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces2003a.lean",
+    "originalSha256": "658011CAC76F793B08D4ECA204C3CEF6BB3300C42C2E57B5D266EFC8BF4C9A49",
+    "canonicalSha256": "658011CAC76F793B08D4ECA204C3CEF6BB3300C42C2E57B5D266EFC8BF4C9A49",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneConormDimension2004b",
+    "module": "SourceGammaOneConormDimension",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension2004b.lean",
+    "originalSha256": "D95027C3DC06ADDE46998314BBFC0077CB4A2A475570E63FD3B575283D00BA8F",
+    "canonicalSha256": "D88BA6A2D9B5FC879F6789578A37DF3B9769DF24AB4B6B4AE4F67D23EFC6FC88",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneArithmeticGenus2005a",
+    "module": "SourceGammaOneArithmeticGenus",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus2005a.lean",
+    "originalSha256": "3B371D68C45D938C1BDCE5F3C343FFF812F095380CB48605375E8BD8CE957ED4",
+    "canonicalSha256": "AF4958B23AC666CAD6BAE0ADCD5A6C5E3691B2BA1944BCD3BDE69B22911926D7",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneArithmeticGenusBound2006a",
+    "module": "SourceGammaOneArithmeticGenusBound",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound2006a.lean",
+    "originalSha256": "730CC5FD5F3E7E1A12A5AD25A56B0899F833DC71C4A15532EE2FFDEBFC6D659B",
+    "canonicalSha256": "01D464B969D9CBE9FEF6E6C2E5ABA025DF75F4A5B2F37C9F092DF45DC62D2396",
+    "mathematicalBodyIdentical": true
+  }
+]

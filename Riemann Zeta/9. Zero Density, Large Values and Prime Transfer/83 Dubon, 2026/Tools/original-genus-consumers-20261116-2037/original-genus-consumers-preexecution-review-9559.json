@@ -1,0 +1,19 @@
+{
+  "status": "Prepared only; predecessor9533 canonical PASS and archive are mandatory preflight inputs.",
+  "modules": 26,
+  "queries": 46,
+  "theorems": 45,
+  "constructions": 1,
+  "exhaustiveScratchChecks": 110,
+  "proofValueChecks": 75,
+  "scopes": 3,
+  "receipts": {
+    "source-gammaone-genus-comparison-1-scratch-receipt.json": "F7B118B5905BD9106EAA6AB219E4D4637367164771F8BB5F582FDB4F66ED06F3",
+    "source-original-genus-preservation-1-scratch-receipt.json": "281E1B1B28C1E520B5C7BEC13D8495B4C1942066C83C9F7DEC30CAB625274D3E",
+    "source-gammaone-geometric-consumers-1-scratch-receipt.json": "A1C5475B9543910A3A85FE55E4ACF8397F457469A82E6A7536A0C6D95D2AB1E5"
+  },
+  "expectedConsumers": 27717,
+  "expectedConstructions": 3055,
+  "fullGoal": "Parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "productionMutation": false
+}

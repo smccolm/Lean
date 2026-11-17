@@ -1,0 +1,93 @@
+# AINTLIB — an AI-reviewed number-theory library
+
+**AINTLIB is a "mathlib for number theory," maintained by AI agents.** It is **one Lake workspace**
+with every number-theory project side by side under `projects/<P>/`, all on a **single mathlib that is
+bumped to latest daily**. Because it is one build unit, any result can `import` any other — that is the
+point. Standards are deliberately relaxed (AI reviewers; `sorry` is allowed as a work-in-progress
+marker), and a continuous fleet of Claude agents cleans, generalises, and decomposes results as the
+projects grow.
+
+## 🔗 Live blueprints
+
+Each project has a [Verso](https://github.com/leanprover/verso-blueprint) blueprint, published as
+subdirectories of one site:
+
+**https://cbirkbeck.github.io/AINTLIB-blueprints/**
+
+- [p-adic L-functions](https://cbirkbeck.github.io/AINTLIB-blueprints/padic/)
+- [Adic spaces (Huber/Tate rings, the adic spectrum)](https://cbirkbeck.github.io/AINTLIB-blueprints/adicspaces/)
+- [Modular forms — the valence formula](https://cbirkbeck.github.io/AINTLIB-blueprints/leanmodularforms/)
+- [Strong multiplicity one](https://cbirkbeck.github.io/AINTLIB-blueprints/smo/)
+- [The Hasse bound for elliptic curves](https://cbirkbeck.github.io/AINTLIB-blueprints/hasseweil/)
+- [Chebotarev density theorem](https://cbirkbeck.github.io/AINTLIB-blueprints/chebotarev/)
+- [Kummer's criterion & regular primes](https://cbirkbeck.github.io/AINTLIB-blueprints/flt-bernoulli/)
+
+(Public site; this source repo is private.)
+
+## Structure
+
+- **`main`** — the integrated library. Always builds. Bumped to latest mathlib daily and centrally.
+  `sorry` is allowed here as an explicit work-in-progress marker.
+- **`dev/<project>` branches** — each project's frontier, where new theorems are proved.
+
+It is maintained by a **4-account Claude fleet**: a coordinator (writes tickets, bumps mathlib, reviews
+generalisations) + universal workers that pull GitHub-issue tickets and run `/cleanup`, `/generalise`,
+or `/decompose-proof` per the ticket's lane. The binding rules are in `CLAUDE.md`; the full design is
+`docs/superpowers/specs/2026-06-16-aintlib-worker-system-design.md`.
+
+## Projects (`projects/<P>/`)
+
+PadicLFunctions · AdicSpaces · Chebotarev · FltRegularBernoulli · HasseWeil · LeanModularForms ·
+NagellLutz · FltRegular · Common.
+
+## Build
+
+```bash
+lake exe cache get            # mathlib oleans
+lake build PadicLFunctions    # any project's lib; builds are incremental
+```
+
+The toolchain and Mathlib revision are pinned in `lean-toolchain` and `lakefile.toml`.
+
+Library sources use Lean's module system. A downstream module can import the Hasse bound directly:
+
+```lean
+module
+import HasseWeil.HasseBound
+
+#check HasseWeil.WeilPairing.hasse_bound
+```
+
+`lake build ModuleSystemTests` checks a module-system importing client, guards the Hasse theorem's
+axiom dependencies, and exercises the exported Bernoulli `cbv` simproc and `bernoulli_decide` tactic. This target is included in
+`lake build` alongside the existing default libraries.
+
+## Lean module headers
+
+New library files start with `module` after the copyright comment. Use `public import` for
+dependencies needed by exported declarations, and ordinary `import` for proof-only dependencies.
+An `@[expose] public section` exports declarations and allows clients to unfold their definitions.
+Meta evaluators import executable helpers with `meta import` (or `public meta import` when those
+helpers are also needed by exported meta declarations).
+
+When integrating a legacy development branch, migrate its imports before their consumers. Use
+the `script/Modulize.lean` shipped with the Lean version in `lean-toolchain`: obtain the script from
+that exact Lean tag and run `lake env lean --run Modulize.lean path/to/File.lean ...`. Build the
+affected targets with `lake build`, resolve missing direct imports and visibility errors, then run
+`lake build ModuleSystemTests`. A module-system source cannot import a legacy source.
+
+Some existing public declarations use intentionally private helpers or instances. Their files
+retain `set_option backward.privateInPublic true` for compatibility; modules that need a private
+dependency explicitly use `import all`. Prefer public APIs in new proofs. When narrowing the
+option, apply it to the helper declarations as well as their public consumers: the option on a
+consumer alone cannot restore a helper that was not exported when declared.
+
+## Layout
+
+- `projects/<P>/<Lib>/…` — each project's Lean source.
+- `projects/<P>/_blueprint/` + `projects/<P>/<Lib>Blueprint/` — that project's Verso blueprint side-build.
+- `scripts/render-blueprint-local.sh` — render one project's blueprint locally (disk-safe recipe);
+  `scripts/build-blueprints.sh` — assemble the multi-blueprint site for Pages.
+- `docs/worker-prompts/` — the worker fleet prompts; `docs/superpowers/specs/` — designs.
+
+Built with [Claude Code](https://claude.com/claude-code).

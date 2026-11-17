@@ -1,0 +1,39 @@
+import Dubon2026.SourceIntegralCharacterModularFacts
+import Dubon2026.SourceManinCuspStabilizer
+
+/-! DUB-17/18 -> original homogeneous Gamma1 character -> parabolic
+transfer -> local native Shapiro comparison. The original squared-trace-four
+condition persists under every integral power and conjugation. Native signed
+translation classification and trace conjugacy discharge the stabilizer-power
+condition of the existing orbit-potential construction. -/
+namespace Dubon2026.SourceParabolic
+open scoped MatrixGroups
+open Matrix.SpecialLinearGroup
+
+theorem trace_sq_zpow (γ : SL(2, ℤ))
+    (hγ : (γ : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4) (z : ℤ) :
+    ((γ ^ z : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 := by
+  obtain ⟨ε, δ, n, hε, rfl⟩ := classification γ hγ
+  rcases hε with rfl | rfl
+  · rw [one_mul, conj_zpow, ← zpow_mul, SourceIntegralCharacterLift.trace_conj_T_zpow]
+    norm_num
+  · have hc : Commute (-1 : SL(2, ℤ)) (δ * ModularGroup.T ^ n * δ⁻¹) := by
+      change (-1 : SL(2, ℤ)) * _ = _ * (-1)
+      simp only [neg_one_mul, mul_neg_one]
+    rw [hc.mul_zpow, conj_zpow, ← zpow_mul]
+    have he := SourceIntegralCharacterLift.eq_one_or_eq_neg_one_of_mem_center
+      ((Subgroup.center SL(2, ℤ)).zpow_mem SourceIntegralCharacterLift.neg_one_mem_center z)
+    rcases he with he | he
+    · rw [he, one_mul, SourceIntegralCharacterLift.trace_conj_T_zpow]
+      norm_num
+    · rw [he, neg_one_mul, coe_neg, Matrix.trace_neg,
+        SourceIntegralCharacterLift.trace_conj_T_zpow]
+      norm_num
+
+theorem trace_sq_conjugate_zpow (γ δ : SL(2, ℤ))
+    (hγ : (γ : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4) (z : ℤ) :
+    ((δ⁻¹ * γ ^ z * δ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 := by
+  rw [SourceManin.trace_conj]
+  exact trace_sq_zpow γ hγ z
+
+end Dubon2026.SourceParabolic

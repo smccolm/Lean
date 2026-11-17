@@ -1,0 +1,53 @@
+import Dubon2026.SourceOrderTwelveTransitiveMarks
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-two fiber.
+Reuse the proved order-twelve marks. If the marked involution and cubic
+element have no fixed points, every orbit has twelve points. An invariant
+surjection therefore has twelve times as many domain points as image
+points, at least. This will be applied to actual primitive sign classes. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+open MulAction
+
+theorem twelve_mul_card_fiber_le_of_free_marks
+    {G X Y : Type*} [Group G] [Finite G] [MulAction G X] [Finite X]
+    (hG : Nat.card G = 12) (hexp : ∀ g : G, g ^ 2 = 1 ∨ g ^ 3 = 1)
+    (a b : G) (ha1 : a ≠ 1) (ha2 : a ^ 2 = 1) (hb1 : b ≠ 1) (hb3 : b ^ 3 = 1)
+    (hafree : ∀ x : X, a • x ≠ x) (hbfree : ∀ x : X, b • x ≠ x)
+    (f : X → Y) (hf : Function.Surjective f) (hinv : ∀ g x, f (g • x) = f x) :
+    12 * Nat.card Y ≤ Nat.card X := by
+  classical
+  letI : Fintype X := Fintype.ofFinite X
+  letI : Finite Y := Finite.of_surjective f hf
+  letI : Fintype Y := Fintype.ofFinite Y
+  have hcard (x : X) : Nat.card (orbit G x) = 12 := by
+    letI : Nonempty (orbit G x) := ⟨⟨x, mem_orbit_self x⟩⟩
+    have hzero (g : G) (hg : ∀ z : X, g • z ≠ z) :
+        Nat.card (fixedBy (orbit G x) g) = 0 := by
+      letI : IsEmpty (fixedBy (orbit G x) g) := ⟨fun z => by
+        apply hg z.val.val
+        exact congrArg Subtype.val z.property⟩
+      exact Nat.card_eq_zero_of_isEmpty
+    obtain ⟨hs, ha, hb⟩ := SourceOrderTwelve.marks (orbit G x) hG hexp
+    have haa := ha a ha1 ha2
+    have hbb := hb b hb1 hb3
+    rw [hzero a hafree] at haa
+    rw [hzero b hbfree] at hbb
+    omega
+  have hbound := Finset.mul_card_image_le_card_of_maps_to
+    (f := f) (s := Finset.univ) (t := Finset.univ)
+    (fun _ _ => Finset.mem_univ _) 12 (fun y _ => ?_)
+  · simpa only [Finset.card_univ, Nat.card_eq_fintype_card] using hbound
+  obtain ⟨x, rfl⟩ := hf y
+  have hmap (z : orbit G x) : f z.val = f x := by
+    obtain ⟨g, hg⟩ := z.property
+    rw [← hg]
+    exact hinv g x
+  have hle := Nat.card_le_card_of_injective
+    (fun z : orbit G x => (⟨z.val, hmap z⟩ : {z : X // f z = f x}))
+    (fun z w h => Subtype.ext (congrArg Subtype.val h))
+  rw [hcard] at hle
+  simpa only [Nat.card_eq_fintype_card, Fintype.card_subtype] using hle
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

@@ -1,0 +1,66 @@
+import SourceGammaOneBoundaryWordKernel2040c
+import Dubon2026.SourcePrimitiveH1AdicOperatorKernel
+import Dubon2026.SourceFiniteOperatorCharacterDescent
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+quotient Hecke character. The actual full-H1 operator congruence theorem
+and a boundary-annihilating word with unit original character value
+construct the exact quotient character. No parabolic preimage, auxiliary
+eigensystem, or fixed parabolic saturation bound is assumed. Constructing
+the displayed boundary word and its unit value remains required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+open scoped ValuativeRel
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+theorem binaryDiamondQuotient_original_character_of_boundary_word
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+      ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (b : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)))
+    (hb : ∀ y : H1 C, FreeAlgebra.lift ℤ (sourceGammaOnePrimeOperators Q N w) b y ∈
+      binaryParabolicH1 Q N w)
+    (hbunit : IsUnit (sourcePrimitiveH1AdicQuotientCharacter f hk τ n
+      (sourceGammaOneOriginalHeckeWord Q N w b))) :
+    ∃ χ : (FreeAlgebra.lift ℤ Hq).range →+*
+        𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1),
+      χ.comp (FreeAlgebra.lift ℤ Hq).rangeRestrict.toRingHom =
+        (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+          (sourceGammaOneOriginalHeckeWord Q N w).toRingHom := by
+  let θ := (FreeAlgebra.lift ℤ Hq).rangeRestrict.toRingHom
+  let ψ := (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+    (sourceGammaOneOriginalHeckeWord Q N w).toRingHom
+  have hker : RingHom.ker θ ≤ RingHom.ker ψ := by
+    intro a ha
+    have ha0 : FreeAlgebra.lift ℤ Hq a = 0 :=
+      congrArg Subtype.val (RingHom.mem_ker.mp ha)
+    have hzero := sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator f hk τ p n Fact.out
+      (sourceGammaOneOriginalHeckeWord Q N w (a * b))
+      (binaryDiamondQuotientOriginalTransfer_boundary_word_kernel Q p n w hlarge Hq hH b hb a ha0)
+    change ψ (a * b) = 0 at hzero
+    rw [map_mul] at hzero
+    exact RingHom.mem_ker.mpr (hbunit.mul_left_eq_zero.mp hzero)
+  exact ⟨sourceFiniteOperatorCharacterDescend θ
+    (FreeAlgebra.lift ℤ Hq).rangeRestrict_surjective ψ hker,
+    sourceFiniteOperatorCharacterDescend_comp _ _ _ _⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

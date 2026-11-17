@@ -1,0 +1,73 @@
+import SourceGammaOnePrimitiveFixedCosets
+import Dubon2026.SourcePrincipalCoprimeReduction
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic realization
+of the exact joint operator character -> primitive boundary Frobenius.
+The actual cusp translation has exactly one fixed Hecke coset. Uniqueness
+uses the native integral two-by-two matrix identity; existence reuses
+principal-level reduction at coprime moduli. Thus no cusp representative
+or fixed-orbit existence is supplied as an arithmetic hypothesis. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+
+/-- Two fixed original Hecke cosets of a primitive cusp loop are equal. -/
+theorem primitiveCuspHecke_fixed_unique (M : ℕ)
+    (q : SL(2, ℤ) ⧸ Gamma1 M) (ell : sourceBinaryHeckePrime M)
+    {x y : Gamma1 M ⧸ sourceGammaOneHeckeUpper M ell.val}
+    (hx : primitiveCuspGenerator M q • x = x)
+    (hy : primitiveCuspGenerator M q • y = y) : x = y := by
+  induction x using QuotientGroup.induction_on with
+  | H r =>
+    induction y using QuotientGroup.induction_on with
+    | H s =>
+      have hr := (primitiveCuspHecke_fixed_iff M q ell r).mp hx
+      have hs := (primitiveCuspHecke_fixed_iff M q ell s).mp hy
+      have hr0 : (((r.val⁻¹ * q.out⁻¹) 0 0 : ℤ) : ZMod ell.val) = 0 :=
+        (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mpr hr
+      have hs0 : (((s.val⁻¹ * q.out⁻¹) 0 0 : ℤ) : ZMod ell.val) = 0 :=
+        (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mpr hs
+      let A := r.val⁻¹ * q.out⁻¹
+      let B := s.val⁻¹ * q.out⁻¹
+      have he : r.val⁻¹ * s.val = A * B⁻¹ := by dsimp [A, B]; group
+      have h01 : (A * B⁻¹) 0 1 = -(A 0 0 * B 0 1) + A 0 1 * B 0 0 := by
+        rw [Matrix.SpecialLinearGroup.coe_mul, Matrix.SpecialLinearGroup.SL2_inv_expl]
+        simp [Matrix.mul_apply, Fin.sum_univ_two]
+      apply QuotientGroup.eq.mpr
+      change (((r.val⁻¹ * s.val) 0 1 : ℤ) : ZMod ell.val) = 0
+      rw [he, h01]
+      push_cast
+      change -(↑((r.val⁻¹ * q.out⁻¹) 0 0) * ↑(B 0 1)) +
+        ↑(A 0 1) * ↑((s.val⁻¹ * q.out⁻¹) 0 0) = (0 : ZMod ell.val)
+      rw [hr0, hs0]
+      ring
+
+/-- Coprime principal reduction constructs the actual fixed Hecke coset. -/
+theorem primitiveCuspHecke_exists_fixed (M : ℕ) [NeZero M]
+    (q : SL(2, ℤ) ⧸ Gamma1 M) (ell : sourceBinaryHeckePrime M) :
+    ∃ x : Gamma1 M ⧸ sourceGammaOneHeckeUpper M ell.val,
+      primitiveCuspGenerator M q • x = x := by
+  letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+  let red : SL(2, ℤ) →* SL(2, ZMod ell.val) := Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod ell.val))
+  let δ := q.out⁻¹ * ModularGroup.S
+  obtain ⟨a, ha⟩ := sourcePrincipalReduction_surjective M ell.val ell.property.2.symm (red δ)
+  obtain ⟨ha00, _, ha10, ha11⟩ := Gamma_mem.mp a.property
+  let r : Gamma1 M := ⟨a.val, (Gamma1_mem M _).mpr ⟨ha00, ha11, ha10⟩⟩
+  have hr : red r.val = red δ := ha
+  have he : red (r.val⁻¹ * q.out⁻¹) = red ModularGroup.S⁻¹ := by
+    rw [map_mul, map_inv, hr, ← map_inv, ← map_mul]
+    congr 1
+    dsimp only [δ]
+    group
+  have h00 := congrArg (fun z : SL(2, ZMod ell.val) => z 0 0) he
+  have hz : (((r.val⁻¹ * q.out⁻¹) 0 0 : ℤ) : ZMod ell.val) = 0 := by
+    change (((r.val⁻¹ * q.out⁻¹) 0 0 : ℤ) : ZMod ell.val) = _ at h00
+    simpa [red, Matrix.SpecialLinearGroup.coe_inv, ModularGroup.coe_S,
+      Matrix.adjugate_fin_two] using h00
+  refine ⟨(r : Gamma1 M ⧸ sourceGammaOneHeckeUpper M ell.val), ?_⟩
+  exact (primitiveCuspHecke_fixed_iff M q ell r).mpr
+    ((ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp hz)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

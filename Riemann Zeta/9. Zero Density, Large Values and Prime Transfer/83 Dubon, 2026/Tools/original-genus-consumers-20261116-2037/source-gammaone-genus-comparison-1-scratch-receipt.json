@@ -1,0 +1,87 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-11-16T23:13:45.007661+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceGammaOneConormDivisorSpaces",
+    "SourceGammaOneConormDimension",
+    "SourceGammaOneArithmeticGenus",
+    "SourceGammaOneArithmeticGenusBound"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces.lean",
+      "sha256": "658011CAC76F793B08D4ECA204C3CEF6BB3300C42C2E57B5D266EFC8BF4C9A49",
+      "oleanSha256": "7AB22AFFA88638486D9E9347C74EA36C028B3D6332E04D85B12AADD47B720CCB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces-2014.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDivisorSpaces-2014.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension.lean",
+      "sha256": "D88BA6A2D9B5FC879F6789578A37DF3B9769DF24AB4B6B4AE4F67D23EFC6FC88",
+      "oleanSha256": "561D1B671B8FEF28E769E294C16DB2AE292465722D225B0BB48C4121E779194A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension-2014.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConormDimension-2014.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus.lean",
+      "sha256": "AF4958B23AC666CAD6BAE0ADCD5A6C5E3691B2BA1944BCD3BDE69B22911926D7",
+      "oleanSha256": "4ED609D20093CEEAC6AD3DDDAA2247558FD1207F2776751D906B82D0C9CCA1B5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus-2014.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenus-2014.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound.lean",
+      "sha256": "01D464B969D9CBE9FEF6E6C2E5ABA025DF75F4A5B2F37C9F092DF45DC62D2396",
+      "oleanSha256": "9F80E416330DDC8E4B841C7768C53771B2E51BC7D89473889AB383D63902C812",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound-2014.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGenusBound-2014.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_mem_lSpace_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.lSpace_conorm_subset_span",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.ell_conorm",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_genus_arithmetic_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_cusp_dimension_eq_complex_genus",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonAudit1.log",
+  "logSha256": "ED7A8ACF48B0626BEC9CC83BD77C82C999702CEE5E341545F7A66F77A90FBF68",
+  "auditSha256": "1BE07A22A067BD40AE99D0F694DB7CDC2A272F735B592D2AA6C54C2B2E324CC6",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonScratchOwnership2014.log",
+  "ownershipSha256": "D118E7754563AE5FDE513450A73166E2BDACEEEACC8AC8B4F7F9CB9FB0EE3A1C",
+  "exhaustiveTheorems": 15,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusComparisonDependencyAudit1.log",
+  "dependencyAuditSha256": "42DDE60FC79B97E5689F69DC2DFAAC682D0762678B30ADC01A230F00E0E9F49C",
+  "dependencyAuditSourceSha256": "ED1F49868649F2F89B0CAFAE7C1684EC88AF5C429C1D92F2593DE931EF273A06",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_arithmetic_genus_cusp_bound"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation -> reverse genus -> arithmetic-to-complex genus comparison and arithmetic genus upper bound.",
+  "discharged": [
+    "Actual conorm section membership and span descent are proved from native Gamma1 place and coefficient results.",
+    "The arithmetic and complex divisor-space dimensions agree without a finite-space or basis premise.",
+    "Positive-divisor stabilization proves equality of actual source H1 genera without an invariance premise.",
+    "The arithmetic genus/cusp upper bound follows from native real Manin and actual cusp dimensions."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Original residue canonical degree and Hurwitz, small levels and reverse genus remain required. Original association and higher continuation remain open. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-genus-comparison-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "7B73835B1292576CB2F4E1266C2706224D3E083AE46BAEB8E42AD846FABD044C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

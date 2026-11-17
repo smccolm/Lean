@@ -1,0 +1,77 @@
+import SourceGammaOnePrimitiveBoundaryGalois2122b
+import Dubon2026.SourceAbsoluteArithmeticDescent
+import Dubon2026.SourceOriginalTateInertia
+import Dubon2026.Reuse.Imperial.Deformations.Lemmas
+
+/-! DUB-17/18 -> original all-weight association -> joint arithmetic
+realization. The actual primitive boundary action is finite and descends
+to the same prescribed arithmetic group as the geometric factor. The
+native norm-inertia transport and unramified descent supply the route;
+no arithmetic factorization or boundary Galois action is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCuspBoundary
+open scoped NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+/-- The explicit primitive-column operator module is finite at every
+nonzero original level and coefficient modulus. -/
+theorem binaryPrimitiveColumnOperators_finite (Q N w : ℕ) [NeZero Q] [NeZero N] :
+    Finite (Module.End (ZMod N)
+      (P (Q * N ^ 2) → sourceBinaryCoefficientRep (ZMod N) Q w)) := by
+  let V := sourceBinaryCoefficientRep (ZMod N) Q w
+  letI : Module.Finite (ZMod N) V := Module.Finite.of_basis (binaryHomogeneousMonomialBasis w)
+  letI : Finite V := Module.finite_of_finite (ZMod N)
+  exact Finite.of_injective
+    (fun T : Module.End (ZMod N) (P (Q * N ^ 2) → V) => (T : _ → _)) DFunLike.coe_injective
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "B" => Module.End (ZMod N) (P M → V)
+
+/-- Every original local norm-inertia subgroup outside Q*p acts
+trivially on the same primitive boundary representation. -/
+theorem binaryPrimitiveBoundaryGaloisRep_normInertia
+    (q : ℕ) (hq : q.Prime) (haway : ¬ q ∣ Q * p)
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+    (g : Gal(rationalPrimeLocalClosure q hq / rationalPrimeLocalField q hq))
+    (hg : g ∈ rationalPrimeNormInertia q hq) :
+    binaryPrimitiveBoundaryGaloisRep Q N w (embeddedNormalGaloisRestriction e g) = 1 := by
+  let A := sourceRationalLocalValuation q hq e
+  letI := GaussReduction.residue_charP_of_prime_mem_nonunits A q hq
+    (sourceRationalLocalValuation_prime q hq e)
+  have hM : ((M : ℕ) : IsLocalRing.ResidueField A) ≠ 0 := by
+    rw [Ne, CharP.cast_eq_zero_iff _ q]
+    intro h
+    rcases hq.dvd_mul.mp h with hQ | hp
+    · exact haway (dvd_mul_of_dvd_left hQ p)
+    · exact haway (dvd_mul_of_dvd_right (hq.dvd_of_dvd_pow (hq.dvd_of_dvd_pow hp)) Q)
+  exact binaryPrimitiveBoundaryGaloisRep_inertia Q N w A hM
+    (embeddedNormalGaloisRestriction e g) (sourceRationalLocalValuation_inertia q hq e g hg)
+
+/-- The actual finite primitive boundary action descends continuously
+to the original arithmetic group unramified outside Q*p. -/
+theorem binaryPrimitiveBoundaryGaloisRep_arithmetic_descent :
+    letI : TopologicalSpace B := ⊥
+    ∃ η : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →ₜ* Bˣ,
+      ∀ σ, (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) σ)).val =
+        binaryPrimitiveBoundaryGaloisRep Q N w σ := by
+  letI : TopologicalSpace B := ⊥
+  letI : DiscreteTopology B := ⟨rfl⟩
+  let χ : Gal(Qbar/ℚ) →ₜ* B :=
+    ⟨binaryPrimitiveBoundaryGaloisRep Q N w, binaryPrimitiveBoundaryGaloisRep_continuous Q N w⟩
+  obtain ⟨η, hη⟩ := absolute_continuous_normInertia_arithmetic_descent (Q * p) χ.toHomUnits
+    (fun q hq haway e g hg => Units.ext
+      (binaryPrimitiveBoundaryGaloisRep_normInertia Q p n w q hq haway e g hg))
+  exact ⟨η, fun σ => congrArg Units.val (hη σ)⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

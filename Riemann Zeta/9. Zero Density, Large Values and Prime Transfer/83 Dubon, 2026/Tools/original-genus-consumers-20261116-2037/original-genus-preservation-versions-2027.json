@@ -1,0 +1,146 @@
+[
+  {
+    "version": "SourceCurveSeparatingCoordinateGeometry2008a",
+    "module": "SourceCurveSeparatingCoordinateGeometry",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGeometry2008a.lean",
+    "originalSha256": "A8456CE3A3B59D590C6A117AD7CF6CD8F49794504D3E4D25A9A32A096DD36F48",
+    "canonicalSha256": "A8456CE3A3B59D590C6A117AD7CF6CD8F49794504D3E4D25A9A32A096DD36F48",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingCoordinateCanonical2009a",
+    "module": "SourceCurveSeparatingCoordinateCanonical",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonical2009a.lean",
+    "originalSha256": "8549BD3DB47847B7B18B50C459EEDFA5049B6E52413E8353D12D5A0372319A59",
+    "canonicalSha256": "E1E0CE591B28A303D66905BA7A7C87C8D391066730A034E4DEEDBAADF0794580",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingCoordinateGlobalResidues2010a",
+    "module": "SourceCurveSeparatingCoordinateGlobalResidues",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateGlobalResidues2010a.lean",
+    "originalSha256": "89E75E180F2034093411EADC3643911DFC1043060F95C101BCAF609121BDD4AD",
+    "canonicalSha256": "60F21F8BDA95DD27C8E934079CD253F894F4BF1A145BFA11E40D3EFEB6CFA54B",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingCoordinateResidueDuality2011b",
+    "module": "SourceCurveSeparatingCoordinateResidueDuality",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateResidueDuality2011b.lean",
+    "originalSha256": "55658B63D3A23DE0B28C383724FA676A8A91775E0375F13A354ED3A670B9BAE9",
+    "canonicalSha256": "D21BF1776B963B891943099547F920B46A31CCC765B2B63449811AA73AF30D49",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingCoordinateCanonicalDegree2012a",
+    "module": "SourceCurveSeparatingCoordinateCanonicalDegree",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateCanonicalDegree2012a.lean",
+    "originalSha256": "345CEAFD3AFD374A585B8171B7F9CBC84851FF4849F5796FC481BAAB3DA9A683",
+    "canonicalSha256": "42F7658DB870FE31C3D6D9321126D85484A0CFFFB2C88E82B3370424C3C8E5AA",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingCoordinateHurwitz2013c",
+    "module": "SourceCurveSeparatingCoordinateHurwitz",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingCoordinateHurwitz2013c.lean",
+    "originalSha256": "0A27A1EC6C50A897B7D4C1AFB9BC89DA19E3CD1A710BE4E0348F760CA9A7E759",
+    "canonicalSha256": "8387CB74D871A56B53BD03E14E6E251C3ACDB72099712A6D94CDC898250C9FFD",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingHurwitzBound2015a",
+    "module": "SourceCurveSeparatingHurwitzBound",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzBound2015a.lean",
+    "originalSha256": "9E7202D2BB0083A0F2ADD80D7CA040429DC8261C299DBC5E64A5CDCF7F7EDC3A",
+    "canonicalSha256": "554BBD2BA52E73E28CC59B819B050BDEA87E322DEC9067DDFF234476AC92FB0E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingPoleSums2016b",
+    "module": "SourceCurveSeparatingPoleSums",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingPoleSums2016b.lean",
+    "originalSha256": "E55BBD540566703D8265F8701580DD810F0542336A4093228E68AD6A87192B12",
+    "canonicalSha256": "E55BBD540566703D8265F8701580DD810F0542336A4093228E68AD6A87192B12",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingHurwitzCuspBound2017b",
+    "module": "SourceCurveSeparatingHurwitzCuspBound",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingHurwitzCuspBound2017b.lean",
+    "originalSha256": "571F1D80A17160823B5C23BF7B35BD3A7404C5671B5E09D92AA58A6590630C56",
+    "canonicalSha256": "965757573C299A2CF4FDADFC940CD45D3DF083581D5FB8A778B4C925B43207C4",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalResidueHurwitz2018a",
+    "module": "SourceOriginalResidueHurwitz",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueHurwitz2018a.lean",
+    "originalSha256": "05E21D310EA3A85CBB4F4F99C2C669FD97C4F5E6BEB54A060F26182F10FF92E8",
+    "canonicalSha256": "0253932B0F648B904DC24E6D3465C79630178FBAE817F93E7E45CB795AF5D243",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalWildGenusLower2019e",
+    "module": "SourceOriginalWildGenusLower",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWildGenusLower2019e.lean",
+    "originalSha256": "F6C241C10B3A02E66AA93EBDBEF89E3EAC163FD1E518DFD3911A12FC6BE3962B",
+    "canonicalSha256": "3118AFCC07B81A2DBB075C69834959755986784CA2BBBE32E2E81DE35FDA2663",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceCurveSeparatingFiberSums2020b",
+    "module": "SourceCurveSeparatingFiberSums",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingFiberSums2020b.lean",
+    "originalSha256": "1D9D4A5A4D8B7566D467EEAE9F06D89DEFCA669DFB3572B615A538760A114C00",
+    "canonicalSha256": "1D9D4A5A4D8B7566D467EEAE9F06D89DEFCA669DFB3572B615A538760A114C00",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalTameGenusCriterion2021a",
+    "module": "SourceOriginalTameGenusCriterion",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusCriterion2021a.lean",
+    "originalSha256": "19E547DD4B86B7872AC196F1ED38DFBA63E7B74F94D0276CCDE32FA0A091E30C",
+    "canonicalSha256": "72B02C8C05D24913AB512887802B0EDB1B6C9DD53756D2AE36A84FB8E977A393",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalTameGenusLower2022a",
+    "module": "SourceOriginalTameGenusLower",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTameGenusLower2022a.lean",
+    "originalSha256": "A22465AC8E040A5B21CCAF7307D104FC440C799B4D053816EF95AC0654209CD4",
+    "canonicalSha256": "5FD58BF8978E632B5F2628B07643F425E927C791052202FB0484B2B7691AE028",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalLargeLevelGenusLower2023a",
+    "module": "SourceOriginalLargeLevelGenusLower",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLargeLevelGenusLower2023a.lean",
+    "originalSha256": "D5841BB6D3ACBE514E4578EC36E6085C3FA945A172E049452FCC09C7B96B7383",
+    "canonicalSha256": "AE6D895210FD60AF64B688383B4A700521975DFA24BCF97A8CDF06EFBAF30C1E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneSmallLevelIndex2024b",
+    "module": "SourceGammaOneSmallLevelIndex",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelIndex2024b.lean",
+    "originalSha256": "C3319AA32A134AB63451B52681319C72F5C620FAA9FFF516EAD44D0E137AED0D",
+    "canonicalSha256": "C3319AA32A134AB63451B52681319C72F5C620FAA9FFF516EAD44D0E137AED0D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneSmallLevelGenus2025a",
+    "module": "SourceGammaOneSmallLevelGenus",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmallLevelGenus2025a.lean",
+    "originalSha256": "78984ED7A5AEBD9B9C49F9132E340CAED996AB574D66E15E40651764A0725525",
+    "canonicalSha256": "D6CB1FF2901F4ED1335C415F2A93BABC8B82442D0FB45C7AC747D353E7DE52F0",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalGammaOneGenusPreservation2026b",
+    "module": "SourceOriginalGammaOneGenusPreservation",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGammaOneGenusPreservation2026b.lean",
+    "originalSha256": "66FA4FFA8C3DB21838E9CED3DCBB58ADF0AAF10AD4B0C393B9D237A7082CD8D2",
+    "canonicalSha256": "1596927BA82ADC4D70A4EB5C3BA1A9A6C0966DF0F8DF92ED86794965A23B14F8",
+    "mathematicalBodyIdentical": true
+  }
+]

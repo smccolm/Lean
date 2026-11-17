@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-16 America/Whitehorse",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> arithmetic realization of the original joint geometric/boundary character.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-column-audit-route-2128.json",
+    "sha256": "2A53FD19E94A6006E4AF198111C07F96362AE6160E3E4E8AC4601CF0A1C8CF5D",
+    "review": {
+      "recordedUTC": "2026-11-17T04:08:52.493575+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> arithmetic realization of the original joint geometric/boundary character.",
+      "shorterRoute": "Reuse the native primitive-generator kernel, finite primitive columns, actual Hecke cosets, integral unipotent formulas and normalizer H1 maps. The older Gamma0 formula uses level-multiple loops and cannot supply the needed faithful torsion boundary. Primitive widths, actual fixed/prime orbits and their integral conjugations give the original two-term formula with the full homogeneous action. Existing residue-unit normalizer labels then give the diamond comparison on the same finite carrier. No modular-symbol replacement, arbitrary boundary extension, or cancellation of a nonunit cusp width is used.",
+      "assumptionsToDischarge": [
+        "The literal primitive boundary on native finite columns has exactly the original parabolic H1 kernel when two is invertible.",
+        "The actual native homogeneous Gamma1 Hecke action intertwines the explicit two-term finite boundary operators.",
+        "The same boundary intertwines actual original normalizer diamonds with their homogeneous coefficient action retained."
+      ],
+      "remaining": "The 22-module scope establishes the faithful boundary comparisons only. Subsequent scratch proofs of finite-unit actions, cyclotomic boundary Galois action, Frobenius quadratic and prescribed arithmetic descent are compiled but not covered by this receipt. Joint prime/diamond original-character specialization, the combined arithmetic realization, exceptional primes, characteristic-zero association, automorphy and literal higher symmetric-power continuation remain required. DUB-17--20 OPEN; acceptance stays 16/20 with all original criteria unchanged.",
+      "boundary": "Scratch audit only; production promotion and assembled verification pending.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspUnipotent.lean",
+          "sha256": "6CEFE5D3E957FF43F80E77D04DB7DC01CE43655DB91DAEE806CE7BA2B28A9833"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspBoundaryValues.lean",
+          "sha256": "3C986752E3B18470F7BCBF3D394E803EF349198673D56CF1CB7725B15BE087FF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCuspBoundary.lean",
+          "sha256": "E6125B4FE9C92B91BEFD04CD45A0ABDD843F8F397B21D9BAA25C8B3BFCC14EA4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceNativeCuspHecke.lean",
+          "sha256": "5EC9953F13914F8EDDD49C2B70CAD61FCFD57BD1DE0964193B4B4B04761821E8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeSubgroup.lean",
+          "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCoverHeckeCosets.lean",
+          "sha256": "9FA73B8E8C0E9A12C43F9ECA3FEC325B39D31745CCC8339CCF4220958B538220"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondH1.lean",
+          "sha256": "C88492172A47D357A0B985663824E06F0198BB931CE2BA4C784AA79C3E79BDCC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondConjugation.lean",
+          "sha256": "9D9F0F07409C3C84E500EFF2C3C31543CC785D7A35857CC347B77690D313E881"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneToricCoordinateDiamond.lean",
+          "sha256": "A6925230246701047BDA242B73329D130D693F6EC403E294123427F1C5667AE6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondCoefficientMatrix.lean",
+          "sha256": "1F31C3E480236A56886D3C35D9BD8F4AD5CC87D989436825F010BE6342EEBAB6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\primitive-boundary-arithmetic-route-2109.json",
+          "sha256": "311583113B9CEDF0AB4ABC122E123F918B4AD3498A21EE132E149E676DD8BA86"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\expanded-reuse-20261116-2071\\expanded-reuse-assessment-2079.md.txt",
+          "sha256": "5768A1EBB69C8CD9A7601A47A47862629C5E81B60F37AFF60BFB999F4071D091"
+        }
+      ]
+    }
+  },
+  "discharged": [
+    "The literal primitive boundary on native finite columns has exactly the original parabolic H1 kernel when two is invertible.",
+    "The actual native homogeneous Gamma1 Hecke action intertwines the explicit two-term finite boundary operators.",
+    "The same boundary intertwines actual original normalizer diamonds with their homogeneous coefficient action retained."
+  ],
+  "remaining": "The 22-module scope establishes the faithful boundary comparisons only. Subsequent scratch proofs of finite-unit actions, cyclotomic boundary Galois action, Frobenius quadratic and prescribed arithmetic descent are compiled but not covered by this receipt. Joint prime/diamond original-character specialization, the combined arithmetic realization, exceptional primes, characteristic-zero association, automorphy and literal higher symmetric-power continuation remain required. DUB-17--20 OPEN; acceptance stays 16/20 with all original criteria unchanged.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

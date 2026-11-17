@@ -1,0 +1,47 @@
+{
+  "recordedUTC": "2026-11-16T23:04:54.697907+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation -> reverse genus -> arithmetic-to-complex genus comparison and arithmetic genus upper bound.",
+  "shorterRoute": "Reuse native actual Gamma1 conorm, unique extended places, span descent and coefficient independence. The existing Gamma0 conorm dimension argument adapts to these actual Gamma1 inputs, while the proved separating-coordinate genus maximum removes any need for new finiteness or index foundations. Native regular/cusp equivalence and real Manin dimension bound finish the arithmetic upper bound.",
+  "assumptionsToDischarge": [
+    "Actual conorm section membership and span descent are proved from native Gamma1 place and coefficient results.",
+    "The arithmetic and complex divisor-space dimensions agree without a finite-space or basis premise.",
+    "Positive-divisor stabilization proves equality of actual source H1 genera without an invariance premise.",
+    "The arithmetic genus/cusp upper bound follows from native real Manin and actual cusp dimensions."
+  ],
+  "remaining": "Original residue canonical degree and Hurwitz, small levels and reverse genus remain required. Original association and higher continuation remain open. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Four focused modules compile. Exhaustive scratch audit, promotion and assembled verification pending.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConormDivisorSpaces.lean",
+      "sha256": "0C0F8FA84A82F52F46651D18C8254DCF5066B4C0105CCB70F34C193C64ACCD4C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConormDimension.lean",
+      "sha256": "33933237D2E7ADB23BE9EFF5BF14A0FC8563B7E8C337012D800344114C8D69B7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticGenus.lean",
+      "sha256": "D2135631236CC07D4720A9399CC5BB1E687F61D173061D8366D20CDFD464EB7A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrincipalDescent.lean",
+      "sha256": "CC759B45AA450215C04B4A8A64A592B30A12565C5D7141E2B15F247CB1BA8410"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneComplexFieldIndependence.lean",
+      "sha256": "CC79D5AFC96EDA5F6AE7F9B9B6C36EC317F083E0DCC4378E32786EE76B40E100"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveSeparatingGenusMaximum.lean",
+      "sha256": "344296E76F73258B9C45491075ABAAEE291F3F9311AC29F0665069CE775F8137"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateRegularGenus.lean",
+      "sha256": "84BF512262102860CC83F30AF3AB28D12066A1130B83ABBFC8F3CDD289E238CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealPeriodDimensionUpper.lean",
+      "sha256": "40EC648B51E49115ED929EA616D598124601D0327806BA03D9189F42484D8996"
+    }
+  ]
+}

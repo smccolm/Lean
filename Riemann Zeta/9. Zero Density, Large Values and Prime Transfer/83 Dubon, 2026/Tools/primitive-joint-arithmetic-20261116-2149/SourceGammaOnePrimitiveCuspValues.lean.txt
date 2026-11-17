@@ -1,0 +1,73 @@
+import SourceGammaOnePrimitiveWidthColumns
+
+/-! DUB-17/18 -> original all-weight association -> exact joint arithmetic
+realization -> primitive two-term boundary trace. Evaluate the actual
+Gamma1 character on its primitive cusp loop. The value agrees with the
+existing minimal-period generator and depends only on the primitive
+column modulo the level. This reuses native principal conjugacy and the
+proved width comparison, preserving all torsion coefficients. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary
+open scoped MatrixGroups
+
+/-- The actual primitive Gamma1 cusp translation attached to an integral representative. -/
+def primitiveCuspTranslation (M : ℕ) (δ : SL(2, ℤ)) : Gamma1 M :=
+  ⟨δ * ModularGroup.T ^
+    primitiveCuspWidth M ((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) * δ⁻¹,
+    (primitiveCuspWidth_dvd_iff_translation M _ δ).mp dvd_rfl⟩
+
+/-- The literal value of an original additive Gamma1 character on its primitive cusp loop. -/
+def primitiveCuspValue (M : ℕ) {A : Type*} [AddCommGroup A]
+    (φ : Additive (Gamma1 M) →+ A) (δ : SL(2, ℤ)) : A :=
+  φ (Additive.ofMul (primitiveCuspTranslation M δ))
+
+/-- Representative evaluation is exactly the previously constructed primitive-generator value. -/
+theorem primitiveCuspValue_generator (M : ℕ) {A : Type*} [AddCommGroup A]
+    (φ : Additive (Gamma1 M) →+ A) (δ : SL(2, ℤ)) :
+    primitiveCuspValue M φ δ =
+      φ (Additive.ofMul (primitiveCuspGenerator M
+        ((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M))) := by
+  let q : SL(2, ℤ) ⧸ Gamma1 M := (δ⁻¹ : SL(2, ℤ))
+  have hg : q.out⁻¹ * δ⁻¹ ∈ Gamma1 M := QuotientGroup.eq.mp (Quotient.out_eq' q)
+  let η : Gamma1 M := ⟨q.out⁻¹ * δ⁻¹, hg⟩
+  have he : primitiveCuspTranslation M δ = η⁻¹ * primitiveCuspGenerator M q * η := by
+    apply Subtype.ext
+    change δ * ModularGroup.T ^ primitiveCuspWidth M q * δ⁻¹ =
+      (q.out⁻¹ * δ⁻¹)⁻¹ *
+        (q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out) * (q.out⁻¹ * δ⁻¹)
+    group
+  rw [primitiveCuspValue, he]
+  simp only [ofMul_mul, ofMul_inv, map_add, map_neg]
+  abel
+
+/-- Equal reduced primitive columns give equal original primitive cusp values,
+including for torsion target groups. -/
+theorem primitiveCuspValue_congr (M : ℕ) {A : Type*} [AddCommGroup A]
+    (φ : Additive (Gamma1 M) →+ A) (δ σ : SL(2, ℤ))
+    (h0 : ((δ 0 0 : ℤ) : ZMod M) = σ 0 0)
+    (h1 : ((δ 1 0 : ℤ) : ZMod M) = σ 1 0) :
+    primitiveCuspValue M φ δ = primitiveCuspValue M φ σ := by
+  have hw := primitiveCuspWidth_eq_of_unit_columns M δ σ 1 1
+    (by simpa only [Units.val_one, one_mul] using h0.symm)
+    (by simpa only [Units.val_one, one_mul] using h1.symm)
+  obtain ⟨g, hg, hconj⟩ := exists_conj_of_col_congr M δ σ h0 h1
+  obtain ⟨ha, _, hc, hd⟩ := Gamma_mem.mp hg
+  let γ : Gamma1 M := ⟨g, (Gamma1_mem M g).mpr ⟨ha, hd, hc⟩⟩
+  have he : primitiveCuspTranslation M δ = γ * primitiveCuspTranslation M σ * γ⁻¹ := by
+    apply Subtype.ext
+    change δ * ModularGroup.T ^
+        primitiveCuspWidth M ((δ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) * δ⁻¹ =
+      g * (σ * ModularGroup.T ^
+        primitiveCuspWidth M ((σ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) * σ⁻¹) * g⁻¹
+    rw [hw]
+    simpa only [zpow_natCast] using hconj
+      (primitiveCuspWidth M ((σ⁻¹ : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M))
+  change φ (Additive.ofMul (primitiveCuspTranslation M δ)) =
+    φ (Additive.ofMul (primitiveCuspTranslation M σ))
+  rw [he]
+  simp only [ofMul_mul, ofMul_inv, map_add, map_neg]
+  abel
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,42 @@
+[
+  {
+    "version": "SourceParabolicShapiroPotentials2033c",
+    "module": "SourceParabolicShapiroPotentials",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicShapiroPotentials2033c.lean",
+    "originalSha256": "18019B3FC3B803A3D31C3A75AA414755D0353C62459F00A5A94642BB11B8AAAF",
+    "canonicalSha256": "18019B3FC3B803A3D31C3A75AA414755D0353C62459F00A5A94642BB11B8AAAF",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceOriginalCoinducedLocalCoboundary2034b",
+    "module": "SourceOriginalCoinducedLocalCoboundary",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoinducedLocalCoboundary2034b.lean",
+    "originalSha256": "F8E64BFC82731EAB0D39B3F0E8B6077A9C381294C4A828CEB1E505F5C1783BEB",
+    "canonicalSha256": "9753E5C09686100F67D1161768D47869A5D920F431D92179FB8AA7D91C3CFB8B",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceParabolicTracePowers2035a",
+    "module": "SourceParabolicTracePowers",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicTracePowers2035a.lean",
+    "originalSha256": "A4ACBE1A325361DC3A13D8EF071219572A4A64DAACAC60120E43B3C3334403DD",
+    "canonicalSha256": "A4ACBE1A325361DC3A13D8EF071219572A4A64DAACAC60120E43B3C3334403DD",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneParabolicShapiro2036b",
+    "module": "SourceGammaOneParabolicShapiro",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicShapiro2036b.lean",
+    "originalSha256": "FC5C20F86AD4ED6C3AE183FAAD098BF0FD1603F90032901A1FC9CFACD36A72FA",
+    "canonicalSha256": "F0AA90EEE63F25110E11CA569D1DBB78BF662C4E34DD9A38CD0FE52FC23A6D6D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneParabolicShapiroComparison2038d",
+    "module": "SourceGammaOneParabolicShapiroComparison",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicShapiroComparison2038d.lean",
+    "originalSha256": "263CFE6F6745BB9DD619A1A3F5989515F8BC0472FA8EE4D898950E51BFFC7716",
+    "canonicalSha256": "C5515D7668AFA68BC2A303B18C486EAA907AC4EACD53AB15FDB1A560997DF8AD",
+    "mathematicalBodyIdentical": true
+  }
+]

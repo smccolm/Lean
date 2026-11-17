@@ -1,0 +1,46 @@
+import Dubon2026.SourceMarkedOriginalNormalFieldTwo
+import Dubon2026.SourceMarkedNormalOrderDescent
+
+/-! DUB-17/18 -> reverse original genus -> exact wild fiber orders.
+The actual normal auxiliary field and native place restriction prove
+that every positive original j order divides 12. Combined with
+the marked fiber cardinal bound and degree sum, this forces equality
+for N greater than three. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open CongruenceSubgroup GammaOne SourceCurve KaehlerDifferential
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+    [CharP (IsLocalRing.ResidueField A) 2]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_positive_j_order_dvd_twelve
+    (h2N : ¬ 2 ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (v : Place kk F) (hv : 0 < v.ord x) :
+    v.ord x ∣ (12 : ℤ) := by
+  classical
+  letI : Fact (Nat.Prime 2) := ⟨Nat.prime_two⟩
+  let Ω := AlgebraicClosure (RatFunc kk)
+  letI : Algebra kk Ω := inferInstanceAs (Algebra kk (AlgebraicClosure (RatFunc kk)))
+  letI : IsScalarTower kk (RatFunc kk) Ω :=
+    inferInstanceAs (IsScalarTower kk (RatFunc kk) (AlgebraicClosure (RatFunc kk)))
+  obtain ⟨M, L, hfd, hgal, ι, hι, hdvd⟩ :=
+    exists_original_normal_field_j_order_dvd_twelve A N h2N hN x hx
+  letI : Algebra kk M := IntermediateField.algebra' M
+  letI : IsScalarTower kk (RatFunc kk) M := IntermediateField.isScalarTower M
+  letI : Algebra kk L := IntermediateField.algebra' L
+  letI : IsScalarTower kk (RatFunc kk) L := IntermediateField.isScalarTower L
+  letI := hfd
+  letI := hgal
+  have hxtr : Transcendental kk x := by
+    intro h
+    apply transcendental_jqModC kk
+    rw [← hx]
+    exact h.algHom (F).val
+  exact coordinate_order_dvd_of_normal_embedding x hxtr ι hι 12 hdvd v hv
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

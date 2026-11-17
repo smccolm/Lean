@@ -1,0 +1,32 @@
+import SourceParabolicShapiroPotentials
+import SourceOriginalCoinducedLocalCoboundary
+import SourceParabolicTracePowers
+import SourceGammaOneParabolicShapiro
+import SourceGammaOneParabolicShapiroComparison
+import Mathlib.Tactic
+
+open Lean
+
+private def runGammaOneParabolicShapiroDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneConstantH1Transfer_parabolic]
+  let localModules : Array Name := #[`SourceParabolicShapiroPotentials, `SourceOriginalCoinducedLocalCoboundary, `SourceParabolicTracePowers, `SourceGammaOneParabolicShapiro, `SourceGammaOneParabolicShapiroComparison]
+  let required : Array Name := #[`Dubon2026.sourceTrivialShapiro_local_coboundary, `Dubon2026.sourceOriginalShapiro_local_coboundary, `Dubon2026.SourceParabolic.trace_sq_zpow, `Dubon2026.SourceParabolic.trace_sq_conjugate_zpow, `Dubon2026.sourceGammaOneShapiroLift_parabolic, `Dubon2026.sourceGammaOneShapiroH1_parabolic_of_evaluation, `Dubon2026.sourceGammaOneConstantH1Iso_parabolic_preimage, `Dubon2026.sourceGammaOneConstantH1Transfer_parabolic, `Dubon2026.SourceIntegralCharacterLift.exists_potential, `Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro, `Dubon2026.sourceGammaOneDiagonalHom_binary_trivial, `Dubon2026.sourceShapiroH1_evaluation_lift, `Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map, `Dubon2026.sourceParabolicCocycles_coefficientMap, `Dubon2026.SourceParabolic.classification, `Dubon2026.SourceManin.trace_conj]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMAONE PARABOLIC SHAPIRO DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of parabolic stability of the literal original Gamma1 counit transfer. Native orbit potentials construct local Shapiro coboundaries, and the original coefficient triviality and trace classification discharge their geometric inputs. The original constant-H1 comparison and native coefficient map finish stability. Parabolic surjectivity, association and higher continuation remain open; DUB17--20 OPEN."
+
+#eval runGammaOneParabolicShapiroDependencyAudit

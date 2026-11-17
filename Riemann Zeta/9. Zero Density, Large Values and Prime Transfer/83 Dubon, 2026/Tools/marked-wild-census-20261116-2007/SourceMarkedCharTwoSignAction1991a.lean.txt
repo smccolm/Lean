@@ -1,0 +1,67 @@
+import SourceMarkedSignActionHom1990a
+import SourceMarkedSignFreeOrbits1962c
+import Dubon2026.SourceEllipticCharTwoMarkedElements
+import Dubon2026.SourceEllipticCharTwoCubicPoint
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-two fiber.
+Factor the actual exceptional stabilizer action on primitive sign pairs
+through elliptic negation. The native quartic and cubic identities exclude
+fixed sign pairs for N greater than three, supplying the two zero marks
+needed by the existing order-twelve orbit theorem. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+open WeierstrassCurve SourceEllipticStabilizer SourceEllipticCharTwo
+variable {K : Type*} [Field K] [DecidableEq K] [CharP K 2]
+attribute [local instance] charTwoSignSubgroup_normal
+
+/-- The actual exceptional stabilizer acts on primitive point sign pairs. -/
+scoped instance charTwoMarkedStabilizerAction (N : ℕ) :
+    MulAction (MulAction.stabilizer (VariableChange K) (ofJ0 K))
+      (SignClasses (ofJ0 K).toAffine.Point N) :=
+  MulAction.compHom _ ((signClassesPermHom N).comp (stabilizerPointHom (ofJ0 K)))
+
+theorem charTwo_sign_le_marked_action_kernel (N : ℕ) :
+    charTwoSignSubgroup ≤ (MulAction.toPermHom
+      (MulAction.stabilizer (VariableChange K) (ofJ0 K))
+      (SignClasses (ofJ0 K).toAffine.Point N)).ker := by
+  rw [charTwoSignSubgroup, Subgroup.zpowers_le, MonoidHom.mem_ker]
+  apply Equiv.ext
+  intro s
+  exact signClassesEquiv_eq_self_of_negation N
+    (stabilizerPointHom (ofJ0 K) charTwoNegation) charTwoNegation_point s
+
+/-- The native order-twelve quotient acts on the same primitive sign pairs. -/
+scoped instance charTwoMarkedSignAction (N : ℕ) :
+    MulAction ((MulAction.stabilizer (VariableChange K) (ofJ0 K)) ⧸ charTwoSignSubgroup)
+      (SignClasses (ofJ0 K).toAffine.Point N) :=
+  MulAction.compHom _ (QuotientGroup.lift charTwoSignSubgroup
+    (MulAction.toPermHom _ (SignClasses (ofJ0 K).toAffine.Point N))
+    (charTwo_sign_le_marked_action_kernel N))
+
+theorem charTwo_signProjection_marked_smul (N : ℕ)
+    (g : MulAction.stabilizer (VariableChange K) (ofJ0 K))
+    (s : SignClasses (ofJ0 K).toAffine.Point N) :
+    charTwoSignProjection g • s = signClassesEquiv N (stabilizerPointHom (ofJ0 K) g) s := by
+  rw [MulAction.compHom_smul_def]
+  rfl
+
+theorem charTwo_quartic_marked_ne_self (N : ℕ) (hN : 3 < N)
+    (ω : K) (hω : ω ^ 2 + ω + 1 = 0) (s : SignClasses (ofJ0 K).toAffine.Point N) :
+    charTwoSignProjection (quarticStabilizer ω hω) • s ≠ s := by
+  rw [charTwo_signProjection_marked_smul]
+  apply signClassesEquiv_ne_self_of_square_neg N hN
+  intro P
+  have h := congrArg (fun e : AddAut (ofJ0 K).toAffine.Point => e P)
+    ((stabilizerPointHom (ofJ0 K)).map_mul (quarticStabilizer ω hω) (quarticStabilizer ω hω))
+  rw [quarticStabilizer_square] at h
+  exact h.symm.trans (charTwoNegation_point P)
+
+theorem charTwo_cubic_marked_ne_self (N : ℕ) (hN : 3 < N)
+    (ω : K) (hω : ω ^ 2 + ω + 1 = 0) (s : SignClasses (ofJ0 K).toAffine.Point N) :
+    charTwoSignProjection (cubicStabilizer ω hω) • s ≠ s := by
+  rw [charTwo_signProjection_marked_smul]
+  exact signClassesEquiv_ne_self_of_cubic N hN (cubicPoint ω hω)
+    (cubicPoint_quadratic ω hω) s
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

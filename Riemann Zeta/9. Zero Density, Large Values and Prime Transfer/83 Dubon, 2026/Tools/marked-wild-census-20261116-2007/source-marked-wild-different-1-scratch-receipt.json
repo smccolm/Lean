@@ -1,0 +1,129 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T19:22:43.798846+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceMarkedEmbeddingSignKernel",
+    "SourceMarkedOriginalNormalField",
+    "SourceMarkedOriginalNormalFieldTwo",
+    "SourceMarkedOriginalNormalFieldThree",
+    "SourceMarkedOriginalLocalDifferentials",
+    "SourceMarkedOriginalWildDifferent",
+    "SourceMarkedOriginalWildDifferentTwo",
+    "SourceMarkedOriginalWildDifferentThree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedEmbeddingSignKernel.lean",
+      "sha256": "4CC7ACCD498ABEBB680C29FEF2AAC14C130B393F77CAA6F97E7880618654647A",
+      "oleanSha256": "DF9702FD396D4C7DFB0BCCD4B812DE12F2CAA9A942516BAB92D350388D79FE29",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedEmbeddingSignKernel-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedEmbeddingSignKernel-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalField.lean",
+      "sha256": "7E90CDEDC1B5F1C0A75B0CEDC67F8B62D478DF130458EB40D8B03834E3FB008A",
+      "oleanSha256": "42E6BE9CD5C707982C47E725BB8989A2CB7689648B25D8481BD3284791B360A1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalField-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalField-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalFieldTwo.lean",
+      "sha256": "0C513BF6C6A9C48E863F7D28E3C87F38D020EF1A41ECA894F0183C61A50F725C",
+      "oleanSha256": "1EF6C65193A222BD62712398C6DB696D7A1FE193881CA0414CD2E75676595722",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalFieldTwo-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalFieldTwo-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalFieldThree.lean",
+      "sha256": "2F51E3EE5533EC1B5D1FB3F1BFBEFBB200947B08D289103A8CB9D974A3F8A9DA",
+      "oleanSha256": "6B3932E11B71D7FF2378B8AA4A2632BCE73A8E67B2A965BE0EB365143E0D6ADF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalFieldThree-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNormalFieldThree-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalLocalDifferentials.lean",
+      "sha256": "2DA7ADCA6D5C06B7555BCAA356281F51CC6FA4838DBA0042A25CD78457DB6280",
+      "oleanSha256": "D916A7610FB647FDC2EBF50401BF81A6360951175DA0E90F8A02F33FCD666C27",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalLocalDifferentials-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalLocalDifferentials-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferent.lean",
+      "sha256": "4B7D2B9A109A400A614AB50F30A35FE902FD387AA9D16EF2EEA8DA3BC0CC3678",
+      "oleanSha256": "EF1378FD69000DCE24BB2A1F98E277E61762FB8254AF35D059ED87DEDD3B45CF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferent-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferent-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferentTwo.lean",
+      "sha256": "9F2AF2839A0955EE9F28A1BF6252C6029A9ECC13134AC13A3B70E438EECF4911",
+      "oleanSha256": "E242498C6B1F755AE3230CED034BBDDBBA2C9ADF6901C8B72B6DE51C3B2EEE7B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferentTwo-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferentTwo-1984.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferentThree.lean",
+      "sha256": "B67C6B4FBEFD954CF18E1E32E78B7A95B7A46366E1E1201CDE3963BDA1704DF6",
+      "oleanSha256": "E6C066AA7A9A264E0CF2FF6C9D9156C248FABD77380F68AC61633D295D33209E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferentThree-1984.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalWildDifferentThree-1984.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_fixed_of_torsion_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_of_torsion_sign_kernel",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_D_ne_zero",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_differentials_finrank",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_place_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_wild_different_of_normal_order_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_fixed_of_torsion_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_of_torsion_sign_kernel",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_normal_field_j_order_dvd_six",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_D_ne_zero",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_j_differentials_finrank",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_positive_place_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_wild_different_of_normal_order_bound",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedWildDifferentAudit1.log",
+  "logSha256": "ED16CD5CB726B5A454FD0A905D27BB4C810E235C2C784C3DBC331B65747749A7",
+  "auditSha256": "4122AC9D9A0A68F38B4FB1C309EC2FB0BF2D196D58B6E35DFB6DCE6F83562985",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedWildDifferentScratchOwnership1984.log",
+  "ownershipSha256": "4215CC9F586A2E6A968D08BDEDA71D18EAE3D5936D00FD8DDE408ED94A1D7180",
+  "exhaustiveTheorems": 28,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedWildDifferentDependencyAudit1.log",
+  "dependencyAuditSha256": "42D588535895503D0236F93A446FD7F3D76B89A2FCB0D5AD3C5855620275A66F",
+  "dependencyAuditSourceSha256": "C2DB12B68DF00DF954D40519041709D9D18001346C71DC04ED9638AF3AF2AF9F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_fourteen_le_different_of_j_order_twelve",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_seven_le_different_of_j_order_six"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> original genus preservation -> reverse genus -> characteristic-two/three wild different contribution.",
+  "discharged": [
+    "Sign kernels fix all normalized original embeddings.",
+    "The actual original field embeds in a constructed normal auxiliary field with positive j orders dividing twelve or six.",
+    "Original j has nonzero differential, rank-one differentials and generating local uniformizer differential.",
+    "At a place attaining the auxiliary order bound, the extension ramification index is one.",
+    "Native wild different bounds descend, giving fourteen at order twelve in characteristic two and seven at order six in characteristic three."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Wild numerical fiber census, small levels and reverse genus remain open, followed by original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-wild-different-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "97732EA5B4505EF7A651F1DBEEE93495E4F6890BADFCBE13506BAEDCB968877B",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

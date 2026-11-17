@@ -1,0 +1,92 @@
+{
+  "modules": [
+    "SourceGammaOnePrimitiveCuspBoundary",
+    "SourceGammaOneFiniteBinaryBoundary",
+    "SourceGammaOnePrimitiveBoundaryOrbit",
+    "SourceGammaOnePrimitiveCuspCoordinates",
+    "SourceGammaOneBoundaryHeckeTrace",
+    "SourceGammaOnePrimitiveBoundaryHeckeRows"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_conjugate_primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_character_primitive_coordinates",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeConjugation_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHeckeOrbit_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_conjugate_primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_character_primitive_coordinates",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeConjugation_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHeckeOrbit_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_conjugate_primitiveCuspGenerator",
+    "Dubon2026.SourceFunctionField.GammaOne.trace_two_character_primitive_coordinates",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeConjugation_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHeckeOrbit_trace_two",
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveBoundaryHecke_exists_integer_rows",
+    "Dubon2026.SourceParabolic.classification",
+    "MulAction.zpow_smul_eq_iff_minimalPeriod_dvd",
+    "Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "MonoidHom.transfer_eq_prod_quotient_orbitRel_zpowers_quot",
+    "Dubon2026.sourceTransfer_eq_coset_product",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_coefficient_hom_apply",
+    "Dubon2026.SourceParabolic.exists_conj_T_zpow_of_trace_eq_two"
+  ],
+  "compileEvidence": {
+    "SourceGammaOnePrimitiveCuspBoundary": "SourceGammaOnePrimitiveCuspBoundary-2055",
+    "SourceGammaOneFiniteBinaryBoundary": "SourceGammaOneFiniteBinaryBoundary-2055",
+    "SourceGammaOnePrimitiveBoundaryOrbit": "SourceGammaOnePrimitiveBoundaryOrbit-2055",
+    "SourceGammaOnePrimitiveCuspCoordinates": "SourceGammaOnePrimitiveCuspCoordinates-2055",
+    "SourceGammaOneBoundaryHeckeTrace": "SourceGammaOneBoundaryHeckeTrace-2055",
+    "SourceGammaOnePrimitiveBoundaryHeckeRows": "SourceGammaOnePrimitiveBoundaryHeckeRows-2055"
+  },
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos"
+  ]
+}

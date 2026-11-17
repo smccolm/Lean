@@ -1,0 +1,68 @@
+import Dubon2026.SourceGammaOnePrimitiveDiamond
+import Dubon2026.SourceGammaOnePrimitiveUpperColumns
+import Dubon2026.SourceGammaOnePrimitiveColumnHecke
+import Dubon2026.SourceGammaOneToricCoordinateDiamond
+import Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+
+/-! DUB-17/18 -> original all-weight association -> finite joint
+arithmetic realization -> diamond determinant. The original normalizer
+action is identified on the same faithful finite primitive columns as
+the Hecke action; its homogeneous coefficient matrix is retained. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup SourceCuspBoundary groupCohomology ToricCoordinates
+open scoped MatrixGroups
+
+/-- The upper entry of a normalizer lift does not change primitive cusp
+values; the actual lower-right unit gives its exact two column scalings. -/
+theorem primitiveCuspValue_normalizer_column (M : ℕ) [NeZero M]
+    {A : Type*} [AddCommGroup A] (φ : Additive (Gamma1 M) →+ A)
+    (g : Gamma0 M) (δ τ : SL(2, ℤ))
+    (h0 : (colRed M τ).1 = (((gamma0Unit M g)⁻¹ : (ZMod M)ˣ) : ZMod M) * (colRed M δ).1)
+    (h1 : (colRed M τ).2 = (gamma0Unit M g : ZMod M) * (colRed M δ).2) :
+    primitiveCuspValue M φ (g.val * δ) = primitiveCuspValue M φ τ := by
+  apply primitiveCuspValue_eq_of_upper_columns M φ τ (g.val * δ)
+    ((g.val 0 1 : ZMod M) * ((gamma0Unit M g)⁻¹ : (ZMod M)ˣ))
+  · rw [colRed_mul_of_mem_Gamma0 g.property]
+    change (g.val 0 0 : ZMod M) * (colRed M δ).1 +
+      (g.val 0 1 : ZMod M) * (colRed M δ).2 = _
+    rw [h0, h1, ← coe_inv_gamma0Unit M g]
+    rw [mul_assoc (g.val 0 1 : ZMod M),
+      ← mul_assoc (((gamma0Unit M g)⁻¹ : (ZMod M)ˣ) : ZMod M),
+      Units.inv_mul, one_mul]
+  · rw [colRed_mul_of_mem_Gamma0 g.property]
+    exact h1.symm
+
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "C" => Rep.trivial (ZMod N) (Gamma1 M) V
+
+/-- The literal finite-column normalizer operator, with its original
+homogeneous coefficient endomorphism and unit labels. -/
+def binaryPrimitiveColumnDiamond (g : Gamma0 M) : Module.End (ZMod N) (P M → V) :=
+  let d := gamma0Unit M g
+  LinearMap.pi fun c => (sourceGammaOneBinaryDiamondCoefficient Q N w g) ∘ₗ
+    (LinearMap.proj (scale d⁻¹ d c) : (P M → V) →ₗ[ZMod N] V)
+
+/-- The same original finite boundary intertwines the genuine diamond
+action, discharging the normalizer comparison needed by the joint words. -/
+theorem binaryPrimitiveColumnBoundary_diamond (g : Gamma0 M) (x : H1 C) :
+    binaryPrimitiveColumnBoundary Q N w
+      (sourceGammaOneDiamondH1 (ZMod N) V M g
+        (sourceGammaOneBinaryDiamondCoefficient Q N w g) x) =
+      binaryPrimitiveColumnDiamond Q N w g (binaryPrimitiveColumnBoundary Q N w x) := by
+  funext c
+  change primitiveCuspValue M ((H1IsoOfIsTrivial C).hom
+    (sourceGammaOneDiamondH1 (ZMod N) V M g
+      (sourceGammaOneBinaryDiamondCoefficient Q N w g) x)) (lift c) = _
+  rw [primitiveCuspValue_native_diamond]
+  apply congrArg (sourceGammaOneBinaryDiamondCoefficient Q N w g)
+  apply primitiveCuspValue_normalizer_column M ((H1IsoOfIsTrivial C).hom x) g (lift c)
+  · rw [colRed_lift, colRed_lift]
+    rfl
+  · rw [colRed_lift, colRed_lift]
+    rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

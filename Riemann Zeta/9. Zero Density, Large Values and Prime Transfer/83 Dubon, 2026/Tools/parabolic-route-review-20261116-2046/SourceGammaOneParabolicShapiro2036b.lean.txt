@@ -1,0 +1,53 @@
+import SourceOriginalCoinducedLocalCoboundary2034b
+import SourceParabolicTracePowers2035a
+import Dubon2026.SourceGammaOneCohomologyTransfer
+import Dubon2026.SourceParabolicCohomology
+
+/-! DUB-17/18 -> original all-weight association -> original finite
+Hecke character -> parabolic transfer. The native Shapiro lift of a
+parabolic cocycle on the actual diagonal Gamma1 image is parabolic on
+Gamma0. The subgroup action is derived from original coefficient
+triviality, and every stabilizer-power vanishing condition follows from
+the literal matrix trace condition. No local potential or Shapiro
+compatibility is supplied; parabolic surjectivity remains separate. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology CategoryTheory
+variable (Q N w : ℕ) [NeZero N]
+local notation "A" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "S" => MonoidHom.range (sourceGammaOneDiagonalHom Q N)
+
+private theorem original_subgroup_trivial (s : S) : (A).ρ s.val = 1 := by
+  obtain ⟨γ, hγ⟩ := s.property
+  rw [← hγ, sourceGammaOneDiagonalHom_binary_trivial]
+
+theorem sourceGammaOneShapiroLift_parabolic
+    (c : cocycles₁ (Rep.res (S).subtype A))
+    (hc : ∀ s : S, s.val.val.val.trace ^ 2 = 4 → c s = 0) :
+    sourceShapiroLiftCocycles A S c ∈
+      sourceParabolicCocycles (Gamma0 Q) (Rep.coind (S).subtype (Rep.res (S).subtype A)) := by
+  letI : (Rep.res (S).subtype A).IsTrivial := ⟨original_subgroup_trivial Q N w⟩
+  let φ : Additive S →+ A := (cocycles₁IsoOfIsTrivial (Rep.res (S).subtype A)).hom c
+  intro g hg
+  have hφ : ∀ (t : Gamma0 Q) (z : ℤ) (h : t⁻¹ * g ^ z * t ∈ S),
+      φ (Additive.ofMul ⟨t⁻¹ * g ^ z * t, h⟩) = 0 := by
+    intro t z h
+    apply hc ⟨t⁻¹ * g ^ z * t, h⟩
+    change ((t.val⁻¹ * g.val ^ z * t.val).val.trace) ^ 2 = 4
+    exact SourceParabolic.trace_sq_conjugate_zpow g.val t.val hg z
+  obtain ⟨v, hv⟩ := sourceOriginalShapiro_local_coboundary A S
+    (original_subgroup_trivial Q N w) φ g hφ
+  exact ⟨v, hv⟩
+
+theorem sourceGammaOneShapiroH1_parabolic_of_evaluation
+    (c : cocycles₁ (Rep.coind (S).subtype (Rep.res (S).subtype A)))
+    (hc : ∀ s : S, s.val.val.val.trace ^ 2 = 4 →
+      sourceShapiroEvaluationCocycles A S c s = 0) :
+    H1π _ c ∈ sourceParabolicH1 (Gamma0 Q)
+      (Rep.coind (S).subtype (Rep.res (S).subtype A)) := by
+  rw [← sourceShapiroH1_evaluation_lift A S c]
+  exact (sourceParabolicH1_cocycle_iff (Gamma0 Q) _ _).mpr
+    (sourceGammaOneShapiroLift_parabolic Q N w _ hc)
+
+end
+end Dubon2026

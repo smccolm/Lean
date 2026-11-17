@@ -1,0 +1,22 @@
+import SourceMarkedEmbeddingSignKernel
+import SourceMarkedOriginalNormalField
+import SourceMarkedOriginalNormalFieldTwo
+import SourceMarkedOriginalNormalFieldThree
+import SourceMarkedOriginalLocalDifferentials
+import SourceMarkedOriginalWildDifferent
+import SourceMarkedOriginalWildDifferentTwo
+import SourceMarkedOriginalWildDifferentThree
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceMarkedEmbeddingSignKernel, `SourceMarkedOriginalNormalField, `SourceMarkedOriginalNormalFieldTwo, `SourceMarkedOriginalNormalFieldThree, `SourceMarkedOriginalLocalDifferentials, `SourceMarkedOriginalWildDifferent, `SourceMarkedOriginalWildDifferentTwo, `SourceMarkedOriginalWildDifferentThree]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

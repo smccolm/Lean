@@ -1,0 +1,34 @@
+[
+  {
+    "version": "SourceGammaOneLocalGoodReduction2028b",
+    "module": "SourceGammaOneLocalGoodReduction",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction2028b.lean",
+    "originalSha256": "4AA3D8F192D1245E3DA8CCDB254A779C6DB3CD3793F237A7B89A617C09EC9D9E",
+    "canonicalSha256": "CFBBDDD5D8D843A411B387B78BE1751EDEC7FF56FA92C8BA45249AA2970A0E90",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneGeometricHeckeFamily2029a",
+    "module": "SourceGammaOneGeometricHeckeFamily",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily2029a.lean",
+    "originalSha256": "EF77A9DB1BDE8B43AC05D664859E00A88607236B3E09C0EC10B920ABDE700842",
+    "canonicalSha256": "25193604FB571F9CD37F44223253F1E38C68C49AD0CD8E7A78149EB907DAED11",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneGeometricArithmeticDescent2030a",
+    "module": "SourceGammaOneGeometricArithmeticDescent",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent2030a.lean",
+    "originalSha256": "869FBFDDA368F1B9E3EFE54CDA134625D34CBBF5BE40A773A63D23273DACCBC9",
+    "canonicalSha256": "F3F89F2FF05C1F1A06CEFC4DD5E10F349F53C3FE631ADA80175DB728F48CF61F",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneGeometricCharacter2031a",
+    "module": "SourceGammaOneGeometricCharacter",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter2031a.lean",
+    "originalSha256": "2436BFC85B00058CDDF33F359ACD789E99968EE812096A5CE0088DDD86CC688E",
+    "canonicalSha256": "80B7D812349B4ECD4104146EFBE22A5054BAA1888ADF814EE5573E25A4B7CE72",
+    "mathematicalBodyIdentical": true
+  }
+]

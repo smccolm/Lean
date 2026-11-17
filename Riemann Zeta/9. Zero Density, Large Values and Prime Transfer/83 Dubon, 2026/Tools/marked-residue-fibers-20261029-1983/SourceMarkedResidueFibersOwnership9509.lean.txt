@@ -1,0 +1,44 @@
+import Dubon2026.SourceMarkedOriginalSeparability
+import Dubon2026.SourceMarkedSeparableChartValues
+import Dubon2026.SourceMarkedSeparableEmbeddingDescent
+import Dubon2026.SourceMarkedRationalPointDescent
+import Dubon2026.SourceMarkedOriginalAlgebraicChart
+import Dubon2026.SourceMarkedFullTorsionPointLift
+import Dubon2026.SourceMarkedChartNormalExhaustion
+import Dubon2026.SourceMarkedOriginalFullTorsionChart
+import Dubon2026.SourceMarkedChartPlaceOrbits
+import Dubon2026.SourceMarkedOriginalOfJChart
+import Dubon2026.SourceMarkedOriginalPlaceChart
+import Dubon2026.SourceMarkedFullTorsionNonempty
+import Dubon2026.SourceMarkedChartFiberSurjection
+import Dubon2026.SourceMarkedOriginalFiberChart
+import Dubon2026.SourceMarkedSignPermutation
+import Dubon2026.SourceMarkedSignFreeOrbits
+import Dubon2026.SourceMarkedSignFiberFactor
+import Dubon2026.SourceMarkedPeriodicFiberBound
+import Dubon2026.SourceMarkedTorsionReductionEquiv
+import Dubon2026.SourceMarkedQuadraticFiberBounds
+import Dubon2026.SourceMarkedReducedFiberChart
+import Dubon2026.SourceMarkedOriginalResidueFiberFive
+import Dubon2026.SourceMarkedOriginalTameFiberBounds
+import Dubon2026.SourceMarkedFullInertiaLifts
+import Dubon2026.SourceMarkedOriginalResidueFiberTwo
+import Dubon2026.SourceMarkedOriginalResidueFiberThree
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceMarkedOriginalSeparability, `Dubon2026.SourceMarkedSeparableChartValues, `Dubon2026.SourceMarkedSeparableEmbeddingDescent, `Dubon2026.SourceMarkedRationalPointDescent, `Dubon2026.SourceMarkedOriginalAlgebraicChart, `Dubon2026.SourceMarkedFullTorsionPointLift, `Dubon2026.SourceMarkedChartNormalExhaustion, `Dubon2026.SourceMarkedOriginalFullTorsionChart, `Dubon2026.SourceMarkedChartPlaceOrbits, `Dubon2026.SourceMarkedOriginalOfJChart, `Dubon2026.SourceMarkedOriginalPlaceChart, `Dubon2026.SourceMarkedFullTorsionNonempty, `Dubon2026.SourceMarkedChartFiberSurjection, `Dubon2026.SourceMarkedOriginalFiberChart, `Dubon2026.SourceMarkedSignPermutation, `Dubon2026.SourceMarkedSignFreeOrbits, `Dubon2026.SourceMarkedSignFiberFactor, `Dubon2026.SourceMarkedPeriodicFiberBound, `Dubon2026.SourceMarkedTorsionReductionEquiv, `Dubon2026.SourceMarkedQuadraticFiberBounds, `Dubon2026.SourceMarkedReducedFiberChart, `Dubon2026.SourceMarkedOriginalResidueFiberFive, `Dubon2026.SourceMarkedOriginalTameFiberBounds, `Dubon2026.SourceMarkedFullInertiaLifts, `Dubon2026.SourceMarkedOriginalResidueFiberTwo, `Dubon2026.SourceMarkedOriginalResidueFiberThree]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

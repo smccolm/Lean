@@ -1,0 +1,52 @@
+import SourceGammaOneGeometricHeckeFamily
+import SourceGammaOneExactJointCharacter
+import SourceGammaOneExactJointFinite
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+finite joint geometric/boundary-quotient character. Proved original geometry
+constructs the diamond quotient operators. The joint character is then
+constructed at every target precision, without parabolic transfer or a
+unit boundary separator. The original Fourier-field character is retained
+on every word. A Galois realization of the joint algebra, primes two and
+three, and the original characteristic-zero endpoint remain required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+open scoped ValuativeRel
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "d" => 2 * n + 1
+local notation "N" => p ^ (d + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (d + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+/-- The actual geometric quotient and literal boundary quotient together
+carry the original character at every target precision, using twice the
+source precision and no supplied lifting or separator hypothesis. -/
+theorem exists_gammaOne_exact_joint_original_character
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E) :
+    Finite (binaryExactJointOperatorRing Q p d w) ∧
+    ∃ Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N)
+        ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p d w),
+      (∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p d w).mkQ =
+        (binaryTateDiamondRelations Q p d w).mkQ.comp (binaryTatePrimeOperators Q p d w ell)) ∧
+      sourceOperatorRangeCharacterData (binaryExactJointHeckeWord Q p d w hlarge Hq)
+        ((sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+          (sourceGammaOneOriginalHeckeWord Q N w).toRingHom) := by
+  refine ⟨binaryExactJointOperatorRing_finite Q p d w, ?_⟩
+  have hs := exists_gammaOne_diamond_quotient_hecke_family Q p d w
+  rcases hs with ⟨Hq, hH⟩
+  exact ⟨Hq, hH, binaryExactJoint_original_character Q p n f hk hlarge τ Hq hH⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

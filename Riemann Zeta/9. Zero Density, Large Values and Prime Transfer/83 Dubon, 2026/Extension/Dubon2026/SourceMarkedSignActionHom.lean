@@ -1,0 +1,33 @@
+import Dubon2026.SourceMarkedSignPermutation
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-two fiber.
+The actual point automorphisms act on exact-order sign classes by set
+image. Their composition law constructs the homomorphism needed to
+factor the exceptional stabilizer action through its sign quotient. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+variable {A : Type*} [AddCommGroup A]
+
+/-- The action of actual additive automorphisms on exact-order sign classes. -/
+def signClassesPermHom (N : ℕ) : AddAut A →* Equiv.Perm (SignClasses A N) where
+  toFun := signClassesEquiv N
+  map_one' := by
+    ext s : 1
+    apply Subtype.ext
+    change (fun P : A => P) '' s.val = s.val
+    exact Set.image_id s.val
+  map_mul' a b := by
+    ext s : 1
+    apply Subtype.ext
+    change (fun P => a (b P)) '' s.val = a '' (b '' s.val)
+    exact (Set.image_image a b s.val).symm
+
+theorem signClassesEquiv_eq_self_of_negation (N : ℕ) (e : AddAut A)
+    (he : ∀ P, e P = -P) (s : SignClasses A N) : signClassesEquiv N e s = s := by
+  apply Subtype.ext
+  obtain ⟨P, _, hs⟩ := s.property
+  change e '' s.val = s.val
+  rw [hs, Set.image_pair, he, he, neg_neg, Set.pair_comm]
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

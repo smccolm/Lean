@@ -1,0 +1,110 @@
+import Dubon2026.SourceGammaOneBinaryParabolicH1
+import Dubon2026.SourceParabolicClassification
+import Dubon2026.SourceParabolicTracePowers
+import Mathlib.GroupTheory.GroupAction.Period
+
+/-! DUB-17/18 -> all-weight association -> the original finite Gamma1
+Hecke character -> a boundary-annihilating Hecke word. This module gives
+the exact finite boundary test using primitive cusp widths. Level-multiple
+translations cannot be used to detect boundary classes with torsion
+coefficients. Native minimal-period arithmetic and the signed parabolic
+classification are reused; no annihilating word or unit value is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology
+open scoped MatrixGroups
+
+variable (M : ℕ)
+
+def primitiveCuspWidth (q : SL(2, ℤ) ⧸ Gamma1 M) : ℕ :=
+  Function.minimalPeriod (fun x => ModularGroup.T • x) q
+
+theorem primitiveCuspWidth_pos [NeZero M] (q : SL(2, ℤ) ⧸ Gamma1 M) :
+    0 < primitiveCuspWidth M q :=
+  MulAction.minimalPeriod_pos ModularGroup.T q
+
+private theorem primitive_mem (g : SL(2, ℤ)) :
+    g⁻¹ * ModularGroup.T ^ primitiveCuspWidth M (g : SL(2, ℤ) ⧸ Gamma1 M) * g ∈
+      Gamma1 M := by
+  have h : ((ModularGroup.T ^ primitiveCuspWidth M (g : SL(2, ℤ) ⧸ Gamma1 M) * g :
+      SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) = (g : SL(2, ℤ) ⧸ Gamma1 M) :=
+    (MulAction.pow_smul_eq_iff_minimalPeriod_dvd).mpr dvd_rfl
+  rw [QuotientGroup.eq] at h
+  have hi := (Gamma1 M).inv_mem h
+  simpa only [mul_inv_rev, inv_inv, mul_assoc] using hi
+
+def primitiveCuspGenerator (q : SL(2, ℤ) ⧸ Gamma1 M) : Gamma1 M :=
+  ⟨q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out, by
+    simpa only [Quotient.out_eq'] using primitive_mem M q.out⟩
+
+theorem primitiveCuspGenerator_trace (q : SL(2, ℤ) ⧸ Gamma1 M) :
+    (primitiveCuspGenerator M q).val.val.trace ^ 2 = 4 := by
+  change ((q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out : SL(2, ℤ)).val.trace) ^ 2 = 4
+  simpa only [inv_inv, zpow_natCast] using
+    SourceParabolic.trace_sq_conjugate_zpow ModularGroup.T (by norm_num [ModularGroup.T, Matrix.trace_fin_two])
+      q.out⁻¹ (primitiveCuspWidth M q : ℤ)
+
+private theorem character_conj {A : Type} [AddCommGroup A]
+    (φ : Additive (Gamma1 M) →+ A) (g h : Gamma1 M) :
+    φ (Additive.ofMul (g * h * g⁻¹)) = φ (Additive.ofMul h) := by
+  simp only [ofMul_mul, ofMul_inv, map_add, map_neg]
+  abel
+
+private theorem primitive_value_zero {A : Type} [AddCommGroup A]
+    (φ : Additive (Gamma1 M) →+ A)
+    (hφ : ∀ q, φ (Additive.ofMul (primitiveCuspGenerator M q)) = 0)
+    (g : SL(2, ℤ)) :
+    φ (Additive.ofMul (⟨g⁻¹ * ModularGroup.T ^
+      primitiveCuspWidth M (g : SL(2, ℤ) ⧸ Gamma1 M) * g, primitive_mem M g⟩ : Gamma1 M)) = 0 := by
+  let q : SL(2, ℤ) ⧸ Gamma1 M := g
+  have hg : q.out⁻¹ * g ∈ Gamma1 M := QuotientGroup.eq.mp (Quotient.out_eq' q)
+  let η : Gamma1 M := ⟨q.out⁻¹ * g, hg⟩
+  have he : (⟨g⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * g, primitive_mem M g⟩ : Gamma1 M) =
+      η⁻¹ * primitiveCuspGenerator M q * (η⁻¹)⁻¹ := by
+    apply Subtype.ext
+    change g⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * g =
+      (q.out⁻¹ * g)⁻¹ * (q.out⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * q.out) *
+        ((q.out⁻¹ * g)⁻¹)⁻¹
+    group
+  rw [he, character_conj, hφ]
+
+theorem character_parabolic_of_primitive_boundary
+    {R A : Type} [CommRing R] [AddCommGroup A] [Module R A]
+    (h2 : IsUnit (2 : R)) (φ : Additive (Gamma1 M) →+ A)
+    (hφ : ∀ q, φ (Additive.ofMul (primitiveCuspGenerator M q)) = 0)
+    (γ : Gamma1 M) (hγ : γ.val.val.trace ^ 2 = 4) :
+    φ (Additive.ofMul γ) = 0 := by
+  obtain ⟨ε, δ, h, hε, he⟩ := SourceParabolic.classification γ.val hγ
+  have hsquare : (γ ^ 2 : Gamma1 M).val = δ * ModularGroup.T ^ (2 * h) * δ⁻¹ := by
+    rw [Subgroup.coe_pow, he]
+    rcases hε with rfl | rfl <;>
+      simp only [one_mul, neg_one_mul, neg_sq, conj_pow, ← zpow_natCast, ← zpow_mul] <;>
+      congr 2 <;> ring
+  let g := δ⁻¹
+  let q : SL(2, ℤ) ⧸ Gamma1 M := g
+  have hfix : ModularGroup.T ^ (2 * h) • q = q := by
+    change ((ModularGroup.T ^ (2 * h) * g : SL(2, ℤ)) : SL(2, ℤ) ⧸ Gamma1 M) = q
+    apply QuotientGroup.eq.mpr
+    apply (Gamma1 M).inv_mem_iff.mp
+    have hm := (γ ^ 2 : Gamma1 M).property
+    rw [hsquare] at hm
+    simpa only [g, mul_inv_rev, inv_inv, mul_assoc] using hm
+  have hd : (primitiveCuspWidth M q : ℤ) ∣ 2 * h :=
+    MulAction.zpow_smul_eq_iff_minimalPeriod_dvd.mp hfix
+  obtain ⟨j, hj⟩ := hd
+  let u : Gamma1 M := ⟨g⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * g, primitive_mem M g⟩
+  have hpow : γ ^ 2 = u ^ j := by
+    apply Subtype.ext
+    rw [hsquare, Subgroup.coe_zpow]
+    change δ * ModularGroup.T ^ (2 * h) * δ⁻¹ =
+      (g⁻¹ * ModularGroup.T ^ primitiveCuspWidth M q * g) ^ j
+    rw [conj_zpow, ← zpow_natCast, ← zpow_mul, ← hj]
+    simp only [g, inv_inv]
+  have hv : φ (Additive.ofMul u) = 0 := primitive_value_zero M φ hφ g
+  have hz : (2 : R) • φ (Additive.ofMul γ) = 0 := by
+    have hh := congrArg (fun a : Gamma1 M => φ (Additive.ofMul a)) hpow
+    simpa only [ofMul_pow, ofMul_zpow, map_nsmul, map_zsmul, hv, smul_zero, Nat.cast_smul_eq_nsmul] using hh
+  exact (h2.smul_eq_zero).mp hz
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

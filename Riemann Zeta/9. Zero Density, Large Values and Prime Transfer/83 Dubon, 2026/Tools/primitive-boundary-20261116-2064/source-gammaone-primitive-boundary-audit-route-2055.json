@@ -1,0 +1,38 @@
+{
+  "recordedUTC": "2026-11-17T00:47:00.634264+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 quotient Hecke character -> boundary-annihilating word with unit original character value",
+  "shorterRoute": "Use the finite original SL2/Gamma1 coset set directly and the native minimal period. A minimal cusp quotient, a new orbit decomposition, and general cohomological duality are unnecessary for this boundary test. Level-multiple translations do not detect torsion boundary classes, so the complex Gamma0 boundary result cannot be substituted.",
+  "assumptionsToDischarge": [
+    "The primitive cusp generator belongs to the actual Gamma1 subgroup.",
+    "Every parabolic group element has a square conjugate inside Gamma1 to an integer power of an actual primitive cusp generator.",
+    "When two is a unit, vanishing at the finite primitive boundary generators implies vanishing on all actual trace-square-four elements, without a coefficient torsion-freeness assumption.",
+    "The native Gamma1 H1 Hecke sum is the exact sum over its actual cyclic coset orbits, by reuse of Mathlib transfer.",
+    "Every orbit contribution has trace two and is conjugate inside the actual Gamma1 group to an integer power of one of its finite primitive cusp generators.",
+    "Those actual generators and powers construct integer rows for the Hecke action on primitive cusp values, uniformly for all additive coefficient modules and all original coefficient endomorphisms."
+  ],
+  "remaining": "Neither a boundary-annihilating Hecke word nor a unit value of its original character is asserted. The finite boundary Hecke action, separation/unit condition, original all-weight association, automorphy and higher continuation remain open. DUB-17--20 OPEN; no source contract or final theorem has been weakened.",
+  "boundary": "Six focused modules compile; two missing docstrings from the failed first scope have been corrected in a fresh retained version. Exhaustive scratch audit, production promotion and assembled verification pending.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspCorrectionCyclicCosets.lean",
+      "sha256": "28DEDA4E178E99044B4C263C5102CAB9FE612363B1E2F0615A2519679225A37F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryParabolicH1.lean",
+      "sha256": "CB69158E0F63B4AF0E5786C8822D5304810C342D46D90DD3C7C74C6DCCFA893A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCharacterModularFacts.lean",
+      "sha256": "485A00F6297E9BF4D434A482F82A15D6DFDD47976947AD769A3B6DEE24972B0E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCosetTransfer.lean",
+      "sha256": "D1C7BFBFE363D2C9E77C4FEA5F431EBCCF5D2A1A6A45C324C69C505FEBE71BC2"
+    }
+  ],
+  "docRepair": "Scope 2050 failed docBlame on two missing definition docstrings. Scope 2055 retains the failed sources and log, inserts exactly those two docstrings in fresh version 2047d, and repeats all checks without changing mathematical content."
+}

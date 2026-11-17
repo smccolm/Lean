@@ -1,0 +1,82 @@
+import SourceCurveSeparatingCoordinateHurwitz
+
+/-! DUB-17/18 -> original all-weight association -> homogeneous Gamma1
+realization -> original genus preservation -> reverse genus. Effectivity and
+exact degree of the separating-coordinate Hurwitz divisor bound finite regular
+fiber contributions and poles. The native effective-divisor inequality applies
+to the actual places; no Hurwitz, genus or exceptional-fiber premise is assumed.
+Both differential and ramification forms serve the wild and tame original
+residue j consumers respectively. -/
+
+noncomputable section
+
+namespace Dubon2026.SourceCurve
+
+open IntermediateField KaehlerDifferential
+
+variable {K F : Type*} [Field K] [IsAlgClosed K] [Field F] [Algebra K F]
+variable (t : F) [FiniteDimensional K⟮t⟯ F] [Algebra.IsSeparable K⟮t⟯ F]
+variable (ht : Transcendental K t) (hDt : D K F t ≠ 0)
+include ht hDt
+
+/-- Finite differential orders and selected poles obey the actual Hurwitz bound. -/
+theorem separating_hurwitz_differential_bound
+    (S : Finset (Place K F))
+    (hS : ∀ v ∈ S, 0 ≤ v.ord t)
+    (P : Finset (Place K F))
+    (hP : ∀ v ∈ P, v.ord t < 0) :
+    (∑ v ∈ S, v.ordDifferential (D K F t)) +
+      (∑ v ∈ P, (-v.ord t - 1)) ≤
+        2 * (genusFF K F : ℤ) - 2 +
+          2 * (Module.finrank (IntermediateField.adjoin K {t})
+            F : ℤ) := by
+  classical
+  have hdis : Disjoint S P := Finset.disjoint_left.mpr fun v hv hv' =>
+    (not_lt_of_ge (hS v hv)) (hP v hv')
+  have hs : ∀ v ∈ S,
+      v.ordDifferential (D K F t) ≤
+        separatingHurwitzDivisor t ht hDt v := by
+    intro v hv
+    rw [separatingHurwitzDivisor_apply, max_eq_right (neg_nonpos.mpr (hS v hv)),
+      mul_zero, add_zero]
+  have hp : ∀ v ∈ P, -v.ord t - 1 ≤ separatingHurwitzDivisor t ht hDt v := by
+    intro v hv
+    rw [separatingHurwitzDivisor_apply, max_eq_left (neg_nonneg.mpr (hP v hv).le)]
+    have hd := separating_coordinate_ord_sub_one_le_D t ht hDt v 0
+    simp only [map_zero, sub_zero] at hd
+    omega
+  calc
+    _ ≤ (∑ v ∈ S, separatingHurwitzDivisor t ht hDt v) +
+        ∑ v ∈ P, separatingHurwitzDivisor t ht hDt v :=
+      add_le_add (Finset.sum_le_sum hs) (Finset.sum_le_sum hp)
+    _ = ∑ v ∈ S ∪ P, separatingHurwitzDivisor t ht hDt v := (Finset.sum_union hdis).symm
+    _ ≤ Divisor.degree (separatingHurwitzDivisor t ht hDt) :=
+      Divisor.sum_le_degree_of_nonneg _ (separatingHurwitzDivisor_nonneg t ht hDt)
+        (fun v => Module.finrank_of_bijective_algebraMap
+          (place_residue_bijective_of_finite_coordinate t v)) _
+    _ = _ := degree_separatingHurwitzDivisor t ht hDt
+
+/-- Selected finite ramification orders and poles obey the same actual Hurwitz bound. -/
+theorem separating_hurwitz_ramification_bound
+    (S : Finset (Place K F))
+    (a : Place K F → K)
+    (hS : ∀ v ∈ S, 0 < v.ord
+      (t - algebraMap K F (a v)))
+    (P : Finset (Place K F))
+    (hP : ∀ v ∈ P, v.ord t < 0) :
+    (∑ v ∈ S, (v.ord
+      (t - algebraMap K F (a v)) - 1)) +
+      (∑ v ∈ P, (-v.ord t - 1)) ≤
+        2 * (genusFF K F : ℤ) - 2 +
+          2 * (Module.finrank (IntermediateField.adjoin K {t})
+            F : ℤ) := by
+  have hs : ∀ v ∈ S, 0 ≤ v.ord t := by
+    intro v hv
+    apply v.ord_nonneg_of_mem
+    have hm := add_mem (v.mem_of_ord_nonneg (hS v hv).le) (v.algebraMap_mem' (a v))
+    simpa only [sub_add_cancel] using hm
+  refine le_trans ?_ (separating_hurwitz_differential_bound t ht hDt S hs P hP)
+  refine add_le_add ?_ le_rfl
+  exact Finset.sum_le_sum fun v _ => separating_coordinate_ord_sub_one_le_D t ht hDt v (a v)
+
+end Dubon2026.SourceCurve

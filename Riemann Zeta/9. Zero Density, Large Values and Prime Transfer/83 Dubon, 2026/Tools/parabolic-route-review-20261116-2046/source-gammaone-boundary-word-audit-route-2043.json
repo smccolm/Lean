@@ -1,0 +1,42 @@
+{
+  "recordedUTC": "2026-11-17T00:13:39.560325+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 quotient Hecke character -> boundary-killing Hecke word with unit original eigencharacter value.",
+  "shorterRoute": "The source requires the actual eigencharacter, not global parabolic transfer surjectivity. Test a shorter route using proved full-H1 surjectivity, actual Tate/parabolic comparison and word intertwining. A word killing the cusp boundary yields product annihilation on full original integral H1; the proved full-H1 congruence theorem and a unit character value then give the exact quotient character. No global surjectivity or boundary-annihilator existence is claimed. No prescribed prime or weight is silently removed.",
+  "assumptionsToDischarge": [
+    "A zero actual quotient word, multiplied by a concrete boundary-annihilating Hecke word, kills every original integral H1 class after reduction; derive this using actual full-H1 transfer and Tate/parabolic comparison.",
+    "Native full-H1 congruence and a unit value of the boundary word imply exact character descent to the actual quotient algebra.",
+    "Existing proved original geometry constructs the full quotient Hecke family."
+  ],
+  "remaining": "The concrete boundary-annihilating word and unit original character value remain unconstructed. This conditional alternative neither proves global parabolic surjectivity nor closes the original all-weight association, automorphy or higher continuation. The entire original source contract remains in force; DUB17--20 OPEN.",
+  "boundary": "Three focused modules compile. Exhaustive scratch audit, production promotion and assembled verification pending.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeWords.lean",
+      "sha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondQuotientWords.lean",
+      "sha256": "FC85F157C4608D00A04801AC1D0F57BD849B37D5F770C6DBDA8A25A17CC0F6A6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryTateH1.lean",
+      "sha256": "896CB247EC12F82BA98F4C885640184309C2865BBE2FC88B48778017D32A42A6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveH1AdicOperatorKernel.lean",
+      "sha256": "B9390C39F0D33ACBDB1E5C9F413320CCEF4C3B3824203CDA2A4C3FEC113F79B2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteOperatorCharacterDescent.lean",
+      "sha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily.lean",
+      "sha256": "25193604FB571F9CD37F44223253F1E38C68C49AD0CD8E7A78149EB907DAED11"
+    }
+  ]
+}

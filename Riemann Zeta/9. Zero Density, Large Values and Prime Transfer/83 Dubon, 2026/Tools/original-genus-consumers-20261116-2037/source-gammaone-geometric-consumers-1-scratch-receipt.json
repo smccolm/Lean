@@ -1,0 +1,86 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-11-16T23:49:48.498720+00:00",
+  "date": "2026-11-16 America/Whitehorse",
+  "modules": [
+    "SourceGammaOneLocalGoodReduction",
+    "SourceGammaOneGeometricHeckeFamily",
+    "SourceGammaOneGeometricArithmeticDescent",
+    "SourceGammaOneGeometricCharacter"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction.lean",
+      "sha256": "CFBBDDD5D8D843A411B387B78BE1751EDEC7FF56FA92C8BA45249AA2970A0E90",
+      "oleanSha256": "6A70C67389071AD18A7A96ABBF2C4F4FF485FEF57BF60C7394D0BB4DF9D8C4F9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction-2032.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalGoodReduction-2032.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily.lean",
+      "sha256": "25193604FB571F9CD37F44223253F1E38C68C49AD0CD8E7A78149EB907DAED11",
+      "oleanSha256": "21CB65ED63DBD4CDF44E8716E2B437AB963379E455A9C0EF046ECCAA2A4D3149",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily-2032.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricHeckeFamily-2032.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent.lean",
+      "sha256": "F3F89F2FF05C1F1A06CEFC4DD5E10F349F53C3FE631ADA80175DB728F48CF61F",
+      "oleanSha256": "15588E0AA73488685B172C396AEF72CB54E32DD58C8F8B0BED4F836E429BB58F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent-2032.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticDescent-2032.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter.lean",
+      "sha256": "80B7D812349B4ECD4104146EFBE22A5054BAA1888ADF814EE5573E25A4B7CE72",
+      "oleanSha256": "07BA23C66C377FD30BD8128AC14DAF958A2A48BDDC6D3E79AD7D004721E42CE7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter-2032.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCharacter-2032.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_local_degree_and_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_local_degree_and_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersAudit1.log",
+  "logSha256": "848FC0574BDE411E7C74E5AAA5B6A9599AFDC90E378F309E7E0A0148F9A0B00E",
+  "auditSha256": "D0DD859C4B38F4E5DE2C0F0D264152C57F8D80E716A9015A373F3E4C84386A90",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersScratchOwnership2032.log",
+  "ownershipSha256": "A1083FD71642BDC565D93B75EF1717CE9468A5D0DE0199F157CDA69A8023FC7B",
+  "exhaustiveTheorems": 24,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricConsumersDependencyAudit1b.log",
+  "dependencyAuditSha256": "FA96B891A0BD4CBFA1AA83FCA77F8829941BADA9C29866AD5813021E55C46A66",
+  "dependencyAuditSourceSha256": "DBD71ABC8CF9C95296C063219217359F6E5004AED184C33094F20BB27F8EA0F9",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_transfer"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 realization -> actual original Hecke operators and arithmetic descent.",
+  "discharged": [
+    "Derive original degree and genus at every prescribed local valuation from its proved residue characteristic.",
+    "Discharge both geometric families in the original diamond quotient Hecke operator construction.",
+    "Discharge both geometric families in the original arithmetic descent of the finite homogeneous-valued Tate action.",
+    "Reduce the original quotient-character assembly to its sole remaining parabolic transfer hypothesis, preserving its prime range and exceptional integer."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, automorphy and literal higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-geometric-consumers-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "966094735389577DAA3885A90AAF2398CC3B7ADA3C660131799E701716F633A4",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,35 @@
+import Dubon2026.SourceMarkedOriginalOrderBoundThree
+import Dubon2026.SourceMarkedOriginalWildFiberThree
+import Dubon2026.SourceMarkedOriginalPositiveDegree
+import Dubon2026.SourceMarkedFiberOrderRigidity
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-three exact
+wild orders. The actual original degree sum, marked fiber cardinal bound
+and normal-field order divisibility force order six at every positive
+j place for N greater than three. No fiber or order certificate remains. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open CongruenceSubgroup GammaOne SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+    [CharP (IsLocalRing.ResidueField A) 3]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_positive_j_order_eq_six
+    (haway : ¬ 3 ∣ N) (hN : 3 < N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (v : Place kk F) (hv : 0 < v.ord x) : v.ord x = 6 := by
+  letI : Fact (Nat.Prime 3) := ⟨Nat.prime_three⟩
+  obtain ⟨hfinite, hdegree⟩ := original_positive_j_fiber_finite_and_degree A N 3 haway x hx
+  letI := hfinite
+  have hcard := original_six_mul_card_j_zero_fiber_le_of_char_three A N haway hN x hx
+  have hle (w : {w : Place kk F // 0 < w.ord x}) : w.val.ord x ≤ (6 : ℤ) :=
+    Int.le_of_dvd (by norm_num)
+      (original_positive_j_order_dvd_six A N haway (by omega) x hx w.val w.property)
+  exact eq_const_of_finsum_and_card_bound (fun w : {w : Place kk F // 0 < w.ord x} => w.val.ord x)
+    6 (plusMinus (Gamma1 N)).index hcard hdegree hle ⟨v, hv⟩
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart
