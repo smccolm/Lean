@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-17",
+  "sourceDependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual integral and residual arithmetic rank-two realization.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-residual-rank-two-route-2253.json",
+    "sha256": "930B6D8645A100D7C17E882846A0C05D90104D2862D32E8144EED87C641401F7",
+    "review": {
+      "recordedUTC": "2026-11-17T08:25:29.240690+00:00",
+      "date": "2026-11-17",
+      "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual integral and residual arithmetic rank-two realization.",
+      "obligations": "The original primitive form of weight at least two and prime p greater than three constructs a genuine finite local coefficient extension, its actual finite discrete characteristic-p residue field and continuous integral/residual arithmetic representations. The integer span of the two compact basis orbits is proved finite, full, invariant, free and rank two. This discharges every lattice input of the existing integral/residual realization. Native conjugacy invariance proves the exact trace and determinant comparison. Literal entrywise reduction gives original reduced Fourier traces and weight determinants at all original good-prime norm Frobenius elements, and actual complex conjugation remains odd. No lattice, representation, Frobenius, finite-residue or continuity certificate is supplied by the source consumer.",
+      "remaining": "Residual irreducibility and large image, remaining local/regularity conditions, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are required.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\AlgebraIdempotentMatrixAction.lean",
+          "sha256": "779C10321074F24D8CF40A422276A18207026F315D038E1E8874BAA0B1AE5903"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\AlgebraIdempotentLeftIdeal.lean",
+          "sha256": "F65995ED4FB22EB8BDC7D7034EA71EDE67C5E3AFB840E6649657BE8CCA66F475"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightParity.lean",
+          "sha256": "3A9E83402C15C16C91F357A1F649D6ACF9DBD9E96ABCDB313BB0B16DA2F46F47"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicCharacter.lean",
+          "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CyclotomicConjugationPower.lean",
+          "sha256": "542D4097285FC2861C2A3E243A44314034DB6327D3F9DC491AD782B843A1D728"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalValuation.lean",
+          "sha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateInertia.lean",
+          "sha256": "4AA94AF9662DB38874444330F2609EAFCB522C2F78B08E4A887531B39588BBAD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveLocalCoefficients.lean",
+          "sha256": "0EBA3EAE554D519E5244AF28BC33E6E151242C847E15F95BE842078AD42D0D74"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualCharacteristic.lean",
+          "sha256": "590B06EFA0C45075CA3E981D1AB53EF00C871552F44AEFA28E6686E76757BB15"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneOriginalLocalTrace.lean",
+          "sha256": "EFAB5FBBCC6108D1BB8865FC3BF541012BE1741FB1C4CBE2BEF23831C87B5DFC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclicFrobeniusEquality.lean",
+          "sha256": "CC0BBDE155F173CD15AFC52F6337612B0681131FDABC00929C74BFC787504277"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CompactSeparatedLocalAdicTopology.lean",
+          "sha256": "8F1E520D644029C15BC086E8EEF02A999CE24D13EC2CE5729A5330BFDDDE2104"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointDescent.lean",
+          "sha256": "F00915768C2E625AA53141531FD2DEDB1F1B7CDCA331AE5DEF68CBBC92064F6A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointTraceSpecialization.lean",
+          "sha256": "CA794C7578611AB4FEA8CCE7C5E7B7C8537E90A33FE0D2EC8B17ADD5C3075672"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicLocal.lean",
+          "sha256": "C50D072FDAD31B04D91D6A43B2CDBBEEFF06CB79E9FC87EBFFFB0184D164306D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+          "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticOriginalSupportDescent.lean",
+          "sha256": "D379B676AA67FD4C133927245AAE661D264DB3ABDFB6A57F472180A40F9A00A3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticRestriction.lean",
+          "sha256": "07CDDC97E8807EC33C2F162310413AEA8A17B1138586AAD14472FA1875EE2CC3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "sha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeContinuity.lean",
+          "sha256": "073675A9CBCEE8CC8FB2A3C29ECE6213FBDB79FA78E8753D0A7D98FCC06F8951"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeFieldComparison.lean",
+          "sha256": "02AD347184ED43B22080FDC98621467E1DA3FEBB5FACCD4E726FDD0FCE3C2FAD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralLatticeRank.lean",
+          "sha256": "B3ED985B46EE29C6F9CE9FFC315E38105296C74FE71FD2B202B680928667A2D9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "sha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CommonCoefficientField.lean",
+          "sha256": "C6FA83CAFAB4150CE07A1BB86513BA75C688C1CEDE593ED8C8B3AA8DA159A359"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Basis\\Defs.lean",
+          "sha256": "82B79301C7246098B626AF1F2D88DE6B4C2BC188FA4F676492D69CC7DFA87939"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Group\\Units.lean",
+          "sha256": "7A99CBFEDA751ED382CB491D7E98E676202260FEAB39D34B0AB742572AA5E62F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Instances\\Matrix.lean",
+          "sha256": "B1A7A566CDA4BFE2E6FCF64AF90546DB07B65BE5B3FD68C0E85169078ECF163F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\MonoidAlgebra\\Defs.lean",
+          "sha256": "A8E5AFFDF1B2BE731717F7C2B21C4745CAF5ED119A510FCC3AD9062F2627947C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Ring\\Ideal.lean",
+          "sha256": "19405D642F5EC403FAD305C6BF79221D10CAEBDC2FA86D0381193A2AA290B200"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Compactness\\Compact.lean",
+          "sha256": "FC4D0367A2C6D3C26742649ACC738F5FDD1DFAC1EAB6F27044DC41A5F0C05CFC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Noetherian\\Basic.lean",
+          "sha256": "99C77DEF7F228BC7FDB702AAB358E36E8DC6F4EC2C3C6672AE281728CF2B4DB3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Trace.lean",
+          "sha256": "F3E0D0A3A93C022DCDBA444ED6CC78EF56825637E86FC58DEC7290E7C94147C9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Determinant.lean",
+          "sha256": "B8FDAB493BFDBF76CFD66B38CE6F642F73CE77AFE0A8D9194E419CED43232A25"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\ValuativeRel\\ValuativeTopology.lean",
+          "sha256": "831B623B739694A264726F3DF9C4E71ABA8998B83AF6E1D735311A4D584565C8"
+        }
+      ],
+      "publicFollowup": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\rank-two-public-reuse-followup-2219.json",
+        "sha256": "697E0D39D94F58793ECACEBDD74DD65A1793D6DB2AF5F4E41EBE2F6203C5AF97"
+      },
+      "route": "Reuse the existing continuous integral/residual realization from an invariant lattice. Its weight-two lattice construction does not cover these actual all-weight matrices. Construct only the required compact basis-orbit lattice: native finite subcovers and Noetherianity prove finiteness, the identity proves full span, and group multiplication proves invariance. Native lattice rank/freeness and conjugacy invariance complete exact original reduction. The final concrete embedding is factored into a private generic constructor to stay within unchanged elaboration limits.",
+      "deferred": [
+        "General compact representation/lattice classifications beyond the required rank-two residue realization."
+      ],
+      "separatelyChecked": [],
+      "failedVariantsPreserved": true,
+      "proofLimitsChanged": false,
+      "productionMutation": false
+    }
+  },
+  "discharged": "The original primitive form of weight at least two and prime p greater than three constructs a genuine finite local coefficient extension, its actual finite discrete characteristic-p residue field and continuous integral/residual arithmetic representations. The integer span of the two compact basis orbits is proved finite, full, invariant, free and rank two. This discharges every lattice input of the existing integral/residual realization. Native conjugacy invariance proves the exact trace and determinant comparison. Literal entrywise reduction gives original reduced Fourier traces and weight determinants at all original good-prime norm Frobenius elements, and actual complex conjugation remains odd. No lattice, representation, Frobenius, finite-residue or continuity certificate is supplied by the source consumer.",
+  "remaining": "Residual irreducibility and large image, remaining local/regularity conditions, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are required.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual irreducibility and large image, remaining local/regularity conditions, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are required.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

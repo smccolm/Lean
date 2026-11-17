@@ -1,0 +1,128 @@
+import SourceAdicPrimePowerScalar
+import SourceCyclotomicNormFrobenius
+import SourceAbsoluteComplexConjugation
+import SourceAdicCyclotomicDeterminant
+import SourceOriginalAdicDeterminant
+import SourceAdicQuotientContinuity
+import SourceOriginalLocalDeterminant
+import SourcePrimitiveLocalOddness
+import SourceGroupAlgebraQuotientSpan
+import SourceSpanningTraceAlgebra
+import SourceTraceOffDiagonal
+import SourceTraceOppositePair
+import SourceTraceLeftIdealCoordinates
+import SourceTraceLeftIdealBasis
+import SourceTraceLeftActionTrace
+import SourceSpanningTraceContinuity
+import SourceTraceLeftActionContinuity
+import SourceScalarCornerCharacter
+import SourceTraceDiagonalRepresentation
+import SourceOddTraceIdempotent
+import SourceContinuousTraceRealization
+import SourceMatrixTraceDeterminant
+import SourceOriginalTraceMatrixConsumer
+import SourceGammaOneLocalRankTwo
+import SourceGammaOneContinuousRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.adicQuotient_prime_power_zero
+#print axioms Dubon2026.adicQuotientPrimePowerMap
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius
+#print axioms Dubon2026.sourceAbsoluteComplexConjugation
+#print axioms Dubon2026.sourceAbsoluteComplexConjugation_isConj
+#print axioms Dubon2026.sourceAbsoluteComplexConjugation_sq
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant_continuous
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant_frobenius
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant_conjugation
+#print axioms Dubon2026.originalAdicDeterminant_eq_cyclotomic
+#print axioms Dubon2026.continuous_positive_adic_quotient
+#print axioms Dubon2026.originalLocalDeterminant_conjugation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd
+#print axioms Dubon2026.sourceGroupAlgebraQuotient_span
+#print axioms Dubon2026.exists_spanning_algebra_of_trace_determinant
+#print axioms Dubon2026.traceIdempotent_offDiagonal_zero
+#print axioms Dubon2026.traceIdempotent_opposite_vanishes
+#print axioms Dubon2026.traceIdempotent_exists_opposite_pair
+#print axioms Dubon2026.traceIdempotent_leftIdeal_expansion
+#print axioms Dubon2026.traceIdempotent_pair_coordinates
+#print axioms Dubon2026.traceIdempotentPairEquiv
+#print axioms Dubon2026.traceIdempotentPairBasis
+#print axioms Dubon2026.traceIdempotentPair_leftAction_trace
+#print axioms Dubon2026.continuous_trace_of_spanning_action
+#print axioms Dubon2026.continuous_trace_sandwich_of_spanning_action
+#print axioms Dubon2026.traceIdempotentPair_matrix_continuous
+#print axioms Dubon2026.traceIdempotent_left_scalar
+#print axioms Dubon2026.sourceScalarCornerHom
+#print axioms Dubon2026.exists_continuous_diagonal_of_scalar_corners
+#print axioms Dubon2026.traceDeterminant_odd_involution_zero
+#print axioms Dubon2026.traceInvolution_plus_idempotent
+#print axioms Dubon2026.exists_continuous_matrix_of_trace_idempotent
+#print axioms Dubon2026.exists_continuous_matrix_of_odd_trace_algebra
+#print axioms Dubon2026.matrixTwo_det_of_trace_relation
+#print axioms Dubon2026.matrixTwoRepresentation_det_of_trace
+#print axioms Dubon2026.exists_continuous_matrix_of_original_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo
+
+private def runOriginalRankTwoAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceAdicPrimePowerScalar, `SourceCyclotomicNormFrobenius, `SourceAbsoluteComplexConjugation, `SourceAdicCyclotomicDeterminant, `SourceOriginalAdicDeterminant, `SourceAdicQuotientContinuity, `SourceOriginalLocalDeterminant, `SourcePrimitiveLocalOddness, `SourceGroupAlgebraQuotientSpan, `SourceSpanningTraceAlgebra, `SourceTraceOffDiagonal, `SourceTraceOppositePair, `SourceTraceLeftIdealCoordinates, `SourceTraceLeftIdealBasis, `SourceTraceLeftActionTrace, `SourceSpanningTraceContinuity, `SourceTraceLeftActionContinuity, `SourceScalarCornerCharacter, `SourceTraceDiagonalRepresentation, `SourceOddTraceIdempotent, `SourceContinuousTraceRealization, `SourceMatrixTraceDeterminant, `SourceOriginalTraceMatrixConsumer, `SourceGammaOneLocalRankTwo, `SourceGammaOneContinuousRankTwo]
+  let theorems : Array Name := #[`Dubon2026.adicQuotient_prime_power_zero, `Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius, `Dubon2026.sourceAbsoluteComplexConjugation_isConj, `Dubon2026.sourceAbsoluteComplexConjugation_sq, `Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation, `Dubon2026.sourceAdicCyclotomicDeterminant_continuous, `Dubon2026.sourceAdicCyclotomicDeterminant_frobenius, `Dubon2026.sourceAdicCyclotomicDeterminant_conjugation, `Dubon2026.originalAdicDeterminant_eq_cyclotomic, `Dubon2026.continuous_positive_adic_quotient, `Dubon2026.originalLocalDeterminant_conjugation, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd, `Dubon2026.sourceGroupAlgebraQuotient_span, `Dubon2026.exists_spanning_algebra_of_trace_determinant, `Dubon2026.traceIdempotent_offDiagonal_zero, `Dubon2026.traceIdempotent_opposite_vanishes, `Dubon2026.traceIdempotent_exists_opposite_pair, `Dubon2026.traceIdempotent_leftIdeal_expansion, `Dubon2026.traceIdempotent_pair_coordinates, `Dubon2026.traceIdempotentPair_leftAction_trace, `Dubon2026.continuous_trace_of_spanning_action, `Dubon2026.continuous_trace_sandwich_of_spanning_action, `Dubon2026.traceIdempotentPair_matrix_continuous, `Dubon2026.traceIdempotent_left_scalar, `Dubon2026.exists_continuous_diagonal_of_scalar_corners, `Dubon2026.traceDeterminant_odd_involution_zero, `Dubon2026.traceInvolution_plus_idempotent, `Dubon2026.exists_continuous_matrix_of_trace_idempotent, `Dubon2026.exists_continuous_matrix_of_odd_trace_algebra, `Dubon2026.matrixTwo_det_of_trace_relation, `Dubon2026.matrixTwoRepresentation_det_of_trace, `Dubon2026.exists_continuous_matrix_of_original_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo]
+  let constructions : Array Name := #[`Dubon2026.adicQuotientPrimePowerMap, `Dubon2026.sourceAbsoluteComplexConjugation, `Dubon2026.sourceAdicCyclotomicDeterminant, `Dubon2026.traceIdempotentPairEquiv, `Dubon2026.traceIdempotentPairBasis, `Dubon2026.sourceScalarCornerHom]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RANK TWO AUDIT PASS: {count} theorems including private/generated declarations. Original continuous rank-two matrices with exact Fourier and weight Frobenius values and actual oddness proved for p greater than three. Full local association and source gates remain OPEN."
+
+#eval runOriginalRankTwoAudit
+
+#lint in SourceAdicPrimePowerScalar
+#lint in SourceCyclotomicNormFrobenius
+#lint in SourceAbsoluteComplexConjugation
+#lint in SourceAdicCyclotomicDeterminant
+#lint in SourceOriginalAdicDeterminant
+#lint in SourceAdicQuotientContinuity
+#lint in SourceOriginalLocalDeterminant
+#lint in SourcePrimitiveLocalOddness
+#lint in SourceGroupAlgebraQuotientSpan
+#lint in SourceSpanningTraceAlgebra
+#lint in SourceTraceOffDiagonal
+#lint in SourceTraceOppositePair
+#lint in SourceTraceLeftIdealCoordinates
+#lint in SourceTraceLeftIdealBasis
+#lint in SourceTraceLeftActionTrace
+#lint in SourceSpanningTraceContinuity
+#lint in SourceTraceLeftActionContinuity
+#lint in SourceScalarCornerCharacter
+#lint in SourceTraceDiagonalRepresentation
+#lint in SourceOddTraceIdempotent
+#lint in SourceContinuousTraceRealization
+#lint in SourceMatrixTraceDeterminant
+#lint in SourceOriginalTraceMatrixConsumer
+#lint in SourceGammaOneLocalRankTwo
+#lint in SourceGammaOneContinuousRankTwo

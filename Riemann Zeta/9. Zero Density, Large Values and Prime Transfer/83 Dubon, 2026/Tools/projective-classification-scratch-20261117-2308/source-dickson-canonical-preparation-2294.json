@@ -1,0 +1,103 @@
+{
+  "files": [
+    {
+      "version": "SourceDicksonObjects2269a",
+      "module": "SourceDicksonObjects",
+      "sourceSha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059",
+      "canonicalSha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonPGLBasic2271c",
+      "module": "SourceDicksonPGLBasic",
+      "sourceSha256": "B471B32D4B1D4D022B09511E6955407B96EDFC4B98CC7DD8F9D7AEC8006B2AAA",
+      "canonicalSha256": "C7E3C1417BEB131724D993206FC879D98E6C1BE7AC1B8C69151AE101C104CF1A",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonNatClassEquation2270d",
+      "module": "SourceDicksonNatClassEquation",
+      "sourceSha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692",
+      "canonicalSha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonPSLBasic2273c",
+      "module": "SourceDicksonPSLBasic",
+      "sourceSha256": "77F0F8FF73C2B5B48030C9A96F475D3BA36D328D9D240672311E41039844A7FC",
+      "canonicalSha256": "375FD52F83B1E923C6570DBB3C3597C5EA2173A738CF555AE09717F1CFC94ED7",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonPartitionHelpers2287a",
+      "module": "SourceDicksonPartitionHelpers",
+      "sourceSha256": "0ABF7DD48ACB3A13B401B593E0F8B6A817494D5F68DA841DFD8C40847A4A1C43",
+      "canonicalSha256": "97A97557C7A15344EE321ED9E91D16B2430202A7F5B23CFB7B9BFFE1C311D7E3",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonCyclicPartition2287a",
+      "module": "SourceDicksonCyclicPartition",
+      "sourceSha256": "AA0EF08ACF72A3F2D9FF55CB948AA4A703FC27D995995185B72159B53582A3F4",
+      "canonicalSha256": "DE9C36E93E54AB9E5CBBE68B747D134DA28A7A4B528FA3423C1DDE06B5320EA6",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonRecognitionA52287a",
+      "module": "SourceDicksonRecognitionA5",
+      "sourceSha256": "8F78794CD52C577586735684720B7C5D729F12816BD2A767972854B8EE4D175A",
+      "canonicalSha256": "184604518181EF8B3CE90C9C9ABFF271863F1D1D46D2E1A695542CBB2BB33044",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonFieldReconstruction2287a",
+      "module": "SourceDicksonFieldReconstruction",
+      "sourceSha256": "E6BCFF35636AA0AD893882C7836ED46BF2B815AB1E6C9487310D5EEC2E75C020",
+      "canonicalSha256": "38CDE948CA816BA19132093AFC4799486580476722F305B4CAB68A3F5ADB7B1F",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonPartitionProof2287b",
+      "module": "SourceDicksonPartitionProof",
+      "sourceSha256": "1262517216A02BA6EAF98BE654B027B50CE51B2CDE2F8F45FBECCAFF5193E1E3",
+      "canonicalSha256": "A65DFFCA7EBB17D5982235F405FEAB833DC0D49A729202F92A3E049B3C330903",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonPSLRecognition2287a",
+      "module": "SourceDicksonPSLRecognition",
+      "sourceSha256": "7C1B0E0473C57798EF822D4E45B6BA5A847C4D1CA6E8A625E57C3C0A740F9196",
+      "canonicalSha256": "F718F0F2710A607E5D153A63096CB16F1259965D5882799472EB291839C12A50",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonTameClassification2287a",
+      "module": "SourceDicksonTameClassification",
+      "sourceSha256": "8E26945103B4FEE273BDFAB5229031673DAC17AA242E72F13C99BB46550A9634",
+      "canonicalSha256": "CB088253C0DD2C3634CC182A63C2657D6D8C84CC82B1A69B1FC67950222CA145",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonWildClassification2287b",
+      "module": "SourceDicksonWildClassification",
+      "sourceSha256": "899B72D136386CF14DAFD18DFA7699A5E2C26DE6DF2454EF031AB745C78445D5",
+      "canonicalSha256": "D0AC8F264F6E93B29CFD5CE434FC28691D70BE831FB27D0497C6DD0348E9E055",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceDicksonClassification2287b",
+      "module": "SourceDicksonClassification",
+      "sourceSha256": "9A4AB8734B1D8438A3771874BCBE5E6E816D113D420AC780E979EC5858C86CFD",
+      "canonicalSha256": "8CA67616A649516F2BDC0F14E040AFA80F6F5A30BFFBB2AC030AA496E7DBE98A",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceResidualProjectiveClassification2292a",
+      "module": "SourceResidualProjectiveClassification",
+      "sourceSha256": "794461FC0324E44E9FC061D787D565CAEEBEA6D2931CED516DBC6B45DC2ADC11",
+      "canonicalSha256": "73BA1454BD010B301D4FF4AE99C777592D505476CC23B17FA8093ECB00F4F440",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "scope": "Fourteen canonical scratch modules prepared by import rewriting only. Original-form consumer and full canonical audit remain pending. No production changes."
+}

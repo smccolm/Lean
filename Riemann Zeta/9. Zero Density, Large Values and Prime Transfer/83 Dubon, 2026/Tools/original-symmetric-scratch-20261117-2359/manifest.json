@@ -1,0 +1,934 @@
+{
+  "status": "Scratch PASS: actual original symmetric powers are absolutely irreducible over the original residue field on both original cyclotomic kernels in the large-image alternative. Arithmetic exclusions and local conditions, automorphy and higher continuation remain OPEN.",
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "modules": 18,
+  "publicQueries": 25,
+  "exhaustiveTheorems": 68,
+  "otherDeclarations": 27,
+  "linterScopes": 18,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 74,
+  "exactSourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility"
+  ],
+  "overlappingScopeReceipts": [
+    {
+      "receipt": "source-subfield-symmetric-1-scratch-receipt.json",
+      "sha256": "B8C88E8DBCCDA3B4396E5ACBAD30853F8EBEA95553578D02C7FF99CDDACC0CBC",
+      "modules": 4,
+      "queries": 4,
+      "exhaustiveTheorems": 14,
+      "other": 5,
+      "requiredValueEdges": 50
+    },
+    {
+      "receipt": "source-cyclotomic-symmetric-1-scratch-receipt.json",
+      "sha256": "C05E27A6F0CAAB261B8AB74074B6B7C51A44DD8B2250D58F89893CABDC365805",
+      "modules": 7,
+      "queries": 7,
+      "exhaustiveTheorems": 29,
+      "other": 10,
+      "requiredValueEdges": 55
+    },
+    {
+      "receipt": "source-absolute-cyclotomic-symmetric-1-scratch-receipt.json",
+      "sha256": "5BA8E9FEE56C7CC63389483BFEB1AA76DA8682BD27FE1CBA16EB5DD0CAB2F6EC",
+      "modules": 9,
+      "queries": 10,
+      "exhaustiveTheorems": 39,
+      "other": 15,
+      "requiredValueEdges": 59
+    },
+    {
+      "receipt": "source-original-symmetric-1-scratch-receipt.json",
+      "sha256": "C0C6C938423119C26EBCB310EA9B5DB9A14A4CCD59507A1ACBF6A12AF04B968A",
+      "modules": 18,
+      "queries": 25,
+      "exhaustiveTheorems": 68,
+      "other": 27,
+      "requiredValueEdges": 74
+    }
+  ],
+  "productionPromotionPending": true,
+  "accepted": 16,
+  "total": 20,
+  "sourceScopeChanged": false,
+  "files": [
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricAudit1.lean.txt",
+      "sha256": "00DD4DF9B416914F6C526C2B9C0F5D772BB0D28EA7E9C4DCE687F729FF7C565A"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricAudit1.log",
+      "sha256": "E25CC4E2525FBD5016D1FB856B497E978C30086C7A4F64551E866C4D49AECFC8"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricDeclarations2344.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricDeclarations2344.lean.txt",
+      "sha256": "DC4E6AF1634C280CB101D38D2509A351DCC933F82A826B58F0026CA6A64A7B90"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricDeclarations2344.log",
+      "sha256": "E5A2CDD6E3FD8DE7BAC804FDE19E85D5C285D1F5F3111F033FF0A99021899A5A"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricDependencyAudit1.lean.txt",
+      "sha256": "C24604E31A35D68A53F6E95598996C9C65F176BEAC2F1A904404912E3A53827C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceAbsoluteCyclotomicSymmetricDependencyAudit1.log",
+      "sha256": "A50BA6137E2BCB80B5785DFAD00471A499337315355B2A65680DA7AB968C2580"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceConjugateSymmetricSpanning.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceConjugateSymmetricSpanning.lean.txt",
+      "sha256": "22CE25469837F899355071B26F795D7735CDF770BAD668077742AF883A2759A5"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceConjugateSymmetricSpanning.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceConjugateSymmetricSpanning2346a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceConjugateSymmetricSpanning2346a.lean.txt",
+      "sha256": "63279DD8E6328CC2ADFBBE37C89326EC48DE31B3E5E939ABF246AF3CF021952D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceConjugateSymmetricSpanning2346a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricAudit1.lean.txt",
+      "sha256": "DAFD9D8DBB6DF692E6997A9A03D2A7C7B14500114BD14A9698DF9AEEEBD9165D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricAudit1.log",
+      "sha256": "6AE9AD957819C3B2073301E4B424526C17F031BA7FD9B4D383D9F0937A7D9AC3"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricDeclarations2339.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricDeclarations2339.lean.txt",
+      "sha256": "A15FE6533D79E84AB2268FA5F55DF7C0696CCA1CCDF136E9756D063840D5CCAE"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricDeclarations2339.log",
+      "sha256": "9E478DE978CF5510CAD82A5D03E9E83AC423AECC0AA04E041AB7864C3E936AB9"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricDependencyAudit1.lean.txt",
+      "sha256": "A2675BD5B76DE4C74CD3E0F2BBED1EBD9964E1947F7249AA01B989A8963760F1"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceCyclotomicSymmetricDependencyAudit1.log",
+      "sha256": "90BAFA31DEDF51C950DD237824AA80909ADCD91DE5214880DFA210AF61413C3F"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearAbsoluteGalois.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearAbsoluteGalois.lean.txt",
+      "sha256": "A168949A46010F3074DD154DAE5377267CBABAC319BEE2A8DF326D8B8FDAC9B5"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearAbsoluteGalois.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearAbsoluteGalois2341a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearAbsoluteGalois2341a.lean.txt",
+      "sha256": "270E19A47D87C93B4C8D2E075857CF281691B1A7A56D59F5CA1F486DE2A5F49E"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearAbsoluteGalois2341a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric.lean.txt",
+      "sha256": "F2DF770FE1766BD0B4D36665DA85C061CD4F14CA316E7F898FC338C2101BB3C0"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336a.lean.txt",
+      "sha256": "01FA79AE82BA49126155CE6432239594BF9221808F26674BE175CB46F7C183EA"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336a.log",
+      "sha256": "49F2DEBD6D38D45AB7920F0AD9BDB27F84A45DE77315FED0A0F5CA3D67A5C07E"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336b.lean.txt",
+      "sha256": "11B50D28969733492C181E5D1C885EBB85C01C8DEDBE62F3DFD29D2429A414B7"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336b.log",
+      "sha256": "70B637D43E2A88384330C41EAA3ABA297D1F9EA13240C5702139627EDAF826CA"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336c.lean.txt",
+      "sha256": "2DC474D31D8513D5FEF34A375B373765C9B8BE9C8BA5EDAA8C182236AC7E3DFA"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336c.log",
+      "sha256": "1ED16FA3BF676299812CC020133051C981BB5BF22A61D9EA391888B4149FD7A1"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336d.lean.txt",
+      "sha256": "1271468EFA10AD017C265252C81F279828F83D26F89740230641539E67B66067"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearKernelSymmetric2336d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning.lean.txt",
+      "sha256": "D2A1A014618250F32BA1074116604439FAD72B6D08A15CF5B49ABEEE8E5D8401"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347a.lean.txt",
+      "sha256": "C1D85B5AFB148D5F96907127BBCCA6079761E423624E55DCE57FA8B90B900C0C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347a.log",
+      "sha256": "76B30D3BA0CE32B5AF9DA304FF12F52E2E97384DD043223E36301F839E79183B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347b.lean.txt",
+      "sha256": "CF689CEECFA872C09906C8AC62482FBABAD3E65686C08845C36B989DC1FCD06D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347b.log",
+      "sha256": "1F312C508A2BF1EDE591C3493B0CC55F87DCE210CF2E587D964C9837669939EC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347c.lean.txt",
+      "sha256": "8164E86B7415C40CBED1B9EC2184E0D216C99849598040B519F9977400247DDF"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearOriginalSpanning2347c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric.lean.txt",
+      "sha256": "E54F12A3081F52544DE9D508ED151EC6A7AEF45776129771B67EC763F7989915"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric2332a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric2332a.lean.txt",
+      "sha256": "92D993DAB69DE16D2639439E7E0B72C8D70C3FE1E7B213C1C667D372F22F80CB"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric2332a.log",
+      "sha256": "8F433EA49655587A15EDE52C22519C6DAFC4503A41BF0B77593135829FEDD26F"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric2332b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric2332b.lean.txt",
+      "sha256": "AEC57010E41083C71668A14541AFB70360B59AF24F28A4B052AA46ED1244A79B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteLinearSymmetric2332b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteSubfieldIrreducible.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteSubfieldIrreducible.lean.txt",
+      "sha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteSubfieldIrreducible.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteSubfieldIrreducible2330a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteSubfieldIrreducible2330a.lean.txt",
+      "sha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceFiniteSubfieldIrreducible2330a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteCyclotomicResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteCyclotomicResidual.lean.txt",
+      "sha256": "8FB1E545FF588E6D4E947DB7E29D86A2CCB17A7AAEDEA21B3DB68F774A1AE4A0"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteCyclotomicResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteCyclotomicResidual2343a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteCyclotomicResidual2343a.lean.txt",
+      "sha256": "C58E0FE67366F5B07107C87C2417B6B2BCC83503505B5BA64080F89D256054BC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteCyclotomicResidual2343a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteSymmetricResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteSymmetricResidual.lean.txt",
+      "sha256": "7D4C31A1B4A390AD85F3186872CC4E09C241615D29176DE5DEB5F689EAA1C920"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteSymmetricResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteSymmetricResidual2333a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteSymmetricResidual2333a.lean.txt",
+      "sha256": "E5359BB7ED1DE0C814689FB3E2A12EAA2363C8981BB5CE341A618091A0F96932"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneAbsoluteSymmetricResidual2333a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual.lean.txt",
+      "sha256": "8A75D0E6E4CA16145E79AB758A466C77355C8879B1E1592A3429C5D18BE601FE"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual2337a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual2337a.lean.txt",
+      "sha256": "73E55FDAB52919CD1EA167D09BE1C2B6C740A364E6819C1DF4C072A65417F736"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual2337a.log",
+      "sha256": "EE02E6B749FA3DDFADE28DD0FDED79EB64F550A7E42BCFEA52E45AB628690CD4"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual2337b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual2337b.lean.txt",
+      "sha256": "D1908F72C255E61DA75B6D22FE0321B2720FBF81E42ABC98D0DEF44B826ADBE4"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneCyclotomicSymmetricResidual2337b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneResidueAbsoluteSymmetric.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneResidueAbsoluteSymmetric.lean.txt",
+      "sha256": "3202D2B167967E84BF53512F98946ABA12F85EC68E9F5E429BF04BD4C4C571CB"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneResidueAbsoluteSymmetric.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneResidueAbsoluteSymmetric2353a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneResidueAbsoluteSymmetric2353a.lean.txt",
+      "sha256": "EB840D5853D723D08633B94CB534EC2ED8C74D697CEC8466571823CDCD24F8B8"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneResidueAbsoluteSymmetric2353a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning.lean.txt",
+      "sha256": "39E4E60FA2315BA45DF58D1F05CB9C8F3AEE90C2165C32843B08619DF2092CFD"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348a.lean.txt",
+      "sha256": "A8D0EB76295A417CBA7011BA0BA383D24BB58DFEE268F1E701A0CCB963AB7D47"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348a.log",
+      "sha256": "1AE8C150510E8889A3AB3B20E272CDF2E04CA51AB6284E8C51CD0E33F1373E4D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348b.lean.txt",
+      "sha256": "7F7D34F3006CE955942AFCC6B7378A0D3E6721D84AF32EC253CA9A4F69932B67"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348b.log",
+      "sha256": "14A9F789B65707A8DF66A4283766431E280C219DB4BF062A129F787858C84481"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348c.lean.txt",
+      "sha256": "C38688065B269C2176231493911AB1FF58198EE31ACFD313160F5954EDE3788D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348c.log",
+      "sha256": "9BEE2A679A9FF6B6421425A58BA5DC26D13C5C568BF10A282AFDFF601FC851CE"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348d.lean.txt",
+      "sha256": "00BAEAD6BBD8F5DF3E6CA18AC471044C80C97C95E9C24D07001942C1D1D7FDF1"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348d.log",
+      "sha256": "384466E37817F79DF8729C216FB8D70F85D94E7C736C1016A34C2CC7A3B2405B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348e.lean.txt",
+      "sha256": "03A31B002E926B8958EF14AA019F87BD8A28C76D5CB5C4B2F65F96BEDE76D0B4"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceGammaOneSymmetricKernelSpanning2348e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalResidueConsumerAudit2361.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalResidueConsumerAudit2361.lean.txt",
+      "sha256": "B4BEB0E594458DD7E1A865B312ED74440654470ECB455788FC883D8D05CFE998"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalResidueConsumerAudit2361.log",
+      "sha256": "7FB3E741DFEF5C89273B229DA4CB69581AB213C6BB3DB4D530AC94E214C00E12"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAbsolute.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAbsolute.lean.txt",
+      "sha256": "337BD890AF644518ED0A61B57E9703FA43495FFF83D803DB282E8D5F3119C8D0"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAbsolute.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAbsolute2352a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAbsolute2352a.lean.txt",
+      "sha256": "FBE20125697629FE3E4C8BDF1A6F803DEF999B8FC1848604B1E6EBA2B1006A4F"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAbsolute2352a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAudit1.lean.txt",
+      "sha256": "2D55D931A483DFED295F279B6B80E30F9A782AB1588C1A98FEF6358A6B42D04A"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricAudit1.log",
+      "sha256": "917C9A45489AD9721485112594A8FF7C4FDC9FF85A9D23A61DFE0761E7B8A7FA"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricDeclarations2354.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricDeclarations2354.lean.txt",
+      "sha256": "D722D9AB74320DAC3A865460591CBDBFA50CAE926C47003A82FFBA829C72694B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricDeclarations2354.log",
+      "sha256": "1AEE96ED7E3BB6FAF9F209C86A1F220B84B24AB336A500EBCF98981CC309C4A3"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricDependencyAudit1.lean.txt",
+      "sha256": "763B6F87D02FC79C591A66D6E9F213FF4E6B06C8BC0AE7CE01FFEF463758F11D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricDependencyAudit1.log",
+      "sha256": "649465BCE1C8DD7E8BF6A1D4B23C91E59AF3B70FB036D743BF67C48106118E51"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricProductionSemantic2360.lean.txt",
+      "sha256": "B873E9931DD2D543AF5E17D182AB7D59D8A2B55BA4C8368814E71EF2DEE81571"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricScratchSemantic2360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricScratchSemantic2360.lean.txt",
+      "sha256": "7CF81950ABFE86D6D9A353D8C139808AF0562CECA1C313666FC63C95DAAFD035"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricScratchSemantic2360.log",
+      "sha256": "348695A0F37188AA4C903FE7EA95DF2AEB058F133D7C436500DD3B3ED880B370"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricSpanningProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricSpanningProperty.lean.txt",
+      "sha256": "A530A4D89F1A7819066F2BB606695725CCF1190347E7C4FAD5AB8BF86952A017"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricSpanningProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricSpanningProperty2349a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricSpanningProperty2349a.lean.txt",
+      "sha256": "47F70527DF1EE31090A7F83C5A1CF15867D647A381FF136F60581C0280EDF86C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceOriginalSymmetricSpanningProperty2349a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible.lean.txt",
+      "sha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible2345a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible2345a.lean.txt",
+      "sha256": "6D443761CD885A60330F22B3A2D2054F8832BA536E2B8213AE9BBBDF90C80542"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible2345a.log",
+      "sha256": "D1CE8B8A36304D9EA2C198B17D1AE0F432D238CAF82A82FC342D8BA58FB2006B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible2345b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible2345b.lean.txt",
+      "sha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceResidualConjugateIrreducible2345b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension.lean.txt",
+      "sha256": "0CF7F178F403BF3509DC73413398E0EFBA5D16673BFAE976B0B6D38A0B88F855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension2351a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension2351a.lean.txt",
+      "sha256": "C28940AFBFC30404D8B0C8076005A7DC9ECBF225999BDCD62A31F35F500F672C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension2351a.log",
+      "sha256": "09A5F270BBF0036B54CBC5658DCA683C2CBA1075CBCD64DE4BA2B4B4C17A2FDA"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension2351b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension2351b.lean.txt",
+      "sha256": "E689D13B24A9AB2F717593760F763FF70E4836BC5C24CD8764C9EE282415B443"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningCoefficientExtension2351b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility.lean.txt",
+      "sha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility2350a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility2350a.lean.txt",
+      "sha256": "DE0B448362BFE67DE122E84EF14DA225300F49CA404C65823BC8863AC0768712"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility2350a.log",
+      "sha256": "EE48DF22BAAFC056805262666A84C7575417D85FBAFFD37C6EC6AB3A6BE9EE16"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility2350b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility2350b.lean.txt",
+      "sha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSpanningIrreducibility2350b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldKernelIrreducible.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldKernelIrreducible.lean.txt",
+      "sha256": "66E5E3F9C5DB9600217BB4B55E214E7B5FD9F4FAF12AD327DD409D4AB6B12477"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldKernelIrreducible.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldKernelIrreducible2335a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldKernelIrreducible2335a.lean.txt",
+      "sha256": "03F70817DA9A8FC7C3741FA51775AEA1252C24E0CD81EAAA72F78F2DB8BB8433"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldKernelIrreducible2335a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAbsolute.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAbsolute.lean.txt",
+      "sha256": "B99A555F84A74802B472DD05D20762569D57BBB8C161BD17F656C970C3E6EFF3"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAbsolute.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAbsolute2331a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAbsolute2331a.lean.txt",
+      "sha256": "DA573BF49546DAD85FA8D91C6D4B2907388D46FC8CB16FC65B18F4602899A849"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAbsolute2331a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAudit1.lean.txt",
+      "sha256": "16E3FE04456BF6E2347F55F3C1A4F0BBAB928A720D1BC600107CB7F8635FFD74"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricAudit1.log",
+      "sha256": "B130F1C5EC22BB2151ABDFC77256724061670163DDECF6884373B98451CBCD3C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricDeclarations2334.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricDeclarations2334.lean.txt",
+      "sha256": "32B2B3FDC5CCA6328635D5E4563FBB872F96CABFC2344AABBC5FC94D8DB362EE"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricDeclarations2334.log",
+      "sha256": "286CC0CB534D27F58667C89149D5DD9AB6AA07ABC96A6620E9ECFB2D2CA05893"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricDependencyAudit1.lean.txt",
+      "sha256": "627B41D5453A34CF6DEA98159A1E98703790BBFE8FCAB606EA76C3A13F7C366B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/SourceSubfieldSymmetricDependencyAudit1.log",
+      "sha256": "4137B7D2B29ABAAD3D9C27CA6E11FEE0CF0D94FBFE273FFC802A0CD1EAE9B62C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/additional-proof-search-2358.json",
+      "sha256": "0767257B2DAA763D67BB7A738172CB3741D4B0A8CBCBA3504D9B5F37A84A43CF"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/build_absolute_cyclotomic_symmetric_2344.ps1",
+      "sha256": "FCAE3495089D717B8A34EBACD99D1438E3E8383FC7852B45AC17D843EA4E034B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/build_cyclotomic_symmetric_2339.ps1",
+      "sha256": "450E50A0DF3EC5A3EFE109C7D1137B8B5A5086C99E7913A5AC5B490069CBF056"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/build_original_symmetric_2354.ps1",
+      "sha256": "6D0C616F09534BE1A87C10913C823A53DC3FA8630C6C0F835B966BB93A7B6ABC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/build_original_symmetric_2354b.ps1",
+      "sha256": "234AA347B64807B7CFAB7958C376E087F60021B4C94E08CFD34B1FBECDF8E77B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/build_subfield_symmetric_2334.ps1",
+      "sha256": "C838B0FE8A558533EC67FB3AF5EA10D327C31D50F79DC7F86E20D129FBB4BA3B"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/original-symmetric-reuse-review-2357.json",
+      "sha256": "00D5F5B2BA2B6A5F423FCCBB45F4FA7C94EFA5181A85653163B80B085BB8B806"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/prepare_absolute_cyclotomic_audits_2344.py",
+      "sha256": "ABBBFDD1810B14E5470927EAA04F9CA330891724983784184DE974C0F68ABD2F"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/prepare_original_symmetric_audits_2354.py",
+      "sha256": "0D049ABED388B4F9A98546AFA09AF1DE6588086A9A9C650C3BEC6997F88E8686"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/prepare_subfield_symmetric_audits_2334b.py",
+      "sha256": "6C0933EF3B47B6D88D5AF53B81C4562A606C4C5C4D81DDABAEB4D259B37A6B75"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/record_original_symmetric_scopes_2356.py",
+      "sha256": "DBCE656387A634D540BFF633EFC071777E05F16200391E80730C7F5604A6DAEC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-absolute-cyclotomic-symmetric-1-scratch-receipt.json",
+      "sha256": "5BA8E9FEE56C7CC63389483BFEB1AA76DA8682BD27FE1CBA16EB5DD0CAB2F6EC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-absolute-cyclotomic-symmetric-audit-config-2344.json",
+      "sha256": "60923CF02D9970D52BCC9855E3713B527AC81A31538AD82A628085CB78F5FEAC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-cyclotomic-symmetric-1-scratch-receipt.json",
+      "sha256": "C05E27A6F0CAAB261B8AB74074B6B7C51A44DD8B2250D58F89893CABDC365805"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-cyclotomic-symmetric-audit-config-2339.json",
+      "sha256": "B8E8D971DFF07A4FBDDD4E860C0CB147A5AFB85423F375ECBEEAE4B8ECFFAA7C"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-original-cyclotomic-symmetric-audit-config-2354.json",
+      "sha256": "E1F6C1EAA8B6D2C6AEFC768B23CEB2DD6C4DF89A31B32EEECEC79E88C549C8C7"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-original-cyclotomic-symmetric-audit-config-2354b.json",
+      "sha256": "6BC08EBD43F10DA07087DBF5293BD1C988DF88572A1E6657DA0BB468F952EEC6"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-original-residue-consumer-edges-2361.json",
+      "sha256": "BC2D04D5CE118E9A82738D3B2B099F06A3075255A09B5059B0EA7166445BBFA3"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-original-symmetric-1-scratch-receipt.json",
+      "sha256": "C0C6C938423119C26EBCB310EA9B5DB9A14A4CCD59507A1ACBF6A12AF04B968A"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-original-symmetric-scratch-summary-2356.json",
+      "sha256": "CE6B46126C6B123FA48EDB86CA48020B608F392850409ADC88203535A8BA8A65"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-subfield-symmetric-1-scratch-receipt.json",
+      "sha256": "B8C88E8DBCCDA3B4396E5ACBAD30853F8EBEA95553578D02C7FF99CDDACC0CBC"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/source-subfield-symmetric-audit-config-2334.json",
+      "sha256": "FCA7951B1780A518AAD82D40141061896B11FF7FC9B261189FC125EC741CCAE8"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/subfield-symmetric-reuse-review-2344.json",
+      "sha256": "8608BE3D1ACFEE2D0034271C0D4A2BA479F686090018A58403463A21B01D1A74"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/update_reuse_refresh_2340.py",
+      "sha256": "3B471BF7C9C1B9C3442237B3EB71BB01D26DC1115DC02407EBAF9F15D654A3B6"
+    },
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/update_reuse_refresh_2355.py",
+      "sha256": "9E963871B91F0E11640D1AACDA89E8C8B5E505A40C61C65A79B33E41C8E9F580"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-regular-prime-1-scratch-receipt.json",
+      "sha256": "334EF60FE3B73F047A5F481753159A204503CB6CCD035A70D9244A3F96A75A48",
+      "modules": 14,
+      "queries": 20,
+      "exhaustiveTheorems": 57,
+      "other": 9,
+      "requiredValueEdges": 123
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

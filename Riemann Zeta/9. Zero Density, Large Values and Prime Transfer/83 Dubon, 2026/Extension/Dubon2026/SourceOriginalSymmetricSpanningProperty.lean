@@ -1,0 +1,16 @@
+import Dubon2026.SourceFiniteLinearOriginalSpanning
+
+/-! Exact original-coefficient spanning property for the residual deformation
+inputs in DUB-17/18. This abbreviation is a statement, not an assumed proof. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- All required original symmetric matrices span their full original matrix algebra. -/
+def HasOriginalSymmetricSpanning (p : ℕ) {F Γ : Type} [Field F] [Group Γ]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  ∀ n : ℕ, 2 * n < p - 1 →
+    Submodule.span F (Set.range (fun g => (homogeneousSymmetricGL n (ρ g)).val)) = ⊤
+
+end
+end Dubon2026

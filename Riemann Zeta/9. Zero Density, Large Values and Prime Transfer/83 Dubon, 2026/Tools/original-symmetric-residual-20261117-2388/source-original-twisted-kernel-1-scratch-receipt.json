@@ -1,0 +1,126 @@
+{
+  "recordedUTC": "2026-11-17T13:14:02.822049+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceFiniteLinearOriginalScalar",
+    "SourceFiniteLinearTwistedKernel",
+    "SourceOriginalTwistedDetectionProperty",
+    "SourceOriginalTwistedTopology",
+    "SourceGammaOneTwistedKernelDetection",
+    "SourceArithmeticCyclotomicSquare",
+    "SourceOriginalArithmeticTwistedDetection",
+    "SourceGammaOneArithmeticTwistedDetection"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalScalar.lean",
+      "sha256": "2017957E5C2AB5674E9F94EDC7F9841B0767163F3CC4B798362B6B25759EB2AF",
+      "oleanSha256": "4347A3A5A7BBEC2F512A68A9356AB65D82A8F5C151535E4CCE03AE7FFBB06797",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalScalar.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalScalar.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearTwistedKernel.lean",
+      "sha256": "190D06C4420AE909E48A0586CE9308405D46D5E12BB1895B6A2FB6618F0FBD11",
+      "oleanSha256": "E099273F9CD00AC2D55B909E0D47CB558814DE06957D6B5FCD10036D53421601",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearTwistedKernel.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearTwistedKernel.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedDetectionProperty.lean",
+      "sha256": "D20EBDE0A64B7D6023598E2C2AC44D7CEBB31C85137BE8397B074EF140B5C9F4",
+      "oleanSha256": "138C3CA5DA6CC6130586E42FDB7EF6C8746FEFB7D3FE49DDBB0CDCAE47EBA028",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedDetectionProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedDetectionProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedTopology.lean",
+      "sha256": "D2249F10407DE39CCEEBA841A37A7CB68506C4F783E41F89D657BB6207FBBFFC",
+      "oleanSha256": "D4157A51BD76D1BE01AF7605853538F642C5E7214EAB7450141AA8E40A816C9C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedTopology.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedTopology.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedKernelDetection.lean",
+      "sha256": "BEF050403F68319095E86E14F63A7E6CC3203728DA64F89F7D71F670D11F8299",
+      "oleanSha256": "C92D96C04E4DFE3DE3855229FB6373292DAE9BB94BFFC9BBD6B6ADE316BA59F4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedKernelDetection.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedKernelDetection.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCyclotomicSquare.lean",
+      "sha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A",
+      "oleanSha256": "EDBDC7BD70881B70F7FCDD7D058C18D010430802D7889DB966080C4F666EBD31",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCyclotomicSquare.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCyclotomicSquare.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTwistedDetection.lean",
+      "sha256": "3974E325BCCD8347744C5086C1C449B4BA459437A1C281AD786F2B2926165E43",
+      "oleanSha256": "6D2CA2189C9EB85E299A20319D4048F4A611D2271900D1BFB735C4169AE8A5BF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTwistedDetection.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTwistedDetection.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTwistedDetection.lean",
+      "sha256": "F42BBDE3FE44E7274E459B94B2DA93523550BDA014990A9DFDEB8D1A0549561B",
+      "oleanSha256": "69F08FF98C29049D93180B0F43A803180E7EA2E5253A168F7EA5AA5D8B520A17",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTwistedDetection.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTwistedDetection.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_scalar_character_square",
+    "Dubon2026.SourceDickson.finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_kernel_detection",
+    "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetection",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_detection_atTopology",
+    "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_twisted_kernel_detection",
+    "Dubon2026.originalArithmeticCyclotomicCoefficient_exists_square_ne_one",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetric_twisted_detection_of_original",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_scalar_character_square",
+    "Dubon2026.SourceDickson.finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_kernel_detection",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_detection_atTopology",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_twisted_kernel_detection",
+    "Dubon2026.originalArithmeticCyclotomicCoefficient_exists_square_ne_one",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetric_twisted_detection_of_original",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetection",
+    "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelAudit1.log",
+  "logSha256": "0B98112B594506481232CB291A1CCCADA581E06F3356A9E0EF94DA05F570DAA6",
+  "auditSha256": "22B14395F8E75732989F069BE2811C261C4E311BD0F473B29FF61FA960B581C4",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDeclarations2377.log",
+  "ownershipSha256": "0FBAE190B14F47FC4E2F89F927FE4FEA6452D741F8996CE5528F43B56D9E06C1",
+  "exhaustiveTheorems": 35,
+  "exhaustiveOtherDeclarations": 13,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 61,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDependencyAudit1.log",
+  "dependencyAuditSha256": "16C73CB7D9F8241404A2011FCC5A79C0243EEE05D083170677E9AD1CE554007D",
+  "dependencyAuditSourceSha256": "027DD0B934B8367B5CCA08186EBA252B3A15EDE696F47B42CDC275AEF797FB8D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-twisted-kernel-reuse-review-2378.json",
+  "reuseReviewSha256": "FA5985FD1B6DBD11C77342E74231A2AC609F775CE01E21E90D24885FD771AF6D",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> original twisted-cohomology detection on the actual arithmetic residual/cyclotomic kernel. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

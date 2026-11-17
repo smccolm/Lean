@@ -1,0 +1,33 @@
+import SourcePositiveAdicFamilyLift
+import SourcePositiveAdicReconstruction
+import SourceAdicFunctionContinuity
+import SourceCompatibleTraceLift
+import SourceGammaOneOriginalLocalTrace
+import SourceGammaOneConstructedLocalTrace
+import Mathlib.Tactic
+
+open Lean
+
+private def runOriginalLocalTraceDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace]
+  let localModules : Array Name := #[`SourcePositiveAdicFamilyLift, `SourcePositiveAdicReconstruction, `SourceAdicFunctionContinuity, `SourceCompatibleTraceLift, `SourceGammaOneOriginalLocalTrace, `SourceGammaOneConstructedLocalTrace]
+  let required : Array Name := #[`Dubon2026.positiveAdicFamily_exists_unique_lift, `Dubon2026.positiveAdicFamilyLift_mk, `Dubon2026.positiveAdic_ext, `Dubon2026.continuous_of_positive_adic_quotients, `Dubon2026.exists_complete_trace_of_compatible_positive_quotients, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_compatible_original_adic_trace, `Dubon2026.compactSeparatedLocalRing_isAdic, `Dubon2026.sourcePrimitiveCoefficient_exists_local_structure, `Dubon2026.sourceRationalPrimeExtensionResidue_charP, `AdicCompletion.mk_ofAlgEquiv_symm, `IsHausdorff.StrictMono.funext', `IsAdic.hasBasis_nhds]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL LOCAL TRACE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the original constructed local trace consumer. Original compatible traces, native completion, actual compact adic topology and constructed coefficient field are consumed. Rank-two realization and DUB-17--20 remain OPEN."
+
+#eval runOriginalLocalTraceDependencyAudit

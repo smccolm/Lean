@@ -1,0 +1,39 @@
+{
+  "recordedUTC": "2026-11-17T08:04:19.487968+00:00",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> integral and residual realization of the actual arithmetic rank-two representation",
+  "assumptionsToDischarge": [
+    "existence of a full finite free invariant integer lattice for the actual all-weight representation",
+    "continuity and literal entrywise residue reduction via existing proved stable-lattice realization"
+  ],
+  "reuseReview": "Existing SourceOriginalPrimitiveIntegralLattice is weight two and uses a Tate-module specialization unavailable for the newly reconstructed all-weight matrices. SourceStableLatticeResidualRealization already constructs continuous integral/residual matrices from a full finite free invariant lattice. Reuse it after constructing only that lattice. Native local integer rings are open DVRs, and native compactness and Noetherian submodule lemmas supply finite generation.",
+  "route": "For the actual continuous compact-group action, take the integer span of the compact union of the two standard-basis orbits. An open finitely generated coordinate lattice covers any compact set by finitely many translates; their finite span bounds the orbit lattice, hence Noetherianity gives finite generation. Identity contains the standard basis and group multiplication proves invariance. Reuse the proved fullIntegralLattice_free_finite_rank and stableLattice_integral_residual_realization.",
+  "boundary": "Arithmetic descent is already proved separately without a lattice. This lattice is pursued only for actual residual realization needed by the remaining association/image chain. It does not establish residual irreducibility, large image, local regularity, automorphy or analytic continuation.",
+  "publicSearch": {
+    "date": "2026-11-17",
+    "queries": [
+      "github Lean exists stable lattice Representation",
+      "site.github.com/ImperialCollegeLondon/FLT lattice Compact",
+      "site.github.com lean invariant IsLattice"
+    ],
+    "result": "Targeted indexed search did not identify a directly reusable complete compact-action invariant-lattice Lean theorem. Search coverage is limited; no repository-wide absence claim or external proof acceptance is made.",
+    "externalProofImported": false
+  },
+  "native": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveIntegralLattice.lean",
+      "sha256": "E3148886DF31275D5B5F008C32ABB1FB6A5EC787507C05CABC33E258E9363FDC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+      "sha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeContinuity.lean",
+      "sha256": "073675A9CBCEE8CC8FB2A3C29ECE6213FBDB79FA78E8753D0A7D98FCC06F8951"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralLatticeRank.lean",
+      "sha256": "B3ED985B46EE29C6F9CE9FFC315E38105296C74FE71FD2B202B680928667A2D9"
+    }
+  ]
+}

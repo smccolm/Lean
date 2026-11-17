@@ -1,0 +1,18 @@
+{
+  "reason": "The original recorder template incorrectly required two identical root proof-integrity PASS markers. Previous and current canonical root logs contain exactly one, matching the root runner scan. Require exactly one, retaining all diagnostic, exit, axiom, regression, ownership, type/value and source checks. No Lean or runner changes. The prepared9645 parser was also corrected before execution; its three dependency scopes remain distinct from this one root scan.",
+  "logs": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\logs\\foundation_freeze_20261116_201757.log",
+      "sha256": "9DF7A54A69ECE975BF3A48E924930C3247588763D2986AFE4ED0C4C763B6137D",
+      "markers": 1
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\logs\\foundation_freeze_20261116_222538.log",
+      "sha256": "C22DBC65E63CEFB56E6334B8741B1252BB5D663BD53C97C60B087633B27EEC92",
+      "markers": 1
+    }
+  ],
+  "failedRecorder": "record_source_primitive_joint_arithmetic_9611.py",
+  "successor": "record_source_primitive_joint_arithmetic_9611b.py",
+  "successorResult": "Canonical receipt recorded PASS"
+}

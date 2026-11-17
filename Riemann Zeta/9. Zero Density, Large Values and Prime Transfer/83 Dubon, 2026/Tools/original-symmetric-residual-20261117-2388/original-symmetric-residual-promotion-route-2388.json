@@ -1,0 +1,59 @@
+{
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual original residual deformation inputs -> symmetric irreducibility, trace-zero adjoint H0 and arithmetic twisted-H1 detection for the same constructed residual representation.",
+  "discharged": "For an actual original primitive cusp form of weight at least two and prime p greater than three, one constructed original residual representation now retains its complete projective classification and, in the finite linear subfield branch, has full symmetric matrix spans, absolute symmetric-power irreducibility and vanishing trace-zero adjoint invariants over its original residue field and basis on both native arithmetic and absolute Galois cyclotomic kernels. These conclusions hold for 2*n < p-1. The same residual representation has genuine arithmetic twisted-cohomology detection on the joint residual/cyclotomic kernel in every symmetric degree. Its integral origin, literal reduction, fixed-local Hecke/Frobenius and inertia data, global determinant, maximal Hecke kernel, finite image and oddness are retained. No image classification, irreducibility, adjoint-vanishing, character-value witness or cohomology-detection certificate is supplied.",
+  "boundary": "The six small-projective-image alternatives are retained explicitly; their arithmetic exclusion, regular detecting primes and the remaining original local conditions are still required. The finite subfield is not identified with the original residue field. Finite-image H1 vanishing has not been proved and is not an extra prerequisite of the central-scalar detection route. These source consumers still have weight at least two and p greater than three. Automorphy and literal higher symmetric-power continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN, with the full source domain and every verification criterion unchanged.",
+  "route": "Reuse the already proved native finite-subfield symmetric span, perfection of SL2, coefficient-extension/descent, Schur adjoint vanishing, central-scalar cocycle detection and actual arithmetic cyclotomic surjectivity. Full matrix spanning descends through an explicit coefficient left inverse, so neither coefficient-field equality nor a separately supplied change-of-basis certificate is needed. The central-scalar argument avoids a separate finite-image H1 vanishing development for this detection step. Generic proofs are applied to the same residual witness and literally the native arithmetic cyclotomic character; independent existential witnesses are never identified. The upstream Dickson classification is already integrated. No additional external imports, pins, proof-limit changes or incidental generalizations are introduced.",
+  "scratchCertificates": [
+    {
+      "path": "source-original-symmetric-1-scratch-receipt.json",
+      "sha256": "C0C6C938423119C26EBCB310EA9B5DB9A14A4CCD59507A1ACBF6A12AF04B968A"
+    },
+    {
+      "path": "source-original-symmetric-adjoint-1-scratch-receipt.json",
+      "sha256": "F1E8B92F0ED82CAB9152691D674D15BB8405E7B638324FB81DCAA4B6C0D4615C"
+    },
+    {
+      "path": "source-original-twisted-kernel-1-scratch-receipt.json",
+      "sha256": "049DD5A064FC14DEFB68DA596CCF7F8A831FF30446A28C3A295843BF71EC41F0"
+    },
+    {
+      "path": "source-original-symmetric-joint-1-scratch-receipt.json",
+      "sha256": "0DA618D1D4E27325F89A2C1DAEB6CCC457779E6C280A1447F57349052F814544"
+    }
+  ],
+  "immutableScratchArchives": [
+    {
+      "path": "Tools/original-symmetric-scratch-20261117-2359/manifest.json",
+      "sha256": "B2F386D8D24FF3973D877511B93FCC966180517DED00566851F6A86E8935942B"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/manifest.json",
+      "sha256": "9298A80E46C4AEF5342466B92971C6A927438F9BD3E73DE11D17348EBD42E77D"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/manifest.json",
+      "sha256": "C4DD9BB6D05DC6BC57A3CD43E8844D18E8E0A8AB90CA54AAF2473905C26F3AF3"
+    },
+    {
+      "path": "Tools/original-symmetric-joint-scratch-20261117-2386/manifest.json",
+      "sha256": "D13A95D4F4E65906C1AEF5C744B86F8CAA647F799F73417610AC59BA31CD96A6"
+    }
+  ],
+  "disjointModules": 30,
+  "publicTheorems": 37,
+  "publicConstructions": 7,
+  "exhaustiveTheorems": 126,
+  "exhaustiveOtherDeclarations": 52,
+  "typeValueFingerprints": 178,
+  "proofValueEdges": [
+    74,
+    31,
+    61,
+    92
+  ],
+  "separateOriginalConsumerEdges": 26,
+  "proofBodiesPreserved": true,
+  "changes": "Only import qualification during promotion.",
+  "accepted": 16,
+  "total": 20
+}

@@ -1,0 +1,39 @@
+{
+  "recordedUTC": "2026-11-17T08:45:18.824037+00:00",
+  "queries": [
+    "Lean formalization Ribet Momose large image Galois representation modular forms github",
+    "site.github.com lean large image Galois",
+    "Ribet image Galois representations attached modular forms non CM almost all primes original paper pdf"
+  ],
+  "webReviewed": [
+    "https://github.com/mkaratarakis/CICM24_Deligne",
+    "https://github.com/mkaratarakis/CICM24_Deligne/blob/main/Statement.lean",
+    "https://lmbp.uca.fr/~billerey/Research/Published/Dieulefait_large_image.pdf",
+    "https://math.berkeley.edu/~ribet/Articles/",
+    "https://math.berkeley.edu/~ribet/Articles/rankin.pdf"
+  ],
+  "evidence": [],
+  "limitations": "Targeted public discovery only, not an exhaustive proof-index claim. No external Lean build or imported theorem is claimed. Ribet scanned PDF was located but its body was not reviewed in this follow-up. The web API endpoint was also inaccessible. No current commit hash was obtained; the displayed code snapshot does not establish that the remote HEAD is unchanged today.",
+  "fetchError": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+  "assessment": "The inspected displayed main-branch Statement.lean presents Deligne and supporting algebraicity/valuation/topology claims using admitted proofs; it cannot discharge the source association or residual-image obligation. The displayed statement is not a verified proof endpoint. The Billerey-Dieulefait primary article states almost-all-prime residual irreducibility and characteristic-divisible image, with projective PSL2/PGL2 over a subfield; these do not directly give full SL2 of the constructed coefficient residue field. Its dihedral bound invokes Deligne, so that route must be checked for circularity before use toward the Deligne/Sato-Tate source gates.",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> symmetric-power continuation -> automorphy -> actual original residual representation with required image/local conditions.",
+  "nextRoute": "Reuse the actual local-Hecke residual source consumer and existing finite-field symmetric-power theorems. Inspect the exact required image field, basis/conjugacy and prime-selection conditions before expanding image foundations. No gate is closed by this review.",
+  "localReview": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FixedResidualAbsoluteIrreducibility.lean",
+      "sha256": "BC9E8CE2685FB8F56D4D42604CD389A6BFA3CF24F1B827E17FE67E26B5C1769F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FiniteBaseCMSymmetricIrreducible.lean",
+      "sha256": "E806A174C52C11EC1F45E88D5966815BE218DE1A5F50B695701914F6BDE21E5A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticSymmetricDeformationSelmer.lean",
+      "sha256": "ED873C8E2D776F5851945B939B79A5E173098EFE0B37560C3A9A37DEEC756836"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticResidual.lean",
+      "sha256": "561661B901F84504DCADD2838A0FDADAB0A4158828369FAD758814FEF746696D"
+    }
+  ]
+}

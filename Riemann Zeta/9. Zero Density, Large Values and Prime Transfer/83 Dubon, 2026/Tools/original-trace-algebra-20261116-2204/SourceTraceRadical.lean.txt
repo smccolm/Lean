@@ -1,0 +1,47 @@
+import SourceGroupTraceTrilinear
+import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+/-! DUB-17/18 -> original characteristic-zero rank-two realization.
+The actual trace radical is a two-sided ideal. This is the quotient needed
+to turn the proved trace identities into algebra identities, before
+constructing two-dimensional matrices. Its annihilation condition is a
+definition of the radical, not an assumption of representation existence. -/
+namespace Dubon2026
+noncomputable section
+variable {R A : Type*} [CommRing R] [Ring A] [Algebra R A]
+
+/-- The genuine two-sided trace radical, using cyclicity of the supplied linear trace. -/
+def sourceTraceRadical (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x)) : Ideal A where
+  carrier := {x | ∀ y, τ (x * y) = 0}
+  zero_mem' := by simp
+  add_mem' := by
+    intro x z hx hz y
+    rw [add_mul, map_add, hx y, hz y, zero_add]
+  smul_mem' := by
+    intro a x hx y
+    change τ (a * x * y) = 0
+    rw [mul_assoc, hCyc, mul_assoc]
+    exact hx (y * a)
+
+/-- Membership is exactly annihilation of the entire original trace pairing. -/
+theorem sourceTraceRadical_mem (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x)) (x : A) :
+    x ∈ sourceTraceRadical τ hCyc ↔ ∀ y, τ (x * y) = 0 := Iff.rfl
+
+/-- Right multiplication also preserves the actual trace radical. -/
+instance sourceTraceRadical_isTwoSided (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x)) :
+    (sourceTraceRadical τ hCyc).IsTwoSided where
+  mul_mem_of_left a hx y := by
+    rw [mul_assoc]
+    exact hx (a * y)
+
+/-- Every radical element has zero original trace. -/
+theorem sourceTraceRadical_trace_zero (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x)) {x : A}
+    (hx : x ∈ sourceTraceRadical τ hCyc) : τ x = 0 := by
+  simpa only [mul_one] using hx 1
+
+end
+end Dubon2026

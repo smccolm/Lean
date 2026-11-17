@@ -1,0 +1,59 @@
+import Dubon2026.SourceAbsoluteContinuousLocalFactor
+import Dubon2026.SourceAbsoluteNormFrobeniusConjugate
+
+/-! DUB-17/18 -> original all-weight association -> compatible original
+adic traces. Native local Krull factors and actual norm Frobenius compare
+continuous cyclic functions from their good-prime values. This applies to
+traces, which are not multiplicative characters, without adding a global
+finite-factor or density hypothesis. -/
+namespace Dubon2026
+noncomputable section
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+private theorem cyclic_conjugate {G X : Type} [Group G] (f : G → X)
+    (hf : ∀ a b, f (a * b) = f (b * a)) (g τ : G) : f (τ * g * τ⁻¹) = f g := by
+  calc
+    f (τ * g * τ⁻¹) = f (τ * (g * τ⁻¹)) := congrArg f (mul_assoc _ _ _)
+    _ = f (g * τ⁻¹ * τ) := hf _ _
+    _ = f g := by rw [mul_assoc, inv_mul_cancel, mul_one]
+
+/-- Continuous cyclic functions on the actual absolute Galois group are
+equal if they agree at every actual good-prime norm Frobenius. -/
+theorem absolute_continuous_cyclic_eq_of_norm_frobenius
+    {X : Type} [TopologicalSpace X] [DiscreteTopology X]
+    (f₁ f₂ : Gal(Qbar/ℚ) → X) (hc₁ : Continuous f₁) (hc₂ : Continuous f₂)
+    (ht₁ : ∀ g h, f₁ (g * h) = f₁ (h * g))
+    (ht₂ : ∀ g h, f₂ (g * h) = f₂ (h * g)) (S : Finset ℕ)
+    (hFrob : ∀ (q : ℕ) (hq : q.Prime), q ∉ S →
+      ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+        (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+        (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+          (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+        f₁ (embeddedNormalGaloisRestriction e φ) = f₂ (embeddedNormalGaloisRestriction e φ)) :
+    f₁ = f₂ := by
+  funext σ
+  obtain ⟨F, hF⟩ := absolute_continuous_local_finite_factor
+    (fun g => (f₁ g, f₂ g)) (hc₁.prodMk hc₂) σ
+  letI : Algebra ℚ F := F.algebra'
+  letI : IsGalois ℚ F := F.isGalois
+  let χ : Gal(Qbar/ℚ) →ₜ* Gal(F/ℚ) :=
+    ⟨AlgEquiv.restrictNormalHom F, InfiniteGalois.restrictNormalHom_continuous F.toIntermediateField⟩
+  obtain ⟨q, hq, hqS, e, φ, hφ, τ, he⟩ :=
+    absolute_continuous_exists_norm_frobenius_conjugate χ σ S
+  let d := embeddedNormalGaloisRestriction e φ
+  have hv := hF (τ * d * τ⁻¹) he
+  calc
+    f₁ σ = f₁ (τ * d * τ⁻¹) := (congrArg Prod.fst hv).symm
+    _ = f₁ d := cyclic_conjugate f₁ ht₁ d τ
+    _ = f₂ d := hFrob q hq hqS e φ hφ
+    _ = f₂ (τ * d * τ⁻¹) := (cyclic_conjugate f₂ ht₂ d τ).symm
+    _ = f₂ σ := congrArg Prod.snd hv
+
+end
+end Dubon2026

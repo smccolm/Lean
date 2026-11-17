@@ -1,0 +1,59 @@
+import SourceGammaOneJointArithmeticKernel
+import SourceGammaOneOriginalAdicArithmetic
+import SourceGammaOneLocalTraceArithmetic
+import SourceAbsoluteArithmeticFactor
+import SourceGammaOneLocalArithmeticRankTwo
+import SourceGammaOneArithmeticRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate
+#print axioms Dubon2026.sourceAbsoluteArithmeticRestriction_surjective
+#print axioms Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo
+
+private def runOriginalArithmeticRankTwoAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneJointArithmeticKernel, `SourceGammaOneOriginalAdicArithmetic, `SourceGammaOneLocalTraceArithmetic, `SourceAbsoluteArithmeticFactor, `SourceGammaOneLocalArithmeticRankTwo, `SourceGammaOneArithmeticRankTwo]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate, `Dubon2026.sourceAbsoluteArithmeticRestriction_surjective, `Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL ARITHMETIC RANK TWO AUDIT PASS: {count} theorems including private/generated declarations. Original continuous arithmetic rank-two matrices with exact Fourier and weight Frobenius values and actual oddness proved for p greater than three. Full local association and source gates remain OPEN."
+
+#eval runOriginalArithmeticRankTwoAudit
+
+#lint in SourceGammaOneJointArithmeticKernel
+#lint in SourceGammaOneOriginalAdicArithmetic
+#lint in SourceGammaOneLocalTraceArithmetic
+#lint in SourceAbsoluteArithmeticFactor
+#lint in SourceGammaOneLocalArithmeticRankTwo
+#lint in SourceGammaOneArithmeticRankTwo

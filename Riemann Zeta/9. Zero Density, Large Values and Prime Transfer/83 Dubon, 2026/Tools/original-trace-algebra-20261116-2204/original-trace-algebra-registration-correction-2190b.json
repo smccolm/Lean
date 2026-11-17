@@ -1,0 +1,17 @@
+{
+  "recordedUTC": "2026-11-17T06:36:12.332513+00:00",
+  "correction": {
+    "declaration": "Dubon2026.sourceTraceRadical_isTwoSided",
+    "reason": "Lean environment reports a theoremInfo for this Prop-valued instance; classification follows the kernel declaration kind. No Lean statement, proof body, linter or axiom restriction changes.",
+    "failedAudit": "SourceOriginalTraceAlgebraAudit1.log",
+    "successorAudit": "SourceOriginalTraceAlgebraAudit2",
+    "successorDependencyAudit": "SourceOriginalTraceAlgebraDependencyAudit2"
+  },
+  "modules": 9,
+  "queries": 18,
+  "theorems": 15,
+  "constructions": 3,
+  "proofEdges": 20,
+  "mathematicalBodiesChanged": false,
+  "standardsWeakened": false
+}

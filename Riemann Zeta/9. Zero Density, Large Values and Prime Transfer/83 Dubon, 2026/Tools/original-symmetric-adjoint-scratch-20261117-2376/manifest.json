@@ -1,0 +1,147 @@
+{
+  "status": "Scratch PASS: actual original trace-zero adjoint H0 invariants vanish on both original cyclotomic kernels in the large-image branch. Production promotion and assembled verification remain pending.",
+  "modules": 2,
+  "publicQueries": 3,
+  "exhaustiveTheorems": 11,
+  "otherDeclarations": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 31,
+  "typeValueFingerprints": 17,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-symmetric-scratch-20261117-2359/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "files": [
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceGammaOneSymmetricAdjointVanishing.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceGammaOneSymmetricAdjointVanishing.lean.txt",
+      "sha256": "E318E77899A299A51BD0A2C0698EB7CA9BA4B116F7CD750703915F865A22B1DE"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceGammaOneSymmetricAdjointVanishing.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceGammaOneSymmetricAdjointVanishing2365a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceGammaOneSymmetricAdjointVanishing2365a.lean.txt",
+      "sha256": "BA1BAD8301157F2C530052FB89227D1E1FECB4B3A8257337D4F83CD1D7000630"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceGammaOneSymmetricAdjointVanishing2365a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjoint.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjoint.lean.txt",
+      "sha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjoint.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjoint2364a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjoint2364a.lean.txt",
+      "sha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjoint2364a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointAudit1.lean.txt",
+      "sha256": "282211721AEABD98A5EEA27B1E21212D0525D5A0F088B3EED4874A5800B5119C"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointAudit1.log",
+      "sha256": "F281CE1F5C8FD2A212861603B2D330464386D4769DF9E79CD0CF5EAABA5A3D10"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointDeclarations2366.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointDeclarations2366.lean.txt",
+      "sha256": "8A164F3CA55451F4BAD7EEE879C90C60F650A13810AEE5530AF209CDFA20DF06"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointDeclarations2366.log",
+      "sha256": "4BB30A29B8139BCBA23AAC340E3E07DB6FDD8D4311DE1F7FDEACC2CEC6A9DB81"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointDependencyAudit1.lean.txt",
+      "sha256": "12F37E4FF49F4FCA7A355C2735D34DFF127442572F9C2C76F62F793950B77028"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointDependencyAudit1.log",
+      "sha256": "34246BD26A335136E5F72C20A9DF833532A42EB8E2F29DC515654BFA7C9BFACE"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointProductionSemantic2375.lean.txt",
+      "sha256": "C7D1122EBF1242AE91EAFF65226D63C8421AAC6E0F89894338881E1F0D0B2964"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointScratchSemantic2375.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointScratchSemantic2375.lean.txt",
+      "sha256": "F62646FBE8A85B58601E5EFF3F873FA76B898D51CA57D4936D6378729898C013"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/SourceOriginalSymmetricAdjointScratchSemantic2375.log",
+      "sha256": "D5BD465F06211A9498BF8928D70A4A5CB205AF3AC932557EC632B14D44E228BE"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/build_original_symmetric_adjoint_2366.ps1",
+      "sha256": "A873FEFF6DE6DC2484A147B0C6DC0CD63A5E1881B3B41D4AB07AB9C8FEAB31C4"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/original-symmetric-adjoint-reuse-review-2371.json",
+      "sha256": "21EE2482B39721C0BF1F4B732013F0C1800E8501366BFB895113EE3A36C2A795"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/prepare_original_symmetric_adjoint_audits_2366.py",
+      "sha256": "6DB69D5A6A46088A93C4C67A7B21B2035280A016A9133C56B9F4BD0C000E5052"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/record_original_symmetric_adjoint_scope_2371.py",
+      "sha256": "2E9B159AC795DAFB8321B2861E0CDE00EEEE4414BC6C46A124BD936CEB73EF28"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/source-original-symmetric-adjoint-1-scratch-receipt.json",
+      "sha256": "F1E8B92F0ED82CAB9152691D674D15BB8405E7B638324FB81DCAA4B6C0D4615C"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/source-original-symmetric-adjoint-audit-config-2366.json",
+      "sha256": "0C76463B794FC67E0ED7834F1902819586D5D34DA519DC59D589E0B886FD3C21"
+    },
+    {
+      "path": "Tools/original-symmetric-adjoint-scratch-20261117-2376/source-original-symmetric-adjoint-scratch-summary-2371.json",
+      "sha256": "2973E7792469D83050BE1D11187FEF0B341A3F03995BD5BCEE0C5B81EE4D2B78"
+    }
+  ]
+}

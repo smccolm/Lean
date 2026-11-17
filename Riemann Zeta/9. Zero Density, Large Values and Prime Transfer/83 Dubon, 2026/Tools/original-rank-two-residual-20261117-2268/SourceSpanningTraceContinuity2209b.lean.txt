@@ -1,0 +1,49 @@
+import SourceSpanningTraceAlgebra2207a
+import Mathlib.Topology.Algebra.Group.Basic
+import Mathlib.Topology.Algebra.Ring.Basic
+
+/-! DUB-17/18 -> actual rank-two realization -> continuity of matrix coordinates.
+Actual group-image spanning and the original continuous trace suffice
+for continuity of every translated trace coordinate. No topology or
+continuity on the intermediate algebra action is assumed. -/
+namespace Dubon2026
+noncomputable section
+variable {G K A : Type*} [Group G] [TopologicalSpace G] [ContinuousMul G]
+  [Field K] [TopologicalSpace K] [IsTopologicalRing K] [Ring A] [Algebra K A]
+
+/-- Every fixed left trace coordinate of the actual spanning action is
+continuous, by native span induction from the original continuous trace. -/
+theorem continuous_trace_of_spanning_action
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (ht : Continuous (fun g => T (σ g))) (a : A) :
+    Continuous (fun g => T (a * σ g)) := by
+  have ha : a ∈ Submodule.span K (Set.range σ) := by rw [hspan]; trivial
+  induction ha using Submodule.span_induction with
+  | mem x hx =>
+    obtain ⟨h, rfl⟩ := hx
+    simpa only [Function.comp_apply, map_mul] using
+      ht.comp (continuous_const.mul continuous_id : Continuous (fun g : G => h * g))
+  | zero =>
+    simpa only [zero_mul, map_zero] using (continuous_const : Continuous (fun _ : G => (0 : K)))
+  | add x y hx hy ihx ihy =>
+    simpa only [add_mul, map_add] using ihx.add ihy
+  | smul s x hx ih =>
+    simpa only [smul_mul_assoc, map_smul, smul_eq_mul] using continuous_const.mul ih
+
+/-- The actual cyclic trace makes every two-sided fixed matrix coordinate
+continuous, reducing to the proved left-coordinate result. -/
+theorem continuous_trace_sandwich_of_spanning_action
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (ht : Continuous (fun g => T (σ g)))
+    (hCyc : ∀ x y, T (x * y) = T (y * x)) (a b : A) :
+    Continuous (fun g => T (a * σ g * b)) := by
+  have he : (fun g => T (a * σ g * b)) = (fun g => T ((b * a) * σ g)) := by
+    funext g
+    rw [hCyc (a * σ g) b, mul_assoc]
+  rw [he]
+  exact continuous_trace_of_spanning_action σ T hspan ht (b * a)
+
+end
+end Dubon2026

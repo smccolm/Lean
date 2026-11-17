@@ -1,0 +1,32 @@
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original all-weight association -> rank-two realization.
+Derive the dimension-two trilinear trace relation from the already proved
+cyclic trace/determinant product identity. This is an algebraic input to
+reconstruction, not an assumed representation or realization theorem. -/
+namespace Dubon2026
+
+/-- The determinant product identity implies the dimension-two trilinear
+trace identity over the original commutative coefficient ring. -/
+theorem traceDeterminant_trilinear
+    {G R : Type*} [Group G] [CommRing R] (t : G → R) (D : G →* R)
+    (hCyc : ∀ g h, t (g * h) = t (h * g))
+    (hProd : ∀ g h, t g * t h = t (g * h) + t (g * h⁻¹) * D h)
+    (x y z : G) :
+    t (x * y * z) + t (x * z * y) =
+      t x * t (y * z) + t y * t (x * z) + t z * t (x * y) - t x * t y * t z := by
+  have h1 := hProd x (y * z)
+  have h2 := hProd (x * z) y
+  have h3 := hProd x y
+  have h4 := hProd (y⁻¹ * x) z
+  rw [map_mul, mul_inv_rev] at h1
+  have hcy1 : t (y⁻¹ * x) = t (x * y⁻¹) := hCyc _ _
+  have hcy2 : t (y⁻¹ * x * z) = t (x * z * y⁻¹) := by
+    rw [mul_assoc, hCyc]
+  have hcy3 : t (y⁻¹ * x * z⁻¹) = t (x * (z⁻¹ * y⁻¹)) := by
+    rw [mul_assoc, hCyc, mul_assoc]
+  rw [hcy1, hcy2, hcy3] at h4
+  rw [← mul_assoc] at h1
+  linear_combination -h1 - h2 + t z * h3 + D y * h4
+
+end Dubon2026

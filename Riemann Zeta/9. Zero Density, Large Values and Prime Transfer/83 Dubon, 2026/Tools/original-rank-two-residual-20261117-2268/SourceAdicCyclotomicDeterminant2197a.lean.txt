@@ -1,0 +1,64 @@
+import SourceAdicPrimePowerScalar2195a
+import SourceCyclotomicNormFrobenius2196b
+import SourceAbsoluteComplexConjugation2194b
+
+/-! DUB-17/18 -> actual rank-two realization -> odd original determinant.
+Construct the cyclotomic weight in the original adic coefficient quotient,
+with its actual norm-Frobenius and conjugation values. The proved cyclic
+Frobenius uniqueness theorem will identify it with the original determinant. -/
+namespace Dubon2026
+noncomputable section
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable {R : Type} [CommRing R] [IsLocalRing R]
+variable (p n w : ℕ) [Fact p.Prime] [CharP (IsLocalRing.ResidueField R) p]
+
+/-- The genuine cyclotomic weight in the original positive adic coefficient ring. -/
+def sourceAdicCyclotomicDeterminant :
+    (Qbar ≃ₐ[ℚ] Qbar) →* R ⧸ (IsLocalRing.maximalIdeal R) ^ (n + 1) :=
+  (((adicQuotientPrimePowerMap (R := R) p n).toMonoidHom.comp
+    (Units.coeHom (ZMod (p ^ (n + 1))))).comp
+    (sourceAbsoluteCyclotomicCharacter (p ^ (n + 1))).toMonoidHom) ^ w
+
+/-- Continuity follows from the original finite cyclotomic character. -/
+theorem sourceAdicCyclotomicDeterminant_continuous :
+    @Continuous _ _ _ ⊥ (sourceAdicCyclotomicDeterminant (R := R) p n w) := by
+  letI : TopologicalSpace (R ⧸ (IsLocalRing.maximalIdeal R) ^ (n + 1)) := ⊥
+  have hc : Continuous (fun u : (ZMod (p ^ (n + 1)))ˣ =>
+      (adicQuotientPrimePowerMap (R := R) p n (u : ZMod (p ^ (n + 1)))) ^ w) :=
+    continuous_of_discreteTopology
+  exact hc.comp (sourceAbsoluteCyclotomicCharacter (p ^ (n + 1))).continuous
+
+/-- Every original norm Frobenius has the literal rational-prime power value. -/
+theorem sourceAdicCyclotomicDeterminant_frobenius
+    (q : ℕ) (hq : q.Prime) (haway : ¬q ∣ p)
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+    (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq))
+    (hφ : ∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+      (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) :
+    sourceAdicCyclotomicDeterminant (R := R) p n w (embeddedNormalGaloisRestriction e φ) =
+      (q : R ⧸ (IsLocalRing.maximalIdeal R) ^ (n + 1)) ^ w := by
+  change (adicQuotientPrimePowerMap (R := R) p n
+    (sourceAbsoluteCyclotomicCharacter (p ^ (n + 1)) (embeddedNormalGaloisRestriction e φ) :
+      ZMod (p ^ (n + 1)))) ^ w = _
+  rw [sourceAbsoluteCyclotomicCharacter_norm_frobenius (p ^ (n + 1)) q hq
+    (fun h => haway (hq.dvd_of_dvd_pow h)) e φ hφ, map_natCast]
+
+/-- The same original cyclotomic weight evaluates to minus one to its
+weight at actual complex conjugation. -/
+theorem sourceAdicCyclotomicDeterminant_conjugation (e : Qbar →ₐ[ℚ] ℂ) :
+    sourceAdicCyclotomicDeterminant (R := R) p n w (sourceAbsoluteComplexConjugation e) =
+      (-1 : R ⧸ (IsLocalRing.maximalIdeal R) ^ (n + 1)) ^ w := by
+  change (adicQuotientPrimePowerMap (R := R) p n
+    (sourceAbsoluteCyclotomicCharacter (p ^ (n + 1)) (sourceAbsoluteComplexConjugation e) :
+      ZMod (p ^ (n + 1)))) ^ w = _
+  rw [sourceAbsoluteCyclotomicCharacter_conjugation]
+  simp only [Units.val_neg, Units.val_one, map_neg, map_one]
+
+end
+end Dubon2026

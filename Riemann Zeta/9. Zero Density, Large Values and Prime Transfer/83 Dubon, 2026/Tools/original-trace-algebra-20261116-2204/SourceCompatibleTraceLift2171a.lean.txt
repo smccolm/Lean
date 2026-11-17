@@ -1,0 +1,69 @@
+import SourceAdicFunctionContinuity2170b
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+complete coefficient traces. Reconstruct the compatible positive adic
+trace/determinant family in the actual complete ring. All identities and
+continuity descend from the proved original finite traces through native
+quotient uniqueness; rank-two realization remains a separate obligation. -/
+namespace Dubon2026
+noncomputable section
+
+/-- A compatible continuous dimension-two trace family reconstructs in the
+actual adically complete coefficient ring, preserving every quotient and identity. -/
+theorem exists_complete_trace_of_compatible_positive_quotients
+    {G R : Type} [Group G] [TopologicalSpace G] [CommRing R] [TopologicalSpace R]
+    (I : Ideal R) [IsAdicComplete I R] (hI : IsAdic I)
+    (ts : ∀ n : ℕ, G → R ⧸ I ^ (n + 1))
+    (Ds : ∀ n : ℕ, G →* R ⧸ I ^ (n + 1))
+    (hct : ∀ n, @Continuous _ _ _ ⊥ (ts n))
+    (hcD : ∀ n, @Continuous _ _ _ ⊥ (Ds n))
+    (hOne : ∀ n, ts n 1 = 2)
+    (hCyc : ∀ n g h, ts n (g * h) = ts n (h * g))
+    (hProd : ∀ n g h, ts n g * ts n h = ts n (g * h) + ts n (g * h⁻¹) * Ds n h)
+    (hcomp : ∀ (m n : ℕ) (hmn : m ≤ n) (g : G),
+      Ideal.Quotient.factorPow I (Nat.add_le_add_right hmn 1) (ts n g) = ts m g ∧
+      Ideal.Quotient.factorPow I (Nat.add_le_add_right hmn 1) (Ds n g) = Ds m g) :
+    ∃ (t : G → R) (D : G →* R), Continuous t ∧ Continuous D ∧ t 1 = 2 ∧
+      (∀ g h, t (g * h) = t (h * g)) ∧
+      (∀ g h, t g * t h = t (g * h) + t (g * h⁻¹) * D h) ∧
+      ∀ n g, Ideal.Quotient.mk (I ^ (n + 1)) (t g) = ts n g ∧
+        Ideal.Quotient.mk (I ^ (n + 1)) (D g) = Ds n g := by
+  let t : G → R := fun g => positiveAdicFamilyLift I (fun n => ts n g)
+    (fun h => (hcomp _ _ h g).1)
+  let d : G → R := fun g => positiveAdicFamilyLift I (fun n => Ds n g)
+    (fun h => (hcomp _ _ h g).2)
+  have ht (n : ℕ) (g : G) : Ideal.Quotient.mk (I ^ (n + 1)) (t g) = ts n g :=
+    positiveAdicFamilyLift_mk I _ _ n
+  have hd (n : ℕ) (g : G) : Ideal.Quotient.mk (I ^ (n + 1)) (d g) = Ds n g :=
+    positiveAdicFamilyLift_mk I _ _ n
+  let D : G →* R := {
+    toFun := d
+    map_one' := by
+      apply positiveAdic_ext I
+      intro n
+      rw [hd, map_one, map_one]
+    map_mul' := fun g h => by
+      apply positiveAdic_ext I
+      intro n
+      rw [map_mul, hd, hd, hd, map_mul] }
+  have htc : Continuous t := continuous_of_positive_adic_quotients I hI t (fun n => by
+    simpa only [ht] using hct n)
+  have hdc : Continuous D := continuous_of_positive_adic_quotients I hI d (fun n => by
+    simpa only [hd] using hcD n)
+  refine ⟨t, D, htc, hdc, ?_, ?_, ?_, fun n g => ⟨ht n g, hd n g⟩⟩
+  · apply positiveAdic_ext I
+    intro n
+    rw [ht, hOne, map_ofNat]
+  · intro g h
+    apply positiveAdic_ext I
+    intro n
+    rw [ht, ht, hCyc]
+  · intro g h
+    apply positiveAdic_ext I
+    intro n
+    change Ideal.Quotient.mk (I ^ (n + 1)) (t g * t h) =
+      Ideal.Quotient.mk (I ^ (n + 1)) (t (g * h) + t (g * h⁻¹) * d h)
+    rw [map_mul, map_add, map_mul, ht, ht, ht, ht, hd, hProd]
+
+end
+end Dubon2026

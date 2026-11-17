@@ -1,0 +1,70 @@
+import Dubon2026.SourceAdicPrimePowerScalar
+import Dubon2026.SourceCyclotomicNormFrobenius
+import Dubon2026.SourceAbsoluteComplexConjugation
+import Dubon2026.SourceAdicCyclotomicDeterminant
+import Dubon2026.SourceOriginalAdicDeterminant
+import Dubon2026.SourceAdicQuotientContinuity
+import Dubon2026.SourceOriginalLocalDeterminant
+import Dubon2026.SourcePrimitiveLocalOddness
+import Dubon2026.SourceGroupAlgebraQuotientSpan
+import Dubon2026.SourceSpanningTraceAlgebra
+import Dubon2026.SourceTraceOffDiagonal
+import Dubon2026.SourceTraceOppositePair
+import Dubon2026.SourceTraceLeftIdealCoordinates
+import Dubon2026.SourceTraceLeftIdealBasis
+import Dubon2026.SourceTraceLeftActionTrace
+import Dubon2026.SourceSpanningTraceContinuity
+import Dubon2026.SourceTraceLeftActionContinuity
+import Dubon2026.SourceScalarCornerCharacter
+import Dubon2026.SourceTraceDiagonalRepresentation
+import Dubon2026.SourceOddTraceIdempotent
+import Dubon2026.SourceContinuousTraceRealization
+import Dubon2026.SourceMatrixTraceDeterminant
+import Dubon2026.SourceOriginalTraceMatrixConsumer
+import Dubon2026.SourceGammaOneLocalRankTwo
+import Dubon2026.SourceGammaOneContinuousRankTwo
+import Dubon2026.SourceCyclotomicNormInertia
+import Dubon2026.SourceUnitTraceKernel
+import Dubon2026.SourceGammaOneJointTraceInertia
+import Dubon2026.SourceGammaOneOriginalAdicInertia
+import Dubon2026.SourceGammaOneLocalTraceInertia
+import Dubon2026.SourceTraceDiagonalKernel
+import Dubon2026.SourceContinuousTraceKernel
+import Dubon2026.SourceTraceActionKernel
+import Dubon2026.SourceOriginalTraceMatrixKernel
+import Dubon2026.SourceGammaOneLocalUnramifiedRankTwo
+import Dubon2026.SourceGammaOneUnramifiedRankTwo
+import Dubon2026.SourceGammaOneJointArithmeticKernel
+import Dubon2026.SourceGammaOneOriginalAdicArithmetic
+import Dubon2026.SourceGammaOneLocalTraceArithmetic
+import Dubon2026.SourceAbsoluteArithmeticFactor
+import Dubon2026.SourceGammaOneLocalArithmeticRankTwo
+import Dubon2026.SourceGammaOneArithmeticRankTwo
+import Dubon2026.CompactOrbitSpanFinite
+import Dubon2026.SourceIntegralCoordinateLattice
+import Dubon2026.SourceCompactOrbitLattice
+import Dubon2026.SourceMatrixIntertwiningInvariants
+import Dubon2026.SourceCompactResidualRealization
+import Dubon2026.SourceGammaOneLocalResidualRankTwo
+import Dubon2026.SourceGammaOneResidualRankTwo
+import Dubon2026.SourceOriginalResidualLocalInterface
+import Dubon2026.SourceGammaOneFixedLocalResidual
+import Dubon2026.SourceGammaOneFixedDeterminantResidual
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceAdicPrimePowerScalar, `Dubon2026.SourceCyclotomicNormFrobenius, `Dubon2026.SourceAbsoluteComplexConjugation, `Dubon2026.SourceAdicCyclotomicDeterminant, `Dubon2026.SourceOriginalAdicDeterminant, `Dubon2026.SourceAdicQuotientContinuity, `Dubon2026.SourceOriginalLocalDeterminant, `Dubon2026.SourcePrimitiveLocalOddness, `Dubon2026.SourceGroupAlgebraQuotientSpan, `Dubon2026.SourceSpanningTraceAlgebra, `Dubon2026.SourceTraceOffDiagonal, `Dubon2026.SourceTraceOppositePair, `Dubon2026.SourceTraceLeftIdealCoordinates, `Dubon2026.SourceTraceLeftIdealBasis, `Dubon2026.SourceTraceLeftActionTrace, `Dubon2026.SourceSpanningTraceContinuity, `Dubon2026.SourceTraceLeftActionContinuity, `Dubon2026.SourceScalarCornerCharacter, `Dubon2026.SourceTraceDiagonalRepresentation, `Dubon2026.SourceOddTraceIdempotent, `Dubon2026.SourceContinuousTraceRealization, `Dubon2026.SourceMatrixTraceDeterminant, `Dubon2026.SourceOriginalTraceMatrixConsumer, `Dubon2026.SourceGammaOneLocalRankTwo, `Dubon2026.SourceGammaOneContinuousRankTwo, `Dubon2026.SourceCyclotomicNormInertia, `Dubon2026.SourceUnitTraceKernel, `Dubon2026.SourceGammaOneJointTraceInertia, `Dubon2026.SourceGammaOneOriginalAdicInertia, `Dubon2026.SourceGammaOneLocalTraceInertia, `Dubon2026.SourceTraceDiagonalKernel, `Dubon2026.SourceContinuousTraceKernel, `Dubon2026.SourceTraceActionKernel, `Dubon2026.SourceOriginalTraceMatrixKernel, `Dubon2026.SourceGammaOneLocalUnramifiedRankTwo, `Dubon2026.SourceGammaOneUnramifiedRankTwo, `Dubon2026.SourceGammaOneJointArithmeticKernel, `Dubon2026.SourceGammaOneOriginalAdicArithmetic, `Dubon2026.SourceGammaOneLocalTraceArithmetic, `Dubon2026.SourceAbsoluteArithmeticFactor, `Dubon2026.SourceGammaOneLocalArithmeticRankTwo, `Dubon2026.SourceGammaOneArithmeticRankTwo, `Dubon2026.CompactOrbitSpanFinite, `Dubon2026.SourceIntegralCoordinateLattice, `Dubon2026.SourceCompactOrbitLattice, `Dubon2026.SourceMatrixIntertwiningInvariants, `Dubon2026.SourceCompactResidualRealization, `Dubon2026.SourceGammaOneLocalResidualRankTwo, `Dubon2026.SourceGammaOneResidualRankTwo, `Dubon2026.SourceOriginalResidualLocalInterface, `Dubon2026.SourceGammaOneFixedLocalResidual, `Dubon2026.SourceGammaOneFixedDeterminantResidual]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

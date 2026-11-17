@@ -1,0 +1,38 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependency": "Literal higher symmetric-power continuation -> automorphy -> actual original residual deformation inputs -> regular primes detecting the original twisted H1 classes on the finite linear subfield branch.",
+  "sourceConsumer": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes",
+  "sourceParameters": "Actual PrimitiveCuspForm Q k, k >= 2, prime p > 3. No residual representation, classification, image bound, character witness, regular element, trace test, cohomology detection or Frobenius certificate is supplied to the final source theorem.",
+  "reuse": [
+    "Native finite symmetric-projector span, extended by matrix units to the constructed ambient field.",
+    "Native finite-field regular torus and perfect SL2 lifting into an abelian-character kernel.",
+    "Previously audited original finite-subfield central-scalar and arithmetic cyclotomic detection.",
+    "Native kernel translation and generic finite-factor Chebotarev with original local H1 restriction.",
+    "The preceding joint source theorem supplies the same actual original residual witness and all existing arithmetic/symmetric conclusions."
+  ],
+  "shorterRoute": "An extended-field commuting trace test directly excludes the original vector from the original coboundary range. No H1 coefficient-extension equivalence, finite-image H1 vanishing theorem, disjointness library or new Chebotarev proof is needed.",
+  "exactOutput": "The common finite affine factor is retained in full, and q = 1 modulo p^(level+1), hence also modulo p^level. Original finite-factor Frobenius equality, regular characteristic polynomial and nonzero original local H1 restriction hold at the same prime outside every supplied finite set.",
+  "routeAdjustments": [
+    "The first coefficient-embedding drafts retained an unused decidable-equality instance; the accepted successor removes it from the shared context and puts it only on the action theorem.",
+    "Explicit map-inverse and general-linear inverse identities handle the actual conjugation and characteristic polynomial.",
+    "The underlying arithmetic profinite group is explicitly identified with its original Galois group at root-action coercions.",
+    "Monolithic prime assemblies exceeded the ordinary 200000-heartbeat limit. Exact native proposition definitions and a separately proved generic assembly remove repeated elaboration. No limit was raised and no source condition was weakened."
+  ],
+  "pending": [
+    "Exhaustive scratch audit and semantic fingerprints of this scope.",
+    "Production promotion and assembled verification.",
+    "Proper-field local unramified dimension and finite detecting-family assembly.",
+    "Arithmetic exclusion of the actual small-image alternatives, remaining original local deformation conditions, automorphy and literal higher continuation."
+  ],
+  "proofValueEdges": 123,
+  "modules": 14,
+  "publicQueries": 20,
+  "accepted": 16,
+  "total": 20,
+  "externalImportsAdded": false,
+  "proofLimitsChanged": false,
+  "rootPinsChanged": false
+}

@@ -1,0 +1,85 @@
+import Dubon2026.SourceGammaOneOriginalAdicTrace
+import SourceGammaOneJointTraceInertia
+
+/-! DUB-17/18 -> original unramified rank-two association -> original finite traces.
+The original form supplies inertia-invariant finite traces at every
+positive precision. Only continuity, cyclicity and the original Fourier
+Frobenius values needed for the existing uniqueness theorem are retained;
+no second compatible-family construction is required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "d" => 2 * n + 1
+local notation "N" => p ^ (d + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (d + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p d w
+local notation "R" => binaryPrimitiveJointOperatorRing Q p d w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+/-- At every original adic precision, the original form supplies a continuous
+cyclic trace with exact Fourier Frobenius values and all actual norm-inertia
+translate identities. This witness will be compared with the existing complete trace. -/
+theorem exists_gammaOne_original_adic_inertia_trace
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E) :
+    let C := 𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1)
+    ∃ t : (Qbar ≃ₐ[ℚ] Qbar) → C,
+      @Continuous _ _ _ ⊥ t ∧ (∀ g h, t (g * h) = t (h * g)) ∧
+      (∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+        ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+          (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+          (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+            (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+          t (embeddedNormalGaloisRestriction e φ) =
+            Ideal.Quotient.mk ((IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1))
+              ⟨τ (sourcePrimitiveFieldCoefficient f q),
+                sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩) ∧
+      ∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+        ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+          (g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+          g ∈ rationalPrimeNormInertia q hq → ∀ σ,
+          t (embeddedNormalGaloisRestriction e g * σ) = t σ := by
+  have hs := exists_gammaOne_primitive_joint_original_character Q p n f hk hlarge τ
+  let Hq := hs.2.choose
+  have hH := hs.2.choose_spec.1
+  have hchar := hs.2.choose_spec.2
+  let χ := hchar.choose
+  have hχ := hchar.choose_spec
+  let t := binaryPrimitiveJointSpecializedTrace Q p d w Hq hH χ
+  refine ⟨t, binaryPrimitiveJointSpecializedTrace_continuous Q p d w Hq hH χ,
+    binaryPrimitiveJointSpecializedTrace_mul_comm Q p d w Hq hH χ, ?_, ?_⟩
+  · intro q hq haway e φ hφ
+    have hcop : q.Coprime (Q * N) := hq.coprime_iff_not_dvd.mpr (by
+      intro h
+      rcases hq.dvd_mul.mp h with hQ | hN
+      · exact haway (dvd_mul_of_dvd_left hQ p)
+      · exact haway (dvd_mul_of_dvd_right (hq.dvd_of_dvd_pow hN) Q))
+    let ell : sourceBinaryHeckePrime (Q * N) := ⟨q, hq, hcop⟩
+    exact (binaryPrimitiveJointSpecializedTrace_norm_frobenius Q p d w Hq hH χ ell e φ hφ).trans
+      (binaryPrimitiveJoint_character_hecke Q p n f hk τ Hq χ hχ ell)
+  · intro q hq haway e g hg σ
+    exact binaryPrimitiveJointSpecializedTrace_normInertia_translate Q p d w Hq hH χ
+      q hq haway e g hg σ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

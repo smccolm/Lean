@@ -1,0 +1,74 @@
+import SourceTraceLeftActionContinuity2212c
+import SourceTraceDiagonalRepresentation2215a
+import SourceOddTraceIdempotent2205b
+
+/-! DUB-17/18 -> actual rank-two realization.
+Both actual algebra branches now construct continuous two-dimensional
+matrices with the original trace. The odd original involution supplies
+the required idempotent; no rank-two basis or matrix action is assumed. -/
+namespace Dubon2026
+noncomputable section
+variable {G K A : Type} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+  [Field K] [TopologicalSpace K] [IsTopologicalRing K] [Ring A] [Algebra K A]
+
+/-- A genuine trace-one idempotent in the original faithful spanning trace
+algebra constructs continuous two-dimensional matrices in both algebra cases. -/
+theorem exists_continuous_matrix_of_trace_idempotent
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (ht : Continuous (fun g => T (σ g))) (hOne : T 1 = 2)
+    (hCyc : ∀ x y, T (x * y) = T (y * x))
+    (hNondeg : ∀ x, (∀ y, T (x * y) = 0) → x = 0)
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (e : A) (he : e * e = e) (hte : T e = 1) :
+    ∃ ρ : G →* Matrix.GeneralLinearGroup (Fin 2) K,
+      Continuous ρ ∧ ∀ g, Matrix.trace (ρ g).val = T (σ g) := by
+  classical
+  by_cases hOff : ∀ x, e * x * (1 - e) = 0
+  · have he' : IsIdempotentElem e := he
+    have htf : T (1 - e) = 1 := by rw [map_sub, hOne, hte]; ring
+    have hfOff : ∀ x, (1 - e) * x * (1 - (1 - e)) = 0 := by
+      intro x
+      simpa only [sub_sub_cancel] using traceIdempotent_opposite_vanishes T hCyc hNondeg e hOff x
+    exact exists_continuous_diagonal_of_scalar_corners σ T hspan ht e hte htf
+      (traceIdempotent_left_scalar T hPol e he hte hOff)
+      (traceIdempotent_left_scalar T hPol (1 - e) he'.one_sub.eq htf hfOff)
+  · push_neg at hOff
+    obtain ⟨x, hx⟩ := hOff
+    let b := e * x * (1 - e)
+    obtain ⟨c, hec, hce, hbc, hcb⟩ :=
+      traceIdempotent_exists_opposite_pair T hOne hCyc hNondeg hPol e he hte x hx
+    have heb : e * b = b := by
+      dsimp only [b]
+      rw [← mul_assoc e (e * x) (1 - e), ← mul_assoc e e x, he]
+    have hbe : b * e = 0 := by
+      dsimp only [b]
+      rw [mul_assoc, (show IsIdempotentElem e from he).one_sub_mul_self, mul_zero]
+    let B := traceIdempotentPairBasis T hCyc hPol e b c he hte heb hec hce hbe hbc hcb
+    refine ⟨algebraIdempotentMatrixRepresentation σ e B,
+      traceIdempotentPair_matrix_continuous σ T hspan ht hCyc hPol e b c he hte
+        heb hec hce hbe hbc hcb, ?_⟩
+    intro g
+    exact traceIdempotentPair_leftAction_trace T hCyc hPol e b c he hte
+      heb hec hce hbe hbc hcb (σ g)
+
+/-- The original odd involution supplies the projector and hence the actual
+continuous rank-two representation with the original trace. -/
+theorem exists_continuous_matrix_of_odd_trace_algebra [CharZero K]
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (ht : Continuous (fun g => T (σ g))) (hOne : T 1 = 2)
+    (hCyc : ∀ x y, T (x * y) = T (y * x))
+    (hNondeg : ∀ x, (∀ y, T (x * y) = 0) → x = 0)
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (a : A) (ha : a * a = 1) (hta : T a = 0) :
+    ∃ ρ : G →* Matrix.GeneralLinearGroup (Fin 2) K,
+      Continuous ρ ∧ ∀ g, Matrix.trace (ρ g).val = T (σ g) := by
+  obtain ⟨he, hte⟩ := traceInvolution_plus_idempotent T hOne a ha hta
+  exact exists_continuous_matrix_of_trace_idempotent σ T hspan ht hOne hCyc hNondeg hPol
+    ((2 : K)⁻¹ • (1 + a)) he hte
+
+end
+end Dubon2026

@@ -1,0 +1,1704 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Local Trace Assessment 2026-11-16.md",
+      "path": "Tools/original-trace-algebra-20261116-2204/Dubon Original Local Trace Assessment 2026-11-16.md.txt",
+      "sha256": "4867362889D8B8B5B7886D11319B36C96D04E904B2BA6BBE1572FE5C5DEB7184"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Trace Algebra Assessment 2026-11-16.md",
+      "path": "Tools/original-trace-algebra-20261116-2204/Dubon Original Trace Algebra Assessment 2026-11-16.md.txt",
+      "sha256": "61A56B3702C1E9B26EC0C3E68D08DCE29D902EA357C69287E8E41F83667E8737"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor.lean.txt",
+      "sha256": "8381E60128E58F33737AFD560E5BF60F460BE72F3F952DE208BD9873FD64B5A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor2162a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor2162a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor2162a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor2162a.lean.txt",
+      "sha256": "B153F8008F80B51647BD348A90DE65B44C56458D1E3F1D8E8F0760DBB5E6A709"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor2162a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor2162a.log",
+      "sha256": "1D4C8E18CBF849687E4B2A81A2F4F7222E6C8E9FED7861487A62086C7EB95DCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor2162b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor2162b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor2162b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor2162b.lean.txt",
+      "sha256": "8381E60128E58F33737AFD560E5BF60F460BE72F3F952DE208BD9873FD64B5A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteContinuousLocalFactor2162b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteContinuousLocalFactor2162b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality.lean.txt",
+      "sha256": "FA55E2E9B38CBEAD6A656CC21F6FFE8C6017AE8F2B7FD15CF2A8E5874609C3D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality2163a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality2163a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality2163a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality2163a.lean.txt",
+      "sha256": "867F7CD6797E16C5AD43A4773071F38F1FF5AB83760D46A9E8476645212B73B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality2163a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality2163a.log",
+      "sha256": "27E50B67EA83AE2B73006B07E36F53A7C2CE6CF876D6579E02CA590FD1E2BC55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality2163b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality2163b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality2163b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality2163b.lean.txt",
+      "sha256": "048491472E52045827E32F083F8B0633F5E7D88AB4BD96C19E7D72DE789C2928"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclicFrobeniusEquality2163b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteCyclicFrobeniusEquality2163b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate.lean.txt",
+      "sha256": "EDF5D2427A4AF6CA504B6E55E4E9F4189C44503E6A68190DB72014EBE134CF80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150a.lean.txt",
+      "sha256": "90A8C62DA47D5985F3F18DC35EA2EDB211E9F4587C534906A96F03FC922D369F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150a.log",
+      "sha256": "DE790AB5B0D5AFEFB47BF0CCDDD611583BBAED0DB9ADC2B69B33E603D807149A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150b.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150b.lean.txt",
+      "sha256": "A6DF6EB431D1EA7462D4C8F69A3E853E813C1E4635CD899F722F1689943CE100"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150b.log",
+      "sha256": "6F5AC655EA77B4BA84B4A061D425BE071846499DAB87033CA7AF0702577C8BBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150c.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150c.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150c.lean.txt",
+      "sha256": "7A0EDE8D52BFFEC1793131213A53977FDE2DD48308695194959453BD1AAB38EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150c.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150c.log",
+      "sha256": "49FC57B928E496E73C2D54C4222FC65A6EB13ED028724145170F9875A7E11BC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150d.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150d.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150d.lean.txt",
+      "sha256": "E1E0F1113ACDE499F0BF55581F45F4321C279FDA0728211D57E24FD2F9E6FC43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150d.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150d.log",
+      "sha256": "0C497234F1F6E1CAB8C459AE3579235DE4BB91BE902C2B1A9F3AC3359FD47120"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150e.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150e.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150e.lean.txt",
+      "sha256": "A99A2B96EF494AF1DA75B6F0C4027EC4087A823B1FF34E35EB1CA13C7C10EDD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150e.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150e.log",
+      "sha256": "2CB2108B606A4C40C0DA3123F9E3B15C7D4F25EABD288A475A9796FE1E184EA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150f.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150f.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150f.lean.txt",
+      "sha256": "EDF5D2427A4AF6CA504B6E55E4E9F4189C44503E6A68190DB72014EBE134CF80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteNormFrobeniusConjugate2150f.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteNormFrobeniusConjugate2150f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteTracePairComparison-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteTracePairComparison-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteTracePairComparison-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteTracePairComparison-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteTracePairComparison.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteTracePairComparison.lean.txt",
+      "sha256": "A25DE4B97666652334090EDA3AB4D7E68720563ED0587F6F01D9A0902C57D3BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteTracePairComparison2166a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteTracePairComparison2166a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteTracePairComparison2166a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteTracePairComparison2166a.lean.txt",
+      "sha256": "3F82132A159242DA1ADA53AA5230782A82EC400598DD0E854721042362D2D91E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteTracePairComparison2166a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAbsoluteTracePairComparison2166a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceActualTraceAlgebra-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceActualTraceAlgebra-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceActualTraceAlgebra.lean.txt",
+      "sha256": "1E155BFAC6288C962991644E2ECF20DCCAA7CE566082F3D5BA4A7AB0FA76FD76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra2187a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceActualTraceAlgebra2187a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra2187a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceActualTraceAlgebra2187a.lean.txt",
+      "sha256": "018BD905E19161F0E312D1F7C088171470B6F9DFB57C01B599A57BD5ABB8A54A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra2187a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceActualTraceAlgebra2187a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity-2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity-2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity-2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity-2176.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity.lean.txt",
+      "sha256": "A1E483200F868BD7539BD3042F8AE1EDD54EA94E3A01B04B783D09AE84FE0CCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity2170a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity2170a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity2170a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity2170a.lean.txt",
+      "sha256": "1A3153318A5E665FE5B3ABFACC270376A9BEC6347E773F381E676B06520381E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity2170a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity2170a.log",
+      "sha256": "49F0359C6CE0D539633BF74F2D7E0FCA47741DCBBA61D32DC0ACB15E5B0A6511"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity2170b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity2170b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity2170b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity2170b.lean.txt",
+      "sha256": "2404AF3F0C345281D86DF47C25E0F510DD8C3A6195C10D186F2F1D89D62061BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity2170b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceAdicFunctionContinuity2170b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift-2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceCompatibleTraceLift-2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift-2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceCompatibleTraceLift-2176.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceCompatibleTraceLift.lean.txt",
+      "sha256": "5B5010DD142E5BB7FA183F53AE68949FCD6A11181186B95335A682F12840E275"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift2171a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceCompatibleTraceLift2171a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift2171a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceCompatibleTraceLift2171a.lean.txt",
+      "sha256": "E3BA086C9D7B7A7937E230AE803778BDE2F03D837E51AD1098D5C7CDCEDF80B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift2171a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceCompatibleTraceLift2171a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace.lean.txt",
+      "sha256": "1910D047A9D93ADE9CF942CAF556B040E983AE33B0A6C6781D6C43661E837D21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace2164a-interruption.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace2164a-interruption.json",
+      "sha256": "B80111177C95D0E08F7953D5A94B7C67F1815E7091C1FFB0AB9E8FB5259495A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace2164a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace2164a.lean.txt",
+      "sha256": "3E2C4AD248D882F819C0A6279B8E839BA97EC218A9D27A1B846E2299215E5264"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace2164a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace2164a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace2164b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace2164b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace2164b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace2164b.lean.txt",
+      "sha256": "343C9980A1405EA900F2E9D1382FFBA7A162FE3108CA7846A40A1C63A99A4AF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCompatibleAdicTrace2164b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneCompatibleAdicTrace2164b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace-2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace-2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace-2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace-2176.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace.lean.txt",
+      "sha256": "2CEAC5429797846795255C426B2F56CCB8EB908A3E76B720B555BDF6CF3D5730"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace2173a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace2173a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace2173a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace2173a.lean.txt",
+      "sha256": "6EDA11C70A0B2A79042905EB079ACEFB710A4C4AACA4F8059DCF2674EEAB3B06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace2173a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace2173a.log",
+      "sha256": "F88EA89D2624C0DBCA88FD312E62BF740E88B2D274050ADC98D6B53C457DEA94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace2173b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace2173b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace2173b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace2173b.lean.txt",
+      "sha256": "1F0C85EE0E7E0E3FA282A333A50B844230300BAE72D19F7DE5CE52A48E920C1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace2173b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneConstructedLocalTrace2173b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicTrace-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalAdicTrace-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicTrace-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalAdicTrace-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalAdicTrace.lean.txt",
+      "sha256": "C6F1D23C677237452FF9E7E62A10A7D1D768483AB2EC77A08B8043CF632397F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicTrace2160a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalAdicTrace2160a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicTrace2160a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalAdicTrace2160a.lean.txt",
+      "sha256": "6C349B7CB2920BAECB15962987D58F4DF5DE8107CB7156D69FD2B564CF1A07CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicTrace2160a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalAdicTrace2160a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace-2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalLocalTrace-2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace-2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalLocalTrace-2176.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalLocalTrace.lean.txt",
+      "sha256": "7FEFDBD746D5EBD4DFE1DFE090995B9C331A7EC3BFC8EBDCA5D19B03C191AE05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace2172a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalLocalTrace2172a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace2172a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalLocalTrace2172a.lean.txt",
+      "sha256": "40947D3D5014E97A221A980A7A18B0035C3A2C975097F24D19BA6D7F11A94E74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace2172a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalLocalTrace2172a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalTraceAlgebra-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalTraceAlgebra-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalTraceAlgebra.lean.txt",
+      "sha256": "F32DE2D9FE60A0B2F7B80F689972678DAD0AB8DEADFDAE6CF80E564F3C2F0B52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra2188a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalTraceAlgebra2188a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra2188a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalTraceAlgebra2188a.lean.txt",
+      "sha256": "1D263BC3125080EE902D44BF53A8208416F8CDF4091CC80E4B1594CE068E50A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra2188a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOneOriginalTraceAlgebra2188a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant.lean.txt",
+      "sha256": "F4831EC49CDE802D6B7F827834729DF91A541C19065FFA70F45BDDF86C0F3B61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant2146a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant2146a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant2146a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant2146a.lean.txt",
+      "sha256": "73E1AA01A37AFC79A0AB35975D32EE35C62FEEF978392110B8C3DA8EA044E034"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant2146a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant2146a.log",
+      "sha256": "FA2F42BFBF5C3130DFCAB8B0ACA5FE2E714CB6873747D47F7DFD1288A6689453"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant2146b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant2146b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant2146b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant2146b.lean.txt",
+      "sha256": "E9B3464F48E5E00E474FDB7903E9BFB2DEFF39ED4A934530CBEF80574DA00169"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointDeterminant2146b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointDeterminant2146b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace.lean.txt",
+      "sha256": "337EC7660703091FAB462E65366C38FC2B3B5D09E8428D123FD4108048BA757D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace2157a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace2157a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace2157a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace2157a.lean.txt",
+      "sha256": "B435A68ABDC2C9779919362991CAFD830DC63A2C496461D8464D66006D8BB544"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace2157a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace2157a.log",
+      "sha256": "F8068170A8E5284F0B176AC8BD572BAD1470EF846F45A750CFEC14F12746DBE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace2157b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace2157b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace2157b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace2157b.lean.txt",
+      "sha256": "E30C46754AE3DA76C270EF686E9838D7B35722D1A894A70624E29F1E24B1F687"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointHeckeTrace2157b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointHeckeTrace2157b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace.lean.txt",
+      "sha256": "4AEA119B38A1C63602F234C024F368042B1BCEFBE3A43187C76145479447F1DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace2147a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace2147a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace2147a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace2147a.lean.txt",
+      "sha256": "878A3691E2460667DDD28183C3FD414FAE69CB10EE42A2B1AED295B3DC1A341E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace2147a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace2147a.log",
+      "sha256": "DB43BDDC7DCE7408CD9CD4C1F82688EB957F2A197AF82353EBEF3BE3963335A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace2147b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace2147b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace2147b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace2147b.lean.txt",
+      "sha256": "49A951B031FE4EA480FE2059822F3FB2BDE4DD5F377A9937F03F5CD5822C050C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTrace2147b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTrace2147b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation.lean.txt",
+      "sha256": "350EC383F29CC7A7302C5C7949F6259BA338BE016DFCE72BE910D554298CE27D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation2153a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation2153a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation2153a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation2153a.lean.txt",
+      "sha256": "BDE7ADB50357A791DB4598D217524122AAF12BE77AE60002124F1D1A629FE1D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation2153a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation2153a.log",
+      "sha256": "061759EBEE50E64B791E3985BE7E9F11B7D2AB49EA3CD09FAABB95612C5E98D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation2153b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation2153b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation2153b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation2153b.lean.txt",
+      "sha256": "34F8002CC125FC33A22BB7C3DF4123A10001C03184EC4D6E5364D62216686993"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceConjugation2153b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceConjugation2153b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceFrobenius-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceFrobenius-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceFrobenius-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceFrobenius-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceFrobenius.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceFrobenius.lean.txt",
+      "sha256": "3FEE85220F9D34CDF4502FCBF34B1086B5AA2505C7634204756081E71D410FED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceFrobenius2151a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceFrobenius2151a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceFrobenius2151a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceFrobenius2151a.lean.txt",
+      "sha256": "83556B0100BB840B272013E37FE8E09058B47B8636E4A0837C70AB376A666D3B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceFrobenius2151a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceFrobenius2151a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities.lean.txt",
+      "sha256": "29D9BFDF5783E45F4AA2A06BF9329938DA53B88286F6DBD0749E8F6D535CFC3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156a.lean.txt",
+      "sha256": "4107221464D3308CC8D98751C30CEDBB140971D7F565F04800225E116969B503"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156a.log",
+      "sha256": "0C5BAEA1754C6B57D50EB9B68407904FA7C6B771AD06A1C00CFF0775C7DD8677"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156b.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156b.lean.txt",
+      "sha256": "176C8FAED5B914F410ABE86A6F65B2A156A70D72B25A4193572D323433D1B5AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156b.log",
+      "sha256": "F0A7D3ED8D1F60E88CD3074F25DF47FCDD872F810F1A41674C5602270302AA5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156c.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156c.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156c.lean.txt",
+      "sha256": "1BD55825266A9DA6986D2494A08E2E056F78F0522DAA418934E96E6E05F02B5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceIdentities2156c.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceIdentities2156c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceRange-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceRange-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceRange-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceRange-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceRange.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceRange.lean.txt",
+      "sha256": "B49EF115377196153B4F3B61A94EFE779A3FCD65DC08AC1D028522BF28E0B83F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceRange2154a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceRange2154a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceRange2154a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceRange2154a.lean.txt",
+      "sha256": "356CB20D32BEB6DCB8A00A147D532EADAA00FFD72FF2DBC60FF75BB35C8B2034"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceRange2154a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceRange2154a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization.lean.txt",
+      "sha256": "07A5B9FABDE6A494B32FF7F97EC8AB52A01C3051B39B7B05AEA8E385E58172F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization2158a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization2158a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization2158a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization2158a.lean.txt",
+      "sha256": "1A091A50B1669EC829DD7DED9004B2EF7C93074C7A25C36BBFE095EA319A4750"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization2158a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization2158a.log",
+      "sha256": "13BC204CC1AAA36A9CF1689D73E089D06BD05F10827CF63DB747850895125E15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization2158b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization2158b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization2158b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization2158b.lean.txt",
+      "sha256": "B7F66CC0ACBE8814E348F7761135884CA4718E2159204BD19EDF656EB37A4477"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecialization2158b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecialization2158b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius.lean.txt",
+      "sha256": "CFF5E0561970C145CF67A80721BF0BC0440206FFBA7569F94C6C4EA118CD8A35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159a.lean.txt",
+      "sha256": "A8609BC4CF19EDE40F6F691D59B702B8048D0E57A91696341B57C6639F7518F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159a.log",
+      "sha256": "1BAFED18C925EE13CA07C1C8C017D3BE0212ADED1DFA13226CFFCB61DD5405F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159b.lean.txt",
+      "sha256": "68DD63E31D945AA7B33E520E696EE5FE506CDBA8FA504645C2E5873C4BCACA90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointTraceSpecializedFrobenius2159b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointUnitDiamond-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointUnitDiamond-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointUnitDiamond-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointUnitDiamond-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointUnitDiamond.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointUnitDiamond.lean.txt",
+      "sha256": "BCEAABB61B704B598D1432F8C7DBB9A12CF08CDF6EADA6E9B024023C55DA2B27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointUnitDiamond2145a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointUnitDiamond2145a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointUnitDiamond2145a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointUnitDiamond2145a.lean.txt",
+      "sha256": "B0EEE4EDCA3CE4467F90F021E8D9286A6902C1CE0802F99EEDA623FECBA06283"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveJointUnitDiamond2145a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveJointUnitDiamond2145a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceAudit1.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceAudit1.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceAudit1.lean.txt",
+      "sha256": "9C5BA03566DD38C5BB9E9A179678DE106795798A837ABBCC5A46B602B1F239D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceAudit1.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceAudit1.log",
+      "sha256": "73D685DCB3457EBCFC02BC474133ED4DA880699CA710076C8F72DBFFCF610181"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceDependencyAudit1.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceDependencyAudit1.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceDependencyAudit1.lean.txt",
+      "sha256": "0B2DC6A259E2C2E5A3CBF55197948C43306096FCAAFE7D2E92B077CBE4D9B936"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceDependencyAudit1.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceDependencyAudit1.log",
+      "sha256": "306C662E3E07C5E9B64332664EB1057638F68318133CB7B3F549F235DFFFE343"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceScratchOwnership2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceScratchOwnership2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceScratchOwnership2165.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceScratchOwnership2165.lean.txt",
+      "sha256": "CCE1150ECB8C95DB9FF14C981ECEDF0526A51AFCE356A863EE0A223BB2B24030"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveTraceScratchOwnership2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveTraceScratchOwnership2165.log",
+      "sha256": "41A9A15A932AE8920CB5708F738F56FBB479E38BFF11E01B2F1C1636966A0926"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitDiamond-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveUnitDiamond-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitDiamond-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveUnitDiamond-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitDiamond.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveUnitDiamond.lean.txt",
+      "sha256": "9A20F55272DA7B3ED18FC3CD4CE030EEE6153A0D5696A5F139F428AA4F27B4F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitDiamond2144a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveUnitDiamond2144a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitDiamond2144a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveUnitDiamond2144a.lean.txt",
+      "sha256": "49B3A76DDF71325CF86DA128DE10D8B9C3F00F69CDB73FAF61F4F3C7686BD4E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimitiveUnitDiamond2144a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGammaOnePrimitiveUnitDiamond2144a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace.lean.txt",
+      "sha256": "4CF24914B231C5D0FCD3AE6A552F7940FA56A011400CEAED4BE4278A1105C50B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace2179a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace2179a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace2179a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace2179a.lean.txt",
+      "sha256": "00B32F7602E74053171017C2B921196164D45244D3A10EAEB5E1A6D3075E0AEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace2179a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace2179a.log",
+      "sha256": "B20CA97EA49568063EE34C165EC6E81DE2D18E128016D7F550D8D5A361CB5F9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace2179b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace2179b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace2179b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace2179b.lean.txt",
+      "sha256": "015C0346E433EC2612F314EB5427ACCE3B571D77CF0163AA37ADBC0E4D00BEFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace2179b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupAlgebraTrace2179b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear.lean.txt",
+      "sha256": "E59F594015C733E4B7669D1D229DD95694B54EC13B40CB992C59157AF276F9C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear2180a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear2180a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear2180a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear2180a.lean.txt",
+      "sha256": "A13FB18C6F853F46F449A27CB5D28E957FEB9181D5DAC0CDA6A4B11D50425476"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear2180a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear2180a.log",
+      "sha256": "94FDC78516DC72879C42D07863F5C321B43D73B759A5DF1274C12D224D1FFD31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear2180b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear2180b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear2180b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear2180b.lean.txt",
+      "sha256": "1AD93C8A16E2770C96ADF36A1B608DFB35067557918E400C7689CBD7C42BBF28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear2180b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceGroupTraceTrilinear2180b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceAudit1.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceAudit1.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceAudit1.lean.txt",
+      "sha256": "11AE8F6CFC97110F770B42C797209D25F5713EF2E5E1E8E2CE1428BFFD384C71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceAudit1.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceAudit1.log",
+      "sha256": "484E2FAE2C0E92A7626ADEF90FD2E5A9BD353BBF9D262CD67BD93C8F86AF0EF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceDependencyAudit1.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceDependencyAudit1.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceDependencyAudit1.lean.txt",
+      "sha256": "1BED2A63E328C3D07E558457C9B9C4D352759CA20DFC42976C2EDF4A40504531"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceDependencyAudit1.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceDependencyAudit1.log",
+      "sha256": "99C6BC2E5880D857A245BB4B79AD6CEB5EC5A7D09ADB4C82844C2497887E7AB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceScratchOwnership2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceScratchOwnership2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceScratchOwnership2176.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceScratchOwnership2176.lean.txt",
+      "sha256": "673A1DE33DD5FBA3EBE2DF0B2FD0672D682188EC1767A844A34C63A4770EC2E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceScratchOwnership2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalLocalTraceScratchOwnership2176.log",
+      "sha256": "852DACA1520EC67422768F8885A86ED23AE2166598989E2283973F0246F8EB99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit1.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit1.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraAudit1.lean.txt",
+      "sha256": "6D949BF34EE83E3FE18959C9212141952C153BCCBB9F79D152361280C1511E22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit1.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraAudit1.log",
+      "sha256": "3105A65E4680CEF9E91505531D22E1E72C9F0EA63EBCE6984D7D45830DE70606"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit2.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit2.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraAudit2.lean.txt",
+      "sha256": "E87E0C0361548B008D30F7A1E95A5418718E15527770FCF987AA0ED4F88CAD8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit2.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraAudit2.log",
+      "sha256": "066A0E2FB5FB61BC5B8A29AE30437B11005A58EB73BD0C6AC2F23A1914753599"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit1.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit1.lean.txt",
+      "sha256": "451902614444F0F6F1A5FEF050D4D7E9AFE9C96A99D2DAE059107A649829AC8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit2.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit2.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit2.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit2.lean.txt",
+      "sha256": "3AF8E8D444EA4D45033CF373692416B4F5F5A488C31F74084C7CC41BE8853DE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit2.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit2.lean.txt",
+      "sha256": "3AF8E8D444EA4D45033CF373692416B4F5F5A488C31F74084C7CC41BE8853DE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit2.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit2.log",
+      "sha256": "FE3E7F5556F1F4B69CD2DC5497C116BD54A9C93E43EF827BAD979C85DFAA975F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit3.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit3.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit3.lean.txt",
+      "sha256": "2300DF6957041777A2E738383B38357837099367EF8C728429A22237CA2866AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit3.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraDependencyAudit3.log",
+      "sha256": "2DEBA9F329B29E528E436BDCCF0DF674EC8821834FB7D501C19D2E67CFCB3463"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraScratchOwnership2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraScratchOwnership2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraScratchOwnership2190.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraScratchOwnership2190.lean.txt",
+      "sha256": "5F1574A81E0895063CE3125A56C2C13333F15AE1181665EEA847F4DA2478269E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraScratchOwnership2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceOriginalTraceAlgebraScratchOwnership2190.log",
+      "sha256": "4D345728A3852B88DE960F7EAA3563123FF6B14516EB4636AC4B6D376D87C51D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift-2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift-2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift-2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift-2176.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift.lean.txt",
+      "sha256": "57401596BBE940867CA221A4DB172ADE4F66446EAEB59EB071DADA76C31C8EBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift2167a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift2167a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift2167a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift2167a.lean.txt",
+      "sha256": "472ADA7468480691B979A433C103BC49B809A58285BB97412377E152865405E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift2167a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift2167a.log",
+      "sha256": "AABB5652F24E639C02D3E9A73CBF00906A68E575C9CC44133CDAF6E00AE6C350"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift2167b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift2167b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift2167b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift2167b.lean.txt",
+      "sha256": "57401596BBE940867CA221A4DB172ADE4F66446EAEB59EB071DADA76C31C8EBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift2167b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicFamilyLift2167b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction-2176.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicReconstruction-2176.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction-2176.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicReconstruction-2176.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicReconstruction.lean.txt",
+      "sha256": "0497FC85F18315FD42DF40062CCCBE602E23BFB0D2DE8F7F8A2A0A9B2F5819B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction2168a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicReconstruction2168a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction2168a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicReconstruction2168a.lean.txt",
+      "sha256": "1AFA9C17C82821C88082601BC01C03B25D1ADBB1447B2B2D7818CAC7B125F301"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction2168a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourcePositiveAdicReconstruction2168a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear.lean.txt",
+      "sha256": "C7879ABFC51E88B84887CB7FA5800FB034EC5FCF994F686B3E162D49EBA9A0A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear2178a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear2178a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear2178a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear2178a.lean.txt",
+      "sha256": "3F7A441C9EDBD1853A7B0E1611BEAA2C85C6F5F9047D585D6D02A4E523AB6A0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear2178a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear2178a.log",
+      "sha256": "5963AD6091657A2342FB36E6CCB29041A0EB3B20772D072FD511BC304744E99B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear2178b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear2178b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear2178b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear2178b.lean.txt",
+      "sha256": "C7879ABFC51E88B84887CB7FA5800FB034EC5FCF994F686B3E162D49EBA9A0A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear2178b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceDeterminantTrilinear2178b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner.lean.txt",
+      "sha256": "49D57BEC20A3227400C1091C0BADD9F697197D8491F21716EB34BE6CF34D7203"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner2186a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner2186a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner2186a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner2186a.lean.txt",
+      "sha256": "387FD8EF525092ED906FFA5021776DEB4D8964B3742E3D2CD9C75C937DE35194"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner2186a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner2186a.log",
+      "sha256": "7B7495EC75F896D6F1B92CD53B4BF6FE0311827189B35463C4A4216734EA68E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner2186b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner2186b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner2186b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner2186b.lean.txt",
+      "sha256": "1FD2654D52F55274949E9C7F423B6ABAD8CEC01AF42F00294CD9E142EA83B00F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner2186b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceIdempotentCorner2186b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceQuotientQuadratic-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceQuotientQuadratic-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceQuotientQuadratic.lean.txt",
+      "sha256": "F39D290308FACFA1DB0293879E77DE65D834D8BEDFE768C1566721CCB01910D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic2185a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceQuotientQuadratic2185a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic2185a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceQuotientQuadratic2185a.lean.txt",
+      "sha256": "42F2D3213CC96F59ACE0469C9D482900DA26E86DC28208BED78DA6A59A1E256B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic2185a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceQuotientQuadratic2185a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical.lean.txt",
+      "sha256": "0EC30CD24066317B75F18086ABD2899CD065B29E1F53DA85F054A8C96770112A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical2182a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical2182a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical2182a.lean.txt",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical2182a.lean.txt",
+      "sha256": "B2AF82E5EBB6416CCFBF3CBF878A477269922344EEB3B6958EE243E9FEB605D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical2182a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical2182a.log",
+      "sha256": "FF3F9EF850917B49FFCCA51E4DC694070A780298E979F618D08C701E37BD2959"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical2182b.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical2182b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical2182b.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical2182b.lean.txt",
+      "sha256": "0811C8C953E85EBAFBA79E440DA6B7BAE377F2F8120F3F8644D33AC5E7E64A2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical2182b.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadical2182b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient-2190.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadicalQuotient-2190.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient-2190.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadicalQuotient-2190.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadicalQuotient.lean.txt",
+      "sha256": "77F5D0D28CDC96D49DA59A24D9DBDA48EF8CB9C77CC1242F9372B9A40208D022"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient2184a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadicalQuotient2184a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient2184a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadicalQuotient2184a.lean.txt",
+      "sha256": "3D13151F9F4CA5041F068FF38405A0B326295B62204C4229418BD677CBEE70CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient2184a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceTraceRadicalQuotient2184a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceConjugation-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceConjugation-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceConjugation-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceConjugation-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceConjugation.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceConjugation.lean.txt",
+      "sha256": "ACFDCC59D4DB13866DCC9716457F1E699602980613F4C4AC2E24C4B0E7518BC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceConjugation2152a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceConjugation2152a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceConjugation2152a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceConjugation2152a.lean.txt",
+      "sha256": "ACFDCC59D4DB13866DCC9716457F1E699602980613F4C4AC2E24C4B0E7518BC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceConjugation2152a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceConjugation2152a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceProduct-2165.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceProduct-2165.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceProduct-2165.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceProduct-2165.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceProduct.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceProduct.lean.txt",
+      "sha256": "4F0F00FC70FE8AE466833FD256914E7F256E2E664CE57AD1042692FAE7ABCDF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceProduct2155a.exit",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceProduct2155a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceProduct2155a.lean",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceProduct2155a.lean.txt",
+      "sha256": "4F0F00FC70FE8AE466833FD256914E7F256E2E664CE57AD1042692FAE7ABCDF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceProduct2155a.log",
+      "path": "Tools/original-trace-algebra-20261116-2204/SourceUnitTraceProduct2155a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\characteristic-zero-reconstruction-reuse-2169.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/characteristic-zero-reconstruction-reuse-2169.json",
+      "sha256": "982C2C557E4547A4FAD3ABE4600C6BFA870B5E292D972496C993045D1CABE340"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-local-trace-audit-config-2176.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-local-trace-audit-config-2176.json",
+      "sha256": "67A716582955E0C3E6BDC9F16DFCC1684FD35E8E5BE12C8208E6BE3819B10F6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-local-trace-promotion-route-2183.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-local-trace-promotion-route-2183.json",
+      "sha256": "0CBF80F9C3DD5442A020CA045C48C22C0740F0EEE51C26717C8715405A6800BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-local-trace-route-2175.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-local-trace-route-2175.json",
+      "sha256": "FD5D68BAF3CA466012635548FD922735E1E34B5E9EDADD9B7490F851C806612F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-trace-algebra-audit-config-2190.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-trace-algebra-audit-config-2190.json",
+      "sha256": "15E7E319AF99E1E0D37F3A0C43CC340A70075E94FA15AB5482C4BE145640DF3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-trace-algebra-audit-config-2190b.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-trace-algebra-audit-config-2190b.json",
+      "sha256": "09186AD7E2BE7263FA735CF448A2190B11EF52FE196D58785664A355C400399E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-trace-algebra-audit-config-2190c.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-trace-algebra-audit-config-2190c.json",
+      "sha256": "A40731A1C0AC738C4A35C7A4844DA0FF40DC3495656FE47B2D68103D84EDDE0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-trace-algebra-promotion-route-2204.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-trace-algebra-promotion-route-2204.json",
+      "sha256": "586C40843F09755D5CA94D61E758567BAF3148E244560AAFCBDBACAFD52F4E0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-trace-algebra-registration-correction-2190b.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-trace-algebra-registration-correction-2190b.json",
+      "sha256": "D76FA07DD9F53DB614BA7EB7A0F8B26896F92691561C950A4C7319EBAB3CCC79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-trace-algebra-route-2189.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/original-trace-algebra-route-2189.json",
+      "sha256": "A5CCF8E125588FEB43BFDF2CDDAD4C8BD2EABE8C7F535DA16E762BD837723678"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_local_trace_audit_2176.py",
+      "path": "Tools/original-trace-algebra-20261116-2204/prepare_original_local_trace_audit_2176.py",
+      "sha256": "924E6F2ACB78CB2AF6E95D4BC9A2EE2694FE706493632D1DE49139A6743F84AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_trace_algebra_audit_2190.py",
+      "path": "Tools/original-trace-algebra-20261116-2204/prepare_original_trace_algebra_audit_2190.py",
+      "sha256": "D584D9D01C8A0B42BEA58B3C5D71F6F1522A2F8AC9CEDA3EFA8B4684A61F576A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_trace_audit_2165.py",
+      "path": "Tools/original-trace-algebra-20261116-2204/prepare_primitive_trace_audit_2165.py",
+      "sha256": "C57871C4752A815FF20DE66F8640BC96077E47B6376545FA968763DB5817C37F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-joint-trace-route-2161.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/primitive-joint-trace-route-2161.json",
+      "sha256": "C004F16644393BEAF92292A35A58119C594BC1D9AAD3AA42A0AC913461BD507A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-trace-audit-config-2165.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/primitive-trace-audit-config-2165.json",
+      "sha256": "361D447E195ABDA2136C89212CD8D70DFEB5E37CFDB04593C900974E7448D9E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\rank-two-trace-realization-route-2177.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/rank-two-trace-realization-route-2177.json",
+      "sha256": "C38229902A68DDCEB3071CAB0B9F4678232F497F79C1EBA0600D6FD3C98AF845"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_local_trace_audit_2181.py",
+      "path": "Tools/original-trace-algebra-20261116-2204/record_original_local_trace_audit_2181.py",
+      "sha256": "F0A005457CBF72B8F83D7D5759C2179E95FF638C1A4B7E89881F397BB135BFE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_trace_algebra_audit_2193c.py",
+      "path": "Tools/original-trace-algebra-20261116-2204/record_original_trace_algebra_audit_2193c.py",
+      "sha256": "6D3149A556B34EB85A06EAC09E73A459469593427D8B10C87FE3E434AF1D9ED7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_trace_audit_2174.py",
+      "path": "Tools/original-trace-algebra-20261116-2204/record_primitive_trace_audit_2174.py",
+      "sha256": "E00B315AA1017B115E1EA3BF415C2C976BA7337E50693D88A1873AA9DF0E37C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\run_original_trace_algebra_dependency_audit_2190c.ps1",
+      "path": "Tools/original-trace-algebra-20261116-2204/run_original_trace_algebra_dependency_audit_2190c.ps1",
+      "sha256": "1C4AFB0C9F96E7745845582B5356782BCAD98273C04C16E1453264BF66E0CB1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\run_original_trace_algebra_successor_audit_2190b.ps1",
+      "path": "Tools/original-trace-algebra-20261116-2204/run_original_trace_algebra_successor_audit_2190b.ps1",
+      "sha256": "038246D9104869764A90347815B9BCE95CADCCE507FC5C7E73AEB1C8713966E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-trace-1-reuse-review-20261116.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/source-gammaone-primitive-trace-1-reuse-review-20261116.json",
+      "sha256": "F9084DA572E0B5040195B11A46B345F53D130CCA3401FB44AADE1EDBFF4100F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gammaone-primitive-trace-1-scratch-receipt.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/source-gammaone-primitive-trace-1-scratch-receipt.json",
+      "sha256": "CBCF607DCE97D418ACDA3B1AEFA07D93238AF10C0003B4451E440F8E284F367A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-local-trace-1-reuse-review-20261116.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/source-original-local-trace-1-reuse-review-20261116.json",
+      "sha256": "DAEBC20704A566DABC90B129201477025E5FC7F2455A57C9046042A45201C53F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-local-trace-1-scratch-receipt.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/source-original-local-trace-1-scratch-receipt.json",
+      "sha256": "C6A8C67F3CD51FC43E1E4B7B2700AEE1CD684131E115D2BA9AE17D2734C8D1D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-trace-algebra-1-reuse-review-20261116.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/source-original-trace-algebra-1-reuse-review-20261116.json",
+      "sha256": "FB9542B6AB7D04A494F50ABEB72ED4F1465B1A26755367B8730C615E9426EF5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-trace-algebra-1-scratch-receipt.json",
+      "path": "Tools/original-trace-algebra-20261116-2204/source-original-trace-algebra-1-scratch-receipt.json",
+      "sha256": "B59EA0D313E663C9EE5E2EE1DC975EAC827F1C9A6EB26908EF59984042DFCAEF"
+    }
+  ]
+}

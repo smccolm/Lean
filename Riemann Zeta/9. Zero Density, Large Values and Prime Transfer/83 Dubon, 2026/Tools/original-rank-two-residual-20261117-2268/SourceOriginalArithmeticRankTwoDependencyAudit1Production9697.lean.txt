@@ -1,0 +1,33 @@
+import Dubon2026.SourceGammaOneJointArithmeticKernel
+import Dubon2026.SourceGammaOneOriginalAdicArithmetic
+import Dubon2026.SourceGammaOneLocalTraceArithmetic
+import Dubon2026.SourceAbsoluteArithmeticFactor
+import Dubon2026.SourceGammaOneLocalArithmeticRankTwo
+import Dubon2026.SourceGammaOneArithmeticRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+private def runOriginalArithmeticRankTwoDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneJointArithmeticKernel, `Dubon2026.SourceGammaOneOriginalAdicArithmetic, `Dubon2026.SourceGammaOneLocalTraceArithmetic, `Dubon2026.SourceAbsoluteArithmeticFactor, `Dubon2026.SourceGammaOneLocalArithmeticRankTwo, `Dubon2026.SourceGammaOneArithmeticRankTwo, `Dubon2026.SourceAdicPrimePowerScalar, `Dubon2026.SourceCyclotomicNormFrobenius, `Dubon2026.SourceAbsoluteComplexConjugation, `Dubon2026.SourceAdicCyclotomicDeterminant, `Dubon2026.SourceOriginalAdicDeterminant, `Dubon2026.SourceAdicQuotientContinuity, `Dubon2026.SourceOriginalLocalDeterminant, `Dubon2026.SourcePrimitiveLocalOddness, `Dubon2026.SourceGroupAlgebraQuotientSpan, `Dubon2026.SourceSpanningTraceAlgebra, `Dubon2026.SourceTraceOffDiagonal, `Dubon2026.SourceTraceOppositePair, `Dubon2026.SourceTraceLeftIdealCoordinates, `Dubon2026.SourceTraceLeftIdealBasis, `Dubon2026.SourceTraceLeftActionTrace, `Dubon2026.SourceSpanningTraceContinuity, `Dubon2026.SourceTraceLeftActionContinuity, `Dubon2026.SourceScalarCornerCharacter, `Dubon2026.SourceTraceDiagonalRepresentation, `Dubon2026.SourceOddTraceIdempotent, `Dubon2026.SourceContinuousTraceRealization, `Dubon2026.SourceMatrixTraceDeterminant, `Dubon2026.SourceOriginalTraceMatrixConsumer, `Dubon2026.SourceGammaOneLocalRankTwo, `Dubon2026.SourceGammaOneContinuousRankTwo, `Dubon2026.SourceCyclotomicNormInertia, `Dubon2026.SourceUnitTraceKernel, `Dubon2026.SourceGammaOneJointTraceInertia, `Dubon2026.SourceGammaOneOriginalAdicInertia, `Dubon2026.SourceGammaOneLocalTraceInertia, `Dubon2026.SourceTraceDiagonalKernel, `Dubon2026.SourceContinuousTraceKernel, `Dubon2026.SourceTraceActionKernel, `Dubon2026.SourceOriginalTraceMatrixKernel, `Dubon2026.SourceGammaOneLocalUnramifiedRankTwo, `Dubon2026.SourceGammaOneUnramifiedRankTwo]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate, `Dubon2026.sourceAbsoluteArithmeticRestriction_surjective, `Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_descent, `Dubon2026.absolute_continuous_normInertia_arithmetic_descent, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia, `Dubon2026.sourceUnitTrace_kernel_translate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_original_character, `Dubon2026.absolute_continuous_cyclic_eq_of_norm_frobenius, `Dubon2026.continuous_positive_adic_quotient, `Dubon2026.positiveAdic_ext, `Dubon2026.exists_continuous_matrix_of_original_trace_kernel, `Dubon2026.sourceTraceAction_eq_one_of_translate, `Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel, `Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel, `Dubon2026.traceIdempotentPair_matrix_continuous, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd, `Dubon2026.sourcePrimitiveCoefficient_exists_local_structure, `Dubon2026.sourceRationalPrimeExtensionResidue_charP]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL ARITHMETIC RANK TWO DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the original cusp-form rank-two consumer. Original finite arithmetic factors, complete trace kernel invariance, faithful matrix-kernel detection, native restriction surjectivity, continuous factorization and original coefficient construction are consumed. Full association and DUB-17--20 remain OPEN."
+
+#eval runOriginalArithmeticRankTwoDependencyAudit

@@ -1,0 +1,164 @@
+{
+  "recordedUTC": "2026-11-17T06:27:42.524103+00:00",
+  "modules": [
+    "SourceTraceDeterminantTrilinear",
+    "SourceGroupAlgebraTrace",
+    "SourceGroupTraceTrilinear",
+    "SourceTraceRadical",
+    "SourceTraceRadicalQuotient",
+    "SourceTraceQuotientQuadratic",
+    "SourceTraceIdempotentCorner",
+    "SourceActualTraceAlgebra",
+    "SourceGammaOneOriginalTraceAlgebra"
+  ],
+  "queries": [
+    "Dubon2026.traceDeterminant_trilinear",
+    "Dubon2026.sourceGroupTrace",
+    "Dubon2026.sourceGroupTrace_of",
+    "Dubon2026.sourceGroupTrace_cyclic",
+    "Dubon2026.sourceGroupTrace_trilinear",
+    "Dubon2026.sourceTraceRadical",
+    "Dubon2026.sourceTraceRadical_mem",
+    "Dubon2026.sourceTraceRadical_isTwoSided",
+    "Dubon2026.sourceTraceRadical_trace_zero",
+    "Dubon2026.sourceTraceQuotientLinear",
+    "Dubon2026.sourceTraceQuotientLinear_mk",
+    "Dubon2026.sourceTraceQuotientLinear_cyclic",
+    "Dubon2026.sourceTraceQuotientLinear_nondegenerate",
+    "Dubon2026.sourceTraceRadical_polarized",
+    "Dubon2026.sourceTraceQuotient_polarized",
+    "Dubon2026.traceOneIdempotent_corner_scalar",
+    "Dubon2026.exists_algebra_of_trace_determinant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra"
+  ],
+  "theorems": [
+    "Dubon2026.traceDeterminant_trilinear",
+    "Dubon2026.sourceGroupTrace_of",
+    "Dubon2026.sourceGroupTrace_cyclic",
+    "Dubon2026.sourceGroupTrace_trilinear",
+    "Dubon2026.sourceTraceRadical_mem",
+    "Dubon2026.sourceTraceRadical_trace_zero",
+    "Dubon2026.sourceTraceQuotientLinear_mk",
+    "Dubon2026.sourceTraceQuotientLinear_cyclic",
+    "Dubon2026.sourceTraceQuotientLinear_nondegenerate",
+    "Dubon2026.sourceTraceRadical_polarized",
+    "Dubon2026.sourceTraceQuotient_polarized",
+    "Dubon2026.traceOneIdempotent_corner_scalar",
+    "Dubon2026.exists_algebra_of_trace_determinant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra"
+  ],
+  "constructions": [
+    "Dubon2026.sourceGroupTrace",
+    "Dubon2026.sourceTraceRadical",
+    "Dubon2026.sourceTraceRadical_isTwoSided",
+    "Dubon2026.sourceTraceQuotientLinear"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra"
+  ],
+  "proofEdges": [
+    "Dubon2026.traceDeterminant_trilinear",
+    "Dubon2026.sourceGroupTrace_of",
+    "Dubon2026.sourceGroupTrace_cyclic",
+    "Dubon2026.sourceGroupTrace_trilinear",
+    "Dubon2026.sourceTraceRadical_trace_zero",
+    "Dubon2026.sourceTraceQuotientLinear_mk",
+    "Dubon2026.sourceTraceQuotientLinear_cyclic",
+    "Dubon2026.sourceTraceQuotientLinear_nondegenerate",
+    "Dubon2026.sourceTraceRadical_polarized",
+    "Dubon2026.sourceTraceQuotient_polarized",
+    "Dubon2026.traceOneIdempotent_corner_scalar",
+    "Dubon2026.exists_algebra_of_trace_determinant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_compatible_original_adic_trace",
+    "MonoidAlgebra.induction_on",
+    "Submodule.liftQ",
+    "Ideal.Quotient.eq_zero_iff_mem",
+    "MonoidHom.toHomUnits"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceTraceRadical_mem",
+    "Dubon2026.sourceGroupTrace",
+    "Dubon2026.sourceTraceRadical",
+    "Dubon2026.sourceTraceRadical_isTwoSided",
+    "Dubon2026.sourceTraceQuotientLinear"
+  ],
+  "files": [
+    {
+      "version": "SourceTraceDeterminantTrilinear2178b",
+      "module": "SourceTraceDeterminantTrilinear",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear.lean",
+      "sourceSha256": "C7879ABFC51E88B84887CB7FA5800FB034EC5FCF994F686B3E162D49EBA9A0A7",
+      "canonicalSha256": "C7879ABFC51E88B84887CB7FA5800FB034EC5FCF994F686B3E162D49EBA9A0A7",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGroupAlgebraTrace2179b",
+      "module": "SourceGroupAlgebraTrace",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace.lean",
+      "sourceSha256": "015C0346E433EC2612F314EB5427ACCE3B571D77CF0163AA37ADBC0E4D00BEFC",
+      "canonicalSha256": "4CF24914B231C5D0FCD3AE6A552F7940FA56A011400CEAED4BE4278A1105C50B",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGroupTraceTrilinear2180b",
+      "module": "SourceGroupTraceTrilinear",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear.lean",
+      "sourceSha256": "1AD93C8A16E2770C96ADF36A1B608DFB35067557918E400C7689CBD7C42BBF28",
+      "canonicalSha256": "E59F594015C733E4B7669D1D229DD95694B54EC13B40CB992C59157AF276F9C3",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceTraceRadical2182b",
+      "module": "SourceTraceRadical",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical.lean",
+      "sourceSha256": "0811C8C953E85EBAFBA79E440DA6B7BAE377F2F8120F3F8644D33AC5E7E64A2F",
+      "canonicalSha256": "0EC30CD24066317B75F18086ABD2899CD065B29E1F53DA85F054A8C96770112A",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceTraceRadicalQuotient2184a",
+      "module": "SourceTraceRadicalQuotient",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient.lean",
+      "sourceSha256": "3D13151F9F4CA5041F068FF38405A0B326295B62204C4229418BD677CBEE70CD",
+      "canonicalSha256": "77F5D0D28CDC96D49DA59A24D9DBDA48EF8CB9C77CC1242F9372B9A40208D022",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceTraceQuotientQuadratic2185a",
+      "module": "SourceTraceQuotientQuadratic",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic.lean",
+      "sourceSha256": "42F2D3213CC96F59ACE0469C9D482900DA26E86DC28208BED78DA6A59A1E256B",
+      "canonicalSha256": "F39D290308FACFA1DB0293879E77DE65D834D8BEDFE768C1566721CCB01910D2",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceTraceIdempotentCorner2186b",
+      "module": "SourceTraceIdempotentCorner",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner.lean",
+      "sourceSha256": "1FD2654D52F55274949E9C7F423B6ABAD8CEC01AF42F00294CD9E142EA83B00F",
+      "canonicalSha256": "49D57BEC20A3227400C1091C0BADD9F697197D8491F21716EB34BE6CF34D7203",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceActualTraceAlgebra2187a",
+      "module": "SourceActualTraceAlgebra",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra.lean",
+      "sourceSha256": "018BD905E19161F0E312D1F7C088171470B6F9DFB57C01B599A57BD5ABB8A54A",
+      "canonicalSha256": "1E155BFAC6288C962991644E2ECF20DCCAA7CE566082F3D5BA4A7AB0FA76FD76",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneOriginalTraceAlgebra2188a",
+      "module": "SourceGammaOneOriginalTraceAlgebra",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra.lean",
+      "sourceSha256": "1D263BC3125080EE902D44BF53A8208416F8CDF4091CC80E4B1594CE068E50A2",
+      "canonicalSha256": "F32DE2D9FE60A0B2F7B80F689972678DAD0AB8DEADFDAE6CF80E564F3C2F0B52",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "routeAssessment": "original-trace-algebra-route-2189.json",
+  "productionMutation": false,
+  "scope": "Original constructed characteristic-zero trace algebra with a genuine unit action, nondegenerate trace pairing and scalar idempotent corners. Rank-two matrices, continuity, exceptional primes and full source gates remain OPEN."
+}

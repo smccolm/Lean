@@ -1,0 +1,73 @@
+import SourceCyclotomicNormInertia
+import SourceUnitTraceKernel
+import SourceGammaOneJointTraceInertia
+import SourceGammaOneOriginalAdicInertia
+import SourceGammaOneLocalTraceInertia
+import SourceTraceDiagonalKernel
+import SourceContinuousTraceKernel
+import SourceTraceActionKernel
+import SourceOriginalTraceMatrixKernel
+import SourceGammaOneLocalUnramifiedRankTwo
+import SourceGammaOneUnramifiedRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia
+#print axioms Dubon2026.sourceUnitTrace_kernel_translate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate
+#print axioms Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel
+#print axioms Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel
+#print axioms Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel
+#print axioms Dubon2026.sourceTraceAction_eq_one_of_translate
+#print axioms Dubon2026.exists_continuous_matrix_of_original_trace_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo
+
+private def runOriginalUnramifiedRankTwoAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCyclotomicNormInertia, `SourceUnitTraceKernel, `SourceGammaOneJointTraceInertia, `SourceGammaOneOriginalAdicInertia, `SourceGammaOneLocalTraceInertia, `SourceTraceDiagonalKernel, `SourceContinuousTraceKernel, `SourceTraceActionKernel, `SourceOriginalTraceMatrixKernel, `SourceGammaOneLocalUnramifiedRankTwo, `SourceGammaOneUnramifiedRankTwo]
+  let theorems : Array Name := #[`Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia, `Dubon2026.sourceUnitTrace_kernel_translate, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate, `Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel, `Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel, `Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel, `Dubon2026.sourceTraceAction_eq_one_of_translate, `Dubon2026.exists_continuous_matrix_of_original_trace_kernel, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL UNRAMIFIED RANK TWO AUDIT PASS: {count} theorems including private/generated declarations. Original continuous rank-two matrices with exact Fourier and weight Frobenius values, actual oddness and trivial norm inertia outside Q*p proved for p greater than three. Full local association and source gates remain OPEN."
+
+#eval runOriginalUnramifiedRankTwoAudit
+
+#lint in SourceCyclotomicNormInertia
+#lint in SourceUnitTraceKernel
+#lint in SourceGammaOneJointTraceInertia
+#lint in SourceGammaOneOriginalAdicInertia
+#lint in SourceGammaOneLocalTraceInertia
+#lint in SourceTraceDiagonalKernel
+#lint in SourceContinuousTraceKernel
+#lint in SourceTraceActionKernel
+#lint in SourceOriginalTraceMatrixKernel
+#lint in SourceGammaOneLocalUnramifiedRankTwo
+#lint in SourceGammaOneUnramifiedRankTwo

@@ -1,0 +1,85 @@
+import SourceGammaOnePrimitiveJointDeterminant
+import Dubon2026.SourceGammaOnePrimitiveJointFrobeniusWitness
+
+/-! DUB-17/18 -> original all-weight association -> compatible trace
+specialization. The actual Galois action and multiplicative determinant give
+a continuous candidate trace in the joint operator ring. Its value at every
+original good-prime Frobenius is exactly the original Hecke generator.
+Membership in the Hecke image for arbitrary Galois elements, pseudocharacter
+identities and characteristic-zero realization remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup SourceCuspBoundary CoefficientReduction
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+private theorem trace_of_quadratic {G R : Type} [Group G] [Ring R]
+    (ρ : G →* R) (g : G) (H D : R) (h : ρ g * H = ρ g * ρ g + D) :
+    ρ g + ρ g⁻¹ * D = H := by
+  apply ((Group.isUnit g).map ρ).mul_left_cancel
+  calc
+    ρ g * (ρ g + ρ g⁻¹ * D) = ρ g * ρ g + D := by
+      rw [mul_add, ← mul_assoc, ← map_mul ρ g g⁻¹, mul_inv_cancel, map_one, one_mul]
+    _ = ρ g * H := h.symm
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+
+/-- The trace expression determined by the actual joint Galois action and
+its original multiplicative determinant term. -/
+def binaryPrimitiveJointTrace (σ : Qbar ≃ₐ[ℚ] Qbar) :
+    binaryPrimitiveJointOperatorRing Q p n w :=
+  binaryPrimitiveJointGaloisRep Q p n w σ +
+    binaryPrimitiveJointGaloisRep Q p n w σ⁻¹ * binaryPrimitiveJointDeterminant Q p n w σ
+
+/-- The actual candidate trace is continuous in the finite discrete ring. -/
+theorem binaryPrimitiveJointTrace_continuous :
+    @Continuous _ _ _ ⊥ (binaryPrimitiveJointTrace Q p n w) := by
+  letI : TopologicalSpace (binaryPrimitiveJointOperatorRing Q p n w) := ⊥
+  letI : DiscreteTopology (binaryPrimitiveJointOperatorRing Q p n w) := ⟨rfl⟩
+  exact (binaryPrimitiveJointGaloisRep_continuous Q p n w).add
+    (((binaryPrimitiveJointGaloisRep_continuous Q p n w).comp continuous_inv).mul
+      (binaryPrimitiveJointDeterminant_continuous Q p n w))
+
+/-- Actual original local Frobenius witnesses evaluate the same trace expression
+at the original Hecke generator; all geometric and diamond-label inputs are proved. -/
+theorem binaryPrimitiveJointTrace_exists_local_frobenius
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (ell : sourceBinaryHeckePrime (Q * N))
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure ell.val ell.property.1) :
+    let A := sourceRationalLocalValuation ell.val ell.property.1 e
+    ∃ d : A.decompositionSubgroup ℚ,
+      (∀ a : IsLocalRing.ResidueField A, d • a = a ^ ell.val) ∧
+      binaryPrimitiveJointTrace Q p n w d.val =
+        binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inl ell)) := by
+  obtain ⟨g, hg, d, hd, hpoly⟩ :=
+    binaryPrimitiveJointGaloisRep_exists_local_frobenius Q p n w Hq hH ell e
+  let A := sourceRationalLocalValuation ell.val ell.property.1 e
+  letI := GaussReduction.residue_charP_of_prime_mem_nonunits A ell.val ell.property.1
+    (sourceRationalLocalValuation_prime ell.val ell.property.1 e)
+  have hD := binaryPrimitiveJointDeterminant_frobenius Q p n w A ell Hq g hg d hd
+  refine ⟨d, hd, ?_⟩
+  exact trace_of_quadratic (binaryPrimitiveJointGaloisRep Q p n w) d.val _ _
+    (hpoly.trans (congrArg
+      (binaryPrimitiveJointGaloisRep Q p n w d.val * binaryPrimitiveJointGaloisRep Q p n w d.val + ·)
+      hD.symm))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

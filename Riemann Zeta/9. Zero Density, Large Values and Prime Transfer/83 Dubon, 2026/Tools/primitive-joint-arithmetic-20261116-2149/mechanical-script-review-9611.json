@@ -1,0 +1,26 @@
+{
+  "recordedUTC": "2026-11-17T05:36:44.427827+00:00",
+  "stage": "Before integration and execution",
+  "corrections": [
+    {
+      "file": "record_source_primitive_joint_arithmetic_9611.py",
+      "changes": [
+        "Restore repository folder 9. Zero Density from accidental 43. substitution",
+        "Restore diagnostic regex digits [1-9][0-9]*",
+        "Restore displayed aggregate 9,611 from accidental 43,611"
+      ]
+    },
+    {
+      "file": "compare_primitive_joint_arithmetic_9611.py",
+      "changes": [
+        "Each generated declaration must have exactly one owner; restore len(owners)==1 while retaining two independently audited scopes"
+      ]
+    }
+  ],
+  "verification": "Preflight passed after these mechanical script corrections. No source bodies, proof limits, diagnostic requirements, ownership conditions or acceptance gates were weakened.",
+  "sourceHashes": {
+    "record_source_primitive_joint_arithmetic_9611.py": "C3A4DA03DD695346C291EC06A9194C60EF0FEF3332721F40EB5DF27BAF86F14D",
+    "compare_primitive_joint_arithmetic_9611.py": "3FB1252CCE26915B478050953E0B2B5E229C45B5EEAA75599F5CEBFAED8153A2",
+    "integrate_source_primitive_joint_arithmetic_9611.py": "399E794DC8B8472580268FB02025720B75E00FBF4128FD23BFA76047FE8339B6"
+  }
+}

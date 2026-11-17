@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-17",
+  "sourceDependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> continuous rank-two representation of the prescribed arithmetic group.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-arithmetic-rank-two-route-2243.json",
+    "sha256": "77D75259FBF7B89E87E9D4836AB73067099F23B9A9ED1DA47DA23E2C9EB9ADB3",
+    "review": {
+      "recordedUTC": "2026-11-17T07:58:40.801600+00:00",
+      "date": "2026-11-17",
+      "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> continuous rank-two representation of the prescribed arithmetic group.",
+      "obligations": "The original primitive form of weight at least two and prime p greater than three constructs its genuine local coefficient extension and continuous two-dimensional representation of the prescribed arithmetic group, retaining original Fourier norm-Frobenius traces, weight determinants and odd complex conjugation. Finite arithmetic factors give finite trace translation invariance on the original restriction kernel. Frobenius uniqueness and adic separation transfer this to the complete trace; the faithful trace algebra and kernel-retaining matrix construction kill that kernel. Native surjective restriction and compact quotient factorization give actual continuous arithmetic descent. No supplied representation, trace, arithmetic kernel, lattice or continuity certificate remains in this consumer.",
+      "remaining": "Remaining local/image/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN. Full scratch and subsequent assembled verification are required.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\AlgebraIdempotentMatrixAction.lean",
+          "sha256": "779C10321074F24D8CF40A422276A18207026F315D038E1E8874BAA0B1AE5903"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\AlgebraIdempotentLeftIdeal.lean",
+          "sha256": "F65995ED4FB22EB8BDC7D7034EA71EDE67C5E3AFB840E6649657BE8CCA66F475"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightParity.lean",
+          "sha256": "3A9E83402C15C16C91F357A1F649D6ACF9DBD9E96ABCDB313BB0B16DA2F46F47"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicCharacter.lean",
+          "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CyclotomicConjugationPower.lean",
+          "sha256": "542D4097285FC2861C2A3E243A44314034DB6327D3F9DC491AD782B843A1D728"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalValuation.lean",
+          "sha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateInertia.lean",
+          "sha256": "4AA94AF9662DB38874444330F2609EAFCB522C2F78B08E4A887531B39588BBAD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveLocalCoefficients.lean",
+          "sha256": "0EBA3EAE554D519E5244AF28BC33E6E151242C847E15F95BE842078AD42D0D74"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualCharacteristic.lean",
+          "sha256": "590B06EFA0C45075CA3E981D1AB53EF00C871552F44AEFA28E6686E76757BB15"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneOriginalLocalTrace.lean",
+          "sha256": "EFAB5FBBCC6108D1BB8865FC3BF541012BE1741FB1C4CBE2BEF23831C87B5DFC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclicFrobeniusEquality.lean",
+          "sha256": "CC0BBDE155F173CD15AFC52F6337612B0681131FDABC00929C74BFC787504277"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CompactSeparatedLocalAdicTopology.lean",
+          "sha256": "8F1E520D644029C15BC086E8EEF02A999CE24D13EC2CE5729A5330BFDDDE2104"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointDescent.lean",
+          "sha256": "F00915768C2E625AA53141531FD2DEDB1F1B7CDCA331AE5DEF68CBBC92064F6A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointTraceSpecialization.lean",
+          "sha256": "CA794C7578611AB4FEA8CCE7C5E7B7C8537E90A33FE0D2EC8B17ADD5C3075672"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicLocal.lean",
+          "sha256": "C50D072FDAD31B04D91D6A43B2CDBBEEFF06CB79E9FC87EBFFFB0184D164306D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+          "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticOriginalSupportDescent.lean",
+          "sha256": "D379B676AA67FD4C133927245AAE661D264DB3ABDFB6A57F472180A40F9A00A3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticRestriction.lean",
+          "sha256": "07CDDC97E8807EC33C2F162310413AEA8A17B1138586AAD14472FA1875EE2CC3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Basis\\Defs.lean",
+          "sha256": "82B79301C7246098B626AF1F2D88DE6B4C2BC188FA4F676492D69CC7DFA87939"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Group\\Units.lean",
+          "sha256": "7A99CBFEDA751ED382CB491D7E98E676202260FEAB39D34B0AB742572AA5E62F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Instances\\Matrix.lean",
+          "sha256": "B1A7A566CDA4BFE2E6FCF64AF90546DB07B65BE5B3FD68C0E85169078ECF163F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\MonoidAlgebra\\Defs.lean",
+          "sha256": "A8E5AFFDF1B2BE731717F7C2B21C4745CAF5ED119A510FCC3AD9062F2627947C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Ring\\Ideal.lean",
+          "sha256": "19405D642F5EC403FAD305C6BF79221D10CAEBDC2FA86D0381193A2AA290B200"
+        }
+      ],
+      "publicFollowup": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\rank-two-public-reuse-followup-2219.json",
+        "sha256": "697E0D39D94F58793ECACEBDD74DD65A1793D6DB2AF5F4E41EBE2F6203C5AF97"
+      },
+      "route": "Reuse finite joint arithmetic descent, discrete determinant descent, original trace Frobenius uniqueness, adic separation and the kernel-retaining matrix consumer. Native surjective restriction and compact quotient factorization provide the actual arithmetic action with its original topology. The stable-lattice route is deferred because it is unnecessary for this descent.",
+      "deferred": [
+        "Stable-lattice construction solely for arithmetic descent: existing trace-kernel detection gives a shorter rigorous route."
+      ],
+      "separatelyChecked": [],
+      "failedVariantsPreserved": true,
+      "proofLimitsChanged": false,
+      "productionMutation": false
+    }
+  },
+  "discharged": "The original primitive form of weight at least two and prime p greater than three constructs its genuine local coefficient extension and continuous two-dimensional representation of the prescribed arithmetic group, retaining original Fourier norm-Frobenius traces, weight determinants and odd complex conjugation. Finite arithmetic factors give finite trace translation invariance on the original restriction kernel. Frobenius uniqueness and adic separation transfer this to the complete trace; the faithful trace algebra and kernel-retaining matrix construction kill that kernel. Native surjective restriction and compact quotient factorization give actual continuous arithmetic descent. No supplied representation, trace, arithmetic kernel, lattice or continuity certificate remains in this consumer.",
+  "remaining": "Remaining local/image/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN. Full scratch and subsequent assembled verification are required.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Remaining local/image/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN. Full scratch and subsequent assembled verification are required.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

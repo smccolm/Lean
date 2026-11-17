@@ -1,0 +1,67 @@
+import SourceGammaOneOriginalRegularPrimes
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_nonzero_root_kernel
+#print axioms Dubon2026.finiteSymmetric_projector_conjugates_span_extension
+#print axioms Dubon2026.finiteSymmetric_exists_projector_trace_ne_zero_extension
+#print axioms Dubon2026.finiteSymmetric_exists_regular_conjugate_commuting_trace_extension
+#print axioms Dubon2026.finiteSubfield_exists_regular_character_kernel_trace
+#print axioms Dubon2026.traceZeroCoefficientEmbedding_injective
+#print axioms Dubon2026.traceZeroCoefficientEmbedding_action
+#print axioms Dubon2026.traceZeroCoefficientEmbedding
+#print axioms Dubon2026.traceZeroConjugation_injective
+#print axioms Dubon2026.traceZero_twisted_conjugate_action
+#print axioms Dubon2026.traceZero_notMem_coboundary_of_extended_conjugate_test
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_regular_kernel_detection
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_regular_root_detection
+#print axioms Dubon2026.HasArithmeticRegularRootDetection
+#print axioms Dubon2026.HasArithmeticRegularDetectingPrimes
+#print axioms Dubon2026.rationalArithmetic_regular_primes_of_root_detection
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_regular_primes
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_regular_prime_detection
+#print axioms Dubon2026.SourceDickson.HasOriginalArithmeticRegularPrimeDetection
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceOriginalArithmeticRootKernel, `SourceSubfieldProjectorSpan, `SourceSubfieldRegularTrace, `SourceSubfieldRegularKernel, `SourceTraceZeroCoefficientEmbedding, `SourceTraceZeroConjugacy, `SourceOriginalExtendedTraceTest, `SourceFiniteLinearOriginalRegularDetection, `SourceOriginalArithmeticRegularCocycle, `SourceOriginalRegularPrimePredicates, `SourceOriginalRegularPrimeAssembly, `SourceOriginalArithmeticRegularPrimes, `SourceOriginalArithmeticRegularPrimeProperty, `SourceGammaOneOriginalRegularPrimes]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL REGULAR PRIME AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceOriginalArithmeticRootKernel
+#lint in SourceSubfieldProjectorSpan
+#lint in SourceSubfieldRegularTrace
+#lint in SourceSubfieldRegularKernel
+#lint in SourceTraceZeroCoefficientEmbedding
+#lint in SourceTraceZeroConjugacy
+#lint in SourceOriginalExtendedTraceTest
+#lint in SourceFiniteLinearOriginalRegularDetection
+#lint in SourceOriginalArithmeticRegularCocycle
+#lint in SourceOriginalRegularPrimePredicates
+#lint in SourceOriginalRegularPrimeAssembly
+#lint in SourceOriginalArithmeticRegularPrimes
+#lint in SourceOriginalArithmeticRegularPrimeProperty
+#lint in SourceGammaOneOriginalRegularPrimes

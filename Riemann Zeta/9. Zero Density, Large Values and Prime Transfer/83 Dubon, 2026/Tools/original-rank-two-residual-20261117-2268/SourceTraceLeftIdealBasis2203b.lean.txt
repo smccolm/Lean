@@ -1,0 +1,55 @@
+import SourceTraceLeftIdealCoordinates2202b
+
+/-! DUB-17/18 -> actual rank-two realization -> genuine rank-two basis.
+The proved coordinate formulas identify the original idempotent left
+ideal with the two-dimensional coordinate space. The native Basis
+constructor retains the exact original action and trace coordinates. -/
+namespace Dubon2026
+noncomputable section
+open Module
+variable {K A : Type*} [Field K] [Ring A] [Algebra K A]
+
+/-- Exact trace coordinates give a genuine linear equivalence for the
+original left ideal, using the constructed opposite pair. -/
+def traceIdempotentPairEquiv (T : A →ₗ[K] K)
+    (hCyc : ∀ x y, T (x * y) = T (y * x))
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (e b c : A) (he : e * e = e) (hte : T e = 1)
+    (heb : e * b = b) (hec : e * c = 0) (hce : c * e = c)
+    (hbe : b * e = 0) (hbc : b * c = e) (hcb : c * b = 1 - e) :
+    algebraIdempotentLeftIdeal (S := K) e ≃ₗ[K] (Fin 2 → K) where
+  toFun z := ![T z.val, T (b * z.val)]
+  map_add' x y := by
+    ext i
+    fin_cases i <;> simp [mul_add]
+  map_smul' s x := by
+    ext i
+    fin_cases i <;> simp
+  invFun v := ⟨v 0 • e + v 1 • c,
+    (mem_algebraIdempotentLeftIdeal_iff e (by simpa only [pow_two] using he) _).mpr (by
+      rw [add_mul, smul_mul_assoc, smul_mul_assoc, he, hce])⟩
+  left_inv z := by
+    apply Subtype.ext
+    exact (traceIdempotent_leftIdeal_expansion T hCyc hPol e b c he hte heb hcb hce
+      z.val ((mem_algebraIdempotentLeftIdeal_iff e (by simpa only [pow_two] using he) _).mp z.property)).symm
+  right_inv v := by
+    funext i
+    fin_cases i
+    · exact (traceIdempotent_pair_coordinates T hCyc e b c hte hec hce hbe hbc (v 0) (v 1)).1
+    · exact (traceIdempotent_pair_coordinates T hCyc e b c hte hec hce hbe hbc (v 0) (v 1)).2
+
+/-- The original idempotent and opposite partner give a genuine two-vector
+basis for the actual original left-ideal action. -/
+def traceIdempotentPairBasis (T : A →ₗ[K] K)
+    (hCyc : ∀ x y, T (x * y) = T (y * x))
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (e b c : A) (he : e * e = e) (hte : T e = 1)
+    (heb : e * b = b) (hec : e * c = 0) (hce : c * e = c)
+    (hbe : b * e = 0) (hbc : b * c = e) (hcb : c * b = 1 - e) :
+    Basis (Fin 2) K (algebraIdempotentLeftIdeal (S := K) e) :=
+  Basis.ofEquivFun (traceIdempotentPairEquiv T hCyc hPol e b c he hte heb hec hce hbe hbc hcb)
+
+end
+end Dubon2026

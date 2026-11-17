@@ -1,0 +1,49 @@
+import Mathlib.RingTheory.AdicCompletion.Algebra
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+reconstruct the compatible original adic trace values. Reuse the native
+completion and its complete-ring equivalence. Only positive precisions
+are used, exactly as in the constructed original trace family. -/
+namespace Dubon2026
+noncomputable section
+
+/-- A compatible family at every positive adic precision has a unique
+value in the actual complete coefficient ring. -/
+theorem positiveAdicFamily_exists_unique_lift {R : Type} [CommRing R]
+    (I : Ideal R) [IsAdicComplete I R]
+    (a : ∀ n : ℕ, R ⧸ I ^ (n + 1))
+    (ha : ∀ {m n : ℕ} (h : m ≤ n),
+      Ideal.Quotient.factorPow I (Nat.add_le_add_right h 1) (a n) = a m) :
+    ∃! x : R, ∀ n, Ideal.Quotient.mk (I ^ (n + 1)) x = a n := by
+  let b : ∀ n : ℕ, R ⧸ I ^ n := fun n => Ideal.Quotient.factorPow I n.le_succ (a n)
+  have hb {m n : ℕ} (h : m ≤ n) : Ideal.Quotient.factorPow I h (b n) = b m := by
+    change Ideal.Quotient.factorPow I h (Ideal.Quotient.factorPow I n.le_succ (a n)) =
+      Ideal.Quotient.factorPow I m.le_succ (a m)
+    rw [← ha h]
+    obtain ⟨r, hr⟩ := Ideal.Quotient.mk_surjective (a n)
+    rw [← hr]
+    rfl
+  let x : AdicCompletion I R :=
+    ⟨fun n => Ideal.Quotient.factor (le_of_eq (Ideal.mul_top _).symm) (b n), by
+      intro m n h
+      dsimp only
+      rw [← hb h]
+      obtain ⟨r, hr⟩ := Ideal.Quotient.mk_surjective (b n)
+      rw [← hr]
+      rfl⟩
+  have hx (n : ℕ) : AdicCompletion.evalₐ I n x = b n := by
+    rw [← AdicCompletion.factor_eval_eq_evalₐ I x (le_of_eq (Ideal.mul_top _))]
+    simp [x, AdicCompletion.eval]
+  let y := (AdicCompletion.ofAlgEquiv I).symm x
+  have hy (n : ℕ) : Ideal.Quotient.mk (I ^ (n + 1)) y = a n := by
+    rw [AdicCompletion.mk_ofAlgEquiv_symm, hx]
+    exact ha n.le_succ
+  refine ⟨y, hy, ?_⟩
+  intro z hz
+  have he : (fun _ : Unit => z) = (fun _ : Unit => y) :=
+    IsHausdorff.StrictMono.funext' I (show StrictMono (fun n : ℕ => n + 1) from
+      fun _ _ h => Nat.add_lt_add_right h 1) (fun n _ => (hz n).trans (hy n).symm)
+  exact congrFun he ()
+
+end
+end Dubon2026

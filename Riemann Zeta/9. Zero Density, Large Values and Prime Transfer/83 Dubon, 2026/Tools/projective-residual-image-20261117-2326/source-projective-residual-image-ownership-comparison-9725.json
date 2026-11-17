@@ -1,0 +1,294 @@
+{
+  "scratchSum": 939,
+  "scratchDistinct": 939,
+  "generatedNameRenamings": {
+    "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneFiniteProjectiveLinearResidual": "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneProjectiveLinearResidual": "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneProjectiveMatrixResidual": "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneProjectiveResidual": "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+  },
+  "productionFocused": 940,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [
+    "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp"
+  ],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceDicksonObjects",
+        "SourceDicksonPGLBasic",
+        "SourceDicksonNatClassEquation",
+        "SourceDicksonPSLBasic",
+        "SourceDicksonPartitionHelpers",
+        "SourceDicksonCyclicPartition",
+        "SourceDicksonRecognitionA5",
+        "SourceDicksonFieldReconstruction",
+        "SourceDicksonPartitionProof",
+        "SourceDicksonPSLRecognition",
+        "SourceDicksonTameClassification",
+        "SourceDicksonWildClassification",
+        "SourceDicksonClassification",
+        "SourceResidualProjectiveClassification",
+        "SourceGammaOneProjectiveResidual",
+        "SourceDicksonProjectiveConjugacy",
+        "SourceDicksonMatrixAlternatives",
+        "SourceGammaOneProjectiveMatrixResidual",
+        "SourceProjectivePerfectLift",
+        "SourceProjectiveSL2Lift",
+        "SourceProjectiveSubfieldBounds",
+        "SourceResidualLinearAlternatives",
+        "SourceGammaOneProjectiveLinearResidual"
+      ],
+      "count": 920,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveLinearDeclarations2311.log",
+        "sha256": "AD40D8B6E5314BBBD96E6DFCA751CA80538C1DADEE4BF70B52B89C08D6E95D3C",
+        "sourceSha256": "1DCC6128A6615035AC5BD2B59E945AEC40FCA77BE3E7830A6396B7EC48AA50C1"
+      }
+    },
+    {
+      "modules": [
+        "SourceResidualFiniteAmbient",
+        "SourceResidualFiniteDescent",
+        "SourceResidualFiniteBounds",
+        "SourceResidualFiniteLinearAlternatives",
+        "SourceGammaOneFiniteProjectiveLinearResidual"
+      ],
+      "count": 19,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDeclarations2321.log",
+        "sha256": "00022211363E470173D0D863EDFA06959D682D16DC53A7C00282D100047ADAE3",
+        "sourceSha256": "A7162E417B4BCF447DBEDB3DD7AF0415E3E1E4839F02CE8F672A6BC07BC1C4EE"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageOwnership9725.log",
+    "sha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D",
+    "sourceSha256": "BEBB7CF8B96D08787B552FE1A3173F31B5D87EB7958B0B626D628D5E2011B519"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-023339-845.log",
+    "sha256": "40B2A1071204974A700668B689EF1EAA415EDADA3BB9182296A8A75DED44C363"
+  },
+  "verifiedSharedGenerated": {
+    "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp": {
+      "passed": true,
+      "declaration": "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp",
+      "scratchAndFinalConsumerOwner": "Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction",
+      "focusedProductionOwner": "Dubon2026.SourceDicksonPGLBasic",
+      "typeHash": "1433596677",
+      "valueHash": "2954490144",
+      "evidence": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.lean",
+          "sha256": "98C5A310A065AE0208A79DED49307923C8F46D23A3D937DD3EE02D17FB69FA43"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.log",
+          "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.lean",
+          "sha256": "1BF060AA06C0B54478D3C76B00B9D3294639C03879975E96ED915A833D5A1346"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.log",
+          "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        }
+      ],
+      "reason": "Lean generates the same congruence theorem under different first importing modules. Both final-consumer environments own it in Mathlib; the production focused all-module import order owns it in SourceDicksonPGLBasic. Exact raw type and proof-value hashes agree, displayed proof is equality transport/reflexivity, and both dependency audits allow only standard logical axioms. It is retained and separately accounted for, not excluded from checks.",
+      "focusedOwnershipSha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D"
+    }
+  },
+  "sharedGeneratedReview": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\shared-projective-generated-review-9725b.json",
+    "sha256": "A7A265D77AE7C80CABCEAD415238CA46AD12F3D54A332A26365832FB5A4FB463"
+  },
+  "unexplainedProductionNames": [],
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 28 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceDicksonObjects",
+        "scratchSha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059",
+        "productionSha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonPGLBasic",
+        "scratchSha256": "C7E3C1417BEB131724D993206FC879D98E6C1BE7AC1B8C69151AE101C104CF1A",
+        "productionSha256": "616E2D123D7D68B2E45249FCB0A9322C69D65F86B31DF41DA1F2B94235C21634",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonNatClassEquation",
+        "scratchSha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692",
+        "productionSha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonPSLBasic",
+        "scratchSha256": "375FD52F83B1E923C6570DBB3C3597C5EA2173A738CF555AE09717F1CFC94ED7",
+        "productionSha256": "FD170782C0982A8E1B218B28590BF164C23DE9E4A0D7D6CFD31FDF0C759AE35B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonPartitionHelpers",
+        "scratchSha256": "97A97557C7A15344EE321ED9E91D16B2430202A7F5B23CFB7B9BFFE1C311D7E3",
+        "productionSha256": "7AE17E83D7F1E8BB7E489613470908F7699C7E8E07322DE6716E523446BF829C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonCyclicPartition",
+        "scratchSha256": "DE9C36E93E54AB9E5CBBE68B747D134DA28A7A4B528FA3423C1DDE06B5320EA6",
+        "productionSha256": "3E3283CBF22D0E16DA64F9F422E4CF01A3EC6E6E9ADBE054064DACC188B711AD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonRecognitionA5",
+        "scratchSha256": "184604518181EF8B3CE90C9C9ABFF271863F1D1D46D2E1A695542CBB2BB33044",
+        "productionSha256": "B7F2F9151C53A9B4CAA1650E9D3D7C5578D8F4FA46E03F635B34B2902B6A13E2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonFieldReconstruction",
+        "scratchSha256": "38CDE948CA816BA19132093AFC4799486580476722F305B4CAB68A3F5ADB7B1F",
+        "productionSha256": "C3433FB4D357496F733786A5C994FC16260C603677C1C1841EBBB197BBA7B217",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonPartitionProof",
+        "scratchSha256": "A65DFFCA7EBB17D5982235F405FEAB833DC0D49A729202F92A3E049B3C330903",
+        "productionSha256": "42EDD01F3F97D999B16087A6964ADB63DBB544582E14F16F67BFD4F887447C92",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonPSLRecognition",
+        "scratchSha256": "F718F0F2710A607E5D153A63096CB16F1259965D5882799472EB291839C12A50",
+        "productionSha256": "920C83D1E3B18BBC94FF09B096EA32D7EE58C27BB55DE185C7C4984C758948E6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonTameClassification",
+        "scratchSha256": "CB088253C0DD2C3634CC182A63C2657D6D8C84CC82B1A69B1FC67950222CA145",
+        "productionSha256": "337F94E53756F104A2A8C0E9B9F9776C314E92A6A4DE2419300ED39890290A28",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonWildClassification",
+        "scratchSha256": "D0AC8F264F6E93B29CFD5CE434FC28691D70BE831FB27D0497C6DD0348E9E055",
+        "productionSha256": "01EA58507B41D21523DA26C863E2B9165C245C00E968B661951A0370E4DE4003",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonClassification",
+        "scratchSha256": "8CA67616A649516F2BDC0F14E040AFA80F6F5A30BFFBB2AC030AA496E7DBE98A",
+        "productionSha256": "CBE2CD97F87FA1407513CACE8EEB9D8CC34FF66943FA9790E5C26B2E0CCD572A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualProjectiveClassification",
+        "scratchSha256": "73BA1454BD010B301D4FF4AE99C777592D505476CC23B17FA8093ECB00F4F440",
+        "productionSha256": "FF6268CD338B253D60C57E0B1DE661875DB98FABFE8F395D904730F82854FF1D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneProjectiveResidual",
+        "scratchSha256": "FF2ADC11FBE1D6591ED08793ADD2643E9540D939EDA7903B46235FE6F48F2D04",
+        "productionSha256": "0E24F6E1BADF1F392DF45B67861E08EA163C5CC454FB570FB4100F9BBEDAD411",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonProjectiveConjugacy",
+        "scratchSha256": "C071B81CA7E3F256F596E028C1D82A93A9129BA8AC87119A4C5D344B07166CF2",
+        "productionSha256": "F5CA99151072AB6323E0AA0DA43438F53FF115C2DFD247F4BFDB2BC4D35A7989",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceDicksonMatrixAlternatives",
+        "scratchSha256": "9C9F5FFF867620B184A9F05436F2A89426C75363872B4796913FBF4957130034",
+        "productionSha256": "0D580A610D0EF8C17256E0B35A625C63F0E46CA92098771C8650B7ED311F33B8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneProjectiveMatrixResidual",
+        "scratchSha256": "20D3206B1FDDC2E9D5AB1E68A3268EB953AADA2ACD432DFB88D791079E9BF902",
+        "productionSha256": "1C17E9B6B6355F7184E56E44F88927ED52EE39674BD2804D58E22F1294026F23",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceProjectivePerfectLift",
+        "scratchSha256": "7E3AC09683FC8922284AE31669D9A00D48A46572B2C2617DF12D8C0B1E0EBE9B",
+        "productionSha256": "7E3AC09683FC8922284AE31669D9A00D48A46572B2C2617DF12D8C0B1E0EBE9B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceProjectiveSL2Lift",
+        "scratchSha256": "A75BABDE60641BF37EF460D43A2644838528EF1F9557C2825BA6B5BB9C6303DB",
+        "productionSha256": "B19A48CEA426EC5AFECFC31575ADF28BFB861A901C1DB819893D105E1C41FC5C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceProjectiveSubfieldBounds",
+        "scratchSha256": "C46A04FEC816411F76DFD5DB543D785E066C92F51E938FF38FA76B1A4BFE74BA",
+        "productionSha256": "EDD958D50F5142440240BD0308770F24017CA79582F3E6168D8329702E36C624",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualLinearAlternatives",
+        "scratchSha256": "3748D903E01686E0DE6CD902154F1377E79FDBF2EF2B809C0169179483943725",
+        "productionSha256": "02277130776964986AA845C00163E81B584AF392292CDE9BFD1CC822637AC3D3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneProjectiveLinearResidual",
+        "scratchSha256": "2991BFC0E95C6A0EF8AA596FFCC657CE75E4AEA06021203C8E41405E91159E76",
+        "productionSha256": "A57F23DF81C67BAA6757EAF1643245BA253040C4862F6D678DEB730B7BF07A47",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualFiniteAmbient",
+        "scratchSha256": "ED78529C08D3EF7FEFBA2FDC2644B2A1467FBEDC6F516214D63C2B73A438F990",
+        "productionSha256": "12BA81EEA4B5F10A4390013491369F21D5D8B5ADB006865C195F9222C5DBCFF5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualFiniteDescent",
+        "scratchSha256": "B8A3BB9D5C9E6169B30B6EDCADA60C6A362D5D9A65F23FB9E45CC0EBDD8FCE8F",
+        "productionSha256": "3BE27608E2D12122DD31AA952126E05918BD5579B35FE2869E08D99D7B8BCCAF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualFiniteBounds",
+        "scratchSha256": "48B7F6CFEE99E1C1F911DB5F27C40C1102A50ABE8E35C54A52F32F35345AC980",
+        "productionSha256": "8DE40B2208081C0F1184CFC00FDDF42D37858EDFAEFD38F81E483DF2C86D8D64",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualFiniteLinearAlternatives",
+        "scratchSha256": "AE63DA0B255AA7E91EF64B09DDECE4D0D569D484AA41F8D018B9718CB25A2859",
+        "productionSha256": "D554DAC4D40E1643D1DEA9EFB22DFFC8647B1CB52D6D2BA20E73A36A673E601E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneFiniteProjectiveLinearResidual",
+        "scratchSha256": "36225DBB59960A08E522E43E9FC67680B7CBAA91C4806EDC1CC0407A7D3A4745",
+        "productionSha256": "1B7EB5A8274EA5C790A00265A37A06498EF2BF2758F3CF30FCE38259070CDB5D",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

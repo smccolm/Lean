@@ -1,0 +1,26 @@
+name = "Weil"
+version = "0.1.0"
+defaultTargets = ["Weil"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+weak.linter.mathlibStandardSet = true
+
+# Same Mathlib commit as the Stacks project (and `lean-toolchain`).
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "16edf57de7933555826307a3d81b4391a3657a09"
+
+# The Stacks project in Lean; this formalization uses its `StacksFrontier` library.
+[[require]]
+name = "Stacks"
+git = "https://github.com/AxiomMath/Stacks"
+rev = "012108f61d7f92a6ffc35ec3f263b6da5d438125"
+
+[[lean_lib]]
+name = "Weil"
+roots = ["Weil"]

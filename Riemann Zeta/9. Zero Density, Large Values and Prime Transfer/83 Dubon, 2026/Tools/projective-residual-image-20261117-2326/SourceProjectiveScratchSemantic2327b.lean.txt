@@ -1,0 +1,39 @@
+import SourceGammaOneFiniteProjectiveLinearResidual
+import Mathlib.Tactic
+
+open Lean
+
+private def moduleNames : Array String := #["SourceDicksonObjects", "SourceDicksonPGLBasic", "SourceDicksonNatClassEquation", "SourceDicksonPSLBasic", "SourceDicksonPartitionHelpers", "SourceDicksonCyclicPartition", "SourceDicksonRecognitionA5", "SourceDicksonFieldReconstruction", "SourceDicksonPartitionProof", "SourceDicksonPSLRecognition", "SourceDicksonTameClassification", "SourceDicksonWildClassification", "SourceDicksonClassification", "SourceResidualProjectiveClassification", "SourceGammaOneProjectiveResidual", "SourceDicksonProjectiveConjugacy", "SourceDicksonMatrixAlternatives", "SourceGammaOneProjectiveMatrixResidual", "SourceProjectivePerfectLift", "SourceProjectiveSL2Lift", "SourceProjectiveSubfieldBounds", "SourceResidualLinearAlternatives", "SourceGammaOneProjectiveLinearResidual", "SourceResidualFiniteAmbient", "SourceResidualFiniteDescent", "SourceResidualFiniteBounds", "SourceResidualFiniteLinearAlternatives", "SourceGammaOneFiniteProjectiveLinearResidual"]
+
+private def normalizeProjectiveName (n : Name) : Name := Id.run do
+  let mut s := n.toString
+  for m in moduleNames do
+    let taskPrefix := "_private." ++ m ++ "."
+    if s.startsWith taskPrefix then
+      s := "_private.Dubon2026." ++ m ++ "." ++ (s.drop taskPrefix.length).toString
+    if s.startsWith "_private." then
+      let marker := "_" ++ (m.take 1).toString.toLower ++ (m.drop 1).toString
+      s := s.replace marker "_dubon2026"
+  s := s.replace "instFactPrimeOfNatNat_sourceDicksonPGLBasic" "instFactPrimeOfNatNat_dubon2026"
+  return s.toName
+
+private def normalizeProjectiveExpr (e : Expr) : Expr :=
+  e.replace fun x => match x with
+    | .const n us => some (.const (normalizeProjectiveName n) us)
+    | .mdata _ body => some body
+    | _ => none
+
+private def auditSemanticFingerprints : CoreM Unit := do
+  let env ← getEnv
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      let owner := env.allImportedModuleNames[idx.toNat]!.toString
+      let localName := if owner.startsWith "Dubon2026." then (owner.drop 10).toString else owner
+      if moduleNames.contains localName then
+        let normalized := normalizeProjectiveName name
+        let ty := hash (normalizeProjectiveExpr info.type)
+        match info.value? (allowOpaque := true) with
+        | some v => logInfo m!"SEMANTIC Dubon2026.{localName} {normalized}: {ty} {hash (normalizeProjectiveExpr v)}"
+        | none => logInfo m!"SEMANTIC Dubon2026.{localName} {normalized}: {ty} NONE"
+
+#eval auditSemanticFingerprints

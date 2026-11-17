@@ -1,0 +1,31 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-projective-linear-normalized-1-scratch-receipt.json",
+      "sha256": "8CD6B02E4E0B7A5F1A5E18A1C853DEF053B73529A505DF9ADCFF2D67497EDB33",
+      "modules": 23,
+      "queries": 425,
+      "exhaustiveTheorems": 920,
+      "other": 204,
+      "requiredValueEdges": 36
+    },
+    {
+      "receipt": "source-projective-finite-normalized-1-scratch-receipt.json",
+      "sha256": "B490938772C25A888E984B6B964D091E12134A31A7F1ADB4B7F5CFBDFF3E677B",
+      "modules": 5,
+      "queries": 11,
+      "exhaustiveTheorems": 19,
+      "other": 6,
+      "requiredValueEdges": 45
+    }
+  ],
+  "productionDeclarationRenames": {
+    "Dubon2026.SourceDickson.instFactPrimeOfNatNat_sourceDicksonPGLBasic": "Dubon2026.SourceDickson.instFactPrimeOfNatNat_dubon2026",
+    "Dubon2026.SourceDickson.instFactPrimeOfNatNat_sourceDicksonPGLBasic_1": "Dubon2026.SourceDickson.instFactPrimeOfNatNat_dubon2026_1",
+    "Dubon2026.SourceDickson.instFactPrimeOfNatNat_sourceDicksonPGLBasic_2": "Dubon2026.SourceDickson.instFactPrimeOfNatNat_dubon2026_2"
+  },
+  "all28ModulesPass": true,
+  "finalConsumerRequiredValueEdges": 45,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

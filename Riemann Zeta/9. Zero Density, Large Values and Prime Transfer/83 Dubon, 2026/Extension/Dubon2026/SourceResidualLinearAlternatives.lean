@@ -1,0 +1,100 @@
+import Dubon2026.SourceDicksonMatrixAlternatives
+import Dubon2026.SourceProjectiveSubfieldBounds
+
+/-! DUB-17/18 -> residual large image -> the exact remaining small-image exclusion.
+All projective Lie-type branches give actual linear subfield bounds after a
+change of basis. The other six branches remain explicitly visible. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+variable (p : ℕ) [Fact p.Prime]
+
+/-- The six projective alternatives still requiring arithmetic exclusion. -/
+def HasSmallProjectiveImage (G : Subgroup (PGLOf (K p))) : Prop :=
+    (IsCyclic G) ∨
+    (∃ n : ℕ, n ≥ 2 ∧ Nonempty (G ≃* DihedralGroup n)) ∨
+    (Nonempty (G ≃* alternatingGroup (Fin 4))) ∨
+    (Nonempty (G ≃* Equiv.Perm (Fin 4))) ∨
+    (Nonempty (G ≃* alternatingGroup (Fin 5))) ∨
+    (∃ (m t : ℕ) (_ : m ≥ 1) (_ : Nat.Coprime t p) (_ : t ∣ p ^ m - 1)
+      (φ : Multiplicative (ZMod t) →* MulAut (Multiplicative (Fin m → ZMod p))),
+      Nonempty (G ≃* (Multiplicative (Fin m → ZMod p)) ⋊[φ] Multiplicative (ZMod t)))
+
+/-- Literal SL₂ lower and scalar-GL₂ upper bounds over the same finite subfield. -/
+def HasLinearSubfieldBounds (H : Subgroup (GL (Fin 2) (K p))) : Prop :=
+    ∃ m : ℕ, 1 ≤ m ∧ ∃ A : GL (Fin 2) (K p),
+      ((GeneralLinearGroup.map (galoisFieldRingHom (p := p) m)).comp
+        (SpecialLinearGroup.toGL (n := Fin 2) (R := GaloisField p m))).range ≤
+          H.map (MulEquiv.toMonoidHom (MulAut.conj A)) ∧
+      ∀ x ∈ H.map (MulEquiv.toMonoidHom (MulAut.conj A)),
+        ∃ (u : (K p)ˣ) (a : GL (Fin 2) (GaloisField p m)),
+          x = GeneralLinearGroup.scalar (Fin 2) u *
+            GeneralLinearGroup.map (galoisFieldRingHom (p := p) m) a
+
+private theorem linearBoundsOfProjectiveBounds (hp : 3 < p)
+    (H : Subgroup (GL (Fin 2) (K p))) (m : ℕ) (hm : 1 ≤ m) (g : PGLOf (K p))
+    (hlo : (PSLImageInPGL (GaloisField p m)).map (pglMap (galoisFieldRingHom (p := p) m)) ≤
+      (H.map (QuotientGroup.mk' (Subgroup.center (GL (Fin 2) (K p))))).map
+        (MulEquiv.toMonoidHom (MulAut.conj g)))
+    (hhi : (H.map (QuotientGroup.mk' (Subgroup.center (GL (Fin 2) (K p))))).map
+      (MulEquiv.toMonoidHom (MulAut.conj g)) ≤ (pglMap (galoisFieldRingHom (p := p) m)).range) :
+    HasLinearSubfieldBounds p H := by
+  letI : NeZero (2 : GaloisField p m) := ⟨by
+    intro h
+    have hle := Nat.le_of_dvd (by decide : 0 < 2)
+      ((CharP.cast_eq_zero_iff (GaloisField p m) p 2).mp h)
+    omega⟩
+  letI : NeZero (3 : GaloisField p m) := ⟨by
+    intro h
+    have hle := Nat.le_of_dvd (by decide : 0 < 3)
+      ((CharP.cast_eq_zero_iff (GaloisField p m) p 3).mp h)
+    omega⟩
+  exact ⟨m, hm, exists_linear_subfield_bounds_of_projective_conjugacy
+    (galoisFieldRingHom (p := p) m) H g hlo hhi⟩
+
+/-- The proved matrix classification isolates the small cases from actual linear subfield bounds. -/
+theorem small_projective_image_or_linear_subfield_bounds (hp : 3 < p)
+    (H : Subgroup (GL (Fin 2) (K p)))
+    (h : HasProjectiveMatrixAlternatives p
+      (H.map (QuotientGroup.mk' (Subgroup.center (GL (Fin 2) (K p)))))) :
+    HasSmallProjectiveImage p (H.map (QuotientGroup.mk' (Subgroup.center (GL (Fin 2) (K p))))) ∨
+      HasLinearSubfieldBounds p H := by
+  rcases h with hc | hd | ha4 | hs4 | ha5 | hs | ⟨m, hm, g, hg⟩ | ⟨m, hm, g, hg⟩
+  · exact Or.inl (Or.inl hc)
+  · exact Or.inl (Or.inr (Or.inl hd))
+  · exact Or.inl (Or.inr (Or.inr (Or.inl ha4)))
+  · exact Or.inl (Or.inr (Or.inr (Or.inr (Or.inl hs4))))
+  · exact Or.inl (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ha5)))))
+  · exact Or.inl (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr hs)))))
+  · apply Or.inr
+    apply linearBoundsOfProjectiveBounds p hp H m hm g
+    · exact hg.ge
+    · rw [hg]
+      exact Subgroup.map_le_range _ _
+  · apply Or.inr
+    apply linearBoundsOfProjectiveBounds p hp H m hm g
+    · rw [hg]
+      exact Subgroup.map_le_range _ _
+    · exact hg.le
+
+/-- Applied to the actual embedded residual action, only the six small cases obstruct linear bounds. -/
+theorem residual_small_image_or_linear_bounds [Fact (2 < p)] (hp : 3 < p)
+    {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F) (hρ : (Set.range ρ).Finite) :
+    HasSmallProjectiveImage p (residualProjectiveAction p j ρ).range ∨
+      HasLinearSubfieldBounds p ((GeneralLinearGroup.map j).comp ρ).range := by
+  have hc := residual_projective_matrix_classification p hp j ρ hρ
+  have he : (((GeneralLinearGroup.map j).comp ρ).range).map
+      (QuotientGroup.mk' (Subgroup.center (GL (Fin 2) (K p)))) =
+      (residualProjectiveAction p j ρ).range := by
+    ext x
+    constructor
+    · rintro ⟨y, ⟨g, rfl⟩, rfl⟩
+      exact ⟨g, rfl⟩
+    · rintro ⟨g, rfl⟩
+      exact ⟨GeneralLinearGroup.map j (ρ g), ⟨g, rfl⟩, rfl⟩
+  rw [← he] at hc ⊢
+  exact small_projective_image_or_linear_subfield_bounds p hp _ hc
+
+end
+end Dubon2026.SourceDickson

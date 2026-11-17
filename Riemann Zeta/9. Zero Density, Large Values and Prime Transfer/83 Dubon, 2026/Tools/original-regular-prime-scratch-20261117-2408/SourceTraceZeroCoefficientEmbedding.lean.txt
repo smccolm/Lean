@@ -1,0 +1,45 @@
+import Dubon2026.TraceCocycleKernelDetection
+
+/-! DUB-17/18 -> original regular auxiliary-prime detection -> using an
+extended-field commuting trace test on the original cocycle. Only the actual
+trace-zero matrices are embedded; no change of the original H1 space is needed. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+variable {F E ι G : Type} [Field F] [Field E] [Fintype ι] [Group G]
+
+/-- Entrywise coefficient embedding on the actual trace-zero matrices. -/
+def traceZeroCoefficientEmbedding (j : F →+* E) :
+    matrixTraceZeroSubmodule ι F →+ matrixTraceZeroSubmodule ι E where
+  toFun X := ⟨X.val.map j, by
+    change Matrix.trace (X.val.map j) = 0
+    rw [← AddMonoidHom.map_trace j, show Matrix.trace X.val = 0 from X.property, map_zero]⟩
+  map_zero' := by apply Subtype.ext; ext i k; exact map_zero j
+  map_add' X Y := by apply Subtype.ext; ext i k; exact map_add j _ _
+
+/-- The original trace-zero coefficient embedding is injective. -/
+theorem traceZeroCoefficientEmbedding_injective (j : F →+* E) :
+    Function.Injective (traceZeroCoefficientEmbedding (ι := ι) j) := by
+  intro X Y h
+  apply Subtype.ext
+  ext i k
+  exact j.injective (congrArg (fun Z : matrixTraceZeroSubmodule ι E => Z.val i k) h)
+
+/-- The entrywise embedding intertwines the original twisted adjoint action
+with the literal coefficient-extended matrices and character. -/
+theorem traceZeroCoefficientEmbedding_action [DecidableEq ι] (j : F →+* E)
+    (ρ : G →* GeneralLinearGroup ι F) (χ : G →* F) (g : G)
+    (X : matrixTraceZeroSubmodule ι F) :
+    traceZeroCoefficientEmbedding j ((matrixTraceZeroCharacterRep ρ χ).ρ g X) =
+      (matrixTraceZeroCharacterRep ((GeneralLinearGroup.map j).comp ρ)
+        (j.toMonoidHom.comp χ)).ρ g (traceZeroCoefficientEmbedding j X) := by
+  apply Subtype.ext
+  change (χ g • ((ρ g).val * X.val * (ρ g⁻¹).val)).map j =
+    j (χ g) • ((ρ g).val.map j * X.val.map j * (ρ g⁻¹).val.map j)
+  rw [← Matrix.map_mul, ← Matrix.map_mul]
+  ext i k
+  exact map_mul j _ _
+
+end
+end Dubon2026

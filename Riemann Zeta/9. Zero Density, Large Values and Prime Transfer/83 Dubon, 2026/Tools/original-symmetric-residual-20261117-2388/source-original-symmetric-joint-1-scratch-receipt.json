@@ -1,0 +1,66 @@
+{
+  "recordedUTC": "2026-11-17T13:25:09.997929+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceFiniteLinearOriginalConsequences",
+    "SourceGammaOneSymmetricResidualCohomology"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalConsequences.lean",
+      "sha256": "CA50109AE0FF3792D28F79D5F91FA3F6473C31696CBE1222B412CC5E3A927C4B",
+      "oleanSha256": "0947F7DDD3206948825D7668FFCB6BF64A11417243AA01385F325A307D578366",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalConsequences.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalConsequences.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricResidualCohomology.lean",
+      "sha256": "FCDC290547728B8A9A4171A131D43B029B57859917D0B9E35E166DA06CE53736",
+      "oleanSha256": "CEF7A09456F0CE50AA0128EF3BE6DE771C51357B986757CC2AC15CF6DE34E8B3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricResidualCohomology.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricResidualCohomology.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.original_symmetric_kernel_consequences_of_spanning",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences",
+    "Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.original_symmetric_kernel_consequences_of_spanning",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointAudit1.log",
+  "logSha256": "9DB128F43A149C2948C3426BB9E72FF1F14D7E5DB958499FB0F86A359CD820A1",
+  "auditSha256": "CDD3E4230134611CAD30B168F011C98552380BED5B2C61637DCC8CA6E210C3A4",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDeclarations2383.log",
+  "ownershipSha256": "8C74E1B99E23211A319BCDC030F7C9CEF056DAB8E7FDA154924529ACBE0A54F8",
+  "exhaustiveTheorems": 12,
+  "exhaustiveOtherDeclarations": 6,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 92,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDependencyAudit1.log",
+  "dependencyAuditSha256": "E5309BF1C705334A061F7EA6B402347F00242C703914AA2BF0B2E991A73BDCD8",
+  "dependencyAuditSourceSha256": "91C5F98BA2D840581759CB69CFEF7E11ACE2658F3FBEEFA7696BFBD01A465274",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-symmetric-joint-reuse-review-2384.json",
+  "reuseReviewSha256": "93A292ECA34F5E191B640954E581431B7848AE49EA15ABD15326792493E3C516",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> joint original symmetric and twisted-cohomology inputs for the same actual residual representation. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,39 @@
+{
+  "recordedUTC": "2026-11-17T10:33:45.015211+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> actual higher symmetric-power continuation -> automorphy -> original residual image/local conditions.",
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitiveHigherContinuationReduction.lean",
+      "sha256": "DF4493E6D44D3AA6403A6DAB927260AF7738B75F7639045721BFC024CB5F1827"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HigherEntireCriterion.lean",
+      "sha256": "7A04B82CF5DB4814ABCF6813AE74DBD10F25034348786BC61913E46C0B168446"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FieldSL2Perfect.lean",
+      "sha256": "EDEE8CA20A36ED9AF0CA2A108DC7D4B0295C59D119AFF756F24352050D0FA2C9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ResidualSubfieldCentralScalar.lean",
+      "sha256": "5EBEDE1AC01766ED38BF154F7FA42166AE4990CBA31D22FD7090747235942E44"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspSelfTwists.lean",
+      "sha256": "1272B74AB5F569DC2A4D063540441F55E684DEBD5092F127C2C6D5CD9A66F371"
+    }
+  ],
+  "shorterRoute": "The existing primitive_satoTate_of_entire_symmetric_continuation already derives actual purity and closed-half-plane nonvanishing from the genuine entire positive symmetric family matched in the far Euler half-planes. An independent Weil/purity port is not an extra acceptance requirement of this route. It may be needed upstream by a selected image/automorphy argument; using purity derived from the yet-unproved continuation there would be circular.",
+  "ribetFindings": [
+    "The inspected irreducible_of_point_of_not_dvd constructs characteristic-zero full endomorphism span from an actual weight-two Hecke character and Frobenius characteristic polynomial X^2-a_l X+l, with p not dividing the level. It is not an all-weight residual irreducibility theorem.",
+    "The companion theorem retains the same weight-two Hecke character and determinant and explicitly assumes local line-or-quotient inertia triviality up to powers after finite scalar extension.",
+    "The inertia lemma derives its line-or-quotient conclusion from an actual finite-flat adic representation and determinant equal to the first cyclotomic character. Those assumptions are not yet supplied for the all-weight original form.",
+    "The prime coefficient bound is for weight two and can support that irreducibility route without assuming Deligne. It does not provide the all-weight local condition.",
+    "The generic Dickson-polynomial contradiction still uses determinant l and the explicit local condition; it must not be confused with the newly ported projective Dickson classification."
+  ],
+  "disposition": "Retain as bounded candidates; defer a full port until the exact original-form local condition and weight comparison can be discharged. Do not narrow the source domain to weight two.",
+  "auditBoundary": "Only eight proof files and eight immediate Definitions imports inspected; complete imported theorem closures not audited or compiled. No admitted tokens in these eight proof texts is not a transitive axiom certificate. Some proofs raise maxHeartbeats and would need decomposition under native limits.",
+  "productionMutation": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

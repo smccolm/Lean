@@ -1,0 +1,35 @@
+import SourceTraceOffDiagonal2191b
+
+/-! DUB-17/18 -> actual rank-two realization -> diagonal branch.
+Vanishing off-diagonal components turn the actual scalar corners into
+ring characters. They will form the original two-character diagonal
+representation, covering the case without a nonzero opposite pair. -/
+namespace Dubon2026
+noncomputable section
+variable {K A : Type*} [Field K] [Ring A] [Algebra K A]
+
+/-- A vanishing original off-diagonal component makes the whole left corner
+scalar, by the already proved scalar idempotent-corner identity. -/
+theorem traceIdempotent_left_scalar (T : A →ₗ[K] K)
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (e : A) (he : e * e = e) (hte : T e = 1)
+    (hOff : ∀ x, e * x * (1 - e) = 0) (x : A) : e * x = T (e * x) • e := by
+  calc
+    e * x = e * x * e + e * x * (1 - e) := by noncomm_ring
+    _ = e * x * e := by rw [hOff x, add_zero]
+    _ = T (e * x) • e := traceOneIdempotent_corner_scalar T hPol e he hte x
+
+/-- The original scalar corner defines an actual ring character. Its
+multiplicativity follows from the proved scalar left-action identity. -/
+def sourceScalarCornerHom (T : A →ₗ[K] K) (e : A) (hte : T e = 1)
+    (hScalar : ∀ x, e * x = T (e * x) • e) : A →+* K where
+  toFun x := T (e * x)
+  map_one' := by rw [mul_one, hte]
+  map_zero' := by rw [mul_zero, map_zero]
+  map_add' x y := by rw [mul_add, map_add]
+  map_mul' x y := by
+    rw [← mul_assoc, hScalar x, smul_mul_assoc, map_smul, smul_eq_mul]
+
+end
+end Dubon2026

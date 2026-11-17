@@ -1,0 +1,28 @@
+import SourceGammaOneSymmetricAdjointVanishing
+import Mathlib.Tactic
+
+open Lean
+
+private def runProjectiveClassificationDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing]
+  let localModules : Array Name := #[`SourceDicksonObjects, `SourceDicksonPGLBasic, `SourceDicksonNatClassEquation, `SourceDicksonPSLBasic, `SourceDicksonPartitionHelpers, `SourceDicksonCyclicPartition, `SourceDicksonRecognitionA5, `SourceDicksonFieldReconstruction, `SourceDicksonPartitionProof, `SourceDicksonPSLRecognition, `SourceDicksonTameClassification, `SourceDicksonWildClassification, `SourceDicksonClassification, `SourceResidualProjectiveClassification, `SourceGammaOneProjectiveResidual, `SourceDicksonProjectiveConjugacy, `SourceDicksonMatrixAlternatives, `SourceGammaOneProjectiveMatrixResidual, `SourceProjectivePerfectLift, `SourceProjectiveSL2Lift, `SourceProjectiveSubfieldBounds, `SourceResidualLinearAlternatives, `SourceGammaOneProjectiveLinearResidual, `SourceResidualFiniteAmbient, `SourceResidualFiniteDescent, `SourceResidualFiniteBounds, `SourceResidualFiniteLinearAlternatives, `SourceGammaOneFiniteProjectiveLinearResidual, `SourceFiniteSubfieldIrreducible, `SourceSubfieldSymmetricAbsolute, `SourceFiniteLinearSymmetric, `SourceGammaOneAbsoluteSymmetricResidual, `SourceSubfieldKernelIrreducible, `SourceFiniteLinearKernelSymmetric, `SourceGammaOneCyclotomicSymmetricResidual, `SourceFiniteLinearAbsoluteGalois, `SourceGammaOneAbsoluteCyclotomicResidual, `SourceResidualConjugateIrreducible, `SourceConjugateSymmetricSpanning, `SourceFiniteLinearOriginalSpanning, `SourceOriginalSymmetricSpanningProperty, `SourceGammaOneSymmetricKernelSpanning, `SourceSpanningIrreducibility, `SourceSpanningCoefficientExtension, `SourceOriginalSymmetricAbsolute, `SourceGammaOneResidueAbsoluteSymmetric, `SourceOriginalSymmetricAdjoint, `SourceGammaOneSymmetricAdjointVanishing]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning, `Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility, `Dubon2026.HasOriginalSymmetricSpanning, `Dubon2026.original_symmetric_absolute_irreducibility_of_spanning, `Dubon2026.matrixRepresentation_absolute_irreducible_of_span, `Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension, `Dubon2026.matrixRepresentation_irreducible_of_span, `Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span, `Dubon2026.representation_irreducible_of_asAlgebraHom_surjective, `Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span, `Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span, `Dubon2026.original_symmetric_matrix_span_of_conjugated_extension, `Dubon2026.matrixRepresentation_irreducible_iff_conjugate, `Dubon2026.representation_irreducible_iff_of_equiv, `Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility, `Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible, `Dubon2026.finiteSubfield_symmetric_absoluteIrreducible, `Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image, `Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective, `Dubon2026.sourceAbsoluteArithmeticRestriction_surjective, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual, `Dubon2026.matrixRepresentation_span_eq_top_of_extension, `Dubon2026.irreducibleRepresentation_asAlgebraHom_surjective, `Dubon2026.fieldSL2_isPerfect, `Dubon2026.perfect_subgroup_le_map_character_kernel, `Dubon2026.original_symmetric_adjoint_vanishing_of_absolute, `Dubon2026.HasOriginalSymmetricAdjointVanishing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing, `Dubon2026.matrixTraceZeroAdjointInvariants_eq_bot, `Dubon2026.matrixAdjointInvariant_eq_scalar_of_extension]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL SYMMETRIC ADJOINT VALUE AUDIT PASS: all {required.size} required proof dependencies occur in the final original-residue consumer proof-value closure. The actual original arithmetic residual action, both classification branches, explicit matrix conjugacy and native perfect-SL2 lifting and actual finite-coefficient descent are consumed. Arithmetic image exclusions and DUB-17--20 remain OPEN."
+
+#eval runProjectiveClassificationDependencyAudit

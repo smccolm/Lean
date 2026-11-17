@@ -1,0 +1,142 @@
+{
+  "recordedUTC": "2026-11-17T09:32:30.367061+00:00",
+  "repository": "AxiomMath/Weil",
+  "commit": "27cdb2049be62ee2911429b47f54774078450e32",
+  "leanModules": 980,
+  "possibleModularPaths": [
+    "Weil/LinearAlgebra/Charpoly/WeightSeparation.lean",
+    "Weil/LinearAlgebra/Charpoly/WeightSeparationIndependence.lean"
+  ],
+  "files": [
+    {
+      "path": "commit.json",
+      "url": "https://api.github.com/repos/AxiomMath/Weil/commits/main",
+      "bytes": 501211,
+      "sha256": "B470709876558D362B78CC52F61CAC12D8D5FED3DEF432025C1BAF1420FB9347"
+    },
+    {
+      "path": "tree.json",
+      "url": "https://api.github.com/repos/AxiomMath/Weil/git/trees/27cdb2049be62ee2911429b47f54774078450e32?recursive=1",
+      "bytes": 327498,
+      "sha256": "9C5A8782CFA2CE44199285E1311C4216799159DFE77ED6A7AA8AA12774A667DD"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/README.md",
+      "bytes": 9339,
+      "sha256": "DF820C5178A6FCA61FB21E3166AB623D302C23EA50CA89A13BB004618DC93ECC"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/LICENSE",
+      "bytes": 11358,
+      "sha256": "C95BAE1D1CE0235ECCCD3560B772EC1EFB97F348A79F0FBE0A634F0C2CCEFE2C"
+    },
+    {
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/lean-toolchain",
+      "bytes": 29,
+      "sha256": "8190E75A201741065FE508B28955DD64DD72D090BABE5F70CE6848879D68AE88"
+    },
+    {
+      "path": "lakefile.toml",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/lakefile.toml",
+      "bytes": 636,
+      "sha256": "033DA4F4AB2CF8B05A7183E0A5C1260B5B8C1E7942A47F9D06421A331E521F5F"
+    },
+    {
+      "path": "lake-manifest.json",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/lake-manifest.json",
+      "bytes": 3510,
+      "sha256": "445AD7B876D68DB78340F05B1F9BEA2F99C972704B58225869499BC7C97B3CF5"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneWeilConjecture.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneWeilConjecture.lean",
+      "bytes": 23573,
+      "sha256": "06E7870719388EE63F892FEBBA542C84852EAC58F1AE7254A318E426981C3066"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilRiemannHypothesisForm.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilRiemannHypothesisForm.lean",
+      "bytes": 12746,
+      "sha256": "113DDCDE902685661076E9AA39EF10C59B5338D6734F78B59D13051B449DDBEC"
+    },
+    {
+      "path": "Weil/LeanEval/WeilConjectures.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/LeanEval/WeilConjectures.lean",
+      "bytes": 16635,
+      "sha256": "B228D4BCF8E96544420F412906147F8E0D42182FA3CFF79AEE7E65591E9D892F"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Duality/PoincareDualityConstantSystem.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Duality/PoincareDualityConstantSystem.lean",
+      "bytes": 17176,
+      "sha256": "C70D43BAE1484104316F32D4498FC289785E5A2860F662B9EDD7B7E1E4436C96"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/CharpolyIntegrality.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/CharpolyIntegrality.lean",
+      "bytes": 15033,
+      "sha256": "7C1418B224F70944290E543F2978EEDE852A8EF7D9AAD8C9E959A70AEA7D7ED5"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/ConnectedComponentsCharpoly.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/ConnectedComponentsCharpoly.lean",
+      "bytes": 50474,
+      "sha256": "2F3D1E5394FD1B3C698F287FB687B18D27F00AE11B5BC345F30B9D985BC4523E"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneFunctionalEquation.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneFunctionalEquation.lean",
+      "bytes": 20336,
+      "sha256": "4368B3E99406F287041C5CA3157095D532256D456A34371DE0E84AB4C0DDF706"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/FieldOfConstantsFrobenius.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/FieldOfConstantsFrobenius.lean",
+      "bytes": 14458,
+      "sha256": "C7E3E7648A4FD2C652F32E4588893B830712ED09A357811342CF1E5E3E85A1F2"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/LAdicTraceFormulaFinal.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/LAdicTraceFormulaFinal.lean",
+      "bytes": 11354,
+      "sha256": "B5EC87CE95CBFE594D183E9C9FF2F099A65347D09C4D38543D0B9879C6CB61DA"
+    },
+    {
+      "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilEstimateFromPurityAllEmbeddings.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilEstimateFromPurityAllEmbeddings.lean",
+      "bytes": 5626,
+      "sha256": "82BDD595D05887095DC0033ED0C7EF64D08F2DAE3EE2A5DDCB2027C95ADD629C"
+    },
+    {
+      "path": "Weil/Attr.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Attr.lean",
+      "bytes": 996,
+      "sha256": "F3F3D24E98FDE4BBAD0FA465D7509A88226C00F3A6501A8F5F6C1B54A9D80292"
+    },
+    {
+      "path": "Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/FieldValuedPointCount.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/FieldValuedPointCount.lean",
+      "bytes": 5480,
+      "sha256": "010E03121A8271F559083F13F8418DA051653BB2CCFE923BE6062827BB6188C0"
+    },
+    {
+      "path": "Weil/FieldTheory/IsAlgClosed/Classification.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/FieldTheory/IsAlgClosed/Classification.lean",
+      "bytes": 6982,
+      "sha256": "CBBB506F1095E3237FF49F971CB0B47C8EE49D2DDE61CC8B5F2C98DAD808F138"
+    },
+    {
+      "path": "Weil/LinearAlgebra/Charpoly/Reverse.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/LinearAlgebra/Charpoly/Reverse.lean",
+      "bytes": 3565,
+      "sha256": "695241E81DEE9E42191ADA097985398606BDFEB68C7BFA2628CAAB8DC98E6BF8"
+    }
+  ],
+  "scope": "Metadata, three endpoint files, and their immediate Weil imports; not full proof closure.",
+  "buildClaimed": false,
+  "productionMutation": false,
+  "rootPinsChanged": false
+}

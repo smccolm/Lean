@@ -1,0 +1,39 @@
+{
+  "recordedUTC": "2026-11-17T07:52:32.648421+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy -> original all-weight association -> actual arithmetic rank-two representation",
+  "route": "Reuse finite joint arithmetic descent and discrete determinant descent. Transfer arithmetic-kernel trace translation through every positive adic quotient using Frobenius uniqueness. The already proved faithful trace algebra and matrix-kernel constructor then give an actual matrix representation killing the arithmetic kernel. Use native surjective restriction and compact quotient factorization. No stable lattice is needed solely for this descent.",
+  "dischargedAssumptionsPlanned": [
+    "matrix action kills original arithmetic kernel",
+    "continuous arithmetic factorization"
+  ],
+  "deferred": [
+    "stable lattice construction solely for arithmetic descent"
+  ],
+  "remaining": "Other association, local/image/regularity, automorphy and literal analytic continuation obligations are unchanged. No acceptance gate closed by this route assessment.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointDescent.lean",
+      "sha256": "F00915768C2E625AA53141531FD2DEDB1F1B7CDCA331AE5DEF68CBBC92064F6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+      "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticOriginalSupportDescent.lean",
+      "sha256": "D379B676AA67FD4C133927245AAE661D264DB3ABDFB6A57F472180A40F9A00A3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticRestriction.lean",
+      "sha256": "07CDDC97E8807EC33C2F162310413AEA8A17B1138586AAD14472FA1875EE2CC3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeContinuity.lean",
+      "sha256": "073675A9CBCEE8CC8FB2A3C29ECE6213FBDB79FA78E8753D0A7D98FCC06F8951"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveIntegralLattice.lean",
+      "sha256": "E3148886DF31275D5B5F008C32ABB1FB6A5EC787507C05CABC33E258E9363FDC"
+    }
+  ]
+}

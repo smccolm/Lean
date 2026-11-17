@@ -1,0 +1,9 @@
+import Dubon2026.SourceDicksonPGLBasic
+import Mathlib.Tactic
+open Lean
+private def inspectNames : CoreM Unit := do
+  let env ← getEnv
+  for (name, _) in env.constants.toList do
+    if name.toString.startsWith "Dubon2026.SourceDickson.instFactPrimeOfNatNat" then
+      logInfo m!"QUALIFIED NAME {name}"
+#eval inspectNames

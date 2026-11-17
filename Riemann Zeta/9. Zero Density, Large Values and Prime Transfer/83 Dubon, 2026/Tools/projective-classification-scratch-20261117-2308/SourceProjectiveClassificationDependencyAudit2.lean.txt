@@ -1,0 +1,28 @@
+import SourceGammaOneProjectiveResidual
+import Mathlib.Tactic
+
+open Lean
+
+private def runProjectiveClassificationDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_projective_residual]
+  let localModules : Array Name := #[`SourceDicksonObjects, `SourceDicksonPGLBasic, `SourceDicksonNatClassEquation, `SourceDicksonPSLBasic, `SourceDicksonPartitionHelpers, `SourceDicksonCyclicPartition, `SourceDicksonRecognitionA5, `SourceDicksonFieldReconstruction, `SourceDicksonPartitionProof, `SourceDicksonPSLRecognition, `SourceDicksonTameClassification, `SourceDicksonWildClassification, `SourceDicksonClassification, `SourceResidualProjectiveClassification, `SourceGammaOneProjectiveResidual]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_projective_residual, `Dubon2026.SourceDickson.exists_residualCoefficientEmbedding, `Dubon2026.SourceDickson.residualProjectiveAction_finite, `Dubon2026.SourceDickson.hasDicksonAlternatives, `Dubon2026.SourceDickson.residual_projective_classification, `Dubon2026.SourceDickson.dickson_classification, `Dubon2026.SourceDickson.classification_tame_slop, `Dubon2026.SourceDickson.classification_wild_slop, `Dubon2026.SourceDickson.natClassEquation, `Dubon2026.SourceDickson.recognition_PSL_iso, `Dubon2026.SourceDickson.recognition_PGL_iso, `Dubon2026.SourceDickson.psl_G_le_pgl_range_from_orbit, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE PROJECTIVE CLASSIFICATION VALUE AUDIT PASS: all {required.size} required proof dependencies occur in the original-form consumer value closure. The actual original arithmetic residual action and both classification branches are consumed. Arithmetic image exclusions and DUB-17--20 remain OPEN."
+
+#eval runProjectiveClassificationDependencyAudit

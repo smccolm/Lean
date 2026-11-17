@@ -1,0 +1,25 @@
+{
+  "status": "Prepared scripts inspected before execution. Corrected scope-cardinality assertion from two to three; exact single-owner condition remains one. Source directory and numeric regex retain 9 and [1-9]. Predecessor canonical receipt/archive still mandatory. No production mutation.",
+  "modules": 34,
+  "queries": 76,
+  "theorems": 61,
+  "constructions": 15,
+  "checks": 206,
+  "edges": 83,
+  "scopes": 3,
+  "files": {
+    "archive_original_trace_algebra_canonical_9645.py": "CED354BA3BFCDFE77A9F1DA0DE34E13460CED7EC4A7B266E23F331E49FFDE94D",
+    "build_original_trace_algebra_9645.ps1": "3B57C3B61F3352DFDCEF345714DE34DECBF099A3EE5B261BD3170A801A3F4B89",
+    "compare_original_trace_algebra_9645.py": "0BBA2A0F6A763705FC15DA47ECDD958C6C6B2873461F71B92455B585594E478C",
+    "integrate_source_original_trace_algebra_9645.py": "A1D972FBBFA390547213F46854E5A9789ACCB3B30F4789C73916AD3A37F63E1D",
+    "original-trace-algebra-preexecution-review-9645.json": "68594977C3F01CA1F632583DD2DD98798B50FC430832CF6F09E8C54E6CC62253",
+    "preflight_original_trace_algebra_9645.py": "44ADF18159ECFF8751AF31277306EE0369E9C32674802E6CD2C50E9077B9DC5F",
+    "prepare_original_trace_algebra_global_ownership_9645.py": "2659943644D9E4BA3F1411F24BC4BCDE2252FCF4B8758788950C5F739FED6463",
+    "prepare_original_trace_algebra_production_ownership_9645.py": "AD86364DCB80D6F8C16A8081BD3294E655A305D79053594AB363199D77520EA3",
+    "record_source_original_trace_algebra_9645.py": "323EC8EB7DF90237DB33C9A8826DABB70BDA42E914FF3ACDF88E16CFF3DA6526",
+    "source-original-trace-algebra-scratch-ownership-9645.json": "9076A887DD089A4CDC3A87A9F2FC15C463ED6AE8C4B7CEF78A74B21C9D8B1112",
+    "verify_original_trace_algebra_9645.ps1": "B5291AAA45328BECE4C8E772581CDF1161FEBE05B549ED6E142905E6A63EE6C6"
+  },
+  "rootIntegrityPassMarkers": 1,
+  "scopeCardinality": 3
+}

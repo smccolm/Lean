@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "declarations": 1149,
+  "missing": [],
+  "extra": [],
+  "different": {},
+  "evidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.log",
+      "sha256": "947847AFBA64DCF8534F73AAF5A476F5C9AD0D5279D062AE7F9267CFAB6760F7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.lean",
+      "sha256": "C600046A53D89912386D6C1E6B15131CD537D89C04035A3F94013E06E7C6AA86"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.log",
+      "sha256": "C8B7801892EF3923A7808149CADDE76FA055AAA5EC6C8DC9F5A4117A705C2CF0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.lean",
+      "sha256": "4BF7FB222CB1A99C5554215E6D0971E0C0F3356FE8BAE73FBB120B1263096D46"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "normalization": "Names are rewritten structurally, retaining numerical Name components: only the exact import-qualified private prefixes, generated auxiliary macro/unexpander names and three verified prime-instance names change. Bound binder names are alpha-normalized, expression metadata is removed after recursive child traversal, and closed Name literals are normalized only in generated notation declarations. Every public/private/generated type and available value is checked with exact owner/name sets; no declaration is omitted. Identical mathematical source bodies are independently checked after stripping imports."
+}

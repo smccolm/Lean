@@ -1,0 +1,59 @@
+{
+  "status": "Prepared helper review; no production mutation. Predecessor9697 canonical PASS/archive and full preflight still mandatory.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_projective_residual_image_canonical_9725.py",
+      "sha256": "7D899F8569C6D9879C5F51AA7F414D60A4C7C253043882A13A3EE5CDC0B8661C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_projective_residual_image_9725.py",
+      "sha256": "90ADCCC8A5B1CE0D13A275460FEF317CBADE1A711EE2A3267AFFAC9AFBBA8497"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_projective_semantics_9725.py",
+      "sha256": "24A76A717FADB923EA8325F1DBE73120EDBF1EDC84927FC0C006672141D7DCDC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_projective_residual_image_9725.py",
+      "sha256": "1D21930FEC5B6A34FDED715BE4F15DE70FCE0828A2128FF4BE55852FFB2D23B8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_projective_residual_image_9725.py",
+      "sha256": "C7C82919121213E6FD6561FDBE907EB77FA959843A94A78632AE5F6CF03618AE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_projective_residual_image_global_ownership_9725.py",
+      "sha256": "9630665E988C49E83BFC42157710ACAFD715D2E2040F8252EA2A01C40B99BAB2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_projective_residual_image_production_ownership_9725.py",
+      "sha256": "1FC674D4610E1B6709970830BF8209D515303096B61B2A0393D5EE4803429C45"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_projective_residual_image_9725.py",
+      "sha256": "CE9248443B9B7BCC18D90946632EF694904342BFC6273AB12CCE825230CA2999"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_projective_residual_image_9725.ps1",
+      "sha256": "BC1DBE53C5EA315582E177C340EA1D9A8C0305F7AC32EB4D60DC9F505B6BB33E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_projective_residual_image_9725.ps1",
+      "sha256": "2D9F144FC8D8B130FC5FA7C77D66BE4888C95DAE15129E2869C6B046C37E3A26"
+    }
+  ],
+  "expectedScope": 9725,
+  "increment": 28,
+  "axiomQueries": 436,
+  "theoremRegistrations": 371,
+  "constructions": 65,
+  "exhaustiveIncrement": 939,
+  "typeValueDeclarations": 1149,
+  "requiredValueEdges": [
+    36,
+    45
+  ],
+  "generatedPublicInstanceRenames": 3,
+  "sourceBodiesPreserved": true,
+  "canonicalCompletionStillRequires": "Production aggregate, all focused checks, exact ownership/type/value reconciliation, sequential foundation and paper runners, all thirteen regressions, global ownership reconciliation and final receipt."
+}

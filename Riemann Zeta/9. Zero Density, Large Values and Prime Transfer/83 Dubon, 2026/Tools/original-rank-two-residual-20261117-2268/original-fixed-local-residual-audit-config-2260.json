@@ -1,0 +1,51 @@
+{
+  "modules": [
+    "SourceOriginalResidualLocalInterface",
+    "SourceGammaOneFixedLocalResidual"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+  ],
+  "constructions": [],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+    "Dubon2026.compact_rankTwo_integral_residual_realization",
+    "Dubon2026.sourcePrimitiveResidualHeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveResidualHeckeCharacter_ker_isMaximal",
+    "Dubon2026.sourceArithmeticLocalEmbedding_exists_extension",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_local",
+    "Dubon2026.rationalPrimeArithmeticRestriction_inertia_eq_one_of_away"
+  ],
+  "separatelyAxiomChecked": [],
+  "files": [
+    {
+      "version": "SourceOriginalResidualLocalInterface2256e",
+      "module": "SourceOriginalResidualLocalInterface",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface.lean",
+      "sourceSha256": "48B7D5B9166F0D323A27C970FD7775146F4CC22DCC8BF5CF17A33D00F373004E",
+      "canonicalSha256": "48B7D5B9166F0D323A27C970FD7775146F4CC22DCC8BF5CF17A33D00F373004E",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneFixedLocalResidual2259d",
+      "module": "SourceGammaOneFixedLocalResidual",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual.lean",
+      "sourceSha256": "1F33EBFE75A7F4F8295313D4FDAB1FE79ED11BCBCD13E163CF538139B2BC8FF2",
+      "canonicalSha256": "493B198A6352D5FD7029788F0BDC681D0AA34FCD0B526A851B95534A13B523B7",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "routeAssessment": "original-fixed-local-residual-route-2260.json",
+  "productionMutation": false
+}

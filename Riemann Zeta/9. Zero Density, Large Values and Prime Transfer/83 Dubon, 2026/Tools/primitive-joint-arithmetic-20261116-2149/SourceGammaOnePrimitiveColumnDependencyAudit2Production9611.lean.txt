@@ -1,0 +1,49 @@
+import Dubon2026.SourceGammaOnePrimitiveCuspBoundary
+import Dubon2026.SourceGammaOnePrimitiveWidth
+import Dubon2026.SourceGammaOnePrimitiveWidthColumns
+import Dubon2026.SourceGammaOnePrimitiveCuspValues
+import Dubon2026.SourceGammaOnePrimitiveCuspConjugation
+import Dubon2026.SourceGammaOnePrimitiveDiamond
+import Dubon2026.SourceGammaOnePrimitiveUpperColumns
+import Dubon2026.SourceGammaOnePrimitiveFixedCosets
+import Dubon2026.SourceGammaOnePrimitiveFixedOrbit
+import Dubon2026.SourceGammaOnePrimitivePrimeOrbits
+import Dubon2026.SourceGammaOnePrimeHeckeCardinality
+import Dubon2026.SourceGammaOnePrimitiveTwoOrbits
+import Dubon2026.SourceGammaOnePrimitiveOrbitRepresentatives
+import Dubon2026.SourceGammaOnePrimitiveDividedTerm
+import Dubon2026.SourceGammaOnePrimitiveMultipliedTerm
+import Dubon2026.SourceGammaOnePrimitiveTermColumns
+import Dubon2026.SourceGammaOneFiniteBinaryBoundary
+import Dubon2026.SourceGammaOnePrimitiveBoundaryOrbit
+import Dubon2026.SourceGammaOnePrimitiveHeckeTrace
+import Dubon2026.SourceGammaOnePrimitiveColumnBoundary
+import Dubon2026.SourceGammaOnePrimitiveColumnHecke
+import Dubon2026.SourceGammaOnePrimitiveColumnDiamond
+import Mathlib.Tactic
+
+open Lean
+
+private def runGammaOnePrimitiveColumnDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_diamond]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOnePrimitiveCuspBoundary, `Dubon2026.SourceGammaOnePrimitiveWidth, `Dubon2026.SourceGammaOnePrimitiveWidthColumns, `Dubon2026.SourceGammaOnePrimitiveCuspValues, `Dubon2026.SourceGammaOnePrimitiveCuspConjugation, `Dubon2026.SourceGammaOnePrimitiveDiamond, `Dubon2026.SourceGammaOnePrimitiveUpperColumns, `Dubon2026.SourceGammaOnePrimitiveFixedCosets, `Dubon2026.SourceGammaOnePrimitiveFixedOrbit, `Dubon2026.SourceGammaOnePrimitivePrimeOrbits, `Dubon2026.SourceGammaOnePrimeHeckeCardinality, `Dubon2026.SourceGammaOnePrimitiveTwoOrbits, `Dubon2026.SourceGammaOnePrimitiveOrbitRepresentatives, `Dubon2026.SourceGammaOnePrimitiveDividedTerm, `Dubon2026.SourceGammaOnePrimitiveMultipliedTerm, `Dubon2026.SourceGammaOnePrimitiveTermColumns, `Dubon2026.SourceGammaOneFiniteBinaryBoundary, `Dubon2026.SourceGammaOnePrimitiveBoundaryOrbit, `Dubon2026.SourceGammaOnePrimitiveHeckeTrace, `Dubon2026.SourceGammaOnePrimitiveColumnBoundary, `Dubon2026.SourceGammaOnePrimitiveColumnHecke, `Dubon2026.SourceGammaOnePrimitiveColumnDiamond]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace, `Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_level, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_coprime_good_prime, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_iff_translation, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_eq_of_unit_columns, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_generator, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_congr, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_unipMat, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_eq_of_upper_columns, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_iff, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_unique, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_fixed, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_pow_mem_principal, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_pow_fixes, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_period_one_or_prime, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_hecke_cosets_card, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_orbit_card_two, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_out, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_two_orbits, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_mem_heckeUpper, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_divided_term, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_pow_mem_heckeUpper, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_multiplied_term, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_divided_column_compare, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_multiplied_column_compare, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_toP, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_hecke, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_normalizer_column, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_diamond, `Dubon2026.sourceGammaOneDiamondH1_hom_apply, `Dubon2026.sourceGammaOneDiamond_conj_mem, `Dubon2026.SourceCuspBoundary.colRed_lift, `Dubon2026.SourceCuspBoundary.exists_borel, `Dubon2026.SourceCuspBoundary.exists_conj_of_col_congr]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMAONE PRIMITIVE COLUMN DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual primitive boundary kernel, Hecke intertwining and diamond intertwining. Primitive widths, the two actual coset orbits, integral conjugates and representative comparison are consumed. Arithmetic realization and source gates remain OPEN."
+
+#eval runGammaOnePrimitiveColumnDependencyAudit

@@ -1,0 +1,39 @@
+import SourceSubfieldSymmetricAbsolute2331a
+import SourceResidualFiniteLinearAlternatives
+
+/-! DUB-17/18 -> automorphy -> absolute symmetric-power residual irreducibility.
+The exact finite-subfield witnesses already constructed from Dickson supply the
+native SL₂ criterion. No equality of the image and coefficient fields is used. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+variable (p : ℕ) [Fact p.Prime]
+
+/-- On the large-image branch, one finite coefficient extension and one basis
+make every symmetric power in the explicit prime range absolutely irreducible. -/
+theorem finite_linear_bounds_absolute_symmetric_irreducibility
+    {F : Type} [Field F] {Γ : Type} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F)
+    (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    ∃ E : IntermediateField (ZMod p) (K p), Finite E ∧
+      ∃ (jE : F →+* E) (B : GL (Fin 2) E), E.subtype.comp jE = j ∧
+        ∀ (n : ℕ), 2 * n < p - 1 →
+          ∀ (L : Type) (_ : Field L) (_ : Algebra E L),
+            Representation.IsIrreducible (matrixStandardRepresentation
+              (matrixCoefficientExtension (L := L) ((homogeneousSymmetricGL n).comp
+                ((MulEquiv.toMonoidHom (MulAut.conj B)).comp
+                  ((GeneralLinearGroup.map jE).comp ρ))))) := by
+  obtain ⟨m, hm, E, hE, jE, θ, B, hj, _, hlo, _⟩ := h
+  refine ⟨E, hE, jE, B, hj, ?_⟩
+  intro n hn L hL hEL
+  have hp : p.Prime := Fact.out
+  have hpow : p ≤ p ^ m := by
+    simpa only [pow_one] using Nat.pow_le_pow_right hp.pos hm
+  have hsize : 2 * n < Nat.card (GaloisField p m) - 1 := by
+    rw [GaloisField.card p m (by omega : m ≠ 0)]
+    omega
+  apply finiteSubfield_symmetric_absoluteIrreducible p n θ hsize (by omega)
+  simpa only [MonoidHom.map_range] using hlo
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,14 @@
+[
+  {
+    "module": "Dubon2026.SourceDicksonObjects",
+    "sourceSha256": "88dcb7c8ab49b6dc34a4efd8ecb7f5c1b2cf3197224a919011004a3c44001059",
+    "qualifiedSha256": "88dcb7c8ab49b6dc34a4efd8ecb7f5c1b2cf3197224a919011004a3c44001059",
+    "importsOnly": true
+  },
+  {
+    "module": "Dubon2026.SourceDicksonPGLBasic",
+    "sourceSha256": "c7e3c1417beb131724d993206fc879d98e6c1be7ac1b8c69151ae101c104cf1a",
+    "qualifiedSha256": "616e2d123d7d68b2e45249fcb0a9322c69d65f86b31df41da1f2b94235c21634",
+    "importsOnly": true
+  }
+]

@@ -1,0 +1,48 @@
+import Dubon2026.SourceRationalLocalValuation
+import Mathlib.FieldTheory.Galois.Profinite
+
+/-! DUB-17/18 -> original all-weight association -> compatibility of
+original adic trace specializations. Native Krull neighborhoods supply
+an actual finite Galois field controlling a continuous discrete function
+near a specified Galois element. No global quotient or uniform-factor
+framework is needed for the subsequent Chebotarev comparison. -/
+namespace Dubon2026
+noncomputable section
+open scoped Topology
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+private local instance (F : FiniteGaloisIntermediateField ℚ Qbar) : Algebra ℚ F := F.algebra'
+private local instance (F : FiniteGaloisIntermediateField ℚ Qbar) : IsGalois ℚ F := F.isGalois
+
+/-- A continuous discrete function on the actual absolute Galois group
+is constant on the finite restriction fiber of any specified element. -/
+theorem absolute_continuous_local_finite_factor
+    {X : Type} [TopologicalSpace X] [DiscreteTopology X]
+    (f : Gal(Qbar/ℚ) → X) (hf : Continuous f) (σ : Gal(Qbar/ℚ)) :
+    ∃ F : FiniteGaloisIntermediateField ℚ Qbar,
+      ∀ g : Gal(Qbar/ℚ), AlgEquiv.restrictNormalHom F g = AlgEquiv.restrictNormalHom F σ →
+        f g = f σ := by
+  let U : Set Gal(Qbar/ℚ) := {g | f (σ * g) = f σ}
+  have hUopen : IsOpen U :=
+    (isOpen_discrete ({f σ} : Set X)).preimage (hf.comp (continuous_const.mul continuous_id))
+  have hU : U ∈ 𝓝 1 := hUopen.mem_nhds (by simp [U])
+  obtain ⟨L, hfin, hnorm, hL⟩ := (krullTopology_mem_nhds_one_iff_of_normal ℚ Qbar U).mp hU
+  letI : Algebra ℚ L := L.algebra'
+  letI : FiniteDimensional ℚ L := hfin
+  letI : Normal ℚ L := hnorm
+  letI : IsGalois ℚ L := ⟨⟩
+  let F : FiniteGaloisIntermediateField ℚ Qbar :=
+    { toIntermediateField := L, finiteDimensional := hfin, isGalois := inferInstance }
+  refine ⟨F, ?_⟩
+  intro g hg
+  have hk : σ⁻¹ * g ∈ L.fixingSubgroup := by
+    rw [← L.restrictNormalHom_ker]
+    change AlgEquiv.restrictNormalHom L (σ⁻¹ * g) = 1
+    rw [map_mul, map_inv, hg, inv_mul_cancel]
+  have hv := hL hk
+  change f (σ * (σ⁻¹ * g)) = f σ at hv
+  simpa only [mul_inv_cancel_left] using hv
+
+end
+end Dubon2026

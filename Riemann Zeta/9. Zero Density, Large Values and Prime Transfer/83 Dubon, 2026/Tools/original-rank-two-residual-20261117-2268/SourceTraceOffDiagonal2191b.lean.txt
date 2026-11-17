@@ -1,0 +1,34 @@
+import SourceTraceIdempotentCorner
+import Mathlib.Algebra.Ring.Idempotent
+
+/-! DUB-17/18 -> actual two-dimensional realization -> off-diagonal
+components of the trace algebra. Native complementary idempotent identities
+and the proved faithful trace pairing handle the diagonal branch and
+supply zero trace for the off-diagonal basis vectors. -/
+namespace Dubon2026
+variable {R A : Type*} [CommRing R] [Ring A] [Algebra R A]
+
+/-- Complementary off-diagonal elements have zero trace by cyclicity. -/
+theorem traceIdempotent_offDiagonal_zero (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x))
+    (e : A) (he : e * e = e) (x : A) : τ (e * x * (1 - e)) = 0 := by
+  have he' : IsIdempotentElem e := he
+  calc
+    τ (e * x * (1 - e)) = τ ((x * (1 - e)) * e) := by rw [mul_assoc, hCyc]
+    _ = 0 := by rw [mul_assoc, he'.one_sub_mul_self, mul_zero, map_zero]
+
+/-- If one off-diagonal component vanishes, the opposite vanishes by the
+actual nondegenerate trace pairing. This is the diagonal realization branch. -/
+theorem traceIdempotent_opposite_vanishes (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x))
+    (hNondeg : ∀ x, (∀ y, τ (x * y) = 0) → x = 0)
+    (e : A) (hOff : ∀ x, e * x * (1 - e) = 0) (x : A) : (1 - e) * x * e = 0 := by
+  apply hNondeg
+  intro y
+  calc
+    τ ((1 - e) * x * e * y) = τ ((x * (e * y)) * (1 - e)) := by
+      rw [mul_assoc, mul_assoc, hCyc]
+    _ = τ (x * (e * y * (1 - e))) := by rw [mul_assoc]
+    _ = 0 := by rw [hOff y, mul_zero, map_zero]
+
+end Dubon2026

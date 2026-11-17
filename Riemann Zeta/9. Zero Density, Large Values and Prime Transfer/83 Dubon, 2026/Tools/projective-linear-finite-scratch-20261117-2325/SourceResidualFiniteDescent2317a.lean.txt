@@ -1,0 +1,26 @@
+import SourceResidualFiniteAmbient2316d
+
+/-! DUB-17/18 -> residual large image -> finite coefficient comparison.
+Descend both coefficient embeddings and the actual conjugating matrix into
+the finite ambient field constructed from their entries. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+variable (p : ℕ) [Fact p.Prime]
+
+/-- The actual coefficient embeddings and matrix descend jointly, with exact compatibility. -/
+theorem exists_residual_finite_descent {F : Type*} [Field F] [Finite F]
+    (j : F →+* K p) (m : ℕ) (A : GL (Fin 2) (K p)) :
+    ∃ E : IntermediateField (ZMod p) (K p), Finite E ∧
+      ∃ (jE : F →+* E) (θ : GaloisField p m →+* E) (B : GL (Fin 2) E),
+        E.subtype.comp jE = j ∧ E.subtype.comp θ = galoisFieldRingHom (p := p) m ∧
+        GeneralLinearGroup.map E.subtype B = A := by
+  obtain ⟨E, hE, hj, hθ, hA⟩ := exists_residual_finite_matrix_ambient p j m A
+  obtain ⟨B, hB⟩ := exists_matrix_over_intermediateField p E A hA
+  refine ⟨E, hE, j.codRestrict E hj,
+    (galoisFieldRingHom (p := p) m).codRestrict E hθ, B, ?_, ?_, hB⟩
+  · rfl
+  · rfl
+
+end
+end Dubon2026.SourceDickson

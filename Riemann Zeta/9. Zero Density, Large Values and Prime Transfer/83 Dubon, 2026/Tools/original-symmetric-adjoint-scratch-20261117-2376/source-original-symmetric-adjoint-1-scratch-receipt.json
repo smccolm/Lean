@@ -1,0 +1,62 @@
+{
+  "recordedUTC": "2026-11-17T12:52:16.261635+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalSymmetricAdjoint",
+    "SourceGammaOneSymmetricAdjointVanishing"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.lean",
+      "sha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC",
+      "oleanSha256": "298AC1390936E56185ADA60EC1CF236E4C9F04795A7B024A802FE90165A3B09C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.lean",
+      "sha256": "E318E77899A299A51BD0A2C0698EB7CA9BA4B116F7CD750703915F865A22B1DE",
+      "oleanSha256": "554C35EAD9A0C9B6E1320665A5C4B67EE1285EABCE46A9BB07AF55F28849B27A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+    "Dubon2026.HasOriginalSymmetricAdjointVanishing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.HasOriginalSymmetricAdjointVanishing"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointAudit1.log",
+  "logSha256": "F281CE1F5C8FD2A212861603B2D330464386D4769DF9E79CD0CF5EAABA5A3D10",
+  "auditSha256": "282211721AEABD98A5EEA27B1E21212D0525D5A0F088B3EED4874A5800B5119C",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDeclarations2366.log",
+  "ownershipSha256": "4BB30A29B8139BCBA23AAC340E3E07DB6FDD8D4311DE1F7FDEACC2CEC6A9DB81",
+  "exhaustiveTheorems": 11,
+  "exhaustiveOtherDeclarations": 6,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 31,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDependencyAudit1.log",
+  "dependencyAuditSha256": "34246BD26A335136E5F72C20A9DF833532A42EB8E2F29DC515654BFA7C9BFACE",
+  "dependencyAuditSourceSha256": "12F37E4FF49F4FCA7A355C2735D34DFF127442572F9C2C76F62F793950B77028",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-symmetric-adjoint-reuse-review-2371.json",
+  "reuseReviewSha256": "21EE2482B39721C0BF1F4B732013F0C1800E8501366BFB895113EE3A36C2A795",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> original trace-zero adjoint invariant vanishing on cyclotomic kernels. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

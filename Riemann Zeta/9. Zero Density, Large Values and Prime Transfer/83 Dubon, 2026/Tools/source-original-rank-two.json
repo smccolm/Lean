@@ -1,0 +1,2030 @@
+{
+  "date": "17 November 2026",
+  "modules": [
+    "Dubon2026.SourceAdicPrimePowerScalar",
+    "Dubon2026.SourceCyclotomicNormFrobenius",
+    "Dubon2026.SourceAbsoluteComplexConjugation",
+    "Dubon2026.SourceAdicCyclotomicDeterminant",
+    "Dubon2026.SourceOriginalAdicDeterminant",
+    "Dubon2026.SourceAdicQuotientContinuity",
+    "Dubon2026.SourceOriginalLocalDeterminant",
+    "Dubon2026.SourcePrimitiveLocalOddness",
+    "Dubon2026.SourceGroupAlgebraQuotientSpan",
+    "Dubon2026.SourceSpanningTraceAlgebra",
+    "Dubon2026.SourceTraceOffDiagonal",
+    "Dubon2026.SourceTraceOppositePair",
+    "Dubon2026.SourceTraceLeftIdealCoordinates",
+    "Dubon2026.SourceTraceLeftIdealBasis",
+    "Dubon2026.SourceTraceLeftActionTrace",
+    "Dubon2026.SourceSpanningTraceContinuity",
+    "Dubon2026.SourceTraceLeftActionContinuity",
+    "Dubon2026.SourceScalarCornerCharacter",
+    "Dubon2026.SourceTraceDiagonalRepresentation",
+    "Dubon2026.SourceOddTraceIdempotent",
+    "Dubon2026.SourceContinuousTraceRealization",
+    "Dubon2026.SourceMatrixTraceDeterminant",
+    "Dubon2026.SourceOriginalTraceMatrixConsumer",
+    "Dubon2026.SourceGammaOneLocalRankTwo",
+    "Dubon2026.SourceGammaOneContinuousRankTwo",
+    "Dubon2026.SourceCyclotomicNormInertia",
+    "Dubon2026.SourceUnitTraceKernel",
+    "Dubon2026.SourceGammaOneJointTraceInertia",
+    "Dubon2026.SourceGammaOneOriginalAdicInertia",
+    "Dubon2026.SourceGammaOneLocalTraceInertia",
+    "Dubon2026.SourceTraceDiagonalKernel",
+    "Dubon2026.SourceContinuousTraceKernel",
+    "Dubon2026.SourceTraceActionKernel",
+    "Dubon2026.SourceOriginalTraceMatrixKernel",
+    "Dubon2026.SourceGammaOneLocalUnramifiedRankTwo",
+    "Dubon2026.SourceGammaOneUnramifiedRankTwo",
+    "Dubon2026.SourceGammaOneJointArithmeticKernel",
+    "Dubon2026.SourceGammaOneOriginalAdicArithmetic",
+    "Dubon2026.SourceGammaOneLocalTraceArithmetic",
+    "Dubon2026.SourceAbsoluteArithmeticFactor",
+    "Dubon2026.SourceGammaOneLocalArithmeticRankTwo",
+    "Dubon2026.SourceGammaOneArithmeticRankTwo",
+    "Dubon2026.CompactOrbitSpanFinite",
+    "Dubon2026.SourceIntegralCoordinateLattice",
+    "Dubon2026.SourceCompactOrbitLattice",
+    "Dubon2026.SourceMatrixIntertwiningInvariants",
+    "Dubon2026.SourceCompactResidualRealization",
+    "Dubon2026.SourceGammaOneLocalResidualRankTwo",
+    "Dubon2026.SourceGammaOneResidualRankTwo",
+    "Dubon2026.SourceOriginalResidualLocalInterface",
+    "Dubon2026.SourceGammaOneFixedLocalResidual",
+    "Dubon2026.SourceGammaOneFixedDeterminantResidual"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual continuous rank-two representation and original arithmetic descent.",
+  "discharged": "For the actual primitive cusp form of weight at least two and prime p greater than three, the original trace now constructs a continuous rank-two matrix representation over the genuine finite local coefficient extension. Its good-prime norm Frobenius traces are the original Fourier coefficients, its determinants are the original weight powers, and every actual complex conjugation is odd. The actual group-algebra image spans; the nonzero-corner branch constructs an explicit two-dimensional left ideal and continuous matrix action, while the diagonal branch constructs continuous corner characters. Both branches retain the original trace-action kernel. Original finite joint inertia and cyclotomic inertia imply complete trace translation invariance, hence actual trivial norm-inertia action outside Q*p. The existing finite arithmetic factors also imply translation invariance on the kernel of literal absolute arithmetic restriction. Frobenius uniqueness and adic separation transfer it to the complete trace; native surjective restriction and compact quotient factorization construct a continuous representation of the prescribed arithmetic group with the same Fourier values and oddness. No supplied trace, trace algebra, basis, matrix representation, continuity or arithmetic-kernel certificate remains in these source consumers. The integer span of the two compact basis orbits is proved finite, full, invariant, free and rank two. This supplies the existing integral/residual realization, with its original trace and determinant retained through native conjugacy invariance. Literal entrywise reduction yields continuous arithmetic matrices over the actual finite discrete characteristic-p residue field, with exact reduced original Fourier Frobenius traces, weight determinants and complex oddness. No lattice or residual representation is supplied. The same original residual action has finite image and exact characteristic polynomial, trace, weight determinant and trivial inertia under the fixed prime-local arithmetic restriction; the original residual Hecke character has maximal kernel. Native character uniqueness identifies the global determinant with the original cyclotomic weight. All local-map and determinant-comparison inputs are derived in the same source consumer.",
+  "boundary": "Residual irreducibility and large image, the remaining local/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. The current source consumers have prime range p greater than three. Acceptance remains 16/20; DUB-17--20 OPEN. All original source and verification criteria are unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 9,697-module scope: all thirteen retained regressions, 60,975 exhaustive theorem checks, 27,948 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-11-17T07:50:56.785550+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceAdicPrimePowerScalar",
+        "SourceCyclotomicNormFrobenius",
+        "SourceAbsoluteComplexConjugation",
+        "SourceAdicCyclotomicDeterminant",
+        "SourceOriginalAdicDeterminant",
+        "SourceAdicQuotientContinuity",
+        "SourceOriginalLocalDeterminant",
+        "SourcePrimitiveLocalOddness",
+        "SourceGroupAlgebraQuotientSpan",
+        "SourceSpanningTraceAlgebra",
+        "SourceTraceOffDiagonal",
+        "SourceTraceOppositePair",
+        "SourceTraceLeftIdealCoordinates",
+        "SourceTraceLeftIdealBasis",
+        "SourceTraceLeftActionTrace",
+        "SourceSpanningTraceContinuity",
+        "SourceTraceLeftActionContinuity",
+        "SourceScalarCornerCharacter",
+        "SourceTraceDiagonalRepresentation",
+        "SourceOddTraceIdempotent",
+        "SourceContinuousTraceRealization",
+        "SourceMatrixTraceDeterminant",
+        "SourceOriginalTraceMatrixConsumer",
+        "SourceGammaOneLocalRankTwo",
+        "SourceGammaOneContinuousRankTwo"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicPrimePowerScalar.lean",
+          "sha256": "676DFEEFB825700C7CD2F90C954AA2EB68A93D787CC2D11784B3739A9D74E3C5",
+          "oleanSha256": "68E5D104990BE3D3E69418C858135F72C62A74CF539B7C164EF8DD91AE5AE683",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicPrimePowerScalar-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicPrimePowerScalar-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormFrobenius.lean",
+          "sha256": "100916C6BD8BE3246B87D5C43AFEA11775F2D00B4146FEAFA7E65606DC322393",
+          "oleanSha256": "609D0791152590E7F24A2E2C60AD54FAC1AB4A9C97A1F49A4C6FCB298949D9FE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormFrobenius-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormFrobenius-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteComplexConjugation.lean",
+          "sha256": "66CFF3D63346B3FFD0E0521819943F7D8323664E69B17EDB5B1A6BB2F8D18755",
+          "oleanSha256": "337F9431C6504C8552749A07C77B3DE71A4D369184DDB2D8044F47CFE350EFFF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteComplexConjugation-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteComplexConjugation-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCyclotomicDeterminant.lean",
+          "sha256": "A17554BAFFBAB5BFDA30C3BE3B66BA0A3904E4B75314A6D948DFEB66CB0A5C7E",
+          "oleanSha256": "4BFD2E73E8394A8F8406B8C2FC9B92D09911CB0E012F2C6E2B7492790BC843DB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCyclotomicDeterminant-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCyclotomicDeterminant-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdicDeterminant.lean",
+          "sha256": "9F4BAF5CA28F44BBF57E006D7EF06119DBCE8E685FAC10FE57A671AD7C690219",
+          "oleanSha256": "AEBD932E65290151F1CAD91ED4D21BD238015C7D7EB31B18ABBA0139626ED7DE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdicDeterminant-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdicDeterminant-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicQuotientContinuity.lean",
+          "sha256": "493134F1F7AEFD3FD362242E489E41ED7137D63187872437F72AF6C4B74444F6",
+          "oleanSha256": "A218FD05C91F0708870B9D6B6E1B3F9EDABCEB81BE4B8199EC260AB064487D05",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicQuotientContinuity-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicQuotientContinuity-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDeterminant.lean",
+          "sha256": "D64774AE1F5C7A911DDD4BFA83CEFC298BAE56BFAE787A4F19669165A217200A",
+          "oleanSha256": "286156A4084FC7FB759DCD7944C6CF2D0C42BF3C496979F29E6476F500B32E03",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDeterminant-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDeterminant-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalOddness.lean",
+          "sha256": "BCE8F2EA529F345CC8C04E17965D08FBA67CCF3B76068DE66DEB06A6235FB988",
+          "oleanSha256": "B1F69E0EDEE629DAE2A2C83F2723C9394062F3F85108B26217D8165CF93239F4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalOddness-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalOddness-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraQuotientSpan.lean",
+          "sha256": "C80B61AC233BF51E529986F987D6765D63C1E29BD09D0AF6016A3F4D3762B6A9",
+          "oleanSha256": "B4A5883BAD71920C647F9EC02D889B67BA027E9DAC9B95BB74D847C0D29BB65D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraQuotientSpan-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraQuotientSpan-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceAlgebra.lean",
+          "sha256": "122AA7BC6BA58D15AA40C2CD1A968BB44F9B96D996B4272CA0874BC1AE18D048",
+          "oleanSha256": "073E4043DFED3087292C1CEA4974EDD5981B8EC2B8A4F06D73E73EB9526C1E39",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceAlgebra-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceAlgebra-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOffDiagonal.lean",
+          "sha256": "0AB02CCA8018682144FD31FC914C822B5C025C08BBB303F6A9D1971B79E39A9B",
+          "oleanSha256": "C030FC9364F16B148B4131C7C96E72F8D8E7E1BC5145AB41302E9C5E7EAFAC29",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOffDiagonal-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOffDiagonal-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOppositePair.lean",
+          "sha256": "C7CDB34308A386A7D6D7D2C52BE580C0ADE916F0D4BE7AB4BB8E678AB58505D3",
+          "oleanSha256": "A570F084360D3AAD8CB4A71434246CB58B5D071C5AB4FADC33E4AFCEC6E9203D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOppositePair-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOppositePair-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealCoordinates.lean",
+          "sha256": "5CE8001B649C65A23E1DDBC70E8AAA20AB2DC787B5E905AF2E680A5D1C0CB4B7",
+          "oleanSha256": "47CC3AFBB89A5DD59EA6554E193ABE9D92909736204471326C5DFC2E8D52D39C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealCoordinates-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealCoordinates-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealBasis.lean",
+          "sha256": "6C621B21EBA283F7D5A0074F3A35BA9C195C1D7A7F81E9406848338B817501FF",
+          "oleanSha256": "B9718F04A2B7B9030C2E74D83B9E03FBD0D20E4BA88E25BEDE89985040C6907F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealBasis-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealBasis-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionTrace.lean",
+          "sha256": "F832C48B3CEE0C393FA88217126BBDAD976568C79080D6096DB1C6E4BDAD6F58",
+          "oleanSha256": "AF92002E7B98D1E6C14288E33CC7555E071E8FBA2E0D0C004B169C7FF68F628E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionTrace-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionTrace-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceContinuity.lean",
+          "sha256": "CC4C997F9514431C0DAA5C193E9F2228C24BC58AD3D5122C8425219D545AB1F3",
+          "oleanSha256": "3047CFDD856E78A92BAD8AC5667A2EBE59BF72A6E7F99E9C8351C6D34843D169",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceContinuity-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceContinuity-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionContinuity.lean",
+          "sha256": "93BB8A8FE6F70BA4142BC0F308DF018BD9CC9FB6A31A0EE653950DF7C697F144",
+          "oleanSha256": "5F3FF1A34156AEBAE495390ED6D99F6A82C33CC34801981C89CE6DFCA1369C48",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionContinuity-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionContinuity-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceScalarCornerCharacter.lean",
+          "sha256": "AD8D6B1F34E4BB0113DB16C2894EE4B4C9E548CF5F44D2DC9DBC1346EEA420EE",
+          "oleanSha256": "FD6D5DE306DA2E8B8BC5E774834DD921EB07A637A62335DBD07B7A12B69570A1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceScalarCornerCharacter-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceScalarCornerCharacter-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalRepresentation.lean",
+          "sha256": "8490F27F3A4DCF9C8518C12F04B459A32D11A9DCE6DD056BC5D936E1F28E848D",
+          "oleanSha256": "C6F6854ECB50398D07D5AC46077313CED3B2C473F1DF84B659B2762BEE117FF3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalRepresentation-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalRepresentation-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddTraceIdempotent.lean",
+          "sha256": "544FAE887AAC03DA45F14E3FA6BEC56A0EC1CD8EA07E6B8DD357367A62BCAD09",
+          "oleanSha256": "D39AACAF1674B1A6714DFD4B917DF4427D6187E1C41B9F2FF86B605F84DA2898",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddTraceIdempotent-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOddTraceIdempotent-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceRealization.lean",
+          "sha256": "DF15068BABA829979F5C8EFAED19A523912AC0111FBA02F4F65BAFD8E2E35575",
+          "oleanSha256": "EC204CF3B2E2F2198C91C99A536E82FB920D34660E745220FB6F4F4E40130F45",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceRealization-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceRealization-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixTraceDeterminant.lean",
+          "sha256": "3403E997DD56EC6CC7953AA92221EF7CEEF1058358CE7F5B282A61D17B9C1868",
+          "oleanSha256": "551EDBC542348AAE4F563BFF6AFA01EA077F732F94BC4A113CA8FFFD593045D3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixTraceDeterminant-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixTraceDeterminant-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixConsumer.lean",
+          "sha256": "25E114A26F322848126E408FD40BFA024BFB3EE328625871D2FA4CAD5B5BDA09",
+          "oleanSha256": "748F01CD96E78AD7853143CCB5E151040162E6B6D3918F92F5A052D4BF78E2F0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixConsumer-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixConsumer-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRankTwo.lean",
+          "sha256": "38848B9625C4CC98B8DABC893FDFC37780418CF6405EA623E4D603D932B1C000",
+          "oleanSha256": "F7773FCF15944941D9002F6DB302B1A8D1DC7DB9AD51F3C5D58167D19027C2B9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRankTwo-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRankTwo-2221.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuousRankTwo.lean",
+          "sha256": "EB613F6400BAE78D65D905CAC732A7EECCB5C2799FE8C38FC03911BCEEF28FC6",
+          "oleanSha256": "CA1EEE15538D321C14FC59590A417F351ADAF7B88CFBC24DF2EFFBEEAF6583D1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuousRankTwo-2221.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuousRankTwo-2221.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.adicQuotient_prime_power_zero",
+        "Dubon2026.adicQuotientPrimePowerMap",
+        "Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius",
+        "Dubon2026.sourceAbsoluteComplexConjugation",
+        "Dubon2026.sourceAbsoluteComplexConjugation_isConj",
+        "Dubon2026.sourceAbsoluteComplexConjugation_sq",
+        "Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation",
+        "Dubon2026.sourceAdicCyclotomicDeterminant",
+        "Dubon2026.sourceAdicCyclotomicDeterminant_continuous",
+        "Dubon2026.sourceAdicCyclotomicDeterminant_frobenius",
+        "Dubon2026.sourceAdicCyclotomicDeterminant_conjugation",
+        "Dubon2026.originalAdicDeterminant_eq_cyclotomic",
+        "Dubon2026.continuous_positive_adic_quotient",
+        "Dubon2026.originalLocalDeterminant_conjugation",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd",
+        "Dubon2026.sourceGroupAlgebraQuotient_span",
+        "Dubon2026.exists_spanning_algebra_of_trace_determinant",
+        "Dubon2026.traceIdempotent_offDiagonal_zero",
+        "Dubon2026.traceIdempotent_opposite_vanishes",
+        "Dubon2026.traceIdempotent_exists_opposite_pair",
+        "Dubon2026.traceIdempotent_leftIdeal_expansion",
+        "Dubon2026.traceIdempotent_pair_coordinates",
+        "Dubon2026.traceIdempotentPairEquiv",
+        "Dubon2026.traceIdempotentPairBasis",
+        "Dubon2026.traceIdempotentPair_leftAction_trace",
+        "Dubon2026.continuous_trace_of_spanning_action",
+        "Dubon2026.continuous_trace_sandwich_of_spanning_action",
+        "Dubon2026.traceIdempotentPair_matrix_continuous",
+        "Dubon2026.traceIdempotent_left_scalar",
+        "Dubon2026.sourceScalarCornerHom",
+        "Dubon2026.exists_continuous_diagonal_of_scalar_corners",
+        "Dubon2026.traceDeterminant_odd_involution_zero",
+        "Dubon2026.traceInvolution_plus_idempotent",
+        "Dubon2026.exists_continuous_matrix_of_trace_idempotent",
+        "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra",
+        "Dubon2026.matrixTwo_det_of_trace_relation",
+        "Dubon2026.matrixTwoRepresentation_det_of_trace",
+        "Dubon2026.exists_continuous_matrix_of_original_trace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.adicQuotient_prime_power_zero",
+        "Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius",
+        "Dubon2026.sourceAbsoluteComplexConjugation_isConj",
+        "Dubon2026.sourceAbsoluteComplexConjugation_sq",
+        "Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation",
+        "Dubon2026.sourceAdicCyclotomicDeterminant_continuous",
+        "Dubon2026.sourceAdicCyclotomicDeterminant_frobenius",
+        "Dubon2026.sourceAdicCyclotomicDeterminant_conjugation",
+        "Dubon2026.originalAdicDeterminant_eq_cyclotomic",
+        "Dubon2026.continuous_positive_adic_quotient",
+        "Dubon2026.originalLocalDeterminant_conjugation",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd",
+        "Dubon2026.sourceGroupAlgebraQuotient_span",
+        "Dubon2026.exists_spanning_algebra_of_trace_determinant",
+        "Dubon2026.traceIdempotent_offDiagonal_zero",
+        "Dubon2026.traceIdempotent_opposite_vanishes",
+        "Dubon2026.traceIdempotent_exists_opposite_pair",
+        "Dubon2026.traceIdempotent_leftIdeal_expansion",
+        "Dubon2026.traceIdempotent_pair_coordinates",
+        "Dubon2026.traceIdempotentPair_leftAction_trace",
+        "Dubon2026.continuous_trace_of_spanning_action",
+        "Dubon2026.continuous_trace_sandwich_of_spanning_action",
+        "Dubon2026.traceIdempotentPair_matrix_continuous",
+        "Dubon2026.traceIdempotent_left_scalar",
+        "Dubon2026.exists_continuous_diagonal_of_scalar_corners",
+        "Dubon2026.traceDeterminant_odd_involution_zero",
+        "Dubon2026.traceInvolution_plus_idempotent",
+        "Dubon2026.exists_continuous_matrix_of_trace_idempotent",
+        "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra",
+        "Dubon2026.matrixTwo_det_of_trace_relation",
+        "Dubon2026.matrixTwoRepresentation_det_of_trace",
+        "Dubon2026.exists_continuous_matrix_of_original_trace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.adicQuotientPrimePowerMap",
+        "Dubon2026.sourceAbsoluteComplexConjugation",
+        "Dubon2026.sourceAdicCyclotomicDeterminant",
+        "Dubon2026.traceIdempotentPairEquiv",
+        "Dubon2026.traceIdempotentPairBasis",
+        "Dubon2026.sourceScalarCornerHom"
+      ],
+      "separatelyAxiomChecked": [
+        "Dubon2026.traceIdempotent_offDiagonal_zero"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoAudit1.log",
+      "logSha256": "CAA65BA9A923761BA171BA4C8E0CEC35710AF441BF6CE27289036CCF5D5379E6",
+      "auditSha256": "CAE3F185DC35A550A8D69D097EFC3CD3B9561317A6F261E9FC4C7C3B2CBBEA57",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoScratchOwnership2221.log",
+      "ownershipSha256": "435023E4FDA2EE24E7BF1208BA9040FFC7FCB4349B2E7E659F604FC7DF277AD0",
+      "exhaustiveTheorems": 73,
+      "linterScopes": 25,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 53,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoDependencyAudit1.log",
+      "dependencyAuditSha256": "A92B44B13A1B03B43E2E6055955AA7504607D54539016E99E4C367E87B430D28",
+      "dependencyAuditSourceSha256": "24EBFB2ABA956D31E75DBC56C6351343AB4F8C9B09A4709D902F83B849DAA846",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> genuine continuous rank-two realization with exact original Frobenius values.",
+      "discharged": "For every original PrimitiveCuspForm Q k with k at least two and prime p greater than three, construct the actual finite local coefficient field, residue characteristic p and original coefficient embedding, then a continuous representation of the original rational absolute Galois group in GL2 of that field. Every original good-prime norm Frobenius has exactly the original Fourier coefficient as trace and q^(k-1) as determinant. Actual complex conjugation has trace zero and determinant minus one. The group action, rank-two basis, spanning trace algebra, matrix continuity, oddness and Frobenius values are derived, not supplied.",
+      "boundary": "Scratch-audited only; production promotion and assembled verification pending. The new matrices still need the full required original unramified/local/image/regularity association bridges. Primes two and three, full original all-weight association, automorphy and literal higher symmetric-power continuation remain required. Acceptance remains 16/20 and DUB-17--20 OPEN. Focused compilation does not replace the exhaustive audits or subsequent assembled verification.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-rank-two-1-reuse-review-20261117.json",
+      "reuseReviewSha256": "1C75DC80BCCB5EB6DE8EE09F229721B818CBC48DE110D5317930792C51C3EF82",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T08:00:49.700998+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceCyclotomicNormInertia",
+        "SourceUnitTraceKernel",
+        "SourceGammaOneJointTraceInertia",
+        "SourceGammaOneOriginalAdicInertia",
+        "SourceGammaOneLocalTraceInertia",
+        "SourceTraceDiagonalKernel",
+        "SourceContinuousTraceKernel",
+        "SourceTraceActionKernel",
+        "SourceOriginalTraceMatrixKernel",
+        "SourceGammaOneLocalUnramifiedRankTwo",
+        "SourceGammaOneUnramifiedRankTwo"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia.lean",
+          "sha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+          "oleanSha256": "1073C65BCADDB1B72CE2F3D40C7B7C1F37AF46AAC587F51E32286DB220A58A62",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel.lean",
+          "sha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+          "oleanSha256": "1166979619B46B6132A7D4E1C13A064C784170DB2914DF02790ED3CBA7F66C81",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia.lean",
+          "sha256": "CEA0C291455C239F535F28D4CC621D0FDCBE8B710FCC1DD86465D37FF5448CAC",
+          "oleanSha256": "45F0FD4EAA82E840E6A3A9F7491AC81C6631F75744A2DDC7D282EC30FD3113B1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia.lean",
+          "sha256": "AFB8C1631DE143021655FCAD1EA29AD09EBFF027680928C3969B6454A12E1B24",
+          "oleanSha256": "05C9352AC9958C9AC18ADA554BF41029CDD0B5B19025E65DAFF7E6964BA346D1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia.lean",
+          "sha256": "7B5B322D90A761F972DAE875C8E61A15C4BA9FB2DAA08FDD0AF0E714042F0231",
+          "oleanSha256": "90CFD48F9FA392B6648270176746FE203352E2F874D5ED1DB1E1A54CE0E49FAC",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel.lean",
+          "sha256": "3267BFBBF1851DF5965CF3585B6C0EF89AF98B7E6463E71B3D0D4C3530403A9E",
+          "oleanSha256": "CD91F123B3A0B68ECE9FCC1D893A0D3CBC87FD75BA70C55F4EF196F5F4EB6BE8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel.lean",
+          "sha256": "922E9844A74BE96785C9C6C2EF5152D1D04C35328E654C6E3559F78B35C89964",
+          "oleanSha256": "EEB62D5307294AF1C9383F03C674C7A2D0EA7BF8EEBBA1E855F60CE3D1D91D54",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel.lean",
+          "sha256": "EA87A99EB0B33A50D03476FC7FCE1F16B28EEFF97800A5C8889566220D79BA70",
+          "oleanSha256": "3E5AB5D960CB731620F5D34F1E0A5743BCD136EC244CD37A9C161922D831E34B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel.lean",
+          "sha256": "89897DE450EFE185CC875A103A809A3CE9A530F2461673363B59FD95C7F7DCE3",
+          "oleanSha256": "8CFA96D8674ECF0D9F688383AC328105453FF4AEC0CF1F09BE066FA2070E9757",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo.lean",
+          "sha256": "518281722B4315D9F6FB6AE7C22634A8CE3D7FF661346FD7D63A2827D1E4379F",
+          "oleanSha256": "AA064BB77754794FA67BD2A8C58848FFC34FEB6E02777BEE9967741AFD98CBA3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo-2235.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo.lean",
+          "sha256": "8DA777D51E8662E805A3D5DAED150DDB7465BD7C8FDB1C3351F0BFD31E93F7ED",
+          "oleanSha256": "CF0A00EB61FE61E2C6055EC944B8A004094C72A934D29C8C7BBB0A57F90270BC",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo-2235.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo-2235.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+        "Dubon2026.sourceUnitTrace_kernel_translate",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+        "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+        "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+        "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+        "Dubon2026.sourceTraceAction_eq_one_of_translate",
+        "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+        "Dubon2026.sourceUnitTrace_kernel_translate",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+        "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+        "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+        "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+        "Dubon2026.sourceTraceAction_eq_one_of_translate",
+        "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+      ],
+      "constructionRegistrations": [],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoAudit1.log",
+      "logSha256": "DF333D1E51599C7C74DB54F03C5971077869DFAB29A74743B6E7D7B91EE85528",
+      "auditSha256": "071A2A7C4B9AD488A71E1CC2325BFE8E556F727C8544F379D609B599190C8D0F",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoScratchOwnership2235.log",
+      "ownershipSha256": "30BA83EF305356821271ED05EE0C024AD2258D8090E613B799855EAD16EB064E",
+      "exhaustiveTheorems": 32,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 31,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoDependencyAudit1.log",
+      "dependencyAuditSha256": "B94FFF1160DF42EB6F208545437BFDE7088A560B23A53AE8D393E0A9BD991455",
+      "dependencyAuditSourceSha256": "33FE2AF18845CBA2CD7E09E729DB0CAF246D94C130DFAFEF98A95BDBBD998DEE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual continuous rank-two representation unramified outside Q*p.",
+      "discharged": "The original primitive cusp form of weight at least two and prime p greater than three constructs the genuine local coefficient extension and continuous two-dimensional representation with exact original Fourier and weight norm-Frobenius values, actual odd complex conjugation, and trivial action of every original norm-inertia subgroup outside Q*p. Finite trace invariance, complete trace invariance, faithful trace-algebra kernel detection and both matrix-kernel preservation branches are proved. No matrix, trace or inertia certificate is supplied.",
+      "boundary": "Scratch-audited only; production promotion and assembled verification pending. Full original association, the remaining local/image/regularity inputs, exceptional-prime scope, automorphy and literal higher symmetric-power continuation remain unresolved. The existing absolute arithmetic-descent lemma has a discrete target and cannot be applied directly to these local-field matrices. Review the existing adic matrix and stable-lattice descent results before expanding that dependency. Acceptance remains16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are still required.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-unramified-rank-two-1-reuse-review-20261117.json",
+      "reuseReviewSha256": "91E78DCC93A6CFFC4D0C97A756391D88E2A8A122C38E5CDCB19C7EE923765D04",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T08:11:41.981562+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceGammaOneJointArithmeticKernel",
+        "SourceGammaOneOriginalAdicArithmetic",
+        "SourceGammaOneLocalTraceArithmetic",
+        "SourceAbsoluteArithmeticFactor",
+        "SourceGammaOneLocalArithmeticRankTwo",
+        "SourceGammaOneArithmeticRankTwo"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointArithmeticKernel.lean",
+          "sha256": "029BC659BD23A67A0C52E7D676D49BA2DB47EA60D4CEBBAC617844F50D613322",
+          "oleanSha256": "4E3030E0A0BA56A4D9A2CCDE9E5FDDE96DA8480919B57FF1A9F457E8380BFFE9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointArithmeticKernel-2243.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointArithmeticKernel-2243.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicArithmetic.lean",
+          "sha256": "331EE769ABAE973C71C7B7A53A70F9E3770847A9D184452CCC33471B6454B0AF",
+          "oleanSha256": "1FB0CE01A879AC2A0A12CAE8941F37B28815394F3A9282055D90D17F07B0E520",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicArithmetic-2243.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicArithmetic-2243.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceArithmetic.lean",
+          "sha256": "246C28F7459307B658DD926FC82464696F8B70378EC4B25DFAD36AED4D6B9E05",
+          "oleanSha256": "4095B1DBAB9AAF00694099DB7B55ACA305384129D67B6B5D9133533C41B0E545",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceArithmetic-2243.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceArithmetic-2243.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticFactor.lean",
+          "sha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56",
+          "oleanSha256": "D4A5A21EC93492E3EB1C5A355FC0C8F9C739811F300DE204A5FD9ABF5A5C2421",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticFactor-2243.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticFactor-2243.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalArithmeticRankTwo.lean",
+          "sha256": "FE77D35318A54F8EE8C3FC896678344B9CCE783EED9824ECAE48DE395CB03A7A",
+          "oleanSha256": "29A7647B596EDFB9867EC11202C28B23C300FC5F46A38AB457A7C95E777ED38F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalArithmeticRankTwo-2243.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalArithmeticRankTwo-2243.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticRankTwo.lean",
+          "sha256": "E85AB01CD89DF8728E9570737B3EC934619EB6AADDA0528291E0A9EC36226FB1",
+          "oleanSha256": "CB56648DAAF247E52A061666F305A997D618208BA87333FF080B60CD458595D3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticRankTwo-2243.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticRankTwo-2243.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate",
+        "Dubon2026.sourceAbsoluteArithmeticRestriction_surjective",
+        "Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate",
+        "Dubon2026.sourceAbsoluteArithmeticRestriction_surjective",
+        "Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+      ],
+      "constructionRegistrations": [],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoAudit1.log",
+      "logSha256": "05BBBA735538C67C9A25C6C30612D5B9AF19B3443B074538359EC91E8A58054F",
+      "auditSha256": "ABCCC9DB084D0BE9A5B6A51E537650202D6507A374F759D59BE27532A300EB1C",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoScratchOwnership2243.log",
+      "ownershipSha256": "0A0CE6745B6CD255D3F103BF4ACEC43B6B65B00C2C723864DC27FAFA2FB44419",
+      "exhaustiveTheorems": 27,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 26,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoDependencyAudit1.log",
+      "dependencyAuditSha256": "A4CE4ACDA8D659466261F99FF594D22AE742D244B7EE3BCBC6EA091ACE216D81",
+      "dependencyAuditSourceSha256": "B59DDED649EB8578091CD0D081DDEF65799C274A7D1042128549781BBE5E76EE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> continuous rank-two representation of the prescribed arithmetic group.",
+      "discharged": "The original primitive form of weight at least two and prime p greater than three constructs its genuine local coefficient extension and continuous two-dimensional representation of the prescribed arithmetic group, retaining original Fourier norm-Frobenius traces, weight determinants and odd complex conjugation. Finite arithmetic factors give finite trace translation invariance on the original restriction kernel. Frobenius uniqueness and adic separation transfer this to the complete trace; the faithful trace algebra and kernel-retaining matrix construction kill that kernel. Native surjective restriction and compact quotient factorization give actual continuous arithmetic descent. No supplied representation, trace, arithmetic kernel, lattice or continuity certificate remains in this consumer.",
+      "boundary": "Scratch-audited only; production promotion and assembled verification pending. Remaining local/image/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN. Full scratch and subsequent assembled verification are required.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-rank-two-1-reuse-review-20261117.json",
+      "reuseReviewSha256": "D765C3250293E52BDF911350653F87743E6DC95096FCF9237D8AA6027685AB6E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T08:52:14.483836+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "CompactOrbitSpanFinite",
+        "SourceIntegralCoordinateLattice",
+        "SourceCompactOrbitLattice",
+        "SourceMatrixIntertwiningInvariants",
+        "SourceCompactResidualRealization",
+        "SourceGammaOneLocalResidualRankTwo",
+        "SourceGammaOneResidualRankTwo"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite.lean",
+          "sha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+          "oleanSha256": "78083ED9DB5CA7E5D9CA1F96C6A3778E332C1F3B9DFFB1AED029F79BF864963F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite-2257.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice.lean",
+          "sha256": "EF9DD376596F669F67509160E5904E617C8458DB4F1D65F8013397EC9CAAB7AA",
+          "oleanSha256": "D6468B8E4209AB8CA93AD9997A20FA4172DB6ED0BAEA7205ACFFBCE3B104AC3D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice-2257.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice.lean",
+          "sha256": "7D70E35A4DE290FF302DE81072FA81EE920848123F72C8D66852AF45BBC47A2B",
+          "oleanSha256": "B73132FCB0F1BA2E27D2114D4D2B623D62753E86AAD562A04CF705285E696E92",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice-2257.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants.lean",
+          "sha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+          "oleanSha256": "DFB35A148564D016980F693AC03CA18411042588CFBC9DB1D8C3BFA2EE1B833D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants-2257.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization.lean",
+          "sha256": "1DB00604D3CC138A2B45892B95EA28ABDB840FAD67221098B26E2D8FF77ED691",
+          "oleanSha256": "4C6D85249257ED745984A387980FC6F7D7648D2EE4C92B5F6D1C3ABE70548C25",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization-2257.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo.lean",
+          "sha256": "040854BDCFF18C36F8BF933A8469CE6C4E28B98F67116517F97C7BE67601BC1F",
+          "oleanSha256": "D506FE440295304D615DB30EE6F38B476DFED0527605CEB51E6F67C4873199E2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo-2257.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo.lean",
+          "sha256": "2CBB4735DE3CC33E0B82F189C0FF8599A15906626584D8CCD716924F3E8124DD",
+          "oleanSha256": "215F46DC4F6830D948B1AD826133C710BC7C5E9ACCF1FAFB693784024EEC0F9B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo-2257.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo-2257.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.compact_span_finite_of_open_lattice",
+        "Dubon2026.sourceIntegralCoordinateMap",
+        "Dubon2026.sourceIntegralCoordinateLattice",
+        "Dubon2026.mem_sourceIntegralCoordinateLattice",
+        "Dubon2026.sourceIntegralCoordinateLattice_fg",
+        "Dubon2026.sourceIntegralCoordinateLattice_open",
+        "Dubon2026.sourceCompactOrbitLattice",
+        "Dubon2026.sourceCompactOrbitLattice_span",
+        "Dubon2026.sourceCompactOrbitLattice_invariant",
+        "Dubon2026.sourceCompactOrbitLattice_fg",
+        "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+        "Dubon2026.matrixTwo_trace_det_of_intertwining",
+        "Dubon2026.compact_rankTwo_integral_residual_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.compact_span_finite_of_open_lattice",
+        "Dubon2026.mem_sourceIntegralCoordinateLattice",
+        "Dubon2026.sourceIntegralCoordinateLattice_fg",
+        "Dubon2026.sourceIntegralCoordinateLattice_open",
+        "Dubon2026.sourceCompactOrbitLattice_span",
+        "Dubon2026.sourceCompactOrbitLattice_invariant",
+        "Dubon2026.sourceCompactOrbitLattice_fg",
+        "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+        "Dubon2026.matrixTwo_trace_det_of_intertwining",
+        "Dubon2026.compact_rankTwo_integral_residual_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceIntegralCoordinateMap",
+        "Dubon2026.sourceIntegralCoordinateLattice",
+        "Dubon2026.sourceCompactOrbitLattice"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoAudit2.log",
+      "logSha256": "8E7D66E12226AD300F1100B424F34AF7C8C80BDD6767B41C24552687EB02D78C",
+      "auditSha256": "51E0E3BEE12A384277797996AB3A3E1335ADD917504A10C965805C36CBB74F0B",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoScratchOwnership2257.log",
+      "ownershipSha256": "F11DA3326A7853C0208E09078D800178F005FDFCDDAE6084BB98F43638C76372",
+      "exhaustiveTheorems": 39,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoDependencyAudit2.log",
+      "dependencyAuditSha256": "589E8FC4535949557E23AE5B0D8CCFF5BCB7D1204638A7002EBFF04BF31D3D31",
+      "dependencyAuditSourceSha256": "6192C98B82BEF6D603EBDF3D387A421C923A0370B41C6C187313B5CD23EE9675",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual integral and residual arithmetic rank-two realization.",
+      "discharged": "The original primitive form of weight at least two and prime p greater than three constructs a genuine finite local coefficient extension, its actual finite discrete characteristic-p residue field and continuous integral/residual arithmetic representations. The integer span of the two compact basis orbits is proved finite, full, invariant, free and rank two. This discharges every lattice input of the existing integral/residual realization. Native conjugacy invariance proves the exact trace and determinant comparison. Literal entrywise reduction gives original reduced Fourier traces and weight determinants at all original good-prime norm Frobenius elements, and actual complex conjugation remains odd. No lattice, representation, Frobenius, finite-residue or continuity certificate is supplied by the source consumer.",
+      "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual irreducibility and large image, remaining local/regularity conditions, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are required.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residual-rank-two-1-reuse-review-20261117.json",
+      "reuseReviewSha256": "897C34B9CA2576C36042E6E8C7648E170307E8CC773A9EE26E20832A3BD51E24",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T08:55:07.556642+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceOriginalResidualLocalInterface",
+        "SourceGammaOneFixedLocalResidual"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface.lean",
+          "sha256": "48B7D5B9166F0D323A27C970FD7775146F4CC22DCC8BF5CF17A33D00F373004E",
+          "oleanSha256": "4EFE0A2A4FF2987DBE751E67F886D937B7ECD72CEC0D95D33D876B4B63DC5DA8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface-2260.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface-2260.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual.lean",
+          "sha256": "493B198A6352D5FD7029788F0BDC681D0AA34FCD0B526A851B95534A13B523B7",
+          "oleanSha256": "C08841E60D33BE2EB062C9C57857AFCE4294E0BF8F92DAFA6C77600957E90AD7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual-2260.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual-2260.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+      ],
+      "constructionRegistrations": [],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualAudit1.log",
+      "logSha256": "7330C2D904DA665073DC2190682815DADBEF7ACE09E5629EE4311E899A8D22CF",
+      "auditSha256": "C015CA738BA2D4AAB3DD213CAC3BBDFF52B5BB0C49212412969372C7F66EE124",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualScratchOwnership2260.log",
+      "ownershipSha256": "2CD5069E2EFFE897EC433377EBCAA52F2255A836582562A94ABFC2F2278FF740",
+      "exhaustiveTheorems": 7,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualDependencyAudit1.log",
+      "dependencyAuditSha256": "43627AE0CD7735CE4677D0BD2AAD153EDAA430B03B5CCB9B363DCEEC9984B1DD",
+      "dependencyAuditSourceSha256": "54F6F5CF22FDBADE674EC3DD3342E5454834CC3A2C9952BF4DB193F2FABB3A24",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> higher symmetric-power continuation -> automorphy -> original modular residual association -> exact original Hecke-character Frobenius polynomial under the fixed prime-local restriction",
+      "discharged": "The original primitive form in every weight at least two, for p greater than three, constructs its actual finite characteristic-p residue field, integral and residual continuous arithmetic action, literal entrywise reduction, finite residual image, maximal original residual Hecke kernel, fixed-local trivial inertia, exact original Hecke characteristic polynomial, trace and weight determinant at every good-prime norm Frobenius, and actual complex oddness. The original representation and Frobenius values are derived in the same source consumer; neither is supplied.",
+      "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual irreducibility/large image, prescribed unitary realization, local regularity, automorphy and literal higher continuation stay unresolved; no source gate closes from this interface bridge alone.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-fixed-local-residual-1-reuse-review-20261117.json",
+      "reuseReviewSha256": "B11AFB3806B085A780432325E30A02626B0D90BA9F4ACBD152422AC60C5BEEA8",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T09:07:01.194187+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceGammaOneFixedDeterminantResidual"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual.lean",
+          "sha256": "35F4F8E3016B14F8EBE4DAFA0A6BD0D2005665F9B7D371C133909C401E290960",
+          "oleanSha256": "A2D7895F68E65A566942A5755355E5C8487524D55A1BA1ED0208B3DE8156FC0D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual-2265.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual-2265.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+      ],
+      "constructionRegistrations": [],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualAudit1.log",
+      "logSha256": "46B335C35A7CE87BB0D12C55DDB8F29701C00D0F3CA3573B8CCD2342B41E09E3",
+      "auditSha256": "010E6912AC61221E5617A3CC8D79B636AD366CA86A0A31131A961CE5B61B91E6",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualScratchOwnership2265.log",
+      "ownershipSha256": "A0708CA45ADDE0F3E4CCDFB6AE66462BD137DF2EEF55AEECEE127BB48B3B1F89",
+      "exhaustiveTheorems": 8,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 6,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualDependencyAudit1.log",
+      "dependencyAuditSha256": "E562C52B28F673655EA0123E51990F7C8B756E45EE307683EDBCFF60F431E9DF",
+      "dependencyAuditSourceSha256": "1F1743D46CC6D80DEA7B4F8B450C1B96B09B8B6AE554E2F3D7308FD81BE60C8B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> symmetric-power continuation -> automorphy -> actual original residual association -> original fixed determinant for the same residual action",
+      "discharged": "The same actual all-weight integral reduction now has its global cyclotomic weight determinant as an equality of characters on the prescribed arithmetic group. Original local Hecke values, inertia, maximal Hecke kernel, finite image, literal integral reduction, coefficient characteristic and actual oddness remain in the same source consumer. No character, determinant compatibility or residual action is supplied.",
+      "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual image, local regularity, full association and automorphy/continuation remain OPEN. The exact downstream Witt compatibility can be reused once this determinant identity is retained in the source consumer.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-fixed-determinant-residual-1-reuse-review-20261117.json",
+      "reuseReviewSha256": "FCD443A1414BD130EE55C694E8C271B8BD1C7855B18CA19E41A1B55FB77188A4",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-rank-two-1-reuse-review-20261117.json",
+    "Tools/source-original-unramified-rank-two-1-reuse-review-20261117.json",
+    "Tools/source-original-arithmetic-rank-two-1-reuse-review-20261117.json",
+    "Tools/source-original-residual-rank-two-1-reuse-review-20261117.json",
+    "Tools/source-original-fixed-local-residual-1-reuse-review-20261117.json",
+    "Tools/source-original-fixed-determinant-residual-1-reuse-review-20261117.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/original-rank-two-residual-20261117-2268/original-rank-two-residual-promotion-route-2268.json",
+    "sha256": "5E84A46410197A4AE13EEDA64F4AE0609E8217B379E62B8C32D07222C32473AA"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/original-rank-two-residual-20261117-2268/archive-manifest.json",
+    "sha256": "0DDB40CF0E05F14ADD591F279F1DD176ED3D1B8381A39D3449371E85452105AE",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9697": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoDependencyAudit1Production9697.log",
+        "sha256": "A92B44B13A1B03B43E2E6055955AA7504607D54539016E99E4C367E87B430D28",
+        "requiredProofValueEdges": 53,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+        ],
+        "sourceSha256": "CFF6D3BABBFF9BBD6E0145AD1545A4CBD311A2C71284A30AD5B791DDAFED4753"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoDependencyAudit1Production9697.log",
+        "sha256": "B94FFF1160DF42EB6F208545437BFDE7088A560B23A53AE8D393E0A9BD991455",
+        "requiredProofValueEdges": 31,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+        ],
+        "sourceSha256": "5DE933A9C341DAD88FE3C56F0FE671B7262097F3DD28DFBB25BC1108B3DA7DCC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoDependencyAudit1Production9697.log",
+        "sha256": "A4CE4ACDA8D659466261F99FF594D22AE742D244B7EE3BCBC6EA091ACE216D81",
+        "requiredProofValueEdges": 26,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+        ],
+        "sourceSha256": "88055966C3FEF8D35C3235F6FB6E5A51AE25BCDA877BFA186891C3582CEA6BEF"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoDependencyAudit2Production9697.log",
+        "sha256": "589E8FC4535949557E23AE5B0D8CCFF5BCB7D1204638A7002EBFF04BF31D3D31",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+        ],
+        "sourceSha256": "1255FF0356CBF13E281A072C09D16A5D983FF667B1757F3C3075295D338093C9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualDependencyAudit1Production9697.log",
+        "sha256": "43627AE0CD7735CE4677D0BD2AAD153EDAA430B03B5CCB9B363DCEEC9984B1DD",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+        ],
+        "sourceSha256": "D6BA528D8AE016852A211B5804A264BA4EDD5CF72B558CE54815131FC0889536"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualDependencyAudit1Production9697.log",
+        "sha256": "E562C52B28F673655EA0123E51990F7C8B756E45EE307683EDBCFF60F431E9DF",
+        "requiredProofValueEdges": 6,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+        ],
+        "sourceSha256": "EB7BE2AE77EFAFBE10D412555A66CA58E72B6A4DF79642A02B893FF4F6F27296"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoProductionAudit9697.log",
+    "sha256": "29E651FBB0D74A56D6A55BF35E37FB2D6EA889B8BED6ABA7D7EE5B6343312CA9",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-rank-two-production-build-9697.log",
+    "aggregateSha256": "75756D299398D37E37068F4652D76FA5698CACB19AABB8AA88F4CDBA74801010",
+    "productionModules": 9697,
+    "incrementModules": 52,
+    "axiomChecks": 80,
+    "exhaustiveIncrementTheorems": 186,
+    "linterScopes": 52,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 186,
+    "productionReuse": "Only canonical and versioned scratch imports are qualified to their registered production modules. All audited statements, proof bodies and comments remain identical. Original function fields and actual modular forms are retained; no assumption or completion criterion is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 186,
+      "scratchDistinct": 186,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceAbsoluteArithmeticFactor.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticFactor": "_private.Dubon2026.SourceAbsoluteArithmeticFactor.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceAbsoluteComplexConjugation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteComplexConjugation": "_private.Dubon2026.SourceAbsoluteComplexConjugation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceAdicCyclotomicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAdicCyclotomicDeterminant": "_private.Dubon2026.SourceAdicCyclotomicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_1": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_3": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_4": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_5": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourceCyclotomicNormFrobenius.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceCyclotomicNormFrobenius": "_private.Dubon2026.SourceCyclotomicNormFrobenius.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceCyclotomicNormInertia.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceCyclotomicNormInertia": "_private.Dubon2026.SourceCyclotomicNormInertia.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneArithmeticRankTwo": "_private.Dubon2026.SourceGammaOneArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneContinuousRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneContinuousRankTwo": "_private.Dubon2026.SourceGammaOneContinuousRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneFixedDeterminantResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneFixedDeterminantResidual": "_private.Dubon2026.SourceGammaOneFixedDeterminantResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneFixedLocalResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneFixedLocalResidual": "_private.Dubon2026.SourceGammaOneFixedLocalResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_1": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_2": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_2",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_3": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_3",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_sourceGammaOneJointArithmeticKernel": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_1": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_1": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_1": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_2": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_2",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_3": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_3",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_sourceGammaOneJointTraceInertia": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_1": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_1": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneLocalArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalArithmeticRankTwo": "_private.Dubon2026.SourceGammaOneLocalArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalRankTwo": "_private.Dubon2026.SourceGammaOneLocalRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalResidualRankTwo": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_1": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_1",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_3": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_3",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_4": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_4",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_5": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_5",
+        "_private.Dubon2026.SourceGammaOneLocalTraceArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalTraceArithmetic": "_private.Dubon2026.SourceGammaOneLocalTraceArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalTraceInertia": "_private.Dubon2026.SourceGammaOneLocalTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalUnramifiedRankTwo": "_private.Dubon2026.SourceGammaOneLocalUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_2": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_2",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_3": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_3",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalAdicArithmetic": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_2": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_2",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_3": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_3",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalAdicInertia": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneResidualRankTwo": "_private.Dubon2026.SourceGammaOneResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneUnramifiedRankTwo": "_private.Dubon2026.SourceGammaOneUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceOriginalAdicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceOriginalAdicDeterminant": "_private.Dubon2026.SourceOriginalAdicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceOriginalLocalDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceOriginalLocalDeterminant": "_private.Dubon2026.SourceOriginalLocalDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidualLocalInterface.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceOriginalResidualLocalInterface": "_private.Dubon2026.SourceOriginalResidualLocalInterface.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourcePrimitiveLocalOddness.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourcePrimitiveLocalOddness": "_private.Dubon2026.SourcePrimitiveLocalOddness.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+      },
+      "productionFocused": 186,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceAdicPrimePowerScalar",
+            "SourceCyclotomicNormFrobenius",
+            "SourceAbsoluteComplexConjugation",
+            "SourceAdicCyclotomicDeterminant",
+            "SourceOriginalAdicDeterminant",
+            "SourceAdicQuotientContinuity",
+            "SourceOriginalLocalDeterminant",
+            "SourcePrimitiveLocalOddness",
+            "SourceGroupAlgebraQuotientSpan",
+            "SourceSpanningTraceAlgebra",
+            "SourceTraceOffDiagonal",
+            "SourceTraceOppositePair",
+            "SourceTraceLeftIdealCoordinates",
+            "SourceTraceLeftIdealBasis",
+            "SourceTraceLeftActionTrace",
+            "SourceSpanningTraceContinuity",
+            "SourceTraceLeftActionContinuity",
+            "SourceScalarCornerCharacter",
+            "SourceTraceDiagonalRepresentation",
+            "SourceOddTraceIdempotent",
+            "SourceContinuousTraceRealization",
+            "SourceMatrixTraceDeterminant",
+            "SourceOriginalTraceMatrixConsumer",
+            "SourceGammaOneLocalRankTwo",
+            "SourceGammaOneContinuousRankTwo"
+          ],
+          "count": 73,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoScratchOwnership2221.log",
+            "sha256": "435023E4FDA2EE24E7BF1208BA9040FFC7FCB4349B2E7E659F604FC7DF277AD0",
+            "sourceSha256": "1908A7CD7D3F540B434AB70FD4C9BDFCA8912861DDAFF7D6726930FE8EEFCFB8"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclotomicNormInertia",
+            "SourceUnitTraceKernel",
+            "SourceGammaOneJointTraceInertia",
+            "SourceGammaOneOriginalAdicInertia",
+            "SourceGammaOneLocalTraceInertia",
+            "SourceTraceDiagonalKernel",
+            "SourceContinuousTraceKernel",
+            "SourceTraceActionKernel",
+            "SourceOriginalTraceMatrixKernel",
+            "SourceGammaOneLocalUnramifiedRankTwo",
+            "SourceGammaOneUnramifiedRankTwo"
+          ],
+          "count": 32,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoScratchOwnership2235.log",
+            "sha256": "30BA83EF305356821271ED05EE0C024AD2258D8090E613B799855EAD16EB064E",
+            "sourceSha256": "10B5C4C4E8E69056A43A86A57C8B9C789763C5D8EF4E5C5C720FDE5641BEEA34"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneJointArithmeticKernel",
+            "SourceGammaOneOriginalAdicArithmetic",
+            "SourceGammaOneLocalTraceArithmetic",
+            "SourceAbsoluteArithmeticFactor",
+            "SourceGammaOneLocalArithmeticRankTwo",
+            "SourceGammaOneArithmeticRankTwo"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoScratchOwnership2243.log",
+            "sha256": "0A0CE6745B6CD255D3F103BF4ACEC43B6B65B00C2C723864DC27FAFA2FB44419",
+            "sourceSha256": "B567DC816CA2475F1B5DC4BD75A1DC085FFF2136C57417EBD054B4644765F41E"
+          }
+        },
+        {
+          "modules": [
+            "CompactOrbitSpanFinite",
+            "SourceIntegralCoordinateLattice",
+            "SourceCompactOrbitLattice",
+            "SourceMatrixIntertwiningInvariants",
+            "SourceCompactResidualRealization",
+            "SourceGammaOneLocalResidualRankTwo",
+            "SourceGammaOneResidualRankTwo"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoScratchOwnership2257.log",
+            "sha256": "F11DA3326A7853C0208E09078D800178F005FDFCDDAE6084BB98F43638C76372",
+            "sourceSha256": "F120781BFE45DB5248ADA03C205A0D875155441843CC06C6704176DD51F45D0D"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalResidualLocalInterface",
+            "SourceGammaOneFixedLocalResidual"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualScratchOwnership2260.log",
+            "sha256": "2CD5069E2EFFE897EC433377EBCAA52F2255A836582562A94ABFC2F2278FF740",
+            "sourceSha256": "AAB6CC70AF74F5EAEB2233653D95881531430FDF2B5AD8D272FB1F28EFD4171A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneFixedDeterminantResidual"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualScratchOwnership2265.log",
+            "sha256": "A0708CA45ADDE0F3E4CCDFB6AE66462BD137DF2EEF55AEECEE127BB48B3B1F89",
+            "sourceSha256": "9BE10885876E004EA7E5EDFB75603454CB104BD02D58B6453B0CD5EE0CD20460"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoOwnership9697.log",
+        "sha256": "6F25CA6F0A9E3F917D9E1072A5390EE6D1CE27FA3262443995C1FF342554BE16",
+        "sourceSha256": "7DD829274A8C19088571AD4869DE910386D37C0A12E050E7365ADD958FC8D223"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-003058-657.log",
+        "sha256": "3CC323C8DF581EEA3C9D97DEEC5A201EB3EEBDE5F9BD89AC8EA6819FB34B5829"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 52 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceAdicPrimePowerScalar",
+            "scratchSha256": "676DFEEFB825700C7CD2F90C954AA2EB68A93D787CC2D11784B3739A9D74E3C5",
+            "productionSha256": "676DFEEFB825700C7CD2F90C954AA2EB68A93D787CC2D11784B3739A9D74E3C5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicNormFrobenius",
+            "scratchSha256": "100916C6BD8BE3246B87D5C43AFEA11775F2D00B4146FEAFA7E65606DC322393",
+            "productionSha256": "100916C6BD8BE3246B87D5C43AFEA11775F2D00B4146FEAFA7E65606DC322393",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAbsoluteComplexConjugation",
+            "scratchSha256": "66CFF3D63346B3FFD0E0521819943F7D8323664E69B17EDB5B1A6BB2F8D18755",
+            "productionSha256": "66CFF3D63346B3FFD0E0521819943F7D8323664E69B17EDB5B1A6BB2F8D18755",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAdicCyclotomicDeterminant",
+            "scratchSha256": "A17554BAFFBAB5BFDA30C3BE3B66BA0A3904E4B75314A6D948DFEB66CB0A5C7E",
+            "productionSha256": "98DBA00849F39D4CC702364B5ACD4D0D22954A28DD0E8E53B61B6A36A8218976",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalAdicDeterminant",
+            "scratchSha256": "9F4BAF5CA28F44BBF57E006D7EF06119DBCE8E685FAC10FE57A671AD7C690219",
+            "productionSha256": "3C3954159E2BE6BEBC359BAA4540494CD340260489C96ECD193B2A2C050D7C68",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAdicQuotientContinuity",
+            "scratchSha256": "493134F1F7AEFD3FD362242E489E41ED7137D63187872437F72AF6C4B74444F6",
+            "productionSha256": "493134F1F7AEFD3FD362242E489E41ED7137D63187872437F72AF6C4B74444F6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalLocalDeterminant",
+            "scratchSha256": "D64774AE1F5C7A911DDD4BFA83CEFC298BAE56BFAE787A4F19669165A217200A",
+            "productionSha256": "A65C29923CD5534447DBF37DCE57012B6969044326897A4651699A26FFC240DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveLocalOddness",
+            "scratchSha256": "BCE8F2EA529F345CC8C04E17965D08FBA67CCF3B76068DE66DEB06A6235FB988",
+            "productionSha256": "CDAD03066168D64091379D8E52730FF68BAC8DB239C08FF4BE3FBB7CFACEDFCD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGroupAlgebraQuotientSpan",
+            "scratchSha256": "C80B61AC233BF51E529986F987D6765D63C1E29BD09D0AF6016A3F4D3762B6A9",
+            "productionSha256": "C80B61AC233BF51E529986F987D6765D63C1E29BD09D0AF6016A3F4D3762B6A9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpanningTraceAlgebra",
+            "scratchSha256": "122AA7BC6BA58D15AA40C2CD1A968BB44F9B96D996B4272CA0874BC1AE18D048",
+            "productionSha256": "93EB3645F41EA9D5F86FF18B5DC11A3F56F7870FA09651463EE3D1440D08E57F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceOffDiagonal",
+            "scratchSha256": "0AB02CCA8018682144FD31FC914C822B5C025C08BBB303F6A9D1971B79E39A9B",
+            "productionSha256": "0AB02CCA8018682144FD31FC914C822B5C025C08BBB303F6A9D1971B79E39A9B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceOppositePair",
+            "scratchSha256": "C7CDB34308A386A7D6D7D2C52BE580C0ADE916F0D4BE7AB4BB8E678AB58505D3",
+            "productionSha256": "2E9E8241BEA6F31B936BE53B1B3FEC14794487D7306B0001FAB6DAC1536718EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftIdealCoordinates",
+            "scratchSha256": "5CE8001B649C65A23E1DDBC70E8AAA20AB2DC787B5E905AF2E680A5D1C0CB4B7",
+            "productionSha256": "E8B894BA2E4EDA45615302D170219D49E8F0BC6BDAE800CF5DAE21C61A4D77E5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftIdealBasis",
+            "scratchSha256": "6C621B21EBA283F7D5A0074F3A35BA9C195C1D7A7F81E9406848338B817501FF",
+            "productionSha256": "9D3F599489EA35E3EF3DC24CD92E2DF7926DF96707276A00E213F5237B491C93",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftActionTrace",
+            "scratchSha256": "F832C48B3CEE0C393FA88217126BBDAD976568C79080D6096DB1C6E4BDAD6F58",
+            "productionSha256": "6D4D69663DD32887A1ACD3BC0D94AECE676CDB697069E4262940D401CB80EB4A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpanningTraceContinuity",
+            "scratchSha256": "CC4C997F9514431C0DAA5C193E9F2228C24BC58AD3D5122C8425219D545AB1F3",
+            "productionSha256": "440D037B6692E96EECD08D48F63FA931B7E7326C9D5C72CE711263BCA4C6739E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftActionContinuity",
+            "scratchSha256": "93BB8A8FE6F70BA4142BC0F308DF018BD9CC9FB6A31A0EE653950DF7C697F144",
+            "productionSha256": "3FF550FF1D91515F9895FC716AD799A72E2697414C682DF290F10940409D8472",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceScalarCornerCharacter",
+            "scratchSha256": "AD8D6B1F34E4BB0113DB16C2894EE4B4C9E548CF5F44D2DC9DBC1346EEA420EE",
+            "productionSha256": "DDB713FBFDECBC02923ABACA9E025B5B09DDA365519B63CD68A70F24E625E7C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceDiagonalRepresentation",
+            "scratchSha256": "8490F27F3A4DCF9C8518C12F04B459A32D11A9DCE6DD056BC5D936E1F28E848D",
+            "productionSha256": "2D357E7045EA32F030653B71B244CE89889B1CCD30C0C23545EA87BBFC90B796",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOddTraceIdempotent",
+            "scratchSha256": "544FAE887AAC03DA45F14E3FA6BEC56A0EC1CD8EA07E6B8DD357367A62BCAD09",
+            "productionSha256": "837DB594D62FE29A9680049B0FC6A2D7EBD134BC17EAA9E74EF1864A7708A516",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceContinuousTraceRealization",
+            "scratchSha256": "DF15068BABA829979F5C8EFAED19A523912AC0111FBA02F4F65BAFD8E2E35575",
+            "productionSha256": "4955B484071269C7F6D79DCCB20B0BE219EF071070A9AB6273837DEF3A744CFD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMatrixTraceDeterminant",
+            "scratchSha256": "3403E997DD56EC6CC7953AA92221EF7CEEF1058358CE7F5B282A61D17B9C1868",
+            "productionSha256": "3403E997DD56EC6CC7953AA92221EF7CEEF1058358CE7F5B282A61D17B9C1868",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTraceMatrixConsumer",
+            "scratchSha256": "25E114A26F322848126E408FD40BFA024BFB3EE328625871D2FA4CAD5B5BDA09",
+            "productionSha256": "6BDF73F8DF07F55BFD4E3EF37E22423DC8CBAECBDBCAFF1CDF7395B562956875",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalRankTwo",
+            "scratchSha256": "38848B9625C4CC98B8DABC893FDFC37780418CF6405EA623E4D603D932B1C000",
+            "productionSha256": "A3F6B9205FB97C1F81B1BC2BDC81450C03773EB5CD86F2705AF906F489B4AEE0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneContinuousRankTwo",
+            "scratchSha256": "EB613F6400BAE78D65D905CAC732A7EECCB5C2799FE8C38FC03911BCEEF28FC6",
+            "productionSha256": "78132CFABD63B414842B51C131734CE2BE89E7835974DA7C59E2485A78902FC0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicNormInertia",
+            "scratchSha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+            "productionSha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitTraceKernel",
+            "scratchSha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+            "productionSha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneJointTraceInertia",
+            "scratchSha256": "CEA0C291455C239F535F28D4CC621D0FDCBE8B710FCC1DD86465D37FF5448CAC",
+            "productionSha256": "4EE3479C4E1A380323C15B121966D110B22A4FBB74BBBB31A0E6CDFC9704AE6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalAdicInertia",
+            "scratchSha256": "AFB8C1631DE143021655FCAD1EA29AD09EBFF027680928C3969B6454A12E1B24",
+            "productionSha256": "2305A5357834CCDFFDAE7C756C8B9FA2AF0DF55460371D8C4F77DE9D281DA692",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalTraceInertia",
+            "scratchSha256": "7B5B322D90A761F972DAE875C8E61A15C4BA9FB2DAA08FDD0AF0E714042F0231",
+            "productionSha256": "4274BFD7874F5AE709FEE6D48D6C286156D696900FECD8DAE81996B17BDD7BAA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceDiagonalKernel",
+            "scratchSha256": "3267BFBBF1851DF5965CF3585B6C0EF89AF98B7E6463E71B3D0D4C3530403A9E",
+            "productionSha256": "BA3705A458B15E568A1E0D572B012A700DFB4076A581308F59E500C21E72FFE4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceContinuousTraceKernel",
+            "scratchSha256": "922E9844A74BE96785C9C6C2EF5152D1D04C35328E654C6E3559F78B35C89964",
+            "productionSha256": "1D163C25D0F452C46E1ED2AE704F7880040859ED5F3E8673FCC04A400E851F8A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceActionKernel",
+            "scratchSha256": "EA87A99EB0B33A50D03476FC7FCE1F16B28EEFF97800A5C8889566220D79BA70",
+            "productionSha256": "FDB4D9DE8AFD825BF7D5C202DE05CD6BF33DBA0D0DB2CD04E4B1D97E4DCBE6ED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTraceMatrixKernel",
+            "scratchSha256": "89897DE450EFE185CC875A103A809A3CE9A530F2461673363B59FD95C7F7DCE3",
+            "productionSha256": "8B9084BB429F20D9118BA4310AA4C2AAD60B98C06C981A848D9790D2AE94CD03",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalUnramifiedRankTwo",
+            "scratchSha256": "518281722B4315D9F6FB6AE7C22634A8CE3D7FF661346FD7D63A2827D1E4379F",
+            "productionSha256": "BA123202CEEA773F278EF3C8A577187E23449F6B647AA2552D99B0B6017B7887",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnramifiedRankTwo",
+            "scratchSha256": "8DA777D51E8662E805A3D5DAED150DDB7465BD7C8FDB1C3351F0BFD31E93F7ED",
+            "productionSha256": "F9F0AD3917CCF06302F254E1F7AA38911584DDF2648598694E9530324F5B31FD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneJointArithmeticKernel",
+            "scratchSha256": "029BC659BD23A67A0C52E7D676D49BA2DB47EA60D4CEBBAC617844F50D613322",
+            "productionSha256": "7F36082AD77F229A3BD548FF10C7C948C08C2C25174D137A74DBB59F0442BC4F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalAdicArithmetic",
+            "scratchSha256": "331EE769ABAE973C71C7B7A53A70F9E3770847A9D184452CCC33471B6454B0AF",
+            "productionSha256": "6525FEC185582B80150511C4A3697F0BEFF1224D87CF92C5097340413EA37274",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalTraceArithmetic",
+            "scratchSha256": "246C28F7459307B658DD926FC82464696F8B70378EC4B25DFAD36AED4D6B9E05",
+            "productionSha256": "18CDB2190BDB4FB5F881A714BE3DCB5CB40FE76260F331547DC28AFAE7FC2A9D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAbsoluteArithmeticFactor",
+            "scratchSha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56",
+            "productionSha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalArithmeticRankTwo",
+            "scratchSha256": "FE77D35318A54F8EE8C3FC896678344B9CCE783EED9824ECAE48DE395CB03A7A",
+            "productionSha256": "AC97D70E294B4D39C8479FCCEAA180135E17F740C90698DD818C227F9D55B22B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticRankTwo",
+            "scratchSha256": "E85AB01CD89DF8728E9570737B3EC934619EB6AADDA0528291E0A9EC36226FB1",
+            "productionSha256": "CDEEDF155B96319CB9302F03E1A0894F7B3139477F276695F9391B125719385E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "CompactOrbitSpanFinite",
+            "scratchSha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+            "productionSha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCoordinateLattice",
+            "scratchSha256": "EF9DD376596F669F67509160E5904E617C8458DB4F1D65F8013397EC9CAAB7AA",
+            "productionSha256": "F25615D5B58FE85D58CAEABFCC7DC29DDF650EB9028784A6BD8E20848405694F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCompactOrbitLattice",
+            "scratchSha256": "7D70E35A4DE290FF302DE81072FA81EE920848123F72C8D66852AF45BBC47A2B",
+            "productionSha256": "9A5B0685DFC1BC48548E440B7CDD700F1B67EC7C5B5B9B10317FEAE61EFFEBF7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMatrixIntertwiningInvariants",
+            "scratchSha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+            "productionSha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCompactResidualRealization",
+            "scratchSha256": "1DB00604D3CC138A2B45892B95EA28ABDB840FAD67221098B26E2D8FF77ED691",
+            "productionSha256": "E5D31361906523004048FD0CCD52AFAC3F6A6E2BE811B3B9B44D8715912D681C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalResidualRankTwo",
+            "scratchSha256": "040854BDCFF18C36F8BF933A8469CE6C4E28B98F67116517F97C7BE67601BC1F",
+            "productionSha256": "A902A3EA8B3B4DEF80EB18A7C079526C50234EFC79040ED48EFE977D84BFAD55",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidualRankTwo",
+            "scratchSha256": "2CBB4735DE3CC33E0B82F189C0FF8599A15906626584D8CCD716924F3E8124DD",
+            "productionSha256": "AC757860F640D5832AB6B45158AADE609FE8F9CEB9D72A4122CD9305E4B45F9B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidualLocalInterface",
+            "scratchSha256": "48B7D5B9166F0D323A27C970FD7775146F4CC22DCC8BF5CF17A33D00F373004E",
+            "productionSha256": "4498EB8E2823C6FEF2CA015D92B46E020B24777F56A324028AE108B80C626964",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFixedLocalResidual",
+            "scratchSha256": "493B198A6352D5FD7029788F0BDC681D0AA34FCD0B526A851B95534A13B523B7",
+            "productionSha256": "D549A158DC58B86C2377F1E435B7D06C0EC880C659E2CCBADB934B0085DBA0D3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFixedDeterminantResidual",
+            "scratchSha256": "35F4F8E3016B14F8EBE4DAFA0A6BD0D2005665F9B7D371C133909C401E290960",
+            "productionSha256": "BDE170CADCB00721D0F7EF5A934C1AC7928D02C9FF46A9FDF779B997306DC9AE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 186 distinct names from 186 exhaustive scratch checks are retained: 186 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Residual irreducibility and large image, the remaining local/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. The current source consumers have prime range p greater than three. Acceptance remains 16/20; DUB-17--20 OPEN. All original source and verification criteria are unchanged."
+  },
+  "receipt9697": {
+    "recordedUTC": "2026-11-17T11:12:51.697340+00:00",
+    "log": "logs/dubon-build-20261117-023339-845.log",
+    "sha256": "40B2A1071204974A700668B689EF1EAA415EDADA3BB9182296A8A75DED44C363",
+    "bytes": 16182672,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9697,
+    "projectTheorems": 60975,
+    "registeredConsumers": 27948,
+    "registeredConstructions": 3105,
+    "declarations": 37051,
+    "generated": 41739,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261117_022647.log",
+    "foundationSha256": "48A5755335F9FDA747031C10403CF8EF198DB84B8845D61B1739EFE26E693F32",
+    "countReconciliation": {
+      "previousTheorems": 60789,
+      "focusedTheorems": 186,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 186,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoGlobalOwnership9697.log",
+      "globalOwnershipSha256": "9E873203EAAD086483F9EFAD1BDE9724D4D746A74D358B22485D96994D93B358",
+      "globalOwnershipSourceSha256": "0BFFE24DAE6EB1448F4442438136C03CCC24F808567CEABD5C2DA2C523C6FD89",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoOwnership9697.log",
+      "ownershipSha256": "6F25CA6F0A9E3F917D9E1072A5390EE6D1CE27FA3262443995C1FF342554BE16"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 186,
+      "scratchDistinct": 186,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceAbsoluteArithmeticFactor.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticFactor": "_private.Dubon2026.SourceAbsoluteArithmeticFactor.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceAbsoluteComplexConjugation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteComplexConjugation": "_private.Dubon2026.SourceAbsoluteComplexConjugation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceAdicCyclotomicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAdicCyclotomicDeterminant": "_private.Dubon2026.SourceAdicCyclotomicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_1": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_3": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_4": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceCompactResidualRealization._proof_5": "_private.Dubon2026.SourceCompactResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourceCyclotomicNormFrobenius.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceCyclotomicNormFrobenius": "_private.Dubon2026.SourceCyclotomicNormFrobenius.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceCyclotomicNormInertia.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceCyclotomicNormInertia": "_private.Dubon2026.SourceCyclotomicNormInertia.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneArithmeticRankTwo": "_private.Dubon2026.SourceGammaOneArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneContinuousRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneContinuousRankTwo": "_private.Dubon2026.SourceGammaOneContinuousRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneFixedDeterminantResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneFixedDeterminantResidual": "_private.Dubon2026.SourceGammaOneFixedDeterminantResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneFixedLocalResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneFixedLocalResidual": "_private.Dubon2026.SourceGammaOneFixedLocalResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_1": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_2": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_2",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_3": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_3",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_sourceGammaOneJointArithmeticKernel": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_1": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointArithmeticKernel._proof_1": "_private.Dubon2026.SourceGammaOneJointArithmeticKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_1": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_2": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_2",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_3": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_3",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_sourceGammaOneJointTraceInertia": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_1": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneJointTraceInertia._proof_1": "_private.Dubon2026.SourceGammaOneJointTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.instModuleZModHPowNatHAddOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulAddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneLocalArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalArithmeticRankTwo": "_private.Dubon2026.SourceGammaOneLocalArithmeticRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalRankTwo": "_private.Dubon2026.SourceGammaOneLocalRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalResidualRankTwo": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_1": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_1",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_3": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_3",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_4": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_4",
+        "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_sourceGammaOneLocalResidualRankTwo._proof_5": "_private.Dubon2026.SourceGammaOneLocalResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuationOfUniformSpace_dubon2026._proof_5",
+        "_private.Dubon2026.SourceGammaOneLocalTraceArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalTraceArithmetic": "_private.Dubon2026.SourceGammaOneLocalTraceArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalTraceInertia": "_private.Dubon2026.SourceGammaOneLocalTraceInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneLocalUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneLocalUnramifiedRankTwo": "_private.Dubon2026.SourceGammaOneLocalUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_2": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_2",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_3": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_3",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalAdicArithmetic": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicArithmetic._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicArithmetic.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_2": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_2",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_3": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instAddCommGroupLinearMapPadicIntIdSubtypeForallNatPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1HMulHPowHAddOfNatAddSubgroupTateModuleVZModSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_3",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalAdicInertia": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddHMulOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddHMulOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub_sourceGammaOneOriginalAdicInertia._proof_1": "_private.Dubon2026.SourceGammaOneOriginalAdicInertia.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModuleZModHPowNatHAddHMulOfNatLinearMapPadicIntIdSubtypeForallPic0AlgebraicClosureRatLaurentSeriesMemIntermediateFieldFunctionFieldOverGamma1AddSubgroupTateModuleVSpecialLinearGroupFinIntSubgroupGamma0SourceBinaryCoefficientRepToNatHSub._proof_1",
+        "_private.Dubon2026.SourceGammaOneResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneResidualRankTwo": "_private.Dubon2026.SourceGammaOneResidualRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneUnramifiedRankTwo": "_private.Dubon2026.SourceGammaOneUnramifiedRankTwo.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceOriginalAdicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceOriginalAdicDeterminant": "_private.Dubon2026.SourceOriginalAdicDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceOriginalLocalDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceOriginalLocalDeterminant": "_private.Dubon2026.SourceOriginalLocalDeterminant.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidualLocalInterface.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceOriginalResidualLocalInterface": "_private.Dubon2026.SourceOriginalResidualLocalInterface.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourcePrimitiveLocalOddness.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourcePrimitiveLocalOddness": "_private.Dubon2026.SourcePrimitiveLocalOddness.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+      },
+      "productionFocused": 186,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceAdicPrimePowerScalar",
+            "SourceCyclotomicNormFrobenius",
+            "SourceAbsoluteComplexConjugation",
+            "SourceAdicCyclotomicDeterminant",
+            "SourceOriginalAdicDeterminant",
+            "SourceAdicQuotientContinuity",
+            "SourceOriginalLocalDeterminant",
+            "SourcePrimitiveLocalOddness",
+            "SourceGroupAlgebraQuotientSpan",
+            "SourceSpanningTraceAlgebra",
+            "SourceTraceOffDiagonal",
+            "SourceTraceOppositePair",
+            "SourceTraceLeftIdealCoordinates",
+            "SourceTraceLeftIdealBasis",
+            "SourceTraceLeftActionTrace",
+            "SourceSpanningTraceContinuity",
+            "SourceTraceLeftActionContinuity",
+            "SourceScalarCornerCharacter",
+            "SourceTraceDiagonalRepresentation",
+            "SourceOddTraceIdempotent",
+            "SourceContinuousTraceRealization",
+            "SourceMatrixTraceDeterminant",
+            "SourceOriginalTraceMatrixConsumer",
+            "SourceGammaOneLocalRankTwo",
+            "SourceGammaOneContinuousRankTwo"
+          ],
+          "count": 73,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoScratchOwnership2221.log",
+            "sha256": "435023E4FDA2EE24E7BF1208BA9040FFC7FCB4349B2E7E659F604FC7DF277AD0",
+            "sourceSha256": "1908A7CD7D3F540B434AB70FD4C9BDFCA8912861DDAFF7D6726930FE8EEFCFB8"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclotomicNormInertia",
+            "SourceUnitTraceKernel",
+            "SourceGammaOneJointTraceInertia",
+            "SourceGammaOneOriginalAdicInertia",
+            "SourceGammaOneLocalTraceInertia",
+            "SourceTraceDiagonalKernel",
+            "SourceContinuousTraceKernel",
+            "SourceTraceActionKernel",
+            "SourceOriginalTraceMatrixKernel",
+            "SourceGammaOneLocalUnramifiedRankTwo",
+            "SourceGammaOneUnramifiedRankTwo"
+          ],
+          "count": 32,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoScratchOwnership2235.log",
+            "sha256": "30BA83EF305356821271ED05EE0C024AD2258D8090E613B799855EAD16EB064E",
+            "sourceSha256": "10B5C4C4E8E69056A43A86A57C8B9C789763C5D8EF4E5C5C720FDE5641BEEA34"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneJointArithmeticKernel",
+            "SourceGammaOneOriginalAdicArithmetic",
+            "SourceGammaOneLocalTraceArithmetic",
+            "SourceAbsoluteArithmeticFactor",
+            "SourceGammaOneLocalArithmeticRankTwo",
+            "SourceGammaOneArithmeticRankTwo"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoScratchOwnership2243.log",
+            "sha256": "0A0CE6745B6CD255D3F103BF4ACEC43B6B65B00C2C723864DC27FAFA2FB44419",
+            "sourceSha256": "B567DC816CA2475F1B5DC4BD75A1DC085FFF2136C57417EBD054B4644765F41E"
+          }
+        },
+        {
+          "modules": [
+            "CompactOrbitSpanFinite",
+            "SourceIntegralCoordinateLattice",
+            "SourceCompactOrbitLattice",
+            "SourceMatrixIntertwiningInvariants",
+            "SourceCompactResidualRealization",
+            "SourceGammaOneLocalResidualRankTwo",
+            "SourceGammaOneResidualRankTwo"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoScratchOwnership2257.log",
+            "sha256": "F11DA3326A7853C0208E09078D800178F005FDFCDDAE6084BB98F43638C76372",
+            "sourceSha256": "F120781BFE45DB5248ADA03C205A0D875155441843CC06C6704176DD51F45D0D"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalResidualLocalInterface",
+            "SourceGammaOneFixedLocalResidual"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualScratchOwnership2260.log",
+            "sha256": "2CD5069E2EFFE897EC433377EBCAA52F2255A836582562A94ABFC2F2278FF740",
+            "sourceSha256": "AAB6CC70AF74F5EAEB2233653D95881531430FDF2B5AD8D272FB1F28EFD4171A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneFixedDeterminantResidual"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualScratchOwnership2265.log",
+            "sha256": "A0708CA45ADDE0F3E4CCDFB6AE66462BD137DF2EEF55AEECEE127BB48B3B1F89",
+            "sourceSha256": "9BE10885876E004EA7E5EDFB75603454CB104BD02D58B6453B0CD5EE0CD20460"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoOwnership9697.log",
+        "sha256": "6F25CA6F0A9E3F917D9E1072A5390EE6D1CE27FA3262443995C1FF342554BE16",
+        "sourceSha256": "7DD829274A8C19088571AD4869DE910386D37C0A12E050E7365ADD958FC8D223"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-003058-657.log",
+        "sha256": "3CC323C8DF581EEA3C9D97DEEC5A201EB3EEBDE5F9BD89AC8EA6819FB34B5829"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 52 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceAdicPrimePowerScalar",
+            "scratchSha256": "676DFEEFB825700C7CD2F90C954AA2EB68A93D787CC2D11784B3739A9D74E3C5",
+            "productionSha256": "676DFEEFB825700C7CD2F90C954AA2EB68A93D787CC2D11784B3739A9D74E3C5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicNormFrobenius",
+            "scratchSha256": "100916C6BD8BE3246B87D5C43AFEA11775F2D00B4146FEAFA7E65606DC322393",
+            "productionSha256": "100916C6BD8BE3246B87D5C43AFEA11775F2D00B4146FEAFA7E65606DC322393",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAbsoluteComplexConjugation",
+            "scratchSha256": "66CFF3D63346B3FFD0E0521819943F7D8323664E69B17EDB5B1A6BB2F8D18755",
+            "productionSha256": "66CFF3D63346B3FFD0E0521819943F7D8323664E69B17EDB5B1A6BB2F8D18755",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAdicCyclotomicDeterminant",
+            "scratchSha256": "A17554BAFFBAB5BFDA30C3BE3B66BA0A3904E4B75314A6D948DFEB66CB0A5C7E",
+            "productionSha256": "98DBA00849F39D4CC702364B5ACD4D0D22954A28DD0E8E53B61B6A36A8218976",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalAdicDeterminant",
+            "scratchSha256": "9F4BAF5CA28F44BBF57E006D7EF06119DBCE8E685FAC10FE57A671AD7C690219",
+            "productionSha256": "3C3954159E2BE6BEBC359BAA4540494CD340260489C96ECD193B2A2C050D7C68",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAdicQuotientContinuity",
+            "scratchSha256": "493134F1F7AEFD3FD362242E489E41ED7137D63187872437F72AF6C4B74444F6",
+            "productionSha256": "493134F1F7AEFD3FD362242E489E41ED7137D63187872437F72AF6C4B74444F6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalLocalDeterminant",
+            "scratchSha256": "D64774AE1F5C7A911DDD4BFA83CEFC298BAE56BFAE787A4F19669165A217200A",
+            "productionSha256": "A65C29923CD5534447DBF37DCE57012B6969044326897A4651699A26FFC240DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveLocalOddness",
+            "scratchSha256": "BCE8F2EA529F345CC8C04E17965D08FBA67CCF3B76068DE66DEB06A6235FB988",
+            "productionSha256": "CDAD03066168D64091379D8E52730FF68BAC8DB239C08FF4BE3FBB7CFACEDFCD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGroupAlgebraQuotientSpan",
+            "scratchSha256": "C80B61AC233BF51E529986F987D6765D63C1E29BD09D0AF6016A3F4D3762B6A9",
+            "productionSha256": "C80B61AC233BF51E529986F987D6765D63C1E29BD09D0AF6016A3F4D3762B6A9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpanningTraceAlgebra",
+            "scratchSha256": "122AA7BC6BA58D15AA40C2CD1A968BB44F9B96D996B4272CA0874BC1AE18D048",
+            "productionSha256": "93EB3645F41EA9D5F86FF18B5DC11A3F56F7870FA09651463EE3D1440D08E57F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceOffDiagonal",
+            "scratchSha256": "0AB02CCA8018682144FD31FC914C822B5C025C08BBB303F6A9D1971B79E39A9B",
+            "productionSha256": "0AB02CCA8018682144FD31FC914C822B5C025C08BBB303F6A9D1971B79E39A9B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceOppositePair",
+            "scratchSha256": "C7CDB34308A386A7D6D7D2C52BE580C0ADE916F0D4BE7AB4BB8E678AB58505D3",
+            "productionSha256": "2E9E8241BEA6F31B936BE53B1B3FEC14794487D7306B0001FAB6DAC1536718EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftIdealCoordinates",
+            "scratchSha256": "5CE8001B649C65A23E1DDBC70E8AAA20AB2DC787B5E905AF2E680A5D1C0CB4B7",
+            "productionSha256": "E8B894BA2E4EDA45615302D170219D49E8F0BC6BDAE800CF5DAE21C61A4D77E5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftIdealBasis",
+            "scratchSha256": "6C621B21EBA283F7D5A0074F3A35BA9C195C1D7A7F81E9406848338B817501FF",
+            "productionSha256": "9D3F599489EA35E3EF3DC24CD92E2DF7926DF96707276A00E213F5237B491C93",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftActionTrace",
+            "scratchSha256": "F832C48B3CEE0C393FA88217126BBDAD976568C79080D6096DB1C6E4BDAD6F58",
+            "productionSha256": "6D4D69663DD32887A1ACD3BC0D94AECE676CDB697069E4262940D401CB80EB4A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpanningTraceContinuity",
+            "scratchSha256": "CC4C997F9514431C0DAA5C193E9F2228C24BC58AD3D5122C8425219D545AB1F3",
+            "productionSha256": "440D037B6692E96EECD08D48F63FA931B7E7326C9D5C72CE711263BCA4C6739E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceLeftActionContinuity",
+            "scratchSha256": "93BB8A8FE6F70BA4142BC0F308DF018BD9CC9FB6A31A0EE653950DF7C697F144",
+            "productionSha256": "3FF550FF1D91515F9895FC716AD799A72E2697414C682DF290F10940409D8472",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceScalarCornerCharacter",
+            "scratchSha256": "AD8D6B1F34E4BB0113DB16C2894EE4B4C9E548CF5F44D2DC9DBC1346EEA420EE",
+            "productionSha256": "DDB713FBFDECBC02923ABACA9E025B5B09DDA365519B63CD68A70F24E625E7C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceDiagonalRepresentation",
+            "scratchSha256": "8490F27F3A4DCF9C8518C12F04B459A32D11A9DCE6DD056BC5D936E1F28E848D",
+            "productionSha256": "2D357E7045EA32F030653B71B244CE89889B1CCD30C0C23545EA87BBFC90B796",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOddTraceIdempotent",
+            "scratchSha256": "544FAE887AAC03DA45F14E3FA6BEC56A0EC1CD8EA07E6B8DD357367A62BCAD09",
+            "productionSha256": "837DB594D62FE29A9680049B0FC6A2D7EBD134BC17EAA9E74EF1864A7708A516",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceContinuousTraceRealization",
+            "scratchSha256": "DF15068BABA829979F5C8EFAED19A523912AC0111FBA02F4F65BAFD8E2E35575",
+            "productionSha256": "4955B484071269C7F6D79DCCB20B0BE219EF071070A9AB6273837DEF3A744CFD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMatrixTraceDeterminant",
+            "scratchSha256": "3403E997DD56EC6CC7953AA92221EF7CEEF1058358CE7F5B282A61D17B9C1868",
+            "productionSha256": "3403E997DD56EC6CC7953AA92221EF7CEEF1058358CE7F5B282A61D17B9C1868",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTraceMatrixConsumer",
+            "scratchSha256": "25E114A26F322848126E408FD40BFA024BFB3EE328625871D2FA4CAD5B5BDA09",
+            "productionSha256": "6BDF73F8DF07F55BFD4E3EF37E22423DC8CBAECBDBCAFF1CDF7395B562956875",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalRankTwo",
+            "scratchSha256": "38848B9625C4CC98B8DABC893FDFC37780418CF6405EA623E4D603D932B1C000",
+            "productionSha256": "A3F6B9205FB97C1F81B1BC2BDC81450C03773EB5CD86F2705AF906F489B4AEE0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneContinuousRankTwo",
+            "scratchSha256": "EB613F6400BAE78D65D905CAC732A7EECCB5C2799FE8C38FC03911BCEEF28FC6",
+            "productionSha256": "78132CFABD63B414842B51C131734CE2BE89E7835974DA7C59E2485A78902FC0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicNormInertia",
+            "scratchSha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+            "productionSha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitTraceKernel",
+            "scratchSha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+            "productionSha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneJointTraceInertia",
+            "scratchSha256": "CEA0C291455C239F535F28D4CC621D0FDCBE8B710FCC1DD86465D37FF5448CAC",
+            "productionSha256": "4EE3479C4E1A380323C15B121966D110B22A4FBB74BBBB31A0E6CDFC9704AE6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalAdicInertia",
+            "scratchSha256": "AFB8C1631DE143021655FCAD1EA29AD09EBFF027680928C3969B6454A12E1B24",
+            "productionSha256": "2305A5357834CCDFFDAE7C756C8B9FA2AF0DF55460371D8C4F77DE9D281DA692",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalTraceInertia",
+            "scratchSha256": "7B5B322D90A761F972DAE875C8E61A15C4BA9FB2DAA08FDD0AF0E714042F0231",
+            "productionSha256": "4274BFD7874F5AE709FEE6D48D6C286156D696900FECD8DAE81996B17BDD7BAA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceDiagonalKernel",
+            "scratchSha256": "3267BFBBF1851DF5965CF3585B6C0EF89AF98B7E6463E71B3D0D4C3530403A9E",
+            "productionSha256": "BA3705A458B15E568A1E0D572B012A700DFB4076A581308F59E500C21E72FFE4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceContinuousTraceKernel",
+            "scratchSha256": "922E9844A74BE96785C9C6C2EF5152D1D04C35328E654C6E3559F78B35C89964",
+            "productionSha256": "1D163C25D0F452C46E1ED2AE704F7880040859ED5F3E8673FCC04A400E851F8A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceActionKernel",
+            "scratchSha256": "EA87A99EB0B33A50D03476FC7FCE1F16B28EEFF97800A5C8889566220D79BA70",
+            "productionSha256": "FDB4D9DE8AFD825BF7D5C202DE05CD6BF33DBA0D0DB2CD04E4B1D97E4DCBE6ED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTraceMatrixKernel",
+            "scratchSha256": "89897DE450EFE185CC875A103A809A3CE9A530F2461673363B59FD95C7F7DCE3",
+            "productionSha256": "8B9084BB429F20D9118BA4310AA4C2AAD60B98C06C981A848D9790D2AE94CD03",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalUnramifiedRankTwo",
+            "scratchSha256": "518281722B4315D9F6FB6AE7C22634A8CE3D7FF661346FD7D63A2827D1E4379F",
+            "productionSha256": "BA123202CEEA773F278EF3C8A577187E23449F6B647AA2552D99B0B6017B7887",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnramifiedRankTwo",
+            "scratchSha256": "8DA777D51E8662E805A3D5DAED150DDB7465BD7C8FDB1C3351F0BFD31E93F7ED",
+            "productionSha256": "F9F0AD3917CCF06302F254E1F7AA38911584DDF2648598694E9530324F5B31FD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneJointArithmeticKernel",
+            "scratchSha256": "029BC659BD23A67A0C52E7D676D49BA2DB47EA60D4CEBBAC617844F50D613322",
+            "productionSha256": "7F36082AD77F229A3BD548FF10C7C948C08C2C25174D137A74DBB59F0442BC4F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalAdicArithmetic",
+            "scratchSha256": "331EE769ABAE973C71C7B7A53A70F9E3770847A9D184452CCC33471B6454B0AF",
+            "productionSha256": "6525FEC185582B80150511C4A3697F0BEFF1224D87CF92C5097340413EA37274",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalTraceArithmetic",
+            "scratchSha256": "246C28F7459307B658DD926FC82464696F8B70378EC4B25DFAD36AED4D6B9E05",
+            "productionSha256": "18CDB2190BDB4FB5F881A714BE3DCB5CB40FE76260F331547DC28AFAE7FC2A9D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAbsoluteArithmeticFactor",
+            "scratchSha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56",
+            "productionSha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalArithmeticRankTwo",
+            "scratchSha256": "FE77D35318A54F8EE8C3FC896678344B9CCE783EED9824ECAE48DE395CB03A7A",
+            "productionSha256": "AC97D70E294B4D39C8479FCCEAA180135E17F740C90698DD818C227F9D55B22B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticRankTwo",
+            "scratchSha256": "E85AB01CD89DF8728E9570737B3EC934619EB6AADDA0528291E0A9EC36226FB1",
+            "productionSha256": "CDEEDF155B96319CB9302F03E1A0894F7B3139477F276695F9391B125719385E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "CompactOrbitSpanFinite",
+            "scratchSha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+            "productionSha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCoordinateLattice",
+            "scratchSha256": "EF9DD376596F669F67509160E5904E617C8458DB4F1D65F8013397EC9CAAB7AA",
+            "productionSha256": "F25615D5B58FE85D58CAEABFCC7DC29DDF650EB9028784A6BD8E20848405694F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCompactOrbitLattice",
+            "scratchSha256": "7D70E35A4DE290FF302DE81072FA81EE920848123F72C8D66852AF45BBC47A2B",
+            "productionSha256": "9A5B0685DFC1BC48548E440B7CDD700F1B67EC7C5B5B9B10317FEAE61EFFEBF7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMatrixIntertwiningInvariants",
+            "scratchSha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+            "productionSha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCompactResidualRealization",
+            "scratchSha256": "1DB00604D3CC138A2B45892B95EA28ABDB840FAD67221098B26E2D8FF77ED691",
+            "productionSha256": "E5D31361906523004048FD0CCD52AFAC3F6A6E2BE811B3B9B44D8715912D681C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLocalResidualRankTwo",
+            "scratchSha256": "040854BDCFF18C36F8BF933A8469CE6C4E28B98F67116517F97C7BE67601BC1F",
+            "productionSha256": "A902A3EA8B3B4DEF80EB18A7C079526C50234EFC79040ED48EFE977D84BFAD55",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidualRankTwo",
+            "scratchSha256": "2CBB4735DE3CC33E0B82F189C0FF8599A15906626584D8CCD716924F3E8124DD",
+            "productionSha256": "AC757860F640D5832AB6B45158AADE609FE8F9CEB9D72A4122CD9305E4B45F9B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidualLocalInterface",
+            "scratchSha256": "48B7D5B9166F0D323A27C970FD7775146F4CC22DCC8BF5CF17A33D00F373004E",
+            "productionSha256": "4498EB8E2823C6FEF2CA015D92B46E020B24777F56A324028AE108B80C626964",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFixedLocalResidual",
+            "scratchSha256": "493B198A6352D5FD7029788F0BDC681D0AA34FCD0B526A851B95534A13B523B7",
+            "productionSha256": "D549A158DC58B86C2377F1E435B7D06C0EC880C659E2CCBADB934B0085DBA0D3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFixedDeterminantResidual",
+            "scratchSha256": "35F4F8E3016B14F8EBE4DAFA0A6BD0D2005665F9B7D371C133909C401E290960",
+            "productionSha256": "BDE170CADCB00721D0F7EF5A934C1AC7928D02C9FF46A9FDF779B997306DC9AE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 186 distinct names from 186 exhaustive scratch checks are retained: 186 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Residual irreducibility and large image, the remaining local/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. The current source consumers have prime range p greater than three. Acceptance remains 16/20; DUB-17--20 OPEN. All original source and verification criteria are unchanged."
+  }
+}

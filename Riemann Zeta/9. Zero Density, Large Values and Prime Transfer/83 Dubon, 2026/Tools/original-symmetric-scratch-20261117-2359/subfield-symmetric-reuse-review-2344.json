@@ -1,0 +1,63 @@
+{
+  "dependency": "DUB-17 source Theorem 2.6 / DUB-18 source Corollary 8.2 -> literal positive symmetric-power continuation -> arithmetic automorphy -> residual symmetric-power absolute irreducibility on the actual cyclotomic restriction -> the actual finite-subfield large-image branch.",
+  "unchangedAcceptance": "16/20; DUB-17--20 OPEN",
+  "nativeSources": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FiniteSymmetricAbsoluteIrreducible.lean",
+      "sha256": "A84B13662D7631B54C25AAFECAA834ED932A689EF28FC88B620FAA120E1D1993"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousSymmetricBaseChange.lean",
+      "sha256": "6CED793DAC19F2BCF9452132CAEDA01B0ED339B069A46F73C3FE8FE09EDF1D64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SymmetricResidualRootLifts.lean",
+      "sha256": "4A0FC16EC6CB778E0270925C358D564257E3C7EB1B8FA2EFE17F7E5FBEB6FDFB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FieldSL2Perfect.lean",
+      "sha256": "EDEE8CA20A36ED9AF0CA2A108DC7D4B0295C59D119AFF756F24352050D0FA2C9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticFactor.lean",
+      "sha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicCharacter.lean",
+      "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SubfieldSymmetricAdjointCyclotomicDegree.lean",
+      "sha256": "B0CACADA36F9505FD6D1447DE08FF73F9035B5A8073129559166B0DB7F140B26"
+    }
+  ],
+  "route": [
+    {
+      "task": "Embedded finite-subfield symmetric irreducibility",
+      "reuse": "symmetricMatrixThreeOperators_submodule_eq_top, exact homogeneousSymmetricGL_map and native diagonal/unipotent coefficient identities",
+      "discharges": "No requirement that the finite image subfield equal the original residue field. No irreducibility certificate is assumed. Exact bound 2*n < p-1 derives the finite-field torus and factorial conditions."
+    },
+    {
+      "task": "Actual arithmetic cyclotomic-kernel restriction",
+      "reuse": "fieldSL2_isPerfect and perfect_subgroup_le_map_character_kernel",
+      "discharges": "SL2 image containment on the cyclotomic kernel is derived from containment on the full group, retaining the actual original character."
+    },
+    {
+      "task": "Actual absolute Galois cyclotomic restriction",
+      "reuse": "sourceAbsoluteArithmeticRestriction_surjective and sourceAbsoluteCyclotomicCharacter",
+      "discharges": "The original arithmetic image and its finite coefficient/basis witnesses survive literal surjective absolute restriction. No arbitrary Galois action, group identification or supplied surjectivity remains in the source consumer."
+    }
+  ],
+  "boundaries": [
+    "Arithmetic exclusion of the six small-projective-image cases remains open; the new conclusions concern the large-image branch of a proved disjunction.",
+    "The full-group, arithmetic-kernel and absolute-kernel variants each give one finite coefficient extension and basis for all permitted symmetric degrees. These witnesses are not asserted equal across the three variants.",
+    "The actual residual local deformation/regularity conditions, automorphy and literal higher continuation remain unresolved.",
+    "Prime range remains p>3, with each symmetric degree using 2*n<p-1. The full original all-weight scope and source quantifiers are unchanged."
+  ],
+  "deferred": [
+    "No new general geometry, finite-flat, Fontaine-Laffaille or independent purity foundation was started.",
+    "The native subfield symmetric-adjoint cyclotomic-degree theorem is available; adding a duplicate generic cyclotomic-degree proof was deferred.",
+    "No new group-theoretic perfection or character-kernel lifting theory was required."
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,31 @@
+import SourceSpanningTraceAlgebra2207a
+
+/-! DUB-17/18 -> original rank-two association -> norm-inertia kernel.
+Faithful trace and actual group-image spanning detect elements acting
+trivially on the original algebra from invariance of all original trace
+translates. The original finite traces will discharge that invariance. -/
+namespace Dubon2026
+noncomputable section
+
+/-- In the actual faithful spanning trace algebra, invariance of every
+original trace translate forces the original action element to be one. -/
+theorem sourceTraceAction_eq_one_of_translate
+    {G K A : Type} [Group G] [Field K] [Ring A] [Algebra K A]
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (hNondeg : ∀ x, (∀ y, T (x * y) = 0) → x = 0)
+    (n : G) (hTrace : ∀ g, T (σ (n * g)) = T (σ g)) : σ n = 1 := by
+  apply sub_eq_zero.mp
+  apply hNondeg
+  intro y
+  have hy : y ∈ Submodule.span K (Set.range σ) := by rw [hspan]; trivial
+  induction hy using Submodule.span_induction with
+  | mem y hy =>
+    obtain ⟨g, rfl⟩ := hy
+    rw [sub_mul, one_mul, map_sub, ← map_mul σ n g, hTrace, sub_self]
+  | zero => rw [mul_zero, map_zero]
+  | add x y hx hy ihx ihy => rw [mul_add, map_add, ihx, ihy, add_zero]
+  | smul s x hx ih => rw [mul_smul_comm, map_smul, ih, smul_zero]
+
+end
+end Dubon2026

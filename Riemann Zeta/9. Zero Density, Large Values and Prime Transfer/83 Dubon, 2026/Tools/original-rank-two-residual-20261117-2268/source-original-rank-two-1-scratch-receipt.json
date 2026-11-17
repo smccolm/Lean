@@ -1,0 +1,321 @@
+{
+  "recordedUTC": "2026-11-17T07:50:56.785550+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceAdicPrimePowerScalar",
+    "SourceCyclotomicNormFrobenius",
+    "SourceAbsoluteComplexConjugation",
+    "SourceAdicCyclotomicDeterminant",
+    "SourceOriginalAdicDeterminant",
+    "SourceAdicQuotientContinuity",
+    "SourceOriginalLocalDeterminant",
+    "SourcePrimitiveLocalOddness",
+    "SourceGroupAlgebraQuotientSpan",
+    "SourceSpanningTraceAlgebra",
+    "SourceTraceOffDiagonal",
+    "SourceTraceOppositePair",
+    "SourceTraceLeftIdealCoordinates",
+    "SourceTraceLeftIdealBasis",
+    "SourceTraceLeftActionTrace",
+    "SourceSpanningTraceContinuity",
+    "SourceTraceLeftActionContinuity",
+    "SourceScalarCornerCharacter",
+    "SourceTraceDiagonalRepresentation",
+    "SourceOddTraceIdempotent",
+    "SourceContinuousTraceRealization",
+    "SourceMatrixTraceDeterminant",
+    "SourceOriginalTraceMatrixConsumer",
+    "SourceGammaOneLocalRankTwo",
+    "SourceGammaOneContinuousRankTwo"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicPrimePowerScalar.lean",
+      "sha256": "676DFEEFB825700C7CD2F90C954AA2EB68A93D787CC2D11784B3739A9D74E3C5",
+      "oleanSha256": "68E5D104990BE3D3E69418C858135F72C62A74CF539B7C164EF8DD91AE5AE683",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicPrimePowerScalar-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicPrimePowerScalar-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormFrobenius.lean",
+      "sha256": "100916C6BD8BE3246B87D5C43AFEA11775F2D00B4146FEAFA7E65606DC322393",
+      "oleanSha256": "609D0791152590E7F24A2E2C60AD54FAC1AB4A9C97A1F49A4C6FCB298949D9FE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormFrobenius-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormFrobenius-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteComplexConjugation.lean",
+      "sha256": "66CFF3D63346B3FFD0E0521819943F7D8323664E69B17EDB5B1A6BB2F8D18755",
+      "oleanSha256": "337F9431C6504C8552749A07C77B3DE71A4D369184DDB2D8044F47CFE350EFFF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteComplexConjugation-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteComplexConjugation-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCyclotomicDeterminant.lean",
+      "sha256": "A17554BAFFBAB5BFDA30C3BE3B66BA0A3904E4B75314A6D948DFEB66CB0A5C7E",
+      "oleanSha256": "4BFD2E73E8394A8F8406B8C2FC9B92D09911CB0E012F2C6E2B7492790BC843DB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCyclotomicDeterminant-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCyclotomicDeterminant-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdicDeterminant.lean",
+      "sha256": "9F4BAF5CA28F44BBF57E006D7EF06119DBCE8E685FAC10FE57A671AD7C690219",
+      "oleanSha256": "AEBD932E65290151F1CAD91ED4D21BD238015C7D7EB31B18ABBA0139626ED7DE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdicDeterminant-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdicDeterminant-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicQuotientContinuity.lean",
+      "sha256": "493134F1F7AEFD3FD362242E489E41ED7137D63187872437F72AF6C4B74444F6",
+      "oleanSha256": "A218FD05C91F0708870B9D6B6E1B3F9EDABCEB81BE4B8199EC260AB064487D05",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicQuotientContinuity-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicQuotientContinuity-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDeterminant.lean",
+      "sha256": "D64774AE1F5C7A911DDD4BFA83CEFC298BAE56BFAE787A4F19669165A217200A",
+      "oleanSha256": "286156A4084FC7FB759DCD7944C6CF2D0C42BF3C496979F29E6476F500B32E03",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDeterminant-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDeterminant-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalOddness.lean",
+      "sha256": "BCE8F2EA529F345CC8C04E17965D08FBA67CCF3B76068DE66DEB06A6235FB988",
+      "oleanSha256": "B1F69E0EDEE629DAE2A2C83F2723C9394062F3F85108B26217D8165CF93239F4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalOddness-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalOddness-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraQuotientSpan.lean",
+      "sha256": "C80B61AC233BF51E529986F987D6765D63C1E29BD09D0AF6016A3F4D3762B6A9",
+      "oleanSha256": "B4A5883BAD71920C647F9EC02D889B67BA027E9DAC9B95BB74D847C0D29BB65D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraQuotientSpan-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraQuotientSpan-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceAlgebra.lean",
+      "sha256": "122AA7BC6BA58D15AA40C2CD1A968BB44F9B96D996B4272CA0874BC1AE18D048",
+      "oleanSha256": "073E4043DFED3087292C1CEA4974EDD5981B8EC2B8A4F06D73E73EB9526C1E39",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceAlgebra-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceAlgebra-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOffDiagonal.lean",
+      "sha256": "0AB02CCA8018682144FD31FC914C822B5C025C08BBB303F6A9D1971B79E39A9B",
+      "oleanSha256": "C030FC9364F16B148B4131C7C96E72F8D8E7E1BC5145AB41302E9C5E7EAFAC29",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOffDiagonal-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOffDiagonal-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOppositePair.lean",
+      "sha256": "C7CDB34308A386A7D6D7D2C52BE580C0ADE916F0D4BE7AB4BB8E678AB58505D3",
+      "oleanSha256": "A570F084360D3AAD8CB4A71434246CB58B5D071C5AB4FADC33E4AFCEC6E9203D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOppositePair-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceOppositePair-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealCoordinates.lean",
+      "sha256": "5CE8001B649C65A23E1DDBC70E8AAA20AB2DC787B5E905AF2E680A5D1C0CB4B7",
+      "oleanSha256": "47CC3AFBB89A5DD59EA6554E193ABE9D92909736204471326C5DFC2E8D52D39C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealCoordinates-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealCoordinates-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealBasis.lean",
+      "sha256": "6C621B21EBA283F7D5A0074F3A35BA9C195C1D7A7F81E9406848338B817501FF",
+      "oleanSha256": "B9718F04A2B7B9030C2E74D83B9E03FBD0D20E4BA88E25BEDE89985040C6907F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealBasis-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftIdealBasis-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionTrace.lean",
+      "sha256": "F832C48B3CEE0C393FA88217126BBDAD976568C79080D6096DB1C6E4BDAD6F58",
+      "oleanSha256": "AF92002E7B98D1E6C14288E33CC7555E071E8FBA2E0D0C004B169C7FF68F628E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionTrace-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionTrace-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceContinuity.lean",
+      "sha256": "CC4C997F9514431C0DAA5C193E9F2228C24BC58AD3D5122C8425219D545AB1F3",
+      "oleanSha256": "3047CFDD856E78A92BAD8AC5667A2EBE59BF72A6E7F99E9C8351C6D34843D169",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceContinuity-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningTraceContinuity-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionContinuity.lean",
+      "sha256": "93BB8A8FE6F70BA4142BC0F308DF018BD9CC9FB6A31A0EE653950DF7C697F144",
+      "oleanSha256": "5F3FF1A34156AEBAE495390ED6D99F6A82C33CC34801981C89CE6DFCA1369C48",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionContinuity-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceLeftActionContinuity-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceScalarCornerCharacter.lean",
+      "sha256": "AD8D6B1F34E4BB0113DB16C2894EE4B4C9E548CF5F44D2DC9DBC1346EEA420EE",
+      "oleanSha256": "FD6D5DE306DA2E8B8BC5E774834DD921EB07A637A62335DBD07B7A12B69570A1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceScalarCornerCharacter-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceScalarCornerCharacter-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalRepresentation.lean",
+      "sha256": "8490F27F3A4DCF9C8518C12F04B459A32D11A9DCE6DD056BC5D936E1F28E848D",
+      "oleanSha256": "C6F6854ECB50398D07D5AC46077313CED3B2C473F1DF84B659B2762BEE117FF3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalRepresentation-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalRepresentation-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddTraceIdempotent.lean",
+      "sha256": "544FAE887AAC03DA45F14E3FA6BEC56A0EC1CD8EA07E6B8DD357367A62BCAD09",
+      "oleanSha256": "D39AACAF1674B1A6714DFD4B917DF4427D6187E1C41B9F2FF86B605F84DA2898",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddTraceIdempotent-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOddTraceIdempotent-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceRealization.lean",
+      "sha256": "DF15068BABA829979F5C8EFAED19A523912AC0111FBA02F4F65BAFD8E2E35575",
+      "oleanSha256": "EC204CF3B2E2F2198C91C99A536E82FB920D34660E745220FB6F4F4E40130F45",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceRealization-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceRealization-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixTraceDeterminant.lean",
+      "sha256": "3403E997DD56EC6CC7953AA92221EF7CEEF1058358CE7F5B282A61D17B9C1868",
+      "oleanSha256": "551EDBC542348AAE4F563BFF6AFA01EA077F732F94BC4A113CA8FFFD593045D3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixTraceDeterminant-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixTraceDeterminant-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixConsumer.lean",
+      "sha256": "25E114A26F322848126E408FD40BFA024BFB3EE328625871D2FA4CAD5B5BDA09",
+      "oleanSha256": "748F01CD96E78AD7853143CCB5E151040162E6B6D3918F92F5A052D4BF78E2F0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixConsumer-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixConsumer-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRankTwo.lean",
+      "sha256": "38848B9625C4CC98B8DABC893FDFC37780418CF6405EA623E4D603D932B1C000",
+      "oleanSha256": "F7773FCF15944941D9002F6DB302B1A8D1DC7DB9AD51F3C5D58167D19027C2B9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRankTwo-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRankTwo-2221.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuousRankTwo.lean",
+      "sha256": "EB613F6400BAE78D65D905CAC732A7EECCB5C2799FE8C38FC03911BCEEF28FC6",
+      "oleanSha256": "CA1EEE15538D321C14FC59590A417F351ADAF7B88CFBC24DF2EFFBEEAF6583D1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuousRankTwo-2221.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuousRankTwo-2221.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.adicQuotient_prime_power_zero",
+    "Dubon2026.adicQuotientPrimePowerMap",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius",
+    "Dubon2026.sourceAbsoluteComplexConjugation",
+    "Dubon2026.sourceAbsoluteComplexConjugation_isConj",
+    "Dubon2026.sourceAbsoluteComplexConjugation_sq",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation",
+    "Dubon2026.sourceAdicCyclotomicDeterminant",
+    "Dubon2026.sourceAdicCyclotomicDeterminant_continuous",
+    "Dubon2026.sourceAdicCyclotomicDeterminant_frobenius",
+    "Dubon2026.sourceAdicCyclotomicDeterminant_conjugation",
+    "Dubon2026.originalAdicDeterminant_eq_cyclotomic",
+    "Dubon2026.continuous_positive_adic_quotient",
+    "Dubon2026.originalLocalDeterminant_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd",
+    "Dubon2026.sourceGroupAlgebraQuotient_span",
+    "Dubon2026.exists_spanning_algebra_of_trace_determinant",
+    "Dubon2026.traceIdempotent_offDiagonal_zero",
+    "Dubon2026.traceIdempotent_opposite_vanishes",
+    "Dubon2026.traceIdempotent_exists_opposite_pair",
+    "Dubon2026.traceIdempotent_leftIdeal_expansion",
+    "Dubon2026.traceIdempotent_pair_coordinates",
+    "Dubon2026.traceIdempotentPairEquiv",
+    "Dubon2026.traceIdempotentPairBasis",
+    "Dubon2026.traceIdempotentPair_leftAction_trace",
+    "Dubon2026.continuous_trace_of_spanning_action",
+    "Dubon2026.continuous_trace_sandwich_of_spanning_action",
+    "Dubon2026.traceIdempotentPair_matrix_continuous",
+    "Dubon2026.traceIdempotent_left_scalar",
+    "Dubon2026.sourceScalarCornerHom",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners",
+    "Dubon2026.traceDeterminant_odd_involution_zero",
+    "Dubon2026.traceInvolution_plus_idempotent",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra",
+    "Dubon2026.matrixTwo_det_of_trace_relation",
+    "Dubon2026.matrixTwoRepresentation_det_of_trace",
+    "Dubon2026.exists_continuous_matrix_of_original_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.adicQuotient_prime_power_zero",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius",
+    "Dubon2026.sourceAbsoluteComplexConjugation_isConj",
+    "Dubon2026.sourceAbsoluteComplexConjugation_sq",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation",
+    "Dubon2026.sourceAdicCyclotomicDeterminant_continuous",
+    "Dubon2026.sourceAdicCyclotomicDeterminant_frobenius",
+    "Dubon2026.sourceAdicCyclotomicDeterminant_conjugation",
+    "Dubon2026.originalAdicDeterminant_eq_cyclotomic",
+    "Dubon2026.continuous_positive_adic_quotient",
+    "Dubon2026.originalLocalDeterminant_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd",
+    "Dubon2026.sourceGroupAlgebraQuotient_span",
+    "Dubon2026.exists_spanning_algebra_of_trace_determinant",
+    "Dubon2026.traceIdempotent_offDiagonal_zero",
+    "Dubon2026.traceIdempotent_opposite_vanishes",
+    "Dubon2026.traceIdempotent_exists_opposite_pair",
+    "Dubon2026.traceIdempotent_leftIdeal_expansion",
+    "Dubon2026.traceIdempotent_pair_coordinates",
+    "Dubon2026.traceIdempotentPair_leftAction_trace",
+    "Dubon2026.continuous_trace_of_spanning_action",
+    "Dubon2026.continuous_trace_sandwich_of_spanning_action",
+    "Dubon2026.traceIdempotentPair_matrix_continuous",
+    "Dubon2026.traceIdempotent_left_scalar",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners",
+    "Dubon2026.traceDeterminant_odd_involution_zero",
+    "Dubon2026.traceInvolution_plus_idempotent",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra",
+    "Dubon2026.matrixTwo_det_of_trace_relation",
+    "Dubon2026.matrixTwoRepresentation_det_of_trace",
+    "Dubon2026.exists_continuous_matrix_of_original_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.adicQuotientPrimePowerMap",
+    "Dubon2026.sourceAbsoluteComplexConjugation",
+    "Dubon2026.sourceAdicCyclotomicDeterminant",
+    "Dubon2026.traceIdempotentPairEquiv",
+    "Dubon2026.traceIdempotentPairBasis",
+    "Dubon2026.sourceScalarCornerHom"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.traceIdempotent_offDiagonal_zero"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoAudit1.log",
+  "logSha256": "CAA65BA9A923761BA171BA4C8E0CEC35710AF441BF6CE27289036CCF5D5379E6",
+  "auditSha256": "CAE3F185DC35A550A8D69D097EFC3CD3B9561317A6F261E9FC4C7C3B2CBBEA57",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoScratchOwnership2221.log",
+  "ownershipSha256": "435023E4FDA2EE24E7BF1208BA9040FFC7FCB4349B2E7E659F604FC7DF277AD0",
+  "exhaustiveTheorems": 73,
+  "linterScopes": 25,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 53,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRankTwoDependencyAudit1.log",
+  "dependencyAuditSha256": "A92B44B13A1B03B43E2E6055955AA7504607D54539016E99E4C367E87B430D28",
+  "dependencyAuditSourceSha256": "24EBFB2ABA956D31E75DBC56C6351343AB4F8C9B09A4709D902F83B849DAA846",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> genuine continuous rank-two realization with exact original Frobenius values.",
+  "discharged": "For every original PrimitiveCuspForm Q k with k at least two and prime p greater than three, construct the actual finite local coefficient field, residue characteristic p and original coefficient embedding, then a continuous representation of the original rational absolute Galois group in GL2 of that field. Every original good-prime norm Frobenius has exactly the original Fourier coefficient as trace and q^(k-1) as determinant. Actual complex conjugation has trace zero and determinant minus one. The group action, rank-two basis, spanning trace algebra, matrix continuity, oddness and Frobenius values are derived, not supplied.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. The new matrices still need the full required original unramified/local/image/regularity association bridges. Primes two and three, full original all-weight association, automorphy and literal higher symmetric-power continuation remain required. Acceptance remains 16/20 and DUB-17--20 OPEN. Focused compilation does not replace the exhaustive audits or subsequent assembled verification.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-rank-two-1-reuse-review-20261117.json",
+  "reuseReviewSha256": "1C75DC80BCCB5EB6DE8EE09F229721B818CBC48DE110D5317930792C51C3EF82",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

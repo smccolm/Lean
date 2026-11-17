@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-17",
+  "sourceDependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> symmetric-power continuation -> automorphy -> actual original residual association -> original fixed determinant for the same residual action",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-fixed-determinant-residual-route-2265.json",
+    "sha256": "00E4BE5594AA207795E34AD5E3ECD8C9FFE480052C5C8E8CC2817E5DA996CCAD",
+    "review": {
+      "recordedUTC": "2026-11-17T08:49:22.118561+00:00",
+      "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> symmetric-power continuation -> automorphy -> actual original residual association -> original fixed determinant for the same residual action",
+      "reuse": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidualCyclotomicDeterminant.lean",
+          "sha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticCharacterFrobeniusEquality.lean",
+          "sha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualGlobalDeterminant.lean",
+          "sha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidualWittFixedDeterminant.lean",
+          "sha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D"
+        }
+      ],
+      "assessment": "The existing global determinant comparison applies directly to finite discrete residue fields and arbitrary weights. Its older source consumer constructed an alternative algebraic-closure residual representation. Apply the generic comparison to the new actual integral reduction and its already proved fixed-local data; retain the same action and coefficient field. No new density, cyclotomic, or Witt foundations are necessary.",
+      "remaining": "Residual image, local regularity, full association and automorphy/continuation remain OPEN. The exact downstream Witt compatibility can be reused once this determinant identity is retained in the source consumer.",
+      "productionMutation": false,
+      "date": "2026-11-17",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidualCyclotomicDeterminant.lean",
+          "sha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticCharacterFrobeniusEquality.lean",
+          "sha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualGlobalDeterminant.lean",
+          "sha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidualWittFixedDeterminant.lean",
+          "sha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D"
+        }
+      ],
+      "obligations": "The same actual all-weight integral reduction now has its global cyclotomic weight determinant as an equality of characters on the prescribed arithmetic group. Original local Hecke values, inertia, maximal Hecke kernel, finite image, literal integral reduction, coefficient characteristic and actual oddness remain in the same source consumer. No character, determinant compatibility or residual action is supplied.",
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": "The same actual all-weight integral reduction now has its global cyclotomic weight determinant as an equality of characters on the prescribed arithmetic group. Original local Hecke values, inertia, maximal Hecke kernel, finite image, literal integral reduction, coefficient characteristic and actual oddness remain in the same source consumer. No character, determinant compatibility or residual action is supplied.",
+  "remaining": "Residual image, local regularity, full association and automorphy/continuation remain OPEN. The exact downstream Witt compatibility can be reused once this determinant identity is retained in the source consumer.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual image, local regularity, full association and automorphy/continuation remain OPEN. The exact downstream Witt compatibility can be reused once this determinant identity is retained in the source consumer.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,52 @@
+import SourceResidualConjugateIrreducible2345b
+import Dubon2026.HomogeneousSymmetricBaseChange
+
+/-! DUB-17/18 -> residual deformation inputs -> full matrix spanning over the
+original residue field. The audited finite-subfield branch gives irreducibility
+in extended conjugated coordinates. Native conjugacy and coefficient descent
+return the spanning conclusion to the original symmetric representation. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- Irreducibility in an actual extended basis gives full matrix spanning over
+the original coefficient field for the same original symmetric-power action. -/
+theorem original_symmetric_matrix_span_of_conjugated_extension
+    {G K E L : Type} [Group G] [Field K] [Field E] [Field L] [IsAlgClosed L]
+    [Algebra K E] [Algebra E L] [Algebra K L] [IsScalarTower K E L]
+    (ρ : G →* GeneralLinearGroup (Fin 2) K) (B : GeneralLinearGroup (Fin 2) E) (n : ℕ)
+    (h : Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) ((homogeneousSymmetricGL n).comp
+        ((MulEquiv.toMonoidHom (MulAut.conj B)).comp
+          ((GeneralLinearGroup.map (algebraMap K E)).comp ρ)))))) :
+    Submodule.span K (Set.range (fun g => (homogeneousSymmetricGL n (ρ g)).val)) = ⊤ := by
+  let ρK := (homogeneousSymmetricGL n).comp ρ
+  let ρE := (MulEquiv.toMonoidHom (MulAut.conj B)).comp
+    ((GeneralLinearGroup.map (algebraMap K E)).comp ρ)
+  let C := GeneralLinearGroup.map (algebraMap E L) (homogeneousSymmetricGL n B)
+  have hmap (g : GeneralLinearGroup (Fin 2) K) :
+      GeneralLinearGroup.map (algebraMap E L)
+          (homogeneousSymmetricGL n (GeneralLinearGroup.map (algebraMap K E) g)) =
+        GeneralLinearGroup.map (algebraMap K L) (homogeneousSymmetricGL n g) := by
+    rw [← homogeneousSymmetricGL_map]
+    rw [IsScalarTower.algebraMap_eq K E L]
+    rfl
+  have hconj : matrixCoefficientExtension (L := L) ((homogeneousSymmetricGL n).comp ρE) =
+      (MulEquiv.toMonoidHom (MulAut.conj C)).comp (matrixCoefficientExtension (L := L) ρK) := by
+    apply MonoidHom.ext
+    intro g
+    change GeneralLinearGroup.map (algebraMap E L)
+        (homogeneousSymmetricGL n (B * GeneralLinearGroup.map (algebraMap K E) (ρ g) * B⁻¹)) =
+      C * GeneralLinearGroup.map (algebraMap K L) (homogeneousSymmetricGL n (ρ g)) * C⁻¹
+    simp only [map_mul, map_inv, hmap, C]
+  have hc : Representation.IsIrreducible (matrixStandardRepresentation
+      ((MulEquiv.toMonoidHom (MulAut.conj C)).comp (matrixCoefficientExtension (L := L) ρK))) := by
+    rw [← hconj]
+    exact h
+  letI : Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) ρK)) :=
+    (matrixRepresentation_irreducible_iff_conjugate _ C).mpr hc
+  exact matrixRepresentation_span_eq_top_of_extension (L := L) ρK
+
+end
+end Dubon2026

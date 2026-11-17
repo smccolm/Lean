@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-twisted-kernel-1-scratch-receipt.json",
+      "sha256": "049DD5A064FC14DEFB68DA596CCF7F8A831FF30446A28C3A295843BF71EC41F0",
+      "modules": 8,
+      "queries": 11,
+      "exhaustiveTheorems": 35,
+      "other": 13,
+      "requiredValueEdges": 61
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

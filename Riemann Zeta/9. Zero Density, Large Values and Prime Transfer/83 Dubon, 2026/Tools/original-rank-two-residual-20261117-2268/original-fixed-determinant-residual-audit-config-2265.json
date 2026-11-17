@@ -1,0 +1,36 @@
+{
+  "modules": [
+    "SourceGammaOneFixedDeterminantResidual"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "constructions": [],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo",
+    "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+    "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius"
+  ],
+  "separatelyAxiomChecked": [],
+  "files": [
+    {
+      "version": "SourceGammaOneFixedDeterminantResidual2263b",
+      "module": "SourceGammaOneFixedDeterminantResidual",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual.lean",
+      "sourceSha256": "35F4F8E3016B14F8EBE4DAFA0A6BD0D2005665F9B7D371C133909C401E290960",
+      "canonicalSha256": "35F4F8E3016B14F8EBE4DAFA0A6BD0D2005665F9B7D371C133909C401E290960",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "routeAssessment": "original-fixed-determinant-residual-route-2265.json",
+  "productionMutation": false
+}

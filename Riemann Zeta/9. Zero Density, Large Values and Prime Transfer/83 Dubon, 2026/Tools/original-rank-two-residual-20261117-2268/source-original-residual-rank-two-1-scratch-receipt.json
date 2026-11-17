@@ -1,0 +1,125 @@
+{
+  "recordedUTC": "2026-11-17T08:52:14.483836+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "CompactOrbitSpanFinite",
+    "SourceIntegralCoordinateLattice",
+    "SourceCompactOrbitLattice",
+    "SourceMatrixIntertwiningInvariants",
+    "SourceCompactResidualRealization",
+    "SourceGammaOneLocalResidualRankTwo",
+    "SourceGammaOneResidualRankTwo"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite.lean",
+      "sha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+      "oleanSha256": "78083ED9DB5CA7E5D9CA1F96C6A3778E332C1F3B9DFFB1AED029F79BF864963F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite-2257.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice.lean",
+      "sha256": "EF9DD376596F669F67509160E5904E617C8458DB4F1D65F8013397EC9CAAB7AA",
+      "oleanSha256": "D6468B8E4209AB8CA93AD9997A20FA4172DB6ED0BAEA7205ACFFBCE3B104AC3D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice-2257.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice.lean",
+      "sha256": "7D70E35A4DE290FF302DE81072FA81EE920848123F72C8D66852AF45BBC47A2B",
+      "oleanSha256": "B73132FCB0F1BA2E27D2114D4D2B623D62753E86AAD562A04CF705285E696E92",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice-2257.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants.lean",
+      "sha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+      "oleanSha256": "DFB35A148564D016980F693AC03CA18411042588CFBC9DB1D8C3BFA2EE1B833D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants-2257.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization.lean",
+      "sha256": "1DB00604D3CC138A2B45892B95EA28ABDB840FAD67221098B26E2D8FF77ED691",
+      "oleanSha256": "4C6D85249257ED745984A387980FC6F7D7648D2EE4C92B5F6D1C3ABE70548C25",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization-2257.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo.lean",
+      "sha256": "040854BDCFF18C36F8BF933A8469CE6C4E28B98F67116517F97C7BE67601BC1F",
+      "oleanSha256": "D506FE440295304D615DB30EE6F38B476DFED0527605CEB51E6F67C4873199E2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo-2257.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo.lean",
+      "sha256": "2CBB4735DE3CC33E0B82F189C0FF8599A15906626584D8CCD716924F3E8124DD",
+      "oleanSha256": "215F46DC4F6830D948B1AD826133C710BC7C5E9ACCF1FAFB693784024EEC0F9B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo-2257.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo-2257.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.compact_span_finite_of_open_lattice",
+    "Dubon2026.sourceIntegralCoordinateMap",
+    "Dubon2026.sourceIntegralCoordinateLattice",
+    "Dubon2026.mem_sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceIntegralCoordinateLattice_fg",
+    "Dubon2026.sourceIntegralCoordinateLattice_open",
+    "Dubon2026.sourceCompactOrbitLattice",
+    "Dubon2026.sourceCompactOrbitLattice_span",
+    "Dubon2026.sourceCompactOrbitLattice_invariant",
+    "Dubon2026.sourceCompactOrbitLattice_fg",
+    "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+    "Dubon2026.matrixTwo_trace_det_of_intertwining",
+    "Dubon2026.compact_rankTwo_integral_residual_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.compact_span_finite_of_open_lattice",
+    "Dubon2026.mem_sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceIntegralCoordinateLattice_fg",
+    "Dubon2026.sourceIntegralCoordinateLattice_open",
+    "Dubon2026.sourceCompactOrbitLattice_span",
+    "Dubon2026.sourceCompactOrbitLattice_invariant",
+    "Dubon2026.sourceCompactOrbitLattice_fg",
+    "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+    "Dubon2026.matrixTwo_trace_det_of_intertwining",
+    "Dubon2026.compact_rankTwo_integral_residual_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceIntegralCoordinateMap",
+    "Dubon2026.sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceCompactOrbitLattice"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoAudit2.log",
+  "logSha256": "8E7D66E12226AD300F1100B424F34AF7C8C80BDD6767B41C24552687EB02D78C",
+  "auditSha256": "51E0E3BEE12A384277797996AB3A3E1335ADD917504A10C965805C36CBB74F0B",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoScratchOwnership2257.log",
+  "ownershipSha256": "F11DA3326A7853C0208E09078D800178F005FDFCDDAE6084BB98F43638C76372",
+  "exhaustiveTheorems": 39,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 33,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRankTwoDependencyAudit2.log",
+  "dependencyAuditSha256": "589E8FC4535949557E23AE5B0D8CCFF5BCB7D1204638A7002EBFF04BF31D3D31",
+  "dependencyAuditSourceSha256": "6192C98B82BEF6D603EBDF3D387A421C923A0370B41C6C187313B5CD23EE9675",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual integral and residual arithmetic rank-two realization.",
+  "discharged": "The original primitive form of weight at least two and prime p greater than three constructs a genuine finite local coefficient extension, its actual finite discrete characteristic-p residue field and continuous integral/residual arithmetic representations. The integer span of the two compact basis orbits is proved finite, full, invariant, free and rank two. This discharges every lattice input of the existing integral/residual realization. Native conjugacy invariance proves the exact trace and determinant comparison. Literal entrywise reduction gives original reduced Fourier traces and weight determinants at all original good-prime norm Frobenius elements, and actual complex conjugation remains odd. No lattice, representation, Frobenius, finite-residue or continuity certificate is supplied by the source consumer.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual irreducibility and large image, remaining local/regularity conditions, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are required.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residual-rank-two-1-reuse-review-20261117.json",
+  "reuseReviewSha256": "897C34B9CA2576C36042E6E8C7648E170307E8CC773A9EE26E20832A3BD51E24",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

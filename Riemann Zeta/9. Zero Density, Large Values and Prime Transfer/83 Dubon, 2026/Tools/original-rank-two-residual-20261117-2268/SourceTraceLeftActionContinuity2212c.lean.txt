@@ -1,0 +1,51 @@
+import SourceTraceLeftActionTrace2211b
+import SourceSpanningTraceContinuity2209c
+import Mathlib.Topology.Algebra.Group.Units
+import Mathlib.Topology.Instances.Matrix
+
+/-! DUB-17/18 -> actual rank-two realization -> original matrix continuity.
+The matrix entries are the already proved continuous original trace
+coordinates. Native units topology also checks inverse matrices through
+the original inverse group action. No algebra-action topology is assumed. -/
+namespace Dubon2026
+noncomputable section
+variable {G K A : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+  [Field K] [TopologicalSpace K] [IsTopologicalRing K] [Ring A] [Algebra K A]
+
+/-- The original left-ideal matrix representation in the genuine two-vector
+basis is continuous, using the actual spanning trace and group inverse. -/
+theorem traceIdempotentPair_matrix_continuous
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (ht : Continuous (fun g => T (σ g)))
+    (hCyc : ∀ x y, T (x * y) = T (y * x))
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (e b c : A) (he : e * e = e) (hte : T e = 1)
+    (heb : e * b = b) (hec : e * c = 0) (hce : c * e = c)
+    (hbe : b * e = 0) (hbc : b * c = e) (hcb : c * b = 1 - e) :
+    let B := traceIdempotentPairBasis T hCyc hPol e b c he hte heb hec hce hbe hbc hcb
+    Continuous (algebraIdempotentMatrixRepresentation σ e B) := by
+  let B := traceIdempotentPairBasis T hCyc hPol e b c he hte heb hec hce hbe hbc hcb
+  change Continuous (algebraIdempotentMatrixRepresentation σ e B)
+  have hm : Continuous (fun g => (algebraIdempotentMatrixRepresentation σ e B g).val) := by
+    apply continuous_pi
+    intro i
+    apply continuous_pi
+    intro j
+    have hv : (fun g => (algebraIdempotentMatrixRepresentation σ e B g).val i j) =
+        (fun g => B.repr (algebraIdempotentLeftAction e (σ g) (B j)) i) :=
+      funext (fun g => algebraIdempotentMatrixRepresentation_apply σ e B g i j)
+    rw [hv]
+    fin_cases i
+    · change Continuous (fun g => T (σ g * (B j).val))
+      simpa only [one_mul] using
+        continuous_trace_sandwich_of_spanning_action σ T hspan ht hCyc 1 (B j).val
+    · change Continuous (fun g => T (b * (σ g * (B j).val)))
+      exact (continuous_trace_sandwich_of_spanning_action σ T hspan ht hCyc b (B j).val).congr
+        (fun g => congrArg T (mul_assoc b (σ g) (B j).val))
+  apply Units.continuous_iff.mpr
+  exact ⟨hm, hm.comp continuous_inv⟩
+
+end
+end Dubon2026

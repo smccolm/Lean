@@ -1,0 +1,37 @@
+{
+  "status": "Reviewed continuation after preserved ownership and semantic diagnostics; no mathematical source mutation.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_projective_residual_image_9725b.py",
+      "sha256": "8743A7B7219BB28D116FDBCF461A1DAF0BA73509645A599F7654D17702372757"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_projective_residual_image_9725b.py",
+      "sha256": "20F6315A8112F3FDBBBA3FBC9AA761E17234C9FB1558B7E2DB7B3D1F96373747"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_projective_semantics_9725d.py",
+      "sha256": "5433B096AE6F405EDEB212A2C56D4CCEE2047298B9E0C1DB67A1DD2DF1253167"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_projective_residual_image_9725d.ps1",
+      "sha256": "BDF0AF17AFB5B047AFE77503417E56875015058BA7C54D92A217D5E3ACF11A42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_projective_residual_image_canonical_9725b.py",
+      "sha256": "C84F5CA4670ABB141D9E5532C39C7AE23B9A76E6920BBD13DBA4BB2CC6BCC10F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.lean",
+      "sha256": "C600046A53D89912386D6C1E6B15131CD537D89C04035A3F94013E06E7C6AA86"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.lean",
+      "sha256": "4BF7FB222CB1A99C5554215E6D0971E0C0F3356FE8BAE73FBB120B1263096D46"
+    }
+  ],
+  "ownership": "939 scratch theorem names retained; one exact Mathlib-generated congruence declaration separately verified in the 940-theorem focused environment.",
+  "semantic": "Both fresh recursive structural-name audit environments exited zero. The strict comparison of all 1149 declarations is still required; no difference is accepted implicitly.",
+  "normalization": "Only verified import-generated name changes; numeric Name components preserved and distinguished from textual components; alpha-equivalent bound binder names; recursive metadata stripping; generated syntax Name-literal module qualification. No proof/type subterm is omitted.",
+  "downstream": "Focused recorder then sequential foundation and paper BAT, all thirteen regressions, global exact ownership/type/value reconciliation, final canonical receipt and archive remain required."
+}

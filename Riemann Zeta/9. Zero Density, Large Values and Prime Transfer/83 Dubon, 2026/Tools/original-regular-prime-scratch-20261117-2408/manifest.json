@@ -1,0 +1,626 @@
+{
+  "status": "Scratch PASS: the same actual original residual representation has regular detecting congruence primes for every nonzero original symmetric twisted class on its finite linear subfield branch. Full arithmetic data and all preceding conclusions are retained. Production promotion and assembled verification remain pending.",
+  "modules": 14,
+  "publicQueries": 20,
+  "publicTheorems": 16,
+  "publicConstructions": 4,
+  "exhaustiveTheorems": 57,
+  "otherDeclarations": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 123,
+  "typeValueFingerprints": 66,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-symmetric-joint-scratch-20261117-2386/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection.lean.txt",
+      "sha256": "47177514FD45FA73508E158359290C4F0D7D5941F8050C96E90E3240F7D49F56"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection2398a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection2398a.lean.txt",
+      "sha256": "D50CB3219D8C07FE2916D96680F08C88457D70A70DF2EDCC3330F824FD334589"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection2398a.log",
+      "sha256": "9B1D1620CB6496E6F60F839216563A27E70999EF5AF1FDEB630893F7BF02B269"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection2398b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection2398b.lean.txt",
+      "sha256": "BB6770BB5E901B8010E1FA2D1E3C8B5E507007D79C1C16C1A4E3248B09B43CAA"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceFiniteLinearOriginalRegularDetection2398b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceGammaOneOriginalRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceGammaOneOriginalRegularPrimes.lean.txt",
+      "sha256": "019448DA0C606BAA9A40A14C217BB824D10F13401803BB80704CB496ED60FB22"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceGammaOneOriginalRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceGammaOneOriginalRegularPrimes2404a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceGammaOneOriginalRegularPrimes2404a.lean.txt",
+      "sha256": "3B68B11A745975B9944B0BA6A5DD7AE786D81D13BBBA89EA5A9CA4AA95446913"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceGammaOneOriginalRegularPrimes2404a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle.lean.txt",
+      "sha256": "568290FC605472AB83FD479795DC82B9C8299BCFE48A9F2D2E8343F608BDA453"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399a.lean.txt",
+      "sha256": "B51A4881249E093E447AE8EB2E80862422B89B2C110C839EEB96EB08443CA1D2"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399a.log",
+      "sha256": "4D6B5DE751E551105D8F3E32C4F45833A983A3B18679E1A88DA4C13F83550925"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399b.lean.txt",
+      "sha256": "350A87E722169CC40810E0C601878FF1612485ACC56F8B9A8D7C0CFD1338386F"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399b.log",
+      "sha256": "847A192CD4766C395EB49EDCF1BAB162E99D96154422AEAF4CD3ADD4048B401F"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399c.lean.txt",
+      "sha256": "C9F8B3FF1F79684DDDD992F752E51DFD7699FD52E6AE398C877B3C5B19DBB8D8"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularCocycle2399c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimeProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimeProperty.lean.txt",
+      "sha256": "7BDF4825CA4B7E43B0B2845A0A47435AEE784A5DBBD6130B53A3B811D673591E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimeProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimeProperty2403a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimeProperty2403a.lean.txt",
+      "sha256": "49B8D56E88556EC3AC3DB47073A7AAA644BA3FF15387E9CD30866265992F77E4"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimeProperty2403a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes.lean.txt",
+      "sha256": "6BC45757D8F171973E1807DF492AE6FC1FB6801FD73781087E79904433675A13"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400a.lean.txt",
+      "sha256": "7D7152C4F36111BEA5A334F1D5C4750579E245435DE80CD2060921426F7B9CB0"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400b.lean.txt",
+      "sha256": "F09E8F03E815D3B8D1CAEDC24262BA5D5A355441E42FE266CF34B1DFBF9C8170"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400c.lean.txt",
+      "sha256": "14A59BE9032618CB5972C24DBE229D1F75A6C3916535742EED271A052A5047EB"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400c.log",
+      "sha256": "170B17CD6C9B7C3A1FAD3EF8FE6DF72E4D1310357F111C92E18F48843A3797D5"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400d.lean.txt",
+      "sha256": "2BFBF3437ED4AD6E7F3C273DBF3A588B1558A7B2360D685C641D4BFC755C5D12"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400d.log",
+      "sha256": "15B9023CC1676E5A7FEF0A057034F79D3279FA943A98295CEAC9D778E1DDB7F8"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400e.lean.txt",
+      "sha256": "BDA13E5B986C560480883E17777717DE7B1285D567FD2DC26C7058E3FA7FD9F7"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400e.log",
+      "sha256": "9C40284F320BFCD4C1CD3E6580642EB87A113EDCCE8738439DB78039ABB213EB"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400f.lean.txt",
+      "sha256": "5385C111380C0F0BEA20442F23483D6C915AF6B656C6B540282B285067A572F3"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400g.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400g.lean.txt",
+      "sha256": "CE58E041EDD1BC8824D247FA7E77CAC281FD5AFB72445BCC94094292ABAD1E1E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRegularPrimes2400g.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRootKernel.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRootKernel.lean.txt",
+      "sha256": "3B1775697C73599FD684D6D8A3E508C0A2F5E0594AB8A38379B019A1C1679F8D"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRootKernel.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRootKernel2391a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRootKernel2391a.lean.txt",
+      "sha256": "E0A6E65A28258EA5F133ABB9D73F147DCA69BA20954B4DE7BC1F278BF54FADA7"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalArithmeticRootKernel2391a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest.lean.txt",
+      "sha256": "667572F960F8F6AB87174561233137DCA04501B047E56EFE4150CD62B254A03E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest2397a.lean.txt",
+      "sha256": "948508DA25A3DA9BF6C4F68FCDCDE27D91210982E6D45D2A5B256994E84D93B5"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest2397b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest2397b.lean.txt",
+      "sha256": "32F513B4960CAB222DAFDF477DA4852FBE3E1B5F543AD108808C41904D7A9AD5"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalExtendedTraceTest2397b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly.lean.txt",
+      "sha256": "AF038D865345AECF90D8464EDF3318B8D80B7E49B426B26E7F5BD4388F01FCB7"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401a.lean.txt",
+      "sha256": "7DF2C0ACA6591FAF0AEA2B105A264830609072D93D3A57E5DE726AECCF4BF1FA"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401a.log",
+      "sha256": "3AD01C5AFE60BCA3DBC1B0C57031473BE8BE15FF6102729B49703361B8798DD3"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401b.lean.txt",
+      "sha256": "D251AC48187BBD5AA1F8EEEF6A0C1330461B5B42CC66E047AC278B3D1492F531"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401b.log",
+      "sha256": "68980FB907474AAAB5A3C72A500456BB6EE65F9EC0C27AD0F23130EB3E605DDB"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401c.lean.txt",
+      "sha256": "5A787EE921F9F6E738C5D52D1B448BEA437278A957DD861D36DF000E9C49308A"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401c.log",
+      "sha256": "E20014B47FB9FB2A652DE5B309521B3D5C20454C52184117504A9255DF007276"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401d.lean.txt",
+      "sha256": "C2CC5ADE3C42A409ACF1D6AAE1D593B300E496F21B6C0B93553D78371D13443C"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401e.lean.txt",
+      "sha256": "DE2B9D125CC57B572B1CC56292D7E752C81EA042FE55EB1A1F0770BC82CFCACB"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAssembly2401e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAudit1.lean.txt",
+      "sha256": "B896567726A3AA39BF3F22CD9A59E284B4E0CB7F0112FD743B3A528039B509A5"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeAudit1.log",
+      "sha256": "BCB74963A0117272DB6148AFCC92CC428686CFFAFE809FF991B83EF68558D5BC"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeDeclarations2405.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeDeclarations2405.lean.txt",
+      "sha256": "1CB1A5F54A6F35377F9FE04FB0F531692D6FEAF4426E4BFB06F086739F53E91E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeDeclarations2405.log",
+      "sha256": "A563C47B0717B7BA30183A4805F7BD9FF29BEF0E3DB228B343F51DA1421C6352"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeDependencyAudit1.lean.txt",
+      "sha256": "7A31C4ACB2BAFAB83CBBE8E92617A4731DBD5ADA894DB504984A33E9728811BB"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeDependencyAudit1.log",
+      "sha256": "83056E3C39A5B196A9F5414DFC326F260C918AD2E8C741860EC26F50512F777C"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates.lean.txt",
+      "sha256": "E816684284E4BFE85DE7138927F6261A706370B12559F571040D2DE1499F969E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates2402a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates2402a.lean.txt",
+      "sha256": "BCF47FD12B82FDE43FA86A089B5858657F478C721A9AEBBA72FC063A30E0B6A6"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates2402a.log",
+      "sha256": "B258C1029E40A6260F5479EC63B32261B7038D27E8B970845E2D285CA7FA8A62"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates2402b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates2402b.lean.txt",
+      "sha256": "E816684284E4BFE85DE7138927F6261A706370B12559F571040D2DE1499F969E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimePredicates2402b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeProductionSemantic2406.lean.txt",
+      "sha256": "BD17008C432A3B2C10D51FDBEF6E117DDF27ED9885F190EE0F06E7B669DC1229"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeScratchSemantic2406.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeScratchSemantic2406.lean.txt",
+      "sha256": "EDB3D4286D19A1763FC6C4EA919E3F478DB31BEA4E088FF29B042DE983B18273"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceOriginalRegularPrimeScratchSemantic2406.log",
+      "sha256": "BEFF1DFD9F529C77CA6E1C6655E7F68FBD12A9F760E23A8594A1820078F8F3A9"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldProjectorSpan.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldProjectorSpan.lean.txt",
+      "sha256": "B4BFAFF4C408E5F1D9550565123FD959537DF31C2CA168BD624208D41A94B0A7"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldProjectorSpan.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldProjectorSpan2392a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldProjectorSpan2392a.lean.txt",
+      "sha256": "005D682076C146B52AE59CBE78EF907DCB725116D0245393117CA22C4D98B49F"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldProjectorSpan2392a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularKernel.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularKernel.lean.txt",
+      "sha256": "3AE62D2BDE6672029D8AB03D3D9F0D510721C56C321D309CFBD12C7D71A612F8"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularKernel.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularKernel2394a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularKernel2394a.lean.txt",
+      "sha256": "DED79E98B4DB311DB1E7B0AF8B636FA783C193AD1A3C35098971F79D915B7566"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularKernel2394a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularTrace.lean.txt",
+      "sha256": "EDE192B40714F8793E51648608F7992357DB5D26AAA5672680B358ADF44DDC5C"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularTrace2393a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularTrace2393a.lean.txt",
+      "sha256": "771BC2BBCA6EE823B1EA53A3EDAC9572147F3745EE14AC81BD5EA89F1385D8C8"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceSubfieldRegularTrace2393a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding.lean.txt",
+      "sha256": "84F71AF5CFA33B5561A66390E0C6B701DCD14F865D452B093F5C852393DE760D"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395a.lean.txt",
+      "sha256": "C75302EE2F3C169A0615F08003899C5B2B8BBF447B3304E74671854E23176F6B"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395a.log",
+      "sha256": "B3F05772C9EFC45353A4D9D2478B5F5C79F4FBD78983F0B8FBCF45A0B81E890A"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395b.lean.txt",
+      "sha256": "3CC7BAFFC4CD319F81D1052302A38E443361B307B836F1BB3FF8DBF14E8F6C70"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395b.log",
+      "sha256": "242339D80CBCAAB125EAB9B8C2944B1F75A131B71DB9DBAD5CE377225681BA12"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395c.lean.txt",
+      "sha256": "84F71AF5CFA33B5561A66390E0C6B701DCD14F865D452B093F5C852393DE760D"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroCoefficientEmbedding2395c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy.lean.txt",
+      "sha256": "DFA681EBD7BB438C6AC4373373BF7FF590DFB7BA1D22E76CBD719F151055984E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396a.lean.txt",
+      "sha256": "E410C5F29A9E549D1A3F2D64DE6FE10ECD21E2D12325E0A3E6CF1BDED58D7BAE"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396a.log",
+      "sha256": "19837CF419CA7A3C4AB918275BE7A8FB1A28A3100463DA0025DB86B083140C4F"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396b.lean.txt",
+      "sha256": "194D20ECCC1D5761E744A92B3689D99B4BFFA2722FAA6BC557843B24D528AD41"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396b.log",
+      "sha256": "6A286E8FE0E92F71A7D14507E37049633CC100FE394BFE1FDFCCCB1492C403BC"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396c.lean.txt",
+      "sha256": "DFA681EBD7BB438C6AC4373373BF7FF590DFB7BA1D22E76CBD719F151055984E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/SourceTraceZeroConjugacy2396c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/build_original_regular_primes_2405.ps1",
+      "sha256": "C8A3B59E6AB0332F1B6C9026EB926AE73A2FAB1CB92535046C9D9B51A6D69111"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/original-regular-prime-reuse-review-2407.json",
+      "sha256": "127CE56F1EFA9436F414F6A3006C7CE8ADD6F07F103BBBDF71992080A52BE9D4"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/prepare_original_regular_prime_audits_2405.py",
+      "sha256": "793AC9213C2B612C86238FB7DCB20C0989152C27AB50001419E465C5A465A9A0"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/record_original_regular_prime_scope_2407.py",
+      "sha256": "4C45BD6B0C5D8E01734D988EC36B2F9353BD42292A56E799ED30492C3BF9B5D9"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/source-original-regular-prime-1-scratch-receipt.json",
+      "sha256": "334EF60FE3B73F047A5F481753159A204503CB6CCD035A70D9244A3F96A75A48"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/source-original-regular-prime-audit-config-2405.json",
+      "sha256": "413CB09166419A6B11332F932309049DE79CBBD66DC154AA2D1D18FE16FBD63E"
+    },
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/source-original-regular-prime-scratch-summary-2407.json",
+      "sha256": "95D590AA2028CFA713AE7D7EE4FC1A10DCA4B95B2DFED1DA016359E93E5098CE"
+    }
+  ]
+}

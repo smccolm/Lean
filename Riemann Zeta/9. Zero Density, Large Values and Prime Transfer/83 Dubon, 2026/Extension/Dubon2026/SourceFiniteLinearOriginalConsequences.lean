@@ -1,0 +1,52 @@
+import Dubon2026.SourceOriginalSymmetricAdjoint
+import Dubon2026.SourceFiniteLinearOriginalSpanning
+
+/-! DUB-17/18 -> original residual deformation inputs. Assemble spanning,
+absolute symmetric irreducibility and trace-zero adjoint vanishing for the same
+original restricted representation; the coefficient field and basis are fixed. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+
+/-- The proved original symmetric matrix and cohomological conclusions for one
+and the same original representation, throughout the stated degree range. -/
+def HasOriginalSymmetricKernelConsequences (p : ℕ) {F Γ : Type} [Field F] [Group Γ]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  HasOriginalSymmetricSpanning p ρ ∧
+    HasOriginalSymmetricAbsoluteIrreducibility p ρ ∧ HasOriginalSymmetricAdjointVanishing p ρ
+
+/-- Original matrix spanning supplies all three conclusions for the same action. -/
+theorem original_symmetric_kernel_consequences_of_spanning
+    (p : ℕ) {F Γ : Type} [Field F] [Group Γ] [CharP F p]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F) (h : HasOriginalSymmetricSpanning p ρ) :
+    HasOriginalSymmetricKernelConsequences p ρ := by
+  have hi := original_symmetric_absolute_irreducibility_of_spanning p ρ h
+  exact ⟨h, hi, original_symmetric_adjoint_vanishing_of_absolute p ρ hi⟩
+
+/-- The constructed finite bounds supply all original consequences on any
+original abelian-character kernel, with no new irreducibility premise. -/
+theorem finite_linear_bounds_original_symmetric_kernel_consequences
+    (p : ℕ) [Fact p.Prime] {F Γ A : Type} [Field F] [Group Γ] [CommGroup A] [CharP F p]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F) (χ : Γ →* A)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    HasOriginalSymmetricKernelConsequences p (ρ.comp χ.ker.subtype) := by
+  apply original_symmetric_kernel_consequences_of_spanning
+  intro n hn
+  exact finite_linear_bounds_original_symmetric_kernel_span p j ρ χ hp3 h n hn
+
+/-- The same constructed original action gives all consequences on the actual
+absolute Galois cyclotomic kernel. -/
+theorem finite_linear_bounds_original_absolute_cyclotomic_consequences
+    (p : ℕ) [Fact p.Prime] {F : Type} [Field F] [CharP F p] (a : 𝓞 ℚ)
+    (j : F →+* K p) (ρ : rationalArithmeticGaloisGroup a →* GL (Fin 2) F)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    HasOriginalSymmetricKernelConsequences p
+      ((ρ.comp (sourceAbsoluteArithmeticRestriction a).toMonoidHom).comp
+        (sourceAbsoluteCyclotomicCharacter p).toMonoidHom.ker.subtype) := by
+  apply original_symmetric_kernel_consequences_of_spanning
+  intro n hn
+  exact finite_linear_bounds_original_absolute_cyclotomic_span p a j ρ hp3 h n hn
+
+end
+end Dubon2026.SourceDickson

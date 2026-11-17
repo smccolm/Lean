@@ -1,0 +1,106 @@
+{
+  "recordedUTC": "2026-11-17T10:56:34.092045+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceResidualFiniteAmbient",
+    "SourceResidualFiniteDescent",
+    "SourceResidualFiniteBounds",
+    "SourceResidualFiniteLinearAlternatives",
+    "SourceGammaOneFiniteProjectiveLinearResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteAmbient.lean",
+      "sha256": "ED78529C08D3EF7FEFBA2FDC2644B2A1467FBEDC6F516214D63C2B73A438F990",
+      "oleanSha256": "2D0FFCF3F65C0EC7CDC79B7D70F02F237EC1598A82950CD5CCA419D0C8EFFFE8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteAmbient-2321.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteAmbient-2321.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteDescent.lean",
+      "sha256": "B8A3BB9D5C9E6169B30B6EDCADA60C6A362D5D9A65F23FB9E45CC0EBDD8FCE8F",
+      "oleanSha256": "1972CE23B5EA157EF968EDF76C5A0956D2BB9F9A97193F087F33107F25C4E45E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteDescent-2321.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteDescent-2321.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteBounds.lean",
+      "sha256": "48B7F6CFEE99E1C1F911DB5F27C40C1102A50ABE8E35C54A52F32F35345AC980",
+      "oleanSha256": "160CB8944F90258D49709A7D8A02FFA3AA534CF3D9BE033959EE5D6525CD8AF3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteBounds-2321.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteBounds-2321.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteLinearAlternatives.lean",
+      "sha256": "AE63DA0B255AA7E91EF64B09DDECE4D0D569D484AA41F8D018B9718CB25A2859",
+      "oleanSha256": "6BA233920F88AB63633DBF946BD9BD5150DDA77A3D25EDB2D05C2F5CB034FF0C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteLinearAlternatives-2321.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceResidualFiniteLinearAlternatives-2321.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteProjectiveLinearResidual.lean",
+      "sha256": "36225DBB59960A08E522E43E9FC67680B7CBAA91C4806EDC1CC0407A7D3A4745",
+      "oleanSha256": "1F61CA610A1CE0B60B954E582F3E3FBC04DBAB97D8897FCE0B51371D75D701A7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteProjectiveLinearResidual-2321.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteProjectiveLinearResidual-2321.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.exists_finite_intermediateField_containing",
+    "Dubon2026.SourceDickson.exists_residual_finite_matrix_ambient",
+    "Dubon2026.SourceDickson.exists_matrix_over_intermediateField",
+    "Dubon2026.SourceDickson.exists_residual_finite_descent",
+    "Dubon2026.SourceDickson.scalar_factor_descends",
+    "Dubon2026.SourceDickson.subgroup_map_conjugate",
+    "Dubon2026.SourceDickson.linear_subfield_bounds_descend",
+    "Dubon2026.SourceDickson.HasFiniteLinearSubfieldBounds",
+    "Dubon2026.SourceDickson.finite_linear_subfield_bounds_of_bounds",
+    "Dubon2026.SourceDickson.residual_small_image_or_finite_linear_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.exists_finite_intermediateField_containing",
+    "Dubon2026.SourceDickson.exists_residual_finite_matrix_ambient",
+    "Dubon2026.SourceDickson.exists_matrix_over_intermediateField",
+    "Dubon2026.SourceDickson.exists_residual_finite_descent",
+    "Dubon2026.SourceDickson.scalar_factor_descends",
+    "Dubon2026.SourceDickson.subgroup_map_conjugate",
+    "Dubon2026.SourceDickson.linear_subfield_bounds_descend",
+    "Dubon2026.SourceDickson.finite_linear_subfield_bounds_of_bounds",
+    "Dubon2026.SourceDickson.residual_small_image_or_finite_linear_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.HasFiniteLinearSubfieldBounds"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteAudit1.log",
+  "logSha256": "CB1980B31358610DF64F750796FD3670A245EA8E678AF6E2420847B8B070A777",
+  "auditSha256": "64D069E0F1DAC6115FAC735B91826AE419F139C208A8F31AB0DE5D8688042E65",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDeclarations2321.log",
+  "ownershipSha256": "00022211363E470173D0D863EDFA06959D682D16DC53A7C00282D100047ADAE3",
+  "exhaustiveTheorems": 19,
+  "exhaustiveOtherDeclarations": 6,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 45,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDependencyAudit1.log",
+  "dependencyAuditSha256": "D3AE7EB19C7CBFD4F2DBCBCEE318B96C1FD288E5187FBA52DED07F1C20719C78",
+  "dependencyAuditSourceSha256": "F724E6A8CB8AF633086405EF35E9A980D1AE9D76D3018A14E3032355ADE04B04",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-projective-finite-normalized-1-reuse-review-2324.json",
+  "reuseReviewSha256": "017BCA24C7A5552AD14AE0BF13529CF88894C8B3E24AD1174447E07E6E05209A",
+  "dependency": "DUB-17 source Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy -> residual large image. Reuse the complete pinned Dickson classification, extract its intermediate matrix equalities, and reuse native perfect SL2 to lift PSL2/PGL2 alternatives to literal linear subfield bounds. Six small-image alternatives, arithmetic coefficient-field comparison, local regularity and the final automorphy/continuation gates remain open. The finite coefficient-image comparison now places both embeddings and the conjugating matrix in one finite intermediate field and descends both linear bounds. Arithmetic small-image exclusion and the connection to the required original local deformation conditions remain open.",
+  "boundary": "Scratch PASS; production promotion, ownership/type/value comparison and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "qualifiedNameProbe": {
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonQualifiedNames2322.log",
+    "sha256": "E9DCB4AE518B395DD41C35A1427BD716914A309BD5B0D7AF06C9A53829015335"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

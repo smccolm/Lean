@@ -1,0 +1,109 @@
+{
+  "recordedUTC": "2026-11-17T12:33:55.763900+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceFiniteSubfieldIrreducible",
+    "SourceSubfieldSymmetricAbsolute",
+    "SourceFiniteLinearSymmetric",
+    "SourceGammaOneAbsoluteSymmetricResidual",
+    "SourceSubfieldKernelIrreducible",
+    "SourceFiniteLinearKernelSymmetric",
+    "SourceGammaOneCyclotomicSymmetricResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSubfieldIrreducible.lean",
+      "sha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82",
+      "oleanSha256": "0BF9C5E4301F3A8F8F17D176F35A022D3B62E450E25A9B96C744FA88351D7F28",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSubfieldIrreducible.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSubfieldIrreducible.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldSymmetricAbsolute.lean",
+      "sha256": "B99A555F84A74802B472DD05D20762569D57BBB8C161BD17F656C970C3E6EFF3",
+      "oleanSha256": "90D84AEEE6C76880514DABFDCDE02FAF79C16A8B721AC1A009C241C5471BAA39",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldSymmetricAbsolute.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldSymmetricAbsolute.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearSymmetric.lean",
+      "sha256": "E54F12A3081F52544DE9D508ED151EC6A7AEF45776129771B67EC763F7989915",
+      "oleanSha256": "ED8F8DE31CDF3592C1AF39BD334C8BB1774FAB31EE420D22B6B0AE3DC7F886F8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearSymmetric.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearSymmetric.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteSymmetricResidual.lean",
+      "sha256": "7D4C31A1B4A390AD85F3186872CC4E09C241615D29176DE5DEB5F689EAA1C920",
+      "oleanSha256": "6D405B0B399DA895C2E63A47F9E247EAF1F59984931E015C040034998916A702",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteSymmetricResidual.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteSymmetricResidual.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldKernelIrreducible.lean",
+      "sha256": "66E5E3F9C5DB9600217BB4B55E214E7B5FD9F4FAF12AD327DD409D4AB6B12477",
+      "oleanSha256": "43E4470545D9397D2F4D89788AEB4849D35E789BDA97BE37D6C962A3428BC9E0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldKernelIrreducible.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldKernelIrreducible.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearKernelSymmetric.lean",
+      "sha256": "F2DF770FE1766BD0B4D36665DA85C061CD4F14CA316E7F898FC338C2101BB3C0",
+      "oleanSha256": "A5F35716C82A2250BC36064853F9E31B3C0EEB7D13594622F6E84D3821EEC8CE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearKernelSymmetric.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearKernelSymmetric.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicSymmetricResidual.lean",
+      "sha256": "8A75D0E6E4CA16145E79AB758A466C77355C8879B1E1592A3429C5D18BE601FE",
+      "oleanSha256": "28A6AB491679BF903CC87481D03B49D0DBFFA7E9901E4D86D237975EA7F4E920",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicSymmetricResidual.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicSymmetricResidual.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image",
+    "Dubon2026.finiteSubfield_symmetric_absoluteIrreducible",
+    "Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual",
+    "Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible",
+    "Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image",
+    "Dubon2026.finiteSubfield_symmetric_absoluteIrreducible",
+    "Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual",
+    "Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible",
+    "Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual"
+  ],
+  "constructionRegistrations": [],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicSymmetricAudit1.log",
+  "logSha256": "6AE9AD957819C3B2073301E4B424526C17F031BA7FD9B4D383D9F0937A7D9AC3",
+  "auditSha256": "DAFD9D8DBB6DF692E6997A9A03D2A7C7B14500114BD14A9698DF9AEEEBD9165D",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicSymmetricDeclarations2339.log",
+  "ownershipSha256": "9E478DE978CF5510CAD82A5D03E9E83AC423AECC0AA04E041AB7864C3E936AB9",
+  "exhaustiveTheorems": 29,
+  "exhaustiveOtherDeclarations": 10,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 55,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicSymmetricDependencyAudit1.log",
+  "dependencyAuditSha256": "90BAFA31DEDF51C950DD237824AA80909ADCD91DE5214880DFA210AF61413C3F",
+  "dependencyAuditSourceSha256": "A2675BD5B76DE4C74CD3E0F2BBED1EBD9964E1947F7249AA01B989A8963760F1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\subfield-symmetric-reuse-review-2344.json",
+  "reuseReviewSha256": "8608BE3D1ACFEE2D0034271C0D4A2BA479F686090018A58403463A21B01D1A74",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> absolute symmetric irreducibility on cyclotomic kernels. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

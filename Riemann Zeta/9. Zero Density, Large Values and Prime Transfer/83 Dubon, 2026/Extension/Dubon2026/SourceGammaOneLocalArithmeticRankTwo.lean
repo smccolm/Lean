@@ -1,0 +1,94 @@
+import Dubon2026.SourceGammaOneLocalRankTwo
+import Dubon2026.SourceGammaOneLocalTraceArithmetic
+import Dubon2026.SourceAbsoluteArithmeticFactor
+import Dubon2026.SourceOriginalTraceMatrixKernel
+
+/-! DUB-17/18 -> original all-weight association -> actual arithmetic rank-two matrices.
+The original finite arithmetic actions force complete trace translation
+invariance on the actual restriction kernel. The existing matrix constructor
+retains this kernel, and native compact quotient factorization constructs
+the continuous arithmetic representation with original Fourier Frobenius
+values and actual complex oddness. No stable lattice is needed for descent. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+
+/-- The original form constructs its continuous arithmetic representation
+in every genuine local coefficient field of residue characteristic above three.
+Its original norm Frobenius traces, weight determinants and complex oddness
+are retained through literal absolute restriction. -/
+theorem exists_gammaOne_original_local_arithmetic_rankTwo
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [UniformSpace E]
+    [IsUniformAddGroup E] [IsNonarchimedeanLocalField E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E) :
+    ∃ η : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →ₜ*
+      Matrix.GeneralLinearGroup (Fin 2) E,
+      (∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+        ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+          (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+          (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+            (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+          Matrix.trace (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+              (embeddedNormalGaloisRestriction e φ))).val =
+            τ (sourcePrimitiveFieldCoefficient f q) ∧
+          (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+              (embeddedNormalGaloisRestriction e φ))).val.det = (q : E) ^ Int.toNat (k - 1)) ∧
+      (∀ e : Qbar →ₐ[ℚ] ℂ,
+        (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+          (sourceAbsoluteComplexConjugation e))).val.det = -1 ∧
+        Matrix.trace (η (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+          (sourceAbsoluteComplexConjugation e))).val = 0) := by
+  obtain ⟨t, D, ht, hD, hOne, hCyc, hProd, hFrob⟩ :=
+    exists_gammaOne_original_local_trace Q p f hk hlarge τ
+  let ti : (Qbar ≃ₐ[ℚ] Qbar) → E := fun g => (t g : E)
+  let Di : (Qbar ≃ₐ[ℚ] Qbar) →* E :=
+    (ValuativeRel.valuation E).integer.subtype.toMonoidHom.comp D
+  have hti : Continuous ti := continuous_subtype_val.comp ht
+  have ho : ti 1 = 2 := congrArg (fun x : 𝒪[E] => (x : E)) hOne
+  have hc : ∀ g h, ti (g * h) = ti (h * g) :=
+    fun g h => congrArg (fun x : 𝒪[E] => (x : E)) (hCyc g h)
+  have hp : ∀ g h, ti g * ti h = ti (g * h) + ti (g * h⁻¹) * Di h :=
+    fun g h => congrArg (fun x : 𝒪[E] => (x : E)) (hProd g h)
+  have hodd (e : Qbar →ₐ[ℚ] ℂ) :
+      Di (sourceAbsoluteComplexConjugation e) = -1 ∧ ti (sourceAbsoluteComplexConjugation e) = 0 := by
+    have hod := originalPrimitiveLocalDeterminant_odd Q p f hk D hD
+      (fun q hq ha i φ hφ => (hFrob q hq ha i φ hφ).2) e
+    have hd : Di (sourceAbsoluteComplexConjugation e) = -1 :=
+      congrArg (fun x : 𝒪[E] => (x : E)) hod
+    exact ⟨hd, traceDeterminant_odd_involution_zero ti Di ho hp
+      (sourceAbsoluteComplexConjugation e) (sourceAbsoluteComplexConjugation_sq e) hd⟩
+  let ec : Qbar →ₐ[ℚ] ℂ := IsAlgClosed.lift
+  obtain ⟨ρ, hρ, hmatrix, hkernel⟩ := exists_continuous_matrix_of_original_trace_kernel ti Di hti ho hp
+    (sourceAbsoluteComplexConjugation ec) (sourceAbsoluteComplexConjugation_sq ec)
+    (hodd ec).2 (exists_spanning_algebra_of_trace_determinant ti Di ho hc hp)
+  let χ : Gal(Qbar/ℚ) →ₜ* Matrix.GeneralLinearGroup (Fin 2) E := ⟨ρ, hρ⟩
+  have hkχ : ∀ g, sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) g = 1 → χ g = 1 := by
+    intro g hg
+    apply hkernel
+    intro σ
+    exact congrArg (fun x : 𝒪[E] => (x : E))
+      (originalPrimitiveLocalTrace_arithmetic_kernel_translate Q p f hk hlarge τ t ht hCyc
+        (fun r hr ha i φ hφ => (hFrob r hr ha i φ hφ).1) g hg σ)
+  obtain ⟨η, hη, _⟩ := sourceAbsoluteArithmeticRestriction_unique_factor
+    ((Q * p : ℕ) : 𝓞 ℚ) χ hkχ
+  refine ⟨η, ?_, ?_⟩
+  · intro q hq ha e φ hφ
+    rw [hη]
+    have hf := hFrob q hq ha e φ hφ
+    exact ⟨(hmatrix _).1.trans (congrArg (fun x : 𝒪[E] => (x : E)) hf.1),
+      (hmatrix _).2.trans (congrArg (fun x : 𝒪[E] => (x : E)) hf.2)⟩
+  · intro e
+    rw [hη]
+    exact ⟨(hmatrix _).2.trans (hodd e).1, (hmatrix _).1.trans (hodd e).2⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

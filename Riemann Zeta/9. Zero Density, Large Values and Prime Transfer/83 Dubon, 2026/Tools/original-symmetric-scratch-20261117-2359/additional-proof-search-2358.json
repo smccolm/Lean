@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-11-17T12:22:09.255926+00:00",
+  "queries": [
+    "Lean formalization Fontaine Laffaille Galois representation GitHub",
+    "Lean symmetric power automorphy Sato Tate formalization GitHub 2026",
+    "Lean modular forms residual large image Ribet theorem formalization GitHub"
+  ],
+  "inspectionBoundary": "Primary project README and funding-summary inspection only. These three resources were not downloaded as proof dependencies, built, transitively audited or pinned for import. No endpoint is credited from this follow-up.",
+  "findings": [
+    {
+      "url": "https://github.com/SuvirRathore/lambda_adic_slice/blob/main/README.md",
+      "observed": "The README describes a statement-level compatible-system and companion formalization. It explicitly identifies the companion endpoint as admitted.",
+      "decision": "Cannot discharge an acceptance obligation. No code imported."
+    },
+    {
+      "url": "https://github.com/dozenalist/ModularFormsMod",
+      "observed": "The README describes coefficient subrings and reductions, level-one modular-form bases and partition congruences.",
+      "decision": "The inspected README does not supply the required all-weight residual local-condition, large-image or higher automorphy endpoint. Existing native coefficient-reduction proofs already cover the immediate project need; no duplicate port."
+    },
+    {
+      "url": "https://anr.fr/Project-ANR-25-CE40-7639",
+      "observed": "The official FALSE project summary lists arithmetic formalization objectives including modular Galois representations and p-adic Hodge foundations.",
+      "decision": "A project roadmap is not a verified theorem. No missing local-condition theorem is credited."
+    }
+  ],
+  "scopeUnchanged": true,
+  "globalAbsenceClaim": false
+}

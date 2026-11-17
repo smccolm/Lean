@@ -1,0 +1,315 @@
+{
+  "status": "Scratch PASS: actual original arithmetic twisted-cohomology detection on the joint residual/cyclotomic kernel in the large-image branch. No scalar or character witness or finite-image H1-vanishing certificate is supplied. Production promotion and assembled verification remain pending.",
+  "modules": 8,
+  "publicQueries": 11,
+  "exhaustiveTheorems": 35,
+  "otherDeclarations": 13,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 61,
+  "typeValueFingerprints": 48,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/projective-linear-finite-scratch-20261117-2325/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "files": [
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare.lean.txt",
+      "sha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare2372a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare2372a.lean.txt",
+      "sha256": "D482E8A89AF3848C8C2D8DFFB57C508326A2611008E21A24A345D58ED5722EAB"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare2372a.log",
+      "sha256": "D6CA5877E4404FB7317F7FECB48FE351E6615698BB4597CBDC07AC3EB6A0FE43"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare2372b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare2372b.lean.txt",
+      "sha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceArithmeticCyclotomicSquare2372b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearOriginalScalar.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearOriginalScalar.lean.txt",
+      "sha256": "2017957E5C2AB5674E9F94EDC7F9841B0767163F3CC4B798362B6B25759EB2AF"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearOriginalScalar.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearOriginalScalar2367a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearOriginalScalar2367a.lean.txt",
+      "sha256": "2017957E5C2AB5674E9F94EDC7F9841B0767163F3CC4B798362B6B25759EB2AF"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearOriginalScalar2367a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearTwistedKernel.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearTwistedKernel.lean.txt",
+      "sha256": "190D06C4420AE909E48A0586CE9308405D46D5E12BB1895B6A2FB6618F0FBD11"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearTwistedKernel.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearTwistedKernel2368a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearTwistedKernel2368a.lean.txt",
+      "sha256": "B58EEC214D886313D05CB452045D8CBE971344EF9F27480F331114A54D507B98"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceFiniteLinearTwistedKernel2368a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneArithmeticTwistedDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneArithmeticTwistedDetection.lean.txt",
+      "sha256": "F42BBDE3FE44E7274E459B94B2DA93523550BDA014990A9DFDEB8D1A0549561B"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneArithmeticTwistedDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneArithmeticTwistedDetection2374a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneArithmeticTwistedDetection2374a.lean.txt",
+      "sha256": "DCCC98E98215E88A461A8F92CC12E2DEA5118DC5DBE29AA70F6C6D133D16E1F6"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneArithmeticTwistedDetection2374a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection.lean.txt",
+      "sha256": "BEF050403F68319095E86E14F63A7E6CC3203728DA64F89F7D71F670D11F8299"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection2370a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection2370a.lean.txt",
+      "sha256": "FCE4D4C3FCD8EF2A37DB90F122915FC64A71EF916F862F6A300A8C712D843213"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection2370a.log",
+      "sha256": "D6D49FFA39D80D2966ACB28CD2D6D3CE2475D9F2B7B8A116E14CB3B3607B7085"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection2370b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection2370b.lean.txt",
+      "sha256": "8E48ECA1EB52BC25233CBCB8D5F008146A88B46D48ED40226733360574F030CA"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceGammaOneTwistedKernelDetection2370b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalArithmeticTwistedDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalArithmeticTwistedDetection.lean.txt",
+      "sha256": "3974E325BCCD8347744C5086C1C449B4BA459437A1C281AD786F2B2926165E43"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalArithmeticTwistedDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalArithmeticTwistedDetection2373a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalArithmeticTwistedDetection2373a.lean.txt",
+      "sha256": "2D42DCA6902EB9278D816F00A94E61F71E9E0DE030A8A57A0174740D9462398F"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalArithmeticTwistedDetection2373a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedDetectionProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedDetectionProperty.lean.txt",
+      "sha256": "D20EBDE0A64B7D6023598E2C2AC44D7CEBB31C85137BE8397B074EF140B5C9F4"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedDetectionProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedDetectionProperty2369a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedDetectionProperty2369a.lean.txt",
+      "sha256": "812BD010EDB8CB820519D5CB25422375CF515421A841670E35CA61B1D5D7C071"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedDetectionProperty2369a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelAudit1.lean.txt",
+      "sha256": "22B14395F8E75732989F069BE2811C261C4E311BD0F473B29FF61FA960B581C4"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelAudit1.log",
+      "sha256": "0B98112B594506481232CB291A1CCCADA581E06F3356A9E0EF94DA05F570DAA6"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelDeclarations2377.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelDeclarations2377.lean.txt",
+      "sha256": "C56569EBA64A9175EF8C246BFA7ECC818856CF9162D9C66D1A79E9664DDD96C4"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelDeclarations2377.log",
+      "sha256": "0FBAE190B14F47FC4E2F89F927FE4FEA6452D741F8996CE5528F43B56D9E06C1"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelDependencyAudit1.lean.txt",
+      "sha256": "027DD0B934B8367B5CCA08186EBA252B3A15EDE696F47B42CDC275AEF797FB8D"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelDependencyAudit1.log",
+      "sha256": "16C73CB7D9F8241404A2011FCC5A79C0243EEE05D083170677E9AD1CE554007D"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelProductionSemantic2379.lean.txt",
+      "sha256": "CC1D4FA6FB8E15A22E0501EC8B64B8BB8926778E6557AA79BD07F2980163BB91"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelScratchSemantic2379.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelScratchSemantic2379.lean.txt",
+      "sha256": "41133A5275804B2F3863F42F6C039996797611179E78BAD072F144B5CC674E27"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedKernelScratchSemantic2379.log",
+      "sha256": "2383138833BC2B7B2C7EEE1074399DC4FF462F62A98173D7AE28AEEE31826FAC"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedTopology.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedTopology.lean.txt",
+      "sha256": "D2249F10407DE39CCEEBA841A37A7CB68506C4F783E41F89D657BB6207FBBFFC"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedTopology.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedTopology2369b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedTopology2369b.lean.txt",
+      "sha256": "8E2386E14AE457226D3DFA436DA1B6F07C77AC5BD6C9E41BFC259C160EC052F5"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/SourceOriginalTwistedTopology2369b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/build_original_twisted_kernel_2377.ps1",
+      "sha256": "51B2839F8FC6A562C1C5752AF5A0345E36C786443950052D800A691285741A17"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/original-twisted-kernel-reuse-review-2378.json",
+      "sha256": "FA5985FD1B6DBD11C77342E74231A2AC609F775CE01E21E90D24885FD771AF6D"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/prepare_original_twisted_kernel_audits_2377.py",
+      "sha256": "2F3B8FD8F6D8285AD58EADEB09EC47240CA7EDCC4A90FA50C0EF355336E73AF2"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/record_original_twisted_kernel_scope_2378.py",
+      "sha256": "A352A08B2F37B840FBDB618DADF43F14DCEA87FFF5D2771F2C68C8847A2B63B8"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/source-original-twisted-kernel-1-scratch-receipt.json",
+      "sha256": "049DD5A064FC14DEFB68DA596CCF7F8A831FF30446A28C3A295843BF71EC41F0"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/source-original-twisted-kernel-audit-config-2377.json",
+      "sha256": "9C7F29E595EF3B131BF62BC84B0A4013E58001BF0188E888CBFF46CA9A4D6799"
+    },
+    {
+      "path": "Tools/original-twisted-kernel-scratch-20261117-2380/source-original-twisted-kernel-scratch-summary-2378.json",
+      "sha256": "24F343A30C0E08F38F90BD1F903B280D0F2D3D0F17D5BB7B97E1B7A5C17A745D"
+    }
+  ]
+}

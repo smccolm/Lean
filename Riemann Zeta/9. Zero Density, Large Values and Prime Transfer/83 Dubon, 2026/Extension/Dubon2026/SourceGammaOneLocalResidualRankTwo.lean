@@ -1,0 +1,89 @@
+import Dubon2026.SourceGammaOneLocalArithmeticRankTwo
+import Dubon2026.SourceCompactResidualRealization
+
+/-! DUB-17/18 -> original all-weight residual association -> actual arithmetic reduction.
+The original continuous arithmetic representation supplies its compact orbit
+lattice and actual integral/residue matrices through existing realization.
+Original Fourier and weight invariants survive the basis change and literal
+residue reduction; actual complex conjugation remains odd. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+
+private local instance {E : Type} [Field E] [ValuativeRel E] [UniformSpace E] : TopologicalSpace 𝓀[E] :=
+  inferInstanceAs (TopologicalSpace (𝒪[E] ⧸ IsLocalRing.maximalIdeal 𝒪[E]))
+
+/-- The original form supplies continuous integral and residual arithmetic
+matrices, exact reduced original Frobenius invariants, and actual oddness. -/
+theorem exists_gammaOne_original_local_residual_rankTwo
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [UniformSpace E]
+    [IsUniformAddGroup E] [IsNonarchimedeanLocalField E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E) :
+    ∃ (ρint : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+        Matrix.GeneralLinearGroup (Fin 2) 𝒪[E])
+      (ρres : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+        Matrix.GeneralLinearGroup (Fin 2) 𝓀[E]),
+      Continuous ρint ∧ Continuous ρres ∧
+      (∀ g i j, (ρres g).val i j = IsLocalRing.residue 𝒪[E] ((ρint g).val i j)) ∧
+      (∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+        ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+          (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+          (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+            (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+          let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+            (embeddedNormalGaloisRestriction e φ)
+          Matrix.trace (ρres g).val = IsLocalRing.residue 𝒪[E]
+            ⟨τ (sourcePrimitiveFieldCoefficient f q),
+              sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ ∧
+          (ρres g).val.det = (q : 𝓀[E]) ^ Int.toNat (k - 1)) ∧
+      ∀ e : Qbar →ₐ[ℚ] ℂ,
+        let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+          (sourceAbsoluteComplexConjugation e)
+        (ρres g).val.det = -1 ∧ Matrix.trace (ρres g).val = 0 := by
+  obtain ⟨ρ, hFrob, hodd⟩ := exists_gammaOne_original_local_arithmetic_rankTwo Q p f hk hlarge τ
+  obtain ⟨_, ρint, ρres, hi, hr, hred, _, hInv⟩ :=
+    compact_rankTwo_integral_residual_realization ρ.toMonoidHom ρ.continuous
+  have hmat (g) : (ρres g).val = (ρint g).val.map (IsLocalRing.residue 𝒪[E]) := by
+    ext i j
+    exact hred g i j
+  have hdetmap (g) : ((ρint g).val.map (IsLocalRing.residue 𝒪[E])).det =
+      IsLocalRing.residue 𝒪[E] ((ρint g).val.det) := by
+    simpa only [RingHom.mapMatrix_apply] using
+      (RingHom.map_det (IsLocalRing.residue 𝒪[E]) ((ρint g).val)).symm
+  refine ⟨ρint, ρres, hi, hr, hred, ?_, ?_⟩
+  · intro q hq ha e φ hφ
+    dsimp only
+    let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+      (embeddedNormalGaloisRestriction e φ)
+    have hf := hFrob q hq ha e φ hφ
+    have ht : Matrix.trace (ρint g).val =
+        (⟨τ (sourcePrimitiveFieldCoefficient f q),
+          sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ : 𝒪[E]) :=
+      Subtype.ext ((hInv g).1.trans hf.1)
+    have hd : (ρint g).val.det = (q : 𝒪[E]) ^ Int.toNat (k - 1) := by
+      apply Subtype.ext
+      exact (hInv g).2.trans hf.2
+    constructor
+    · rw [hmat, ← AddMonoidHom.map_trace, ht]
+    · rw [hmat, hdetmap, hd, map_pow, map_natCast]
+  · intro e
+    dsimp only
+    let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+      (sourceAbsoluteComplexConjugation e)
+    have hd : (ρint g).val.det = -1 := Subtype.ext ((hInv g).2.trans (hodd e).1)
+    have ht : Matrix.trace (ρint g).val = 0 := Subtype.ext ((hInv g).1.trans (hodd e).2)
+    constructor
+    · rw [hmat, hdetmap, hd, map_neg, map_one]
+    · rw [hmat, ← AddMonoidHom.map_trace, ht, map_zero]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

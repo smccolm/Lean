@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-17T12:47:33.197639+00:00",
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": [
+    "literal higher symmetric-power continuation",
+    "automorphy",
+    "original residual deformation cohomology",
+    "trace-zero adjoint H0 vanishing on the actual cyclotomic kernels"
+  ],
+  "reusedTheorem": "Dubon2026.matrixTraceZeroAdjointInvariants_eq_bot",
+  "reusedSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\TraceZeroAdjointInvariants.lean",
+  "reusedSourceSha256": "BE1D87FB9F7061119F0D548D7470B2FC46E725E76A7176C1EA4FF5502C098325",
+  "inputDischarged": "The original absolute irreducibility is constructed by the preceding original-form consumer. Nonzero original dimension follows from 2*n < p-1. No additional image-field equality or basis assumption is used.",
+  "shorterRoute": "Apply existing Schur descent; do not reprove endomorphism centralizers or adjoint invariant theory.",
+  "remaining": "The actual small-image alternative, original local conditions, automorphy and higher continuation remain open. The separate finite-image H1 vanishing problem has not been solved; native central-scalar kernel detection provides a shorter candidate route for the auxiliary-prime detection step specifically.",
+  "proofLimitsChanged": false,
+  "rootPinsChanged": false
+}

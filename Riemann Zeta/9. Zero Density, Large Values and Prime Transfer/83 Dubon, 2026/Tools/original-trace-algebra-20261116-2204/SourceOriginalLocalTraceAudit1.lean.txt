@@ -1,0 +1,58 @@
+import SourcePositiveAdicFamilyLift
+import SourcePositiveAdicReconstruction
+import SourceAdicFunctionContinuity
+import SourceCompatibleTraceLift
+import SourceGammaOneOriginalLocalTrace
+import SourceGammaOneConstructedLocalTrace
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.positiveAdicFamily_exists_unique_lift
+#print axioms Dubon2026.positiveAdicFamilyLift
+#print axioms Dubon2026.positiveAdicFamilyLift_mk
+#print axioms Dubon2026.positiveAdic_ext
+#print axioms Dubon2026.continuous_of_positive_adic_quotients
+#print axioms Dubon2026.exists_complete_trace_of_compatible_positive_quotients
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace
+
+private def runOriginalLocalTraceAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourcePositiveAdicFamilyLift, `SourcePositiveAdicReconstruction, `SourceAdicFunctionContinuity, `SourceCompatibleTraceLift, `SourceGammaOneOriginalLocalTrace, `SourceGammaOneConstructedLocalTrace]
+  let theorems : Array Name := #[`Dubon2026.positiveAdicFamily_exists_unique_lift, `Dubon2026.positiveAdicFamilyLift_mk, `Dubon2026.positiveAdic_ext, `Dubon2026.continuous_of_positive_adic_quotients, `Dubon2026.exists_complete_trace_of_compatible_positive_quotients, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace]
+  let constructions : Array Name := #[`Dubon2026.positiveAdicFamilyLift]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL LOCAL TRACE AUDIT PASS: {count} theorems including private/generated declarations. Original continuous characteristic-zero traces proved; rank-two realization and source gates remain OPEN."
+
+#eval runOriginalLocalTraceAudit
+
+#lint in SourcePositiveAdicFamilyLift
+#lint in SourcePositiveAdicReconstruction
+#lint in SourceAdicFunctionContinuity
+#lint in SourceCompatibleTraceLift
+#lint in SourceGammaOneOriginalLocalTrace
+#lint in SourceGammaOneConstructedLocalTrace

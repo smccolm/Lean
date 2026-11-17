@@ -1,0 +1,64 @@
+import Dubon2026.SourceGroupAlgebraTrace
+
+/-! DUB-17/18 -> original rank-two realization -> actual trace algebra.
+The required trilinear relation extends to the actual group algebra by
+native linear induction. It will force the Cayley-Hamilton relations in
+the trace radical quotient; no finite-dimensional realization is assumed. -/
+namespace Dubon2026
+noncomputable section
+variable {G R : Type*} [Group G] [CommRing R]
+
+private def traceDefect (t : G → R) (x y z : MonoidAlgebra R G) : R :=
+  sourceGroupTrace t (x * y * z) + sourceGroupTrace t (x * z * y) -
+    (sourceGroupTrace t x * sourceGroupTrace t (y * z) +
+     sourceGroupTrace t y * sourceGroupTrace t (x * z) +
+     sourceGroupTrace t z * sourceGroupTrace t (x * y) -
+     sourceGroupTrace t x * sourceGroupTrace t y * sourceGroupTrace t z)
+
+/-- The original determinant trace relation supplies the trilinear identity
+on every three elements of the genuine group algebra. -/
+theorem sourceGroupTrace_trilinear (t : G → R) (D : G →* R)
+    (hCyc : ∀ g h, t (g * h) = t (h * g))
+    (hProd : ∀ g h, t g * t h = t (g * h) + t (g * h⁻¹) * D h)
+    (x y z : MonoidAlgebra R G) :
+    sourceGroupTrace t (x * y * z) + sourceGroupTrace t (x * z * y) =
+      sourceGroupTrace t x * sourceGroupTrace t (y * z) +
+      sourceGroupTrace t y * sourceGroupTrace t (x * z) +
+      sourceGroupTrace t z * sourceGroupTrace t (x * y) -
+      sourceGroupTrace t x * sourceGroupTrace t y * sourceGroupTrace t z := by
+  suffices h : traceDefect t x y z = 0 from sub_eq_zero.mp h
+  induction x using MonoidAlgebra.induction_on generalizing y z with
+  | hM g =>
+    induction y using MonoidAlgebra.induction_on generalizing z with
+    | hM h =>
+      induction z using MonoidAlgebra.induction_on with
+      | hM i =>
+        simpa only [traceDefect, ← map_mul, sourceGroupTrace_of] using
+          sub_eq_zero.mpr (traceDeterminant_trilinear t D hCyc hProd g h i)
+      | hadd a b ha hb =>
+        simp only [traceDefect, mul_add, add_mul, map_add] at ha hb ⊢
+        linear_combination ha + hb
+      | hsmul r a ha =>
+        simp only [traceDefect, mul_smul_comm, smul_mul_assoc, map_smul, smul_eq_mul] at ha ⊢
+        linear_combination r * ha
+    | hadd a b ha hb =>
+      have ha' := ha z
+      have hb' := hb z
+      simp only [traceDefect, mul_add, add_mul, map_add] at ha' hb' ⊢
+      linear_combination ha' + hb'
+    | hsmul r a ha =>
+      have ha' := ha z
+      simp only [traceDefect, mul_smul_comm, smul_mul_assoc, map_smul, smul_eq_mul] at ha' ⊢
+      linear_combination r * ha'
+  | hadd a b ha hb =>
+    have ha' := ha y z
+    have hb' := hb y z
+    simp only [traceDefect, mul_add, add_mul, map_add] at ha' hb' ⊢
+    linear_combination ha' + hb'
+  | hsmul r a ha =>
+    have ha' := ha y z
+    simp only [traceDefect, smul_mul_assoc, map_smul, smul_eq_mul] at ha' ⊢
+    linear_combination r * ha'
+
+end
+end Dubon2026

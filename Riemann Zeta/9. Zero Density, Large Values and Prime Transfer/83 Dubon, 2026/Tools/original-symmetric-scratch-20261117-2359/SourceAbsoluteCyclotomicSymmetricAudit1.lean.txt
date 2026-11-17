@@ -1,0 +1,49 @@
+import SourceGammaOneAbsoluteCyclotomicResidual
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image
+#print axioms Dubon2026.finiteSubfield_symmetric_absoluteIrreducible
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual
+#print axioms Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_absolute_cyclotomic_irreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceFiniteSubfieldIrreducible, `SourceSubfieldSymmetricAbsolute, `SourceFiniteLinearSymmetric, `SourceGammaOneAbsoluteSymmetricResidual, `SourceSubfieldKernelIrreducible, `SourceFiniteLinearKernelSymmetric, `SourceGammaOneCyclotomicSymmetricResidual, `SourceFiniteLinearAbsoluteGalois, `SourceGammaOneAbsoluteCyclotomicResidual]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ABSOLUTE CYCLOTOMIC SYMMETRIC AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. The original-form consumer derives absolute symmetric-power irreducibility in the large-image branch over actual finite coefficient extensions and bases, including restriction to the original arithmetic and absolute Galois cyclotomic kernels. Arithmetic large-image exclusions remain OPEN."
+
+#eval audit
+
+#lint in SourceFiniteSubfieldIrreducible
+#lint in SourceSubfieldSymmetricAbsolute
+#lint in SourceFiniteLinearSymmetric
+#lint in SourceGammaOneAbsoluteSymmetricResidual
+#lint in SourceSubfieldKernelIrreducible
+#lint in SourceFiniteLinearKernelSymmetric
+#lint in SourceGammaOneCyclotomicSymmetricResidual
+#lint in SourceFiniteLinearAbsoluteGalois
+#lint in SourceGammaOneAbsoluteCyclotomicResidual

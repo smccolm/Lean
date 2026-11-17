@@ -1,0 +1,66 @@
+import Dubon2026.ArithmeticRegularCocycleFrobenius
+
+/-! DUB-17/18 -> original regular auxiliary primes. Assemble the existing
+finite-factor Chebotarev theorem from the precisely stated root-detection
+input. The actual symmetric-power consumer derives that input separately. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Root-fixing regular detection supplies actual good congruence primes,
+with the same finite factor and nonzero original local H1 restriction. -/
+theorem rationalArithmetic_regular_primes_of_root_detection
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p level : ℕ) [NeZero p]
+    (hpa : (p : 𝓞 ℚ) ∣ a)
+    {K ι : Type} [Field K] [TopologicalSpace K] [DiscreteTopology K]
+    [Fintype ι] [DecidableEq ι]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [Finite A] [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (ρ : rationalArithmeticGaloisGroup a →ₜ* Matrix.GeneralLinearGroup ι K)
+    (c : continuousRepresentationCocyclesOne A)
+    (hroot : let U := rationalUnramifiedExtension a
+      letI : Algebra ℚ U := U.algebra'
+      ∀ ζ : U, IsPrimitiveRoot ζ (p ^ (level + 1)) →
+        ∃ σ : Gal(U/ℚ), σ ζ = ζ ∧ (ρ σ).val.charpoly.Separable ∧
+          c.val σ ∉ LinearMap.range (A.ρ σ - 1)) :
+    let U := rationalUnramifiedExtension a
+    letI : Algebra ℚ U := U.algebra'
+    letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+    ∃ D : FiniteGaloisIntermediateField ℚ U,
+      ∃ ψ : Gal(D/ℚ) →* Matrix.GeneralLinearGroup ι K,
+        (∀ w : Gal(U/ℚ), ψ (AlgEquiv.restrictNormalHom D w) = ρ w) ∧
+        (letI : NumberField D := NumberField.of_module_finite ℚ D
+         ∀ S : Finset ℕ, ∃ q : ℕ, ∃ hq : q.Prime,
+           q ∉ S ∧ ¬ (q : 𝓞 ℚ) ∣ a ∧ q ≡ 1 [MOD p ^ level] ∧
+           Chebotarev.UnramifiedIn ℚ D (Ideal.span {(q : 𝓞 ℚ)}) ∧
+           (∃ γ : Gal(rationalPrimeLocalClosure q hq / rationalPrimeLocalField q hq),
+             Chebotarev.frobeniusClass ℚ D (Ideal.span {(q : 𝓞 ℚ)}) =
+               ConjClasses.mk (AlgEquiv.restrictNormalHom D
+                 (rationalPrimeArithmeticRestriction a q hq γ)) ∧
+             (ρ (rationalPrimeArithmeticRestriction a q hq γ)).val.charpoly.Separable) ∧
+           rationalArithmeticH1PrimeRestriction a A hA q hq (Submodule.Quotient.mk c) ≠ 0) := by
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+  have hprimes := rationalArithmetic_exists_regular_detecting_cocycle
+    a ha p (level + 1) hpa A hA ρ c
+  obtain ⟨ζ, hζ, D, ψ, hψ, hD⟩ := hprimes
+  obtain ⟨σ, hσζ, hs, hdetect⟩ := hroot ζ hζ
+  letI : Algebra ℚ D := D.algebra'
+  letI : NumberField D := NumberField.of_module_finite ℚ D
+  let ψres := (MonoidHom.fst (Matrix.GeneralLinearGroup ι K) (Equiv.Perm A)).comp ψ
+  have hψres : ∀ w : Gal(U/ℚ), ψres (AlgEquiv.restrictNormalHom D w) = ρ w := by
+    intro w
+    change (ψ (AlgEquiv.restrictNormalHom D w)).1 = ρ w
+    rw [hψ]
+    rfl
+  refine ⟨D, ψres, hψres, ?_⟩
+  intro S
+  obtain ⟨q, hq, hqS, hqa, hmod, hunr, hlocal, hne⟩ := hD σ hσζ hdetect hs S
+  exact ⟨q, hq, hqS, hqa, hmod.of_dvd (pow_dvd_pow p (Nat.le_succ level)),
+    hunr, hlocal, hne⟩
+
+end
+end Dubon2026

@@ -1,0 +1,108 @@
+{
+  "recordedUTC": "2026-11-17T06:05:10.367207+00:00",
+  "modules": [
+    "SourcePositiveAdicFamilyLift",
+    "SourcePositiveAdicReconstruction",
+    "SourceAdicFunctionContinuity",
+    "SourceCompatibleTraceLift",
+    "SourceGammaOneOriginalLocalTrace",
+    "SourceGammaOneConstructedLocalTrace"
+  ],
+  "queries": [
+    "Dubon2026.positiveAdicFamily_exists_unique_lift",
+    "Dubon2026.positiveAdicFamilyLift",
+    "Dubon2026.positiveAdicFamilyLift_mk",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.continuous_of_positive_adic_quotients",
+    "Dubon2026.exists_complete_trace_of_compatible_positive_quotients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace"
+  ],
+  "theorems": [
+    "Dubon2026.positiveAdicFamily_exists_unique_lift",
+    "Dubon2026.positiveAdicFamilyLift_mk",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.continuous_of_positive_adic_quotients",
+    "Dubon2026.exists_complete_trace_of_compatible_positive_quotients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace"
+  ],
+  "constructions": [
+    "Dubon2026.positiveAdicFamilyLift"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace"
+  ],
+  "proofEdges": [
+    "Dubon2026.positiveAdicFamily_exists_unique_lift",
+    "Dubon2026.positiveAdicFamilyLift_mk",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.continuous_of_positive_adic_quotients",
+    "Dubon2026.exists_complete_trace_of_compatible_positive_quotients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_compatible_original_adic_trace",
+    "Dubon2026.compactSeparatedLocalRing_isAdic",
+    "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+    "Dubon2026.sourceRationalPrimeExtensionResidue_charP",
+    "AdicCompletion.mk_ofAlgEquiv_symm",
+    "IsHausdorff.StrictMono.funext'",
+    "IsAdic.hasBasis_nhds"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.positiveAdicFamilyLift"
+  ],
+  "files": [
+    {
+      "version": "SourcePositiveAdicFamilyLift2167b",
+      "module": "SourcePositiveAdicFamilyLift",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift.lean",
+      "sourceSha256": "57401596BBE940867CA221A4DB172ADE4F66446EAEB59EB071DADA76C31C8EBD",
+      "canonicalSha256": "57401596BBE940867CA221A4DB172ADE4F66446EAEB59EB071DADA76C31C8EBD",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourcePositiveAdicReconstruction2168a",
+      "module": "SourcePositiveAdicReconstruction",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction.lean",
+      "sourceSha256": "1AFA9C17C82821C88082601BC01C03B25D1ADBB1447B2B2D7818CAC7B125F301",
+      "canonicalSha256": "0497FC85F18315FD42DF40062CCCBE602E23BFB0D2DE8F7F8A2A0A9B2F5819B2",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceAdicFunctionContinuity2170b",
+      "module": "SourceAdicFunctionContinuity",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity.lean",
+      "sourceSha256": "2404AF3F0C345281D86DF47C25E0F510DD8C3A6195C10D186F2F1D89D62061BC",
+      "canonicalSha256": "A1E483200F868BD7539BD3042F8AE1EDD54EA94E3A01B04B783D09AE84FE0CCA",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceCompatibleTraceLift2171a",
+      "module": "SourceCompatibleTraceLift",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift.lean",
+      "sourceSha256": "E3BA086C9D7B7A7937E230AE803778BDE2F03D837E51AD1098D5C7CDCEDF80B6",
+      "canonicalSha256": "5B5010DD142E5BB7FA183F53AE68949FCD6A11181186B95335A682F12840E275",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneOriginalLocalTrace2172a",
+      "module": "SourceGammaOneOriginalLocalTrace",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace.lean",
+      "sourceSha256": "40947D3D5014E97A221A980A7A18B0035C3A2C975097F24D19BA6D7F11A94E74",
+      "canonicalSha256": "7FEFDBD746D5EBD4DFE1DFE090995B9C331A7EC3BFC8EBDCA5D19B03C191AE05",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneConstructedLocalTrace2173b",
+      "module": "SourceGammaOneConstructedLocalTrace",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace.lean",
+      "sourceSha256": "1F0C85EE0E7E0E3FA282A333A50B844230300BAE72D19F7DE5CE52A48E920C1B",
+      "canonicalSha256": "2CEAC5429797846795255C426B2F56CCB8EB908A3E76B720B555BDF6CF3D5730",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "routeAssessment": "original-local-trace-route-2175.json",
+  "productionMutation": false,
+  "scope": "Original continuous characteristic-zero traces in the constructed local coefficient field with exact Fourier and determinant norm-Frobenius values. Rank-two realization, exceptional primes and full source gates remain OPEN."
+}

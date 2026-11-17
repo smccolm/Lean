@@ -1,0 +1,408 @@
+{
+  "recordedUTC": "2026-11-17T08:53:40.562977+00:00",
+  "repository": "ImperialCollegeLondon/FLT",
+  "commit": "478c1013cd29c27d72f57aa8b691fa46083664b3",
+  "sourceOfCommit": "Official generated documentation source link; not a claim about current remote HEAD.",
+  "entry": "FLT.KnownIn1980s.PGL2.Proofs",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/LICENSE",
+      "bytes": 11357,
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/lean-toolchain",
+      "bytes": 28,
+      "sha256": "929CD8BF7EC963BD49699B4E61239AA2648351DAD60B0F74EEE672956C743C52"
+    },
+    {
+      "path": "lakefile.toml",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/lakefile.toml",
+      "bytes": 1057,
+      "sha256": "C78647569D6A357F5BC1871853A34166EC056059BE95BF020C553CFB6979B01F"
+    },
+    {
+      "path": "lake-manifest.json",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/lake-manifest.json",
+      "bytes": 3471,
+      "sha256": "9FE1C9897B635C763277B11F12353312CC48C8E16F79D4F61AA7B495F5718CBB"
+    },
+    {
+      "path": "FLT/KnownIn1980s/PGL2/Proofs.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/KnownIn1980s/PGL2/Proofs.lean",
+      "bytes": 2105,
+      "sha256": "FE3A4B2CE852430FE3DEF4F2C66B842D2E7CA88E9EC87EE022028E53B90DFAEA",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": []
+    },
+    {
+      "path": "FLT/KnownIn1980s/PGL2/Defs.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/KnownIn1980s/PGL2/Defs.lean",
+      "bytes": 2563,
+      "sha256": "4E6BD70D29BA63E0301B9D7B3746CEDC45503205430ABF7C0F3B0EE13C7046D0",
+      "prohibitedSyntax": [
+        "sorry"
+      ],
+      "limitOrLinterOptions": []
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean",
+      "bytes": 3701,
+      "sha256": "11E67A442C865C6AC9532EED1B1596BB2E427EDF21B24F207B93E4E000477D95",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean",
+      "bytes": 80076,
+      "sha256": "93B0F3FED1E1BC9F5AED82D497DB8A007F2A634FE4ECF233B5A1BE44DAC798A2",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false",
+        "\nset_option backward.isDefEq.respectTransparency.types false in",
+        "\nset_option backward.isDefEq.respectTransparency.types false in",
+        "\nset_option backward.isDefEq.respectTransparency.types false in"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean",
+      "bytes": 38552,
+      "sha256": "6305ACAEAA3301D7DB1F3726A16E0D18331476DDD77685851594D9C7CFD753DF",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean",
+      "bytes": 68794,
+      "sha256": "C7F76C4164B9949C26FE6D2433553BE2F78AE55731B206B8A4A711F0DACC80B3",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/NatClassEquation.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/NatClassEquation.lean",
+      "bytes": 11726,
+      "sha256": "A140D63FADA25036DEE138931CD4FE3DB5868127B5333B608C24C606DE6EF825",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean",
+      "bytes": 87957,
+      "sha256": "A06724E1AA67372327C8C543D2FAC0FD24231FF7562A363C4A9649431CE4267A",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false",
+        "\nset_option backward.isDefEq.respectTransparency.types false in"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean",
+      "bytes": 35022,
+      "sha256": "50181DD66A4C8E8536218FA7F407B595B2BCD8F883E9AE2555889E9D742C6B0E",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false",
+        "\n\nset_option backward.isDefEq.respectTransparency.types false in"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean",
+      "bytes": 27392,
+      "sha256": "E14AAA400419A24AB89581DFFDDDDECBC773B8B8C1E1F2461E13329742BE4EA4",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/PartitionProof.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PartitionProof.lean",
+      "bytes": 36277,
+      "sha256": "31AA93CC8E106C83E009A5D8246B26E14BAF86D5F680E5047615D00C2BE87831",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean",
+      "bytes": 100176,
+      "sha256": "DA2684A7676B3210EE377ABA81DF1707F260A871AD202D768E015FDF08A11F84",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/PartitionHelpers.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PartitionHelpers.lean",
+      "bytes": 38738,
+      "sha256": "A472078A35D8AF86B696434D03F51AC17B4DDBA11B39FF05EF5291C5C9C3323B",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    },
+    {
+      "path": "FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean",
+      "bytes": 56939,
+      "sha256": "9DDA4439D81544225788BA83C318900F478F525BEB94C457EED51C4065242879",
+      "prohibitedSyntax": [],
+      "limitOrLinterOptions": [
+        "\n\n\n\nset_option linter.style.longLine false",
+        "set_option linter.style.emptyLine false",
+        "set_option linter.style.whitespace false",
+        "set_option linter.style.show false",
+        "set_option linter.style.openClassical false",
+        "set_option linter.style.cdot false",
+        "set_option linter.style.multiGoal false",
+        "set_option linter.style.refine false",
+        "set_option linter.style.induction false",
+        "set_option linter.unusedFintypeInType false"
+      ]
+    }
+  ],
+  "errors": [],
+  "imports": {
+    "FLT.KnownIn1980s.PGL2.Proofs": [
+      "FLT.KnownIn1980s.PGL2.Defs",
+      "FLT.Slop.PGL2.FiniteSubgroups.DicksonClassification"
+    ],
+    "FLT.KnownIn1980s.PGL2.Defs": [
+      "Mathlib.FieldTheory.Finite.GaloisField",
+      "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+      "Mathlib.GroupTheory.SemidirectProduct",
+      "Mathlib.GroupTheory.SpecificGroups.Alternating",
+      "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+      "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+      "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Projective",
+      "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.DicksonClassification": [
+      "FLT.Slop.PGL2.FiniteSubgroups.TameClassification",
+      "FLT.Slop.PGL2.FiniteSubgroups.WildClassification"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.TameClassification": [
+      "Mathlib.Algebra.BigOperators.Field",
+      "Mathlib.Algebra.Module.ZMod",
+      "FLT.Slop.PGL2.FiniteSubgroups.CyclicPartition",
+      "FLT.Slop.PGL2.FiniteSubgroups.NatClassEquation",
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.WildClassification": [
+      "Mathlib.Algebra.Module.ZMod",
+      "Mathlib.GroupTheory.SchurZassenhaus",
+      "Mathlib.GroupTheory.SemidirectProduct",
+      "Mathlib.Tactic.NormNum.Prime",
+      "FLT.Slop.PGL2.FiniteSubgroups.PSLBasic",
+      "FLT.Slop.PGL2.FiniteSubgroups.PSLRecognition",
+      "FLT.Slop.PGL2.FiniteSubgroups.PartitionProof"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.CyclicPartition": [
+      "Mathlib.Analysis.Normed.Ring.Lemmas",
+      "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+      "Mathlib.GroupTheory.Transfer",
+      "Mathlib.Tactic.Cases",
+      "Mathlib.Tactic.NormNum.NatFactorial",
+      "Mathlib.Tactic.NormNum.Prime",
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.NatClassEquation": [
+      "Mathlib.Analysis.Normed.Ring.Lemmas",
+      "Mathlib.Data.SetLike.Fintype",
+      "Mathlib.GroupTheory.Index"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic": [
+      "FLT.KnownIn1980s.PGL2.Defs",
+      "Mathlib.LinearAlgebra.Matrix.Action",
+      "Mathlib.FieldTheory.Finite.GaloisField",
+      "Mathlib.GroupTheory.SpecificGroups.Alternating",
+      "Mathlib.GroupTheory.Sylow",
+      "Mathlib.LinearAlgebra.Matrix.CharP",
+      "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+      "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card",
+      "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup",
+      "Mathlib.LinearAlgebra.Projectivization.Action"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.PSLBasic": [
+      "Mathlib.Data.Fintype.Parity",
+      "Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup",
+      "Mathlib.LinearAlgebra.SpecialLinearGroup",
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.PSLRecognition": [
+      "FLT.Slop.PGL2.FiniteSubgroups.FieldReconstruction"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.PartitionProof": [
+      "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic",
+      "FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers",
+      "FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.FieldReconstruction": [
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic",
+      "FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers": [
+      "Mathlib.Tactic.Cases",
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+    ],
+    "FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5": [
+      "Mathlib.GroupTheory.Transfer",
+      "Mathlib.Tactic.NormNum.NatFactorial",
+      "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+    ]
+  },
+  "mathlibImports": [
+    "Mathlib.Algebra.BigOperators.Field",
+    "Mathlib.Algebra.Module.ZMod",
+    "Mathlib.Analysis.Normed.Ring.Lemmas",
+    "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+    "Mathlib.Data.Fintype.Parity",
+    "Mathlib.Data.SetLike.Fintype",
+    "Mathlib.FieldTheory.Finite.GaloisField",
+    "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+    "Mathlib.GroupTheory.Index",
+    "Mathlib.GroupTheory.SchurZassenhaus",
+    "Mathlib.GroupTheory.SemidirectProduct",
+    "Mathlib.GroupTheory.SpecificGroups.Alternating",
+    "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+    "Mathlib.GroupTheory.Sylow",
+    "Mathlib.GroupTheory.Transfer",
+    "Mathlib.LinearAlgebra.Matrix.Action",
+    "Mathlib.LinearAlgebra.Matrix.CharP",
+    "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+    "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card",
+    "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Projective",
+    "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup",
+    "Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup",
+    "Mathlib.LinearAlgebra.Projectivization.Action",
+    "Mathlib.LinearAlgebra.SpecialLinearGroup",
+    "Mathlib.Tactic.Cases",
+    "Mathlib.Tactic.NormNum.NatFactorial",
+    "Mathlib.Tactic.NormNum.Prime"
+  ],
+  "fetchedModuleCount": 14,
+  "unbuilt": true,
+  "productionMutation": false,
+  "limits": "No external proof build or axiom audit is claimed. Import closure syntax review is research evidence only; production acceptance requires source-object bridges and the pinned local kernel audit."
+}

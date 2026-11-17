@@ -1,0 +1,46 @@
+import Dubon2026.SourceAbsoluteNormFrobeniusConjugate
+import Dubon2026.SourceGammaOnePrimitiveUnitDiamond
+import Dubon2026.SourceGammaOnePrimitiveJointUnitDiamond
+import Dubon2026.SourceGammaOnePrimitiveJointDeterminant
+import Dubon2026.SourceGammaOnePrimitiveJointTrace
+import Dubon2026.SourceGammaOnePrimitiveJointTraceFrobenius
+import Dubon2026.SourceUnitTraceConjugation
+import Dubon2026.SourceGammaOnePrimitiveJointTraceConjugation
+import Dubon2026.SourceGammaOnePrimitiveJointTraceRange
+import Dubon2026.SourceUnitTraceProduct
+import Dubon2026.SourceGammaOnePrimitiveJointTraceIdentities
+import Dubon2026.SourceGammaOnePrimitiveJointHeckeTrace
+import Dubon2026.SourceGammaOnePrimitiveJointTraceSpecialization
+import Dubon2026.SourceGammaOnePrimitiveJointTraceSpecializedFrobenius
+import Dubon2026.SourceGammaOneOriginalAdicTrace
+import Dubon2026.SourceAbsoluteContinuousLocalFactor
+import Dubon2026.SourceAbsoluteCyclicFrobeniusEquality
+import Dubon2026.SourceAbsoluteTracePairComparison
+import Dubon2026.SourceGammaOneCompatibleAdicTrace
+import Mathlib.Tactic
+
+open Lean
+
+private def runGammaOnePrimitiveTraceDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_compatible_original_adic_trace]
+  let localModules : Array Name := #[`Dubon2026.SourceAbsoluteNormFrobeniusConjugate, `Dubon2026.SourceGammaOnePrimitiveUnitDiamond, `Dubon2026.SourceGammaOnePrimitiveJointUnitDiamond, `Dubon2026.SourceGammaOnePrimitiveJointDeterminant, `Dubon2026.SourceGammaOnePrimitiveJointTrace, `Dubon2026.SourceGammaOnePrimitiveJointTraceFrobenius, `Dubon2026.SourceUnitTraceConjugation, `Dubon2026.SourceGammaOnePrimitiveJointTraceConjugation, `Dubon2026.SourceGammaOnePrimitiveJointTraceRange, `Dubon2026.SourceUnitTraceProduct, `Dubon2026.SourceGammaOnePrimitiveJointTraceIdentities, `Dubon2026.SourceGammaOnePrimitiveJointHeckeTrace, `Dubon2026.SourceGammaOnePrimitiveJointTraceSpecialization, `Dubon2026.SourceGammaOnePrimitiveJointTraceSpecializedFrobenius, `Dubon2026.SourceGammaOneOriginalAdicTrace, `Dubon2026.SourceAbsoluteContinuousLocalFactor, `Dubon2026.SourceAbsoluteCyclicFrobeniusEquality, `Dubon2026.SourceAbsoluteTracePairComparison, `Dubon2026.SourceGammaOneCompatibleAdicTrace]
+  let required : Array Name := #[`Dubon2026.absolute_continuous_exists_norm_frobenius_conjugate, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveDiamondCoefficientUnits_eq, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnUnitDiamond_gamma0, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointUnitDiamond_gamma0, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointUnitDiamond_mem_range, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_mem_range, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointWeightedDiamond_prime, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_frobenius, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_local_frobenius, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_norm_frobenius, `Dubon2026.sourceUnitTrace_conjugate_eq, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_conjugate, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_conjugate_eq_word, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_eq_prime, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_mem_range, `Dubon2026.sourceUnitTrace_product, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_trace_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_one, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_conjugate, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_mul_comm, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointTrace_product, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeTrace_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDeterminant_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeTrace_product, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedDeterminant_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_one, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_product, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_mul_comm, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_norm_frobenius, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedDeterminant_norm_frobenius, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_trace, `Dubon2026.absolute_continuous_local_finite_factor, `Dubon2026.absolute_continuous_cyclic_eq_of_norm_frobenius, `Dubon2026.absolute_continuous_trace_pair_map_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_compatible_original_adic_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_original_character, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_character_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_character_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_range_isMulCommutative, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_word, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_local_degree_and_genus_eq, `Dubon2026.algebraicLocal_frobenius_class_of_original_residue, `Dubon2026.continuous_rational_galois_exists_frobenius_prime, `Dubon2026.sourceRationalLocalValuation_frobenius, `Dubon2026.rationalPrimeOriginalNorm_exists_frobenius, `krullTopology_mem_nhds_one_iff_of_normal, `Ideal.Quotient.factor_mk]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMAONE PRIMITIVE TRACE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the original compatible all-precision trace consumer. Exact local Frobenius, native Chebotarev and Krull neighborhoods, original Fourier character, Hecke centrality and quotient transitions are consumed. Characteristic-zero reconstruction, rank-two realization and DUB-17--20 remain OPEN."
+
+#eval runGammaOnePrimitiveTraceDependencyAudit

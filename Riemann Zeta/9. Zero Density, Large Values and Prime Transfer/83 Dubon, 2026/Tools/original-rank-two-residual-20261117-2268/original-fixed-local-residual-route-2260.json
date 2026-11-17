@@ -1,0 +1,46 @@
+{
+  "recordedUTC": "2026-11-17T08:31:59.899528+00:00",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> higher symmetric-power continuation -> automorphy -> original modular residual association -> exact original Hecke-character Frobenius polynomial under the fixed prime-local restriction",
+  "route": "Reuse SourceArithmeticLocalEmbeddingExtension to extend the fixed local embedding and identify the exact two restriction maps. Reuse RationalArithmeticOutsideInertia on the prescribed arithmetic group, sourcePrimitiveResidualHeckeCharacter_hecke for the original Fourier reduction and Mathlib charpoly_fin_two. The actual all-weight residual source theorem discharges the representation and original norm-Frobenius inputs. No alternative local map is introduced.",
+  "remaining": "Residual irreducibility/large image, prescribed unitary realization, local regularity, automorphy and literal higher continuation stay unresolved; no source gate closes from this interface bridge alone.",
+  "native": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticLocalEmbeddingExtension.lean",
+      "sha256": "B89D60BB84745523D7B11ECB2FAD13DFB0D8BE16668998B88D1732262797F6CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticOutsideInertia.lean",
+      "sha256": "7F88581B4813AE82F87B4AE9A0A31D3384388C0F984B19F167444CFAB67E2864"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualHeckeCharacter.lean",
+      "sha256": "69E86C11997CF917707EBC1465AF973DF6AE96645F20F8864E438197874CE932"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticResidual.lean",
+      "sha256": "561661B901F84504DCADD2838A0FDADAB0A4158828369FAD758814FEF746696D"
+    }
+  ],
+  "date": "2026-11-17",
+  "obligations": "The original primitive form in every weight at least two, for p greater than three, constructs its actual finite characteristic-p residue field, integral and residual continuous arithmetic action, literal entrywise reduction, finite residual image, maximal original residual Hecke kernel, fixed-local trivial inertia, exact original Hecke characteristic polynomial, trace and weight determinant at every good-prime norm Frobenius, and actual complex oddness. The original representation and Frobenius values are derived in the same source consumer; neither is supplied.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticLocalEmbeddingExtension.lean",
+      "sha256": "B89D60BB84745523D7B11ECB2FAD13DFB0D8BE16668998B88D1732262797F6CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticOutsideInertia.lean",
+      "sha256": "7F88581B4813AE82F87B4AE9A0A31D3384388C0F984B19F167444CFAB67E2864"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualHeckeCharacter.lean",
+      "sha256": "69E86C11997CF917707EBC1465AF973DF6AE96645F20F8864E438197874CE932"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticResidual.lean",
+      "sha256": "561661B901F84504DCADD2838A0FDADAB0A4158828369FAD758814FEF746696D"
+    }
+  ],
+  "proofLimitsChanged": false,
+  "productionMutation": false
+}

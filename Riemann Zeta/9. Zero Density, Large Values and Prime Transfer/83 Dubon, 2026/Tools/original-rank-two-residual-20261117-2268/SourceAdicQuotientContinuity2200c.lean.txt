@@ -1,0 +1,22 @@
+import SourceAdicFunctionContinuity
+import Mathlib.Topology.Algebra.Ring.Ideal
+
+/-! DUB-17/18 -> actual rank-two realization -> original odd determinant.
+Native open ideal powers make the actual quotient maps continuous into
+finite-precision discrete topologies. This transfers the original
+continuous determinant to the proved cyclotomic comparison theorem. -/
+namespace Dubon2026
+
+/-- Every positive quotient of the actual adic ring is discrete-continuous. -/
+theorem continuous_positive_adic_quotient
+    {R : Type} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+    (I : Ideal R) (hI : IsAdic I) (n : ℕ) :
+    @Continuous R (R ⧸ I ^ (n + 1)) _ ⊥ (Ideal.Quotient.mk (I ^ (n + 1))) := by
+  letI : DiscreteTopology (R ⧸ I ^ (n + 1)) :=
+    QuotientAddGroup.discreteTopology ((isAdic_iff.mp hI).1 (n + 1))
+  have h := (QuotientRing.isOpenQuotientMap_mk (I ^ (n + 1))).continuous
+  have he : (inferInstance : TopologicalSpace (R ⧸ I ^ (n + 1))) = ⊥ :=
+    DiscreteTopology.eq_bot
+  exact he ▸ h
+
+end Dubon2026

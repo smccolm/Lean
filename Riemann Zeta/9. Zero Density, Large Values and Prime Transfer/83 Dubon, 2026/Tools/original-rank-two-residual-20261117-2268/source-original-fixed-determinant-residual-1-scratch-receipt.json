@@ -1,0 +1,48 @@
+{
+  "recordedUTC": "2026-11-17T09:07:01.194187+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceGammaOneFixedDeterminantResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual.lean",
+      "sha256": "35F4F8E3016B14F8EBE4DAFA0A6BD0D2005665F9B7D371C133909C401E290960",
+      "oleanSha256": "A2D7895F68E65A566942A5755355E5C8487524D55A1BA1ED0208B3DE8156FC0D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual-2265.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedDeterminantResidual-2265.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "constructionRegistrations": [],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualAudit1.log",
+  "logSha256": "46B335C35A7CE87BB0D12C55DDB8F29701C00D0F3CA3573B8CCD2342B41E09E3",
+  "auditSha256": "010E6912AC61221E5617A3CC8D79B636AD366CA86A0A31131A961CE5B61B91E6",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualScratchOwnership2265.log",
+  "ownershipSha256": "A0708CA45ADDE0F3E4CCDFB6AE66462BD137DF2EEF55AEECEE127BB48B3B1F89",
+  "exhaustiveTheorems": 8,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 6,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedDeterminantResidualDependencyAudit1.log",
+  "dependencyAuditSha256": "E562C52B28F673655EA0123E51990F7C8B756E45EE307683EDBCFF60F431E9DF",
+  "dependencyAuditSourceSha256": "1F1743D46CC6D80DEA7B4F8B450C1B96B09B8B6AE554E2F3D7308FD81BE60C8B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> symmetric-power continuation -> automorphy -> actual original residual association -> original fixed determinant for the same residual action",
+  "discharged": "The same actual all-weight integral reduction now has its global cyclotomic weight determinant as an equality of characters on the prescribed arithmetic group. Original local Hecke values, inertia, maximal Hecke kernel, finite image, literal integral reduction, coefficient characteristic and actual oddness remain in the same source consumer. No character, determinant compatibility or residual action is supplied.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual image, local regularity, full association and automorphy/continuation remain OPEN. The exact downstream Witt compatibility can be reused once this determinant identity is retained in the source consumer.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-fixed-determinant-residual-1-reuse-review-20261117.json",
+  "reuseReviewSha256": "FCD443A1414BD130EE55C694E8C271B8BD1C7855B18CA19E41A1B55FB77188A4",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

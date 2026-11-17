@@ -1,0 +1,85 @@
+import SourceAbsoluteNormFrobeniusConjugate
+import SourceGammaOnePrimitiveJointTraceFrobenius
+import SourceGammaOnePrimitiveJointTraceConjugation
+import Mathlib.Data.Nat.PrimeFin
+
+/-! DUB-17/18 -> original all-weight association -> compatible trace
+specialization. Native Chebotarev applies to the joint finite Galois action
+and the actual cyclotomic character simultaneously. Exact original local
+Frobenius values and Hecke commutation force every trace value into the
+same original joint Hecke image, without a density or centrality premise. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup SourceCuspBoundary CoefficientReduction
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+
+/-- Every actual finite trace value equals an original good-prime Hecke
+operator, with the original cyclotomic and local Frobenius data retained. -/
+theorem binaryPrimitiveJointTrace_eq_prime
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (σ : Qbar ≃ₐ[ℚ] Qbar) :
+    ∃ ell : sourceBinaryHeckePrime (Q * N), binaryPrimitiveJointTrace Q p n w σ =
+      binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inl ell)) := by
+  let B := binaryPrimitiveJointOperatorRing Q p n w
+  letI : TopologicalSpace B := ⊥
+  letI : DiscreteTopology B := ⟨rfl⟩
+  let ρ : Gal(Qbar/ℚ) →ₜ* B :=
+    ⟨binaryPrimitiveJointGaloisRep Q p n w, binaryPrimitiveJointGaloisRep_continuous Q p n w⟩
+  let χ := ρ.toHomUnits.prod (sourceAbsoluteCyclotomicCharacter M)
+  obtain ⟨q, hq, hqS, e, φ, hφ, τ, he⟩ :=
+    absolute_continuous_exists_norm_frobenius_conjugate χ σ (Q * N).primeFactors
+  have hcop : q.Coprime (Q * N) := hq.coprime_iff_not_dvd.mpr
+    (fun h => hqS (hq.mem_primeFactors' h))
+  let ell : sourceBinaryHeckePrime (Q * N) := ⟨q, hq, hcop⟩
+  let d := embeddedNormalGaloisRestriction e φ
+  have hT := binaryPrimitiveJointTrace_norm_frobenius Q p n w Hq hH ell e φ hφ
+  have hc := binaryPrimitiveJointTrace_conjugate_eq_word Q p n w Hq hH d τ
+    (FreeAlgebra.ι ℤ (Sum.inl ell)) hT
+  have hr : binaryPrimitiveJointGaloisRep Q p n w (τ * d * τ⁻¹) =
+      binaryPrimitiveJointGaloisRep Q p n w σ :=
+    congrArg (fun u : Bˣ × (ZMod M)ˣ => u.1.val) he
+  have hi : binaryPrimitiveJointGaloisRep Q p n w (τ * d * τ⁻¹)⁻¹ =
+      binaryPrimitiveJointGaloisRep Q p n w σ⁻¹ :=
+    congrArg (fun u : Bˣ × (ZMod M)ˣ => (u.1⁻¹).val) he
+  have hD : binaryPrimitiveJointDeterminant Q p n w (τ * d * τ⁻¹) =
+      binaryPrimitiveJointDeterminant Q p n w σ :=
+    congrArg (binaryPrimitiveJointWeightedDiamond Q p n w) (congrArg Prod.snd he)
+  have ht : binaryPrimitiveJointTrace Q p n w (τ * d * τ⁻¹) =
+      binaryPrimitiveJointTrace Q p n w σ := congrArg₂ (· + ·) hr (congrArg₂ (· * ·) hi hD)
+  exact ⟨ell, ht.symm.trans hc⟩
+
+/-- The original candidate trace belongs to the exact joint Hecke image at
+every Galois element, so its original Fourier-field character can be applied. -/
+theorem binaryPrimitiveJointTrace_mem_range
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    (σ : Qbar ≃ₐ[ℚ] Qbar) :
+    binaryPrimitiveJointTrace Q p n w σ ∈
+      (binaryPrimitiveJointHeckeDiamondWord Q p n w Hq).range := by
+  obtain ⟨ell, he⟩ := binaryPrimitiveJointTrace_eq_prime Q p n w Hq hH σ
+  exact ⟨FreeAlgebra.ι ℤ (Sum.inl ell), he.symm⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

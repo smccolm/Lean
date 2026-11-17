@@ -1,0 +1,85 @@
+{
+  "status": "Source-review candidates only; native shorter route recorded; no production or acceptance claim.",
+  "files": [
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_CuspForm_HeckeAlgebra.lean.txt",
+      "sha256": "D9B2614BD8282DC25A704056A7EF9D7F1B54B00053773515F4B1B8428A3A62F2"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_FieldTheory_RatAlgClosureGalois.lean.txt",
+      "sha256": "326D7E4B9AE98DF3DFEC96628ACC8EAF46280D501FDB2BE268C85D1C3B77F535"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_FLTPrelim_Modularity.lean.txt",
+      "sha256": "5A68B3D1FD8BCB1FCD56C254CB84983ACE76BA53A9C437A208350CE3E8CABE02"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_GaloisRep_Adic.lean.txt",
+      "sha256": "7AAFEA250F807EAFC26C3C64E7C61AE3B53EE5A213520ED9010BC62C97845898"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_GaloisRep_Flat.lean.txt",
+      "sha256": "39C0C22E6CB81C0773F77335066BF873E21E94750B16B7AE114A9B60499A325F"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_ModularCurve_EichlerShimuraData.lean.txt",
+      "sha256": "E830583A089152E922DC04846D59898137966E3829022867E798A798DBEB8174"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_ModularCurve_HeckeModule.lean.txt",
+      "sha256": "D9D6B104ECBE2A0DB9C3510F3CDAC631C6084AF6C83F57D42028927E3F4055C3"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/Definitions/Def_Representation_AbsolutelyIrreducible.lean.txt",
+      "sha256": "608404ADC15D82438F3225E11C3E14E28D6A1247C0F9729254B3580D2D55F228"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_card_primes_apLarge_isBigO.lean.txt",
+      "sha256": "D2103B73BCA08C5771D4F8DF8037A68FE2FF09E88B8C4C362611F77E5B6D0F5A"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_exists_dickson_eval_eq_of_span_ne_top.lean.txt",
+      "sha256": "D1AD1C11C9D77A37F6DF6322B082334C50680B159B25697FD9CF8FFA77DF786B"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_irreducible_of_point_of_not_dvd.lean.txt",
+      "sha256": "5030A476C6E939B2405EAAA0CBC3B1549E0E82C5E51DE3F0A71E0BD8217067E8"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_isFlatAt_of_linearEquiv_baseChange.lean.txt",
+      "sha256": "A5A3AC8A51242EF16EFC2F529B91806727A562DBEAE1A13B33F27C4830D67BC6"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_line_fixed_or_quotient_fixed_by_inertia_of_isFlatAt.lean.txt",
+      "sha256": "7904AE6467C310571E843110699CC21FDDCADC9CE1071C114B9CB00F818D07DA"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_linearEquiv_of_charpoly_eq_of_span_eq_top.lean.txt",
+      "sha256": "2D3209A839D7C185126897DB5FCE7F59945DCE75A8F1D02C1862B2CE64CB0076"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_module_finite_padicInt_of_isDiscreteValuationRing.lean.txt",
+      "sha256": "396B0F2AED8AE07422349810791DEFA6E8CEE0EBE69A16B791D26F081E902FEB"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/P2M/Sol/S_RibetIrr_span_range_baseChange_eq_top_of_companion.lean.txt",
+      "sha256": "74BB0860DB8C391D70321DAA9D9D922979EB4CB6FFBFCF61CCD60A278BF0EB84"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/review.json",
+      "sha256": "8A58B0DC84157E4B73034F7AC3DBAFD5F84915F4122162A017342E896191FAEF"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/ribet-and-native-shortest-route-review-2314.json",
+      "sha256": "8C6F366DBE4FDB475C28450AEA39A20BA80FB4CE53C648B5197459287EB20CD8"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/fetch_ribet_image_reuse_2312.py",
+      "sha256": "B7F13E176217883158C850158F5AE4F8098A92DF16F492EEB69A0DA16FDBEECE"
+    },
+    {
+      "path": "Tools/ribet-image-reuse-review-20261117-2314/fetch_ribet_image_reuse_2312b.py",
+      "sha256": "194C74B14E5ADFED059759E4BA7FCFAB113E346CD1FCE3019F2276F9E952B4AB"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-subfield-symmetric-1-scratch-receipt.json",
+      "sha256": "B8C88E8DBCCDA3B4396E5ACBAD30853F8EBEA95553578D02C7FF99CDDACC0CBC",
+      "modules": 4,
+      "queries": 4,
+      "exhaustiveTheorems": 14,
+      "other": 5,
+      "requiredValueEdges": 50
+    },
+    {
+      "receipt": "source-cyclotomic-symmetric-1-scratch-receipt.json",
+      "sha256": "C05E27A6F0CAAB261B8AB74074B6B7C51A44DD8B2250D58F89893CABDC365805",
+      "modules": 7,
+      "queries": 7,
+      "exhaustiveTheorems": 29,
+      "other": 10,
+      "requiredValueEdges": 55
+    },
+    {
+      "receipt": "source-absolute-cyclotomic-symmetric-1-scratch-receipt.json",
+      "sha256": "5BA8E9FEE56C7CC63389483BFEB1AA76DA8682BD27FE1CBA16EB5DD0CAB2F6EC",
+      "modules": 9,
+      "queries": 10,
+      "exhaustiveTheorems": 39,
+      "other": 15,
+      "requiredValueEdges": 59
+    },
+    {
+      "receipt": "source-original-symmetric-1-scratch-receipt.json",
+      "sha256": "C0C6C938423119C26EBCB310EA9B5DB9A14A4CCD59507A1ACBF6A12AF04B968A",
+      "modules": 18,
+      "queries": 25,
+      "exhaustiveTheorems": 68,
+      "other": 27,
+      "requiredValueEdges": 74
+    }
+  ],
+  "overlappingScopes": true,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

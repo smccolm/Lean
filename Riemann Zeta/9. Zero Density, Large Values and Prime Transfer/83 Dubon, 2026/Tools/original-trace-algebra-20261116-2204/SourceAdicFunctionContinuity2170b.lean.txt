@@ -1,0 +1,34 @@
+import SourcePositiveAdicReconstruction2168a
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association ->
+continuity of the reconstructed original traces. The native adic
+neighborhood basis reduces continuity to the already proved discrete
+positive-quotient traces. No independent continuity certificate for
+the reconstructed value is assumed. -/
+namespace Dubon2026
+open scoped Topology
+
+/-- Positive quotient continuity suffices for continuity into the actual
+adic ring topology, using the original quotient maps and ideal powers. -/
+theorem continuous_of_positive_adic_quotients
+    {X R : Type} [TopologicalSpace X] [CommRing R] [TopologicalSpace R]
+    (I : Ideal R) (hI : IsAdic I) (f : X → R)
+    (hf : ∀ n : ℕ, @Continuous _ _ _ ⊥ (fun x => Ideal.Quotient.mk (I ^ (n + 1)) (f x))) :
+    Continuous f := by
+  apply continuous_iff_continuousAt.mpr
+  intro x
+  apply (hI.hasBasis_nhds (f x)).tendsto_right_iff.mpr
+  intro n _
+  letI : TopologicalSpace (R ⧸ I ^ (n + 1)) := ⊥
+  letI : DiscreteTopology (R ⧸ I ^ (n + 1)) := ⟨rfl⟩
+  have he : ∀ᶠ y in 𝓝 x,
+      Ideal.Quotient.mk (I ^ (n + 1)) (f y) = Ideal.Quotient.mk (I ^ (n + 1)) (f x) :=
+    (hf n).continuousAt.eventually
+      ((isOpen_discrete ({Ideal.Quotient.mk (I ^ (n + 1)) (f x)} : Set (R ⧸ I ^ (n + 1)))).mem_nhds rfl)
+  filter_upwards [he] with y hy
+  refine ⟨f y - f x, Ideal.pow_le_pow_right n.le_succ (Ideal.Quotient.eq.mp hy), ?_⟩
+  dsimp only
+  abel
+
+end Dubon2026

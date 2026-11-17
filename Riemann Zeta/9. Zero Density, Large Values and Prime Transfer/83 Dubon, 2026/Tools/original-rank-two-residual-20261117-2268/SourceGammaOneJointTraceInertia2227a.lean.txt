@@ -1,0 +1,73 @@
+import Dubon2026.SourceGammaOnePrimitiveJointTraceSpecialization
+import Dubon2026.SourceGammaOnePrimitiveJointDescent
+import SourceCyclotomicNormInertia2224a
+import SourceUnitTraceKernel2226a
+
+/-! DUB-17/18 -> original unramified rank-two association -> finite trace invariance.
+The existing original joint action and cyclotomic local inertia theorem
+force every specialized trace translate to be invariant under actual
+norm inertia. Later adic comparison transfers this to the original complete trace. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup SourceCuspBoundary CoefficientReduction
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+
+/-- The original norm inertia outside Q*p also kills the actual finite
+joint determinant term, using the existing cyclotomic inertia theorem. -/
+theorem binaryPrimitiveJointDeterminant_normInertia
+    (q : ℕ) (hq : q.Prime) (haway : ¬q ∣ Q * p)
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+    (g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq))
+    (hg : g ∈ rationalPrimeNormInertia q hq) :
+    binaryPrimitiveJointDeterminant Q p n w (embeddedNormalGaloisRestriction e g) = 1 := by
+  have hM : ¬q ∣ M := by
+    intro h
+    rcases hq.dvd_mul.mp h with hQ | hp
+    · exact haway (dvd_mul_of_dvd_left hQ p)
+    · exact haway (dvd_mul_of_dvd_right (hq.dvd_of_dvd_pow (hq.dvd_of_dvd_pow hp)) Q)
+  change binaryPrimitiveJointWeightedDiamond Q p n w
+    (sourceAbsoluteCyclotomicCharacter M (embeddedNormalGaloisRestriction e g)) = 1
+  rw [sourceAbsoluteCyclotomicCharacter_normInertia M q hq hM e g hg, map_one]
+
+/-- Every actual specialized trace translate is invariant under original
+norm inertia outside Q*p. Both action and determinant invariance are proved. -/
+theorem binaryPrimitiveJointSpecializedTrace_normInertia_translate
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    {C : Type} [Ring C] (χ : (binaryPrimitiveJointHeckeDiamondWord Q p n w Hq).range →+* C)
+    (q : ℕ) (hq : q.Prime) (haway : ¬q ∣ Q * p)
+    (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+    (g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq))
+    (hg : g ∈ rationalPrimeNormInertia q hq) (σ : Qbar ≃ₐ[ℚ] Qbar) :
+    binaryPrimitiveJointSpecializedTrace Q p n w Hq hH χ
+        (embeddedNormalGaloisRestriction e g * σ) =
+      binaryPrimitiveJointSpecializedTrace Q p n w Hq hH χ σ := by
+  apply congrArg χ
+  apply Subtype.ext
+  exact sourceUnitTrace_kernel_translate (binaryPrimitiveJointGaloisRep Q p n w)
+    (binaryPrimitiveJointDeterminant Q p n w) (embeddedNormalGaloisRestriction e g)
+    (binaryPrimitiveJointGaloisRep_normInertia Q p n w q hq haway e g hg)
+    (binaryPrimitiveJointDeterminant_normInertia Q p n w q hq haway e g hg) σ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

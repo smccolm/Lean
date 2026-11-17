@@ -1,0 +1,46 @@
+import Dubon2026.SourceDicksonObjects
+import Dubon2026.SourceDicksonPGLBasic
+import Dubon2026.SourceDicksonNatClassEquation
+import Dubon2026.SourceDicksonPSLBasic
+import Dubon2026.SourceDicksonPartitionHelpers
+import Dubon2026.SourceDicksonCyclicPartition
+import Dubon2026.SourceDicksonRecognitionA5
+import Dubon2026.SourceDicksonFieldReconstruction
+import Dubon2026.SourceDicksonPartitionProof
+import Dubon2026.SourceDicksonPSLRecognition
+import Dubon2026.SourceDicksonTameClassification
+import Dubon2026.SourceDicksonWildClassification
+import Dubon2026.SourceDicksonClassification
+import Dubon2026.SourceResidualProjectiveClassification
+import Dubon2026.SourceGammaOneProjectiveResidual
+import Dubon2026.SourceDicksonProjectiveConjugacy
+import Dubon2026.SourceDicksonMatrixAlternatives
+import Dubon2026.SourceGammaOneProjectiveMatrixResidual
+import Dubon2026.SourceProjectivePerfectLift
+import Dubon2026.SourceProjectiveSL2Lift
+import Dubon2026.SourceProjectiveSubfieldBounds
+import Dubon2026.SourceResidualLinearAlternatives
+import Dubon2026.SourceGammaOneProjectiveLinearResidual
+import Dubon2026.SourceResidualFiniteAmbient
+import Dubon2026.SourceResidualFiniteDescent
+import Dubon2026.SourceResidualFiniteBounds
+import Dubon2026.SourceResidualFiniteLinearAlternatives
+import Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceDicksonObjects, `Dubon2026.SourceDicksonPGLBasic, `Dubon2026.SourceDicksonNatClassEquation, `Dubon2026.SourceDicksonPSLBasic, `Dubon2026.SourceDicksonPartitionHelpers, `Dubon2026.SourceDicksonCyclicPartition, `Dubon2026.SourceDicksonRecognitionA5, `Dubon2026.SourceDicksonFieldReconstruction, `Dubon2026.SourceDicksonPartitionProof, `Dubon2026.SourceDicksonPSLRecognition, `Dubon2026.SourceDicksonTameClassification, `Dubon2026.SourceDicksonWildClassification, `Dubon2026.SourceDicksonClassification, `Dubon2026.SourceResidualProjectiveClassification, `Dubon2026.SourceGammaOneProjectiveResidual, `Dubon2026.SourceDicksonProjectiveConjugacy, `Dubon2026.SourceDicksonMatrixAlternatives, `Dubon2026.SourceGammaOneProjectiveMatrixResidual, `Dubon2026.SourceProjectivePerfectLift, `Dubon2026.SourceProjectiveSL2Lift, `Dubon2026.SourceProjectiveSubfieldBounds, `Dubon2026.SourceResidualLinearAlternatives, `Dubon2026.SourceGammaOneProjectiveLinearResidual, `Dubon2026.SourceResidualFiniteAmbient, `Dubon2026.SourceResidualFiniteDescent, `Dubon2026.SourceResidualFiniteBounds, `Dubon2026.SourceResidualFiniteLinearAlternatives, `Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

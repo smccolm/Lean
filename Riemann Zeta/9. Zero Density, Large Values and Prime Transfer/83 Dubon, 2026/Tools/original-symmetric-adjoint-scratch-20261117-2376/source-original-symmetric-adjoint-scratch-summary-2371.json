@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-symmetric-adjoint-1-scratch-receipt.json",
+      "sha256": "F1E8B92F0ED82CAB9152691D674D15BB8405E7B638324FB81DCAA4B6C0D4615C",
+      "modules": 2,
+      "queries": 3,
+      "exhaustiveTheorems": 11,
+      "other": 6,
+      "requiredValueEdges": 31
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

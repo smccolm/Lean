@@ -1,0 +1,31 @@
+name = "Stacks"
+version = "0.1.0"
+defaultTargets = ["StacksCore", "StacksFrontier", "Stacks"]
+lintDriver = "batteries/runLinter"
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+weak.linter.flexible = true
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header = false
+weak.linter.overlappingInstances = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "16edf57de7933555826307a3d81b4391a3657a09"
+
+[[lean_lib]]
+name = "StacksCore"
+roots = ["StacksCore"]
+
+[[lean_lib]]
+name = "StacksFrontier"
+roots = ["StacksFrontier"]
+
+[[lean_lib]]
+name = "Stacks"
+roots = ["Stacks"]

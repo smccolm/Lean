@@ -1,0 +1,776 @@
+{
+  "recordedUTC": "2026-11-17T09:47:12.968765+00:00",
+  "queries": [
+    "Lean formalization residual Galois representation large image Ribet Momose Dickson 2026 GitHub",
+    "Lean Deligne Ramanujan Petersson 2026 formalization proof Galois",
+    "\"Lean\" \"symmetric power\" \"automorphy\" formalization",
+    "\"Lean\" \"Sato-Tate\" proof 2026",
+    "\"Lean\" \"Ramanujan\" \"Petersson\" \"Axiom\" proof",
+    "\"Lean\" \"Ribet\" \"large image\""
+  ],
+  "records": {
+    "flt-pgl-classification-20261117-2264": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\review.json",
+      "sha256": "A923245B5DAB0DA536AF0B17DF37B2AAAB9A77DA37FEA5306F7CBF5FFF1812E1",
+      "review": {
+        "recordedUTC": "2026-11-17T08:53:40.562977+00:00",
+        "repository": "ImperialCollegeLondon/FLT",
+        "commit": "478c1013cd29c27d72f57aa8b691fa46083664b3",
+        "sourceOfCommit": "Official generated documentation source link; not a claim about current remote HEAD.",
+        "entry": "FLT.KnownIn1980s.PGL2.Proofs",
+        "files": [
+          {
+            "path": "LICENSE",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/LICENSE",
+            "bytes": 11357,
+            "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+          },
+          {
+            "path": "lean-toolchain",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/lean-toolchain",
+            "bytes": 28,
+            "sha256": "929CD8BF7EC963BD49699B4E61239AA2648351DAD60B0F74EEE672956C743C52"
+          },
+          {
+            "path": "lakefile.toml",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/lakefile.toml",
+            "bytes": 1057,
+            "sha256": "C78647569D6A357F5BC1871853A34166EC056059BE95BF020C553CFB6979B01F"
+          },
+          {
+            "path": "lake-manifest.json",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/lake-manifest.json",
+            "bytes": 3471,
+            "sha256": "9FE1C9897B635C763277B11F12353312CC48C8E16F79D4F61AA7B495F5718CBB"
+          },
+          {
+            "path": "FLT/KnownIn1980s/PGL2/Proofs.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/KnownIn1980s/PGL2/Proofs.lean",
+            "bytes": 2105,
+            "sha256": "FE3A4B2CE852430FE3DEF4F2C66B842D2E7CA88E9EC87EE022028E53B90DFAEA",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": []
+          },
+          {
+            "path": "FLT/KnownIn1980s/PGL2/Defs.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/KnownIn1980s/PGL2/Defs.lean",
+            "bytes": 2563,
+            "sha256": "4E6BD70D29BA63E0301B9D7B3746CEDC45503205430ABF7C0F3B0EE13C7046D0",
+            "prohibitedSyntax": [
+              "sorry"
+            ],
+            "limitOrLinterOptions": []
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean",
+            "bytes": 3701,
+            "sha256": "11E67A442C865C6AC9532EED1B1596BB2E427EDF21B24F207B93E4E000477D95",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean",
+            "bytes": 80076,
+            "sha256": "93B0F3FED1E1BC9F5AED82D497DB8A007F2A634FE4ECF233B5A1BE44DAC798A2",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false",
+              "\nset_option backward.isDefEq.respectTransparency.types false in",
+              "\nset_option backward.isDefEq.respectTransparency.types false in",
+              "\nset_option backward.isDefEq.respectTransparency.types false in"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean",
+            "bytes": 38552,
+            "sha256": "6305ACAEAA3301D7DB1F3726A16E0D18331476DDD77685851594D9C7CFD753DF",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean",
+            "bytes": 68794,
+            "sha256": "C7F76C4164B9949C26FE6D2433553BE2F78AE55731B206B8A4A711F0DACC80B3",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/NatClassEquation.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/NatClassEquation.lean",
+            "bytes": 11726,
+            "sha256": "A140D63FADA25036DEE138931CD4FE3DB5868127B5333B608C24C606DE6EF825",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean",
+            "bytes": 87957,
+            "sha256": "A06724E1AA67372327C8C543D2FAC0FD24231FF7562A363C4A9649431CE4267A",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false",
+              "\nset_option backward.isDefEq.respectTransparency.types false in"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean",
+            "bytes": 35022,
+            "sha256": "50181DD66A4C8E8536218FA7F407B595B2BCD8F883E9AE2555889E9D742C6B0E",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false",
+              "\n\nset_option backward.isDefEq.respectTransparency.types false in"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean",
+            "bytes": 27392,
+            "sha256": "E14AAA400419A24AB89581DFFDDDDECBC773B8B8C1E1F2461E13329742BE4EA4",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/PartitionProof.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PartitionProof.lean",
+            "bytes": 36277,
+            "sha256": "31AA93CC8E106C83E009A5D8246B26E14BAF86D5F680E5047615D00C2BE87831",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean",
+            "bytes": 100176,
+            "sha256": "DA2684A7676B3210EE377ABA81DF1707F260A871AD202D768E015FDF08A11F84",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/PartitionHelpers.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/PartitionHelpers.lean",
+            "bytes": 38738,
+            "sha256": "A472078A35D8AF86B696434D03F51AC17B4DDBA11B39FF05EF5291C5C9C3323B",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          },
+          {
+            "path": "FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean",
+            "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/478c1013cd29c27d72f57aa8b691fa46083664b3/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean",
+            "bytes": 56939,
+            "sha256": "9DDA4439D81544225788BA83C318900F478F525BEB94C457EED51C4065242879",
+            "prohibitedSyntax": [],
+            "limitOrLinterOptions": [
+              "\n\n\n\nset_option linter.style.longLine false",
+              "set_option linter.style.emptyLine false",
+              "set_option linter.style.whitespace false",
+              "set_option linter.style.show false",
+              "set_option linter.style.openClassical false",
+              "set_option linter.style.cdot false",
+              "set_option linter.style.multiGoal false",
+              "set_option linter.style.refine false",
+              "set_option linter.style.induction false",
+              "set_option linter.unusedFintypeInType false"
+            ]
+          }
+        ],
+        "errors": [],
+        "imports": {
+          "FLT.KnownIn1980s.PGL2.Proofs": [
+            "FLT.KnownIn1980s.PGL2.Defs",
+            "FLT.Slop.PGL2.FiniteSubgroups.DicksonClassification"
+          ],
+          "FLT.KnownIn1980s.PGL2.Defs": [
+            "Mathlib.FieldTheory.Finite.GaloisField",
+            "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+            "Mathlib.GroupTheory.SemidirectProduct",
+            "Mathlib.GroupTheory.SpecificGroups.Alternating",
+            "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+            "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+            "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Projective",
+            "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.DicksonClassification": [
+            "FLT.Slop.PGL2.FiniteSubgroups.TameClassification",
+            "FLT.Slop.PGL2.FiniteSubgroups.WildClassification"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.TameClassification": [
+            "Mathlib.Algebra.BigOperators.Field",
+            "Mathlib.Algebra.Module.ZMod",
+            "FLT.Slop.PGL2.FiniteSubgroups.CyclicPartition",
+            "FLT.Slop.PGL2.FiniteSubgroups.NatClassEquation",
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.WildClassification": [
+            "Mathlib.Algebra.Module.ZMod",
+            "Mathlib.GroupTheory.SchurZassenhaus",
+            "Mathlib.GroupTheory.SemidirectProduct",
+            "Mathlib.Tactic.NormNum.Prime",
+            "FLT.Slop.PGL2.FiniteSubgroups.PSLBasic",
+            "FLT.Slop.PGL2.FiniteSubgroups.PSLRecognition",
+            "FLT.Slop.PGL2.FiniteSubgroups.PartitionProof"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.CyclicPartition": [
+            "Mathlib.Analysis.Normed.Ring.Lemmas",
+            "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+            "Mathlib.GroupTheory.Transfer",
+            "Mathlib.Tactic.Cases",
+            "Mathlib.Tactic.NormNum.NatFactorial",
+            "Mathlib.Tactic.NormNum.Prime",
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.NatClassEquation": [
+            "Mathlib.Analysis.Normed.Ring.Lemmas",
+            "Mathlib.Data.SetLike.Fintype",
+            "Mathlib.GroupTheory.Index"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic": [
+            "FLT.KnownIn1980s.PGL2.Defs",
+            "Mathlib.LinearAlgebra.Matrix.Action",
+            "Mathlib.FieldTheory.Finite.GaloisField",
+            "Mathlib.GroupTheory.SpecificGroups.Alternating",
+            "Mathlib.GroupTheory.Sylow",
+            "Mathlib.LinearAlgebra.Matrix.CharP",
+            "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+            "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card",
+            "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup",
+            "Mathlib.LinearAlgebra.Projectivization.Action"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.PSLBasic": [
+            "Mathlib.Data.Fintype.Parity",
+            "Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup",
+            "Mathlib.LinearAlgebra.SpecialLinearGroup",
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.PSLRecognition": [
+            "FLT.Slop.PGL2.FiniteSubgroups.FieldReconstruction"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.PartitionProof": [
+            "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic",
+            "FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers",
+            "FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.FieldReconstruction": [
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic",
+            "FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers": [
+            "Mathlib.Tactic.Cases",
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+          ],
+          "FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5": [
+            "Mathlib.GroupTheory.Transfer",
+            "Mathlib.Tactic.NormNum.NatFactorial",
+            "FLT.Slop.PGL2.FiniteSubgroups.PGLBasic"
+          ]
+        },
+        "mathlibImports": [
+          "Mathlib.Algebra.BigOperators.Field",
+          "Mathlib.Algebra.Module.ZMod",
+          "Mathlib.Analysis.Normed.Ring.Lemmas",
+          "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+          "Mathlib.Data.Fintype.Parity",
+          "Mathlib.Data.SetLike.Fintype",
+          "Mathlib.FieldTheory.Finite.GaloisField",
+          "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+          "Mathlib.GroupTheory.Index",
+          "Mathlib.GroupTheory.SchurZassenhaus",
+          "Mathlib.GroupTheory.SemidirectProduct",
+          "Mathlib.GroupTheory.SpecificGroups.Alternating",
+          "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+          "Mathlib.GroupTheory.Sylow",
+          "Mathlib.GroupTheory.Transfer",
+          "Mathlib.LinearAlgebra.Matrix.Action",
+          "Mathlib.LinearAlgebra.Matrix.CharP",
+          "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic",
+          "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card",
+          "Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Projective",
+          "Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup",
+          "Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup",
+          "Mathlib.LinearAlgebra.Projectivization.Action",
+          "Mathlib.LinearAlgebra.SpecialLinearGroup",
+          "Mathlib.Tactic.Cases",
+          "Mathlib.Tactic.NormNum.NatFactorial",
+          "Mathlib.Tactic.NormNum.Prime"
+        ],
+        "fetchedModuleCount": 14,
+        "unbuilt": true,
+        "productionMutation": false,
+        "limits": "No external proof build or axiom audit is claimed. Import closure syntax review is research evidence only; production acceptance requires source-object bridges and the pinned local kernel audit."
+      }
+    },
+    "weil-reuse-refresh-20261117-2288": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\review.json",
+      "sha256": "692FA49CD98CDEE3368FEE8E953D8CAB48C012745C8504E76802F25F0A4E3484",
+      "review": {
+        "recordedUTC": "2026-11-17T09:32:30.367061+00:00",
+        "repository": "AxiomMath/Weil",
+        "commit": "27cdb2049be62ee2911429b47f54774078450e32",
+        "leanModules": 980,
+        "possibleModularPaths": [
+          "Weil/LinearAlgebra/Charpoly/WeightSeparation.lean",
+          "Weil/LinearAlgebra/Charpoly/WeightSeparationIndependence.lean"
+        ],
+        "files": [
+          {
+            "path": "commit.json",
+            "url": "https://api.github.com/repos/AxiomMath/Weil/commits/main",
+            "bytes": 501211,
+            "sha256": "B470709876558D362B78CC52F61CAC12D8D5FED3DEF432025C1BAF1420FB9347"
+          },
+          {
+            "path": "tree.json",
+            "url": "https://api.github.com/repos/AxiomMath/Weil/git/trees/27cdb2049be62ee2911429b47f54774078450e32?recursive=1",
+            "bytes": 327498,
+            "sha256": "9C5A8782CFA2CE44199285E1311C4216799159DFE77ED6A7AA8AA12774A667DD"
+          },
+          {
+            "path": "README.md",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/README.md",
+            "bytes": 9339,
+            "sha256": "DF820C5178A6FCA61FB21E3166AB623D302C23EA50CA89A13BB004618DC93ECC"
+          },
+          {
+            "path": "LICENSE",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/LICENSE",
+            "bytes": 11358,
+            "sha256": "C95BAE1D1CE0235ECCCD3560B772EC1EFB97F348A79F0FBE0A634F0C2CCEFE2C"
+          },
+          {
+            "path": "lean-toolchain",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/lean-toolchain",
+            "bytes": 29,
+            "sha256": "8190E75A201741065FE508B28955DD64DD72D090BABE5F70CE6848879D68AE88"
+          },
+          {
+            "path": "lakefile.toml",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/lakefile.toml",
+            "bytes": 636,
+            "sha256": "033DA4F4AB2CF8B05A7183E0A5C1260B5B8C1E7942A47F9D06421A331E521F5F"
+          },
+          {
+            "path": "lake-manifest.json",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/lake-manifest.json",
+            "bytes": 3510,
+            "sha256": "445AD7B876D68DB78340F05B1F9BEA2F99C972704B58225869499BC7C97B3CF5"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneWeilConjecture.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneWeilConjecture.lean",
+            "bytes": 23573,
+            "sha256": "06E7870719388EE63F892FEBBA542C84852EAC58F1AE7254A318E426981C3066"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilRiemannHypothesisForm.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilRiemannHypothesisForm.lean",
+            "bytes": 12746,
+            "sha256": "113DDCDE902685661076E9AA39EF10C59B5338D6734F78B59D13051B449DDBEC"
+          },
+          {
+            "path": "Weil/LeanEval/WeilConjectures.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/LeanEval/WeilConjectures.lean",
+            "bytes": 16635,
+            "sha256": "B228D4BCF8E96544420F412906147F8E0D42182FA3CFF79AEE7E65591E9D892F"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Duality/PoincareDualityConstantSystem.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Duality/PoincareDualityConstantSystem.lean",
+            "bytes": 17176,
+            "sha256": "C70D43BAE1484104316F32D4498FC289785E5A2860F662B9EDD7B7E1E4436C96"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/CharpolyIntegrality.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/CharpolyIntegrality.lean",
+            "bytes": 15033,
+            "sha256": "7C1418B224F70944290E543F2978EEDE852A8EF7D9AAD8C9E959A70AEA7D7ED5"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/ConnectedComponentsCharpoly.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/ConnectedComponentsCharpoly.lean",
+            "bytes": 50474,
+            "sha256": "2F3D1E5394FD1B3C698F287FB687B18D27F00AE11B5BC345F30B9D985BC4523E"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneFunctionalEquation.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneFunctionalEquation.lean",
+            "bytes": 20336,
+            "sha256": "4368B3E99406F287041C5CA3157095D532256D456A34371DE0E84AB4C0DDF706"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/FieldOfConstantsFrobenius.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/FieldOfConstantsFrobenius.lean",
+            "bytes": 14458,
+            "sha256": "C7E3E7648A4FD2C652F32E4588893B830712ED09A357811342CF1E5E3E85A1F2"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/LAdicTraceFormulaFinal.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/LAdicTraceFormulaFinal.lean",
+            "bytes": 11354,
+            "sha256": "B5EC87CE95CBFE594D183E9C9FF2F099A65347D09C4D38543D0B9879C6CB61DA"
+          },
+          {
+            "path": "Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilEstimateFromPurityAllEmbeddings.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilEstimateFromPurityAllEmbeddings.lean",
+            "bytes": 5626,
+            "sha256": "82BDD595D05887095DC0033ED0C7EF64D08F2DAE3EE2A5DDCB2027C95ADD629C"
+          },
+          {
+            "path": "Weil/Attr.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Attr.lean",
+            "bytes": 996,
+            "sha256": "F3F3D24E98FDE4BBAD0FA465D7509A88226C00F3A6501A8F5F6C1B54A9D80292"
+          },
+          {
+            "path": "Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/FieldValuedPointCount.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/FieldValuedPointCount.lean",
+            "bytes": 5480,
+            "sha256": "010E03121A8271F559083F13F8418DA051653BB2CCFE923BE6062827BB6188C0"
+          },
+          {
+            "path": "Weil/FieldTheory/IsAlgClosed/Classification.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/FieldTheory/IsAlgClosed/Classification.lean",
+            "bytes": 6982,
+            "sha256": "CBBB506F1095E3237FF49F971CB0B47C8EE49D2DDE61CC8B5F2C98DAD808F138"
+          },
+          {
+            "path": "Weil/LinearAlgebra/Charpoly/Reverse.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/LinearAlgebra/Charpoly/Reverse.lean",
+            "bytes": 3565,
+            "sha256": "695241E81DEE9E42191ADA097985398606BDFEB68C7BFA2628CAAB8DC98E6BF8"
+          }
+        ],
+        "scope": "Metadata, three endpoint files, and their immediate Weil imports; not full proof closure.",
+        "buildClaimed": false,
+        "productionMutation": false,
+        "rootPinsChanged": false
+      }
+    },
+    "weil-stacks-flt-followup-20261117-2290": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\review.json",
+      "sha256": "F9E3E8AACE4FF1B7FAE872903D9284D13DCC5AC62BBE0B26783260FA44CA001E",
+      "review": {
+        "recordedUTC": "2026-11-17T09:35:36.354182+00:00",
+        "fltCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "previousFLTCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "stacksCommit": "012108f61d7f92a6ffc35ec3f263b6da5d438125",
+        "weilCommit": "27cdb2049be62ee2911429b47f54774078450e32",
+        "files": [
+          {
+            "path": "FLT/commit.json",
+            "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/main",
+            "bytes": 6123,
+            "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+          },
+          {
+            "path": "FLT/README.md",
+            "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/README.md",
+            "bytes": 8612,
+            "sha256": "98B5A23CCD09ED697B7462CC6854280A6BADDFBEEBF4F90B2873AB585E87C3D0"
+          },
+          {
+            "path": "FLT/PROOF-PATH.md",
+            "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/PROOF-PATH.md",
+            "bytes": 8666,
+            "sha256": "ADA9B1B2F69184B9A9334D51ED9F2E2E241D16DF364D9E53DF418339748C6705"
+          },
+          {
+            "path": "FLT/lean-toolchain",
+            "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lean-toolchain",
+            "bytes": 25,
+            "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71"
+          },
+          {
+            "path": "FLT/lakefile.lean.txt",
+            "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lakefile.lean",
+            "bytes": 641,
+            "sha256": "D8BA763B04133C72E1182738F530CDD48C9B676DFB210ED551995287F319BD29"
+          },
+          {
+            "path": "FLT/lake-manifest.json",
+            "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lake-manifest.json",
+            "bytes": 3158,
+            "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF"
+          },
+          {
+            "path": "Stacks/README.md",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/README.md",
+            "bytes": 4820,
+            "sha256": "FF665312A3E0114AEB9755E2D6CA5975012EB1CFEC8C175D50C377F11895B204"
+          },
+          {
+            "path": "Stacks/LICENSE",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/LICENSE",
+            "bytes": 11357,
+            "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+          },
+          {
+            "path": "Stacks/lean-toolchain",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/lean-toolchain",
+            "bytes": 28,
+            "sha256": "108CA2895820DE2C74101F81DE81756B41CA0165DFDC8CED16A82C3F810152D0"
+          },
+          {
+            "path": "Stacks/lakefile.toml",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/lakefile.toml",
+            "bytes": 661,
+            "sha256": "FC0FA40438F24FBB4E5666A2020A69EE42A1BB8B3D45E29EEC5CD5A52C041918"
+          },
+          {
+            "path": "Stacks/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/GeometricComponentsPurityReduction.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/GeometricComponentsPurityReduction.lean",
+            "bytes": 34537,
+            "sha256": "52E4AB1C29FC63466EBE44727EA13B50C727CBD0F637EC23A3BEADEDC18A9578"
+          },
+          {
+            "path": "Stacks/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/WeilIIFinalAssembly.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/WeilIIFinalAssembly.lean",
+            "bytes": 26762,
+            "sha256": "BE7E0FAA9611D7E2739826ED36B4E2046C82993786D751250A968ACF56874DC4"
+          },
+          {
+            "path": "Weil/Weil/Definitions.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Definitions.lean",
+            "bytes": 14490,
+            "sha256": "D646F175825AB611497DE9C5331E867EDFEAD58013C01394D812C8A6BC8DE26B"
+          },
+          {
+            "path": "Weil/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/RationalCohomologyFrobenius.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/RationalCohomologyFrobenius.lean",
+            "bytes": 4958,
+            "sha256": "F84947786B0DBCF32A72BD63A66C5DA5F1B3ACE9C7EADA6E8638A49A9F3DB12D"
+          },
+          {
+            "path": "Weil/Weil/AlgebraicGeometry/EtaleCohomology/Trace/RepresentationSheafTrivialConstant.lean.txt",
+            "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/RepresentationSheafTrivialConstant.lean",
+            "bytes": 40632,
+            "sha256": "66A56475D5FA45F588A8602426C2B7395B0BEA66B9C122672822A49C6AE5D4BA"
+          }
+        ],
+        "buildClaimed": false,
+        "scope": "Fresh FLT HEAD comparison; selected Weil and pinned Stacks purity dependencies, not full closure.",
+        "productionMutation": false,
+        "rootPinsChanged": false
+      }
+    },
+    "cicm-deligne-refresh-20261117-2277": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\review.json",
+      "sha256": "750C20645B81E7091F1B7C5DE91D78AFB2DB520447464F929915D4DF6BAEE815",
+      "review": {
+        "recordedUTC": "2026-11-17T09:14:38.422211+00:00",
+        "repository": "mkaratarakis/CICM24_Deligne",
+        "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+        "files": [
+          {
+            "path": "commit.json",
+            "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/commits/main",
+            "sha256": "F3D47CA12F6EAABAC9BD870A0F9D5147AF1694CF4AB294C7D3F2CC401D94D494",
+            "bytes": 5627
+          },
+          {
+            "path": "README.md",
+            "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/README.md",
+            "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9",
+            "bytes": 1479
+          },
+          {
+            "path": "Statement.lean.txt",
+            "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+            "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9",
+            "bytes": 7748
+          },
+          {
+            "path": "GaloisReps.lean.txt",
+            "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/GaloisReps.lean",
+            "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24",
+            "bytes": 1061
+          },
+          {
+            "path": "Frobenius.lean.txt",
+            "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Frobenius.lean",
+            "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6",
+            "bytes": 14408
+          }
+        ],
+        "findings": [
+          {
+            "file": "Frobenius.lean.txt",
+            "admittedProofTokens": 6,
+            "projectAxiomTokens": 0
+          },
+          {
+            "file": "GaloisReps.lean.txt",
+            "admittedProofTokens": 0,
+            "projectAxiomTokens": 0
+          },
+          {
+            "file": "Statement.lean.txt",
+            "admittedProofTokens": 5,
+            "projectAxiomTokens": 0
+          }
+        ],
+        "assessment": "Fresh pinned source remains a partial statement formalization with admitted proofs, including the Deligne endpoint. It cannot discharge source association or image gates. No external code imported.",
+        "productionMutation": false,
+        "buildClaimed": false
+      }
+    }
+  },
+  "localEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2285a.log",
+      "sha256": "3162AE8D4716E1D2603399AD0BD2A520942720B229C4EB17F717706E5C436C22"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2287b.log",
+      "sha256": "529744D7E97AD4911DECC1CCC62872705C3909754340ABCA59F3FA675B2B8AD7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortDeclarations2291a.log",
+      "sha256": "A39764721215B6BFCFE4471A70953524B2530DB7465EE786D9AD45C976ECC9F3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2289a.log",
+      "sha256": "26DE764DD7A97A0F315BE28B06607CAB04DD8959CEF7C6531291EC47024A866F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-dickson-canonical-preparation-2294.json",
+      "sha256": "DECDD5777C51BF4E4E7E57E1DC2AB8D0AA76A2E5DEA0D37C084D3379DF177A7A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\residual-image-public-reuse-assessment-2293.md",
+      "sha256": "9918863F7A8BFE81D27AA37DB42786D78D6DCEFA82011D1FB1A131204F21E9D0"
+    }
+  ],
+  "primarySources": [
+    "https://github.com/ImperialCollegeLondon/FLT",
+    "https://axiommath.ai/research/the-weil-conjectures-formalized-in-lean/",
+    "https://github.com/AxiomMath/Weil",
+    "https://github.com/AxiomMath/Stacks",
+    "https://github.com/anthropics/fermats-last-theorem",
+    "https://github.com/mkaratarakis/CICM24_Deligne"
+  ],
+  "scope": "Current bounded public search, selected pinned source review, locally checked Dickson adaptation. No uninspected external proof closure is certified.",
+  "productionMutation": false,
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

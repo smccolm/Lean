@@ -1,0 +1,91 @@
+{
+  "recordedUTC": "2026-11-17T12:21:05.716485+00:00",
+  "exactSourceObligations": [
+    "DUB-17: Dubon Theorem 2.6 for every genuine source non-CM primitive modular form",
+    "DUB-18: Corollary 8.2 in its full source domain"
+  ],
+  "dependencyChain": [
+    "literal entire higher symmetric-power continuation",
+    "automorphy for actual original symmetric powers",
+    "actual original residual deformation inputs",
+    "absolute irreducibility of symmetric powers on the literal cyclotomic kernel"
+  ],
+  "originalSourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility"
+  ],
+  "tasks": [
+    {
+      "modules": [
+        "SourceFiniteSubfieldIrreducible",
+        "SourceSubfieldSymmetricAbsolute",
+        "SourceFiniteLinearSymmetric",
+        "SourceGammaOneAbsoluteSymmetricResidual"
+      ],
+      "obstacleRemoved": "Embedded finite SL2 subfields need not equal the ambient finite residue field. Native three-operator invariant-subspace arguments prove all required symmetric powers absolutely irreducible."
+    },
+    {
+      "modules": [
+        "SourceSubfieldKernelIrreducible",
+        "SourceFiniteLinearKernelSymmetric",
+        "SourceGammaOneCyclotomicSymmetricResidual"
+      ],
+      "obstacleRemoved": "Restricting to the original arithmetic cyclotomic kernel retains the perfect SL2 subfield image; no new large-image premise is supplied."
+    },
+    {
+      "modules": [
+        "SourceFiniteLinearAbsoluteGalois",
+        "SourceGammaOneAbsoluteCyclotomicResidual"
+      ],
+      "obstacleRemoved": "The actual absolute-to-arithmetic Galois restriction is already proved surjective; this retains the image and gives irreducibility on the actual absolute cyclotomic kernel."
+    },
+    {
+      "modules": [
+        "SourceResidualConjugateIrreducible",
+        "SourceConjugateSymmetricSpanning",
+        "SourceFiniteLinearOriginalSpanning",
+        "SourceOriginalSymmetricSpanningProperty",
+        "SourceGammaOneSymmetricKernelSpanning"
+      ],
+      "obstacleRemoved": "Conjugation equivalence and native Burnside coefficient descent give full original-field matrix spanning. Auxiliary basis and coefficient-field witnesses are removed from this conclusion."
+    },
+    {
+      "modules": [
+        "SourceSpanningIrreducibility",
+        "SourceSpanningCoefficientExtension",
+        "SourceOriginalSymmetricAbsolute",
+        "SourceGammaOneResidueAbsoluteSymmetric"
+      ],
+      "obstacleRemoved": "Native simplicity of modules over their full endomorphism ring and matrix-unit scalar extension convert original-field spanning to absolute irreducibility over every extension of the original residue field; the final actual-form consumer discharges these inputs."
+    }
+  ],
+  "reusedSources": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\MatrixRepresentationSpanningDescent.lean",
+      "sha256": "244B67840A4B6AD6139581443822F49BB5939E574C72B7B2F24CB14487A9CEA7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\MatrixRepresentationBurnside.lean",
+      "sha256": "0D253C8BE5B41705021A181AA723933DF68C0A3882043B5563C2E8B1DA1BCA30"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\SimpleModule\\Basic.lean",
+      "sha256": "67FCB09A38F2134385948AB645664E84B16D364F2C89B1EADE3AE3DB82FF0332"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Basic.lean",
+      "sha256": "7DD9C54ED4B7C7085A6B7647A9BF2C52827141203B62126BC37285DE9E82223B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Matrix\\Basis.lean",
+      "sha256": "712030D050D4054547A805112E45019EFFC9DB8E99776CF8CAF09F281A4F3390"
+    }
+  ],
+  "shorterRouteAssessment": "Use existing finite-subfield matrix bounds and native representation, Burnside, descent and simple-module theorems. Avoid identifying the image field with the ambient field, constructing a general tensor-product coefficient amalgamation library, or reproving Burnside and endomorphism-module simplicity. The successful original-field consumers start directly from the proved actual finite-image consumer; earlier longer consumers remain proved and separately audited.",
+  "predicateSemantics": "HasOriginalSymmetricSpanning and HasOriginalSymmetricAbsoluteIrreducibility are exact displayed conclusions derived in the actual-form consumers. They are not assumptions or substitute models.",
+  "verificationBoundary": "All versioned mathematical modules compile with zero output at ordinary limits. Canonical scratch exhaustive audits are pending. No production promotion or acceptance-gate closure is claimed.",
+  "remaining": "The actual small-image alternative must be excluded in the required characteristic range for the non-CM source form. Original local deformation and regularity conditions, automorphy, and literal higher symmetric-power continuation remain unproved. Independent purity is not an extra gate of the final native analytic criterion; purity from unproved continuation cannot be used upstream circularly.",
+  "sourceScopeChanged": false,
+  "proofLimitsChanged": false,
+  "rootPinsChanged": false
+}

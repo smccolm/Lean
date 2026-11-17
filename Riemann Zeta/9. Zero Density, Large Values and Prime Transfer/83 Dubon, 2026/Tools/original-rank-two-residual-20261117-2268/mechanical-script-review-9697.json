@@ -1,0 +1,52 @@
+{
+  "syntax": "PASS",
+  "countsAndScopeChecks": "PASS",
+  "reviewed": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_original_rank_two_9697.py",
+      "sha256": "B4EC2027EFCEC675BAFF84CCEBB1B7C99B194FEB73C8028C8B9FFE7D35F04939"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_original_rank_two_9697.py",
+      "sha256": "86583FB63E021406161844C2CF7D505AFC8FC4701403974B4D2A5042A67CD4B2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_original_rank_two_9697.py",
+      "sha256": "B55BF2AAD19278F158F3F473E5AF0DA4B3164052D9098271534C184928C271A8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_original_rank_two_9697.py",
+      "sha256": "D319C670ECE6184213ABF4B058F5825A08678CBA16D1A5A2E58C186DC6733984"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_original_rank_two_global_ownership_9697.py",
+      "sha256": "030D4612DD64F6997CC64D9819B4AC08669C48C904624C1116F4413E184EF6F4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_original_rank_two_production_ownership_9697.py",
+      "sha256": "1524463D4A868562F32FB9208B0A01E1731905A24E62436B965A9D0A31ED069F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_original_rank_two_canonical_9697.py",
+      "sha256": "4FD3B992B9A1C4691606D660BB9662632B9AF54E178ECF1E58F94A1238888AF1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_original_rank_two_9697.ps1",
+      "sha256": "DC03CD8970FB75B188E1A4085F557A9A8EF7BDB802540DF3A5947C5B8EA17D65"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_original_rank_two_9697.ps1",
+      "sha256": "299D9B650FE1477347D429FBDD406597F0581950793F5AA5ADB2BC0755D118FE"
+    }
+  ],
+  "modules": 52,
+  "queries": 80,
+  "exhaustiveScratch": 186,
+  "valueEdges": 159,
+  "scopes": 6,
+  "consumers": 27948,
+  "constructions": 3105,
+  "predecessor": 9645,
+  "productionMutation": false,
+  "notes": "Six complete scratch receipts, unchanged mathematical bodies, exact ownership and full sequential verification retained. Canonical archive description corrected to the actual rank-two/local/determinant scope before execution."
+}

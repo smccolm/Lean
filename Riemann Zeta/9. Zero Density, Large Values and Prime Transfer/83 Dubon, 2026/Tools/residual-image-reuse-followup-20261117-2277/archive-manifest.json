@@ -1,0 +1,46 @@
+{
+  "recordedUTC": "2026-11-17T09:16:33.633650+00:00",
+  "status": "Fresh pinned public source review; no Lean production changes.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\commit.json",
+      "path": "Tools/residual-image-reuse-followup-20261117-2277/commit.json",
+      "sha256": "F3D47CA12F6EAABAC9BD870A0F9D5147AF1694CF4AB294C7D3F2CC401D94D494"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\Frobenius.lean.txt",
+      "path": "Tools/residual-image-reuse-followup-20261117-2277/Frobenius.lean.txt",
+      "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\GaloisReps.lean.txt",
+      "path": "Tools/residual-image-reuse-followup-20261117-2277/GaloisReps.lean.txt",
+      "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\README.md",
+      "path": "Tools/residual-image-reuse-followup-20261117-2277/README.md.txt",
+      "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\review.json",
+      "path": "Tools/residual-image-reuse-followup-20261117-2277/review.json",
+      "sha256": "750C20645B81E7091F1B7C5DE91D78AFB2DB520447464F929915D4DF6BAEE815"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cicm-deligne-refresh-20261117-2277\\Statement.lean.txt",
+      "path": "Tools/residual-image-reuse-followup-20261117-2277/Statement.lean.txt",
+      "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9"
+    }
+  ],
+  "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+  "reportUpdate": {
+    "path": "Dubon Original Arithmetic Association Assessment 2026-11-17.md",
+    "previousSha256": "0AC34E44A195101840F8531DB7F46EE79D3BF7621628F4FF5261D2F75065AA9F",
+    "currentSha256": "6D4C8C7AC4F45A3A967CA78F98A55F44DFCAB47AA3099ECDB03C89F2A3F807E7",
+    "reason": "Successful permitted network retry resolves the previously documented freshness limitation. The initial assessment and failed-access record remain frozen in the prior promotion archive."
+  },
+  "productionModules": 9697,
+  "proofStatusChanged": false,
+  "rootPinsChanged": false
+}

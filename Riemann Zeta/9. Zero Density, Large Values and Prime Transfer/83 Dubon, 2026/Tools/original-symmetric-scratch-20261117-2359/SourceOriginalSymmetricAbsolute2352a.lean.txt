@@ -1,0 +1,31 @@
+import SourceOriginalSymmetricSpanningProperty2349a
+import SourceSpanningCoefficientExtension2351b
+
+/-! DUB-17/18 -> actual residual deformation inputs -> absolute symmetric
+irreducibility in the original residue field and basis. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- Absolute irreducibility of the original symmetric powers throughout the
+required characteristic range, over extensions of the original coefficient field. -/
+def HasOriginalSymmetricAbsoluteIrreducibility (p : ℕ) {F Γ : Type} [Field F] [Group Γ]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  ∀ n : ℕ, 2 * n < p - 1 →
+    ∀ (L : Type) (_ : Field L) (_ : Algebra F L),
+      Representation.IsIrreducible (matrixStandardRepresentation
+        (matrixCoefficientExtension (L := L) ((homogeneousSymmetricGL n).comp ρ)))
+
+/-- Full original matrix spanning supplies every absolute irreducibility
+conclusion for the original symmetric powers. -/
+theorem original_symmetric_absolute_irreducibility_of_spanning
+    (p : ℕ) {F Γ : Type} [Field F] [Group Γ]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F)
+    (h : HasOriginalSymmetricSpanning p ρ) :
+    HasOriginalSymmetricAbsoluteIrreducibility p ρ := by
+  intro n hn L hL hA
+  exact matrixRepresentation_absolute_irreducible_of_span
+    ((homogeneousSymmetricGL n).comp ρ) (h n hn)
+
+end
+end Dubon2026

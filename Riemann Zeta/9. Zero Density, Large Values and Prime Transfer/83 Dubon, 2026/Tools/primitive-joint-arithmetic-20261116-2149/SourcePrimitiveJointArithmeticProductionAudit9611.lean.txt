@@ -1,0 +1,273 @@
+import Dubon2026.SourceGammaOnePrimitiveCuspBoundary
+import Dubon2026.SourceGammaOnePrimitiveWidth
+import Dubon2026.SourceGammaOnePrimitiveWidthColumns
+import Dubon2026.SourceGammaOnePrimitiveCuspValues
+import Dubon2026.SourceGammaOnePrimitiveCuspConjugation
+import Dubon2026.SourceGammaOnePrimitiveDiamond
+import Dubon2026.SourceGammaOnePrimitiveUpperColumns
+import Dubon2026.SourceGammaOnePrimitiveFixedCosets
+import Dubon2026.SourceGammaOnePrimitiveFixedOrbit
+import Dubon2026.SourceGammaOnePrimitivePrimeOrbits
+import Dubon2026.SourceGammaOnePrimeHeckeCardinality
+import Dubon2026.SourceGammaOnePrimitiveTwoOrbits
+import Dubon2026.SourceGammaOnePrimitiveOrbitRepresentatives
+import Dubon2026.SourceGammaOnePrimitiveDividedTerm
+import Dubon2026.SourceGammaOnePrimitiveMultipliedTerm
+import Dubon2026.SourceGammaOnePrimitiveTermColumns
+import Dubon2026.SourceGammaOneFiniteBinaryBoundary
+import Dubon2026.SourceGammaOnePrimitiveBoundaryOrbit
+import Dubon2026.SourceGammaOnePrimitiveHeckeTrace
+import Dubon2026.SourceGammaOnePrimitiveColumnBoundary
+import Dubon2026.SourceGammaOnePrimitiveColumnHecke
+import Dubon2026.SourceGammaOnePrimitiveColumnDiamond
+import Dubon2026.SourceGammaOnePrimitiveHeckeDiamondWords
+import Dubon2026.SourceGammaOnePrimitiveJointSquare
+import Dubon2026.SourceGammaOnePrimitiveUnitActions
+import Dubon2026.SourceGammaOnePrimitiveUnitHecke
+import Dubon2026.SourceGammaOnePrimitiveBoundaryQuadratic
+import Dubon2026.SourceGammaOnePrimitiveBoundaryGalois
+import Dubon2026.SourceGammaOnePrimitiveBoundaryDescent
+import Dubon2026.SourceGammaOnePrimitiveJointRing
+import Dubon2026.SourceGammaOnePrimitiveJointCharacter
+import Dubon2026.SourceGammaOnePrimitiveJointCharacterValues
+import Dubon2026.SourceGammaOnePrimitiveBoundaryGaloisWords
+import Dubon2026.SourceGammaOnePrimitiveJointGalois
+import Dubon2026.SourceGammaOnePrimitiveJointDescent
+import Dubon2026.SourceGammaOneGeometricPrimitiveJointCharacter
+import Dubon2026.SourceGammaOnePrimitiveJointFrobenius
+import Dubon2026.SourceGammaOnePrimitiveBoundaryOperatorCommute
+import Dubon2026.SourceUnitQuadraticCommutation
+import Dubon2026.SourceGammaOnePrimitiveJointFrobeniusWitness
+import Dubon2026.SourceGammaOnePrimitiveJointArithmeticData
+import Dubon2026.SourceGammaOnePrimitiveJointArithmeticSystem
+import Dubon2026.SourceGammaOnePrimitiveJointCommutativity
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_coprime_good_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_iff_translation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_eq_of_unit_columns
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_generator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_congr
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_unipMat
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_conjugate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_conjugate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_conjugate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_eq_of_upper_columns
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_unique
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_fixed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_pow_mem_principal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_pow_fixes
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_period_one_or_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_hecke_cosets_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_orbit_card_two
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_out
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_two_orbits
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_mem_heckeUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_divided_term
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_pow_mem_heckeUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_multiplied_term
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_divided_column_compare
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_multiplied_column_compare
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_toP
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveLevelPrime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnHecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_normalizer_column
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamondOperators
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamond_word
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamond_word_zero_parabolic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_extended_word
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_original_kernel_square
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveUnitReduction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCoefficientUnits
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnSecond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveUnitReduction_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCoefficientUnits_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnHecke_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst_second_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumn_prime_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumn_hecke_quadratic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_continuous
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_frobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_inertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnOperators_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_normInertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_arithmetic_descent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointOperatorRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.instRingBinaryPrimitiveJointOperatorRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointOperatorRing_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_original_character
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_character_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_character_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst_hecke_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst_diamond_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_word
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_continuous
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_word
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_normInertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_descent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_original_character
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_ι
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_frobenius_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnSecond_diamond_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnDiamond_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamondOperators_commute
+#print axioms Dubon2026.sourceHecke_commute_of_unit_quadratic
+#print axioms Dubon2026.sourceIntegralWordRange_isMulCommutative
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_exists_local_frobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointArithmeticData
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_arithmetic_data
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_arithmetic_system
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_diamond_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_generators_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_range_isMulCommutative
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOnePrimitiveCuspBoundary, `Dubon2026.SourceGammaOnePrimitiveWidth, `Dubon2026.SourceGammaOnePrimitiveWidthColumns, `Dubon2026.SourceGammaOnePrimitiveCuspValues, `Dubon2026.SourceGammaOnePrimitiveCuspConjugation, `Dubon2026.SourceGammaOnePrimitiveDiamond, `Dubon2026.SourceGammaOnePrimitiveUpperColumns, `Dubon2026.SourceGammaOnePrimitiveFixedCosets, `Dubon2026.SourceGammaOnePrimitiveFixedOrbit, `Dubon2026.SourceGammaOnePrimitivePrimeOrbits, `Dubon2026.SourceGammaOnePrimeHeckeCardinality, `Dubon2026.SourceGammaOnePrimitiveTwoOrbits, `Dubon2026.SourceGammaOnePrimitiveOrbitRepresentatives, `Dubon2026.SourceGammaOnePrimitiveDividedTerm, `Dubon2026.SourceGammaOnePrimitiveMultipliedTerm, `Dubon2026.SourceGammaOnePrimitiveTermColumns, `Dubon2026.SourceGammaOneFiniteBinaryBoundary, `Dubon2026.SourceGammaOnePrimitiveBoundaryOrbit, `Dubon2026.SourceGammaOnePrimitiveHeckeTrace, `Dubon2026.SourceGammaOnePrimitiveColumnBoundary, `Dubon2026.SourceGammaOnePrimitiveColumnHecke, `Dubon2026.SourceGammaOnePrimitiveColumnDiamond, `Dubon2026.SourceGammaOnePrimitiveHeckeDiamondWords, `Dubon2026.SourceGammaOnePrimitiveJointSquare, `Dubon2026.SourceGammaOnePrimitiveUnitActions, `Dubon2026.SourceGammaOnePrimitiveUnitHecke, `Dubon2026.SourceGammaOnePrimitiveBoundaryQuadratic, `Dubon2026.SourceGammaOnePrimitiveBoundaryGalois, `Dubon2026.SourceGammaOnePrimitiveBoundaryDescent, `Dubon2026.SourceGammaOnePrimitiveJointRing, `Dubon2026.SourceGammaOnePrimitiveJointCharacter, `Dubon2026.SourceGammaOnePrimitiveJointCharacterValues, `Dubon2026.SourceGammaOnePrimitiveBoundaryGaloisWords, `Dubon2026.SourceGammaOnePrimitiveJointGalois, `Dubon2026.SourceGammaOnePrimitiveJointDescent, `Dubon2026.SourceGammaOneGeometricPrimitiveJointCharacter, `Dubon2026.SourceGammaOnePrimitiveJointFrobenius, `Dubon2026.SourceGammaOnePrimitiveBoundaryOperatorCommute, `Dubon2026.SourceUnitQuadraticCommutation, `Dubon2026.SourceGammaOnePrimitiveJointFrobeniusWitness, `Dubon2026.SourceGammaOnePrimitiveJointArithmeticData, `Dubon2026.SourceGammaOnePrimitiveJointArithmeticSystem, `Dubon2026.SourceGammaOnePrimitiveJointCommutativity]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_pos, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_trace, `Dubon2026.SourceFunctionField.GammaOne.character_parabolic_of_primitive_boundary, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_level, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_coprime_good_prime, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_dvd_iff_translation, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_eq_of_unit_columns, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_generator, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_congr, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_unipMat, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_conjugate, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_diamond, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_eq_of_upper_columns, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_iff, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_fixed_unique, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_fixed, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator_pow_mem_principal, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_pow_fixes, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_period_one_or_prime, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_hecke_cosets_card, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_orbit_card_two, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_out, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_exists_two_orbits, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_mem_heckeUpper, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_divided_term, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation_pow_mem_heckeUpper, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspHecke_multiplied_term, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_divided_column_compare, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_multiplied_column_compare, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimePowerHeckeWord_parabolic_iff_primitive_boundary_zero, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_hom_orbit_sum, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_native_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_toP, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_hecke, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue_normalizer_column, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamond_word, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamond_word_zero_parabolic, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_extended_word, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_original_kernel_square, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveUnitReduction_prime, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCoefficientUnits_eq, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnHecke_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst_second_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumn_prime_product, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumn_hecke_quadratic, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_frobenius, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_inertia, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnOperators_finite, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_normInertia, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_arithmetic_descent, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointOperatorRing_finite, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_original_character, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_character_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_character_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst_hecke_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst_diamond_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep_word, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_continuous, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_word, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_normInertia, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_descent, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_original_character, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_ι, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_frobenius_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnSecond_diamond_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnDiamond_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamondOperators_commute, `Dubon2026.sourceHecke_commute_of_unit_quadratic, `Dubon2026.sourceIntegralWordRange_isMulCommutative, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_exists_local_frobenius, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJoint_arithmetic_data, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_arithmetic_system, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_diamond_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_generators_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord_range_isMulCommutative]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.primitiveCuspWidth, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspGenerator, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspTranslation, `Dubon2026.SourceFunctionField.GammaOne.primitiveCuspValue, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCuspBoundary, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnBoundary, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveLevelPrime, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnHecke, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnDiamond, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryHeckeDiamondOperators, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveUnitReduction, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveCoefficientUnits, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnFirst, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveColumnSecond, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveBoundaryGaloisRep, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointOperatorRing, `Dubon2026.SourceFunctionField.GammaOne.instRingBinaryPrimitiveJointOperatorRing, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointHeckeDiamondWord, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointArithmeticData]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE PRIMITIVE JOINT ARITHMETIC AUDIT PASS: {count} theorems including private/generated declarations. Original finite primitive joint arithmetic system and exact image commutativity proved. Compatible specialization and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOnePrimitiveCuspBoundary
+
+#lint in Dubon2026.SourceGammaOnePrimitiveWidth
+
+#lint in Dubon2026.SourceGammaOnePrimitiveWidthColumns
+
+#lint in Dubon2026.SourceGammaOnePrimitiveCuspValues
+
+#lint in Dubon2026.SourceGammaOnePrimitiveCuspConjugation
+
+#lint in Dubon2026.SourceGammaOnePrimitiveDiamond
+
+#lint in Dubon2026.SourceGammaOnePrimitiveUpperColumns
+
+#lint in Dubon2026.SourceGammaOnePrimitiveFixedCosets
+
+#lint in Dubon2026.SourceGammaOnePrimitiveFixedOrbit
+
+#lint in Dubon2026.SourceGammaOnePrimitivePrimeOrbits
+
+#lint in Dubon2026.SourceGammaOnePrimeHeckeCardinality
+
+#lint in Dubon2026.SourceGammaOnePrimitiveTwoOrbits
+
+#lint in Dubon2026.SourceGammaOnePrimitiveOrbitRepresentatives
+
+#lint in Dubon2026.SourceGammaOnePrimitiveDividedTerm
+
+#lint in Dubon2026.SourceGammaOnePrimitiveMultipliedTerm
+
+#lint in Dubon2026.SourceGammaOnePrimitiveTermColumns
+
+#lint in Dubon2026.SourceGammaOneFiniteBinaryBoundary
+
+#lint in Dubon2026.SourceGammaOnePrimitiveBoundaryOrbit
+
+#lint in Dubon2026.SourceGammaOnePrimitiveHeckeTrace
+
+#lint in Dubon2026.SourceGammaOnePrimitiveColumnBoundary
+
+#lint in Dubon2026.SourceGammaOnePrimitiveColumnHecke
+
+#lint in Dubon2026.SourceGammaOnePrimitiveColumnDiamond
+
+#lint in Dubon2026.SourceGammaOnePrimitiveHeckeDiamondWords
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointSquare
+
+#lint in Dubon2026.SourceGammaOnePrimitiveUnitActions
+
+#lint in Dubon2026.SourceGammaOnePrimitiveUnitHecke
+
+#lint in Dubon2026.SourceGammaOnePrimitiveBoundaryQuadratic
+
+#lint in Dubon2026.SourceGammaOnePrimitiveBoundaryGalois
+
+#lint in Dubon2026.SourceGammaOnePrimitiveBoundaryDescent
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointRing
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointCharacter
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointCharacterValues
+
+#lint in Dubon2026.SourceGammaOnePrimitiveBoundaryGaloisWords
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointGalois
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointDescent
+
+#lint in Dubon2026.SourceGammaOneGeometricPrimitiveJointCharacter
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointFrobenius
+
+#lint in Dubon2026.SourceGammaOnePrimitiveBoundaryOperatorCommute
+
+#lint in Dubon2026.SourceUnitQuadraticCommutation
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointFrobeniusWitness
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointArithmeticData
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointArithmeticSystem
+
+#lint in Dubon2026.SourceGammaOnePrimitiveJointCommutativity

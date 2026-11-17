@@ -1,0 +1,22 @@
+{
+  "status": "Prepared only. Predecessor9645 canonical PASS and archive, and six complete scratch receipts, are mandatory before production mutation.",
+  "modules": 52,
+  "queries": 80,
+  "theorems": 71,
+  "constructions": 9,
+  "exhaustiveScratchChecks": 186,
+  "proofValueChecks": 159,
+  "scopes": 6,
+  "receipts": {
+    "source-original-rank-two-1-scratch-receipt.json": "755ADC73D7D0473FF8243497C5BBB071DBB3340F5A3221AD14EDEB7B8AD7DD93",
+    "source-original-unramified-rank-two-1-scratch-receipt.json": "18532FB76611ECBFAF9E7936D44ED2EA8954AE5D817E096EC0ED66653D218628",
+    "source-original-arithmetic-rank-two-1-scratch-receipt.json": "424B78286F17F89FB1598A65AF9D34C0A7A3275EB8D36A706ADE2B65548209F6",
+    "source-original-residual-rank-two-1-scratch-receipt.json": "F9D8187F74C7BDE75F2EE143D981FCEDE0896C98D7F9B937AC6D79B40A4C3CED",
+    "source-original-fixed-local-residual-1-scratch-receipt.json": "35BA7283A781FA219173E92C9158E9840A3FDAEFF73643A38D66A8A4FB124386",
+    "source-original-fixed-determinant-residual-1-scratch-receipt.json": "B5C3F791ED41F7812E3C8025A09FBC8EA5D848AB4CECC0DA39419B61F6E52A33"
+  },
+  "expectedConsumers": 27948,
+  "expectedConstructions": 3105,
+  "fullGoal": "Residual irreducibility and large image, the remaining local/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. The current source consumers have prime range p greater than three. Acceptance remains 16/20; DUB-17--20 OPEN. All original source and verification criteria are unchanged.",
+  "productionMutation": false
+}

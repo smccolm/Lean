@@ -1,0 +1,55 @@
+import Dubon2026.SourceSpanningIrreducibility
+import Mathlib.Data.Matrix.Basis
+import Dubon2026.MatrixAdjointScalarDescent
+
+/-! DUB-17/18 -> actual original residual deformation inputs -> absolute
+irreducibility from original matrix spanning, via matrix units and native
+endomorphism-module simplicity. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- Spanning by the original representation matrices remains full spanning
+under every extension of the original coefficient field. -/
+theorem matrixRepresentation_span_eq_top_coefficientExtension
+    {G K L ι : Type} [Group G] [Field K] [Field L] [Algebra K L]
+    [Fintype ι] [DecidableEq ι]
+    (ρ : G →* GeneralLinearGroup ι K)
+    (h : Submodule.span K (Set.range (fun g => (ρ g).val)) = ⊤) :
+    Submodule.span L (Set.range (fun g =>
+      (matrixCoefficientExtension (L := L) ρ g).val)) = ⊤ := by
+  let S := Submodule.span L (Set.range (fun g =>
+    (matrixCoefficientExtension (L := L) ρ g).val))
+  let T := (S.restrictScalars K).comap (Algebra.linearMap K L).mapMatrix
+  have ht : Submodule.span K (Set.range (fun g => (ρ g).val)) ≤ T := by
+    apply Submodule.span_le.mpr
+    rintro M ⟨g, rfl⟩
+    exact Submodule.subset_span ⟨g, rfl⟩
+  have hm (M : Matrix ι ι K) : M.map (algebraMap K L) ∈ S :=
+    ht (by rw [h]; exact Submodule.mem_top)
+  have hu (i j : ι) : Matrix.single i j (1 : L) ∈ S := by
+    simpa only [Matrix.map_single, map_one] using hm (Matrix.single i j 1)
+  apply top_unique
+  intro M _
+  rw [Matrix.matrix_eq_sum_single M]
+  apply Submodule.sum_mem
+  intro i _
+  apply Submodule.sum_mem
+  intro j _
+  have hx := S.smul_mem (M i j) (hu i j)
+  simpa only [Matrix.smul_single, smul_eq_mul, mul_one] using hx
+
+/-- Full original matrix spanning implies irreducibility after every
+extension of the original coefficient field. -/
+theorem matrixRepresentation_absolute_irreducible_of_span
+    {G K L ι : Type} [Group G] [Field K] [Field L] [Algebra K L]
+    [Fintype ι] [DecidableEq ι] [Nonempty ι]
+    (ρ : G →* GeneralLinearGroup ι K)
+    (h : Submodule.span K (Set.range (fun g => (ρ g).val)) = ⊤) :
+    Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) ρ)) :=
+  matrixRepresentation_irreducible_of_span _
+    (matrixRepresentation_span_eq_top_coefficientExtension ρ h)
+
+end
+end Dubon2026

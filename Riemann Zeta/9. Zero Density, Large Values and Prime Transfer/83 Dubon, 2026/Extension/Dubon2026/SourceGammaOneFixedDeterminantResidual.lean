@@ -1,0 +1,95 @@
+import Dubon2026.SourceGammaOneFixedLocalResidual
+import Dubon2026.SourceResidualCyclotomicDeterminant
+
+/-! DUB-17/18 -> original residual association -> fixed determinant.
+Reuse the original continuous arithmetic character comparison to identify
+the determinant globally from the actual fixed-local Frobenius data.
+No determinant or representation hypothesis is supplied by this consumer. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+
+/-- The actual original residual action has its global cyclotomic weight
+determinant and retains the exact fixed-local Hecke data and oddness. -/
+theorem exists_gammaOne_original_fixedDeterminant_residual
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p) :
+    letI := sourcePrimitiveCoefficientField_numberField f hk
+    letI := rationalPrimeLocalField_charZero p (Fact.out : p.Prime)
+    let F := rationalPrimeLocalField p (Fact.out : p.Prime)
+    let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+    ∃ (u : UniformSpace L) (_ : ValuativeRel L),
+      letI : TopologicalSpace L := u.toTopologicalSpace
+      letI : TopologicalSpace 𝓀[L] :=
+        inferInstanceAs (TopologicalSpace (𝒪[L] ⧸ IsLocalRing.maximalIdeal 𝒪[L]))
+      IsUniformAddGroup L ∧ IsNonarchimedeanLocalField L ∧
+      (ValuativeRel.valuation F).HasExtension (ValuativeRel.valuation L) ∧
+      FiniteDimensional F L ∧ Finite 𝓀[L] ∧ DiscreteTopology 𝓀[L] ∧
+      ∃ hchar : CharP 𝓀[L] p, letI := hchar;
+      ∃ τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] L,
+      ∃ (ρint : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+          Matrix.GeneralLinearGroup (Fin 2) 𝒪[L])
+        (ρres : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+          Matrix.GeneralLinearGroup (Fin 2) 𝓀[L]),
+        Continuous ρint ∧ Continuous ρres ∧
+        (∀ g i j, (ρres g).val i j = IsLocalRing.residue 𝒪[L] ((ρint g).val i j)) ∧
+        (Matrix.GeneralLinearGroup.det.comp ρres =
+          (sourceArithmeticCyclotomicUnitCharacter (F := 𝓀[L]) p
+            ((Q * p : ℕ) : 𝓞 ℚ) ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩).toMonoidHom ^
+              Int.toNat (k - 1)) ∧
+        (RingHom.ker (sourcePrimitiveResidualHeckeCharacter f hk τ)).IsMaximal ∧
+        (Set.range ρres).Finite ∧
+        (∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+      (∀ g ∈ rationalPrimeNormInertia q hq,
+        ρres (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq g) = 1) ∧
+      ∀ g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq),
+        (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+          (rationalPrimeLocalClosure q hq)), g • z = z ^ q) →
+        let a : 𝓀[L] := sourcePrimitiveResidualHeckeCharacter f hk τ
+          ⟨Dubon2026.cuspHeckeLinear Q k q,
+            Algebra.subset_adjoin ⟨(⟨q, hq.pos⟩ : ℕ+), rfl⟩⟩
+        let A := (ρres (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq g)).val
+        A.charpoly = (Polynomial.X : Polynomial 𝓀[L]) ^ 2 - Polynomial.C a * (Polynomial.X : Polynomial 𝓀[L]) +
+          Polynomial.C ((q : 𝓀[L]) ^ Int.toNat (k - 1)) ∧
+        A.trace = a ∧ A.det = (q : 𝓀[L]) ^ Int.toNat (k - 1)) ∧
+        ∀ e : Qbar →ₐ[ℚ] ℂ,
+          let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+            (sourceAbsoluteComplexConjugation e)
+          (ρres g).val.det = -1 ∧ Matrix.trace (ρres g).val = 0 := by
+  letI := sourcePrimitiveCoefficientField_numberField f hk
+  letI := rationalPrimeLocalField_charZero p (Fact.out : p.Prime)
+  let F := rationalPrimeLocalField p (Fact.out : p.Prime)
+  let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+  have hs := exists_gammaOne_original_fixedLocal_residual Q p f hk hlarge
+  dsimp only at hs
+  obtain ⟨u, v, hu, hv, hext, hfin, hfinite, hdiscrete, hchar,
+    τ, ρint, ρres, hi, hr, hred, hmax, himage, hlocal, hodd⟩ := hs
+  letI : UniformSpace L := u
+  letI : TopologicalSpace L := u.toTopologicalSpace
+  letI : ValuativeRel L := v
+  letI : TopologicalSpace 𝓀[L] :=
+    inferInstanceAs (TopologicalSpace (𝒪[L] ⧸ IsLocalRing.maximalIdeal 𝒪[L]))
+  letI : DiscreteTopology 𝓀[L] := hdiscrete
+  letI : CharP 𝓀[L] p := hchar
+  refine ⟨u, v, hu, hv, hext, hfin, hfinite, hdiscrete, hchar,
+    τ, ρint, ρres, hi, hr, hred, ?_, hmax, himage, hlocal, hodd⟩
+  have hnonzero : Q * p ≠ 0 := mul_ne_zero (NeZero.ne Q) (Fact.out : p.Prime).ne_zero
+  apply sourceArithmetic_determinant_eq_cyclotomic_of_frobenius p (Fact.out : p.Prime)
+    𝓀[L] ((Q * p : ℕ) : 𝓞 ℚ) ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩
+    (k - 1).toNat ρres hr (Q * p).primeFactors
+    (Nat.mem_primeFactors.mpr ⟨Fact.out, dvd_mul_left p Q, hnonzero⟩)
+  intro q hq hqS g hg
+  have ha : ¬q ∣ Q * p := fun hd =>
+    hqS (Nat.mem_primeFactors.mpr ⟨hq, hd, hnonzero⟩)
+  exact ((hlocal q hq ha).2 g hg).2.2
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

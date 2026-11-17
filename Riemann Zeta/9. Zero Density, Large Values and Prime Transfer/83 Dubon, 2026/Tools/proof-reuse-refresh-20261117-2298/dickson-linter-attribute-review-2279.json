@@ -1,0 +1,15 @@
+{
+  "status": "Compatibility trials only; not accepted or promoted",
+  "finding": "The initial syntax review recorded file-level linter options but missed per-declaration nolint unusedArguments attributes. These are now explicitly removed in fresh variants. Prior compatibility logs do not constitute full policy acceptance. All original evidence remains intact.",
+  "requirements": "No linter suppression may enter accepted scratch or production. Run exhaustive axiom checks and all sixteen linters before any promotion.",
+  "affected": [
+    "NatClassEquation",
+    "PGLBasic",
+    "PSLBasic",
+    "PartitionHelpers",
+    "CyclicPartition",
+    "RecognitionA5",
+    "FieldReconstruction"
+  ],
+  "productionMutation": false
+}

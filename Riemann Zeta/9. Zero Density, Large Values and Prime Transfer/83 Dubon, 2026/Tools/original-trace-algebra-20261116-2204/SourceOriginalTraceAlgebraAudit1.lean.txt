@@ -1,0 +1,74 @@
+import SourceTraceDeterminantTrilinear
+import SourceGroupAlgebraTrace
+import SourceGroupTraceTrilinear
+import SourceTraceRadical
+import SourceTraceRadicalQuotient
+import SourceTraceQuotientQuadratic
+import SourceTraceIdempotentCorner
+import SourceActualTraceAlgebra
+import SourceGammaOneOriginalTraceAlgebra
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.traceDeterminant_trilinear
+#print axioms Dubon2026.sourceGroupTrace
+#print axioms Dubon2026.sourceGroupTrace_of
+#print axioms Dubon2026.sourceGroupTrace_cyclic
+#print axioms Dubon2026.sourceGroupTrace_trilinear
+#print axioms Dubon2026.sourceTraceRadical
+#print axioms Dubon2026.sourceTraceRadical_mem
+#print axioms Dubon2026.sourceTraceRadical_isTwoSided
+#print axioms Dubon2026.sourceTraceRadical_trace_zero
+#print axioms Dubon2026.sourceTraceQuotientLinear
+#print axioms Dubon2026.sourceTraceQuotientLinear_mk
+#print axioms Dubon2026.sourceTraceQuotientLinear_cyclic
+#print axioms Dubon2026.sourceTraceQuotientLinear_nondegenerate
+#print axioms Dubon2026.sourceTraceRadical_polarized
+#print axioms Dubon2026.sourceTraceQuotient_polarized
+#print axioms Dubon2026.traceOneIdempotent_corner_scalar
+#print axioms Dubon2026.exists_algebra_of_trace_determinant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra
+
+private def runOriginalTraceAlgebraAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceTraceDeterminantTrilinear, `SourceGroupAlgebraTrace, `SourceGroupTraceTrilinear, `SourceTraceRadical, `SourceTraceRadicalQuotient, `SourceTraceQuotientQuadratic, `SourceTraceIdempotentCorner, `SourceActualTraceAlgebra, `SourceGammaOneOriginalTraceAlgebra]
+  let theorems : Array Name := #[`Dubon2026.traceDeterminant_trilinear, `Dubon2026.sourceGroupTrace_of, `Dubon2026.sourceGroupTrace_cyclic, `Dubon2026.sourceGroupTrace_trilinear, `Dubon2026.sourceTraceRadical_mem, `Dubon2026.sourceTraceRadical_trace_zero, `Dubon2026.sourceTraceQuotientLinear_mk, `Dubon2026.sourceTraceQuotientLinear_cyclic, `Dubon2026.sourceTraceQuotientLinear_nondegenerate, `Dubon2026.sourceTraceRadical_polarized, `Dubon2026.sourceTraceQuotient_polarized, `Dubon2026.traceOneIdempotent_corner_scalar, `Dubon2026.exists_algebra_of_trace_determinant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra]
+  let constructions : Array Name := #[`Dubon2026.sourceGroupTrace, `Dubon2026.sourceTraceRadical, `Dubon2026.sourceTraceRadical_isTwoSided, `Dubon2026.sourceTraceQuotientLinear]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL TRACE ALGEBRA AUDIT PASS: {count} theorems including private/generated declarations. Original trace algebra with nondegenerate pairing and scalar corners proved; actual rank-two matrices and source gates remain OPEN."
+
+#eval runOriginalTraceAlgebraAudit
+
+#lint in SourceTraceDeterminantTrilinear
+#lint in SourceGroupAlgebraTrace
+#lint in SourceGroupTraceTrilinear
+#lint in SourceTraceRadical
+#lint in SourceTraceRadicalQuotient
+#lint in SourceTraceQuotientQuadratic
+#lint in SourceTraceIdempotentCorner
+#lint in SourceActualTraceAlgebra
+#lint in SourceGammaOneOriginalTraceAlgebra

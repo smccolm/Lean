@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-11-17T09:01:16.605834+00:00",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> symmetric-power continuation -> automorphy -> actual original residual image conditions -> finite projective image classification and subfield conjugacy",
+  "source": "ImperialCollegeLondon/FLT@478c1013cd29c27d72f57aa8b691fa46083664b3",
+  "toolchain": "Lean4.34.0-rc1 / Mathlib1ae49302b2b2d46628179eddf2c7ff0025082c8b",
+  "fetchedModules": 14,
+  "closureManifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\review.json",
+    "sha256": "A923245B5DAB0DA536AF0B17DF37B2AAAB9A77DA37FEA5306F7CBF5FFF1812E1"
+  },
+  "findings": [
+    "The complete FLT import closure of the classification proof endpoint was fetched with hashes and license. It includes 12 substantive classification/helper modules and the two public API modules.",
+    "The public Defs module has admitted copies of the classification statements. No occurrence of either admitted declaration name was found in the 12 proof modules. This is only a static reference check, not an axiom-closure proof.",
+    "The 12 substantive proof modules contain no detected sorry/admit/project axioms/native_decide/unsafe syntax. They do disable style linters and contain several local transparency options. These options will not enter this project; adaptations require normal limits and all standard linters.",
+    "Only Mathlib.LinearAlgebra.Matrix.Action was absent by path from the pinned Mathlib. Native Mathlib.Data.Matrix.Action supplies its structures and most declarations; this is primarily an import relocation, with any remaining lemma bridge still to check.",
+    "WildClassification concludes abstract group isomorphisms, but FieldReconstruction and PSLRecognition also contain explicit projective orbit and subfield/conjugacy lemmas that may serve the exact matrix-image interface."
+  ],
+  "route": "First perform bounded compatibility trials using only literal upstream field/group definitions and proof modules, omitting the admitted public declarations entirely. Reuse the native matrix-action file. Preserve license/provenance and failed variants. A successful trial does not authorize a production claim until the actual classifier, source-image bridge and full audits are assembled.",
+  "obstacles": [
+    "The actual original non-CM action still needs arithmetic reducible/dihedral/exceptional-image exclusions. Classification alone does not supply them.",
+    "Subfield conjugacy and coefficient-field/basis compatibility are needed for the existing full-SL2 consumers.",
+    "The reviewed explicit arithmetic large-image bounds use Deligne in a branch; avoid circular reuse toward the still-open Deligne/Sato-Tate inputs."
+  ],
+  "productionMutation": false,
+  "externalBuildClaimed": false,
+  "rootPinsChanged": false
+}

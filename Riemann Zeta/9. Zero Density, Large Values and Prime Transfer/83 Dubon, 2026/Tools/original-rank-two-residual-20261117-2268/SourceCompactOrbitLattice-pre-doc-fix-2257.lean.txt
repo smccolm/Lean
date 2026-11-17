@@ -1,0 +1,78 @@
+import SourceIntegralCoordinateLattice
+import Dubon2026.SourceIntegralLatticeRank
+import Mathlib.Topology.Instances.Matrix
+import Mathlib.Topology.Algebra.Group.Units
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
+
+/-! DUB-17/18 -> original all-weight residual realization -> actual invariant lattice.
+Take the integer span of the two standard-basis orbits of the actual continuous
+compact-group action. Compactness gives finite generation, the identity gives
+full span, and group multiplication gives invariance. Native lattice rank and
+freeness will then discharge the existing residue-realization consumer. -/
+namespace Dubon2026
+noncomputable section
+open scoped ValuativeRel
+open Matrix
+variable {E G : Type*} [Field E] [ValuativeRel E] [Group G]
+variable (ρ : G →* GeneralLinearGroup (Fin 2) E)
+
+def sourceCompactOrbitLattice : Submodule 𝒪[E] (Fin 2 → E) :=
+  Submodule.span 𝒪[E] (Set.range fun x : G × Fin 2 =>
+    (ρ x.1).val *ᵥ (Pi.basisFun E (Fin 2) x.2))
+
+theorem sourceCompactOrbitLattice_span :
+    Submodule.span E (sourceCompactOrbitLattice ρ : Set (Fin 2 → E)) = ⊤ := by
+  apply top_le_iff.mp
+  rw [← (Pi.basisFun E (Fin 2)).span_eq]
+  apply Submodule.span_mono
+  rintro _ ⟨i, rfl⟩
+  apply Submodule.subset_span
+  refine ⟨(1, i), ?_⟩
+  simp only [map_one, Units.val_one, one_mulVec]
+
+theorem sourceCompactOrbitLattice_invariant (g : G) (v : Fin 2 → E)
+    (hv : v ∈ sourceCompactOrbitLattice ρ) : (ρ g).val *ᵥ v ∈ sourceCompactOrbitLattice ρ := by
+  let u := (Matrix.mulVecLin (ρ g).val).restrictScalars 𝒪[E]
+  change u v ∈ sourceCompactOrbitLattice ρ
+  induction hv using Submodule.span_induction with
+  | mem v hv =>
+    obtain ⟨⟨h, i⟩, rfl⟩ := hv
+    apply Submodule.subset_span
+    refine ⟨(g * h, i), ?_⟩
+    change (ρ (g * h)).val *ᵥ (Pi.basisFun E (Fin 2) i) =
+      (ρ g).val *ᵥ ((ρ h).val *ᵥ (Pi.basisFun E (Fin 2) i))
+    simp only [map_mul, Units.val_mul, mulVec_mulVec]
+  | zero => simpa only [map_zero] using (sourceCompactOrbitLattice ρ).zero_mem
+  | add x y hx hy ihx ihy =>
+    rw [map_add]
+    exact (sourceCompactOrbitLattice ρ).add_mem ihx ihy
+  | smul a x hx ih =>
+    rw [map_smul]
+    exact (sourceCompactOrbitLattice ρ).smul_mem a ih
+
+theorem sourceCompactOrbitLattice_fg
+    [UniformSpace E] [IsNonarchimedeanLocalField E]
+    [TopologicalSpace G] [CompactSpace G] (hρ : Continuous ρ) :
+    (sourceCompactOrbitLattice ρ).FG := by
+  letI : TopologicalSpace (Fin 2) := ⊥
+  letI : DiscreteTopology (Fin 2) := ⟨rfl⟩
+  have hb : Continuous (Pi.basisFun E (Fin 2)) := continuous_of_discreteTopology
+  have hc : Continuous (fun x : G × Fin 2 =>
+      (ρ x.1).val *ᵥ (Pi.basisFun E (Fin 2) x.2)) :=
+    ((Units.continuous_val.comp hρ).comp continuous_fst).matrix_mulVec (hb.comp continuous_snd)
+  exact compact_span_finite_of_open_lattice (sourceIntegralCoordinateLattice E)
+    (sourceIntegralCoordinateLattice_fg E) (sourceIntegralCoordinateLattice_open E)
+    _ (isCompact_range hc)
+
+theorem sourceCompactOrbitLattice_free_finite_rank
+    [UniformSpace E] [IsNonarchimedeanLocalField E]
+    [TopologicalSpace G] [CompactSpace G] (hρ : Continuous ρ) :
+    Module.Free 𝒪[E] (sourceCompactOrbitLattice ρ) ∧
+    Module.Finite 𝒪[E] (sourceCompactOrbitLattice ρ) ∧
+    Module.finrank 𝒪[E] (sourceCompactOrbitLattice ρ) = 2 := by
+  have h := fullIntegralLattice_free_finite_rank (sourceCompactOrbitLattice ρ)
+    (sourceCompactOrbitLattice_fg ρ hρ) (sourceCompactOrbitLattice_span ρ)
+  simpa only [Module.finrank_pi, Module.finrank_self, Fintype.card_fin, mul_one] using h
+
+end
+end Dubon2026

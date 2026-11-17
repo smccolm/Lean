@@ -1,0 +1,1277 @@
+{
+  "status": "Scratch PASS: exact original-form projective alternatives, matrix conjugacy, linear subfield bounds and finite coefficient descent. Production integration and assembled verification pending; acceptance remains 16/20 with DUB-17--20 OPEN.",
+  "modules": 28,
+  "publicQueries": 436,
+  "exhaustiveTheorems": 939,
+  "otherDeclarations": 210,
+  "linterScopes": 28,
+  "lintersPerScope": 16,
+  "requiredProofValueEdgesByConsumer": [
+    36,
+    45
+  ],
+  "pinnedSourceEvidence": "Tools/proof-reuse-refresh-20261117-2298/manifest.json",
+  "scopeReconciliation": "The original 23-module closure and the additional five-module finite descent scope are disjoint, exactly enumerated and separately audited. The final source consumer value audit traverses all 28 modules and the native Dubon proof closure.",
+  "files": [
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification.lean.txt",
+      "sha256": "8CA67616A649516F2BDC0F14E040AFA80F6F5A30BFFBB2AC030AA496E7DBE98A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2284a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2284a.lean.txt",
+      "sha256": "78E59174155EEF20B7279A018780BCA337884F392770D41A09E9907F17E00B59"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2284a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2287a.lean.txt",
+      "sha256": "16E357912EB6D7ED558448B3D2D902B5AD503CF00C7B143B98407EDE659BE244"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2287b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2287b.lean.txt",
+      "sha256": "9A4AB8734B1D8438A3771874BCBE5E6E816D113D420AC780E979EC5858C86CFD"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonClassification2287b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition.lean.txt",
+      "sha256": "DE9C36E93E54AB9E5CBBE68B747D134DA28A7A4B528FA3423C1DDE06B5320EA6"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2275a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2275a.log",
+      "sha256": "F37560D9DEF6DA162A9F58F6A6172704A9F650AFE0FCBE27F511DEA580AB2181"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2275b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2275b.lean.txt",
+      "sha256": "7545B77D4FEF52FE50AD65BAF4FDE99671C76974D6125F13478CBEF03D3ED9E3"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2275b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2287a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2287a.lean.txt",
+      "sha256": "AA0EF08ACF72A3F2D9FF55CB948AA4A703FC27D995995185B72159B53582A3F4"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonCyclicPartition2287a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction.lean.txt",
+      "sha256": "38CDE948CA816BA19132093AFC4799486580476722F305B4CAB68A3F5ADB7B1F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2278a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2278a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2278b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2278b.lean.txt",
+      "sha256": "A38641D23D8B58ED6B261FF7DA17808B4C1413BE222FC2BA8898F7D8ECA16B4E"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2278b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2287a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2287a.lean.txt",
+      "sha256": "E6BCFF35636AA0AD893882C7836ED46BF2B815AB1E6C9487310D5EEC2E75C020"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonFieldReconstruction2287a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonMatrixAlternatives-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonMatrixAlternatives-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonMatrixAlternatives.lean.txt",
+      "sha256": "9C9F5FFF867620B184A9F05436F2A89426C75363872B4796913FBF4957130034"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonMatrixAlternatives2303a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonMatrixAlternatives2303a.lean.txt",
+      "sha256": "836316E7C2EE75731D542BE88AE748203BA810FE287C343CC4C3EE12400061C7"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonMatrixAlternatives2303a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation.lean.txt",
+      "sha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270a.log",
+      "sha256": "D50832760116C2A41F2CBE73C53181A3226D739E2CBD3201E2EC92683BA550B4"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270b.log",
+      "sha256": "CC34323AA5FD566BE2CCCEA3DC7D1AE92F02D9187A6F630A43B6F0621EC822A2"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270d.lean.txt",
+      "sha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonNatClassEquation2270d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonObjects-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonObjects-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonObjects.lean.txt",
+      "sha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonObjects2269a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonObjects2269a.lean.txt",
+      "sha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonObjects2269a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic.lean.txt",
+      "sha256": "C7E3C1417BEB131724D993206FC879D98E6C1BE7AC1B8C69151AE101C104CF1A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271a.log",
+      "sha256": "3E9A73AAF352A8F3A6C726E4E9D30DB7D29B17D62AEA2391D947DC9C06C1B734"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271c.lean.txt",
+      "sha256": "B471B32D4B1D4D022B09511E6955407B96EDFC4B98CC7DD8F9D7AEC8006B2AAA"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPGLBasic2271c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic.lean.txt",
+      "sha256": "375FD52F83B1E923C6570DBB3C3597C5EA2173A738CF555AE09717F1CFC94ED7"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273a.log",
+      "sha256": "3FC34FCC4FBA6F43C29CAC1DB9C38FEE3B074E0D0B549DCB322752AB229A254F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273c.lean.txt",
+      "sha256": "77F0F8FF73C2B5B48030C9A96F475D3BA36D328D9D240672311E41039844A7FC"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLBasic2273c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition.lean.txt",
+      "sha256": "F718F0F2710A607E5D153A63096CB16F1259965D5882799472EB291839C12A50"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition2281a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition2281a.lean.txt",
+      "sha256": "932DD55D060C2DEEFF4E6FF2C074E79303D605A4AB6A5EECC2C88BA7372F8C2E"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition2281a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition2287a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition2287a.lean.txt",
+      "sha256": "7C1B0E0473C57798EF822D4E45B6BA5A847C4D1CA6E8A625E57C3C0A740F9196"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPSLRecognition2287a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers.lean.txt",
+      "sha256": "97A97557C7A15344EE321ED9E91D16B2430202A7F5B23CFB7B9BFFE1C311D7E3"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274a.log",
+      "sha256": "9ECE8B82A48DB247154BB3B0EFCF35F371D667DA5B4E509A907DD7FEA073E92B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274c.lean.txt",
+      "sha256": "B2D5375314F842E274968154A86F7DC577C0370D030FE89D08EB2FF0CE238A6F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2274c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2287a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2287a.lean.txt",
+      "sha256": "0ABF7DD48ACB3A13B401B593E0F8B6A817494D5F68DA841DFD8C40847A4A1C43"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionHelpers2287a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof.lean.txt",
+      "sha256": "A65DFFCA7EBB17D5982235F405FEAB833DC0D49A729202F92A3E049B3C330903"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2280a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2280a.lean.txt",
+      "sha256": "9A293D0526D76B6178E8A8988B5D5863BA277433886AF91DF13A8788FF2CD317"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2280a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2287a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2287a.lean.txt",
+      "sha256": "4BF86D871175A9113759F775EF32CDB8AA181D6B948FED77E6B97FE934D6D537"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2287a.log",
+      "sha256": "ECF6D9E948A33AEEB334E0434AF3AEF6D8886B5F7BAD161E05827C79DEF8E511"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2287b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2287b.lean.txt",
+      "sha256": "1262517216A02BA6EAF98BE654B027B50CE51B2CDE2F8F45FBECCAFF5193E1E3"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonPartitionProof2287b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy.lean.txt",
+      "sha256": "C071B81CA7E3F256F596E028C1D82A93A9129BA8AC87119A4C5D344B07166CF2"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy2300a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy2300a.lean.txt",
+      "sha256": "8A5F9C26A82F4B393208C25807C7E83A6F0C8D4707E479106E185D49CA2228D0"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy2300a.log",
+      "sha256": "A8229515DA3DA45D5835EEDFAB9CC5CA9E6A04C22D4385040BC9F54682D97EC5"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy2300b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy2300b.lean.txt",
+      "sha256": "C071B81CA7E3F256F596E028C1D82A93A9129BA8AC87119A4C5D344B07166CF2"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonProjectiveConjugacy2300b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonQualifiedNames2322.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonQualifiedNames2322.lean.txt",
+      "sha256": "90574CDBA9A4D6C08A4FAFAACB3B5E8536E94EB0A2E4248DE810ADDB0D501A0D"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonQualifiedNames2322.log",
+      "sha256": "E9DCB4AE518B395DD41C35A1427BD716914A309BD5B0D7AF06C9A53829015335"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA5-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA5-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA5.lean.txt",
+      "sha256": "184604518181EF8B3CE90C9C9ABFF271863F1D1D46D2E1A695542CBB2BB33044"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52276a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52276a.log",
+      "sha256": "FBFC57EF157D1A2EE01B4E380934DAC17986555D9F432E3653C9EB7E538EC4C8"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52276b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52276b.lean.txt",
+      "sha256": "EA0A4B1940CEAEA84564A7D8D8C6FEAE6D3FC52FCF740C56AC2E3EACADF982B1"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52276b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52287a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52287a.lean.txt",
+      "sha256": "8F78794CD52C577586735684720B7C5D729F12816BD2A767972854B8EE4D175A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonRecognitionA52287a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification.lean.txt",
+      "sha256": "CB088253C0DD2C3634CC182A63C2657D6D8C84CC82B1A69B1FC67950222CA145"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification2282a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification2282a.lean.txt",
+      "sha256": "DDDD1123B371DD7536F45B30940C8560565033F81AB182A7B27CA9CC4C648CD1"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification2282a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification2287a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification2287a.lean.txt",
+      "sha256": "8E26945103B4FEE273BDFAB5229031673DAC17AA242E72F13C99BB46550A9634"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonTameClassification2287a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification.lean.txt",
+      "sha256": "D0AC8F264F6E93B29CFD5CE434FC28691D70BE831FB27D0497C6DD0348E9E055"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2283a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2283a.lean.txt",
+      "sha256": "A906848622876077E57130D2AFE09772D9CF0216E5AE1B52205F04197219B475"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2283a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2287a.lean.txt",
+      "sha256": "548176F9D2B3338D42EC0ED61DEAD618D1977717690D4CB0DB510FB95DB83394"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2287b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2287b.lean.txt",
+      "sha256": "899B72D136386CF14DAFD18DFA7699A5E2C26DE6DF2454EF031AB745C78445D5"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceDicksonWildClassification2287b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneFiniteProjectiveLinearResidual-2321.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneFiniteProjectiveLinearResidual-2321.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneFiniteProjectiveLinearResidual.lean.txt",
+      "sha256": "36225DBB59960A08E522E43E9FC67680B7CBAA91C4806EDC1CC0407A7D3A4745"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneFiniteProjectiveLinearResidual2320a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneFiniteProjectiveLinearResidual2320a.lean.txt",
+      "sha256": "3C225532E2A3373D970877E184A6141304A3D205900D1DA3ED4FB6DAFBAC78D8"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneFiniteProjectiveLinearResidual2320a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveLinearResidual-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveLinearResidual-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveLinearResidual.lean.txt",
+      "sha256": "2991BFC0E95C6A0EF8AA596FFCC657CE75E4AEA06021203C8E41405E91159E76"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveLinearResidual2310a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveLinearResidual2310a.lean.txt",
+      "sha256": "1884A552C8DB59DA4E3D7A31E7EF29920CF010EC722EA321322BBF885C620535"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveLinearResidual2310a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveMatrixResidual-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveMatrixResidual-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveMatrixResidual.lean.txt",
+      "sha256": "20D3206B1FDDC2E9D5AB1E68A3268EB953AADA2ACD432DFB88D791079E9BF902"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveMatrixResidual2304a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveMatrixResidual2304a.lean.txt",
+      "sha256": "820A0849B7A3DD241CE514AF81D9F7AB0F9CADEEE299C8DCD9C1228ECB59408D"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveMatrixResidual2304a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual-2299.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual-2299.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual.lean.txt",
+      "sha256": "FF2ADC11FBE1D6591ED08793ADD2643E9540D939EDA7903B46235FE6F48F2D04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2289a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2289a.lean.txt",
+      "sha256": "035202BC6D6F6D3CF49FE6EDF7402A3C562394D4E71E0057398BC16318B4517C"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2289a.log",
+      "sha256": "26DE764DD7A97A0F315BE28B06607CAB04DD8959CEF7C6531291EC47024A866F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2292a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2292a.lean.txt",
+      "sha256": "895B1101336F43110B6CD346FE833730DD89CEDE5E4D4A08E593104C05726A33"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2292a.log",
+      "sha256": "1FC021C1C2C542D1B63CE2945E8D7E9D52445EE57F3B13E0E83ABA361176BB80"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2296a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2296a.lean.txt",
+      "sha256": "764394774F57BAC018FED84A3F7B040B3492BBC17B7B83A3B52A61944C8EA28F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceGammaOneProjectiveResidual2296a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteAudit1.lean.txt",
+      "sha256": "64D069E0F1DAC6115FAC735B91826AE419F139C208A8F31AB0DE5D8688042E65"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteAudit1.log",
+      "sha256": "CB1980B31358610DF64F750796FD3670A245EA8E678AF6E2420847B8B070A777"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteDeclarations2321.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteDeclarations2321.lean.txt",
+      "sha256": "A7162E417B4BCF447DBEDB3DD7AF0415E3E1E4839F02CE8F672A6BC07BC1C4EE"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteDeclarations2321.log",
+      "sha256": "00022211363E470173D0D863EDFA06959D682D16DC53A7C00282D100047ADAE3"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteDependencyAudit1.lean.txt",
+      "sha256": "F724E6A8CB8AF633086405EF35E9A980D1AE9D76D3018A14E3032355ADE04B04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveFiniteDependencyAudit1.log",
+      "sha256": "D3AE7EB19C7CBFD4F2DBCBCEE318B96C1FD288E5187FBA52DED07F1C20719C78"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearAudit1.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearAudit2.lean.txt",
+      "sha256": "8168C1B0BD7A937AAAB1807372C5EC647E555DEE9FA1869B9424713E58149CDD"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearAudit2.log",
+      "sha256": "3149094C1BCF2B441DD59DFD73745F285038207D08CCD5C6C3AF9FCA0DF5102C"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDeclarations2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDeclarations2311.lean.txt",
+      "sha256": "1DCC6128A6615035AC5BD2B59E945AEC40FCA77BE3E7830A6396B7EC48AA50C1"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDeclarations2311.log",
+      "sha256": "AD40D8B6E5314BBBD96E6DFCA751CA80538C1DADEE4BF70B52B89C08D6E95D3C"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDependencyAudit1.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDependencyAudit2.lean.txt",
+      "sha256": "3C434FE7288CC9917D7CA55B004F32AF4B8525BC49BD88D8738B1EEE495B55DD"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveLinearDependencyAudit2.log",
+      "sha256": "A88D78883ED41623A7AB612A9CF8EE96D00FA7A08DB23D66E157BB9E237074AB"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift.lean.txt",
+      "sha256": "7E3AC09683FC8922284AE31669D9A00D48A46572B2C2617DF12D8C0B1E0EBE9B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift2305a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift2305a.lean.txt",
+      "sha256": "349BA10B6D75CCED6F3C5844B38C7B5C099BAFDE9876C8F38177C71A04ADBD75"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift2305a.log",
+      "sha256": "AEF47D4CED58FAD128D9B6CC1F5595A2D522BD0FBA2CD0C725DEB229DEB71656"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift2305b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift2305b.lean.txt",
+      "sha256": "7E3AC09683FC8922284AE31669D9A00D48A46572B2C2617DF12D8C0B1E0EBE9B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectivePerfectLift2305b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSL2Lift-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSL2Lift-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSL2Lift.lean.txt",
+      "sha256": "A75BABDE60641BF37EF460D43A2644838528EF1F9557C2825BA6B5BB9C6303DB"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSL2Lift2306a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSL2Lift2306a.lean.txt",
+      "sha256": "B9779C4FF8928C3D853A0F6D6FC5044F1FC88467E40332F1CFBFC4417968C27B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSL2Lift2306a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds.lean.txt",
+      "sha256": "C46A04FEC816411F76DFD5DB543D785E066C92F51E938FF38FA76B1A4BFE74BA"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307a.lean.txt",
+      "sha256": "AA2A452AE2F04D8F31224E224C4DF2187046BA699DC9431C4D3B5AC48787D89A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307a.log",
+      "sha256": "465C517241472890B30A0AAB0DFFC8A5844F97265F00A1635F0DAF1A3737362F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307b.lean.txt",
+      "sha256": "59541ADDA45DB4B5F02410EFE16215437FFFFC4F1F91939203000006EE78C2C0"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307b.log",
+      "sha256": "9E4B925987D95824200CFC4E830AF84F2AEA77C09F594C822E7CD2E652FE5300"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307c.lean.txt",
+      "sha256": "2E1565962FEB6BCEE2F44ED614BEC32B3B56722108865A9C57BF6C2E595979FA"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceProjectiveSubfieldBounds2307c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient-2321.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient-2321.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient.lean.txt",
+      "sha256": "ED78529C08D3EF7FEFBA2FDC2644B2A1467FBEDC6F516214D63C2B73A438F990"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316a.lean.txt",
+      "sha256": "87565F616E3ED742D9B6F266568521795EEF307357ADC5A8207FE0BAD9AFC4A7"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316a.log",
+      "sha256": "6898EDB81A03FC567B83E84BC528383EA111442323CC7F2AAD4E7AFB343D075B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316b.lean.txt",
+      "sha256": "3A2A9877FA1FF785220D7449E5F139A574A90BAFAB69D32E67EEBFF4A765330B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316b.log",
+      "sha256": "F56478B6A5C3B2EF540C42327F1F69FE533101A3454C15D8FF576CE2772DC313"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316c.lean.txt",
+      "sha256": "0A6CE22D85DD762ECE220FD35C38B2773D03F7C758707490164FD298680E1919"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316c.log",
+      "sha256": "E7A27D77369224F116753742155D9578B36FDB4380B7115C5CE2F64557C6A0C9"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316d.lean.txt",
+      "sha256": "ED78529C08D3EF7FEFBA2FDC2644B2A1467FBEDC6F516214D63C2B73A438F990"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteAmbient2316d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds-2321.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds-2321.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds.lean.txt",
+      "sha256": "48B7F6CFEE99E1C1F911DB5F27C40C1102A50ABE8E35C54A52F32F35345AC980"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds2318a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds2318a.lean.txt",
+      "sha256": "9603023882269346CBAB78568511B7FBF3102C142D7B08B3D70F5C27D911C911"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds2318a.log",
+      "sha256": "63A883BA9E29181C2E33B85378487925B8E3297D1659ACA7BBF7846DB6985241"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds2318b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds2318b.lean.txt",
+      "sha256": "48B7F6CFEE99E1C1F911DB5F27C40C1102A50ABE8E35C54A52F32F35345AC980"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteBounds2318b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteDescent-2321.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteDescent-2321.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteDescent.lean.txt",
+      "sha256": "B8A3BB9D5C9E6169B30B6EDCADA60C6A362D5D9A65F23FB9E45CC0EBDD8FCE8F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteDescent2317a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteDescent2317a.lean.txt",
+      "sha256": "988B7A484B93F65411CBAFEF1667D17314A6F19ECD24F88919BC1B8A672E9A0A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteDescent2317a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteLinearAlternatives-2321.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteLinearAlternatives-2321.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteLinearAlternatives.lean.txt",
+      "sha256": "AE63DA0B255AA7E91EF64B09DDECE4D0D569D484AA41F8D018B9718CB25A2859"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteLinearAlternatives2319a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteLinearAlternatives2319a.lean.txt",
+      "sha256": "D92DDA6C8E948467AF0FAEF55169542DB1A51909B82C0037C028616CA66DFC0F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualFiniteLinearAlternatives2319a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives-2311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives-2311.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives.lean.txt",
+      "sha256": "3748D903E01686E0DE6CD902154F1377E79FDBF2EF2B809C0169179483943725"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives2309a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives2309a.lean.txt",
+      "sha256": "E1C9584E5652520C47C032431657C9A35149CB01A01D7A9DF17EA383D276CFA7"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives2309a.log",
+      "sha256": "DCDFA2CADB15A50D523077887B277BCDB90AE805F858014B6F97229AEF69D27E"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives2309b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives2309b.lean.txt",
+      "sha256": "CEF619E410B5B363CABE5ABC6B325DE1120A9FBCEF7E0B73D0311837D5330C30"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualLinearAlternatives2309b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification.lean.txt",
+      "sha256": "73BA1454BD010B301D4FF4AE99C777592D505476CC23B17FA8093ECB00F4F440"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2286a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2286a.lean.txt",
+      "sha256": "1A05B85C3BA19F49C146E7D819E98D5E8729029EEB5BF7332627B1C8303091CC"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2286a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2287a.lean.txt",
+      "sha256": "00887C93264D296D954CDA942A6C48251CC046FD811C3BDD71F62413E714B3AC"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2287b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2287b.lean.txt",
+      "sha256": "606054D9DD380A293BD1BFF8F53B669073951837CFAAEE2C9FCBEC223950C73E"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2287b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2292a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2292a.lean.txt",
+      "sha256": "794461FC0324E44E9FC061D787D565CAEEBEA6D2931CED516DBC6B45DC2ADC11"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/SourceResidualProjectiveClassification2292a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/build_dickson_qualified_names_2322.ps1",
+      "sha256": "EC6913D271B3DF0B0076FE72DF2D8E359BF74E4B7A36DCB9055B6237A49AD9BC"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/build_projective_finite_canonical_2321.ps1",
+      "sha256": "12FB60C94CDDA1C334F03BB5DEE3EBF907049AC3A20A85849A845B5DA7E54D6D"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/build_projective_linear_canonical_2311.ps1",
+      "sha256": "8325FA27A809BD27E5E28EDDFE8FAB4E543F79445EA1BB289CB960B5BC367487"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/Dubon2026/SourceDicksonObjects.lean.txt",
+      "sha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/Dubon2026/SourceDicksonPGLBasic.lean.txt",
+      "sha256": "616E2D123D7D68B2E45249FCB0A9322C69D65F86B31DF41DA1F2B94235C21634"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/SourceDicksonObjects.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/SourceDicksonObjects.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/SourceDicksonPGLBasic-2322b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/SourceDicksonPGLBasic-2322b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/SourceDicksonPGLBasic.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/SourceDicksonPGLBasic.log",
+      "sha256": "9F67AB7CE69BA6644886F332491344EF8B05193D08DB367653865CB646DB8D13"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/dickson-qualified-name-probe-2322/preparation.json",
+      "sha256": "AEBA01E1775DB12C8E503476EBA1764ACC1FB261BC3BA871663168FB736FAC76"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/prepare_projective_finite_canonical_2321.py",
+      "sha256": "DCAB635178EB9D86D0EC130A496CECFEDECED4176437DBD86966A1DD67C68AAD"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/prepare_projective_linear_audits_2313.py",
+      "sha256": "BC51A6CB5BBBB96FEAA17266723CBAB8AD41B85E27063846F3A68EA05B04ED52"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/prepare_projective_linear_audits_2313b.py",
+      "sha256": "D25F8D054ABB7F4796800992AD0AB81C890EB73077108A6FF43FBE1E7E5729A1"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/prepare_projective_linear_canonical_2311.py",
+      "sha256": "ADA1DF095DC311787AA37FA92FC3772951AFDA0D109F2BEA45620C560AA53C5F"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/record_projective_scratch_scopes_2324.py",
+      "sha256": "49B4D206FB38E62FAC331C775650BD33FBB5C87042D833563B2538C9556DBA0E"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/run_dickson_qualified_names_2322b.ps1",
+      "sha256": "0A46DD472AFA5BD25004266C788B7C30B38F845537CA2CB7A9F2063579D381CB"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-28-scratch-summary-2324.json",
+      "sha256": "2E6AE5033EF44E8B93806DC0BA89029426F1D57F9786ABABA991B2B29020B31E"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-finite-audit-config-2321.json",
+      "sha256": "808A8EEC35F6018FB3E5EB6B2EECA94EC5AE971E263F39BA4F408F021F57551C"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-finite-normalized-1-reuse-review-2324.json",
+      "sha256": "017BCA24C7A5552AD14AE0BF13529CF88894C8B3E24AD1174447E07E6E05209A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-finite-normalized-1-scratch-receipt.json",
+      "sha256": "B490938772C25A888E984B6B964D091E12134A31A7F1ADB4B7F5CFBDFF3E677B"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-linear-1-scratch-receipt.json",
+      "sha256": "2731666BF222A5650DA0EBC8D81530A07F2C50D69CB1A3E6BDEBF2508DF90CD1"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-linear-audit-config-2313.json",
+      "sha256": "4AEAB216BDC24D2A2E72DE35CB0F29DC969AE712890F15BA6DD722FB2C518BC2"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-linear-normalized-1-reuse-review-2324.json",
+      "sha256": "017BCA24C7A5552AD14AE0BF13529CF88894C8B3E24AD1174447E07E6E05209A"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-linear-normalized-1-scratch-receipt.json",
+      "sha256": "8CD6B02E4E0B7A5F1A5E18A1C853DEF053B73529A505DF9ADCFF2D67497EDB33"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-linear-ownership-reconciliation-2315.json",
+      "sha256": "CA40F5381DEB1118B6EAF4EEE433FD6F2872C393D9B55B278DFC304BB6E7F806"
+    },
+    {
+      "path": "Tools/projective-linear-finite-scratch-20261117-2325/source-projective-linear-preparation-2311.json",
+      "sha256": "21778ACB52481A9E5B17CA7667EE57AEB4E4039E2CF30C18E7F66C6A1B68B506"
+    }
+  ]
+}

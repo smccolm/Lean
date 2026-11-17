@@ -1,0 +1,37 @@
+import Dubon2026.SourceOriginalSymmetricAbsolute
+import Dubon2026.TraceZeroAdjointInvariants
+
+/-! DUB-17/18 -> automorphy -> original residual deformation cohomology ->
+vanishing of trace-zero adjoint invariants. Native Schur descent discharges
+this H0 input from the proved original absolute irreducibility. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- The original trace-zero adjoint invariants vanish in every required degree. -/
+def HasOriginalSymmetricAdjointVanishing (p : ℕ) {F Γ : Type} [Field F] [Group Γ]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  ∀ n : ℕ, 2 * n < p - 1 →
+    (matrixTraceZeroAdjointRepresentation ((homogeneousSymmetricGL n).comp ρ)).invariants = ⊥
+
+/-- Original absolute irreducibility discharges the trace-zero adjoint H0
+input, with the nonzero dimension derived from the same characteristic range. -/
+theorem original_symmetric_adjoint_vanishing_of_absolute
+    (p : ℕ) {F Γ : Type} [Field F] [Group Γ] [CharP F p]
+    (ρ : Γ →* GeneralLinearGroup (Fin 2) F)
+    (h : HasOriginalSymmetricAbsoluteIrreducibility p ρ) :
+    HasOriginalSymmetricAdjointVanishing p ρ := by
+  intro n hn
+  letI : Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := AlgebraicClosure F)
+        ((homogeneousSymmetricGL n).comp ρ))) :=
+    h n hn (AlgebraicClosure F) inferInstance inferInstance
+  apply matrixTraceZeroAdjointInvariants_eq_bot (L := AlgebraicClosure F) _
+    ((homogeneousSymmetricGL n).comp ρ)
+  rw [Fintype.card_fin]
+  intro hz
+  exact (Nat.not_dvd_of_pos_of_lt (Nat.succ_pos n) (by omega : n + 1 < p))
+    ((CharP.cast_eq_zero_iff F p (n + 1)).mp hz)
+
+end
+end Dubon2026

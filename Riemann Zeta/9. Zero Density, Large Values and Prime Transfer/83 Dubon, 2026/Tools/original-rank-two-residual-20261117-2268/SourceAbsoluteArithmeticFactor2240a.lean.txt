@@ -1,0 +1,45 @@
+import Dubon2026.SourceAbsoluteArithmeticRestriction
+import Mathlib.Topology.Algebra.Group.Quotient
+
+/-! DUB-17/18 -> original all-weight association -> continuous arithmetic descent.
+Literal absolute restriction is surjective. Once the actual trace construction
+discharges its kernel, native quotient factorization gives a unique continuous
+arithmetic action. This does not impose a discrete topology on local matrices. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+theorem sourceAbsoluteArithmeticRestriction_surjective (a : 𝓞 ℚ) :
+    Function.Surjective (sourceAbsoluteArithmeticRestriction a) := by
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+  exact AlgEquiv.restrictNormalHom_surjective U
+
+theorem sourceAbsoluteArithmeticRestriction_unique_factor
+    {T : Type} [Group T] [TopologicalSpace T] (a : 𝓞 ℚ)
+    (χ : Gal(Qbar/ℚ) →ₜ* T)
+    (hk : ∀ g, sourceAbsoluteArithmeticRestriction a g = 1 → χ g = 1) :
+    ∃! η : rationalArithmeticGaloisGroup a →ₜ* T,
+      ∀ g, η (sourceAbsoluteArithmeticRestriction a g) = χ g := by
+  let π := sourceAbsoluteArithmeticRestriction a
+  have hs : Function.Surjective π := sourceAbsoluteArithmeticRestriction_surjective a
+  have hk' : π.toMonoidHom.ker ≤ χ.toMonoidHom.ker := hk
+  let f := π.toMonoidHom.liftOfSurjective hs ⟨χ.toMonoidHom, hk'⟩
+  have hf : f.comp π.toMonoidHom = χ.toMonoidHom :=
+    π.toMonoidHom.liftOfRightInverse_comp _ _ _
+  have hfc : Continuous f := by
+    apply (IsQuotientMap.of_surjective_continuous hs π.continuous).continuous_iff.mpr
+    exact χ.continuous.congr fun g => (DFunLike.congr_fun hf g).symm
+  let η : rationalArithmeticGaloisGroup a →ₜ* T := ⟨f, hfc⟩
+  refine ⟨η, DFunLike.congr_fun hf, ?_⟩
+  intro η' hη'
+  apply DFunLike.ext
+  intro h
+  obtain ⟨g, rfl⟩ := hs h
+  exact (hη' g).trans (DFunLike.congr_fun hf g).symm
+
+end
+end Dubon2026

@@ -1,0 +1,148 @@
+{
+  "recordedUTC": "2026-11-17T08:25:29.243538+00:00",
+  "modules": [
+    "CompactOrbitSpanFinite",
+    "SourceIntegralCoordinateLattice",
+    "SourceCompactOrbitLattice",
+    "SourceMatrixIntertwiningInvariants",
+    "SourceCompactResidualRealization",
+    "SourceGammaOneLocalResidualRankTwo",
+    "SourceGammaOneResidualRankTwo"
+  ],
+  "queries": [
+    "Dubon2026.compact_span_finite_of_open_lattice",
+    "Dubon2026.sourceIntegralCoordinateMap",
+    "Dubon2026.sourceIntegralCoordinateLattice",
+    "Dubon2026.mem_sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceIntegralCoordinateLattice_fg",
+    "Dubon2026.sourceIntegralCoordinateLattice_open",
+    "Dubon2026.sourceCompactOrbitLattice",
+    "Dubon2026.sourceCompactOrbitLattice_span",
+    "Dubon2026.sourceCompactOrbitLattice_invariant",
+    "Dubon2026.sourceCompactOrbitLattice_fg",
+    "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+    "Dubon2026.matrixTwo_trace_det_of_intertwining",
+    "Dubon2026.compact_rankTwo_integral_residual_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+  ],
+  "theorems": [
+    "Dubon2026.compact_span_finite_of_open_lattice",
+    "Dubon2026.mem_sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceIntegralCoordinateLattice_fg",
+    "Dubon2026.sourceIntegralCoordinateLattice_open",
+    "Dubon2026.sourceCompactOrbitLattice_span",
+    "Dubon2026.sourceCompactOrbitLattice_invariant",
+    "Dubon2026.sourceCompactOrbitLattice_fg",
+    "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+    "Dubon2026.matrixTwo_trace_det_of_intertwining",
+    "Dubon2026.compact_rankTwo_integral_residual_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+  ],
+  "constructions": [
+    "Dubon2026.sourceIntegralCoordinateMap",
+    "Dubon2026.sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceCompactOrbitLattice"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo"
+  ],
+  "proofEdges": [
+    "Dubon2026.compact_span_finite_of_open_lattice",
+    "Dubon2026.mem_sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceIntegralCoordinateLattice_fg",
+    "Dubon2026.sourceIntegralCoordinateLattice_open",
+    "Dubon2026.sourceCompactOrbitLattice_span",
+    "Dubon2026.sourceCompactOrbitLattice_invariant",
+    "Dubon2026.sourceCompactOrbitLattice_fg",
+    "Dubon2026.sourceCompactOrbitLattice_free_finite_rank",
+    "Dubon2026.matrixTwo_trace_det_of_intertwining",
+    "Dubon2026.compact_rankTwo_integral_residual_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo",
+    "Dubon2026.sourceIntegralCoordinateMap",
+    "Dubon2026.sourceIntegralCoordinateLattice",
+    "Dubon2026.sourceCompactOrbitLattice",
+    "Dubon2026.stableLattice_integral_residual_realization",
+    "Dubon2026.fullIntegralLattice_free_finite_rank",
+    "Dubon2026.stableLatticeGeneralLinearRep_continuous",
+    "Dubon2026.stableLatticeGeneralLinearRep_field_action",
+    "Dubon2026.localFieldResidualRep_continuous",
+    "Dubon2026.localCoefficientResidue_finite_discrete",
+    "Dubon2026.sourceRationalPrimeExtensionResidue_charP",
+    "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate",
+    "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_descent",
+    "Dubon2026.absolute_continuous_cyclic_eq_of_norm_frobenius",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.commonCoefficientEmbedding",
+    "Dubon2026.sourcePrimitiveCoefficient_valuation_le_one"
+  ],
+  "separatelyAxiomChecked": [],
+  "files": [
+    {
+      "version": "CompactOrbitSpanFinite2245b",
+      "module": "CompactOrbitSpanFinite",
+      "path": "E:\\Lean\\.tmp\\dubon83\\CompactOrbitSpanFinite.lean",
+      "sourceSha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+      "canonicalSha256": "47341ABCAACC46F8FDA791C8556A19A5A9304A04300DF2E1B9905D6857F1BD2F",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceIntegralCoordinateLattice2246a",
+      "module": "SourceIntegralCoordinateLattice",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateLattice.lean",
+      "sourceSha256": "A44F310D469E94BBC50CA19FDA6183EFCDFA2245CE99DF975433AA9878B052A2",
+      "canonicalSha256": "7B69EC04C319E3BE84901F340F5953140B2A43718D2C3C7DCCBB7D5ECCE8FC32",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceCompactOrbitLattice2247b",
+      "module": "SourceCompactOrbitLattice",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompactOrbitLattice.lean",
+      "sourceSha256": "BCCAECE1F5BB8F73FDB274F17EDC4D17599FDADC31CE780CD286BE562E06F986",
+      "canonicalSha256": "DD1DB4CDAE0C0DEFCCE97E720D6D16C9C1F7F68B88EFC560F027F661727D82C7",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceMatrixIntertwiningInvariants2249c",
+      "module": "SourceMatrixIntertwiningInvariants",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwiningInvariants.lean",
+      "sourceSha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+      "canonicalSha256": "0386D3B208267FC6704758A9A2D9D8B8F77881A088E4EC9BAECD4030D032F14F",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceCompactResidualRealization2250a",
+      "module": "SourceCompactResidualRealization",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompactResidualRealization.lean",
+      "sourceSha256": "70DFE54496FCB7CB3BE3C513AFA11D4CFEAC2169A5B35E3CA1FE00FFEE08CDD3",
+      "canonicalSha256": "1DB00604D3CC138A2B45892B95EA28ABDB840FAD67221098B26E2D8FF77ED691",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneLocalResidualRankTwo2251c",
+      "module": "SourceGammaOneLocalResidualRankTwo",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalResidualRankTwo.lean",
+      "sourceSha256": "1D3341E70B06B336E77652360D1E33C13F071995E9DBBD469109453310DFB1FA",
+      "canonicalSha256": "040854BDCFF18C36F8BF933A8469CE6C4E28B98F67116517F97C7BE67601BC1F",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneResidualRankTwo2252g",
+      "module": "SourceGammaOneResidualRankTwo",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidualRankTwo.lean",
+      "sourceSha256": "B546E7195294FE3FBB47357E07681073BB76F3A8BBC5AA81F3893A7BAB1FF09C",
+      "canonicalSha256": "2CBB4735DE3CC33E0B82F189C0FF8599A15906626584D8CCD716924F3E8124DD",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "routeAssessment": "original-residual-rank-two-route-2253.json",
+  "productionMutation": false,
+  "scope": "The original primitive form of weight at least two and prime p greater than three constructs a genuine finite local coefficient extension, its actual finite discrete characteristic-p residue field and continuous integral/residual arithmetic representations. The integer span of the two compact basis orbits is proved finite, full, invariant, free and rank two. This discharges every lattice input of the existing integral/residual realization. Native conjugacy invariance proves the exact trace and determinant comparison. Literal entrywise reduction gives original reduced Fourier traces and weight determinants at all original good-prime norm Frobenius elements, and actual complex conjugation remains odd. No lattice, representation, Frobenius, finite-residue or continuity certificate is supplied by the source consumer. Residual irreducibility and large image, remaining local/regularity conditions, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are required."
+}

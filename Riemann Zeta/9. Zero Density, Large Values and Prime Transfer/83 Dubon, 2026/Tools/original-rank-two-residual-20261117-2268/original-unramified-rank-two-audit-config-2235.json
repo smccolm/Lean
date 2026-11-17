@@ -1,0 +1,177 @@
+{
+  "recordedUTC": "2026-11-17T07:46:22.924887+00:00",
+  "modules": [
+    "SourceCyclotomicNormInertia",
+    "SourceUnitTraceKernel",
+    "SourceGammaOneJointTraceInertia",
+    "SourceGammaOneOriginalAdicInertia",
+    "SourceGammaOneLocalTraceInertia",
+    "SourceTraceDiagonalKernel",
+    "SourceContinuousTraceKernel",
+    "SourceTraceActionKernel",
+    "SourceOriginalTraceMatrixKernel",
+    "SourceGammaOneLocalUnramifiedRankTwo",
+    "SourceGammaOneUnramifiedRankTwo"
+  ],
+  "queries": [
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+    "Dubon2026.sourceUnitTrace_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+    "Dubon2026.sourceTraceAction_eq_one_of_translate",
+    "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+  ],
+  "theorems": [
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+    "Dubon2026.sourceUnitTrace_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+    "Dubon2026.sourceTraceAction_eq_one_of_translate",
+    "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+  ],
+  "constructions": [],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+    "Dubon2026.sourceUnitTrace_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+    "Dubon2026.sourceTraceAction_eq_one_of_translate",
+    "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo",
+    "Dubon2026.sourceGroupAlgebraQuotient_span",
+    "Dubon2026.traceIdempotentPair_matrix_continuous",
+    "Dubon2026.traceIdempotentPair_leftAction_trace",
+    "Dubon2026.traceIdempotentPairBasis",
+    "Dubon2026.sourceScalarCornerHom",
+    "Dubon2026.exists_spanning_algebra_of_trace_determinant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd",
+    "Dubon2026.matrixTwoRepresentation_det_of_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_primitive_joint_original_character",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_normInertia",
+    "Dubon2026.absolute_continuous_cyclic_eq_of_norm_frobenius",
+    "Dubon2026.continuous_positive_adic_quotient",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_inertia",
+    "Dubon2026.sourceRationalLocalValuation_inertia",
+    "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+    "Dubon2026.sourceRationalPrimeExtensionResidue_charP"
+  ],
+  "separatelyAxiomChecked": [],
+  "files": [
+    {
+      "version": "SourceCyclotomicNormInertia2224a",
+      "module": "SourceCyclotomicNormInertia",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia.lean",
+      "sourceSha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+      "canonicalSha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceUnitTraceKernel2226a",
+      "module": "SourceUnitTraceKernel",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel.lean",
+      "sourceSha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+      "canonicalSha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneJointTraceInertia2227a",
+      "module": "SourceGammaOneJointTraceInertia",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia.lean",
+      "sourceSha256": "D8E8E90F396A9BAFC25DCC2BFCED587FABEF4C828A315E2EF08496EAC69AB3FB",
+      "canonicalSha256": "CEA0C291455C239F535F28D4CC621D0FDCBE8B710FCC1DD86465D37FF5448CAC",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneOriginalAdicInertia2228a",
+      "module": "SourceGammaOneOriginalAdicInertia",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia.lean",
+      "sourceSha256": "C5C88C622A26D0884086F8B7B16C4DDA766348FA4C99AD76EF2B5A4F72DD2D6C",
+      "canonicalSha256": "AFB8C1631DE143021655FCAD1EA29AD09EBFF027680928C3969B6454A12E1B24",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneLocalTraceInertia2230a",
+      "module": "SourceGammaOneLocalTraceInertia",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia.lean",
+      "sourceSha256": "AEDECF5FEB59CC9BAFA632FB185C7C63ACD7F399116E58816C1B46D680449368",
+      "canonicalSha256": "7B5B322D90A761F972DAE875C8E61A15C4BA9FB2DAA08FDD0AF0E714042F0231",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceTraceDiagonalKernel2229b",
+      "module": "SourceTraceDiagonalKernel",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel.lean",
+      "sourceSha256": "3267BFBBF1851DF5965CF3585B6C0EF89AF98B7E6463E71B3D0D4C3530403A9E",
+      "canonicalSha256": "3267BFBBF1851DF5965CF3585B6C0EF89AF98B7E6463E71B3D0D4C3530403A9E",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceContinuousTraceKernel2231b",
+      "module": "SourceContinuousTraceKernel",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel.lean",
+      "sourceSha256": "7432D80AACECAF65EA902165AAEB0EA6BBCA94AD97767ACAF77CE4E495B28128",
+      "canonicalSha256": "922E9844A74BE96785C9C6C2EF5152D1D04C35328E654C6E3559F78B35C89964",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceTraceActionKernel2225b",
+      "module": "SourceTraceActionKernel",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel.lean",
+      "sourceSha256": "EA87A99EB0B33A50D03476FC7FCE1F16B28EEFF97800A5C8889566220D79BA70",
+      "canonicalSha256": "EA87A99EB0B33A50D03476FC7FCE1F16B28EEFF97800A5C8889566220D79BA70",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceOriginalTraceMatrixKernel2232a",
+      "module": "SourceOriginalTraceMatrixKernel",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel.lean",
+      "sourceSha256": "BD9662F7EC5400543881DCBB8D415EA2BF01D07C0D0A6E8AFE14B65DEE53D23B",
+      "canonicalSha256": "89897DE450EFE185CC875A103A809A3CE9A530F2461673363B59FD95C7F7DCE3",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneLocalUnramifiedRankTwo2233a",
+      "module": "SourceGammaOneLocalUnramifiedRankTwo",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo.lean",
+      "sourceSha256": "203D6DBBC3B3122044B1D45A81ACF4CF449C4C7F4C98140F918A90567CC03AEC",
+      "canonicalSha256": "518281722B4315D9F6FB6AE7C22634A8CE3D7FF661346FD7D63A2827D1E4379F",
+      "mathematicalBodyIdentical": true
+    },
+    {
+      "version": "SourceGammaOneUnramifiedRankTwo2234a",
+      "module": "SourceGammaOneUnramifiedRankTwo",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo.lean",
+      "sourceSha256": "56147E42FF28014BB917A3CAC1D9589B7A7803B26653C8B9CDFA087CD9433AE8",
+      "canonicalSha256": "8DA777D51E8662E805A3D5DAED150DDB7465BD7C8FDB1C3351F0BFD31E93F7ED",
+      "mathematicalBodyIdentical": true
+    }
+  ],
+  "routeAssessment": "original-unramified-rank-two-route-2235.json",
+  "productionMutation": false,
+  "scope": "The original primitive cusp form of weight at least two and prime p greater than three constructs the genuine local coefficient extension and continuous two-dimensional representation with exact original Fourier and weight norm-Frobenius values, actual odd complex conjugation, and trivial action of every original norm-inertia subgroup outside Q*p. Finite trace invariance, complete trace invariance, faithful trace-algebra kernel detection and both matrix-kernel preservation branches are proved. No matrix, trace or inertia certificate is supplied. Full original association, the remaining local/image/regularity inputs, exceptional-prime scope, automorphy and literal higher symmetric-power continuation remain unresolved. The existing absolute arithmetic-descent lemma has a discrete target and cannot be applied directly to these local-field matrices. Review the existing adic matrix and stable-lattice descent results before expanding that dependency. Acceptance remains16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are still required."
+}

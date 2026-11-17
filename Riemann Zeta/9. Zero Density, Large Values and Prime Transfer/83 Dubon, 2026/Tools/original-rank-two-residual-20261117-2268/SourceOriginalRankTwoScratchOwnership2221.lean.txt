@@ -1,0 +1,39 @@
+import SourceAdicPrimePowerScalar
+import SourceCyclotomicNormFrobenius
+import SourceAbsoluteComplexConjugation
+import SourceAdicCyclotomicDeterminant
+import SourceOriginalAdicDeterminant
+import SourceAdicQuotientContinuity
+import SourceOriginalLocalDeterminant
+import SourcePrimitiveLocalOddness
+import SourceGroupAlgebraQuotientSpan
+import SourceSpanningTraceAlgebra
+import SourceTraceOffDiagonal
+import SourceTraceOppositePair
+import SourceTraceLeftIdealCoordinates
+import SourceTraceLeftIdealBasis
+import SourceTraceLeftActionTrace
+import SourceSpanningTraceContinuity
+import SourceTraceLeftActionContinuity
+import SourceScalarCornerCharacter
+import SourceTraceDiagonalRepresentation
+import SourceOddTraceIdempotent
+import SourceContinuousTraceRealization
+import SourceMatrixTraceDeterminant
+import SourceOriginalTraceMatrixConsumer
+import SourceGammaOneLocalRankTwo
+import SourceGammaOneContinuousRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceAdicPrimePowerScalar, `SourceCyclotomicNormFrobenius, `SourceAbsoluteComplexConjugation, `SourceAdicCyclotomicDeterminant, `SourceOriginalAdicDeterminant, `SourceAdicQuotientContinuity, `SourceOriginalLocalDeterminant, `SourcePrimitiveLocalOddness, `SourceGroupAlgebraQuotientSpan, `SourceSpanningTraceAlgebra, `SourceTraceOffDiagonal, `SourceTraceOppositePair, `SourceTraceLeftIdealCoordinates, `SourceTraceLeftIdealBasis, `SourceTraceLeftActionTrace, `SourceSpanningTraceContinuity, `SourceTraceLeftActionContinuity, `SourceScalarCornerCharacter, `SourceTraceDiagonalRepresentation, `SourceOddTraceIdempotent, `SourceContinuousTraceRealization, `SourceMatrixTraceDeterminant, `SourceOriginalTraceMatrixConsumer, `SourceGammaOneLocalRankTwo, `SourceGammaOneContinuousRankTwo]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

@@ -1,0 +1,273 @@
+import Dubon2026.SourceAdicPrimePowerScalar
+import Dubon2026.SourceCyclotomicNormFrobenius
+import Dubon2026.SourceAbsoluteComplexConjugation
+import Dubon2026.SourceAdicCyclotomicDeterminant
+import Dubon2026.SourceOriginalAdicDeterminant
+import Dubon2026.SourceAdicQuotientContinuity
+import Dubon2026.SourceOriginalLocalDeterminant
+import Dubon2026.SourcePrimitiveLocalOddness
+import Dubon2026.SourceGroupAlgebraQuotientSpan
+import Dubon2026.SourceSpanningTraceAlgebra
+import Dubon2026.SourceTraceOffDiagonal
+import Dubon2026.SourceTraceOppositePair
+import Dubon2026.SourceTraceLeftIdealCoordinates
+import Dubon2026.SourceTraceLeftIdealBasis
+import Dubon2026.SourceTraceLeftActionTrace
+import Dubon2026.SourceSpanningTraceContinuity
+import Dubon2026.SourceTraceLeftActionContinuity
+import Dubon2026.SourceScalarCornerCharacter
+import Dubon2026.SourceTraceDiagonalRepresentation
+import Dubon2026.SourceOddTraceIdempotent
+import Dubon2026.SourceContinuousTraceRealization
+import Dubon2026.SourceMatrixTraceDeterminant
+import Dubon2026.SourceOriginalTraceMatrixConsumer
+import Dubon2026.SourceGammaOneLocalRankTwo
+import Dubon2026.SourceGammaOneContinuousRankTwo
+import Dubon2026.SourceCyclotomicNormInertia
+import Dubon2026.SourceUnitTraceKernel
+import Dubon2026.SourceGammaOneJointTraceInertia
+import Dubon2026.SourceGammaOneOriginalAdicInertia
+import Dubon2026.SourceGammaOneLocalTraceInertia
+import Dubon2026.SourceTraceDiagonalKernel
+import Dubon2026.SourceContinuousTraceKernel
+import Dubon2026.SourceTraceActionKernel
+import Dubon2026.SourceOriginalTraceMatrixKernel
+import Dubon2026.SourceGammaOneLocalUnramifiedRankTwo
+import Dubon2026.SourceGammaOneUnramifiedRankTwo
+import Dubon2026.SourceGammaOneJointArithmeticKernel
+import Dubon2026.SourceGammaOneOriginalAdicArithmetic
+import Dubon2026.SourceGammaOneLocalTraceArithmetic
+import Dubon2026.SourceAbsoluteArithmeticFactor
+import Dubon2026.SourceGammaOneLocalArithmeticRankTwo
+import Dubon2026.SourceGammaOneArithmeticRankTwo
+import Dubon2026.CompactOrbitSpanFinite
+import Dubon2026.SourceIntegralCoordinateLattice
+import Dubon2026.SourceCompactOrbitLattice
+import Dubon2026.SourceMatrixIntertwiningInvariants
+import Dubon2026.SourceCompactResidualRealization
+import Dubon2026.SourceGammaOneLocalResidualRankTwo
+import Dubon2026.SourceGammaOneResidualRankTwo
+import Dubon2026.SourceOriginalResidualLocalInterface
+import Dubon2026.SourceGammaOneFixedLocalResidual
+import Dubon2026.SourceGammaOneFixedDeterminantResidual
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.adicQuotient_prime_power_zero
+#print axioms Dubon2026.adicQuotientPrimePowerMap
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius
+#print axioms Dubon2026.sourceAbsoluteComplexConjugation
+#print axioms Dubon2026.sourceAbsoluteComplexConjugation_isConj
+#print axioms Dubon2026.sourceAbsoluteComplexConjugation_sq
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant_continuous
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant_frobenius
+#print axioms Dubon2026.sourceAdicCyclotomicDeterminant_conjugation
+#print axioms Dubon2026.originalAdicDeterminant_eq_cyclotomic
+#print axioms Dubon2026.continuous_positive_adic_quotient
+#print axioms Dubon2026.originalLocalDeterminant_conjugation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd
+#print axioms Dubon2026.sourceGroupAlgebraQuotient_span
+#print axioms Dubon2026.exists_spanning_algebra_of_trace_determinant
+#print axioms Dubon2026.traceIdempotent_offDiagonal_zero
+#print axioms Dubon2026.traceIdempotent_opposite_vanishes
+#print axioms Dubon2026.traceIdempotent_exists_opposite_pair
+#print axioms Dubon2026.traceIdempotent_leftIdeal_expansion
+#print axioms Dubon2026.traceIdempotent_pair_coordinates
+#print axioms Dubon2026.traceIdempotentPairEquiv
+#print axioms Dubon2026.traceIdempotentPairBasis
+#print axioms Dubon2026.traceIdempotentPair_leftAction_trace
+#print axioms Dubon2026.continuous_trace_of_spanning_action
+#print axioms Dubon2026.continuous_trace_sandwich_of_spanning_action
+#print axioms Dubon2026.traceIdempotentPair_matrix_continuous
+#print axioms Dubon2026.traceIdempotent_left_scalar
+#print axioms Dubon2026.sourceScalarCornerHom
+#print axioms Dubon2026.exists_continuous_diagonal_of_scalar_corners
+#print axioms Dubon2026.traceDeterminant_odd_involution_zero
+#print axioms Dubon2026.traceInvolution_plus_idempotent
+#print axioms Dubon2026.exists_continuous_matrix_of_trace_idempotent
+#print axioms Dubon2026.exists_continuous_matrix_of_odd_trace_algebra
+#print axioms Dubon2026.matrixTwo_det_of_trace_relation
+#print axioms Dubon2026.matrixTwoRepresentation_det_of_trace
+#print axioms Dubon2026.exists_continuous_matrix_of_original_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia
+#print axioms Dubon2026.sourceUnitTrace_kernel_translate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate
+#print axioms Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel
+#print axioms Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel
+#print axioms Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel
+#print axioms Dubon2026.sourceTraceAction_eq_one_of_translate
+#print axioms Dubon2026.exists_continuous_matrix_of_original_trace_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate
+#print axioms Dubon2026.sourceAbsoluteArithmeticRestriction_surjective
+#print axioms Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo
+#print axioms Dubon2026.compact_span_finite_of_open_lattice
+#print axioms Dubon2026.sourceIntegralCoordinateMap
+#print axioms Dubon2026.sourceIntegralCoordinateLattice
+#print axioms Dubon2026.mem_sourceIntegralCoordinateLattice
+#print axioms Dubon2026.sourceIntegralCoordinateLattice_fg
+#print axioms Dubon2026.sourceIntegralCoordinateLattice_open
+#print axioms Dubon2026.sourceCompactOrbitLattice
+#print axioms Dubon2026.sourceCompactOrbitLattice_span
+#print axioms Dubon2026.sourceCompactOrbitLattice_invariant
+#print axioms Dubon2026.sourceCompactOrbitLattice_fg
+#print axioms Dubon2026.sourceCompactOrbitLattice_free_finite_rank
+#print axioms Dubon2026.matrixTwo_trace_det_of_intertwining
+#print axioms Dubon2026.compact_rankTwo_integral_residual_realization
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceAdicPrimePowerScalar, `Dubon2026.SourceCyclotomicNormFrobenius, `Dubon2026.SourceAbsoluteComplexConjugation, `Dubon2026.SourceAdicCyclotomicDeterminant, `Dubon2026.SourceOriginalAdicDeterminant, `Dubon2026.SourceAdicQuotientContinuity, `Dubon2026.SourceOriginalLocalDeterminant, `Dubon2026.SourcePrimitiveLocalOddness, `Dubon2026.SourceGroupAlgebraQuotientSpan, `Dubon2026.SourceSpanningTraceAlgebra, `Dubon2026.SourceTraceOffDiagonal, `Dubon2026.SourceTraceOppositePair, `Dubon2026.SourceTraceLeftIdealCoordinates, `Dubon2026.SourceTraceLeftIdealBasis, `Dubon2026.SourceTraceLeftActionTrace, `Dubon2026.SourceSpanningTraceContinuity, `Dubon2026.SourceTraceLeftActionContinuity, `Dubon2026.SourceScalarCornerCharacter, `Dubon2026.SourceTraceDiagonalRepresentation, `Dubon2026.SourceOddTraceIdempotent, `Dubon2026.SourceContinuousTraceRealization, `Dubon2026.SourceMatrixTraceDeterminant, `Dubon2026.SourceOriginalTraceMatrixConsumer, `Dubon2026.SourceGammaOneLocalRankTwo, `Dubon2026.SourceGammaOneContinuousRankTwo, `Dubon2026.SourceCyclotomicNormInertia, `Dubon2026.SourceUnitTraceKernel, `Dubon2026.SourceGammaOneJointTraceInertia, `Dubon2026.SourceGammaOneOriginalAdicInertia, `Dubon2026.SourceGammaOneLocalTraceInertia, `Dubon2026.SourceTraceDiagonalKernel, `Dubon2026.SourceContinuousTraceKernel, `Dubon2026.SourceTraceActionKernel, `Dubon2026.SourceOriginalTraceMatrixKernel, `Dubon2026.SourceGammaOneLocalUnramifiedRankTwo, `Dubon2026.SourceGammaOneUnramifiedRankTwo, `Dubon2026.SourceGammaOneJointArithmeticKernel, `Dubon2026.SourceGammaOneOriginalAdicArithmetic, `Dubon2026.SourceGammaOneLocalTraceArithmetic, `Dubon2026.SourceAbsoluteArithmeticFactor, `Dubon2026.SourceGammaOneLocalArithmeticRankTwo, `Dubon2026.SourceGammaOneArithmeticRankTwo, `Dubon2026.CompactOrbitSpanFinite, `Dubon2026.SourceIntegralCoordinateLattice, `Dubon2026.SourceCompactOrbitLattice, `Dubon2026.SourceMatrixIntertwiningInvariants, `Dubon2026.SourceCompactResidualRealization, `Dubon2026.SourceGammaOneLocalResidualRankTwo, `Dubon2026.SourceGammaOneResidualRankTwo, `Dubon2026.SourceOriginalResidualLocalInterface, `Dubon2026.SourceGammaOneFixedLocalResidual, `Dubon2026.SourceGammaOneFixedDeterminantResidual]
+  let theorems : Array Name := #[`Dubon2026.adicQuotient_prime_power_zero, `Dubon2026.sourceAbsoluteCyclotomicCharacter_norm_frobenius, `Dubon2026.sourceAbsoluteComplexConjugation_isConj, `Dubon2026.sourceAbsoluteComplexConjugation_sq, `Dubon2026.sourceAbsoluteCyclotomicCharacter_conjugation, `Dubon2026.sourceAdicCyclotomicDeterminant_continuous, `Dubon2026.sourceAdicCyclotomicDeterminant_frobenius, `Dubon2026.sourceAdicCyclotomicDeterminant_conjugation, `Dubon2026.originalAdicDeterminant_eq_cyclotomic, `Dubon2026.continuous_positive_adic_quotient, `Dubon2026.originalLocalDeterminant_conjugation, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalDeterminant_odd, `Dubon2026.sourceGroupAlgebraQuotient_span, `Dubon2026.exists_spanning_algebra_of_trace_determinant, `Dubon2026.traceIdempotent_offDiagonal_zero, `Dubon2026.traceIdempotent_opposite_vanishes, `Dubon2026.traceIdempotent_exists_opposite_pair, `Dubon2026.traceIdempotent_leftIdeal_expansion, `Dubon2026.traceIdempotent_pair_coordinates, `Dubon2026.traceIdempotentPair_leftAction_trace, `Dubon2026.continuous_trace_of_spanning_action, `Dubon2026.continuous_trace_sandwich_of_spanning_action, `Dubon2026.traceIdempotentPair_matrix_continuous, `Dubon2026.traceIdempotent_left_scalar, `Dubon2026.exists_continuous_diagonal_of_scalar_corners, `Dubon2026.traceDeterminant_odd_involution_zero, `Dubon2026.traceInvolution_plus_idempotent, `Dubon2026.exists_continuous_matrix_of_trace_idempotent, `Dubon2026.exists_continuous_matrix_of_odd_trace_algebra, `Dubon2026.matrixTwo_det_of_trace_relation, `Dubon2026.matrixTwoRepresentation_det_of_trace, `Dubon2026.exists_continuous_matrix_of_original_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_continuous_rankTwo, `Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia, `Dubon2026.sourceUnitTrace_kernel_translate, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate, `Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel, `Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel, `Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel, `Dubon2026.sourceTraceAction_eq_one_of_translate, `Dubon2026.exists_continuous_matrix_of_original_trace_kernel, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel, `Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate, `Dubon2026.sourceAbsoluteArithmeticRestriction_surjective, `Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo, `Dubon2026.compact_span_finite_of_open_lattice, `Dubon2026.mem_sourceIntegralCoordinateLattice, `Dubon2026.sourceIntegralCoordinateLattice_fg, `Dubon2026.sourceIntegralCoordinateLattice_open, `Dubon2026.sourceCompactOrbitLattice_span, `Dubon2026.sourceCompactOrbitLattice_invariant, `Dubon2026.sourceCompactOrbitLattice_fg, `Dubon2026.sourceCompactOrbitLattice_free_finite_rank, `Dubon2026.matrixTwo_trace_det_of_intertwining, `Dubon2026.compact_rankTwo_integral_residual_realization, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedDeterminant_residual]
+  let constructions : Array Name := #[`Dubon2026.adicQuotientPrimePowerMap, `Dubon2026.sourceAbsoluteComplexConjugation, `Dubon2026.sourceAdicCyclotomicDeterminant, `Dubon2026.traceIdempotentPairEquiv, `Dubon2026.traceIdempotentPairBasis, `Dubon2026.sourceScalarCornerHom, `Dubon2026.sourceIntegralCoordinateMap, `Dubon2026.sourceIntegralCoordinateLattice, `Dubon2026.sourceCompactOrbitLattice]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RANK TWO AUDIT PASS: {count} theorems including private/generated declarations. Original continuous arithmetic rank-two representation with exact Fourier Frobenius values proved. Remaining association and higher continuation OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceAdicPrimePowerScalar
+
+#lint in Dubon2026.SourceCyclotomicNormFrobenius
+
+#lint in Dubon2026.SourceAbsoluteComplexConjugation
+
+#lint in Dubon2026.SourceAdicCyclotomicDeterminant
+
+#lint in Dubon2026.SourceOriginalAdicDeterminant
+
+#lint in Dubon2026.SourceAdicQuotientContinuity
+
+#lint in Dubon2026.SourceOriginalLocalDeterminant
+
+#lint in Dubon2026.SourcePrimitiveLocalOddness
+
+#lint in Dubon2026.SourceGroupAlgebraQuotientSpan
+
+#lint in Dubon2026.SourceSpanningTraceAlgebra
+
+#lint in Dubon2026.SourceTraceOffDiagonal
+
+#lint in Dubon2026.SourceTraceOppositePair
+
+#lint in Dubon2026.SourceTraceLeftIdealCoordinates
+
+#lint in Dubon2026.SourceTraceLeftIdealBasis
+
+#lint in Dubon2026.SourceTraceLeftActionTrace
+
+#lint in Dubon2026.SourceSpanningTraceContinuity
+
+#lint in Dubon2026.SourceTraceLeftActionContinuity
+
+#lint in Dubon2026.SourceScalarCornerCharacter
+
+#lint in Dubon2026.SourceTraceDiagonalRepresentation
+
+#lint in Dubon2026.SourceOddTraceIdempotent
+
+#lint in Dubon2026.SourceContinuousTraceRealization
+
+#lint in Dubon2026.SourceMatrixTraceDeterminant
+
+#lint in Dubon2026.SourceOriginalTraceMatrixConsumer
+
+#lint in Dubon2026.SourceGammaOneLocalRankTwo
+
+#lint in Dubon2026.SourceGammaOneContinuousRankTwo
+
+#lint in Dubon2026.SourceCyclotomicNormInertia
+
+#lint in Dubon2026.SourceUnitTraceKernel
+
+#lint in Dubon2026.SourceGammaOneJointTraceInertia
+
+#lint in Dubon2026.SourceGammaOneOriginalAdicInertia
+
+#lint in Dubon2026.SourceGammaOneLocalTraceInertia
+
+#lint in Dubon2026.SourceTraceDiagonalKernel
+
+#lint in Dubon2026.SourceContinuousTraceKernel
+
+#lint in Dubon2026.SourceTraceActionKernel
+
+#lint in Dubon2026.SourceOriginalTraceMatrixKernel
+
+#lint in Dubon2026.SourceGammaOneLocalUnramifiedRankTwo
+
+#lint in Dubon2026.SourceGammaOneUnramifiedRankTwo
+
+#lint in Dubon2026.SourceGammaOneJointArithmeticKernel
+
+#lint in Dubon2026.SourceGammaOneOriginalAdicArithmetic
+
+#lint in Dubon2026.SourceGammaOneLocalTraceArithmetic
+
+#lint in Dubon2026.SourceAbsoluteArithmeticFactor
+
+#lint in Dubon2026.SourceGammaOneLocalArithmeticRankTwo
+
+#lint in Dubon2026.SourceGammaOneArithmeticRankTwo
+
+#lint in Dubon2026.CompactOrbitSpanFinite
+
+#lint in Dubon2026.SourceIntegralCoordinateLattice
+
+#lint in Dubon2026.SourceCompactOrbitLattice
+
+#lint in Dubon2026.SourceMatrixIntertwiningInvariants
+
+#lint in Dubon2026.SourceCompactResidualRealization
+
+#lint in Dubon2026.SourceGammaOneLocalResidualRankTwo
+
+#lint in Dubon2026.SourceGammaOneResidualRankTwo
+
+#lint in Dubon2026.SourceOriginalResidualLocalInterface
+
+#lint in Dubon2026.SourceGammaOneFixedLocalResidual
+
+#lint in Dubon2026.SourceGammaOneFixedDeterminantResidual

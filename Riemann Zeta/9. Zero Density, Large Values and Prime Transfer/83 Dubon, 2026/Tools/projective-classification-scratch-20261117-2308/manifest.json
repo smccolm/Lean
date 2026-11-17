@@ -1,0 +1,298 @@
+{
+  "status": "Scratch PASS only; no production promotion or acceptance gate closure.",
+  "receiptSha256": "35FE9D04A6E8A58766F14CAC623AE568E0DC414A0CA7B9694CC76DFBE0309837",
+  "upstreamEvidence": "Tools/proof-reuse-refresh-20261117-2298/manifest.json",
+  "dependency": "DUB-17 source Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy -> actual original residual large image -> Dickson classification of the actual projective residual image",
+  "discharged": "The original form constructs integral and residual actions and a coefficient embedding whose actual projective image satisfies the full eight alternatives, retaining literal reduction, fixed-local Hecke data and inertia, global cyclotomic determinant, maximal Hecke kernel, finite image and oddness. No classification or representation certificate is supplied.",
+  "boundary": "Scratch-audited, not promoted. Explicit matrix conjugacy extensions compile but are outside this receipt. Arithmetic image exclusions, required local regularity and automorphy/continuation remain open; acceptance remains 16/20 with DUB-17--20 open.",
+  "auditReconciliation": {
+    "priorAxiomAudit": "SourceProjectiveClassificationAudit1",
+    "canonicalEnumeration": "SourceProjectiveClassificationDeclarations2301a",
+    "reason": "Three generated prime instance names depend on canonical module names. Required arithmetic VALUE edge corrected from the parallel existential coefficient-field wrapper to the local-field theorem directly consumed by SourceGammaOneLocalResidualRankTwo. No proof body, theorem assumption or required arithmetic construction removed.",
+    "previousRequiredEdge": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo",
+    "actualRequiredEdge": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo",
+    "previousDependencyAudit": "SourceProjectiveClassificationDependencyAudit1"
+  },
+  "files": [
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/source-projective-classification-1-scratch-receipt.json",
+      "sha256": "35FE9D04A6E8A58766F14CAC623AE568E0DC414A0CA7B9694CC76DFBE0309837"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/source-projective-classification-audit-config-2299.json",
+      "sha256": "E59CAF7CD6D7D7E866B2FEAD1F4B03EC5373253E1D5126BFF35ECCA4E2AD72A2"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/source-projective-classification-audit-config-2302.json",
+      "sha256": "42E216E6EF87FF5AE85DB3D6493E03CC3CF0F9BF99DCA392FC081C5E0D6BDD18"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/source-dickson-canonical-preparation-2294.json",
+      "sha256": "DECDD5777C51BF4E4E7E57E1DC2AB8D0AA76A2E5DEA0D37C084D3379DF177A7A"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/build_dickson_canonical_2294.ps1",
+      "sha256": "B2AABFD38C8527EF0F3F551D1AC535BD4C5790677E9D45793B8EB021C56103FC"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/build_projective_classification_audit_2299.ps1",
+      "sha256": "92AD5540ACFB8E15AD7E59A502FC0CCF1391131DE6E774D45EFD69F590405DEB"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/run_dickson_audit_2285.ps1",
+      "sha256": "0AA22F902C2FEB1FB30C52E457D75946AC30E2CB67F39B9A6BC12C87CBD536A3"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonObjects.lean.txt",
+      "sha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonObjects-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonObjects-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPGLBasic.lean.txt",
+      "sha256": "C7E3C1417BEB131724D993206FC879D98E6C1BE7AC1B8C69151AE101C104CF1A"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPGLBasic-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPGLBasic-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonNatClassEquation.lean.txt",
+      "sha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonNatClassEquation-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonNatClassEquation-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPSLBasic.lean.txt",
+      "sha256": "375FD52F83B1E923C6570DBB3C3597C5EA2173A738CF555AE09717F1CFC94ED7"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPSLBasic-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPSLBasic-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPartitionHelpers.lean.txt",
+      "sha256": "97A97557C7A15344EE321ED9E91D16B2430202A7F5B23CFB7B9BFFE1C311D7E3"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPartitionHelpers-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPartitionHelpers-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonCyclicPartition.lean.txt",
+      "sha256": "DE9C36E93E54AB9E5CBBE68B747D134DA28A7A4B528FA3423C1DDE06B5320EA6"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonCyclicPartition-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonCyclicPartition-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonRecognitionA5.lean.txt",
+      "sha256": "184604518181EF8B3CE90C9C9ABFF271863F1D1D46D2E1A695542CBB2BB33044"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonRecognitionA5-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonRecognitionA5-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonFieldReconstruction.lean.txt",
+      "sha256": "38CDE948CA816BA19132093AFC4799486580476722F305B4CAB68A3F5ADB7B1F"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonFieldReconstruction-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonFieldReconstruction-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPartitionProof.lean.txt",
+      "sha256": "A65DFFCA7EBB17D5982235F405FEAB833DC0D49A729202F92A3E049B3C330903"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPartitionProof-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPartitionProof-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPSLRecognition.lean.txt",
+      "sha256": "F718F0F2710A607E5D153A63096CB16F1259965D5882799472EB291839C12A50"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPSLRecognition-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonPSLRecognition-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonTameClassification.lean.txt",
+      "sha256": "CB088253C0DD2C3634CC182A63C2657D6D8C84CC82B1A69B1FC67950222CA145"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonTameClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonTameClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonWildClassification.lean.txt",
+      "sha256": "D0AC8F264F6E93B29CFD5CE434FC28691D70BE831FB27D0497C6DD0348E9E055"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonWildClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonWildClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonClassification.lean.txt",
+      "sha256": "8CA67616A649516F2BDC0F14E040AFA80F6F5A30BFFBB2AC030AA496E7DBE98A"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceDicksonClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceResidualProjectiveClassification.lean.txt",
+      "sha256": "73BA1454BD010B301D4FF4AE99C777592D505476CC23B17FA8093ECB00F4F440"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceResidualProjectiveClassification-2294.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceResidualProjectiveClassification-2294.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceGammaOneProjectiveResidual.lean.txt",
+      "sha256": "FF2ADC11FBE1D6591ED08793ADD2643E9540D939EDA7903B46235FE6F48F2D04"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceGammaOneProjectiveResidual-2299.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceGammaOneProjectiveResidual-2299.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationAudit1.lean.txt",
+      "sha256": "D99A250811D7B2BA7080C7F8F8237AA3FA2B013043BE317B8970B07498C0BE2C"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationAudit1.log",
+      "sha256": "69AB41BC823E0A4E590AF0EB16F6BDBDADEE26F5B5EF2D1170014F3807C0000D"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationAudit2.lean.txt",
+      "sha256": "C7AAA09D4859C664BEA6C231CABFC43AA5C5636681CC9F1AF8447DEF49912565"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationAudit2.log",
+      "sha256": "4C0E9553CFE3DEB235AA27F274B9C317BCFAB38266CE5A39B3D55669192E391F"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDependencyAudit1.lean.txt",
+      "sha256": "A0BC77CD689A4329466678A933A486A47FF28B2D55DB3F3E6043D2B0FD08A189"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDependencyAudit1.log",
+      "sha256": "0553BA3B43BE9EEAE0204FBB93332026BE7CA3E30A882735702BE6789F75096D"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDependencyAudit2.lean.txt",
+      "sha256": "4F53542E6991E84C7215097D4E5D6E47E5C266E17B3A795CD8C74B41620EC69A"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDependencyAudit2.log",
+      "sha256": "D70F471AD1596F9FCF0DBEF5953C7C7AA4CF2D11C33D7DF61C582DFC55EBF722"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDeclarations2301a.lean.txt",
+      "sha256": "814E2F64515687625474B091B5E7BA0252C21C4ECEF5E478A316B6400B9D01CD"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDeclarations2301a.log",
+      "sha256": "CD56A50641F5CE05A0B45EC830B2EEDA3A7BB1D4F0833898FC9202E79D440DA3"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceProjectiveClassificationDeclarations2301a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceGammaOneProjectiveResidual2296a.lean.txt",
+      "sha256": "764394774F57BAC018FED84A3F7B040B3492BBC17B7B83A3B52A61944C8EA28F"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceGammaOneProjectiveResidual2296a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/projective-classification-scratch-20261117-2308/SourceGammaOneProjectiveResidual2296a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

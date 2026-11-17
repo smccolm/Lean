@@ -1,0 +1,27 @@
+import Mathlib.LinearAlgebra.Trace
+import Mathlib.LinearAlgebra.Determinant
+
+/-! DUB-17/18 -> original all-weight residual association -> exact scalar invariants.
+The existing lattice consumer compares actual actions by a linear equivalence.
+Native trace and determinant conjugacy transfer the original Fourier/weight
+values to the integral coordinates before literal residue reduction. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+theorem matrixTwo_trace_det_of_intertwining
+    {E : Type*} [Field E] (A B : Matrix (Fin 2) (Fin 2) E)
+    (e : (Fin 2 → E) ≃ₗ[E] (Fin 2 → E))
+    (h : ∀ v, A *ᵥ e v = e (B *ᵥ v)) :
+    A.trace = B.trace ∧ A.det = B.det := by
+  have he : A.toLin' = e.conj B.toLin' := by
+    apply LinearMap.ext
+    intro v
+    change A *ᵥ v = e (B *ᵥ e.symm v)
+    simpa only [e.apply_symm_apply] using h (e.symm v)
+  constructor
+  · rw [← Matrix.trace_toLin'_eq A, he, LinearMap.trace_conj', Matrix.trace_toLin'_eq]
+  · rw [← LinearMap.det_toLin' A, he, LinearMap.det_conj, LinearMap.det_toLin']
+
+end
+end Dubon2026

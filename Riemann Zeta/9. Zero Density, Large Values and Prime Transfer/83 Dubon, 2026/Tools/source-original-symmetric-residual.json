@@ -1,0 +1,1029 @@
+{
+  "date": "17 November 2026",
+  "modules": [
+    "Dubon2026.SourceFiniteSubfieldIrreducible",
+    "Dubon2026.SourceSubfieldSymmetricAbsolute",
+    "Dubon2026.SourceFiniteLinearSymmetric",
+    "Dubon2026.SourceGammaOneAbsoluteSymmetricResidual",
+    "Dubon2026.SourceSubfieldKernelIrreducible",
+    "Dubon2026.SourceFiniteLinearKernelSymmetric",
+    "Dubon2026.SourceGammaOneCyclotomicSymmetricResidual",
+    "Dubon2026.SourceFiniteLinearAbsoluteGalois",
+    "Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual",
+    "Dubon2026.SourceResidualConjugateIrreducible",
+    "Dubon2026.SourceConjugateSymmetricSpanning",
+    "Dubon2026.SourceFiniteLinearOriginalSpanning",
+    "Dubon2026.SourceOriginalSymmetricSpanningProperty",
+    "Dubon2026.SourceGammaOneSymmetricKernelSpanning",
+    "Dubon2026.SourceSpanningIrreducibility",
+    "Dubon2026.SourceSpanningCoefficientExtension",
+    "Dubon2026.SourceOriginalSymmetricAbsolute",
+    "Dubon2026.SourceGammaOneResidueAbsoluteSymmetric",
+    "Dubon2026.SourceOriginalSymmetricAdjoint",
+    "Dubon2026.SourceGammaOneSymmetricAdjointVanishing",
+    "Dubon2026.SourceFiniteLinearOriginalScalar",
+    "Dubon2026.SourceFiniteLinearTwistedKernel",
+    "Dubon2026.SourceOriginalTwistedDetectionProperty",
+    "Dubon2026.SourceOriginalTwistedTopology",
+    "Dubon2026.SourceGammaOneTwistedKernelDetection",
+    "Dubon2026.SourceArithmeticCyclotomicSquare",
+    "Dubon2026.SourceOriginalArithmeticTwistedDetection",
+    "Dubon2026.SourceGammaOneArithmeticTwistedDetection",
+    "Dubon2026.SourceFiniteLinearOriginalConsequences",
+    "Dubon2026.SourceGammaOneSymmetricResidualCohomology"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual original residual deformation inputs -> symmetric irreducibility, trace-zero adjoint H0 and arithmetic twisted-H1 detection for the same constructed residual representation.",
+  "discharged": "For an actual original primitive cusp form of weight at least two and prime p greater than three, one constructed original residual representation now retains its complete projective classification and, in the finite linear subfield branch, has full symmetric matrix spans, absolute symmetric-power irreducibility and vanishing trace-zero adjoint invariants over its original residue field and basis on both native arithmetic and absolute Galois cyclotomic kernels. These conclusions hold for 2*n < p-1. The same residual representation has genuine arithmetic twisted-cohomology detection on the joint residual/cyclotomic kernel in every symmetric degree. Its integral origin, literal reduction, fixed-local Hecke/Frobenius and inertia data, global determinant, maximal Hecke kernel, finite image and oddness are retained. No image classification, irreducibility, adjoint-vanishing, character-value witness or cohomology-detection certificate is supplied.",
+  "boundary": "The six small-projective-image alternatives are retained explicitly; their arithmetic exclusion, regular detecting primes and the remaining original local conditions are still required. The finite subfield is not identified with the original residue field. Finite-image H1 vanishing has not been proved and is not an extra prerequisite of the central-scalar detection route. These source consumers still have weight at least two and p greater than three. Automorphy and literal higher symmetric-power continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN, with the full source domain and every verification criterion unchanged.",
+  "status": "The 9,755-module production aggregate and focused original symmetric residual and cohomology inputs audit pass with zero diagnostics. Four declaration-value audits verify 258 required dependency checks; a separate final-original-consumer audit verifies 26 more. The six small-projective-image alternatives are retained explicitly; their arithmetic exclusion, regular detecting primes and the remaining original local conditions are still required. The finite subfield is not identified with the original residue field. Finite-image H1 vanishing has not been proved and is not an extra prerequisite of the central-scalar detection route. These source consumers still have weight at least two and p greater than three. Automorphy and literal higher symmetric-power continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN, with the full source domain and every verification criterion unchanged. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-11-17T12:33:55.763900+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceFiniteSubfieldIrreducible",
+        "SourceSubfieldSymmetricAbsolute",
+        "SourceFiniteLinearSymmetric",
+        "SourceGammaOneAbsoluteSymmetricResidual",
+        "SourceSubfieldKernelIrreducible",
+        "SourceFiniteLinearKernelSymmetric",
+        "SourceGammaOneCyclotomicSymmetricResidual",
+        "SourceFiniteLinearAbsoluteGalois",
+        "SourceGammaOneAbsoluteCyclotomicResidual",
+        "SourceResidualConjugateIrreducible",
+        "SourceConjugateSymmetricSpanning",
+        "SourceFiniteLinearOriginalSpanning",
+        "SourceOriginalSymmetricSpanningProperty",
+        "SourceGammaOneSymmetricKernelSpanning",
+        "SourceSpanningIrreducibility",
+        "SourceSpanningCoefficientExtension",
+        "SourceOriginalSymmetricAbsolute",
+        "SourceGammaOneResidueAbsoluteSymmetric"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSubfieldIrreducible.lean",
+          "sha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82",
+          "oleanSha256": "0BF9C5E4301F3A8F8F17D176F35A022D3B62E450E25A9B96C744FA88351D7F28",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSubfieldIrreducible.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSubfieldIrreducible.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldSymmetricAbsolute.lean",
+          "sha256": "B99A555F84A74802B472DD05D20762569D57BBB8C161BD17F656C970C3E6EFF3",
+          "oleanSha256": "90D84AEEE6C76880514DABFDCDE02FAF79C16A8B721AC1A009C241C5471BAA39",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldSymmetricAbsolute.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldSymmetricAbsolute.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearSymmetric.lean",
+          "sha256": "E54F12A3081F52544DE9D508ED151EC6A7AEF45776129771B67EC763F7989915",
+          "oleanSha256": "ED8F8DE31CDF3592C1AF39BD334C8BB1774FAB31EE420D22B6B0AE3DC7F886F8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearSymmetric.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearSymmetric.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteSymmetricResidual.lean",
+          "sha256": "7D4C31A1B4A390AD85F3186872CC4E09C241615D29176DE5DEB5F689EAA1C920",
+          "oleanSha256": "6D405B0B399DA895C2E63A47F9E247EAF1F59984931E015C040034998916A702",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteSymmetricResidual.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteSymmetricResidual.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldKernelIrreducible.lean",
+          "sha256": "66E5E3F9C5DB9600217BB4B55E214E7B5FD9F4FAF12AD327DD409D4AB6B12477",
+          "oleanSha256": "43E4470545D9397D2F4D89788AEB4849D35E789BDA97BE37D6C962A3428BC9E0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldKernelIrreducible.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldKernelIrreducible.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearKernelSymmetric.lean",
+          "sha256": "F2DF770FE1766BD0B4D36665DA85C061CD4F14CA316E7F898FC338C2101BB3C0",
+          "oleanSha256": "A5F35716C82A2250BC36064853F9E31B3C0EEB7D13594622F6E84D3821EEC8CE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearKernelSymmetric.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearKernelSymmetric.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicSymmetricResidual.lean",
+          "sha256": "8A75D0E6E4CA16145E79AB758A466C77355C8879B1E1592A3429C5D18BE601FE",
+          "oleanSha256": "28A6AB491679BF903CC87481D03B49D0DBFFA7E9901E4D86D237975EA7F4E920",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicSymmetricResidual.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicSymmetricResidual.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearAbsoluteGalois.lean",
+          "sha256": "A168949A46010F3074DD154DAE5377267CBABAC319BEE2A8DF326D8B8FDAC9B5",
+          "oleanSha256": "9B1296AF2815A5A28924347E8253EEE848C53727F6A130AD47A4243E0F08CF57",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearAbsoluteGalois.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearAbsoluteGalois.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteCyclotomicResidual.lean",
+          "sha256": "8FB1E545FF588E6D4E947DB7E29D86A2CCB17A7AAEDEA21B3DB68F774A1AE4A0",
+          "oleanSha256": "C8EFA0E31081413A5D3626EBB7D85BEDBC8F5D67BEE4D144403015875BFBBAC5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteCyclotomicResidual.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAbsoluteCyclotomicResidual.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualConjugateIrreducible.lean",
+          "sha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB",
+          "oleanSha256": "15F18BCBE2E86735F9C69FF6D6AEB8E847B1F4D5D02198748B48B25A982D5C3A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualConjugateIrreducible.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceResidualConjugateIrreducible.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSymmetricSpanning.lean",
+          "sha256": "22CE25469837F899355071B26F795D7735CDF770BAD668077742AF883A2759A5",
+          "oleanSha256": "3F207C162E08217394F5CF9CDFA7DD908358279749640FABE9A4F5A62D3F186B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSymmetricSpanning.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSymmetricSpanning.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalSpanning.lean",
+          "sha256": "D2A1A014618250F32BA1074116604439FAD72B6D08A15CF5B49ABEEE8E5D8401",
+          "oleanSha256": "07AE7E32E6A011E2B3AD870E36D2318188048BFDE8D20EE8FCFD8DF8467991FB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalSpanning.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalSpanning.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricSpanningProperty.lean",
+          "sha256": "A530A4D89F1A7819066F2BB606695725CCF1190347E7C4FAD5AB8BF86952A017",
+          "oleanSha256": "79C0DF6AA5E25E4DA20913BED664E07485909598344387D78EBAE158F0F0A6F3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricSpanningProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricSpanningProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricKernelSpanning.lean",
+          "sha256": "39E4E60FA2315BA45DF58D1F05CB9C8F3AEE90C2165C32843B08619DF2092CFD",
+          "oleanSha256": "13FA6471D89E84D23E1212C87358BCAF82F44BEF29EFA92919E081482F3978B5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricKernelSpanning.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricKernelSpanning.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningIrreducibility.lean",
+          "sha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D",
+          "oleanSha256": "055F286F344094DAA43E89E192B8412FD6A67E7D13419ADCD35D806DA44C57A4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningIrreducibility.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningIrreducibility.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningCoefficientExtension.lean",
+          "sha256": "0CF7F178F403BF3509DC73413398E0EFBA5D16673BFAE976B0B6D38A0B88F855",
+          "oleanSha256": "9E95951525FD2BB13BC7DD865970C4E515CDE89E524A18421D203178DCF58A31",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningCoefficientExtension.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningCoefficientExtension.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAbsolute.lean",
+          "sha256": "337BD890AF644518ED0A61B57E9703FA43495FFF83D803DB282E8D5F3119C8D0",
+          "oleanSha256": "76BA7AB248974B8CBCF568C80EE499C6BC01B7DA40DDD942A80C0DF9B2A6D9E4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAbsolute.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAbsolute.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueAbsoluteSymmetric.lean",
+          "sha256": "3202D2B167967E84BF53512F98946ABA12F85EC68E9F5E429BF04BD4C4C571CB",
+          "oleanSha256": "A152D8B5E41D630939B06C760D9FAB56F154059CE4FC9C96BDA5A51B11312FC3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueAbsoluteSymmetric.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueAbsoluteSymmetric.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image",
+        "Dubon2026.finiteSubfield_symmetric_absoluteIrreducible",
+        "Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual",
+        "Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible",
+        "Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual",
+        "Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective",
+        "Dubon2026.SourceDickson.finite_linear_bounds_absolute_cyclotomic_irreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+        "Dubon2026.representation_irreducible_iff_of_equiv",
+        "Dubon2026.matrixRepresentation_irreducible_iff_conjugate",
+        "Dubon2026.original_symmetric_matrix_span_of_conjugated_extension",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span",
+        "Dubon2026.HasOriginalSymmetricSpanning",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning",
+        "Dubon2026.representation_irreducible_of_asAlgebraHom_surjective",
+        "Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span",
+        "Dubon2026.matrixRepresentation_irreducible_of_span",
+        "Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension",
+        "Dubon2026.matrixRepresentation_absolute_irreducible_of_span",
+        "Dubon2026.original_symmetric_absolute_irreducibility_of_spanning",
+        "Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image",
+        "Dubon2026.finiteSubfield_symmetric_absoluteIrreducible",
+        "Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual",
+        "Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible",
+        "Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual",
+        "Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective",
+        "Dubon2026.SourceDickson.finite_linear_bounds_absolute_cyclotomic_irreducibility",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+        "Dubon2026.representation_irreducible_iff_of_equiv",
+        "Dubon2026.matrixRepresentation_irreducible_iff_conjugate",
+        "Dubon2026.original_symmetric_matrix_span_of_conjugated_extension",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning",
+        "Dubon2026.representation_irreducible_of_asAlgebraHom_surjective",
+        "Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span",
+        "Dubon2026.matrixRepresentation_irreducible_of_span",
+        "Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension",
+        "Dubon2026.matrixRepresentation_absolute_irreducible_of_span",
+        "Dubon2026.original_symmetric_absolute_irreducibility_of_spanning",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.HasOriginalSymmetricSpanning",
+        "Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAudit1.log",
+      "logSha256": "917C9A45489AD9721485112594A8FF7C4FDC9FF85A9D23A61DFE0761E7B8A7FA",
+      "auditSha256": "2D55D931A483DFED295F279B6B80E30F9A782AB1588C1A98FEF6358A6B42D04A",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricDeclarations2354.log",
+      "ownershipSha256": "1AEE96ED7E3BB6FAF9F209C86A1F220B84B24AB336A500EBCF98981CC309C4A3",
+      "exhaustiveTheorems": 68,
+      "exhaustiveOtherDeclarations": 27,
+      "linterScopes": 18,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 74,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricDependencyAudit1.log",
+      "dependencyAuditSha256": "649465BCE1C8DD7E8BF6A1D4B23C91E59AF3B70FB036D743BF67C48106118E51",
+      "dependencyAuditSourceSha256": "763B6F87D02FC79C591A66D6E9F213FF4E6B06C8BC0AE7CE01FFEF463758F11D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-symmetric-reuse-review-2357.json",
+      "reuseReviewSha256": "00D5F5B2BA2B6A5F423FCCBB45F4FA7C94EFA5181A85653163B80B085BB8B806",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> absolute symmetric irreducibility on cyclotomic kernels. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "singleOriginalConsumerAudit": {
+        "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueConsumerAudit2361.lean",
+        "sourceSha256": "B4BEB0E594458DD7E1A865B312ED74440654470ECB455788FC883D8D05CFE998",
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueConsumerAudit2361.log",
+        "logSha256": "7FB3E741DFEF5C89273B229DA4CB69581AB213C6BB3DB4D530AC94E214C00E12",
+        "requiredEdges": 26,
+        "edgeManifest": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-consumer-edges-2361.json",
+        "edgeManifestSha256": "BC2D04D5CE118E9A82738D3B2B099F06A3075255A09B5059B0EA7166445BBFA3"
+      }
+    },
+    {
+      "recordedUTC": "2026-11-17T12:52:16.261635+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceOriginalSymmetricAdjoint",
+        "SourceGammaOneSymmetricAdjointVanishing"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.lean",
+          "sha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC",
+          "oleanSha256": "298AC1390936E56185ADA60EC1CF236E4C9F04795A7B024A802FE90165A3B09C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.lean",
+          "sha256": "E318E77899A299A51BD0A2C0698EB7CA9BA4B116F7CD750703915F865A22B1DE",
+          "oleanSha256": "554C35EAD9A0C9B6E1320665A5C4B67EE1285EABCE46A9BB07AF55F28849B27A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+        "Dubon2026.HasOriginalSymmetricAdjointVanishing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.HasOriginalSymmetricAdjointVanishing"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointAudit1.log",
+      "logSha256": "F281CE1F5C8FD2A212861603B2D330464386D4769DF9E79CD0CF5EAABA5A3D10",
+      "auditSha256": "282211721AEABD98A5EEA27B1E21212D0525D5A0F088B3EED4874A5800B5119C",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDeclarations2366.log",
+      "ownershipSha256": "4BB30A29B8139BCBA23AAC340E3E07DB6FDD8D4311DE1F7FDEACC2CEC6A9DB81",
+      "exhaustiveTheorems": 11,
+      "exhaustiveOtherDeclarations": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 31,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDependencyAudit1.log",
+      "dependencyAuditSha256": "34246BD26A335136E5F72C20A9DF833532A42EB8E2F29DC515654BFA7C9BFACE",
+      "dependencyAuditSourceSha256": "12F37E4FF49F4FCA7A355C2735D34DFF127442572F9C2C76F62F793950B77028",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-symmetric-adjoint-reuse-review-2371.json",
+      "reuseReviewSha256": "21EE2482B39721C0BF1F4B732013F0C1800E8501366BFB895113EE3A36C2A795",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> original trace-zero adjoint invariant vanishing on cyclotomic kernels. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T13:14:02.822049+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceFiniteLinearOriginalScalar",
+        "SourceFiniteLinearTwistedKernel",
+        "SourceOriginalTwistedDetectionProperty",
+        "SourceOriginalTwistedTopology",
+        "SourceGammaOneTwistedKernelDetection",
+        "SourceArithmeticCyclotomicSquare",
+        "SourceOriginalArithmeticTwistedDetection",
+        "SourceGammaOneArithmeticTwistedDetection"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalScalar.lean",
+          "sha256": "2017957E5C2AB5674E9F94EDC7F9841B0767163F3CC4B798362B6B25759EB2AF",
+          "oleanSha256": "4347A3A5A7BBEC2F512A68A9356AB65D82A8F5C151535E4CCE03AE7FFBB06797",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalScalar.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalScalar.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearTwistedKernel.lean",
+          "sha256": "190D06C4420AE909E48A0586CE9308405D46D5E12BB1895B6A2FB6618F0FBD11",
+          "oleanSha256": "E099273F9CD00AC2D55B909E0D47CB558814DE06957D6B5FCD10036D53421601",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearTwistedKernel.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearTwistedKernel.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedDetectionProperty.lean",
+          "sha256": "D20EBDE0A64B7D6023598E2C2AC44D7CEBB31C85137BE8397B074EF140B5C9F4",
+          "oleanSha256": "138C3CA5DA6CC6130586E42FDB7EF6C8746FEFB7D3FE49DDBB0CDCAE47EBA028",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedDetectionProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedDetectionProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedTopology.lean",
+          "sha256": "D2249F10407DE39CCEEBA841A37A7CB68506C4F783E41F89D657BB6207FBBFFC",
+          "oleanSha256": "D4157A51BD76D1BE01AF7605853538F642C5E7214EAB7450141AA8E40A816C9C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedTopology.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedTopology.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedKernelDetection.lean",
+          "sha256": "BEF050403F68319095E86E14F63A7E6CC3203728DA64F89F7D71F670D11F8299",
+          "oleanSha256": "C92D96C04E4DFE3DE3855229FB6373292DAE9BB94BFFC9BBD6B6ADE316BA59F4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedKernelDetection.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedKernelDetection.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCyclotomicSquare.lean",
+          "sha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A",
+          "oleanSha256": "EDBDC7BD70881B70F7FCDD7D058C18D010430802D7889DB966080C4F666EBD31",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCyclotomicSquare.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCyclotomicSquare.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTwistedDetection.lean",
+          "sha256": "3974E325BCCD8347744C5086C1C449B4BA459437A1C281AD786F2B2926165E43",
+          "oleanSha256": "6D2CA2189C9EB85E299A20319D4048F4A611D2271900D1BFB735C4169AE8A5BF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTwistedDetection.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTwistedDetection.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTwistedDetection.lean",
+          "sha256": "F42BBDE3FE44E7274E459B94B2DA93523550BDA014990A9DFDEB8D1A0549561B",
+          "oleanSha256": "69F08FF98C29049D93180B0F43A803180E7EA2E5253A168F7EA5AA5D8B520A17",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTwistedDetection.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTwistedDetection.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_scalar_character_square",
+        "Dubon2026.SourceDickson.finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_kernel_detection",
+        "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetection",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_detection_atTopology",
+        "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_twisted_kernel_detection",
+        "Dubon2026.originalArithmeticCyclotomicCoefficient_exists_square_ne_one",
+        "Dubon2026.SourceDickson.original_arithmetic_symmetric_twisted_detection_of_original",
+        "Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_scalar_character_square",
+        "Dubon2026.SourceDickson.finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_kernel_detection",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_detection_atTopology",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_twisted_kernel_detection",
+        "Dubon2026.originalArithmeticCyclotomicCoefficient_exists_square_ne_one",
+        "Dubon2026.SourceDickson.original_arithmetic_symmetric_twisted_detection_of_original",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetection",
+        "Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology",
+        "Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelAudit1.log",
+      "logSha256": "0B98112B594506481232CB291A1CCCADA581E06F3356A9E0EF94DA05F570DAA6",
+      "auditSha256": "22B14395F8E75732989F069BE2811C261C4E311BD0F473B29FF61FA960B581C4",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDeclarations2377.log",
+      "ownershipSha256": "0FBAE190B14F47FC4E2F89F927FE4FEA6452D741F8996CE5528F43B56D9E06C1",
+      "exhaustiveTheorems": 35,
+      "exhaustiveOtherDeclarations": 13,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 61,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDependencyAudit1.log",
+      "dependencyAuditSha256": "16C73CB7D9F8241404A2011FCC5A79C0243EEE05D083170677E9AD1CE554007D",
+      "dependencyAuditSourceSha256": "027DD0B934B8367B5CCA08186EBA252B3A15EDE696F47B42CDC275AEF797FB8D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-twisted-kernel-reuse-review-2378.json",
+      "reuseReviewSha256": "FA5985FD1B6DBD11C77342E74231A2AC609F775CE01E21E90D24885FD771AF6D",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> original twisted-cohomology detection on the actual arithmetic residual/cyclotomic kernel. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-11-17T13:25:09.997929+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceFiniteLinearOriginalConsequences",
+        "SourceGammaOneSymmetricResidualCohomology"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalConsequences.lean",
+          "sha256": "CA50109AE0FF3792D28F79D5F91FA3F6473C31696CBE1222B412CC5E3A927C4B",
+          "oleanSha256": "0947F7DDD3206948825D7668FFCB6BF64A11417243AA01385F325A307D578366",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalConsequences.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalConsequences.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricResidualCohomology.lean",
+          "sha256": "FCDC290547728B8A9A4171A131D43B029B57859917D0B9E35E166DA06CE53736",
+          "oleanSha256": "CEF7A09456F0CE50AA0128EF3BE6DE771C51357B986757CC2AC15CF6DE34E8B3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricResidualCohomology.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricResidualCohomology.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceDickson.original_symmetric_kernel_consequences_of_spanning",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences",
+        "Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceDickson.original_symmetric_kernel_consequences_of_spanning",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointAudit1.log",
+      "logSha256": "9DB128F43A149C2948C3426BB9E72FF1F14D7E5DB958499FB0F86A359CD820A1",
+      "auditSha256": "CDD3E4230134611CAD30B168F011C98552380BED5B2C61637DCC8CA6E210C3A4",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDeclarations2383.log",
+      "ownershipSha256": "8C74E1B99E23211A319BCDC030F7C9CEF056DAB8E7FDA154924529ACBE0A54F8",
+      "exhaustiveTheorems": 12,
+      "exhaustiveOtherDeclarations": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 92,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDependencyAudit1.log",
+      "dependencyAuditSha256": "E5309BF1C705334A061F7EA6B402347F00242C703914AA2BF0B2E991A73BDCD8",
+      "dependencyAuditSourceSha256": "91C5F98BA2D840581759CB69CFEF7E11ACE2658F3FBEEFA7696BFBD01A465274",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-symmetric-joint-reuse-review-2384.json",
+      "reuseReviewSha256": "93A292ECA34F5E191B640954E581431B7848AE49EA15ABD15326792493E3C516",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> joint original symmetric and twisted-cohomology inputs for the same actual residual representation. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/original-symmetric-reuse-review-2357.json",
+    "Tools/original-symmetric-adjoint-reuse-review-2371.json",
+    "Tools/original-twisted-kernel-reuse-review-2378.json",
+    "Tools/original-symmetric-joint-reuse-review-2384.json"
+  ],
+  "productionDeclarationRenames": {},
+  "dependencyRouteAssessment": {
+    "path": "Tools/original-symmetric-residual-20261117-2388/original-symmetric-residual-promotion-route-2388.json",
+    "sha256": "0348C1658D4EA18FC12BB032153D522085DE54B2310554B2058FF9E1D396704E"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/original-symmetric-residual-20261117-2388/archive-manifest.json",
+    "sha256": "F7F889D5314C68644DB476EE36D4B1A7245A706C746B57DCB1A22EBA5EED6E24",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9755": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricDependencyAudit1Production9755.log",
+        "sha256": "649465BCE1C8DD7E8BF6A1D4B23C91E59AF3B70FB036D743BF67C48106118E51",
+        "requiredProofValueEdges": 74,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility"
+        ],
+        "sourceSha256": "3FE7DB1554A401B99ACED2358EE06A21186A4B318FD75D9C9BF1DD51B0A33B64"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDependencyAudit1Production9755.log",
+        "sha256": "34246BD26A335136E5F72C20A9DF833532A42EB8E2F29DC515654BFA7C9BFACE",
+        "requiredProofValueEdges": 31,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+        ],
+        "sourceSha256": "68936138F1832DDAD58BFC251AEF5DB5A389E18B2E1A2AD5046FA84D57F7BB23"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDependencyAudit1Production9755.log",
+        "sha256": "16C73CB7D9F8241404A2011FCC5A79C0243EEE05D083170677E9AD1CE554007D",
+        "requiredProofValueEdges": 61,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection"
+        ],
+        "sourceSha256": "8DFDFF8623B060CD5E22B305DDAB4C09E6A9A5801DE9D3DA734DB2885529EE3F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDependencyAudit1Production9755.log",
+        "sha256": "E5309BF1C705334A061F7EA6B402347F00242C703914AA2BF0B2E991A73BDCD8",
+        "requiredProofValueEdges": 92,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology"
+        ],
+        "sourceSha256": "8E85422A61D27505F4066D330A824266037DCD91088F39D30A77FB832689289F"
+      }
+    ],
+    "separateOriginalConsumerAudit": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueConsumerProductionAudit9755.log",
+      "sha256": "7FB3E741DFEF5C89273B229DA4CB69581AB213C6BB3DB4D530AC94E214C00E12",
+      "sourceSha256": "9B8459C94EA79BD689B13BE85EB188DD745321F6BAEA402183DBEB2AB1D42276",
+      "requiredProofValueEdges": 26
+    },
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricResidualProductionAudit9755.log",
+    "sha256": "084528CB830B1A3990CBCA4936CE34C287CFAE1A05577E96B671015A69D998AF",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-symmetric-residual-production-build-9755.log",
+    "aggregateSha256": "C740E2BCAEE86DFFA4216E14A10CDA505C0DF06E65525FABF371A8169A155874",
+    "productionModules": 9755,
+    "incrementModules": 30,
+    "axiomChecks": 44,
+    "exhaustiveIncrementTheorems": 126,
+    "linterScopes": 30,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 126,
+    "productionReuse": "Only scratch imports are qualified to registered production modules. All audited statements, proof bodies and comments remain identical. Exact ownership and normalized type/value reconciliation are mandatory. The same actual original residual representation carries every stated consequence; no assumption or completion criterion is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionTypeAndValue": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-symmetric-semantic-comparison-9755.json",
+      "sha256": "FD48E552F56194F80910F8C81811544CD8CCFF7C6892B3F38D8134E87BC1FBFC",
+      "passed": true,
+      "declarations": 178,
+      "missing": [],
+      "extra": [],
+      "different": {},
+      "evidence": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricScratchSemantic2360.log",
+          "sha256": "348695A0F37188AA4C903FE7EA95DF2AEB058F133D7C436500DD3B3ED880B370"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricScratchSemantic2360.lean",
+          "sha256": "7CF81950ABFE86D6D9A353D8C139808AF0562CECA1C313666FC63C95DAAFD035"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricScratchSemantic2360.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricProductionSemantic2360.log",
+          "sha256": "2D091B2E7715CCEAE9B48F72ED04606C65934E426B352855F344575C6DEC5FBF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricProductionSemantic2360.lean",
+          "sha256": "B873E9931DD2D543AF5E17D182AB7D59D8A2B55BA4C8368814E71EF2DEE81571"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricProductionSemantic2360.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointScratchSemantic2375.log",
+          "sha256": "D5BD465F06211A9498BF8928D70A4A5CB205AF3AC932557EC632B14D44E228BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointScratchSemantic2375.lean",
+          "sha256": "F62646FBE8A85B58601E5EFF3F873FA76B898D51CA57D4936D6378729898C013"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointScratchSemantic2375.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointProductionSemantic2375.log",
+          "sha256": "EBFF441351824117C0F0F746E61ADBA21383451489CFCB444208BAFBB1495184"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointProductionSemantic2375.lean",
+          "sha256": "C7D1122EBF1242AE91EAFF65226D63C8421AAC6E0F89894338881E1F0D0B2964"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointProductionSemantic2375.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelScratchSemantic2379.log",
+          "sha256": "2383138833BC2B7B2C7EEE1074399DC4FF462F62A98173D7AE28AEEE31826FAC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelScratchSemantic2379.lean",
+          "sha256": "41133A5275804B2F3863F42F6C039996797611179E78BAD072F144B5CC674E27"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelScratchSemantic2379.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelProductionSemantic2379.log",
+          "sha256": "92DB08D4772B0A1D3FD6C6B001F059DBF310E81EE0B34CD0414BCEBBF4E7801E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelProductionSemantic2379.lean",
+          "sha256": "CC1D4FA6FB8E15A22E0501EC8B64B8BB8926778E6557AA79BD07F2980163BB91"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelProductionSemantic2379.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointScratchSemantic2385.log",
+          "sha256": "4E547C37F5348D342959032867975C00470A2607525E92DEE88CB2995AE75A51"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointScratchSemantic2385.lean",
+          "sha256": "840BB58949B2BA2C3F616E81DAD24BF6A5017A36E0A986746302CD834A32DF0B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointScratchSemantic2385.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointProductionSemantic2385.log",
+          "sha256": "6BDEC30EA99DDB40B69514A3075734D0ED2D76A749C77D818B1CDAF90D29568C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointProductionSemantic2385.lean",
+          "sha256": "AD343C610A620D78F1E37A6565A1D1F48640E05AED1B9740BDD57C196CB24227"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointProductionSemantic2385.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        }
+      ],
+      "normalization": "Names are rewritten structurally, retaining numerical Name components: only the exact import-qualified private prefixes, generated auxiliary macro/unexpander names and three verified prime-instance names change. Bound binder names are alpha-normalized, expression metadata is removed after recursive child traversal, and closed Name literals are normalized only in generated notation declarations. Every public/private/generated type and available value is checked with exact owner/name sets; no declaration is omitted. Identical mathematical source bodies are independently checked after stripping imports."
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 126,
+      "scratchDistinct": 126,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneAbsoluteCyclotomicResidual": "_private.Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneAbsoluteSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneAbsoluteSymmetricResidual": "_private.Dubon2026.SourceGammaOneAbsoluteSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneArithmeticTwistedDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneArithmeticTwistedDetection": "_private.Dubon2026.SourceGammaOneArithmeticTwistedDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneCyclotomicSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneCyclotomicSymmetricResidual": "_private.Dubon2026.SourceGammaOneCyclotomicSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneResidueAbsoluteSymmetric.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneResidueAbsoluteSymmetric": "_private.Dubon2026.SourceGammaOneResidueAbsoluteSymmetric.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneSymmetricAdjointVanishing.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneSymmetricAdjointVanishing": "_private.Dubon2026.SourceGammaOneSymmetricAdjointVanishing.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneSymmetricKernelSpanning.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneSymmetricKernelSpanning": "_private.Dubon2026.SourceGammaOneSymmetricKernelSpanning.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneSymmetricResidualCohomology.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneSymmetricResidualCohomology": "_private.Dubon2026.SourceGammaOneSymmetricResidualCohomology.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneTwistedKernelDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneTwistedKernelDetection": "_private.Dubon2026.SourceGammaOneTwistedKernelDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+      },
+      "productionFocused": 126,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceFiniteSubfieldIrreducible",
+            "SourceSubfieldSymmetricAbsolute",
+            "SourceFiniteLinearSymmetric",
+            "SourceGammaOneAbsoluteSymmetricResidual",
+            "SourceSubfieldKernelIrreducible",
+            "SourceFiniteLinearKernelSymmetric",
+            "SourceGammaOneCyclotomicSymmetricResidual",
+            "SourceFiniteLinearAbsoluteGalois",
+            "SourceGammaOneAbsoluteCyclotomicResidual",
+            "SourceResidualConjugateIrreducible",
+            "SourceConjugateSymmetricSpanning",
+            "SourceFiniteLinearOriginalSpanning",
+            "SourceOriginalSymmetricSpanningProperty",
+            "SourceGammaOneSymmetricKernelSpanning",
+            "SourceSpanningIrreducibility",
+            "SourceSpanningCoefficientExtension",
+            "SourceOriginalSymmetricAbsolute",
+            "SourceGammaOneResidueAbsoluteSymmetric"
+          ],
+          "count": 68,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricDeclarations2354.log",
+            "sha256": "1AEE96ED7E3BB6FAF9F209C86A1F220B84B24AB336A500EBCF98981CC309C4A3",
+            "sourceSha256": "D722D9AB74320DAC3A865460591CBDBFA50CAE926C47003A82FFBA829C72694B"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSymmetricAdjoint",
+            "SourceGammaOneSymmetricAdjointVanishing"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDeclarations2366.log",
+            "sha256": "4BB30A29B8139BCBA23AAC340E3E07DB6FDD8D4311DE1F7FDEACC2CEC6A9DB81",
+            "sourceSha256": "8A164F3CA55451F4BAD7EEE879C90C60F650A13810AEE5530AF209CDFA20DF06"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteLinearOriginalScalar",
+            "SourceFiniteLinearTwistedKernel",
+            "SourceOriginalTwistedDetectionProperty",
+            "SourceOriginalTwistedTopology",
+            "SourceGammaOneTwistedKernelDetection",
+            "SourceArithmeticCyclotomicSquare",
+            "SourceOriginalArithmeticTwistedDetection",
+            "SourceGammaOneArithmeticTwistedDetection"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDeclarations2377.log",
+            "sha256": "0FBAE190B14F47FC4E2F89F927FE4FEA6452D741F8996CE5528F43B56D9E06C1",
+            "sourceSha256": "C56569EBA64A9175EF8C246BFA7ECC818856CF9162D9C66D1A79E9664DDD96C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteLinearOriginalConsequences",
+            "SourceGammaOneSymmetricResidualCohomology"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDeclarations2383.log",
+            "sha256": "8C74E1B99E23211A319BCDC030F7C9CEF056DAB8E7FDA154924529ACBE0A54F8",
+            "sourceSha256": "386AB3C09A7658A2C17C7B602F8205A164D2C9BEA6B8B4077C4A060160DCFC3F"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricResidualOwnership9755.log",
+        "sha256": "5DBDFCA2E2778524C6F0932FAEE4EF0951957D60CCE9D775B8DFCF408FED8B25",
+        "sourceSha256": "EE397B6EBE0C74D3A3E90FFDDBB90E231F85CC6A96FFC877C994C6C650B68A74"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-050400-196.log",
+        "sha256": "5AFE31DE73442DCB5CA26B82181D530B55E1722FDD7B2B886640F3614305A139"
+      },
+      "verifiedSharedGenerated": {},
+      "unexplainedProductionNames": [],
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 30 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceFiniteSubfieldIrreducible",
+            "scratchSha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82",
+            "productionSha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSubfieldSymmetricAbsolute",
+            "scratchSha256": "B99A555F84A74802B472DD05D20762569D57BBB8C161BD17F656C970C3E6EFF3",
+            "productionSha256": "13494D051928BF7803D910510A02C038A3EB03519DC69E73B4D4CFC96E92D10F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearSymmetric",
+            "scratchSha256": "E54F12A3081F52544DE9D508ED151EC6A7AEF45776129771B67EC763F7989915",
+            "productionSha256": "3DD86D7E349688B70869C8862C17122D90754B5C18D2112A29857FF366172391",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAbsoluteSymmetricResidual",
+            "scratchSha256": "7D4C31A1B4A390AD85F3186872CC4E09C241615D29176DE5DEB5F689EAA1C920",
+            "productionSha256": "2D5D6CE15C3C5A835160BFF5471145DC775361685A80DA376975C2F825831D37",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSubfieldKernelIrreducible",
+            "scratchSha256": "66E5E3F9C5DB9600217BB4B55E214E7B5FD9F4FAF12AD327DD409D4AB6B12477",
+            "productionSha256": "DB985C4E2D2F9A24E02A45177A5A1C86DA5C4AFD6DC9650E9EDC703DEB087672",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearKernelSymmetric",
+            "scratchSha256": "F2DF770FE1766BD0B4D36665DA85C061CD4F14CA316E7F898FC338C2101BB3C0",
+            "productionSha256": "230316F2828864AC794367ACB91104BCFF1A81CE530CDB424C32340A0800EA3B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCyclotomicSymmetricResidual",
+            "scratchSha256": "8A75D0E6E4CA16145E79AB758A466C77355C8879B1E1592A3429C5D18BE601FE",
+            "productionSha256": "0EA632AB3B4C63ACDF0756DEA8695F558712DF2D8EAE050C83A58571150F351F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearAbsoluteGalois",
+            "scratchSha256": "A168949A46010F3074DD154DAE5377267CBABAC319BEE2A8DF326D8B8FDAC9B5",
+            "productionSha256": "56BF4463D4014A64D1DDA28F35662F63CF13FE8D3A9B00B112ED66E46DE62AA5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAbsoluteCyclotomicResidual",
+            "scratchSha256": "8FB1E545FF588E6D4E947DB7E29D86A2CCB17A7AAEDEA21B3DB68F774A1AE4A0",
+            "productionSha256": "98FFE3833BE3BDD3BACC5B6CFA99E6566D87A8E35A8FE060671F8D37FEF7148A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualConjugateIrreducible",
+            "scratchSha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB",
+            "productionSha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceConjugateSymmetricSpanning",
+            "scratchSha256": "22CE25469837F899355071B26F795D7735CDF770BAD668077742AF883A2759A5",
+            "productionSha256": "E0D0BDF97BD84D870B7323B0BC668BB96EED43A53C930617D0AF1118DB56A468",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearOriginalSpanning",
+            "scratchSha256": "D2A1A014618250F32BA1074116604439FAD72B6D08A15CF5B49ABEEE8E5D8401",
+            "productionSha256": "44DEF7DD91495E88B54DD7EB74FE8A3220C6F364ADDCF9976817F4424F58B3DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSymmetricSpanningProperty",
+            "scratchSha256": "A530A4D89F1A7819066F2BB606695725CCF1190347E7C4FAD5AB8BF86952A017",
+            "productionSha256": "B6A5C38EF46B56AEBC2CCEBB685BD583CE8BA26842B260144125AEA1A6FA2A8C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSymmetricKernelSpanning",
+            "scratchSha256": "39E4E60FA2315BA45DF58D1F05CB9C8F3AEE90C2165C32843B08619DF2092CFD",
+            "productionSha256": "9690F02C8EA793CDF724A54BD081767DB9E062FB05121A62A6691E7FECE9A043",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpanningIrreducibility",
+            "scratchSha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D",
+            "productionSha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpanningCoefficientExtension",
+            "scratchSha256": "0CF7F178F403BF3509DC73413398E0EFBA5D16673BFAE976B0B6D38A0B88F855",
+            "productionSha256": "9EB96D96B5C6C09C8BC8DB8D262BAE8AFC22AF4AE3A369E0EE55BBCBC0D141F7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSymmetricAbsolute",
+            "scratchSha256": "337BD890AF644518ED0A61B57E9703FA43495FFF83D803DB282E8D5F3119C8D0",
+            "productionSha256": "142B97A5C31F1E597D5DAD969CC5D6D680747E528B4757CC243AC4F35AE699B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueAbsoluteSymmetric",
+            "scratchSha256": "3202D2B167967E84BF53512F98946ABA12F85EC68E9F5E429BF04BD4C4C571CB",
+            "productionSha256": "4D8F66BB66E9664B5C4F1A1BADFE5D7E088E1A36D427A8E40901FC7E9302CA68",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSymmetricAdjoint",
+            "scratchSha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC",
+            "productionSha256": "C088E34134B52FA7042B86014A1821B8D8F7ACBF43150433975E67F4A8472D42",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSymmetricAdjointVanishing",
+            "scratchSha256": "E318E77899A299A51BD0A2C0698EB7CA9BA4B116F7CD750703915F865A22B1DE",
+            "productionSha256": "A991AE3C856FC8359DA6548878AF018303A97F9B620321716109223D2FCDB408",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearOriginalScalar",
+            "scratchSha256": "2017957E5C2AB5674E9F94EDC7F9841B0767163F3CC4B798362B6B25759EB2AF",
+            "productionSha256": "92B9D0BF80EDE942966559C9CF499DD96A3A80C943D1B1D81EB0B09173FAA1B8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearTwistedKernel",
+            "scratchSha256": "190D06C4420AE909E48A0586CE9308405D46D5E12BB1895B6A2FB6618F0FBD11",
+            "productionSha256": "9D9EB82636163A2AA8EF801761B5D2B4A4040AB33DA0D05B690AF2621B15CFA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTwistedDetectionProperty",
+            "scratchSha256": "D20EBDE0A64B7D6023598E2C2AC44D7CEBB31C85137BE8397B074EF140B5C9F4",
+            "productionSha256": "2A63FCECDB5E0032B6F9307B88162AEE544CC2B50BB853B74DF305C379227DBF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTwistedTopology",
+            "scratchSha256": "D2249F10407DE39CCEEBA841A37A7CB68506C4F783E41F89D657BB6207FBBFFC",
+            "productionSha256": "74A2B62EAB31508F94BA82C5C14A8163FEE1D8830E15B84C0F7334DCD097A207",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTwistedKernelDetection",
+            "scratchSha256": "BEF050403F68319095E86E14F63A7E6CC3203728DA64F89F7D71F670D11F8299",
+            "productionSha256": "852CF72FEE46B6706A21F614E50F2AF037C8747C42D2E8F6DE0165BD875B9D7F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticCyclotomicSquare",
+            "scratchSha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A",
+            "productionSha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalArithmeticTwistedDetection",
+            "scratchSha256": "3974E325BCCD8347744C5086C1C449B4BA459437A1C281AD786F2B2926165E43",
+            "productionSha256": "3CB58D73CDDAD02F3BFC436F5C62574A669583C58E07E801DE46CE5054CDD939",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticTwistedDetection",
+            "scratchSha256": "F42BBDE3FE44E7274E459B94B2DA93523550BDA014990A9DFDEB8D1A0549561B",
+            "productionSha256": "F32ED7DD938CFFEADB2356F3EA911194E64AF7801331B281C6A54860722A7E6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearOriginalConsequences",
+            "scratchSha256": "CA50109AE0FF3792D28F79D5F91FA3F6473C31696CBE1222B412CC5E3A927C4B",
+            "productionSha256": "ECC009B18C02E32381BAA4DE724BBDF61EA67B17385C199EEF7D245A72F203C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSymmetricResidualCohomology",
+            "scratchSha256": "FCDC290547728B8A9A4171A131D43B029B57859917D0B9E35E166DA06CE53736",
+            "productionSha256": "756CDB18BEE00BCF165343BC65DB6024EE3187776E4EA05F27D52BC1DDCBBFB0",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 126 distinct names from 126 exhaustive scratch checks are retained: 126 in the production focused scope and 0 previously audited generated names. Every focused theorem is accounted for; no unexplained additional or missing theorem is accepted. Independently normalized declaration types and values are checked across all four source scopes.",
+    "boundary": "The six small-projective-image alternatives are retained explicitly; their arithmetic exclusion, regular detecting primes and the remaining original local conditions are still required. The finite subfield is not identified with the original residue field. Finite-image H1 vanishing has not been proved and is not an extra prerequisite of the central-scalar detection route. These source consumers still have weight at least two and p greater than three. Automorphy and literal higher symmetric-power continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN, with the full source domain and every verification criterion unchanged."
+  }
+}

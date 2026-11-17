@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-17T13:17:54.624674+00:00",
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": [
+    "literal higher symmetric-power continuation",
+    "automorphy",
+    "one actual original residual representation with its deformation and auxiliary-prime inputs"
+  ],
+  "sourceConsumer": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology",
+  "discharged": "For the same original residual action, the large-image branch supplies original matrix spanning, absolute irreducibility and trace-zero adjoint H0 vanishing on both literal cyclotomic kernels, together with actual arithmetic twisted-kernel detection. Integral reduction, original Hecke/Frobenius data, determinant, oddness and complete image alternatives remain.",
+  "shorterRoute": "Start with the existing actual arithmetic twisted-kernel consumer. Its same finite-image bounds give all the original symmetric consequences. Apply the generic perfect-kernel theorem directly to the same native arithmetic cyclotomic character; do not assume equality of character models or correlate independent existential witnesses.",
+  "range": "Spanning, absolute irreducibility and H0: 2*n<p-1. Twisted detection: every symmetric degree. Original primitive form: weight at least two, prime p>3, nonzero level.",
+  "proofDependencyReview": "The joint source starts from the actual arithmetic twisted-kernel consumer and constructs all other conclusions from its same original residual image bounds. The two earlier existential irreducibility/spanning wrappers remain independently proved and audited; their generic mathematical proofs, rather than unused existential wrappers, occur in this joint consumer.",
+  "remaining": "Actual small-image exclusions, regular detecting primes and remaining original local conditions, automorphy and literal higher continuation. No DUB acceptance gate closes.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceScopeChanged": false
+}

@@ -1,0 +1,110 @@
+import Dubon2026.SourceGammaOnePrimitiveJointUnitDiamond
+
+/-! DUB-17/18 -> original all-weight association -> compatible character/trace
+specialization. The cyclotomic weight and original unit diamond give a
+multiplicative determinant term in the exact joint image. Its Frobenius
+value is the diamond term of the already proved polynomial. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup SourceCuspBoundary ToricCoordinates
+
+private theorem zmod_smul_mem_range {ι A : Type} [Ring A] (N : ℕ) [NeZero N]
+    [Algebra (ZMod N) A] (θ : FreeAlgebra ℤ ι →+* A) (c : ZMod N) (x : A)
+    (hx : x ∈ θ.range) : c • x ∈ θ.range := by
+  obtain ⟨b, rfl⟩ := hx
+  refine ⟨(c.val : FreeAlgebra ℤ ι) * b, ?_⟩
+  rw [map_mul, map_natCast, Algebra.smul_def]
+  congr 1
+  simpa only [map_natCast] using congrArg (algebraMap (ZMod N) A) (ZMod.natCast_zmod_val c)
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+
+/-- The exact cyclotomic weight times the genuine unit diamond. -/
+def binaryPrimitiveJointWeightedDiamond :
+    (ZMod M)ˣ →* binaryPrimitiveJointOperatorRing Q p n w where
+  toFun u := (binaryPrimitiveUnitReduction Q N u : ZMod N) ^ (w + 1) •
+    binaryPrimitiveJointUnitDiamond Q p n w u
+  map_one' := by rw [map_one, map_one, Units.val_one, one_pow, one_smul]
+  map_mul' u v := by
+    rw [map_mul, map_mul, Units.val_mul, mul_pow, smul_mul_smul_comm]
+
+/-- The determinant term on the actual absolute Galois group. -/
+def binaryPrimitiveJointDeterminant :
+    (Qbar ≃ₐ[ℚ] Qbar) →* binaryPrimitiveJointOperatorRing Q p n w :=
+  (binaryPrimitiveJointWeightedDiamond Q p n w).comp
+    (sourceAbsoluteCyclotomicCharacter M).toMonoidHom
+
+/-- The determinant term lies in the same original joint image at every element. -/
+theorem binaryPrimitiveJointDeterminant_mem_range
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (σ : Qbar ≃ₐ[ℚ] Qbar) :
+    binaryPrimitiveJointDeterminant Q p n w σ ∈
+      (binaryPrimitiveJointHeckeDiamondWord Q p n w Hq).range :=
+  zmod_smul_mem_range N _ _ _ (binaryPrimitiveJointUnitDiamond_mem_range Q p n w Hq _)
+
+/-- The actual determinant term is continuous through its finite unit factor. -/
+theorem binaryPrimitiveJointDeterminant_continuous :
+    @Continuous _ _ _ ⊥ (binaryPrimitiveJointDeterminant Q p n w).toFun := by
+  letI : TopologicalSpace (binaryPrimitiveJointOperatorRing Q p n w) := ⊥
+  have hc : Continuous (binaryPrimitiveJointWeightedDiamond Q p n w) := continuous_of_discreteTopology
+  exact hc.comp (sourceAbsoluteCyclotomicCharacter M).continuous
+
+/-- The finite-unit determinant's prime value retains the actual original diamond. -/
+theorem binaryPrimitiveJointWeightedDiamond_prime
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (ell : sourceBinaryHeckePrime (Q * N))
+    (g : Gamma0 M) (hlabel : (g.val 1 1 : ZMod M) = ell.val) :
+    binaryPrimitiveJointWeightedDiamond Q p n w
+        (ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2) =
+      (ell.val ^ (w + 1)) •
+        binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inr g)) := by
+  let u := ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2
+  have hu : gamma0Unit M g = u :=
+    Units.ext (hlabel.trans (ZMod.coe_unitOfCoprime _ _).symm)
+  have hD : binaryPrimitiveJointUnitDiamond Q p n w u =
+      binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inr g)) :=
+    (congrArg (binaryPrimitiveJointUnitDiamond Q p n w) hu.symm).trans
+      (binaryPrimitiveJointUnitDiamond_gamma0 Q p n w Hq g)
+  change (binaryPrimitiveUnitReduction Q N u : ZMod N) ^ (w + 1) •
+    binaryPrimitiveJointUnitDiamond Q p n w u = _
+  rw [binaryPrimitiveUnitReduction_prime, hD, ← Nat.cast_pow, Nat.cast_smul_eq_nsmul]
+
+/-- At each original valuation Frobenius, the global multiplicative term is
+exactly the determinant term occurring in the original joint polynomial. -/
+theorem binaryPrimitiveJointDeterminant_frobenius
+    (A : ValuationSubring Qbar) (ell : sourceBinaryHeckePrime (Q * N))
+    [CharP (IsLocalRing.ResidueField A) ell.val]
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (g : Gamma0 M) (hlabel : (g.val 1 1 : ZMod M) = ell.val)
+    (d : A.decompositionSubgroup ℚ)
+    (hd : ∀ a : IsLocalRing.ResidueField A, d • a = a ^ ell.val) :
+    binaryPrimitiveJointDeterminant Q p n w d.val =
+      (ell.val ^ (w + 1)) •
+        binaryPrimitiveJointHeckeDiamondWord Q p n w Hq (FreeAlgebra.ι ℤ (Sum.inr g)) := by
+  have hM : ((M : ℕ) : IsLocalRing.ResidueField A) ≠ 0 := by
+    rw [Ne, CharP.cast_eq_zero_iff _ ell.val]
+    exact ell.property.1.coprime_iff_not_dvd.mp (binaryPrimitiveLevelPrime Q N ell).property.2
+  have hχ : sourceAbsoluteCyclotomicCharacter M d.val =
+      ZMod.unitOfCoprime ell.val (binaryPrimitiveLevelPrime Q N ell).property.2 := by
+    apply Units.ext
+    exact (sourceAbsoluteCyclotomicCharacter_frobenius A M ell.val hM d hd).trans
+      (ZMod.coe_unitOfCoprime _ _).symm
+  change binaryPrimitiveJointWeightedDiamond Q p n w (sourceAbsoluteCyclotomicCharacter M d.val) = _
+  rw [hχ]
+  exact binaryPrimitiveJointWeightedDiamond_prime Q p n w Hq ell g hlabel
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

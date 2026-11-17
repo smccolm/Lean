@@ -1,0 +1,721 @@
+{
+  "status": "Canonical PASS of the original projective residual image and finite linear bounds and its integral/residual realization, exact fixed-local Hecke data and global cyclotomic determinant. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_projective_residual_image_9725.ps1",
+      "path": "Tools/projective-residual-image-20261117-2326/build_projective_residual_image_9725.ps1",
+      "sha256": "BC1DBE53C5EA315582E177C340EA1D9A8C0305F7AC32EB4D60DC9F505B6BB33E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_projective_residual_image_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/compare_projective_residual_image_9725.py",
+      "sha256": "90ADCCC8A5B1CE0D13A275460FEF317CBADE1A711EE2A3267AFFAC9AFBBA8497"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_projective_residual_image_9725b.py",
+      "path": "Tools/projective-residual-image-20261117-2326/compare_projective_residual_image_9725b.py",
+      "sha256": "8743A7B7219BB28D116FDBCF461A1DAF0BA73509645A599F7654D17702372757"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_projective_semantics_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/compare_projective_semantics_9725.py",
+      "sha256": "24A76A717FADB923EA8325F1DBE73120EDBF1EDC84927FC0C006672141D7DCDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_projective_semantics_9725d.py",
+      "path": "Tools/projective-residual-image-20261117-2326/compare_projective_semantics_9725d.py",
+      "sha256": "5433B096AE6F405EDEB212A2C56D4CCEE2047298B9E0C1DB67A1DD2DF1253167"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_projective_residual_image_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/integrate_source_projective_residual_image_9725.py",
+      "sha256": "1D21930FEC5B6A34FDED715BE4F15DE70FCE0828A2128FF4BE55852FFB2D23B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\mechanical-script-review-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/mechanical-script-review-9725.json",
+      "sha256": "925742C92B850BED49A63C0B970C774C0E9A355129700C990D18563E22DBEC48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\mechanical-script-review-9725d.json",
+      "path": "Tools/projective-residual-image-20261117-2326/mechanical-script-review-9725d.json",
+      "sha256": "4C9C29E494FCAA3CD271913E4FD6F879EDC0AD71122E4E461508E8333B100961"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_projective_residual_image_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/preflight_projective_residual_image_9725.py",
+      "sha256": "C7C82919121213E6FD6561FDBE907EB77FA959843A94A78632AE5F6CF03618AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_projective_residual_image_global_ownership_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/prepare_projective_residual_image_global_ownership_9725.py",
+      "sha256": "9630665E988C49E83BFC42157710ACAFD715D2E2040F8252EA2A01C40B99BAB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_projective_residual_image_production_ownership_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/prepare_projective_residual_image_production_ownership_9725.py",
+      "sha256": "1FC674D4610E1B6709970830BF8209D515303096B61B2A0393D5EE4803429C45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\projective-residual-image-preexecution-review-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/projective-residual-image-preexecution-review-9725.json",
+      "sha256": "BB63DFF0E32A55F80312B4E571456721CD82A8BA200992A55103A0BBFC58D5D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\projective-residual-image-preflight-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/projective-residual-image-preflight-9725.json",
+      "sha256": "4AA45065CE3786C9B994AC49C545005B0CD4B09F35E44ED3CA5DAB9157C88964"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\projective-semantic-debug-2342-manifest.json",
+      "path": "Tools/projective-residual-image-20261117-2326/projective-semantic-debug-2342-manifest.json",
+      "sha256": "F5C412E57881C9936C88983A486D67751A8640B4780B2EE5AE952BF1E0EF4257"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\projective-semantic-debug-2342.zip",
+      "path": "Tools/projective-residual-image-20261117-2326/projective-semantic-debug-2342.zip",
+      "sha256": "F88F06CEF1A5CE34AACC0A4C078F44A727AE429A5D26BF581ECF7547191DF2AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_projective_residual_image_9725.py",
+      "path": "Tools/projective-residual-image-20261117-2326/record_source_projective_residual_image_9725.py",
+      "sha256": "CE9248443B9B7BCC18D90946632EF694904342BFC6273AB12CCE825230CA2999"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_projective_residual_image_9725b.py",
+      "path": "Tools/projective-residual-image-20261117-2326/record_source_projective_residual_image_9725b.py",
+      "sha256": "20F6315A8112F3FDBBBA3FBC9AA761E17234C9FB1558B7E2DB7B3D1F96373747"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\shared-projective-generated-review-9725b.json",
+      "path": "Tools/projective-residual-image-20261117-2326/shared-projective-generated-review-9725b.json",
+      "sha256": "A7A265D77AE7C80CABCEAD415238CA46AD12F3D54A332A26365832FB5A4FB463"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-residual-image-ownership-comparison-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-residual-image-ownership-comparison-9725.json",
+      "sha256": "973D4D24956DDA5D90C02656612BE620893481DF3B2422DAB6735FAD591BB3C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-residual-image-ownership-diagnostic-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-residual-image-ownership-diagnostic-9725.json",
+      "sha256": "8079B75E8653E647558673F3747592BD994AE8D6551A5B9A781A433F18FD5AD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-residual-image-production-build-9725.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-residual-image-production-build-9725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-residual-image-production-build-9725.log",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-residual-image-production-build-9725.log",
+      "sha256": "1ADDEC5677B568A5CA9018818414FF0FB3A57C503315D098454B1E1565B3524E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-residual-image-scratch-ownership-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-residual-image-scratch-ownership-9725.json",
+      "sha256": "23DA65FCA28DADC2A99A7C4D7EE523DEDC9801220C498459A63828E72A8841ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-semantic-c-diagnostic-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-semantic-c-diagnostic-9725.json",
+      "sha256": "5EC189640F7824F323CE6164CD6EFDF9BB992DF799BF5A329EA237DA2B6B60D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-semantic-comparison-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-semantic-comparison-9725.json",
+      "sha256": "F4921217F3D66401CAB3B742346A3950E18CE7CA4229A125F855E8493A12D477"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-projective-semantic-diagnostic-9725.json",
+      "path": "Tools/projective-residual-image-20261117-2326/source-projective-semantic-diagnostic-9725.json",
+      "sha256": "5238343C3C3C7D35B7721EA4D17AF9D5672C6B960C9C81483EB0ED73A3285402"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDependencyAudit1Production9725.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveFiniteDependencyAudit1Production9725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDependencyAudit1Production9725.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveFiniteDependencyAudit1Production9725.lean.txt",
+      "sha256": "76889C916C47C6F8DD01D081D2C29DD0F1A1B6B88060E26EE10B0CBAD333F644"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDependencyAudit1Production9725.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveFiniteDependencyAudit1Production9725.log",
+      "sha256": "D3AE7EB19C7CBFD4F2DBCBCEE318B96C1FD288E5187FBA52DED07F1C20719C78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveLinearDependencyAudit2Production9725.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveLinearDependencyAudit2Production9725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveLinearDependencyAudit2Production9725.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveLinearDependencyAudit2Production9725.lean.txt",
+      "sha256": "47FD77670283EE2A0BDC4BBC4ACF19160829A53046881FB94E74A5C26532581B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveLinearDependencyAudit2Production9725.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveLinearDependencyAudit2Production9725.log",
+      "sha256": "A88D78883ED41623A7AB612A9CF8EE96D00FA7A08DB23D66E157BB9E237074AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725.lean.txt",
+      "sha256": "30D8D7655C65871E79FF2D5AABD6D7626684995BD8FC705AE19635DFE38BEFDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725b.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725b.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725b.lean.txt",
+      "sha256": "AFF438A11ED0C47C12D4C6F17913A41258DAC61366E1B224006781C492142891"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725b.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725b.log",
+      "sha256": "B40B00674EEC636027DFB8FF39FDAAD15B02C213E7E55CF4EA3CF5D07E931230"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725c.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725c.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725c.lean.txt",
+      "sha256": "851D36E44301F274C88A02D8753CEF92659DEE58F619FDA40B5E2EDA51C531FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725c.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725c.log",
+      "sha256": "C8B7801892EF3923A7808149CADDE76FA055AAA5EC6C8DC9F5A4117A705C2CF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725d.lean.txt",
+      "sha256": "4BF7FB222CB1A99C5554215E6D0971E0C0F3356FE8BAE73FBB120B1263096D46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveProductionSemantic9725d.log",
+      "sha256": "C8B7801892EF3923A7808149CADDE76FA055AAA5EC6C8DC9F5A4117A705C2CF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageGlobalOwnership9725.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageGlobalOwnership9725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageGlobalOwnership9725.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageGlobalOwnership9725.lean.txt",
+      "sha256": "8BB17D07BFCFA54E5DA507DDF988273B42267DE572F56B3F4E556F6CB8D27350"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageGlobalOwnership9725.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageGlobalOwnership9725.log",
+      "sha256": "5A0F899A7845E968D917CAFB3EAD99EC58C877CB616E5FE4A504293C65CB0DB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageOwnership9725.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageOwnership9725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageOwnership9725.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageOwnership9725.lean.txt",
+      "sha256": "BEBB7CF8B96D08787B552FE1A3173F31B5D87EB7958B0B626D628D5E2011B519"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageOwnership9725.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageOwnership9725.log",
+      "sha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageProductionAudit9725.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageProductionAudit9725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageProductionAudit9725.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageProductionAudit9725.lean.txt",
+      "sha256": "A2ADDCB1D6434A1A3717AFE494642A9CD30A9DB91C50994E5833841988B99F93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageProductionAudit9725.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveResidualImageProductionAudit9725.log",
+      "sha256": "5F1927404B394B98CC40F2302272AA1D65182A81663603E3DA7378AC4F0023A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725c.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveScratchSemantic9725c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725c.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveScratchSemantic9725c.lean.txt",
+      "sha256": "10248A8C7E22A3314B6D22E1AF86A63F9A45F5DBB684967B7BAF756DB7DBFC6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725c.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveScratchSemantic9725c.log",
+      "sha256": "947847AFBA64DCF8534F73AAF5A476F5C9AD0D5279D062AE7F9267CFAB6760F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveScratchSemantic9725d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveScratchSemantic9725d.lean.txt",
+      "sha256": "C600046A53D89912386D6C1E6B15131CD537D89C04035A3F94013E06E7C6AA86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveScratchSemantic9725d.log",
+      "sha256": "947847AFBA64DCF8534F73AAF5A476F5C9AD0D5279D062AE7F9267CFAB6760F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveSharedProduction2338.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveSharedProduction2338.lean.txt",
+      "sha256": "1BF060AA06C0B54478D3C76B00B9D3294639C03879975E96ED915A833D5A1346"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveSharedProduction2338.log",
+      "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveSharedScratch2338.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.lean",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveSharedScratch2338.lean.txt",
+      "sha256": "98C5A310A065AE0208A79DED49307923C8F46D23A3D937DD3EE02D17FB69FA43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.log",
+      "path": "Tools/projective-residual-image-20261117-2326/SourceProjectiveSharedScratch2338.log",
+      "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verification-resume-9725d.exit",
+      "path": "Tools/projective-residual-image-20261117-2326/verification-resume-9725d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verification-resume-9725d.log",
+      "path": "Tools/projective-residual-image-20261117-2326/verification-resume-9725d.log",
+      "sha256": "52AFAA8FCAD5608C513B3F2E328AB5478EEF2EDD18FD6ADF5D197D37059FA158"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_projective_residual_image_9725.ps1",
+      "path": "Tools/projective-residual-image-20261117-2326/verify_projective_residual_image_9725.ps1",
+      "sha256": "2D9F144FC8D8B130FC5FA7C77D66BE4888C95DAE15129E2869C6B046C37E3A26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_projective_residual_image_9725b.ps1",
+      "path": "Tools/projective-residual-image-20261117-2326/verify_projective_residual_image_9725b.ps1",
+      "sha256": "54B7FF70DD5697982F4FD5F1737252C381AC5170E3A79160C85CE2C3DC247E92"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_projective_residual_image_9725d.ps1",
+      "path": "Tools/projective-residual-image-20261117-2326/verify_projective_residual_image_9725d.ps1",
+      "sha256": "BDF0AF17AFB5B047AFE77503417E56875015058BA7C54D92A217D5E3ACF11A42"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-11-17T13:41:12.448158+00:00",
+    "log": "logs/dubon-build-20261117-050400-196.log",
+    "sha256": "5AFE31DE73442DCB5CA26B82181D530B55E1722FDD7B2B886640F3614305A139",
+    "bytes": 16414781,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9725,
+    "projectTheorems": 61914,
+    "registeredConsumers": 28319,
+    "registeredConstructions": 3170,
+    "declarations": 37487,
+    "generated": 42452,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261117_045718.log",
+    "foundationSha256": "5B03D6F2F837685EEEB7B2C8677BA0508BB43099217C7413B06FC69A48557C2B",
+    "countReconciliation": {
+      "previousTheorems": 60975,
+      "focusedTheorems": 940,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 939,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [
+        "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp"
+      ],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageGlobalOwnership9725.log",
+      "globalOwnershipSha256": "5A0F899A7845E968D917CAFB3EAD99EC58C877CB616E5FE4A504293C65CB0DB0",
+      "globalOwnershipSourceSha256": "8BB17D07BFCFA54E5DA507DDF988273B42267DE572F56B3F4E556F6CB8D27350",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageOwnership9725.log",
+      "ownershipSha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D"
+    },
+    "scratchToProductionTypeAndValue": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-projective-semantic-comparison-9725.json",
+      "sha256": "F4921217F3D66401CAB3B742346A3950E18CE7CA4229A125F855E8493A12D477",
+      "passed": true,
+      "declarations": 1149,
+      "missing": [],
+      "extra": [],
+      "different": {},
+      "evidence": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.log",
+          "sha256": "947847AFBA64DCF8534F73AAF5A476F5C9AD0D5279D062AE7F9267CFAB6760F7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.lean",
+          "sha256": "C600046A53D89912386D6C1E6B15131CD537D89C04035A3F94013E06E7C6AA86"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic9725d.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.log",
+          "sha256": "C8B7801892EF3923A7808149CADDE76FA055AAA5EC6C8DC9F5A4117A705C2CF0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.lean",
+          "sha256": "4BF7FB222CB1A99C5554215E6D0971E0C0F3356FE8BAE73FBB120B1263096D46"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725d.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        }
+      ],
+      "normalization": "Names are rewritten structurally, retaining numerical Name components: only the exact import-qualified private prefixes, generated auxiliary macro/unexpander names and three verified prime-instance names change. Bound binder names are alpha-normalized, expression metadata is removed after recursive child traversal, and closed Name literals are normalized only in generated notation declarations. Every public/private/generated type and available value is checked with exact owner/name sets; no declaration is omitted. Identical mathematical source bodies are independently checked after stripping imports."
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 939,
+      "scratchDistinct": 939,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneFiniteProjectiveLinearResidual": "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneProjectiveLinearResidual": "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneProjectiveMatrixResidual": "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneProjectiveResidual": "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+      },
+      "productionFocused": 940,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [
+        "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp"
+      ],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceDicksonObjects",
+            "SourceDicksonPGLBasic",
+            "SourceDicksonNatClassEquation",
+            "SourceDicksonPSLBasic",
+            "SourceDicksonPartitionHelpers",
+            "SourceDicksonCyclicPartition",
+            "SourceDicksonRecognitionA5",
+            "SourceDicksonFieldReconstruction",
+            "SourceDicksonPartitionProof",
+            "SourceDicksonPSLRecognition",
+            "SourceDicksonTameClassification",
+            "SourceDicksonWildClassification",
+            "SourceDicksonClassification",
+            "SourceResidualProjectiveClassification",
+            "SourceGammaOneProjectiveResidual",
+            "SourceDicksonProjectiveConjugacy",
+            "SourceDicksonMatrixAlternatives",
+            "SourceGammaOneProjectiveMatrixResidual",
+            "SourceProjectivePerfectLift",
+            "SourceProjectiveSL2Lift",
+            "SourceProjectiveSubfieldBounds",
+            "SourceResidualLinearAlternatives",
+            "SourceGammaOneProjectiveLinearResidual"
+          ],
+          "count": 920,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveLinearDeclarations2311.log",
+            "sha256": "AD40D8B6E5314BBBD96E6DFCA751CA80538C1DADEE4BF70B52B89C08D6E95D3C",
+            "sourceSha256": "1DCC6128A6615035AC5BD2B59E945AEC40FCA77BE3E7830A6396B7EC48AA50C1"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualFiniteAmbient",
+            "SourceResidualFiniteDescent",
+            "SourceResidualFiniteBounds",
+            "SourceResidualFiniteLinearAlternatives",
+            "SourceGammaOneFiniteProjectiveLinearResidual"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveFiniteDeclarations2321.log",
+            "sha256": "00022211363E470173D0D863EDFA06959D682D16DC53A7C00282D100047ADAE3",
+            "sourceSha256": "A7162E417B4BCF447DBEDB3DD7AF0415E3E1E4839F02CE8F672A6BC07BC1C4EE"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveResidualImageOwnership9725.log",
+        "sha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D",
+        "sourceSha256": "BEBB7CF8B96D08787B552FE1A3173F31B5D87EB7958B0B626D628D5E2011B519"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-023339-845.log",
+        "sha256": "40B2A1071204974A700668B689EF1EAA415EDADA3BB9182296A8A75DED44C363"
+      },
+      "verifiedSharedGenerated": {
+        "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp": {
+          "passed": true,
+          "declaration": "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp",
+          "scratchAndFinalConsumerOwner": "Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction",
+          "focusedProductionOwner": "Dubon2026.SourceDicksonPGLBasic",
+          "typeHash": "1433596677",
+          "valueHash": "2954490144",
+          "evidence": [
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.lean",
+              "sha256": "98C5A310A065AE0208A79DED49307923C8F46D23A3D937DD3EE02D17FB69FA43"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.log",
+              "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.exit",
+              "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.lean",
+              "sha256": "1BF060AA06C0B54478D3C76B00B9D3294639C03879975E96ED915A833D5A1346"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.log",
+              "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.exit",
+              "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+            }
+          ],
+          "reason": "Lean generates the same congruence theorem under different first importing modules. Both final-consumer environments own it in Mathlib; the production focused all-module import order owns it in SourceDicksonPGLBasic. Exact raw type and proof-value hashes agree, displayed proof is equality transport/reflexivity, and both dependency audits allow only standard logical axioms. It is retained and separately accounted for, not excluded from checks.",
+          "focusedOwnershipSha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D"
+        }
+      },
+      "sharedGeneratedReview": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\shared-projective-generated-review-9725b.json",
+        "sha256": "A7A265D77AE7C80CABCEAD415238CA46AD12F3D54A332A26365832FB5A4FB463"
+      },
+      "unexplainedProductionNames": [],
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 28 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceDicksonObjects",
+            "scratchSha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059",
+            "productionSha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonPGLBasic",
+            "scratchSha256": "C7E3C1417BEB131724D993206FC879D98E6C1BE7AC1B8C69151AE101C104CF1A",
+            "productionSha256": "616E2D123D7D68B2E45249FCB0A9322C69D65F86B31DF41DA1F2B94235C21634",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonNatClassEquation",
+            "scratchSha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692",
+            "productionSha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonPSLBasic",
+            "scratchSha256": "375FD52F83B1E923C6570DBB3C3597C5EA2173A738CF555AE09717F1CFC94ED7",
+            "productionSha256": "FD170782C0982A8E1B218B28590BF164C23DE9E4A0D7D6CFD31FDF0C759AE35B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonPartitionHelpers",
+            "scratchSha256": "97A97557C7A15344EE321ED9E91D16B2430202A7F5B23CFB7B9BFFE1C311D7E3",
+            "productionSha256": "7AE17E83D7F1E8BB7E489613470908F7699C7E8E07322DE6716E523446BF829C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonCyclicPartition",
+            "scratchSha256": "DE9C36E93E54AB9E5CBBE68B747D134DA28A7A4B528FA3423C1DDE06B5320EA6",
+            "productionSha256": "3E3283CBF22D0E16DA64F9F422E4CF01A3EC6E6E9ADBE054064DACC188B711AD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonRecognitionA5",
+            "scratchSha256": "184604518181EF8B3CE90C9C9ABFF271863F1D1D46D2E1A695542CBB2BB33044",
+            "productionSha256": "B7F2F9151C53A9B4CAA1650E9D3D7C5578D8F4FA46E03F635B34B2902B6A13E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonFieldReconstruction",
+            "scratchSha256": "38CDE948CA816BA19132093AFC4799486580476722F305B4CAB68A3F5ADB7B1F",
+            "productionSha256": "C3433FB4D357496F733786A5C994FC16260C603677C1C1841EBBB197BBA7B217",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonPartitionProof",
+            "scratchSha256": "A65DFFCA7EBB17D5982235F405FEAB833DC0D49A729202F92A3E049B3C330903",
+            "productionSha256": "42EDD01F3F97D999B16087A6964ADB63DBB544582E14F16F67BFD4F887447C92",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonPSLRecognition",
+            "scratchSha256": "F718F0F2710A607E5D153A63096CB16F1259965D5882799472EB291839C12A50",
+            "productionSha256": "920C83D1E3B18BBC94FF09B096EA32D7EE58C27BB55DE185C7C4984C758948E6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonTameClassification",
+            "scratchSha256": "CB088253C0DD2C3634CC182A63C2657D6D8C84CC82B1A69B1FC67950222CA145",
+            "productionSha256": "337F94E53756F104A2A8C0E9B9F9776C314E92A6A4DE2419300ED39890290A28",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonWildClassification",
+            "scratchSha256": "D0AC8F264F6E93B29CFD5CE434FC28691D70BE831FB27D0497C6DD0348E9E055",
+            "productionSha256": "01EA58507B41D21523DA26C863E2B9165C245C00E968B661951A0370E4DE4003",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonClassification",
+            "scratchSha256": "8CA67616A649516F2BDC0F14E040AFA80F6F5A30BFFBB2AC030AA496E7DBE98A",
+            "productionSha256": "CBE2CD97F87FA1407513CACE8EEB9D8CC34FF66943FA9790E5C26B2E0CCD572A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualProjectiveClassification",
+            "scratchSha256": "73BA1454BD010B301D4FF4AE99C777592D505476CC23B17FA8093ECB00F4F440",
+            "productionSha256": "FF6268CD338B253D60C57E0B1DE661875DB98FABFE8F395D904730F82854FF1D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneProjectiveResidual",
+            "scratchSha256": "FF2ADC11FBE1D6591ED08793ADD2643E9540D939EDA7903B46235FE6F48F2D04",
+            "productionSha256": "0E24F6E1BADF1F392DF45B67861E08EA163C5CC454FB570FB4100F9BBEDAD411",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonProjectiveConjugacy",
+            "scratchSha256": "C071B81CA7E3F256F596E028C1D82A93A9129BA8AC87119A4C5D344B07166CF2",
+            "productionSha256": "F5CA99151072AB6323E0AA0DA43438F53FF115C2DFD247F4BFDB2BC4D35A7989",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceDicksonMatrixAlternatives",
+            "scratchSha256": "9C9F5FFF867620B184A9F05436F2A89426C75363872B4796913FBF4957130034",
+            "productionSha256": "0D580A610D0EF8C17256E0B35A625C63F0E46CA92098771C8650B7ED311F33B8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneProjectiveMatrixResidual",
+            "scratchSha256": "20D3206B1FDDC2E9D5AB1E68A3268EB953AADA2ACD432DFB88D791079E9BF902",
+            "productionSha256": "1C17E9B6B6355F7184E56E44F88927ED52EE39674BD2804D58E22F1294026F23",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceProjectivePerfectLift",
+            "scratchSha256": "7E3AC09683FC8922284AE31669D9A00D48A46572B2C2617DF12D8C0B1E0EBE9B",
+            "productionSha256": "7E3AC09683FC8922284AE31669D9A00D48A46572B2C2617DF12D8C0B1E0EBE9B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceProjectiveSL2Lift",
+            "scratchSha256": "A75BABDE60641BF37EF460D43A2644838528EF1F9557C2825BA6B5BB9C6303DB",
+            "productionSha256": "B19A48CEA426EC5AFECFC31575ADF28BFB861A901C1DB819893D105E1C41FC5C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceProjectiveSubfieldBounds",
+            "scratchSha256": "C46A04FEC816411F76DFD5DB543D785E066C92F51E938FF38FA76B1A4BFE74BA",
+            "productionSha256": "EDD958D50F5142440240BD0308770F24017CA79582F3E6168D8329702E36C624",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualLinearAlternatives",
+            "scratchSha256": "3748D903E01686E0DE6CD902154F1377E79FDBF2EF2B809C0169179483943725",
+            "productionSha256": "02277130776964986AA845C00163E81B584AF392292CDE9BFD1CC822637AC3D3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneProjectiveLinearResidual",
+            "scratchSha256": "2991BFC0E95C6A0EF8AA596FFCC657CE75E4AEA06021203C8E41405E91159E76",
+            "productionSha256": "A57F23DF81C67BAA6757EAF1643245BA253040C4862F6D678DEB730B7BF07A47",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualFiniteAmbient",
+            "scratchSha256": "ED78529C08D3EF7FEFBA2FDC2644B2A1467FBEDC6F516214D63C2B73A438F990",
+            "productionSha256": "12BA81EEA4B5F10A4390013491369F21D5D8B5ADB006865C195F9222C5DBCFF5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualFiniteDescent",
+            "scratchSha256": "B8A3BB9D5C9E6169B30B6EDCADA60C6A362D5D9A65F23FB9E45CC0EBDD8FCE8F",
+            "productionSha256": "3BE27608E2D12122DD31AA952126E05918BD5579B35FE2869E08D99D7B8BCCAF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualFiniteBounds",
+            "scratchSha256": "48B7F6CFEE99E1C1F911DB5F27C40C1102A50ABE8E35C54A52F32F35345AC980",
+            "productionSha256": "8DE40B2208081C0F1184CFC00FDDF42D37858EDFAEFD38F81E483DF2C86D8D64",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualFiniteLinearAlternatives",
+            "scratchSha256": "AE63DA0B255AA7E91EF64B09DDECE4D0D569D484AA41F8D018B9718CB25A2859",
+            "productionSha256": "D554DAC4D40E1643D1DEA9EFB22DFFC8647B1CB52D6D2BA20E73A36A673E601E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFiniteProjectiveLinearResidual",
+            "scratchSha256": "36225DBB59960A08E522E43E9FC67680B7CBAA91C4806EDC1CC0407A7D3A4745",
+            "productionSha256": "1B7EB5A8274EA5C790A00265A37A06498EF2BF2758F3CF30FCE38259070CDB5D",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 939 distinct names from 939 exhaustive scratch checks are retained: 940 in the production focused scope and 0 previously audited generated names. One additional Mathlib-generated congruence theorem is checked with identical type/value hashes in both consumer environments and is separately accounted for in the focused import order. No unaccounted theorem is missing.",
+    "boundary": "Arithmetic exclusion of the six small-image cases and the required original local deformation/regularity comparison remain open, as do automorphy and literal higher symmetric-power continuation. The finite coefficient field is a constructed extension of the original residue field; no equality of ambient and image fields is asserted. The current source consumers have p greater than three and weight at least two. Acceptance remains 16/20; DUB-17--20 OPEN. The frozen source, full modular domain and all verification criteria are unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9725-console.log",
+      "sha256": "C59D7C3B2C4B369DB8BD7A5E28FD07C66D50917D4A4DB3250B4C03BED148D22D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9725-console.log",
+      "sha256": "D1146F8F9F0C2BFD2C0A24634ABF5F3022AE67AEB9E609EA38E0A76405AC098F"
+    }
+  ]
+}

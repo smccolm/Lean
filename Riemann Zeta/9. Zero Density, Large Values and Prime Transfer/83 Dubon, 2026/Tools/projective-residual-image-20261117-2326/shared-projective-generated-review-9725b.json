@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "declaration": "Matrix.GeneralLinearGroup.mkOfDetNeZero.congr_simp",
+  "scratchAndFinalConsumerOwner": "Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction",
+  "focusedProductionOwner": "Dubon2026.SourceDicksonPGLBasic",
+  "typeHash": "1433596677",
+  "valueHash": "2954490144",
+  "evidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.lean",
+      "sha256": "98C5A310A065AE0208A79DED49307923C8F46D23A3D937DD3EE02D17FB69FA43"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.log",
+      "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedScratch2338.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.lean",
+      "sha256": "1BF060AA06C0B54478D3C76B00B9D3294639C03879975E96ED915A833D5A1346"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.log",
+      "sha256": "2B97B652AA82C2537142E4ED1F440736B97023D124E0B96B2F6E047D8C23679A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveSharedProduction2338.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "reason": "Lean generates the same congruence theorem under different first importing modules. Both final-consumer environments own it in Mathlib; the production focused all-module import order owns it in SourceDicksonPGLBasic. Exact raw type and proof-value hashes agree, displayed proof is equality transport/reflexivity, and both dependency audits allow only standard logical axioms. It is retained and separately accounted for, not excluded from checks.",
+  "focusedOwnershipSha256": "4614A1B23C707E468EAA5818A40AD5086138FC4B0DD0A1D62AA33AF57EA71C5D"
+}

@@ -1,0 +1,52 @@
+{
+  "recordedUTC": "2026-11-17T13:02:01.635474+00:00",
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": [
+    "literal higher symmetric-power continuation",
+    "automorphy",
+    "original regular auxiliary-prime detection",
+    "nonzero original twisted cocycle on the joint residual/cyclotomic kernel"
+  ],
+  "sourceConsumer": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection",
+  "reusedSources": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ResidualSubfieldCentralScalar.lean",
+      "sha256": "5EBEDE1AC01766ED38BF154F7FA42166AE4990CBA31D22FD7090747235942E44"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CocycleCentralScalarKernel.lean",
+      "sha256": "AF40BAD46FC1CABB70FD6B1ECA754E35BC0C40197A4FF39C74B2F4E0A530C4D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SymmetricTwistedKernelDetection.lean",
+      "sha256": "8B0C965E8D481A97E21ED1F5EA9F0D6A918FA1D726BB28BDEF9E63C45E62B52C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticCyclotomicCharacterSurjective.lean",
+      "sha256": "7298825B901F3B9FD77AA853DE6E674C41831A9FF9C2B3A5BC58E1BEA0E8EE39"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticCyclotomicCoefficientCharacter.lean",
+      "sha256": "AB02C4200F701A0849C50026705CB631880CE45F9089529229202A59A0504D9F"
+    }
+  ],
+  "shorterRoute": "Reuse native subfield perfect-group scalar lifting, literal scalar descent, central-scalar cocycle detection and surjectivity of the actual arithmetic cyclotomic character. Do not prove a separate finite-image H1 vanishing theorem for this detection step.",
+  "assumptionsDischarged": [
+    "The scalar witness descends to the original coefficient field and basis.",
+    "The actual arithmetic cyclotomic character supplies the nontrivial squared scalar for p>3.",
+    "The actual-form consumer constructs the original representation and image alternatives; no representation or image certificate is supplied."
+  ],
+  "quantifiers": "Detection is proved for every symmetric degree. Absolute irreducibility and adjoint-H0 vanishing retain their separate 2*n<p-1 range; no stronger H0 or irreducibility range is claimed.",
+  "topologySemantics": "The same original field and specified topology are used. Ring-topology compatibility is quantified explicitly to avoid an elaboration failure inside the source existential. The actual source already proves its residue topology is discrete, hence compatible; no alternative topology or mathematical premise is introduced.",
+  "failedVariants": [
+    "SourceGammaOneTwistedKernelDetection2370a: local-instance elaboration reported an unknown free variable. All accepted preceding bodies were preserved; a separate explicit compatibility predicate and source successor compile.",
+    "SourceArithmeticCyclotomicSquare2372a: simplification unfolded the characteristic map too soon. The successor uses the actual ring-homomorphism map_ofNat theorem."
+  ],
+  "remaining": "The actual small-image alternative, regular detecting-prime construction including the proper-subfield trace test, original local conditions, automorphy and higher continuation remain open. This does not claim a general finite-image H1-vanishing theorem.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceScopeChanged": false
+}

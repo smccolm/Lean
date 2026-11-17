@@ -1,0 +1,71 @@
+import SourceGammaOneOriginalAdicTrace
+import SourceAbsoluteTracePairComparison
+
+/-! DUB-17/18 -> original all-weight characteristic-zero association.
+Native quotient transitions and actual Frobenius comparison prove
+compatibility of the constructed original adic trace systems at all
+precisions. This avoids assuming transition maps between different
+finite Hecke modules or rank-two eigenspaces. Characteristic-zero
+reconstruction and rank-two realization remain required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open scoped ValuativeRel
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+
+/-- The original form supplies one compatible continuous trace/determinant
+system at all adic precisions, with literal original Fourier Frobenius values. -/
+theorem exists_gammaOne_compatible_original_adic_trace
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E) :
+    let C := fun n : ℕ => 𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1)
+    ∃ (t : ∀ n : ℕ, (Qbar ≃ₐ[ℚ] Qbar) → C n)
+      (D : ∀ n : ℕ, (Qbar ≃ₐ[ℚ] Qbar) →* C n),
+      (∀ n, @Continuous _ _ _ ⊥ (t n) ∧ @Continuous _ _ _ ⊥ (D n) ∧ t n 1 = 2 ∧
+        (∀ g h, t n (g * h) = t n (h * g)) ∧
+        (∀ g h, t n g * t n h = t n (g * h) + t n (g * h⁻¹) * D n h) ∧
+        ∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+          ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+            (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+            (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+              (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+            t n (embeddedNormalGaloisRestriction e φ) =
+              Ideal.Quotient.mk ((IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1))
+                ⟨τ (sourcePrimitiveFieldCoefficient f q),
+                  sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ ∧
+            D n (embeddedNormalGaloisRestriction e φ) = (q : C n) ^ Int.toNat (k - 1)) ∧
+      ∀ (m n : ℕ) (hmn : m ≤ n) (g : Qbar ≃ₐ[ℚ] Qbar),
+        Ideal.Quotient.factorPow (IsLocalRing.maximalIdeal 𝒪[E]) (Nat.add_le_add_right hmn 1)
+            (t n g) = t m g ∧
+        Ideal.Quotient.factorPow (IsLocalRing.maximalIdeal 𝒪[E]) (Nat.add_le_add_right hmn 1)
+            (D n g) = D m g := by
+  let C := fun n : ℕ => 𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1)
+  have hs := fun n => exists_gammaOne_original_adic_trace Q p n f hk hlarge τ
+  let t : ∀ n, (Qbar ≃ₐ[ℚ] Qbar) → C n := fun n => (hs n).choose
+  let D : ∀ n, (Qbar ≃ₐ[ℚ] Qbar) →* C n := fun n => (hs n).choose_spec.choose
+  have hdata := fun n => (hs n).choose_spec.choose_spec
+  refine ⟨t, D, hdata, ?_⟩
+  intro m n hmn g
+  let π : C n →+* C m := Ideal.Quotient.factorPow
+    (IsLocalRing.maximalIdeal 𝒪[E]) (Nat.add_le_add_right hmn 1)
+  apply absolute_continuous_trace_pair_map_eq π (t n) (D n) (t m) (D m)
+    (hdata n).1 (hdata n).2.1 (hdata m).1 (hdata m).2.1
+    (hdata n).2.2.2.1 (hdata m).2.2.2.1 (Q * p).primeFactors _ g
+  intro q hq hqS e φ hφ
+  have haway : ¬ q ∣ Q * p := fun h => hqS (hq.mem_primeFactors' h)
+  have hn := (hdata n).2.2.2.2.2 q hq haway e φ hφ
+  have hm := (hdata m).2.2.2.2.2 q hq haway e φ hφ
+  apply Prod.ext
+  · exact (congrArg π hn.1).trans ((Ideal.Quotient.factor_mk _ _).trans hm.1.symm)
+  · exact (congrArg π hn.2).trans
+      (((map_pow π _ _).trans (congrArg (· ^ Int.toNat (k - 1)) (map_natCast π q))).trans hm.2.symm)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,9 @@
+{
+  "recordedUTC": "2026-11-17T05:49:45.026785+00:00",
+  "status": "Manually interrupted; not accepted or Lean-PASS",
+  "execSession": 17479,
+  "reason": "Long elaboration of combined dependent comparison; refactor using a small generic trace-pair comparison, unchanged source statement and default proof limits.",
+  "cpuSecondsObserved": 655.75,
+  "sourceSha256": "3E2C4AD248D882F819C0A6279B8E839BA97EC218A9D27A1B846E2299215E5264",
+  "logBytes": 0
+}

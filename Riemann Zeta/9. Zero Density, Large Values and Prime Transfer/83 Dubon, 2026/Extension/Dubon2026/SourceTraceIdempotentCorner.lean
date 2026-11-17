@@ -1,0 +1,27 @@
+import Dubon2026.SourceTraceQuotientQuadratic
+
+/-! DUB-17/18 -> actual rank-two realization -> rank-one diagonal corners.
+The proved polarized quadratic identity forces every trace-one
+idempotent corner to consist of scalars. This is the necessary dimension
+bound for the actual trace algebra's odd-involution decomposition. -/
+namespace Dubon2026
+variable {R A : Type*} [CommRing R] [Ring A] [Algebra R A]
+
+/-- The polarized quadratic identity makes every trace-one idempotent
+corner scalar, without any finite-dimensional or matrix hypothesis. -/
+theorem traceOneIdempotent_corner_scalar (τ : A →ₗ[R] R)
+    (hPol : ∀ x y, x * y + y * x - τ x • y - τ y • x +
+      (τ x * τ y - τ (x * y)) • (1 : A) = 0)
+    (e : A) (he : e * e = e) (hte : τ e = 1) (x : A) :
+    e * x * e = τ (e * x) • e := by
+  have h := congrArg (fun a : A => e * a) (hPol e x)
+  dsimp only at h
+  rw [mul_zero] at h
+  have hn : e * (e * x + x * e - τ e • x - τ x • e +
+      (τ e * τ x - τ (e * x)) • (1 : A)) = e * x * e - τ (e * x) • e := by
+    simp only [mul_add, mul_sub, mul_smul_comm, mul_one, hte, one_smul,
+      ← mul_assoc, he, one_mul, sub_smul]
+    abel
+  exact sub_eq_zero.mp (hn.symm.trans h)
+
+end Dubon2026

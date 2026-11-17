@@ -1,0 +1,43 @@
+import SourceOriginalLocalDeterminant2201d
+import SourceTraceIdempotentCorner
+
+/-! DUB-17/18 -> actual rank-two realization -> original trace-one idempotent.
+An odd original involution has trace zero by the proved trace identity.
+Its plus projector is then a genuine trace-one idempotent over the
+original characteristic-zero field, supplying the basis construction. -/
+namespace Dubon2026
+noncomputable section
+
+/-- The actual dimension-two trace identity forces trace zero at an odd
+involution; no odd trace is independently supplied. -/
+theorem traceDeterminant_odd_involution_zero
+    {G K : Type*} [Group G] [Field K] (t : G → K) (D : G →* K)
+    (hOne : t 1 = 2)
+    (hProd : ∀ g h, t g * t h = t (g * h) + t (g * h⁻¹) * D h)
+    (c : G) (hc : c * c = 1) (hD : D c = -1) : t c = 0 := by
+  have h := hProd c c
+  rw [hc, mul_inv_cancel, hOne, hD] at h
+  have hz : t c * t c = 0 := by linear_combination h
+  exact mul_self_eq_zero.mp hz
+
+/-- The original trace-zero involution supplies its actual plus projector,
+which is idempotent and has trace one. -/
+theorem traceInvolution_plus_idempotent
+    {K A : Type*} [Field K] [CharZero K] [Ring A] [Algebra K A]
+    (T : A →ₗ[K] K) (hOne : T 1 = 2) (a : A) (ha : a * a = 1) (hta : T a = 0) :
+    let e := (2 : K)⁻¹ • (1 + a)
+    e * e = e ∧ T e = 1 := by
+  have h2 : (2 : K) ≠ 0 := by norm_num
+  have hs : (1 + a) * (1 + a) = (2 : K) • (1 + a) := by
+    rw [add_mul, mul_add, mul_add, one_mul, one_mul, mul_one, ha, two_smul]
+    abel
+  constructor
+  · change ((2 : K)⁻¹ • (1 + a)) * ((2 : K)⁻¹ • (1 + a)) = _
+    rw [smul_mul_assoc, mul_smul_comm, hs, smul_smul, smul_smul]
+    congr 1
+    field_simp
+  · change T ((2 : K)⁻¹ • (1 + a)) = 1
+    rw [map_smul, map_add, hOne, hta, add_zero, smul_eq_mul, inv_mul_cancel₀ h2]
+
+end
+end Dubon2026

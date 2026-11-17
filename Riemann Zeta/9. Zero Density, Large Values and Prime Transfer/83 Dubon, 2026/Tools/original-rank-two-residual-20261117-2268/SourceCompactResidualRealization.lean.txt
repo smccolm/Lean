@@ -1,0 +1,43 @@
+import SourceCompactOrbitLattice
+import SourceMatrixIntertwiningInvariants
+import Dubon2026.SourceStableLatticeResidualRealization
+
+/-! DUB-17/18 -> original all-weight residual association -> actual integral/residue matrices.
+The compact basis-orbit lattice discharges every lattice input of the existing
+continuous integral/residual realization. Native conjugacy invariance retains
+trace and determinant, and reduction is literal on every matrix entry. -/
+namespace Dubon2026
+noncomputable section
+open scoped ValuativeRel
+open Matrix
+variable {E G : Type*} [Field E] [ValuativeRel E] [UniformSpace E]
+variable [IsNonarchimedeanLocalField E]
+variable [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G]
+private local instance : TopologicalSpace 𝓀[E] :=
+  inferInstanceAs (TopologicalSpace (𝒪[E] ⧸ IsLocalRing.maximalIdeal 𝒪[E]))
+
+/-- Every actual continuous compact rank-two action has continuous integral
+and residual realizations with the original trace and determinant retained. -/
+theorem compact_rankTwo_integral_residual_realization
+    (ρ : G →* GeneralLinearGroup (Fin 2) E) (hρ : Continuous ρ) :
+    ∃ (e : (Fin 2 → E) ≃ₗ[E] (Fin 2 → E))
+      (ρint : G →* GeneralLinearGroup (Fin 2) 𝒪[E])
+      (ρres : G →* GeneralLinearGroup (Fin 2) 𝓀[E]),
+      Continuous ρint ∧ Continuous ρres ∧
+      (∀ g i j, (ρres g).val i j = IsLocalRing.residue 𝒪[E] ((ρint g).val i j)) ∧
+      (∀ g v, (ρint g).val.map (algebraMap 𝒪[E] E) *ᵥ e v = e ((ρ g).val *ᵥ v)) ∧
+      ∀ g, algebraMap 𝒪[E] E (trace (ρint g).val) = trace (ρ g).val ∧
+        algebraMap 𝒪[E] E (ρint g).val.det = (ρ g).val.det := by
+  let L := sourceCompactOrbitLattice ρ
+  have hL := sourceCompactOrbitLattice_free_finite_rank ρ hρ
+  obtain ⟨e, ρint, ρres, hi, hr, hred, hact⟩ := stableLattice_integral_residual_realization ρ hρ
+    L (sourceCompactOrbitLattice_span ρ) hL.1 hL.2.1 hL.2.2
+    (sourceCompactOrbitLattice_invariant ρ)
+  refine ⟨e, ρint, ρres, hi, hr, hred, hact, ?_⟩
+  intro g
+  have h := matrixTwo_trace_det_of_intertwining
+    ((ρint g).val.map (algebraMap 𝒪[E] E)) (ρ g).val e (hact g)
+  simpa only [← AddMonoidHom.map_trace, ← RingHom.map_det] using h
+
+end
+end Dubon2026

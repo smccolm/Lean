@@ -1,0 +1,104 @@
+{
+  "recordedUTC": "2026-11-17T08:11:41.981562+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceGammaOneJointArithmeticKernel",
+    "SourceGammaOneOriginalAdicArithmetic",
+    "SourceGammaOneLocalTraceArithmetic",
+    "SourceAbsoluteArithmeticFactor",
+    "SourceGammaOneLocalArithmeticRankTwo",
+    "SourceGammaOneArithmeticRankTwo"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointArithmeticKernel.lean",
+      "sha256": "029BC659BD23A67A0C52E7D676D49BA2DB47EA60D4CEBBAC617844F50D613322",
+      "oleanSha256": "4E3030E0A0BA56A4D9A2CCDE9E5FDDE96DA8480919B57FF1A9F457E8380BFFE9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointArithmeticKernel-2243.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointArithmeticKernel-2243.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicArithmetic.lean",
+      "sha256": "331EE769ABAE973C71C7B7A53A70F9E3770847A9D184452CCC33471B6454B0AF",
+      "oleanSha256": "1FB0CE01A879AC2A0A12CAE8941F37B28815394F3A9282055D90D17F07B0E520",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicArithmetic-2243.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicArithmetic-2243.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceArithmetic.lean",
+      "sha256": "246C28F7459307B658DD926FC82464696F8B70378EC4B25DFAD36AED4D6B9E05",
+      "oleanSha256": "4095B1DBAB9AAF00694099DB7B55ACA305384129D67B6B5D9133533C41B0E545",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceArithmetic-2243.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceArithmetic-2243.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticFactor.lean",
+      "sha256": "01344A7C5809650D0DB4E59F4DA6E7035439DDA669DE9660754AF8B18699CE56",
+      "oleanSha256": "D4A5A21EC93492E3EB1C5A355FC0C8F9C739811F300DE204A5FD9ABF5A5C2421",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticFactor-2243.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticFactor-2243.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalArithmeticRankTwo.lean",
+      "sha256": "FE77D35318A54F8EE8C3FC896678344B9CCE783EED9824ECAE48DE395CB03A7A",
+      "oleanSha256": "29A7647B596EDFB9867EC11202C28B23C300FC5F46A38AB457A7C95E777ED38F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalArithmeticRankTwo-2243.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalArithmeticRankTwo-2243.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticRankTwo.lean",
+      "sha256": "E85AB01CD89DF8728E9570737B3EC934619EB6AADDA0528291E0A9EC36226FB1",
+      "oleanSha256": "CB56648DAAF247E52A061666F305A997D618208BA87333FF080B60CD458595D3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticRankTwo-2243.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticRankTwo-2243.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_surjective",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointGaloisRep_arithmetic_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_arithmetic_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_arithmetic_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_arithmetic_kernel_translate",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_surjective",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_unique_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_arithmetic_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+  ],
+  "constructionRegistrations": [],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoAudit1.log",
+  "logSha256": "05BBBA735538C67C9A25C6C30612D5B9AF19B3443B074538359EC91E8A58054F",
+  "auditSha256": "ABCCC9DB084D0BE9A5B6A51E537650202D6507A374F759D59BE27532A300EB1C",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoScratchOwnership2243.log",
+  "ownershipSha256": "0A0CE6745B6CD255D3F103BF4ACEC43B6B65B00C2C723864DC27FAFA2FB44419",
+  "exhaustiveTheorems": 27,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 26,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRankTwoDependencyAudit1.log",
+  "dependencyAuditSha256": "A4CE4ACDA8D659466261F99FF594D22AE742D244B7EE3BCBC6EA091ACE216D81",
+  "dependencyAuditSourceSha256": "B59DDED649EB8578091CD0D081DDEF65799C274A7D1042128549781BBE5E76EE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_rankTwo"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> continuous rank-two representation of the prescribed arithmetic group.",
+  "discharged": "The original primitive form of weight at least two and prime p greater than three constructs its genuine local coefficient extension and continuous two-dimensional representation of the prescribed arithmetic group, retaining original Fourier norm-Frobenius traces, weight determinants and odd complex conjugation. Finite arithmetic factors give finite trace translation invariance on the original restriction kernel. Frobenius uniqueness and adic separation transfer this to the complete trace; the faithful trace algebra and kernel-retaining matrix construction kill that kernel. Native surjective restriction and compact quotient factorization give actual continuous arithmetic descent. No supplied representation, trace, arithmetic kernel, lattice or continuity certificate remains in this consumer.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Remaining local/image/regularity inputs, exceptional-prime scope, full original association, automorphy and literal higher symmetric-power continuation remain unresolved. Acceptance remains 16/20 and DUB-17--20 OPEN. Full scratch and subsequent assembled verification are required.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-rank-two-1-reuse-review-20261117.json",
+  "reuseReviewSha256": "D765C3250293E52BDF911350653F87743E6DC95096FCF9237D8AA6027685AB6E",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

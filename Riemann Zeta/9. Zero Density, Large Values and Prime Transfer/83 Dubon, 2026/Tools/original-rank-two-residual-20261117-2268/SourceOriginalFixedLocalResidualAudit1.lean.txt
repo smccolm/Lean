@@ -1,0 +1,44 @@
+import SourceOriginalResidualLocalInterface
+import SourceGammaOneFixedLocalResidual
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual
+
+private def runOriginalFixedLocalResidualAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceOriginalResidualLocalInterface, `SourceGammaOneFixedLocalResidual]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL FIXED LOCAL RESIDUAL AUDIT PASS: {count} theorems including private/generated declarations. Exact original all-weight residual Hecke polynomial and inertia under the fixed local restriction, finite image, maximal Hecke kernel and oddness are derived from the original form. Residual image and remaining source gates remain OPEN."
+
+#eval runOriginalFixedLocalResidualAudit
+
+#lint in SourceOriginalResidualLocalInterface
+#lint in SourceGammaOneFixedLocalResidual

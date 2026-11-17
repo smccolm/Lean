@@ -1,0 +1,18 @@
+{
+  "status": "Prepared only; predecessor9568 canonical PASS and archive are mandatory preflight inputs. Both full scratch receipts are mandatory.",
+  "modules": 43,
+  "queries": 107,
+  "theorems": 87,
+  "constructions": 20,
+  "exhaustiveScratchChecks": 334,
+  "proofValueChecks": 95,
+  "scopes": 2,
+  "receipts": {
+    "source-gammaone-primitive-column-1-scratch-receipt.json": "BF7E2E30BC1AF90ECBCB939A48CA0C6796E11DB4F916BF5128D1829EAE822816",
+    "source-gammaone-primitive-arithmetic-1-scratch-receipt.json": "59445EE93CA79E90ECD30A97B210DFD4B78155BDA4DE2D4D68E419C7DD33B65C"
+  },
+  "expectedConsumers": 27816,
+  "expectedConstructions": 3081,
+  "fullGoal": "Compatible character or trace specialization, rank-two characteristic-zero realization, primes two and three, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. A finite operator character and a Frobenius quadratic do not by themselves construct a rank-two representation. Acceptance stays 16/20; DUB-17--20 OPEN; all source and verification criteria are unchanged.",
+  "productionMutation": false
+}

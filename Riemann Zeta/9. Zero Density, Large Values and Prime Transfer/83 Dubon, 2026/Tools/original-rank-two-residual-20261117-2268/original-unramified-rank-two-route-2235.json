@@ -1,0 +1,109 @@
+{
+  "recordedUTC": "2026-11-17T07:46:22.922467+00:00",
+  "date": "2026-11-17",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual continuous rank-two representation unramified outside Q*p.",
+  "obligations": "The original primitive cusp form of weight at least two and prime p greater than three constructs the genuine local coefficient extension and continuous two-dimensional representation with exact original Fourier and weight norm-Frobenius values, actual odd complex conjugation, and trivial action of every original norm-inertia subgroup outside Q*p. Finite trace invariance, complete trace invariance, faithful trace-algebra kernel detection and both matrix-kernel preservation branches are proved. No matrix, trace or inertia certificate is supplied.",
+  "remaining": "Full original association, the remaining local/image/regularity inputs, exceptional-prime scope, automorphy and literal higher symmetric-power continuation remain unresolved. The existing absolute arithmetic-descent lemma has a discrete target and cannot be applied directly to these local-field matrices. Review the existing adic matrix and stable-lattice descent results before expanding that dependency. Acceptance remains16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are still required.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\AlgebraIdempotentMatrixAction.lean",
+      "sha256": "779C10321074F24D8CF40A422276A18207026F315D038E1E8874BAA0B1AE5903"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\AlgebraIdempotentLeftIdeal.lean",
+      "sha256": "F65995ED4FB22EB8BDC7D7034EA71EDE67C5E3AFB840E6649657BE8CCA66F475"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightParity.lean",
+      "sha256": "3A9E83402C15C16C91F357A1F649D6ACF9DBD9E96ABCDB313BB0B16DA2F46F47"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicCharacter.lean",
+      "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CyclotomicConjugationPower.lean",
+      "sha256": "542D4097285FC2861C2A3E243A44314034DB6327D3F9DC491AD782B843A1D728"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalValuation.lean",
+      "sha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateInertia.lean",
+      "sha256": "4AA94AF9662DB38874444330F2609EAFCB522C2F78B08E4A887531B39588BBAD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveLocalCoefficients.lean",
+      "sha256": "0EBA3EAE554D519E5244AF28BC33E6E151242C847E15F95BE842078AD42D0D74"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualCharacteristic.lean",
+      "sha256": "590B06EFA0C45075CA3E981D1AB53EF00C871552F44AEFA28E6686E76757BB15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneOriginalLocalTrace.lean",
+      "sha256": "EFAB5FBBCC6108D1BB8865FC3BF541012BE1741FB1C4CBE2BEF23831C87B5DFC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclicFrobeniusEquality.lean",
+      "sha256": "CC0BBDE155F173CD15AFC52F6337612B0681131FDABC00929C74BFC787504277"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CompactSeparatedLocalAdicTopology.lean",
+      "sha256": "8F1E520D644029C15BC086E8EEF02A999CE24D13EC2CE5729A5330BFDDDE2104"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointDescent.lean",
+      "sha256": "F00915768C2E625AA53141531FD2DEDB1F1B7CDCA331AE5DEF68CBBC92064F6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrimitiveJointTraceSpecialization.lean",
+      "sha256": "CA794C7578611AB4FEA8CCE7C5E7B7C8537E90A33FE0D2EC8B17ADD5C3075672"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteCyclotomicLocal.lean",
+      "sha256": "C50D072FDAD31B04D91D6A43B2CDBBEEFF06CB79E9FC87EBFFFB0184D164306D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+      "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticOriginalSupportDescent.lean",
+      "sha256": "D379B676AA67FD4C133927245AAE661D264DB3ABDFB6A57F472180A40F9A00A3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Basis\\Defs.lean",
+      "sha256": "82B79301C7246098B626AF1F2D88DE6B4C2BC188FA4F676492D69CC7DFA87939"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Group\\Units.lean",
+      "sha256": "7A99CBFEDA751ED382CB491D7E98E676202260FEAB39D34B0AB742572AA5E62F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Instances\\Matrix.lean",
+      "sha256": "B1A7A566CDA4BFE2E6FCF64AF90546DB07B65BE5B3FD68C0E85169078ECF163F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\MonoidAlgebra\\Defs.lean",
+      "sha256": "A8E5AFFDF1B2BE731717F7C2B21C4745CAF5ED119A510FCC3AD9062F2627947C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Ring\\Ideal.lean",
+      "sha256": "19405D642F5EC403FAD305C6BF79221D10CAEBDC2FA86D0381193A2AA290B200"
+    }
+  ],
+  "publicFollowup": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\rank-two-public-reuse-followup-2219.json",
+    "sha256": "697E0D39D94F58793ECACEBDD74DD65A1793D6DB2AF5F4E41EBE2F6203C5AF97"
+  },
+  "route": "Reuse actual finite joint norm inertia and cyclotomic valuation inertia. Build only the finite trace facts needed for the existing Frobenius uniqueness theorem, compare every positive quotient of the existing complete trace, and use native adic separation. Faithful pairing and group-image spanning detect the original action kernel. Both existing matrix constructions now retain this kernel. The original local-field theorem and its actual coefficient-field consumer discharge all norm-inertia hypotheses. No second compatible-family construction or general class-function quotient theory is introduced.",
+  "deferred": [
+    "Direct application of discrete arithmetic descent to non-discrete local-field matrices is invalid; assess existing adic descent first."
+  ],
+  "separatelyChecked": [],
+  "failedVariantsPreserved": true,
+  "proofLimitsChanged": false,
+  "productionMutation": false
+}

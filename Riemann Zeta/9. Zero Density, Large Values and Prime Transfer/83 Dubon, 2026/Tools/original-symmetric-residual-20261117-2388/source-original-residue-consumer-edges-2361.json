@@ -1,0 +1,31 @@
+{
+  "root": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility",
+  "required": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning",
+    "Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility",
+    "Dubon2026.HasOriginalSymmetricSpanning",
+    "Dubon2026.original_symmetric_absolute_irreducibility_of_spanning",
+    "Dubon2026.matrixRepresentation_absolute_irreducible_of_span",
+    "Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension",
+    "Dubon2026.matrixRepresentation_irreducible_of_span",
+    "Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span",
+    "Dubon2026.representation_irreducible_of_asAlgebraHom_surjective",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span",
+    "Dubon2026.original_symmetric_matrix_span_of_conjugated_extension",
+    "Dubon2026.matrixRepresentation_irreducible_iff_conjugate",
+    "Dubon2026.representation_irreducible_iff_of_equiv",
+    "Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility",
+    "Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible",
+    "Dubon2026.finiteSubfield_symmetric_absoluteIrreducible",
+    "Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image",
+    "Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual",
+    "Dubon2026.matrixRepresentation_span_eq_top_of_extension",
+    "Dubon2026.irreducibleRepresentation_asAlgebraHom_surjective",
+    "Dubon2026.fieldSL2_isPerfect",
+    "Dubon2026.perfect_subgroup_le_map_character_kernel"
+  ]
+}

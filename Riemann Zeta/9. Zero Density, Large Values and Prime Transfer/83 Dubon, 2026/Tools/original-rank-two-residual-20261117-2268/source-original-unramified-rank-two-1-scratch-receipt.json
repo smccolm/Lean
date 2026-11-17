@@ -1,0 +1,152 @@
+{
+  "recordedUTC": "2026-11-17T08:00:49.700998+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceCyclotomicNormInertia",
+    "SourceUnitTraceKernel",
+    "SourceGammaOneJointTraceInertia",
+    "SourceGammaOneOriginalAdicInertia",
+    "SourceGammaOneLocalTraceInertia",
+    "SourceTraceDiagonalKernel",
+    "SourceContinuousTraceKernel",
+    "SourceTraceActionKernel",
+    "SourceOriginalTraceMatrixKernel",
+    "SourceGammaOneLocalUnramifiedRankTwo",
+    "SourceGammaOneUnramifiedRankTwo"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia.lean",
+      "sha256": "98C1C0C534B47E199ADB84C5833CD719BAF596FD939842BD40715D6B1065A531",
+      "oleanSha256": "1073C65BCADDB1B72CE2F3D40C7B7C1F37AF46AAC587F51E32286DB220A58A62",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicNormInertia-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel.lean",
+      "sha256": "8D3076D1EB806EDDC5DCC93F00377E31D78BC344334084B4594B14B043467FC0",
+      "oleanSha256": "1166979619B46B6132A7D4E1C13A064C784170DB2914DF02790ED3CBA7F66C81",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceUnitTraceKernel-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia.lean",
+      "sha256": "CEA0C291455C239F535F28D4CC621D0FDCBE8B710FCC1DD86465D37FF5448CAC",
+      "oleanSha256": "45F0FD4EAA82E840E6A3A9F7491AC81C6631F75744A2DDC7D282EC30FD3113B1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointTraceInertia-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia.lean",
+      "sha256": "AFB8C1631DE143021655FCAD1EA29AD09EBFF027680928C3969B6454A12E1B24",
+      "oleanSha256": "05C9352AC9958C9AC18ADA554BF41029CDD0B5B19025E65DAFF7E6964BA346D1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalAdicInertia-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia.lean",
+      "sha256": "7B5B322D90A761F972DAE875C8E61A15C4BA9FB2DAA08FDD0AF0E714042F0231",
+      "oleanSha256": "90CFD48F9FA392B6648270176746FE203352E2F874D5ED1DB1E1A54CE0E49FAC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalTraceInertia-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel.lean",
+      "sha256": "3267BFBBF1851DF5965CF3585B6C0EF89AF98B7E6463E71B3D0D4C3530403A9E",
+      "oleanSha256": "CD91F123B3A0B68ECE9FCC1D893A0D3CBC87FD75BA70C55F4EF196F5F4EB6BE8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDiagonalKernel-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel.lean",
+      "sha256": "922E9844A74BE96785C9C6C2EF5152D1D04C35328E654C6E3559F78B35C89964",
+      "oleanSha256": "EEB62D5307294AF1C9383F03C674C7A2D0EA7BF8EEBBA1E855F60CE3D1D91D54",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousTraceKernel-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel.lean",
+      "sha256": "EA87A99EB0B33A50D03476FC7FCE1F16B28EEFF97800A5C8889566220D79BA70",
+      "oleanSha256": "3E5AB5D960CB731620F5D34F1E0A5743BCD136EC244CD37A9C161922D831E34B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceActionKernel-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel.lean",
+      "sha256": "89897DE450EFE185CC875A103A809A3CE9A530F2461673363B59FD95C7F7DCE3",
+      "oleanSha256": "8CFA96D8674ECF0D9F688383AC328105453FF4AEC0CF1F09BE066FA2070E9757",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceMatrixKernel-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo.lean",
+      "sha256": "518281722B4315D9F6FB6AE7C22634A8CE3D7FF661346FD7D63A2827D1E4379F",
+      "oleanSha256": "AA064BB77754794FA67BD2A8C58848FFC34FEB6E02777BEE9967741AFD98CBA3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalUnramifiedRankTwo-2235.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo.lean",
+      "sha256": "8DA777D51E8662E805A3D5DAED150DDB7465BD7C8FDB1C3351F0BFD31E93F7ED",
+      "oleanSha256": "CF0A00EB61FE61E2C6055EC944B8A004094C72A934D29C8C7BBB0A57F90270BC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo-2235.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedRankTwo-2235.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+    "Dubon2026.sourceUnitTrace_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+    "Dubon2026.sourceTraceAction_eq_one_of_translate",
+    "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_normInertia",
+    "Dubon2026.sourceUnitTrace_kernel_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointDeterminant_normInertia",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPrimitiveJointSpecializedTrace_normInertia_translate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_adic_inertia_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalPrimitiveLocalTrace_normInertia_translate",
+    "Dubon2026.exists_continuous_diagonal_of_scalar_corners_kernel",
+    "Dubon2026.exists_continuous_matrix_of_trace_idempotent_kernel",
+    "Dubon2026.exists_continuous_matrix_of_odd_trace_algebra_kernel",
+    "Dubon2026.sourceTraceAction_eq_one_of_translate",
+    "Dubon2026.exists_continuous_matrix_of_original_trace_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_unramified_rankTwo",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+  ],
+  "constructionRegistrations": [],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoAudit1.log",
+  "logSha256": "DF333D1E51599C7C74DB54F03C5971077869DFAB29A74743B6E7D7B91EE85528",
+  "auditSha256": "071A2A7C4B9AD488A71E1CC2325BFE8E556F727C8544F379D609B599190C8D0F",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoScratchOwnership2235.log",
+  "ownershipSha256": "30BA83EF305356821271ED05EE0C024AD2258D8090E613B799855EAD16EB064E",
+  "exhaustiveTheorems": 32,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 31,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedRankTwoDependencyAudit1.log",
+  "dependencyAuditSha256": "B94FFF1160DF42EB6F208545437BFDE7088A560B23A53AE8D393E0A9BD991455",
+  "dependencyAuditSourceSha256": "33FE2AF18845CBA2CD7E09E729DB0CAF246D94C130DFAFEF98A95BDBBD998DEE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_rankTwo"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual continuous rank-two representation unramified outside Q*p.",
+  "discharged": "The original primitive cusp form of weight at least two and prime p greater than three constructs the genuine local coefficient extension and continuous two-dimensional representation with exact original Fourier and weight norm-Frobenius values, actual odd complex conjugation, and trivial action of every original norm-inertia subgroup outside Q*p. Finite trace invariance, complete trace invariance, faithful trace-algebra kernel detection and both matrix-kernel preservation branches are proved. No matrix, trace or inertia certificate is supplied.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Full original association, the remaining local/image/regularity inputs, exceptional-prime scope, automorphy and literal higher symmetric-power continuation remain unresolved. The existing absolute arithmetic-descent lemma has a discrete target and cannot be applied directly to these local-field matrices. Review the existing adic matrix and stable-lattice descent results before expanding that dependency. Acceptance remains16/20 and DUB-17--20 OPEN; full scratch and subsequent assembled verification are still required.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-unramified-rank-two-1-reuse-review-20261117.json",
+  "reuseReviewSha256": "91E78DCC93A6CFFC4D0C97A756391D88E2A8A122C38E5CDCB19C7EE923765D04",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,43 @@
+import SourceGammaOneFiniteProjectiveLinearResidual
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.exists_finite_intermediateField_containing
+#print axioms Dubon2026.SourceDickson.exists_residual_finite_matrix_ambient
+#print axioms Dubon2026.SourceDickson.exists_matrix_over_intermediateField
+#print axioms Dubon2026.SourceDickson.exists_residual_finite_descent
+#print axioms Dubon2026.SourceDickson.scalar_factor_descends
+#print axioms Dubon2026.SourceDickson.subgroup_map_conjugate
+#print axioms Dubon2026.SourceDickson.linear_subfield_bounds_descend
+#print axioms Dubon2026.SourceDickson.HasFiniteLinearSubfieldBounds
+#print axioms Dubon2026.SourceDickson.finite_linear_subfield_bounds_of_bounds
+#print axioms Dubon2026.SourceDickson.residual_small_image_or_finite_linear_bounds
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceResidualFiniteAmbient, `SourceResidualFiniteDescent, `SourceResidualFiniteBounds, `SourceResidualFiniteLinearAlternatives, `SourceGammaOneFiniteProjectiveLinearResidual]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE PROJECTIVE FINITE AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. The original-form consumer proves the full projective classification, explicit matrix conjugacy and small-image-or-linear-subfield bounds over an actual finite coefficient extension. Arithmetic large-image exclusions remain OPEN."
+
+#eval audit
+
+#lint in SourceResidualFiniteAmbient
+#lint in SourceResidualFiniteDescent
+#lint in SourceResidualFiniteBounds
+#lint in SourceResidualFiniteLinearAlternatives
+#lint in SourceGammaOneFiniteProjectiveLinearResidual

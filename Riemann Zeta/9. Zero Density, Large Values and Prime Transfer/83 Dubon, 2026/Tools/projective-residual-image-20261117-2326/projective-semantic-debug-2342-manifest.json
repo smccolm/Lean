@@ -1,0 +1,44 @@
+{
+  "archive": "E:\\Lean\\.tmp\\dubon83\\projective-semantic-debug-2342.zip",
+  "sha256": "F88F06CEF1A5CE34AACC0A4C078F44A727AE429A5D26BF581ECF7547191DF2AD",
+  "bytes": 3304202,
+  "members": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveExprScratch2342.lean",
+      "member": "SourceProjectiveExprScratch2342.lean.txt",
+      "bytes": 2516,
+      "sha256": "96364AE6510F13A86CC2B1BA16660E488E89E1CC219477E134FEAFA49BCDBF00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveExprScratch2342.log",
+      "member": "SourceProjectiveExprScratch2342.log",
+      "bytes": 135921990,
+      "sha256": "75563F09E79CC8B4B6F245AB8DEB122C1D4BF61B352216633ED7C43BF6284032"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveExprScratch2342.exit",
+      "member": "SourceProjectiveExprScratch2342.exit",
+      "bytes": 3,
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveExprProduction2342.lean",
+      "member": "SourceProjectiveExprProduction2342.lean.txt",
+      "bytes": 2526,
+      "sha256": "7D2F02AD4EFB0339FBD1F944620052A73CF3F58676CD48D4A08A25CDF6918886"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveExprProduction2342.log",
+      "member": "SourceProjectiveExprProduction2342.log",
+      "bytes": 135935618,
+      "sha256": "4AD94C379FB6F9FDA055A4000683F9DF3221E47F6CEDE9ECB93D018B0F66AE4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveExprProduction2342.exit",
+      "member": "SourceProjectiveExprProduction2342.exit",
+      "bytes": 3,
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "reason": "Exact raw expression diagnostic logs are compressed losslessly for repository archiving; source scratch evidence remains unchanged. No mathematical proof depends on compressed or external evaluation. All values remain available for independent review."
+}

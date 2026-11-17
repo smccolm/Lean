@@ -1,0 +1,111 @@
+{
+  "recordedUTC": "2026-11-17T06:15:40.109263+00:00",
+  "date": "16 November 2026",
+  "modules": [
+    "SourcePositiveAdicFamilyLift",
+    "SourcePositiveAdicReconstruction",
+    "SourceAdicFunctionContinuity",
+    "SourceCompatibleTraceLift",
+    "SourceGammaOneOriginalLocalTrace",
+    "SourceGammaOneConstructedLocalTrace"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift.lean",
+      "sha256": "57401596BBE940867CA221A4DB172ADE4F66446EAEB59EB071DADA76C31C8EBD",
+      "oleanSha256": "90908109DC776F805FBC691D2E7C05F035074A9F87C57CC993068E1BB2F518AC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift-2176.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicFamilyLift-2176.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction.lean",
+      "sha256": "0497FC85F18315FD42DF40062CCCBE602E23BFB0D2DE8F7F8A2A0A9B2F5819B2",
+      "oleanSha256": "6F59E641D0E60EF8E897C3F671F4B4679ADB20FFA86F04D467E29BB4933F12B7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction-2176.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePositiveAdicReconstruction-2176.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity.lean",
+      "sha256": "A1E483200F868BD7539BD3042F8AE1EDD54EA94E3A01B04B783D09AE84FE0CCA",
+      "oleanSha256": "C553F5238A5261C6BB76AF9D95F4176A06CA673DA5568F8C50FA08DBFFABE693",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity-2176.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAdicFunctionContinuity-2176.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift.lean",
+      "sha256": "5B5010DD142E5BB7FA183F53AE68949FCD6A11181186B95335A682F12840E275",
+      "oleanSha256": "4047E404F27F5D3BD43C524EEC0D54E98865BA0A12233265A17CB0786EB0F6AC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift-2176.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCompatibleTraceLift-2176.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace.lean",
+      "sha256": "7FEFDBD746D5EBD4DFE1DFE090995B9C331A7EC3BFC8EBDCA5D19B03C191AE05",
+      "oleanSha256": "2DCC869C5B33E8745FD26CAFC116A1AB164170981A6F1BF1F5BA6E7B0832EDE3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace-2176.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalLocalTrace-2176.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace.lean",
+      "sha256": "2CEAC5429797846795255C426B2F56CCB8EB908A3E76B720B555BDF6CF3D5730",
+      "oleanSha256": "2C60CD0CFE1DFC7979BC5C7EDCF2164EB951C49F91463311BFD457C91582AF45",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace-2176.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstructedLocalTrace-2176.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.positiveAdicFamily_exists_unique_lift",
+    "Dubon2026.positiveAdicFamilyLift",
+    "Dubon2026.positiveAdicFamilyLift_mk",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.continuous_of_positive_adic_quotients",
+    "Dubon2026.exists_complete_trace_of_compatible_positive_quotients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.positiveAdicFamily_exists_unique_lift",
+    "Dubon2026.positiveAdicFamilyLift_mk",
+    "Dubon2026.positiveAdic_ext",
+    "Dubon2026.continuous_of_positive_adic_quotients",
+    "Dubon2026.exists_complete_trace_of_compatible_positive_quotients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.positiveAdicFamilyLift"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.positiveAdicFamilyLift"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceAudit1.log",
+  "logSha256": "484E2FAE2C0E92A7626ADEF90FD2E5A9BD353BBF9D262CD67BD93C8F86AF0EF8",
+  "auditSha256": "11AE8F6CFC97110F770B42C797209D25F5713EF2E5E1E8E2CE1428BFFD384C71",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceScratchOwnership2176.log",
+  "ownershipSha256": "852DACA1520EC67422768F8885A86ED23AE2166598989E2283973F0246F8EB99",
+  "exhaustiveTheorems": 16,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalTraceDependencyAudit1.log",
+  "dependencyAuditSha256": "99C6BC2E5880D857A245BB4B79AD6CEB5EC5A7D09ADB4C82844C2497887E7AB8",
+  "dependencyAuditSourceSha256": "1BED2A63E328C3D07E558457C9B9C4D352759CA20DFC42976C2EDF4A40504531",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> continuous characteristic-zero original trace -> compatible original adic traces.",
+  "discharged": [
+    "Unique reconstruction of compatible positive adic quotient values",
+    "Continuity in the actual coefficient topology from the original continuous quotient functions",
+    "Preserve trace, determinant and dimension-two trace identities under reconstruction",
+    "Recover exact characteristic-zero Fourier and weight values at all original good-prime norm Frobenius",
+    "Construct the genuine finite local coefficient field, valuation extension, embedding and prescribed residue characteristic from the original form"
+  ],
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Actual rank-two matrix realization, primes two and three, full original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. DUB-17--20 OPEN; acceptance 16/20. Trace identities do not assert a matrix representation.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-local-trace-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "DAEBC20704A566DABC90B129201477025E5FC7F2455A57C9046042A45201C53F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

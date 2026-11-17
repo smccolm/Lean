@@ -1,0 +1,62 @@
+[
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonCyclicPartition2275a.lean",
+    "sha256": "568E9C229634740ACA5F76337843A6699E241B7D93FF40F47E3C8EECBB73C693",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonCyclicPartition2275a.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonFieldReconstruction2278a.lean",
+    "sha256": "167955B2F0585C3C792BD4D9E343882D4A524779C3DDE31853F33DEE9DF33CD0",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonFieldReconstruction2278a.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270a.lean",
+    "sha256": "2DBDDE4A5A32F4E818E9FA814C284458F65A56B5976A70C1C92B0DC280F730F8",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270a.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270b.lean",
+    "sha256": "A503117183B2D132537B0481D5F4C6B7BE6A5F70EF890CCAC586551F6913FEAC",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270b.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270c.lean",
+    "sha256": "66D07FF70673E7CC63CA58127F786568E86333F8A68D523D9645F841525EE0EF",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270c.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPartitionHelpers2274a.lean",
+    "sha256": "4E17F51C72AFCEF4C4CBE0AE0BA9A02376DA39EA5C9985D56E460ACCD1D86E0D",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPartitionHelpers2274a.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPartitionHelpers2274b.lean",
+    "sha256": "61A5BCA2C9E4C6983D6F59D61D1A921DF4E9A4D2DA1BFBC41C546CCC91648DA5",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPartitionHelpers2274b.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPGLBasic2271a.lean",
+    "sha256": "6CB3E25D4E01B6DA00B0A47689A82FA87DBB35C6984E9A539798FF0C2651170E",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPGLBasic2271a.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPGLBasic2271b.lean",
+    "sha256": "5AEDE639ADA8131E3BAA7C7CB10326356FE4416A5C696C66BECD0D0CDD11F9F7",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPGLBasic2271b.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPSLBasic2273a.lean",
+    "sha256": "10B20938B610410AEFDA42F80A6238C559DEFD9CBEAD12DE2E42C310F705ED56",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPSLBasic2273a.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPSLBasic2273b.lean",
+    "sha256": "1919886EE35D5A3889AE5366A40885C9974ED18863E614491DE9F891E1EAC1DC",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPSLBasic2273b.lean.txt"
+  },
+  {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonRecognitionA52276a.lean",
+    "sha256": "63515F0902E46CCD28742B006B2DA796223778856A693B676605D7F541FDB4C6",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonRecognitionA52276a.lean.txt"
+  }
+]

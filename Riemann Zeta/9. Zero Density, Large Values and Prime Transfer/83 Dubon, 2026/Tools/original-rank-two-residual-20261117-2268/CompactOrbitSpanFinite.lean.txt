@@ -1,0 +1,37 @@
+import Mathlib.Topology.Compactness.Compact
+import Mathlib.Topology.Algebra.Group.Basic
+import Mathlib.RingTheory.Noetherian.Basic
+
+/-! DUB-17/18 -> original all-weight association -> integral/residual realization.
+An open finite coordinate lattice bounds the compact union of the actual
+basis orbits by finitely many translates. Noetherianity then supplies the
+finite generation needed by the existing invariant-lattice consumer. -/
+namespace Dubon2026
+noncomputable section
+
+/-- An open finite submodule supplies a finite bound for the span of a compact set. -/
+theorem compact_span_finite_of_open_lattice
+    {R V : Type*} [Ring R] [IsNoetherianRing R] [AddCommGroup V] [Module R V]
+    [TopologicalSpace V] [IsTopologicalAddGroup V]
+    (L : Submodule R V) (hL : L.FG) (hopen : IsOpen (L : Set V))
+    (S : Set V) (hS : IsCompact S) : (Submodule.span R S).FG := by
+  classical
+  let U : V → Set V := fun x => {y | y - x ∈ L}
+  have hU : ∀ x, IsOpen (U x) := fun x =>
+    hopen.preimage (continuous_id.sub continuous_const)
+  have hcover : S ⊆ ⋃ x, U x := by
+    intro x _
+    exact Set.mem_iUnion.mpr ⟨x, by simp [U]⟩
+  obtain ⟨s, hs⟩ := hS.elim_finite_subcover U hU hcover
+  let M := L ⊔ Submodule.span R (s : Set V)
+  have hM : M.FG := hL.sup (Submodule.fg_span s.finite_toSet)
+  apply hM.of_le
+  apply Submodule.span_le.mpr
+  intro x hx
+  obtain ⟨y, hy, hxy⟩ := Set.mem_iUnion₂.mp (hs hx)
+  have h₁ : x - y ∈ M := (show L ≤ M from le_sup_left) (show x - y ∈ L from hxy)
+  have h₂ : y ∈ M := (show Submodule.span R (s : Set V) ≤ M from le_sup_right) (Submodule.subset_span hy)
+  simpa only [sub_add_cancel] using M.add_mem h₁ h₂
+
+end
+end Dubon2026

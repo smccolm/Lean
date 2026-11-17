@@ -1,0 +1,54 @@
+import Dubon2026.SourceTraceDiagonalRepresentation
+
+/-! DUB-17/18 -> actual unramified rank-two association.
+Retain the actual action kernel in the diagonal construction. This is
+necessary to transfer the original trace-algebra norm-inertia kernel to
+the actual matrices; it adds no new algebraic or continuity premise. -/
+namespace Dubon2026
+noncomputable section
+variable {G K A : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+  [Field K] [TopologicalSpace K] [IsTopologicalRing K] [Ring A] [Algebra K A]
+
+/-- Scalar complementary corners construct a genuine continuous diagonal
+representation whose trace is the original algebra trace. -/
+theorem exists_continuous_diagonal_of_scalar_corners_kernel
+    (σ : G →* A) (T : A →ₗ[K] K)
+    (hspan : Submodule.span K (Set.range σ) = ⊤)
+    (ht : Continuous (fun g => T (σ g)))
+    (e : A) (hte : T e = 1) (htf : T (1 - e) = 1)
+    (hE : ∀ x, e * x = T (e * x) • e)
+    (hF : ∀ x, (1 - e) * x = T ((1 - e) * x) • (1 - e)) :
+    ∃ ρ : G →* Matrix.GeneralLinearGroup (Fin 2) K,
+      Continuous ρ ∧ (∀ g, Matrix.trace (ρ g).val = T (σ g)) ∧
+      ∀ g, σ g = 1 → ρ g = 1 := by
+  let χ0 := sourceScalarCornerHom T e hte hE
+  let χ1 := sourceScalarCornerHom T (1 - e) htf hF
+  let δ : G →* (Fin 2 → K) :=
+    { toFun := fun g => ![χ0 (σ g), χ1 (σ g)]
+      map_one' := by ext i; fin_cases i <;> simp
+      map_mul' := by intro g h; ext i; fin_cases i <;> simp }
+  let ρ : G →* Matrix.GeneralLinearGroup (Fin 2) K :=
+    ((Matrix.diagonalRingHom (Fin 2) K).toMonoidHom.comp δ).toHomUnits
+  have hd : Continuous δ := by
+    apply continuous_pi
+    intro i
+    fin_cases i
+    · exact continuous_trace_of_spanning_action σ T hspan ht e
+    · exact continuous_trace_of_spanning_action σ T hspan ht (1 - e)
+  have hm : Continuous (fun g => (ρ g).val) := hd.matrix_diagonal
+  refine ⟨ρ, Units.continuous_iff.mpr ⟨hm, hm.comp continuous_inv⟩, ?_, ?_⟩
+  · intro g
+    change Matrix.trace (Matrix.diagonal ![T (e * σ g), T ((1 - e) * σ g)]) = T (σ g)
+    rw [Matrix.trace_diagonal, Fin.sum_univ_two]
+    change T (e * σ g) + T ((1 - e) * σ g) = T (σ g)
+    rw [sub_mul, one_mul, map_sub]
+    abel
+  
+  · intro g hg
+    have hd1 : δ g = 1 := by ext i; fin_cases i <;> simp [δ, hg]
+    apply Units.ext
+    change Matrix.diagonalRingHom (Fin 2) K (δ g) = 1
+    rw [hd1, map_one]
+
+end
+end Dubon2026

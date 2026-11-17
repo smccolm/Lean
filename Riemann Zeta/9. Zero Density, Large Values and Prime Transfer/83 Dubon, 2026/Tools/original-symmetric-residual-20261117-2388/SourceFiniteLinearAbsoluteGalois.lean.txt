@@ -1,0 +1,59 @@
+import SourceFiniteLinearKernelSymmetric
+import Dubon2026.SourceAbsoluteArithmeticFactor
+import Dubon2026.SourceAbsoluteCyclotomicCharacter
+
+/-! DUB-17/18 -> automorphy -> the actual absolute Galois cyclotomic restriction.
+Literal absolute-to-arithmetic restriction is already proved surjective. Reuse
+that theorem to retain the same finite-subfield bounds, then apply the native
+perfect-subgroup and symmetric-power arguments to the actual absolute character. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+variable (p : ℕ) [Fact p.Prime]
+
+/-- Surjective pullback retains the same finite coefficient field, subfield
+embeddings, basis and both literal linear image bounds. -/
+theorem finite_linear_bounds_precomp_surjective
+    {F Γ Δ : Type} [Field F] [Group Γ] [Group Δ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F) (π : Δ →* Γ)
+    (hπ : Function.Surjective π) (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    HasFiniteLinearSubfieldBounds p j (ρ.comp π) := by
+  obtain ⟨m, hm, E, hE, jE, θ, B, hj, hθ, hlo, hhi⟩ := h
+  have hr : ((GeneralLinearGroup.map jE).comp (ρ.comp π)).range =
+      ((GeneralLinearGroup.map jE).comp ρ).range := by
+    apply le_antisymm
+    · rintro x ⟨g, rfl⟩
+      exact ⟨π g, rfl⟩
+    · rintro x ⟨g, rfl⟩
+      obtain ⟨d, rfl⟩ := hπ g
+      exact ⟨d, rfl⟩
+  refine ⟨m, hm, E, hE, jE, θ, B, hj, hθ, ?_, ?_⟩
+  · simpa only [hr] using hlo
+  · simpa only [hr] using hhi
+
+/-- The actual absolute Galois action restricted to its p-cyclotomic kernel
+has absolutely irreducible symmetric powers in the explicit prime range. -/
+theorem finite_linear_bounds_absolute_cyclotomic_irreducibility
+    {F : Type} [Field F] (a : 𝓞 ℚ)
+    (j : F →+* K p) (ρ : rationalArithmeticGaloisGroup a →* GL (Fin 2) F)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    ∃ E : IntermediateField (ZMod p) (K p), Finite E ∧
+      ∃ (jE : F →+* E) (B : GL (Fin 2) E), E.subtype.comp jE = j ∧
+        let ρabs := ρ.comp (sourceAbsoluteArithmeticRestriction a).toMonoidHom
+        let ρE := (MulEquiv.toMonoidHom (MulAut.conj B)).comp
+          ((GeneralLinearGroup.map jE).comp ρabs)
+        ∀ (n : ℕ), 2 * n < p - 1 →
+          ∀ (L : Type) (_ : Field L) (_ : Algebra E L),
+            Representation.IsIrreducible (matrixStandardRepresentation
+              (matrixCoefficientExtension (L := L) ((homogeneousSymmetricGL n).comp
+                (ρE.comp (sourceAbsoluteCyclotomicCharacter p).toMonoidHom.ker.subtype)))) := by
+  have hbound := finite_linear_bounds_precomp_surjective p j ρ
+    (sourceAbsoluteArithmeticRestriction a).toMonoidHom
+    (sourceAbsoluteArithmeticRestriction_surjective a) h
+  exact finite_linear_bounds_kernel_absolute_symmetric_irreducibility p j
+    (ρ.comp (sourceAbsoluteArithmeticRestriction a).toMonoidHom)
+    (sourceAbsoluteCyclotomicCharacter p).toMonoidHom hp3 hbound
+
+end
+end Dubon2026.SourceDickson

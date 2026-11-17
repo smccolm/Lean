@@ -1,0 +1,67 @@
+import Dubon2026.SourceFiniteLinearOriginalScalar
+import Dubon2026.SymmetricTwistedKernelDetection
+
+/-! DUB-17/18 -> automorphy -> regular auxiliary-prime detection -> a nonzero
+original cocycle value on the joint residual/character kernel. Native central
+scalar detection applies after the proved scalar witness descends to the actual
+original coefficient field. No separate finite-image H1 vanishing is assumed. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+
+/-- Every nonzero original twisted cohomology class is detected on the original
+joint kernel under the finite subfield image bounds and an original character
+whose squared value is nontrivial. -/
+theorem finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel
+    (p : ℕ) [Fact p.Prime]
+    {G B F : Type} [Group G] [CommGroup B] [Field F]
+    [TopologicalSpace G] [TopologicalSpace F] [IsTopologicalRing F]
+    (n : ℕ) (j : F →+* K p) (ρ : G →* GeneralLinearGroup (Fin 2) F)
+    (χ : G →* B) (ω : B →* F) (hp3 : 3 < p)
+    (h : HasFiniteLinearSubfieldBounds p j ρ)
+    (g : G) (hg : ω (χ g) ^ 2 ≠ 1)
+    (hA : Continuous (fun z : G × matrixTraceZeroSubmodule (Fin (n + 1)) F =>
+      (matrixTraceZeroCharacterRep ((homogeneousSymmetricGL n).comp ρ) (ω.comp χ)).ρ z.1 z.2))
+    (c : continuousRepresentationCocyclesOne
+      (matrixTraceZeroCharacterRep ((homogeneousSymmetricGL n).comp ρ) (ω.comp χ)))
+    (hc : (Submodule.Quotient.mk c : ContinuousRepresentationH1
+      (matrixTraceZeroCharacterRep ((homogeneousSymmetricGL n).comp ρ) (ω.comp χ)) hA) ≠ 0) :
+    ∃ τ, ρ τ = 1 ∧ χ τ = 1 ∧ c.val τ ≠ 0 := by
+  let R := (homogeneousSymmetricGL n).comp ρ
+  let ξ := ω.comp χ
+  let A := matrixTraceZeroCharacterRep R ξ
+  let ψ := ρ.prod χ
+  obtain ⟨σ, u, hχσ, hρσ⟩ :=
+    finite_linear_bounds_original_scalar_character_square p j ρ χ hp3 h g
+  have hscalar : R σ = GeneralLinearGroup.scalar (Fin (n + 1))
+      (u ^ n) := by
+    change homogeneousSymmetricGL n (ρ σ) = _
+    rw [hρσ, homogeneousSymmetricGL_scalar_ring]
+  have hcentral : ∀ x, Commute (ψ σ) (ψ x) := by
+    intro x
+    change (ρ σ, χ σ) * (ρ x, χ x) = (ρ x, χ x) * (ρ σ, χ σ)
+    apply Prod.ext
+    · change ρ σ * ρ x = ρ x * ρ σ
+      rw [hρσ]
+      exact (generalLinear_scalar_commute _ _).eq
+    · exact mul_comm _ _
+  have hker : ∀ τ, ψ τ = 1 → A.ρ τ = 1 := by
+    intro τ hτ
+    have hr : ρ τ = 1 := congrArg Prod.fst hτ
+    have ht : χ τ = 1 := congrArg Prod.snd hτ
+    have hR : R τ = 1 := by change homogeneousSymmetricGL n (ρ τ) = 1; rw [hr, map_one]
+    have hξ : ξ τ = 1 := by change ω (χ τ) = 1; rw [ht, map_one]
+    apply matrixTraceZeroCharacterRep_eq_one_of_scalar R ξ τ hξ 1
+    rw [hR]
+    simp
+  have hξσ : ξ σ ≠ 1 := by
+    change ω (χ σ) ≠ 1
+    rw [hχσ, map_pow]
+    exact hg
+  obtain ⟨τ, hτ, hne⟩ := continuousH1_exists_nonzero_kernel_of_central_scalar
+    A ψ hA c hker σ hcentral (ξ σ) hξσ
+    (matrixTraceZeroCharacterRep_apply_of_scalarGL R ξ σ _ hscalar) hc
+  exact ⟨τ, congrArg Prod.fst hτ, congrArg Prod.snd hτ, hne⟩
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,75 @@
+import SourceGammaOneLocalResidualRankTwo
+import Dubon2026.SourceArithmeticLocalEmbeddingExtension
+import Dubon2026.RationalArithmeticOutsideInertia
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
+
+/-! DUB-17/18 -> original residual association -> fixed local Hecke interface.
+Reuse the existing extension of the fixed arithmetic local embedding and
+its exact restriction identity. The original Hecke character identifies
+Fourier reduction, while native rank-two characteristic polynomials and
+original arithmetic inertia give the complete good-prime local statement. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+
+/-- The original norm-Frobenius values yield the exact primitive Hecke
+characteristic polynomial under the fixed arithmetic local restriction. -/
+theorem originalResidualHecke_fixed_local_data
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (ρ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+      GeneralLinearGroup (Fin 2) 𝓀[E])
+    (hFrob : ∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+      ∀ (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+        (φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq)),
+        (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+          (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+        let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+          (embeddedNormalGaloisRestriction e φ)
+        trace (ρ g).val = IsLocalRing.residue 𝒪[E]
+          ⟨τ (sourcePrimitiveFieldCoefficient f q),
+            sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ ∧
+        (ρ g).val.det = (q : 𝓀[E]) ^ Int.toNat (k - 1)) :
+    ∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+      (∀ g ∈ rationalPrimeNormInertia q hq,
+        ρ (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq g) = 1) ∧
+      ∀ g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq),
+        (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+          (rationalPrimeLocalClosure q hq)), g • z = z ^ q) →
+        let a := sourcePrimitiveResidualHeckeCharacter f hk τ
+          ⟨Dubon2026.cuspHeckeLinear Q k q,
+            Algebra.subset_adjoin ⟨(⟨q, hq.pos⟩ : ℕ+), rfl⟩⟩
+        let A := (ρ (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq g)).val
+        A.charpoly = X ^ 2 - C a * X + C ((q : 𝓀[E]) ^ Int.toNat (k - 1)) ∧
+        A.trace = a ∧ A.det = (q : 𝓀[E]) ^ Int.toNat (k - 1) := by
+  intro q hq ha
+  constructor
+  · intro g hg
+    have ha' : ¬(q : 𝓞 ℚ) ∣ ((Q * p : ℕ) : 𝓞 ℚ) := by
+      intro h
+      have hz := map_dvd Rat.ringOfIntegersEquiv.toRingHom h
+      have hn : (q : ℤ) ∣ ((Q * p : ℕ) : ℤ) := by
+        simpa only [map_natCast] using hz
+      exact ha (Int.natCast_dvd_natCast.mp hn)
+    rw [rationalPrimeArithmeticRestriction_inertia_eq_one_of_away _ q hq ha' g hg, map_one]
+  · intro g hg
+    dsimp only
+    obtain ⟨e, he⟩ := sourceArithmeticLocalEmbedding_exists_extension ((Q * p : ℕ) : 𝓞 ℚ) q hq
+    have hf := hFrob q hq ha e g hg
+    dsimp only at hf
+    rw [sourceAbsoluteArithmeticRestriction_local _ q hq e he g] at hf
+    have ht := hf.1.trans (sourcePrimitiveResidualHeckeCharacter_hecke f hk τ ⟨q, hq.pos⟩).symm
+    exact ⟨by rw [Matrix.charpoly_fin_two, ht, hf.2], ht, hf.2⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

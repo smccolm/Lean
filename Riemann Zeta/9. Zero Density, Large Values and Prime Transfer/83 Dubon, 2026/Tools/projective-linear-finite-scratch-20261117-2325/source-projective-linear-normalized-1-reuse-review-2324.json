@@ -1,0 +1,22 @@
+{
+  "recordedUTC": "2026-11-17T10:56:34.092045+00:00",
+  "dependency": "DUB-17 source Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy -> residual large image. Reuse the complete pinned Dickson classification, extract its intermediate matrix equalities, and reuse native perfect SL2 to lift PSL2/PGL2 alternatives to literal linear subfield bounds. Six small-image alternatives, arithmetic coefficient-field comparison, local regularity and the final automorphy/continuation gates remain open. The finite coefficient-image comparison now places both embeddings and the conjugating matrix in one finite intermediate field and descends both linear bounds. Arithmetic small-image exclusion and the connection to the required original local deformation conditions remain open.",
+  "pinnedDickson": "ImperialCollegeLondon/FLT@478c1013cd29c27d72f57aa8b691fa46083664b3",
+  "nativeReuse": [
+    "fieldSL2_isPerfect",
+    "fieldSL2_mem_of_unipotents",
+    "symmetricMatrixThreeOperators_submodule_eq_top (next downstream candidate, not consumed here)",
+    "IntermediateField.finiteDimensional_adjoin",
+    "Module.finite_of_finite",
+    "RingHom.codRestrict",
+    "primitive_satoTate_of_entire_symmetric_continuation (existing final analytic criterion)"
+  ],
+  "shorterRoute": "Extract the proved intermediate subgroup equalities from Dickson; native perfect SL2 lifts projective containment. Adjoin only the finitely many coefficient and conjugating-matrix entries, then descend the literal lower and upper bounds. Do not assume full SL2 over the original residue field or import a broad geometry library.",
+  "remaining": "Six arithmetic small-image exclusions and the required original local deformation/regularity comparison; automorphy and literal higher continuation. The inspected Ribet proofs are weight-two candidates, not an all-weight substitute.",
+  "researchEvidence": [
+    "Tools/proof-reuse-refresh-20261117-2298/manifest.json",
+    "Tools/ribet-image-reuse-review-20261117-2314/manifest.json"
+  ],
+  "proofLimitsChanged": false,
+  "rootPinsChanged": false
+}

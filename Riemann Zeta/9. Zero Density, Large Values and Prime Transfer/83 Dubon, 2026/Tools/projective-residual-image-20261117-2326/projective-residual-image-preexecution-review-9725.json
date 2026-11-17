@@ -1,0 +1,19 @@
+{
+  "status": "Prepared only. Predecessor9697 canonical PASS and archive, exact scratch receipts, mechanical review and semantic type/value verification are mandatory before final acceptance.",
+  "modules": 28,
+  "queries": 436,
+  "theorems": 371,
+  "constructions": 65,
+  "exhaustiveScratchChecks": 939,
+  "proofValueChecks": 81,
+  "finalConsumerValueChecks": 45,
+  "scopes": 2,
+  "receipts": {
+    "source-projective-linear-normalized-1-scratch-receipt.json": "8CD6B02E4E0B7A5F1A5E18A1C853DEF053B73529A505DF9ADCFF2D67497EDB33",
+    "source-projective-finite-normalized-1-scratch-receipt.json": "B490938772C25A888E984B6B964D091E12134A31A7F1ADB4B7F5CFBDFF3E677B"
+  },
+  "expectedConsumers": 28319,
+  "expectedConstructions": 3170,
+  "fullGoal": "Arithmetic exclusion of the six small-image cases and the required original local deformation/regularity comparison remain open, as do automorphy and literal higher symmetric-power continuation. The finite coefficient field is a constructed extension of the original residue field; no equality of ambient and image fields is asserted. The current source consumers have p greater than three and weight at least two. Acceptance remains 16/20; DUB-17--20 OPEN. The frozen source, full modular domain and all verification criteria are unchanged.",
+  "productionMutation": false
+}

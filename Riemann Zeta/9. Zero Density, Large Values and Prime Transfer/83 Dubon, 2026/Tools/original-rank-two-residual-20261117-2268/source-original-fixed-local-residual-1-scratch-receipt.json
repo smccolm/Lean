@@ -1,0 +1,58 @@
+{
+  "recordedUTC": "2026-11-17T08:55:07.556642+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalResidualLocalInterface",
+    "SourceGammaOneFixedLocalResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface.lean",
+      "sha256": "48B7D5B9166F0D323A27C970FD7775146F4CC22DCC8BF5CF17A33D00F373004E",
+      "oleanSha256": "4EFE0A2A4FF2987DBE751E67F886D937B7ECD72CEC0D95D33D876B4B63DC5DA8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface-2260.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualLocalInterface-2260.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual.lean",
+      "sha256": "493B198A6352D5FD7029788F0BDC681D0AA34FCD0B526A851B95534A13B523B7",
+      "oleanSha256": "C08841E60D33BE2EB062C9C57857AFCE4294E0BF8F92DAFA6C77600957E90AD7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual-2260.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedLocalResidual-2260.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.originalResidualHecke_fixed_local_data",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+  ],
+  "constructionRegistrations": [],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualAudit1.log",
+  "logSha256": "7330C2D904DA665073DC2190682815DADBEF7ACE09E5629EE4311E899A8D22CF",
+  "auditSha256": "C015CA738BA2D4AAB3DD213CAC3BBDFF52B5BB0C49212412969372C7F66EE124",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualScratchOwnership2260.log",
+  "ownershipSha256": "2CD5069E2EFFE897EC433377EBCAA52F2255A836582562A94ABFC2F2278FF740",
+  "exhaustiveTheorems": 7,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalResidualDependencyAudit1.log",
+  "dependencyAuditSha256": "43627AE0CD7735CE4677D0BD2AAD153EDAA430B03B5CCB9B363DCEEC9984B1DD",
+  "dependencyAuditSourceSha256": "54F6F5CF22FDBADE674EC3DD3342E5454834CC3A2C9952BF4DB193F2FABB3A24",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_fixedLocal_residual"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> higher symmetric-power continuation -> automorphy -> original modular residual association -> exact original Hecke-character Frobenius polynomial under the fixed prime-local restriction",
+  "discharged": "The original primitive form in every weight at least two, for p greater than three, constructs its actual finite characteristic-p residue field, integral and residual continuous arithmetic action, literal entrywise reduction, finite residual image, maximal original residual Hecke kernel, fixed-local trivial inertia, exact original Hecke characteristic polynomial, trace and weight determinant at every good-prime norm Frobenius, and actual complex oddness. The original representation and Frobenius values are derived in the same source consumer; neither is supplied.",
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Residual irreducibility/large image, prescribed unitary realization, local regularity, automorphy and literal higher continuation stay unresolved; no source gate closes from this interface bridge alone.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-fixed-local-residual-1-reuse-review-20261117.json",
+  "reuseReviewSha256": "B11AFB3806B085A780432325E30A02626B0D90BA9F4ACBD152422AC60C5BEEA8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

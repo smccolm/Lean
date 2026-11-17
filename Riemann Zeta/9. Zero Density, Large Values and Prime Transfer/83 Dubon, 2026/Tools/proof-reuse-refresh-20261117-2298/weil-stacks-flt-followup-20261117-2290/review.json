@@ -1,0 +1,103 @@
+{
+  "recordedUTC": "2026-11-17T09:35:36.354182+00:00",
+  "fltCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "previousFLTCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "stacksCommit": "012108f61d7f92a6ffc35ec3f263b6da5d438125",
+  "weilCommit": "27cdb2049be62ee2911429b47f54774078450e32",
+  "files": [
+    {
+      "path": "FLT/commit.json",
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/main",
+      "bytes": 6123,
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+    },
+    {
+      "path": "FLT/README.md",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/README.md",
+      "bytes": 8612,
+      "sha256": "98B5A23CCD09ED697B7462CC6854280A6BADDFBEEBF4F90B2873AB585E87C3D0"
+    },
+    {
+      "path": "FLT/PROOF-PATH.md",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/PROOF-PATH.md",
+      "bytes": 8666,
+      "sha256": "ADA9B1B2F69184B9A9334D51ED9F2E2E241D16DF364D9E53DF418339748C6705"
+    },
+    {
+      "path": "FLT/lean-toolchain",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lean-toolchain",
+      "bytes": 25,
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71"
+    },
+    {
+      "path": "FLT/lakefile.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lakefile.lean",
+      "bytes": 641,
+      "sha256": "D8BA763B04133C72E1182738F530CDD48C9B676DFB210ED551995287F319BD29"
+    },
+    {
+      "path": "FLT/lake-manifest.json",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lake-manifest.json",
+      "bytes": 3158,
+      "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF"
+    },
+    {
+      "path": "Stacks/README.md",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/README.md",
+      "bytes": 4820,
+      "sha256": "FF665312A3E0114AEB9755E2D6CA5975012EB1CFEC8C175D50C377F11895B204"
+    },
+    {
+      "path": "Stacks/LICENSE",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/LICENSE",
+      "bytes": 11357,
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "path": "Stacks/lean-toolchain",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/lean-toolchain",
+      "bytes": 28,
+      "sha256": "108CA2895820DE2C74101F81DE81756B41CA0165DFDC8CED16A82C3F810152D0"
+    },
+    {
+      "path": "Stacks/lakefile.toml",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/lakefile.toml",
+      "bytes": 661,
+      "sha256": "FC0FA40438F24FBB4E5666A2020A69EE42A1BB8B3D45E29EEC5CD5A52C041918"
+    },
+    {
+      "path": "Stacks/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/GeometricComponentsPurityReduction.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/GeometricComponentsPurityReduction.lean",
+      "bytes": 34537,
+      "sha256": "52E4AB1C29FC63466EBE44727EA13B50C727CBD0F637EC23A3BEADEDC18A9578"
+    },
+    {
+      "path": "Stacks/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/WeilIIFinalAssembly.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Stacks/012108f61d7f92a6ffc35ec3f263b6da5d438125/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/WeilIIFinalAssembly.lean",
+      "bytes": 26762,
+      "sha256": "BE7E0FAA9611D7E2739826ED36B4E2046C82993786D751250A968ACF56874DC4"
+    },
+    {
+      "path": "Weil/Weil/Definitions.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Definitions.lean",
+      "bytes": 14490,
+      "sha256": "D646F175825AB611497DE9C5331E867EDFEAD58013C01394D812C8A6BC8DE26B"
+    },
+    {
+      "path": "Weil/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/RationalCohomologyFrobenius.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/RationalCohomologyFrobenius.lean",
+      "bytes": 4958,
+      "sha256": "F84947786B0DBCF32A72BD63A66C5DA5F1B3ACE9C7EADA6E8638A49A9F3DB12D"
+    },
+    {
+      "path": "Weil/Weil/AlgebraicGeometry/EtaleCohomology/Trace/RepresentationSheafTrivialConstant.lean.txt",
+      "url": "https://raw.githubusercontent.com/AxiomMath/Weil/27cdb2049be62ee2911429b47f54774078450e32/Weil/AlgebraicGeometry/EtaleCohomology/Trace/RepresentationSheafTrivialConstant.lean",
+      "bytes": 40632,
+      "sha256": "66A56475D5FA45F588A8602426C2B7395B0BEA66B9C122672822A49C6AE5D4BA"
+    }
+  ],
+  "buildClaimed": false,
+  "scope": "Fresh FLT HEAD comparison; selected Weil and pinned Stacks purity dependencies, not full closure.",
+  "productionMutation": false,
+  "rootPinsChanged": false
+}

@@ -1,0 +1,44 @@
+import SourceTraceRadical
+
+/-! DUB-17/18 -> original rank-two realization -> faithful trace algebra.
+Descend the original linear trace to its actual radical quotient. The
+quotient pairing is nondegenerate by construction, with a proved bridge
+back to the original trace. No representation is supplied or assumed. -/
+namespace Dubon2026
+noncomputable section
+variable {R A : Type*} [CommRing R] [Ring A] [Algebra R A]
+
+/-- The original linear trace on the actual quotient by its trace radical. -/
+def sourceTraceQuotientLinear (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x)) :
+    A ⧸ sourceTraceRadical τ hCyc →ₗ[R] R :=
+  (sourceTraceRadical τ hCyc).restrictScalars R |>.liftQ τ
+    (fun _ hx => sourceTraceRadical_trace_zero τ hCyc hx)
+
+/-- The quotient trace has exactly the original value on every original element. -/
+theorem sourceTraceQuotientLinear_mk (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x)) (x : A) :
+    sourceTraceQuotientLinear τ hCyc (Ideal.Quotient.mk (sourceTraceRadical τ hCyc) x) = τ x := rfl
+
+/-- The descended actual trace remains cyclic. -/
+theorem sourceTraceQuotientLinear_cyclic (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x))
+    (x y : A ⧸ sourceTraceRadical τ hCyc) :
+    sourceTraceQuotientLinear τ hCyc (x * y) = sourceTraceQuotientLinear τ hCyc (y * x) := by
+  obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective x
+  obtain ⟨b, rfl⟩ := Ideal.Quotient.mk_surjective y
+  exact hCyc a b
+
+/-- Nondegeneracy of the genuine quotient trace pairing is derived from the
+original radical, rather than assumed as a finite-dimensional certificate. -/
+theorem sourceTraceQuotientLinear_nondegenerate (τ : A →ₗ[R] R)
+    (hCyc : ∀ x y, τ (x * y) = τ (y * x))
+    (x : A ⧸ sourceTraceRadical τ hCyc)
+    (hx : ∀ y, sourceTraceQuotientLinear τ hCyc (x * y) = 0) : x = 0 := by
+  obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective x
+  apply Ideal.Quotient.eq_zero_iff_mem.mpr
+  intro b
+  exact hx (Ideal.Quotient.mk (sourceTraceRadical τ hCyc) b)
+
+end
+end Dubon2026

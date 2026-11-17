@@ -1,0 +1,67 @@
+import CompactOrbitSpanFinite
+import SourceIntegralCoordinateLattice
+import SourceCompactOrbitLattice
+import SourceMatrixIntertwiningInvariants
+import SourceCompactResidualRealization
+import SourceGammaOneLocalResidualRankTwo
+import SourceGammaOneResidualRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.compact_span_finite_of_open_lattice
+#print axioms Dubon2026.sourceIntegralCoordinateMap
+#print axioms Dubon2026.sourceIntegralCoordinateLattice
+#print axioms Dubon2026.mem_sourceIntegralCoordinateLattice
+#print axioms Dubon2026.sourceIntegralCoordinateLattice_fg
+#print axioms Dubon2026.sourceIntegralCoordinateLattice_open
+#print axioms Dubon2026.sourceCompactOrbitLattice
+#print axioms Dubon2026.sourceCompactOrbitLattice_span
+#print axioms Dubon2026.sourceCompactOrbitLattice_invariant
+#print axioms Dubon2026.sourceCompactOrbitLattice_fg
+#print axioms Dubon2026.sourceCompactOrbitLattice_free_finite_rank
+#print axioms Dubon2026.matrixTwo_trace_det_of_intertwining
+#print axioms Dubon2026.compact_rankTwo_integral_residual_realization
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo
+
+private def runOriginalResidualRankTwoAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`CompactOrbitSpanFinite, `SourceIntegralCoordinateLattice, `SourceCompactOrbitLattice, `SourceMatrixIntertwiningInvariants, `SourceCompactResidualRealization, `SourceGammaOneLocalResidualRankTwo, `SourceGammaOneResidualRankTwo]
+  let theorems : Array Name := #[`Dubon2026.compact_span_finite_of_open_lattice, `Dubon2026.mem_sourceIntegralCoordinateLattice, `Dubon2026.sourceIntegralCoordinateLattice_fg, `Dubon2026.sourceIntegralCoordinateLattice_open, `Dubon2026.sourceCompactOrbitLattice_span, `Dubon2026.sourceCompactOrbitLattice_invariant, `Dubon2026.sourceCompactOrbitLattice_fg, `Dubon2026.sourceCompactOrbitLattice_free_finite_rank, `Dubon2026.matrixTwo_trace_det_of_intertwining, `Dubon2026.compact_rankTwo_integral_residual_realization, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_residual_rankTwo, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residual_rankTwo]
+  let constructions : Array Name := #[`Dubon2026.sourceIntegralCoordinateMap, `Dubon2026.sourceIntegralCoordinateLattice, `Dubon2026.sourceCompactOrbitLattice]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Primitive arithmetic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Primitive arithmetic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RESIDUAL RANK TWO AUDIT PASS: {count} theorems including private/generated declarations. Original continuous integral and residual arithmetic rank-two matrices with exact reduced Fourier and weight Frobenius values, finite prime-characteristic coefficients and actual oddness proved for p greater than three. Full local association and source gates remain OPEN."
+
+#eval runOriginalResidualRankTwoAudit
+
+#lint in CompactOrbitSpanFinite
+#lint in SourceIntegralCoordinateLattice
+#lint in SourceCompactOrbitLattice
+#lint in SourceMatrixIntertwiningInvariants
+#lint in SourceCompactResidualRealization
+#lint in SourceGammaOneLocalResidualRankTwo
+#lint in SourceGammaOneResidualRankTwo

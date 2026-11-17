@@ -1,0 +1,509 @@
+{
+  "recordedUTC": "2026-11-17T09:52:50.843787+00:00",
+  "status": "Bounded public-source research and locally audited Dickson adaptation; source consumer and production integration pending.",
+  "report": {
+    "path": "Dubon Proof Reuse Refresh 2026-11-17.md",
+    "sha256": "9F52B5740111B043A79D58667D280B2867D72F51DEEFEEDCC2C9C16D521DACD3"
+  },
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\KnownIn1980s\\PGL2\\Defs.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/KnownIn1980s/PGL2/Defs.lean.txt",
+      "sha256": "4E6BD70D29BA63E0301B9D7B3746CEDC45503205430ABF7C0F3B0EE13C7046D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\KnownIn1980s\\PGL2\\Proofs.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/KnownIn1980s/PGL2/Proofs.lean.txt",
+      "sha256": "FE3A4B2CE852430FE3DEF4F2C66B842D2E7CA88E9EC87EE022028E53B90DFAEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\CyclicPartition.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean.txt",
+      "sha256": "C7F76C4164B9949C26FE6D2433553BE2F78AE55731B206B8A4A711F0DACC80B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\DicksonClassification.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean.txt",
+      "sha256": "11E67A442C865C6AC9532EED1B1596BB2E427EDF21B24F207B93E4E000477D95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\FieldReconstruction.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean.txt",
+      "sha256": "DA2684A7676B3210EE377ABA81DF1707F260A871AD202D768E015FDF08A11F84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\NatClassEquation.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/NatClassEquation.lean.txt",
+      "sha256": "A140D63FADA25036DEE138931CD4FE3DB5868127B5333B608C24C606DE6EF825"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\PartitionHelpers.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/PartitionHelpers.lean.txt",
+      "sha256": "A472078A35D8AF86B696434D03F51AC17B4DDBA11B39FF05EF5291C5C9C3323B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\PartitionProof.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/PartitionProof.lean.txt",
+      "sha256": "31AA93CC8E106C83E009A5D8246B26E14BAF86D5F680E5047615D00C2BE87831"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\PGLBasic.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean.txt",
+      "sha256": "A06724E1AA67372327C8C543D2FAC0FD24231FF7562A363C4A9649431CE4267A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\PSLBasic.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean.txt",
+      "sha256": "50181DD66A4C8E8536218FA7F407B595B2BCD8F883E9AE2555889E9D742C6B0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\PSLRecognition.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean.txt",
+      "sha256": "E14AAA400419A24AB89581DFFDDDDECBC773B8B8C1E1F2461E13329742BE4EA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\RecognitionA5.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean.txt",
+      "sha256": "9DDA4439D81544225788BA83C318900F478F525BEB94C457EED51C4065242879"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\TameClassification.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean.txt",
+      "sha256": "93B0F3FED1E1BC9F5AED82D497DB8A007F2A634FE4ECF233B5A1BE44DAC798A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\FLT\\Slop\\PGL2\\FiniteSubgroups\\WildClassification.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean.txt",
+      "sha256": "6305ACAEAA3301D7DB1F3726A16E0D18331476DDD77685851594D9C7CFD753DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\lake-manifest.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/lake-manifest.json",
+      "sha256": "9FE1C9897B635C763277B11F12353312CC48C8E16F79D4F61AA7B495F5718CBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\lakefile.toml",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/lakefile.toml",
+      "sha256": "C78647569D6A357F5BC1871853A34166EC056059BE95BF020C553CFB6979B01F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\lean-toolchain",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/lean-toolchain",
+      "sha256": "929CD8BF7EC963BD49699B4E61239AA2648351DAD60B0F74EEE672956C743C52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\LICENSE",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/LICENSE",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\Mathlib\\LinearAlgebra\\Matrix\\Action.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/Mathlib/LinearAlgebra/Matrix/Action.lean.txt",
+      "sha256": "DA139B4C337DCFEDE9454F66031C0096BE5853EDCBA9C05EF2B22AC720E93329"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\mathlib-action-review.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/mathlib-action-review.json",
+      "sha256": "F4BF7917172531B66A71BB079F149FE8935DAAE900D8DCA20F506B51689EBFA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\review.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/flt-pgl-classification-20261117-2264/review.json",
+      "sha256": "A923245B5DAB0DA536AF0B17DF37B2AAAB9A77DA37FEA5306F7CBF5FFF1812E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\commit.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/commit.json",
+      "sha256": "B470709876558D362B78CC52F61CAC12D8D5FED3DEF432025C1BAF1420FB9347"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\lake-manifest.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/lake-manifest.json",
+      "sha256": "445AD7B876D68DB78340F05B1F9BEA2F99C972704B58225869499BC7C97B3CF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\lakefile.toml",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/lakefile.toml",
+      "sha256": "033DA4F4AB2CF8B05A7183E0A5C1260B5B8C1E7942A47F9D06421A331E521F5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\lean-toolchain",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/lean-toolchain",
+      "sha256": "8190E75A201741065FE508B28955DD64DD72D090BABE5F70CE6848879D68AE88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\LICENSE",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/LICENSE",
+      "sha256": "C95BAE1D1CE0235ECCCD3560B772EC1EFB97F348A79F0FBE0A634F0C2CCEFE2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\README.md",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/README.md.txt",
+      "sha256": "DF820C5178A6FCA61FB21E3166AB623D302C23EA50CA89A13BB004618DC93ECC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\review.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/review.json",
+      "sha256": "692FA49CD98CDEE3368FEE8E953D8CAB48C012745C8504E76802F25F0A4E3484"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\tree.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/tree.json",
+      "sha256": "9C5A8782CFA2CE44199285E1311C4216799159DFE77ED6A7AA8AA12774A667DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Duality\\PoincareDualityConstantSystem.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Duality/PoincareDualityConstantSystem.lean.txt",
+      "sha256": "C70D43BAE1484104316F32D4498FC289785E5A2860F662B9EDD7B7E1E4436C96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\CharpolyIntegrality.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/CharpolyIntegrality.lean.txt",
+      "sha256": "7C1418B224F70944290E543F2978EEDE852A8EF7D9AAD8C9E959A70AEA7D7ED5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\ConnectedComponentsCharpoly.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/ConnectedComponentsCharpoly.lean.txt",
+      "sha256": "2F3D1E5394FD1B3C698F287FB687B18D27F00AE11B5BC345F30B9D985BC4523E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\DeligneFunctionalEquation.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneFunctionalEquation.lean.txt",
+      "sha256": "4368B3E99406F287041C5CA3157095D532256D456A34371DE0E84AB4C0DDF706"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\DeligneWeilConjecture.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/DeligneWeilConjecture.lean.txt",
+      "sha256": "06E7870719388EE63F892FEBBA542C84852EAC58F1AE7254A318E426981C3066"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\FieldOfConstantsFrobenius.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/FieldOfConstantsFrobenius.lean.txt",
+      "sha256": "C7E3E7648A4FD2C652F32E4588893B830712ED09A357811342CF1E5E3E85A1F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\LAdicTraceFormulaFinal.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/LAdicTraceFormulaFinal.lean.txt",
+      "sha256": "B5EC87CE95CBFE594D183E9C9FF2F099A65347D09C4D38543D0B9879C6CB61DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\WeilEstimateFromPurityAllEmbeddings.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilEstimateFromPurityAllEmbeddings.lean.txt",
+      "sha256": "82BDD595D05887095DC0033ED0C7EF64D08F2DAE3EE2A5DDCB2027C95ADD629C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\WeilRiemannHypothesisForm.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/AlgebraicGeometry/EtaleCohomology/Trace/WeilRiemannHypothesisForm.lean.txt",
+      "sha256": "113DDCDE902685661076E9AA39EF10C59B5338D6734F78B59D13051B449DDBEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\Attr.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/Attr.lean.txt",
+      "sha256": "F3F3D24E98FDE4BBAD0FA465D7509A88226C00F3A6501A8F5F6C1B54A9D80292"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\Defs\\AlgebraicGeometry\\EtaleCohomology\\Trace\\FieldValuedPointCount.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/FieldValuedPointCount.lean.txt",
+      "sha256": "010E03121A8271F559083F13F8418DA051653BB2CCFE923BE6062827BB6188C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\FieldTheory\\IsAlgClosed\\Classification.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/FieldTheory/IsAlgClosed/Classification.lean.txt",
+      "sha256": "CBBB506F1095E3237FF49F971CB0B47C8EE49D2DDE61CC8B5F2C98DAD808F138"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\LeanEval\\WeilConjectures.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/LeanEval/WeilConjectures.lean.txt",
+      "sha256": "B228D4BCF8E96544420F412906147F8E0D42182FA3CFF79AEE7E65591E9D892F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-reuse-refresh-20261117-2288\\Weil\\LinearAlgebra\\Charpoly\\Reverse.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-reuse-refresh-20261117-2288/Weil/LinearAlgebra/Charpoly/Reverse.lean.txt",
+      "sha256": "695241E81DEE9E42191ADA097985398606BDFEB68C7BFA2628CAAB8DC98E6BF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\FLT\\commit.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/FLT/commit.json",
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\FLT\\lake-manifest.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/FLT/lake-manifest.json",
+      "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\FLT\\lakefile.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/FLT/lakefile.lean.txt",
+      "sha256": "D8BA763B04133C72E1182738F530CDD48C9B676DFB210ED551995287F319BD29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\FLT\\lean-toolchain",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/FLT/lean-toolchain",
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\FLT\\PROOF-PATH.md",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/FLT/PROOF-PATH.md.txt",
+      "sha256": "ADA9B1B2F69184B9A9334D51ED9F2E2E241D16DF364D9E53DF418339748C6705"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\FLT\\README.md",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/FLT/README.md.txt",
+      "sha256": "98B5A23CCD09ED697B7462CC6854280A6BADDFBEEBF4F90B2873AB585E87C3D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\review.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/review.json",
+      "sha256": "F9E3E8AACE4FF1B7FAE872903D9284D13DCC5AC62BBE0B26783260FA44CA001E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Stacks\\lakefile.toml",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Stacks/lakefile.toml",
+      "sha256": "FC0FA40438F24FBB4E5666A2020A69EE42A1BB8B3D45E29EEC5CD5A52C041918"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Stacks\\lean-toolchain",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Stacks/lean-toolchain",
+      "sha256": "108CA2895820DE2C74101F81DE81756B41CA0165DFDC8CED16A82C3F810152D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Stacks\\LICENSE",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Stacks/LICENSE",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Stacks\\README.md",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Stacks/README.md.txt",
+      "sha256": "FF665312A3E0114AEB9755E2D6CA5975012EB1CFEC8C175D50C377F11895B204"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Stacks\\StacksFrontier\\AlgebraicGeometry\\EtaleCohomology\\Trace\\GeometricComponentsPurityReduction.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Stacks/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/GeometricComponentsPurityReduction.lean.txt",
+      "sha256": "52E4AB1C29FC63466EBE44727EA13B50C727CBD0F637EC23A3BEADEDC18A9578"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Stacks\\StacksFrontier\\AlgebraicGeometry\\EtaleCohomology\\Trace\\WeilIIFinalAssembly.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Stacks/StacksFrontier/AlgebraicGeometry/EtaleCohomology/Trace/WeilIIFinalAssembly.lean.txt",
+      "sha256": "BE7E0FAA9611D7E2739826ED36B4E2046C82993786D751250A968ACF56874DC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Weil\\Weil\\AlgebraicGeometry\\EtaleCohomology\\Trace\\RepresentationSheafTrivialConstant.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Weil/Weil/AlgebraicGeometry/EtaleCohomology/Trace/RepresentationSheafTrivialConstant.lean.txt",
+      "sha256": "66A56475D5FA45F588A8602426C2B7395B0BEA66B9C122672822A49C6AE5D4BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Weil\\Weil\\Definitions.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Weil/Weil/Definitions.lean.txt",
+      "sha256": "D646F175825AB611497DE9C5331E867EDFEAD58013C01394D812C8A6BC8DE26B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-stacks-flt-followup-20261117-2290\\Weil\\Weil\\Defs\\AlgebraicGeometry\\EtaleCohomology\\Trace\\RationalCohomologyFrobenius.lean.txt",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/weil-stacks-flt-followup-20261117-2290/Weil/Weil/Defs/AlgebraicGeometry/EtaleCohomology/Trace/RationalCohomologyFrobenius.lean.txt",
+      "sha256": "F84947786B0DBCF32A72BD63A66C5DA5F1B3ACE9C7EADA6E8638A49A9F3DB12D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-residual-image-classification-reuse-2269.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/source-residual-image-classification-reuse-2269.json",
+      "sha256": "D26072BF2E38A6742308A9F66F61DE786AE8DD2B5761650774A9A037B6B4DD93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\dickson-linter-attribute-review-2279.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/dickson-linter-attribute-review-2279.json",
+      "sha256": "D54EB13FC3922F24E5971C55B842AC3E25A4EA959F826486B6EE0F7C3452ED60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\dickson-suppressed-variant-archive-plan-2295.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/dickson-suppressed-variant-archive-plan-2295.json",
+      "sha256": "315E96EAF7694FEEE546F087B3C4442B1DE90F792949934377DF0E1AD496DB2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\public-proof-reuse-refresh-20261117-2294.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/public-proof-reuse-refresh-20261117-2294.json",
+      "sha256": "F8B8C3A8C4767E406B8A468D81C2CB93C5CE7FBF9C30468D4A860D5EC7D67B52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-dickson-canonical-preparation-2294.json",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/source-dickson-canonical-preparation-2294.json",
+      "sha256": "DECDD5777C51BF4E4E7E57E1DC2AB8D0AA76A2E5DEA0D37C084D3379DF177A7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_weil_reuse_2288.py",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/fetch_weil_reuse_2288.py",
+      "sha256": "8F73EC7E627678750786F253554E5679DD936EB08F995D2FD9ADADFE0301FF0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_weil_stacks_flt_followup_2290.py",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/fetch_weil_stacks_flt_followup_2290.py",
+      "sha256": "B10C7F566EEF38C3B6B14D0852A58BD82297263A7D7E7600BD0D8D1DB2CDCFBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2285a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortAudit2285a.lean.txt",
+      "sha256": "467F29AD75856A0687558A6B34151637A9C032F52E09A56E0641A6F31E6215FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2285a.log",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortAudit2285a.log",
+      "sha256": "3162AE8D4716E1D2603399AD0BD2A520942720B229C4EB17F717706E5C436C22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2285a.exit",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortAudit2285a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2287b.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortAudit2287b.lean.txt",
+      "sha256": "1BF61052BCBCBCFB094B11C9F5A0D35A8819845014D1D7F7B1C29AA81ADF05DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2287b.log",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortAudit2287b.log",
+      "sha256": "529744D7E97AD4911DECC1CCC62872705C3909754340ABCA59F3FA675B2B8AD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortAudit2287b.exit",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortAudit2287b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortDeclarations2291a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortDeclarations2291a.lean.txt",
+      "sha256": "37897ED84839F52987FE6ED3579ED847C71029BF29C1E132D3B924AB23E3404A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortDeclarations2291a.log",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortDeclarations2291a.log",
+      "sha256": "A39764721215B6BFCFE4471A70953524B2530DB7465EE786D9AD45C976ECC9F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPortDeclarations2291a.exit",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceDicksonPortDeclarations2291a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceResidualProjectiveClassification2292a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceResidualProjectiveClassification2292a.lean.txt",
+      "sha256": "794461FC0324E44E9FC061D787D565CAEEBEA6D2931CED516DBC6B45DC2ADC11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceResidualProjectiveClassification2292a.log",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceResidualProjectiveClassification2292a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceResidualProjectiveClassification2292a.exit",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceResidualProjectiveClassification2292a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2289a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceGammaOneProjectiveResidual2289a.lean.txt",
+      "sha256": "035202BC6D6F6D3CF49FE6EDF7402A3C562394D4E71E0057398BC16318B4517C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2289a.log",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceGammaOneProjectiveResidual2289a.log",
+      "sha256": "26DE764DD7A97A0F315BE28B06607CAB04DD8959CEF7C6531291EC47024A866F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2289a.exit",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceGammaOneProjectiveResidual2289a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2292a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceGammaOneProjectiveResidual2292a.lean.txt",
+      "sha256": "895B1101336F43110B6CD346FE833730DD89CEDE5E4D4A08E593104C05726A33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2292a.log",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceGammaOneProjectiveResidual2292a.log",
+      "sha256": "1FC021C1C2C542D1B63CE2945E8D7E9D52445EE57F3B13E0E83ABA361176BB80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneProjectiveResidual2292a.exit",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/SourceGammaOneProjectiveResidual2292a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonObjects2269a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonObjects2269a.lean.txt",
+      "sha256": "88DCB7C8AB49B6DC34A4EFD8ECB7F5C1B2CF3197224A919011004A3C44001059"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPGLBasic2271c.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonPGLBasic2271c.lean.txt",
+      "sha256": "B471B32D4B1D4D022B09511E6955407B96EDFC4B98CC7DD8F9D7AEC8006B2AAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonNatClassEquation2270d.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonNatClassEquation2270d.lean.txt",
+      "sha256": "7FD7081CAB01245A0015304EB457FDFA12C5DD282F316AA102217615E598A692"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPSLBasic2273c.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonPSLBasic2273c.lean.txt",
+      "sha256": "77F0F8FF73C2B5B48030C9A96F475D3BA36D328D9D240672311E41039844A7FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPartitionHelpers2287a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonPartitionHelpers2287a.lean.txt",
+      "sha256": "0ABF7DD48ACB3A13B401B593E0F8B6A817494D5F68DA841DFD8C40847A4A1C43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonCyclicPartition2287a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonCyclicPartition2287a.lean.txt",
+      "sha256": "AA0EF08ACF72A3F2D9FF55CB948AA4A703FC27D995995185B72159B53582A3F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonRecognitionA52287a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonRecognitionA52287a.lean.txt",
+      "sha256": "8F78794CD52C577586735684720B7C5D729F12816BD2A767972854B8EE4D175A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonFieldReconstruction2287a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonFieldReconstruction2287a.lean.txt",
+      "sha256": "E6BCFF35636AA0AD893882C7836ED46BF2B815AB1E6C9487310D5EEC2E75C020"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPartitionProof2287b.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonPartitionProof2287b.lean.txt",
+      "sha256": "1262517216A02BA6EAF98BE654B027B50CE51B2CDE2F8F45FBECCAFF5193E1E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonPSLRecognition2287a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonPSLRecognition2287a.lean.txt",
+      "sha256": "7C1B0E0473C57798EF822D4E45B6BA5A847C4D1CA6E8A625E57C3C0A740F9196"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonTameClassification2287a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonTameClassification2287a.lean.txt",
+      "sha256": "8E26945103B4FEE273BDFAB5229031673DAC17AA242E72F13C99BB46550A9634"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonWildClassification2287b.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonWildClassification2287b.lean.txt",
+      "sha256": "899B72D136386CF14DAFD18DFA7699A5E2C26DE6DF2454EF031AB745C78445D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDicksonClassification2287b.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceDicksonClassification2287b.lean.txt",
+      "sha256": "9A4AB8734B1D8438A3771874BCBE5E6E816D113D420AC780E979EC5858C86CFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceResidualProjectiveClassification2292a.lean",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/checked-adaptations/SourceResidualProjectiveClassification2292a.lean.txt",
+      "sha256": "794461FC0324E44E9FC061D787D565CAEEBEA6D2931CED516DBC6B45DC2ADC11"
+    },
+    {
+      "source": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dubon Proof Reuse Refresh 2026-11-17.md",
+      "path": "Tools/proof-reuse-refresh-20261117-2298/assessment-at-research-review.md.txt",
+      "sha256": "9F52B5740111B043A79D58667D280B2867D72F51DEEFEEDCC2C9C16D521DACD3"
+    }
+  ],
+  "acceptance": "16/20; DUB-17--20 OPEN",
+  "rootPinsChanged": false,
+  "externalCodeExecuted": false,
+  "externalFullClosureBuildClaimed": false
+}

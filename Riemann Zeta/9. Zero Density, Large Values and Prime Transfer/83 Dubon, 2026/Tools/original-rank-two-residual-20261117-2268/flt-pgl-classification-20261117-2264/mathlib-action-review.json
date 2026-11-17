@@ -1,0 +1,7 @@
+{
+  "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/1ae49302b2b2d46628179eddf2c7ff0025082c8b/Mathlib/LinearAlgebra/Matrix/Action.lean",
+  "path": "E:\\Lean\\.tmp\\dubon83\\flt-pgl-classification-20261117-2264\\Mathlib\\LinearAlgebra\\Matrix\\Action.lean.txt",
+  "sha256": "DA139B4C337DCFEDE9454F66031C0096BE5853EDCBA9C05EF2B22AC720E93329",
+  "bytes": 2442,
+  "purpose": "Assess sole missing imported module against pinned Mathlib; no production import or external code execution."
+}

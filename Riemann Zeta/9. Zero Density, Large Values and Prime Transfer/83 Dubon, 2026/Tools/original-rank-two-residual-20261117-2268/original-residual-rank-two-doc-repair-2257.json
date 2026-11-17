@@ -1,0 +1,20 @@
+{
+  "failedAudit": "SourceOriginalResidualRankTwoAudit1.log",
+  "failure": "Three missing definition documentation strings; mathematical axiom checks passed, full linter gate failed.",
+  "edits": [
+    {
+      "module": "SourceIntegralCoordinateLattice",
+      "oldHash": "7B69EC04C319E3BE84901F340F5953140B2A43718D2C3C7DCCBB7D5ECCE8FC32",
+      "newHash": "EF9DD376596F669F67509160E5904E617C8458DB4F1D65F8013397EC9CAAB7AA",
+      "mathematicalCodeUnchanged": true
+    },
+    {
+      "module": "SourceCompactOrbitLattice",
+      "oldHash": "DD1DB4CDAE0C0DEFCCE97E720D6D16C9C1F7F68B88EFC560F027F661727D82C7",
+      "newHash": "7D70E35A4DE290FF302DE81072FA81EE920848123F72C8D66852AF45BBC47A2B",
+      "mathematicalCodeUnchanged": true
+    }
+  ],
+  "proofLimitsChanged": false,
+  "linterPolicyChanged": false
+}

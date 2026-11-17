@@ -1,0 +1,71 @@
+import Dubon2026.SourceTraceOffDiagonal
+
+/-! DUB-17/18 -> actual rank-two realization -> a genuine two-vector basis.
+A nonzero off-diagonal element in the actual faithful trace algebra has
+an opposite partner whose products are the two original complementary
+idempotents. This supplies the matrix-unit pair for the existing left-ideal
+matrix representation construction, without any matrix-unit hypothesis. -/
+namespace Dubon2026
+noncomputable section
+variable {K A : Type*} [Field K] [Ring A] [Algebra K A]
+
+/-- Faithful trace and scalar corners construct the opposite off-diagonal
+partner, normalized over the original coefficient field. -/
+theorem traceIdempotent_exists_opposite_pair (T : A →ₗ[K] K)
+    (hOne : T 1 = 2) (hCyc : ∀ x y, T (x * y) = T (y * x))
+    (hNondeg : ∀ x, (∀ y, T (x * y) = 0) → x = 0)
+    (hPol : ∀ x y, x * y + y * x - T x • y - T y • x +
+      (T x * T y - T (x * y)) • (1 : A) = 0)
+    (e : A) (he : e * e = e) (hte : T e = 1)
+    (x : A) (hb : e * x * (1 - e) ≠ 0) :
+    let b := e * x * (1 - e)
+    ∃ c : A, e * c = 0 ∧ c * e = c ∧ b * c = e ∧ c * b = 1 - e := by
+  let b := e * x * (1 - e)
+  have he' : IsIdempotentElem e := he
+  have heb : e * b = b := by
+    dsimp only [b]
+    rw [← mul_assoc e (e * x) (1 - e), ← mul_assoc e e x, he]
+  have hbf : b * (1 - e) = b := by
+    dsimp only [b]
+    rw [mul_assoc (e * x) (1 - e) (1 - e), he'.one_sub.eq]
+  obtain ⟨y, hy⟩ : ∃ y : A, T (b * y) ≠ 0 := by
+    by_contra! h
+    exact hb (hNondeg b h)
+  let c₀ := (1 - e) * y * e
+  have hec₀ : e * c₀ = 0 := by
+    dsimp only [c₀]
+    rw [← mul_assoc e ((1 - e) * y) e, ← mul_assoc e (1 - e) y,
+      he'.mul_one_sub_self, zero_mul, zero_mul]
+  have hc₀e : c₀ * e = c₀ := by
+    dsimp only [c₀]
+    rw [mul_assoc ((1 - e) * y) e e, he]
+  have hbc₀ : b * c₀ = T (b * y) • e := by
+    calc
+      b * c₀ = b * (1 - e) * y * e := by dsimp only [c₀]; simp only [mul_assoc]
+      _ = b * y * e := by rw [hbf]
+      _ = e * (b * y) * e := by rw [← mul_assoc e b y, heb]
+      _ = T (e * (b * y)) • e := traceOneIdempotent_corner_scalar T hPol e he hte (b * y)
+      _ = T (b * y) • e := by rw [← mul_assoc e b y, heb]
+  let c := (T (b * y))⁻¹ • c₀
+  have hec : e * c = 0 := by
+    dsimp only [c]
+    rw [mul_smul_comm, hec₀, smul_zero]
+  have hce : c * e = c := by
+    dsimp only [c]
+    rw [smul_mul_assoc, hc₀e]
+  have hbc : b * c = e := by
+    dsimp only [c]
+    rw [mul_smul_comm, hbc₀, smul_smul, inv_mul_cancel₀ hy, one_smul]
+  have hfc : (1 - e) * c = c := by rw [sub_mul, one_mul, hec, sub_zero]
+  have htf : T (1 - e) = 1 := by rw [map_sub, hOne, hte]; ring
+  have htcb : T (c * b) = 1 := by rw [hCyc, hbc, hte]
+  refine ⟨c, hec, hce, hbc, ?_⟩
+  calc
+    c * b = (1 - e) * (c * b) * (1 - e) := by
+      rw [← mul_assoc (1 - e) c b, hfc, mul_assoc c b (1 - e), hbf]
+    _ = T ((1 - e) * (c * b)) • (1 - e) :=
+      traceOneIdempotent_corner_scalar T hPol (1 - e) he'.one_sub.eq htf (c * b)
+    _ = 1 - e := by rw [← mul_assoc (1 - e) c b, hfc, htcb, one_smul]
+
+end
+end Dubon2026

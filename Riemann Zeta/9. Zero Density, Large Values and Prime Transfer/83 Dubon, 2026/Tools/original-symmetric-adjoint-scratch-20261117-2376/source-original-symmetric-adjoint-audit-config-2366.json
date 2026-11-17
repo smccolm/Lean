@@ -1,0 +1,71 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint2364a.lean",
+      "sourceSha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC",
+      "module": "SourceOriginalSymmetricAdjoint",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjoint.lean",
+      "canonicalSha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing2365a.lean",
+      "sourceSha256": "BA1BAD8301157F2C530052FB89227D1E1FECB4B3A8257337D4F83CD1D7000630",
+      "module": "SourceGammaOneSymmetricAdjointVanishing",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSymmetricAdjointVanishing.lean",
+      "canonicalSha256": "E318E77899A299A51BD0A2C0698EB7CA9BA4B116F7CD750703915F865A22B1DE"
+    }
+  ],
+  "modules": [
+    "SourceOriginalSymmetricAdjoint",
+    "SourceGammaOneSymmetricAdjointVanishing"
+  ],
+  "queries": [
+    "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+    "Dubon2026.HasOriginalSymmetricAdjointVanishing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+  ],
+  "theorems": [
+    "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+  ],
+  "constructions": [
+    "Dubon2026.HasOriginalSymmetricAdjointVanishing"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning",
+    "Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility",
+    "Dubon2026.HasOriginalSymmetricSpanning",
+    "Dubon2026.original_symmetric_absolute_irreducibility_of_spanning",
+    "Dubon2026.matrixRepresentation_absolute_irreducible_of_span",
+    "Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension",
+    "Dubon2026.matrixRepresentation_irreducible_of_span",
+    "Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span",
+    "Dubon2026.representation_irreducible_of_asAlgebraHom_surjective",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span",
+    "Dubon2026.original_symmetric_matrix_span_of_conjugated_extension",
+    "Dubon2026.matrixRepresentation_irreducible_iff_conjugate",
+    "Dubon2026.representation_irreducible_iff_of_equiv",
+    "Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility",
+    "Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible",
+    "Dubon2026.finiteSubfield_symmetric_absoluteIrreducible",
+    "Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image",
+    "Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_projective_linear_residual",
+    "Dubon2026.matrixRepresentation_span_eq_top_of_extension",
+    "Dubon2026.irreducibleRepresentation_asAlgebraHom_surjective",
+    "Dubon2026.fieldSL2_isPerfect",
+    "Dubon2026.perfect_subgroup_le_map_character_kernel",
+    "Dubon2026.original_symmetric_adjoint_vanishing_of_absolute",
+    "Dubon2026.HasOriginalSymmetricAdjointVanishing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing",
+    "Dubon2026.matrixTraceZeroAdjointInvariants_eq_bot",
+    "Dubon2026.matrixAdjointInvariant_eq_scalar_of_extension"
+  ],
+  "scope": "Two additional modules: actual original symmetric trace-zero adjoint invariants vanish on both original cyclotomic kernels on the large-image branch."
+}

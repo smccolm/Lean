@@ -1,0 +1,37 @@
+import SourceTraceDeterminantTrilinear2178b
+import Mathlib.Algebra.MonoidAlgebra.Basic
+import Mathlib.LinearAlgebra.Finsupp.LSum
+
+/-! DUB-17/18 -> original characteristic-zero rank-two realization.
+Extend the constructed trace to the genuine group algebra. This is the
+linear trace needed to form its trace radical and construct a genuine
+representation; no representation or finite-dimensional quotient is assumed. -/
+namespace Dubon2026
+noncomputable section
+variable {G R : Type*} [Group G] [CommRing R]
+
+/-- The linear extension of the original function to the genuine group algebra. -/
+def sourceGroupTrace (t : G → R) : MonoidAlgebra R G →ₗ[R] R :=
+  ((Finsupp.lift R R G) t).comp (MonoidAlgebra.coeffLinearEquiv R).toLinearMap
+
+/-- The group-algebra trace retains the original values on group elements. -/
+theorem sourceGroupTrace_of (t : G → R) (g : G) :
+    sourceGroupTrace t (MonoidAlgebra.of R G g) = t g := by
+  simp [sourceGroupTrace, MonoidAlgebra.coeffLinearEquiv, MonoidAlgebra.of_apply]
+
+/-- Cyclicity extends to every pair of actual group-algebra elements. -/
+theorem sourceGroupTrace_cyclic (t : G → R)
+    (hCyc : ∀ g h, t (g * h) = t (h * g)) (x y : MonoidAlgebra R G) :
+    sourceGroupTrace t (x * y) = sourceGroupTrace t (y * x) := by
+  induction x using MonoidAlgebra.induction_on with
+  | hM g =>
+    induction y using MonoidAlgebra.induction_on with
+    | hM h =>
+      rw [← map_mul, ← map_mul, sourceGroupTrace_of, sourceGroupTrace_of, hCyc]
+    | hadd a b ha hb => simpa only [mul_add, add_mul, map_add, ha, hb]
+    | hsmul r a ha => simpa only [mul_smul_comm, smul_mul_assoc, map_smul, ha]
+  | hadd a b ha hb => simpa only [mul_add, add_mul, map_add, ha, hb]
+  | hsmul r a ha => simpa only [mul_smul_comm, smul_mul_assoc, map_smul, ha]
+
+end
+end Dubon2026

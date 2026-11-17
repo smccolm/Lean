@@ -1,0 +1,77 @@
+import Dubon2026.SourceGammaOneJointTraceInertia
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic descent.
+Reuse the proved finite joint arithmetic factor and discrete determinant
+descent to detect their original arithmetic kernel. This supplies trace
+translation invariance without an additional stable-lattice construction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open scoped NumberField
+open SourceCurve CongruenceSubgroup SourceCuspBoundary CoefficientReduction
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+local notation "J" => (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w
+local notation "S" => sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 M
+
+theorem binaryPrimitiveJointGaloisRep_arithmetic_kernel
+    (g : Qbar ≃ₐ[ℚ] Qbar)
+    (hg : sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) g = 1) :
+    binaryPrimitiveJointGaloisRep Q p n w g = 1 := by
+  let R := binaryPrimitiveJointOperatorRing Q p n w
+  letI : TopologicalSpace R := ⊥
+  obtain ⟨η, hη⟩ := binaryPrimitiveJointGaloisRep_arithmetic_descent Q p n w
+  rw [← hη g, hg, map_one]
+  rfl
+
+theorem binaryPrimitiveJointDeterminant_arithmetic_kernel
+    (g : Qbar ≃ₐ[ℚ] Qbar)
+    (hg : sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) g = 1) :
+    binaryPrimitiveJointDeterminant Q p n w g = 1 := by
+  let R := binaryPrimitiveJointOperatorRing Q p n w
+  letI : TopologicalSpace R := ⊥
+  letI : DiscreteTopology R := ⟨rfl⟩
+  let χ : Gal(Qbar/ℚ) →ₜ* R :=
+    ⟨binaryPrimitiveJointDeterminant Q p n w,
+      binaryPrimitiveJointDeterminant_continuous Q p n w⟩
+  obtain ⟨η, hη⟩ := absolute_continuous_normInertia_arithmetic_descent (Q * p) χ.toHomUnits
+    (fun q hq haway e x hx => Units.ext
+      (binaryPrimitiveJointDeterminant_normInertia Q p n w q hq haway e x hx))
+  have he := congrArg Units.val (hη g)
+  rw [hg, map_one] at he
+  exact he.symm
+
+theorem binaryPrimitiveJointSpecializedTrace_arithmetic_kernel_translate
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) J)
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+    {C : Type} [Ring C] (χ : (binaryPrimitiveJointHeckeDiamondWord Q p n w Hq).range →+* C)
+    (g : Qbar ≃ₐ[ℚ] Qbar)
+    (hg : sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) g = 1)
+    (σ : Qbar ≃ₐ[ℚ] Qbar) :
+    binaryPrimitiveJointSpecializedTrace Q p n w Hq hH χ (g * σ) =
+      binaryPrimitiveJointSpecializedTrace Q p n w Hq hH χ σ := by
+  apply congrArg χ
+  apply Subtype.ext
+  exact sourceUnitTrace_kernel_translate (binaryPrimitiveJointGaloisRep Q p n w)
+    (binaryPrimitiveJointDeterminant Q p n w) g
+    (binaryPrimitiveJointGaloisRep_arithmetic_kernel Q p n w g hg)
+    (binaryPrimitiveJointDeterminant_arithmetic_kernel Q p n w g hg) σ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,36 @@
+import Dubon2026.SourceTraceDeterminantTrilinear
+import Dubon2026.SourceGroupAlgebraTrace
+import Dubon2026.SourceGroupTraceTrilinear
+import Dubon2026.SourceTraceRadical
+import Dubon2026.SourceTraceRadicalQuotient
+import Dubon2026.SourceTraceQuotientQuadratic
+import Dubon2026.SourceTraceIdempotentCorner
+import Dubon2026.SourceActualTraceAlgebra
+import Dubon2026.SourceGammaOneOriginalTraceAlgebra
+import Mathlib.Tactic
+
+open Lean
+
+private def runOriginalTraceAlgebraDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra]
+  let localModules : Array Name := #[`Dubon2026.SourceAbsoluteNormFrobeniusConjugate, `Dubon2026.SourceGammaOnePrimitiveUnitDiamond, `Dubon2026.SourceGammaOnePrimitiveJointUnitDiamond, `Dubon2026.SourceGammaOnePrimitiveJointDeterminant, `Dubon2026.SourceGammaOnePrimitiveJointTrace, `Dubon2026.SourceGammaOnePrimitiveJointTraceFrobenius, `Dubon2026.SourceUnitTraceConjugation, `Dubon2026.SourceGammaOnePrimitiveJointTraceConjugation, `Dubon2026.SourceGammaOnePrimitiveJointTraceRange, `Dubon2026.SourceUnitTraceProduct, `Dubon2026.SourceGammaOnePrimitiveJointTraceIdentities, `Dubon2026.SourceGammaOnePrimitiveJointHeckeTrace, `Dubon2026.SourceGammaOnePrimitiveJointTraceSpecialization, `Dubon2026.SourceGammaOnePrimitiveJointTraceSpecializedFrobenius, `Dubon2026.SourceGammaOneOriginalAdicTrace, `Dubon2026.SourceAbsoluteContinuousLocalFactor, `Dubon2026.SourceAbsoluteCyclicFrobeniusEquality, `Dubon2026.SourceAbsoluteTracePairComparison, `Dubon2026.SourceGammaOneCompatibleAdicTrace, `Dubon2026.SourcePositiveAdicFamilyLift, `Dubon2026.SourcePositiveAdicReconstruction, `Dubon2026.SourceAdicFunctionContinuity, `Dubon2026.SourceCompatibleTraceLift, `Dubon2026.SourceGammaOneOriginalLocalTrace, `Dubon2026.SourceGammaOneConstructedLocalTrace, `Dubon2026.SourceTraceDeterminantTrilinear, `Dubon2026.SourceGroupAlgebraTrace, `Dubon2026.SourceGroupTraceTrilinear, `Dubon2026.SourceTraceRadical, `Dubon2026.SourceTraceRadicalQuotient, `Dubon2026.SourceTraceQuotientQuadratic, `Dubon2026.SourceTraceIdempotentCorner, `Dubon2026.SourceActualTraceAlgebra, `Dubon2026.SourceGammaOneOriginalTraceAlgebra]
+  let required : Array Name := #[`Dubon2026.traceDeterminant_trilinear, `Dubon2026.sourceGroupTrace_of, `Dubon2026.sourceGroupTrace_cyclic, `Dubon2026.sourceGroupTrace_trilinear, `Dubon2026.sourceTraceRadical_trace_zero, `Dubon2026.sourceTraceQuotientLinear_cyclic, `Dubon2026.sourceTraceQuotientLinear_nondegenerate, `Dubon2026.sourceTraceRadical_polarized, `Dubon2026.sourceTraceQuotient_polarized, `Dubon2026.traceOneIdempotent_corner_scalar, `Dubon2026.exists_algebra_of_trace_determinant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_local_trace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_compatible_original_adic_trace, `MonoidAlgebra.induction_on, `Submodule.liftQ, `Ideal.Quotient.eq_zero_iff_mem, `MonoidHom.toHomUnits, `Dubon2026.sourceTraceRadical_isTwoSided]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL TRACE ALGEBRA DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the original trace-algebra consumer. Original constructed local traces, native group-algebra induction, actual trace radical and quotient lift are consumed. Rank-two matrix realization and DUB-17--20 remain OPEN."
+
+#eval runOriginalTraceAlgebraDependencyAudit

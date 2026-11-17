@@ -1,0 +1,160 @@
+{
+  "recordedUTC": "2026-11-17T06:53:40.812257+00:00",
+  "date": "16 November 2026",
+  "modules": [
+    "SourceTraceDeterminantTrilinear",
+    "SourceGroupAlgebraTrace",
+    "SourceGroupTraceTrilinear",
+    "SourceTraceRadical",
+    "SourceTraceRadicalQuotient",
+    "SourceTraceQuotientQuadratic",
+    "SourceTraceIdempotentCorner",
+    "SourceActualTraceAlgebra",
+    "SourceGammaOneOriginalTraceAlgebra"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear.lean",
+      "sha256": "C7879ABFC51E88B84887CB7FA5800FB034EC5FCF994F686B3E162D49EBA9A0A7",
+      "oleanSha256": "BE1E56B8FE0DF8841DD2DCB6F6BAF2B2AB8550A287C1F141FCA02B8FDACDF732",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceDeterminantTrilinear-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace.lean",
+      "sha256": "4CF24914B231C5D0FCD3AE6A552F7940FA56A011400CEAED4BE4278A1105C50B",
+      "oleanSha256": "9A47C2A20D6679DDB14F07431FF4025453671715825AD76798D99AD3759FD2EF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGroupAlgebraTrace-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear.lean",
+      "sha256": "E59F594015C733E4B7669D1D229DD95694B54EC13B40CB992C59157AF276F9C3",
+      "oleanSha256": "2C019E70048C70A8D4C03679536304D92A131376A4D8D5B86693802D8A0C79B5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGroupTraceTrilinear-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical.lean",
+      "sha256": "0EC30CD24066317B75F18086ABD2899CD065B29E1F53DA85F054A8C96770112A",
+      "oleanSha256": "942C03D3A42DE14A360C62D47554E1E3BB176983E39C849A033BFD1CE27539C7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadical-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient.lean",
+      "sha256": "77F5D0D28CDC96D49DA59A24D9DBDA48EF8CB9C77CC1242F9372B9A40208D022",
+      "oleanSha256": "097ECBE722028FB9470DBB704491416215349095891843E1AA553D6B962C5133",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceRadicalQuotient-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic.lean",
+      "sha256": "F39D290308FACFA1DB0293879E77DE65D834D8BEDFE768C1566721CCB01910D2",
+      "oleanSha256": "7C2383AF623363A2F3E968FEC3F6FEC61ABEC1D2A3F7E42CC5E253D390E52926",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceQuotientQuadratic-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner.lean",
+      "sha256": "49D57BEC20A3227400C1091C0BADD9F697197D8491F21716EB34BE6CF34D7203",
+      "oleanSha256": "314571310A6E4ECCCF6DA7CF77F293DFFED9295A1CAC98CFE44507C5A00694A6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceIdempotentCorner-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra.lean",
+      "sha256": "1E155BFAC6288C962991644E2ECF20DCCAA7CE566082F3D5BA4A7AB0FA76FD76",
+      "oleanSha256": "E7A16F0D7DF6DDAFB881B5B1074E07502443C513D852531B968EFF246FD50C81",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceActualTraceAlgebra-2190.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra.lean",
+      "sha256": "F32DE2D9FE60A0B2F7B80F689972678DAD0AB8DEADFDAE6CF80E564F3C2F0B52",
+      "oleanSha256": "5D06F87C108202ECDF2BC6E0A6E6513E8409F73A68D51B2549B07796DBC09798",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra-2190.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTraceAlgebra-2190.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.traceDeterminant_trilinear",
+    "Dubon2026.sourceGroupTrace",
+    "Dubon2026.sourceGroupTrace_of",
+    "Dubon2026.sourceGroupTrace_cyclic",
+    "Dubon2026.sourceGroupTrace_trilinear",
+    "Dubon2026.sourceTraceRadical",
+    "Dubon2026.sourceTraceRadical_mem",
+    "Dubon2026.sourceTraceRadical_isTwoSided",
+    "Dubon2026.sourceTraceRadical_trace_zero",
+    "Dubon2026.sourceTraceQuotientLinear",
+    "Dubon2026.sourceTraceQuotientLinear_mk",
+    "Dubon2026.sourceTraceQuotientLinear_cyclic",
+    "Dubon2026.sourceTraceQuotientLinear_nondegenerate",
+    "Dubon2026.sourceTraceRadical_polarized",
+    "Dubon2026.sourceTraceQuotient_polarized",
+    "Dubon2026.traceOneIdempotent_corner_scalar",
+    "Dubon2026.exists_algebra_of_trace_determinant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.traceDeterminant_trilinear",
+    "Dubon2026.sourceGroupTrace_of",
+    "Dubon2026.sourceGroupTrace_cyclic",
+    "Dubon2026.sourceGroupTrace_trilinear",
+    "Dubon2026.sourceTraceRadical_mem",
+    "Dubon2026.sourceTraceRadical_trace_zero",
+    "Dubon2026.sourceTraceQuotientLinear_mk",
+    "Dubon2026.sourceTraceQuotientLinear_cyclic",
+    "Dubon2026.sourceTraceQuotientLinear_nondegenerate",
+    "Dubon2026.sourceTraceRadical_polarized",
+    "Dubon2026.sourceTraceQuotient_polarized",
+    "Dubon2026.traceOneIdempotent_corner_scalar",
+    "Dubon2026.exists_algebra_of_trace_determinant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra",
+    "Dubon2026.sourceTraceRadical_isTwoSided"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGroupTrace",
+    "Dubon2026.sourceTraceRadical",
+    "Dubon2026.sourceTraceQuotientLinear"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceTraceRadical_mem",
+    "Dubon2026.sourceGroupTrace",
+    "Dubon2026.sourceTraceRadical",
+    "Dubon2026.sourceTraceQuotientLinear",
+    "Dubon2026.sourceTraceQuotientLinear_mk"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraAudit2.log",
+  "logSha256": "066A0E2FB5FB61BC5B8A29AE30437B11005A58EB73BD0C6AC2F23A1914753599",
+  "auditSha256": "E87E0C0361548B008D30F7A1E95A5418718E15527770FCF987AA0ED4F88CAD8F",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraScratchOwnership2190.log",
+  "ownershipSha256": "4D345728A3852B88DE960F7EAA3563123FF6B14516EB4636AC4B6D376D87C51D",
+  "exhaustiveTheorems": 26,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTraceAlgebraDependencyAudit3.log",
+  "dependencyAuditSha256": "2DEBA9F329B29E528E436BDCCF0DF674EC8821834FB7D501C19D2E67CFCB3463",
+  "dependencyAuditSourceSha256": "2300DF6957041777A2E738383B38357837099367EF8C728429A22237CA2866AE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_local_trace_algebra"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> actual rank-two matrix realization -> genuine trace algebra with nondegenerate trace pairing and scalar idempotent corners -> original constructed continuous characteristic-zero traces.",
+  "discharged": [
+    "Dimension-two trilinear trace identity derived from cyclicity and determinant product relation",
+    "Original trace extended linearly to the genuine group algebra, with cyclicity and trilinear identities on all its elements",
+    "Actual trace radical proved a two-sided ideal and original trace descended to its quotient with nondegenerate pairing",
+    "Polarized quadratic identity proved in the actual radical quotient",
+    "Trace-one idempotent corners proved scalar from that identity",
+    "Original modular form constructs the finite local coefficient field, continuous field-valued traces, exact original Fourier norm-Frobenius values and genuine algebra unit action, with every trace-algebra premise discharged"
+  ],
+  "boundary": "Scratch-audited only; production promotion and assembled verification pending. Two-dimensional matrix realization, continuity of those matrices, actual odd-involution/source connection, exceptional primes two and three, full original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher symmetric-power continuation remain required. DUB-17--20 OPEN; acceptance 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-trace-algebra-1-reuse-review-20261116.json",
+  "reuseReviewSha256": "FB9542B6AB7D04A494F50ABEB72ED4F1465B1A26755367B8730C615E9426EF5B",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,113 @@
+{
+  "passed": false,
+  "declarations": 1149,
+  "missing": [
+    "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneFiniteProjectiveLinearResidual___macroRules__private_SourceGammaOneFiniteProjectiveLinearResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneFiniteProjectiveLinearResidual___unexpand_AlgebraicClosure_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneProjectiveLinearResidual___macroRules__private_SourceGammaOneProjectiveLinearResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneProjectiveLinearResidual___unexpand_AlgebraicClosure_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneProjectiveMatrixResidual___macroRules__private_SourceGammaOneProjectiveMatrixResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneProjectiveMatrixResidual___unexpand_AlgebraicClosure_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneProjectiveResidual___macroRules__private_SourceGammaOneProjectiveResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_SourceGammaOneProjectiveResidual___unexpand_AlgebraicClosure_1"
+  ],
+  "extra": [
+    "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneFiniteProjectiveLinearResidual___macroRules__private_Dubon2026_SourceGammaOneFiniteProjectiveLinearResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneFiniteProjectiveLinearResidual___unexpand_AlgebraicClosure_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneProjectiveLinearResidual___macroRules__private_Dubon2026_SourceGammaOneProjectiveLinearResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneProjectiveLinearResidual___unexpand_AlgebraicClosure_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneProjectiveMatrixResidual___macroRules__private_Dubon2026_SourceGammaOneProjectiveMatrixResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneProjectiveMatrixResidual___unexpand_AlgebraicClosure_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneProjectiveResidual___macroRules__private_Dubon2026_SourceGammaOneProjectiveResidual_0_Dubon2026_SourceFunctionField_GammaOne_CoefficientReduction_termQbar_1",
+    "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction._aux_Dubon2026_SourceGammaOneProjectiveResidual___unexpand_AlgebraicClosure_1"
+  ],
+  "different": {
+    "Dubon2026.SourceDickson.p1Rep_p1Proj_scalar": {
+      "scratch": {
+        "owner": "Dubon2026.SourceDicksonPSLBasic",
+        "typeHash": "2895617295",
+        "valueHash": "1850649707"
+      },
+      "production": {
+        "owner": "Dubon2026.SourceDicksonPSLBasic",
+        "typeHash": "2895617295",
+        "valueHash": "4004201618"
+      }
+    },
+    "_private.Dubon2026.SourceGammaOneProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.termQbar": {
+      "scratch": {
+        "owner": "Dubon2026.SourceGammaOneProjectiveLinearResidual",
+        "typeHash": "1560175301",
+        "valueHash": "3596529660"
+      },
+      "production": {
+        "owner": "Dubon2026.SourceGammaOneProjectiveLinearResidual",
+        "typeHash": "1560175301",
+        "valueHash": "2010800276"
+      }
+    },
+    "_private.Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.termQbar": {
+      "scratch": {
+        "owner": "Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual",
+        "typeHash": "1560175301",
+        "valueHash": "594981137"
+      },
+      "production": {
+        "owner": "Dubon2026.SourceGammaOneFiniteProjectiveLinearResidual",
+        "typeHash": "1560175301",
+        "valueHash": "3461847348"
+      }
+    },
+    "_private.Dubon2026.SourceGammaOneProjectiveResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.termQbar": {
+      "scratch": {
+        "owner": "Dubon2026.SourceGammaOneProjectiveResidual",
+        "typeHash": "1560175301",
+        "valueHash": "4006698502"
+      },
+      "production": {
+        "owner": "Dubon2026.SourceGammaOneProjectiveResidual",
+        "typeHash": "1560175301",
+        "valueHash": "1001688448"
+      }
+    },
+    "_private.Dubon2026.SourceGammaOneProjectiveMatrixResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.termQbar": {
+      "scratch": {
+        "owner": "Dubon2026.SourceGammaOneProjectiveMatrixResidual",
+        "typeHash": "1560175301",
+        "valueHash": "128652003"
+      },
+      "production": {
+        "owner": "Dubon2026.SourceGammaOneProjectiveMatrixResidual",
+        "typeHash": "1560175301",
+        "valueHash": "2487431127"
+      }
+    }
+  },
+  "evidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic2327b.log",
+      "sha256": "DFF89976D5FC6F97E35A4870B0B5FFADE7ACFDA7BEB78AB057399FBF153BAC13"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic2327b.lean",
+      "sha256": "02288744B0E3DB4A4995741D316EDA8739E4EBCDD1792608882DD795E5BBFF8E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveScratchSemantic2327b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725b.log",
+      "sha256": "B40B00674EEC636027DFB8FF39FDAAD15B02C213E7E55CF4EA3CF5D07E931230"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725b.lean",
+      "sha256": "AFF438A11ED0C47C12D4C6F17913A41258DAC61366E1B224006781C492142891"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveProductionSemantic9725b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "normalization": "Only import-qualified private constant names, the exact three observed generated public instance names and encountered expression metadata are normalized. Every public/private/generated declaration type and available value is hashed; owner and name sets must agree. Frozen mathematical source bodies are independently compared after stripping imports."
+}

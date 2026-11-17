@@ -1,0 +1,53 @@
+{
+  "recordedUTC": "2026-11-17T06:07:50.893983+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy -> original all-weight association -> actual rank-two characteristic-zero realization of the constructed original local trace.",
+  "nativeReview": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalTraceRepresentationDescent.lean",
+      "sha256": "3479563DFFAFB2CD55F2A3053F41BEDC8D5BD72EB6072A0759B60F1B75709FDC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalClosedTraceMatrixAlgebra.lean",
+      "sha256": "E2448FE59FCC745893B49B56A0CFAB1415CC3D21977696646DE20B945112A406"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalTraceFiniteTowerRepresentation.lean",
+      "sha256": "0733BC1343EE647E7265389513EC84B479DFA7CF974DD26DD1402ACB86C5AA9E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PolarizedOddInvolutionMatrix.lean",
+      "sha256": "87E878214C6D41E8F501D1104AF674FD53707D0A003FCE33C0C5B5077BF1F723"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CyclotomicConjugationPower.lean",
+      "sha256": "542D4097285FC2861C2A3E243A44314034DB6327D3F9DC491AD782B843A1D728"
+    }
+  ],
+  "nativeConclusion": "The checked original trace-representation descent and closed matrix algebra consumers start with an actual supplied matrix representation. They cannot construct a representation from the new trace. The rational trace tower module concerns a different already-supplied trace-zero coefficient action. Existing cyclotomic conjugation and original weight parity can serve the odd involution branch.",
+  "external": [
+    {
+      "url": "https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/pdf/0884-03.pdf",
+      "status": "Primary text fetched; Carayol, Representations and Pseudo-representations, 1994, 3 pages.",
+      "finding": "States cyclicity, dimension and permutation trace identities. Reports reconstruction over algebraically closed characteristic-zero fields and lifting under residual absolute irreducibility. This is literature, not a Lean proof or a fulfilled local-field reconstruction hypothesis."
+    },
+    {
+      "url": "https://people.math.harvard.edu/~kisin/notes/notes2.pdf",
+      "status": "Primary lecture notes fetched, 4 pages.",
+      "finding": "Discusses Taylor and Nyssen-Rouquier reconstruction and the group-algebra trace radical. Extracted definition 2.1.2(2) incorrectly reads multiplicativity; compare Carayol explicit cyclicity. Do not import that erroneous formula."
+    },
+    {
+      "url": "https://people.mpim-bonn.mpg.de/medved/Mathwriting/MedvedovskyDissertation.pdf",
+      "status": "Search excerpt only; full fetch 403."
+    },
+    {
+      "url": "https://www1.iwr.uni-heidelberg.de/fileadmin/groups/arithgeo/templates/data/Gebhard_Boeckle/Boeckle-Barcelona-DefTheory-Rev.pdf",
+      "status": "Search excerpt only; full fetch timed out."
+    },
+    {
+      "url": "https://par.nsf.gov/servlets/purl/10319140",
+      "status": "Full fetch 502."
+    }
+  ],
+  "decision": "First derive the exact trilinear trace identity from the proved determinant product relation. Assess the odd-involution two-dimensional construction, including continuity and determinant, before expanding to general invariant theory. No reconstruction theorem is assumed.",
+  "status": "Route under development. Actual matrices, continuity, exceptional primes and source acceptance gates remain OPEN."
+}

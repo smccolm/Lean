@@ -1,0 +1,49 @@
+import SourceConjugateSymmetricSpanning2346a
+import SourceFiniteLinearAbsoluteGalois
+
+/-! DUB-17/18 -> original residual deformation data -> full matrix spanning
+over the actual residue field on the original cyclotomic kernels. The finite
+coefficient/basis witnesses are eliminated by native Burnside and scalar descent. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+variable (p : ℕ) [Fact p.Prime]
+
+/-- The original symmetric matrices on the original character kernel span
+the entire matrix algebra over the original coefficient field. -/
+theorem finite_linear_bounds_original_symmetric_kernel_span
+    {F Γ A : Type} [Field F] [Group Γ] [CommGroup A]
+    (j : F →+* K p) (ρ : Γ →* GeneralLinearGroup (Fin 2) F) (χ : Γ →* A)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ)
+    (n : ℕ) (hn : 2 * n < p - 1) :
+    Submodule.span F (Set.range (fun g : χ.ker =>
+      (homogeneousSymmetricGL n (ρ g.val)).val)) = ⊤ := by
+  obtain ⟨E, _, jE, B, _, hAll⟩ :=
+    finite_linear_bounds_kernel_absolute_symmetric_irreducibility p j ρ χ hp3 h
+  dsimp only at hAll
+  letI : Algebra F E := jE.toAlgebra
+  have hi := hAll n hn (AlgebraicClosure E) inferInstance inferInstance
+  exact original_symmetric_matrix_span_of_conjugated_extension
+    (E := E) (L := AlgebraicClosure E) (ρ.comp χ.ker.subtype) B n hi
+
+/-- The same original coefficient-field spanning conclusion holds for the
+actual absolute Galois action on its literal cyclotomic kernel. -/
+theorem finite_linear_bounds_original_absolute_cyclotomic_span
+    {F : Type} [Field F] (a : 𝓞 ℚ)
+    (j : F →+* K p) (ρ : rationalArithmeticGaloisGroup a →* GL (Fin 2) F)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ)
+    (n : ℕ) (hn : 2 * n < p - 1) :
+    Submodule.span F (Set.range
+      (fun g : (sourceAbsoluteCyclotomicCharacter p).toMonoidHom.ker =>
+        (homogeneousSymmetricGL n
+          (ρ (sourceAbsoluteArithmeticRestriction a g.val))).val)) = ⊤ := by
+  have hbound := finite_linear_bounds_precomp_surjective p j ρ
+    (sourceAbsoluteArithmeticRestriction a).toMonoidHom
+    (sourceAbsoluteArithmeticRestriction_surjective a) h
+  exact finite_linear_bounds_original_symmetric_kernel_span p j
+    (ρ.comp (sourceAbsoluteArithmeticRestriction a).toMonoidHom)
+    (sourceAbsoluteCyclotomicCharacter p).toMonoidHom hp3 hbound n hn
+
+end
+end Dubon2026.SourceDickson

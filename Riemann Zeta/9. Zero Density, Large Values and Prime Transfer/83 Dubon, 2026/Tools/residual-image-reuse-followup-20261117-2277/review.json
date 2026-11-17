@@ -1,0 +1,57 @@
+{
+  "recordedUTC": "2026-11-17T09:14:38.422211+00:00",
+  "repository": "mkaratarakis/CICM24_Deligne",
+  "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+  "files": [
+    {
+      "path": "commit.json",
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/commits/main",
+      "sha256": "F3D47CA12F6EAABAC9BD870A0F9D5147AF1694CF4AB294C7D3F2CC401D94D494",
+      "bytes": 5627
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/README.md",
+      "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9",
+      "bytes": 1479
+    },
+    {
+      "path": "Statement.lean.txt",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+      "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9",
+      "bytes": 7748
+    },
+    {
+      "path": "GaloisReps.lean.txt",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/GaloisReps.lean",
+      "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24",
+      "bytes": 1061
+    },
+    {
+      "path": "Frobenius.lean.txt",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Frobenius.lean",
+      "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6",
+      "bytes": 14408
+    }
+  ],
+  "findings": [
+    {
+      "file": "Frobenius.lean.txt",
+      "admittedProofTokens": 6,
+      "projectAxiomTokens": 0
+    },
+    {
+      "file": "GaloisReps.lean.txt",
+      "admittedProofTokens": 0,
+      "projectAxiomTokens": 0
+    },
+    {
+      "file": "Statement.lean.txt",
+      "admittedProofTokens": 5,
+      "projectAxiomTokens": 0
+    }
+  ],
+  "assessment": "Fresh pinned source remains a partial statement formalization with admitted proofs, including the Deligne endpoint. It cannot discharge source association or image gates. No external code imported.",
+  "productionMutation": false,
+  "buildClaimed": false
+}

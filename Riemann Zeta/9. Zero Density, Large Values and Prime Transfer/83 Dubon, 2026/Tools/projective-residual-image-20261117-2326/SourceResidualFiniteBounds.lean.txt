@@ -1,0 +1,88 @@
+import SourceProjectiveSubfieldBounds
+
+/-! DUB-17/18 -> residual large image -> finite coefficient comparison.
+The actual SL₂ lower and scalar-GL₂ upper bounds descend along an injective
+coefficient map once the subfield and conjugating matrix have descended. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+
+private theorem matrixMap_injective {E L : Type*} [Field E] [Field L] (i : E →+* L) :
+    Function.Injective (GeneralLinearGroup.map (n := Fin 2) i) := by
+  intro a b h
+  apply Units.ext
+  ext r s
+  exact i.injective (congrArg (fun x : GL (Fin 2) L => x.val r s) h)
+
+/-- A scalar factor descends when both the original and subfield matrices descend. -/
+theorem scalar_factor_descends {F E L : Type*} [Field F] [Field E] [Field L]
+    (i : E →+* L) (j : F →+* E) (x : GL (Fin 2) E) (a : GL (Fin 2) F) (u : Lˣ)
+    (h : GeneralLinearGroup.map i x = GeneralLinearGroup.scalar (Fin 2) u *
+      GeneralLinearGroup.map (i.comp j) a) :
+    ∃ v : Eˣ, x = GeneralLinearGroup.scalar (Fin 2) v * GeneralLinearGroup.map j a := by
+  let b := x * (GeneralLinearGroup.map j a)⁻¹
+  have hb : GeneralLinearGroup.map i b = GeneralLinearGroup.scalar (Fin 2) u := by
+    change GeneralLinearGroup.map i (x * (GeneralLinearGroup.map j a)⁻¹) = _
+    rw [map_mul, map_inv, h]
+    change _ * (GeneralLinearGroup.map (i.comp j) a)⁻¹ = _
+    exact mul_inv_cancel_right _ _
+  have hc : b ∈ Subgroup.center (GL (Fin 2) E) := by
+    apply Subgroup.mem_center_iff.mpr
+    intro y
+    apply matrixMap_injective i
+    rw [(GeneralLinearGroup.map i).map_mul y b,
+      (GeneralLinearGroup.map i).map_mul b y, hb]
+    have hu : GeneralLinearGroup.scalar (Fin 2) u ∈ Subgroup.center (GL (Fin 2) L) := by
+      rw [GeneralLinearGroup.center_eq_range_scalar]
+      exact ⟨u, rfl⟩
+    exact Subgroup.mem_center_iff.mp hu _
+  rw [GeneralLinearGroup.center_eq_range_scalar] at hc
+  obtain ⟨v, hv⟩ := hc
+  refine ⟨v, ?_⟩
+  rw [hv]
+  exact (inv_mul_cancel_right x (GeneralLinearGroup.map j a)).symm
+
+/-- Mapping a group homomorphism commutes with conjugating the subgroup. -/
+theorem subgroup_map_conjugate {G D : Type*} [Group G] [Group D]
+    (φ : G →* D) (H : Subgroup G) (A : G) :
+    (H.map (MulEquiv.toMonoidHom (MulAut.conj A))).map φ =
+      (H.map φ).map (MulEquiv.toMonoidHom (MulAut.conj (φ A))) := by
+  rw [Subgroup.map_map, Subgroup.map_map]
+  apply congrArg (fun f : G →* D => H.map f)
+  apply MonoidHom.ext
+  intro x
+  change φ (A * x * A⁻¹) = φ A * φ x * (φ A)⁻¹
+  rw [map_mul, map_mul, map_inv]
+
+/-- Literal linear subfield bounds are preserved on descending the coefficient field. -/
+theorem linear_subfield_bounds_descend {F E L : Type*} [Field F] [Field E] [Field L]
+    (i : E →+* L) (j : F →+* E) (H : Subgroup (GL (Fin 2) E)) (B : GL (Fin 2) E)
+    (hlo : ((GeneralLinearGroup.map (i.comp j)).comp
+      (SpecialLinearGroup.toGL (n := Fin 2) (R := F))).range ≤
+        (H.map (GeneralLinearGroup.map i)).map
+          (MulEquiv.toMonoidHom (MulAut.conj (GeneralLinearGroup.map i B))))
+    (hhi : ∀ x ∈ (H.map (GeneralLinearGroup.map i)).map
+        (MulEquiv.toMonoidHom (MulAut.conj (GeneralLinearGroup.map i B))),
+      ∃ (u : Lˣ) (a : GL (Fin 2) F),
+        x = GeneralLinearGroup.scalar (Fin 2) u * GeneralLinearGroup.map (i.comp j) a) :
+    ((GeneralLinearGroup.map j).comp
+      (SpecialLinearGroup.toGL (n := Fin 2) (R := F))).range ≤
+        H.map (MulEquiv.toMonoidHom (MulAut.conj B)) ∧
+      ∀ x ∈ H.map (MulEquiv.toMonoidHom (MulAut.conj B)),
+        ∃ (u : Eˣ) (a : GL (Fin 2) F),
+          x = GeneralLinearGroup.scalar (Fin 2) u * GeneralLinearGroup.map j a := by
+  rw [← subgroup_map_conjugate (GeneralLinearGroup.map i) H B] at hlo hhi
+  constructor
+  · rintro x ⟨s, rfl⟩
+    obtain ⟨y, hy, heq⟩ := hlo (show GeneralLinearGroup.map (i.comp j)
+      (SpecialLinearGroup.toGL s) ∈ _ from ⟨s, rfl⟩)
+    have heq' : y = GeneralLinearGroup.map j (SpecialLinearGroup.toGL s) :=
+      matrixMap_injective i heq
+    exact heq' ▸ hy
+  · intro x hx
+    obtain ⟨u, a, h⟩ := hhi (GeneralLinearGroup.map i x) (Subgroup.mem_map.mpr ⟨x, hx, rfl⟩)
+    obtain ⟨v, hv⟩ := scalar_factor_descends i j x a u h
+    exact ⟨v, a, hv⟩
+
+end
+end Dubon2026.SourceDickson

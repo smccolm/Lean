@@ -1,0 +1,31 @@
+import SourceOriginalTwistedDetectionProperty2369a
+
+/-! The exact original-topology detection conclusion is quantified over the
+ring-topology proof explicitly, avoiding local-instance elaboration inside the
+large source-form existential. This does not change the topology or matrices. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+
+/-- Original detection for the specified topology, for every proof of its
+ring-topology compatibility. -/
+def HasOriginalSymmetricTwistedKernelDetectionAtTopology
+    {G F : Type} [Group G] [Field F]
+    [TopologicalSpace G] [TopologicalSpace F]
+    (ρ : G →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  ∀ (_ : IsTopologicalRing F), HasOriginalSymmetricTwistedKernelDetection ρ
+
+/-- The original finite linear bounds give detection in the original topology
+without choosing a new topology or supplying a cohomological certificate. -/
+theorem finite_linear_bounds_original_symmetric_twisted_detection_atTopology
+    (p : ℕ) [Fact p.Prime]
+    {G F : Type} [Group G] [Field F]
+    [TopologicalSpace G] [TopologicalSpace F]
+    (j : F →+* K p) (ρ : G →* GeneralLinearGroup (Fin 2) F)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    HasOriginalSymmetricTwistedKernelDetectionAtTopology ρ := by
+  intro hRing
+  exact finite_linear_bounds_original_symmetric_twisted_kernel_detection p j ρ hp3 h
+
+end
+end Dubon2026.SourceDickson
