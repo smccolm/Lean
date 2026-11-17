@@ -1,0 +1,36 @@
+import SourceExceptionalPolynomialConstant2531b
+import Mathlib.Algebra.Polynomial.Div
+import Mathlib.RingTheory.IntegralClosure.IsIntegral.Defs
+
+/-! DUB-17/18 -> exceptional original residual image exclusion -> arithmetic
+nonvanishing of the fixed polynomial at an actual good Fourier trace ratio.
+Reuse native integral-root and root-divides-constant results. The original
+coefficient-field prime and odd valuation contradiction are still required. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- A root of the fixed nonzero-trace polynomial is integral over the integers. -/
+theorem exceptional_nonzero_trace_root_isIntegral {R : Type*} [CommRing R]
+    (x : R) (h : exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom R) x = 0) :
+    IsIntegral ℤ x := by
+  exact ⟨exceptionalNonzeroTracePolynomial, exceptionalNonzeroTracePolynomial_monic, h⟩
+
+/-- An original coefficient-ring root divides the exact fixed integer constant. -/
+theorem exceptional_nonzero_trace_root_dvd_constant {R : Type*} [CommRing R]
+    (x : R) (h : exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom R) x = 0) :
+    x ∣ (-14400 : R) := by
+  have hr : (exceptionalNonzeroTracePolynomial.map (Int.castRingHom R)).IsRoot x := by
+    simpa only [IsRoot.def, ← eval₂_eq_eval_map] using h
+  have hd := hr.dvd_coeff_zero
+  simpa only [coeff_map, exceptionalNonzeroTracePolynomial_constant, map_neg,
+    map_ofNat] using hd
+
+/-- At any local coefficient ring where the fixed constant is a unit, every such root is a unit. -/
+theorem exceptional_nonzero_trace_root_isUnit {R : Type*} [CommRing R]
+    (x : R) (h : exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom R) x = 0)
+    (hu : IsUnit (-14400 : R)) : IsUnit x := by
+  exact isUnit_of_dvd_unit (exceptional_nonzero_trace_root_dvd_constant x h) hu
+
+end
+end Dubon2026.SourceDickson

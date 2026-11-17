@@ -1,0 +1,58 @@
+import SourceGammaOneOriginalNonCMBoundedInputs
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_prime_coefficient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_integer_obstruction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_coefficient_zero_reduction_dvd_relation_constant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_reduction_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_bounded_conductor_reduction_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_bounded_quadratic_frobenius_of_coefficients
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalBoundedQuadraticFrobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonCMBoundedInputs
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonCM_bounded_inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceNonCMInertPrime, `SourceNonCMInertIntegerObstruction, `SourceOriginalCoefficientReductionObstruction, `SourceNonCMOriginalInertReductionBound, `SourceNonCMBoundedConductorReduction, `SourceOriginalBoundedQuadraticFrobenius, `SourceOriginalNonCMBoundedInputsProperty, `SourceGammaOneOriginalNonCMBoundedInputs]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL NONCM BOUNDED AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceNonCMInertPrime
+#lint in SourceNonCMInertIntegerObstruction
+#lint in SourceOriginalCoefficientReductionObstruction
+#lint in SourceNonCMOriginalInertReductionBound
+#lint in SourceNonCMBoundedConductorReduction
+#lint in SourceOriginalBoundedQuadraticFrobenius
+#lint in SourceOriginalNonCMBoundedInputsProperty
+#lint in SourceGammaOneOriginalNonCMBoundedInputs

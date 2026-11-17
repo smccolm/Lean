@@ -1,0 +1,373 @@
+{
+  "recordedUTC": "2026-11-17T19:08:26.477815+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceExceptionalProjectiveExponent",
+    "SourceOriginalExceptionalScalarPower",
+    "SourceExceptionalTraceChebyshev",
+    "SourceExceptionalNormalizedSquare",
+    "SourceOriginalExceptionalTraceEquation",
+    "SourceExceptionalIntegralPolynomial",
+    "SourceExceptionalPolynomialConstant",
+    "SourceOriginalExceptionalPolynomialRoot",
+    "SourceExceptionalRootArithmetic",
+    "SourceExceptionalValuationParity",
+    "SourceExceptionalNumberFieldRoot",
+    "SourceExceptionalCoefficientNonvanishing",
+    "SourceExceptionalUnramifiedPrime",
+    "SourceExceptionalCoefficientPrimeSupport",
+    "SourceOriginalIdentityFrobenius",
+    "SourceOriginalLocalNonzeroPrimeCoefficient",
+    "SourceOriginalNonzeroPrimeCoefficient",
+    "SourceOriginalExceptionalPrimeObstruction",
+    "SourceNonzeroAlgebraicIntegerRelation",
+    "SourceIntegerRelationReduction",
+    "SourceIntegralPolynomialRatio",
+    "SourceOriginalExceptionalIntegerObstruction",
+    "SourceOriginalExceptionalFixedObstruction",
+    "SourceOriginalFixedLocalExceptionalExclusion",
+    "SourceOriginalExceptionalUniformBound",
+    "SourceNonexceptionalSmallAlternatives",
+    "SourceOriginalNonexceptionalInputsProperty",
+    "SourceGammaOneOriginalNonexceptionalInputs"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalProjectiveExponent.lean",
+      "sha256": "653E674D7B01B1B121399C2FBE97053E048CCBB202B44AEC6C7341058F4516C2",
+      "oleanSha256": "9F4502C456DA31E095B383221FF8618C56EF098E92CD9F3469A692CF5D902EF7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalProjectiveExponent.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalProjectiveExponent.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalScalarPower.lean",
+      "sha256": "9FD47C766459CF073C7FFD084C7D1FEA56653010F1CAD9D476F3C50518909923",
+      "oleanSha256": "2FCDEC5900DC109E66B2550EEE0AF9726B3FF30964A2AA24611783BBD4281CB4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalScalarPower.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalScalarPower.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalTraceChebyshev.lean",
+      "sha256": "F983CF4F3E769B60A82CC5760FDEBD3AF68FD3BEF93CEE7705A02D726EBC1D44",
+      "oleanSha256": "728621C01122B87A142BBB83FC69A5DB18EDF893A9837FC75D928030EE528554",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalTraceChebyshev.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalTraceChebyshev.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalNormalizedSquare.lean",
+      "sha256": "1D42CBB87B3A70DFC98A32EF06E1FA7C4CA0734D27A00884C9963D88D43EF80F",
+      "oleanSha256": "7E58D33002CAACFA98797155D1A71ED1457ED05C8EAA86131D5B53AEC2725E4C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalNormalizedSquare.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalNormalizedSquare.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalTraceEquation.lean",
+      "sha256": "DD82A61BD621BCA4CEA9DC1B04AB66C7141EE9F10268F7CBFC1F032119A348DE",
+      "oleanSha256": "DA63D6C518343B21DA1A6DA0756C86E8ED562CC4A4C94D982B30DD7FF29EA7D8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalTraceEquation.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalTraceEquation.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalIntegralPolynomial.lean",
+      "sha256": "7F51222C1792693587402B50202F41DBBFD585D38AAB8DEA13E5E07AF0D9C68A",
+      "oleanSha256": "C9152C60E7253F5F70DEE4F3B5AB8D6ECA9579A68D39CCA1C1044B241E1DAB91",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalIntegralPolynomial.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalIntegralPolynomial.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalPolynomialConstant.lean",
+      "sha256": "0D2458C38D9A78074384C2219D0835F7879E2155D54664FB042540FF1F8312DA",
+      "oleanSha256": "AEF529613E49667CB01A0D443005D57CDFC09DB7AFB6D67CF3F6352295828BBE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalPolynomialConstant.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalPolynomialConstant.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalPolynomialRoot.lean",
+      "sha256": "D4992A1CB59EE3F942D86B557476583F4B903034B0606A32BDF923796CD3ED91",
+      "oleanSha256": "B9B942EE32B04DBFFCE033508E3BB9F0223A2880A47FFE353FCC8BC6FA04208D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalPolynomialRoot.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalPolynomialRoot.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalRootArithmetic.lean",
+      "sha256": "4689AA1567860BC7A4C139B20D53C7423E3986014B70FA51FA2F51E98E5815E4",
+      "oleanSha256": "DF23F8612153FE3CB031196AC3EE6F458D14734B424CD468F604C787B1AACAD8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalRootArithmetic.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalRootArithmetic.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalValuationParity.lean",
+      "sha256": "CF63243D13407DBBC7EEDFC60651D8B45AE20B62B18D5BA2AB28B0EC25842294",
+      "oleanSha256": "D4FA0E0BBB407A7FA7C38C62DC864A7C7EB445A5A6F3A9A7DDD8F3648205F4AA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalValuationParity.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalValuationParity.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalNumberFieldRoot.lean",
+      "sha256": "B0C823F3942E5E9259CB13361B1AAF3D26B327C6BDDA7A5F55E78A346BEF2BB9",
+      "oleanSha256": "5C7E831DC6F0493D4AC7DE6B5E0EF5A1CC8BDCDC49522243717CE30FBD19A2FB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalNumberFieldRoot.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalNumberFieldRoot.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalCoefficientNonvanishing.lean",
+      "sha256": "929BDB21CE1BABF2B2405859A915D0CA872933996ED05C4688EBB42B949F098B",
+      "oleanSha256": "E6827D10A820FAE6CCD8B2598661AF0E2016375E71CC6CCD56E8D3AE0A7FBD12",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalCoefficientNonvanishing.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalCoefficientNonvanishing.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalUnramifiedPrime.lean",
+      "sha256": "14E55DEE9B7855E0C61E7CFE4B231149B3176655977D25C79FF0E686D0003560",
+      "oleanSha256": "800A9D7461FFDF91516CEC0035FAAC7CC453F3F1EE713C87A69102836E3BCFAC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalUnramifiedPrime.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalUnramifiedPrime.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalCoefficientPrimeSupport.lean",
+      "sha256": "E619CC87573C9B48E3F66D8B04A60991938B23230871E459D5DB9FC7EF014B37",
+      "oleanSha256": "B071B5D19C85449B1EE6C7AADACBA67159336D38DFBE49C33CA8FD10E2E3DEE8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalCoefficientPrimeSupport.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalCoefficientPrimeSupport.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIdentityFrobenius.lean",
+      "sha256": "BE1C6C78252AE8903A035B05D9BE49EC21E60533154B0D7FF30282AEB7FC84D0",
+      "oleanSha256": "DE916DD0E22B108A4450523377DC403DCE5636FE6625D13A74EAEDB2CCAACBF3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIdentityFrobenius.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIdentityFrobenius.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalNonzeroPrimeCoefficient.lean",
+      "sha256": "79A83C6F38A7EBE6C57A8CECD8F9D352A09AD3F8B74CD182535991B45811A1FB",
+      "oleanSha256": "EEC43F13F1AAECA83C72BFA7604F2FBD4249FE7CC5C0464785EFBF9DCBD49304",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalNonzeroPrimeCoefficient.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalNonzeroPrimeCoefficient.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonzeroPrimeCoefficient.lean",
+      "sha256": "2FC6D7B64147E989E9B0D129395A1ABBC641EB04769A37CA654117A3C893F96A",
+      "oleanSha256": "4222A955BAE13BFF3C3A75B1B27B66E7358A4DA45DAF4DF863B0958F41539FEE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonzeroPrimeCoefficient.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonzeroPrimeCoefficient.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalPrimeObstruction.lean",
+      "sha256": "9BDCC770A67E81CA100685831A3DADD74B04525330E5F3814FB40B7D98C5465A",
+      "oleanSha256": "9196FF6CA611167713308898D67E7E5863AF082C27AE30A6A02D154274B11481",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalPrimeObstruction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalPrimeObstruction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNonzeroAlgebraicIntegerRelation.lean",
+      "sha256": "F178074C60D13033413F75B224121CC0A343F91A172CF805E8049E30F8BC937A",
+      "oleanSha256": "EC4C88BAAB634B42F5A6D744D39145FD01261A540324AD8C3B4BAB66A50A3819",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNonzeroAlgebraicIntegerRelation.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNonzeroAlgebraicIntegerRelation.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerRelationReduction.lean",
+      "sha256": "E771F5698D1D2D9B101BEE8DF33B5C1C50926CC92811C0BFE76A601FEE0737C3",
+      "oleanSha256": "AA847D3AF340A39BDC7CE16E710C8C17AC226B9EF5E44E478C987D72A4BF6AAD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerRelationReduction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerRelationReduction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralPolynomialRatio.lean",
+      "sha256": "33AAD0D58FEA10BE87E0FFD18F77892766F30181831CD58BE8DDF2EDFF3AC65C",
+      "oleanSha256": "69B160C192E43B5FFEA4C7380A96CA7C80BCBBDBD069532014C096F1C9D932E3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralPolynomialRatio.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralPolynomialRatio.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalIntegerObstruction.lean",
+      "sha256": "3B1B0EEB0894C4345D942DB319B6D9D6504C6A67C333A786BEC32B7BAED91D78",
+      "oleanSha256": "85049E27AD99B947BC6CD3C60829A07379019EEAC0873738E30287300370C9EB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalIntegerObstruction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalIntegerObstruction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalFixedObstruction.lean",
+      "sha256": "85B80AE3DD57751948A55A692881C8E4200113B6EB971B93E277EF2A99EA40CB",
+      "oleanSha256": "79A55CEDF91B7E4C5325513C19F87C63E652551321504B25A6C115CCF15ECAFA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalFixedObstruction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalFixedObstruction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalExceptionalExclusion.lean",
+      "sha256": "82D23385FC9C7FCA3CDC648417FAB8DD197006556A1C9BA9213A507BB4B084B9",
+      "oleanSha256": "6F1B77BE2F442818D13A3AA3C587DAB46ABBD1C821163E1E9268D13FC3485CB7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalExceptionalExclusion.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedLocalExceptionalExclusion.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalUniformBound.lean",
+      "sha256": "8AC5545E163F183A7742DCDCE34D3835825C3783DABA296C855A6566B5DCA30A",
+      "oleanSha256": "54796207A887E59A8A6AC81ED7C7FD2071B32DB92DDEAF9BAB009FABE6E0D77A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalUniformBound.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalUniformBound.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNonexceptionalSmallAlternatives.lean",
+      "sha256": "1302FA4DD132F7B5A8B5C8976B780E7F0423AACEF0B9E34AD3DFC8A0D26B96E0",
+      "oleanSha256": "031964967A745D0B564B9C5234E0100441E24ECED4D65E63812B620FEC0493FE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNonexceptionalSmallAlternatives.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNonexceptionalSmallAlternatives.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonexceptionalInputsProperty.lean",
+      "sha256": "67205669A3C8D44426C0AD509C7621BA31A630C681417314E2AB7E9E9A99579A",
+      "oleanSha256": "C2AA65811C68EA98F692194C42677C9B3EC5A490C57398BE04B5EA2CCADB7218",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonexceptionalInputsProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonexceptionalInputsProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalNonexceptionalInputs.lean",
+      "sha256": "133F3F36BBC656128BFFF709966F55766993257BCC3204AEEA8C92F6EE15472D",
+      "oleanSha256": "83204DE68B1569DEAD9E4DC140A4E7D4C96F6F2E71BAA29E07B2A0398CFFE4DD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalNonexceptionalInputs.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalNonexceptionalInputs.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.exceptional_projective_pow_120",
+    "Dubon2026.SourceDickson.original_exceptional_residual_pow_scalar",
+    "Dubon2026.SourceDickson.det_one_matrix_trace_pow_chebyshev",
+    "Dubon2026.SourceDickson.det_one_finite_order_trace_equation",
+    "Dubon2026.SourceDickson.normalized_square_det_one",
+    "Dubon2026.SourceDickson.normalized_square_trace",
+    "Dubon2026.SourceDickson.normalized_square_pow_one",
+    "Dubon2026.SourceDickson.scalar_power_trace_chebyshev_equation",
+    "Dubon2026.SourceDickson.original_exceptional_residual_trace_equation",
+    "Dubon2026.SourceDickson.integral_chebyshev_isMonicOfDegree",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial_isMonicOfDegree",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial_eval_zero",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_mul_X",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_monic",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial",
+    "Dubon2026.SourceDickson.integral_chebyshev_derivative_eval_neg_two",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_constant",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial_eval\u2082",
+    "Dubon2026.SourceDickson.exceptional_nonzero_trace_root_isIntegral",
+    "Dubon2026.SourceDickson.exceptional_nonzero_trace_root_dvd_constant",
+    "Dubon2026.SourceDickson.odd_square_ratio_valuation_ne_one",
+    "Dubon2026.SourceDickson.exceptional_numberField_root_valuation_one",
+    "Dubon2026.SourceDickson.exceptional_coefficient_ratio_nonvanishing",
+    "Dubon2026.SourceDickson.exceptional_unramified_prime_valuation",
+    "Dubon2026.SourceDickson.exceptional_unramified_coefficient_ratio_nonvanishing",
+    "Dubon2026.SourceDickson.exceptional_coefficient_prime_unramified",
+    "Dubon2026.SourceDickson.exists_exceptional_unramified_coefficient_prime",
+    "Dubon2026.SourceDickson.exceptional_coefficient_ratio_nonvanishing_outside_support",
+    "Dubon2026.SourceDickson.exceptionalCoefficientRamifiedPrimes",
+    "Dubon2026.original_arithmetic_exists_identity_norm_frobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_local_nonzero_prime_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_nonzero_prime_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_prime_obstruction",
+    "Dubon2026.SourceDickson.nonzero_numberField_integer_relation",
+    "Dubon2026.SourceDickson.integer_relation_lifts_to_integral_ring",
+    "Dubon2026.SourceDickson.integer_relation_reduction_dvd_constant",
+    "Dubon2026.SourceDickson.embedded_integer_relation_reduction_dvd_constant",
+    "Dubon2026.SourceDickson.integral_unit_ratio_polynomial_map",
+    "Dubon2026.SourceDickson.exists_integral_polynomial_ratio",
+    "Dubon2026.SourceDickson.local_nat_isUnit_of_not_dvd",
+    "Dubon2026.SourceDickson.original_exceptional_trace_polynomial",
+    "Dubon2026.SourceDickson.original_exceptional_characteristic_dvd_relation_constant",
+    "Dubon2026.SourceDickson.not_int_dvd_of_natAbs_lt",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_integer_obstruction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_fixed_local_not_exceptional",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_exclusion_bound",
+    "Dubon2026.SourceDickson.remaining_small_image_of_not_exceptional",
+    "Dubon2026.SourceDickson.HasRemainingSmallProjectiveImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonexceptionalInputs",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonexceptional_cm_inputs"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.exceptional_projective_pow_120",
+    "Dubon2026.SourceDickson.original_exceptional_residual_pow_scalar",
+    "Dubon2026.SourceDickson.det_one_matrix_trace_pow_chebyshev",
+    "Dubon2026.SourceDickson.det_one_finite_order_trace_equation",
+    "Dubon2026.SourceDickson.normalized_square_det_one",
+    "Dubon2026.SourceDickson.normalized_square_trace",
+    "Dubon2026.SourceDickson.normalized_square_pow_one",
+    "Dubon2026.SourceDickson.scalar_power_trace_chebyshev_equation",
+    "Dubon2026.SourceDickson.original_exceptional_residual_trace_equation",
+    "Dubon2026.SourceDickson.integral_chebyshev_isMonicOfDegree",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial_isMonicOfDegree",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial_eval_zero",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_mul_X",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_monic",
+    "Dubon2026.SourceDickson.integral_chebyshev_derivative_eval_neg_two",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_constant",
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial_eval\u2082",
+    "Dubon2026.SourceDickson.exceptional_nonzero_trace_root_isIntegral",
+    "Dubon2026.SourceDickson.exceptional_nonzero_trace_root_dvd_constant",
+    "Dubon2026.SourceDickson.odd_square_ratio_valuation_ne_one",
+    "Dubon2026.SourceDickson.exceptional_numberField_root_valuation_one",
+    "Dubon2026.SourceDickson.exceptional_coefficient_ratio_nonvanishing",
+    "Dubon2026.SourceDickson.exceptional_unramified_prime_valuation",
+    "Dubon2026.SourceDickson.exceptional_unramified_coefficient_ratio_nonvanishing",
+    "Dubon2026.SourceDickson.exceptional_coefficient_prime_unramified",
+    "Dubon2026.SourceDickson.exists_exceptional_unramified_coefficient_prime",
+    "Dubon2026.SourceDickson.exceptional_coefficient_ratio_nonvanishing_outside_support",
+    "Dubon2026.original_arithmetic_exists_identity_norm_frobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_local_nonzero_prime_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_nonzero_prime_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_prime_obstruction",
+    "Dubon2026.SourceDickson.nonzero_numberField_integer_relation",
+    "Dubon2026.SourceDickson.integer_relation_lifts_to_integral_ring",
+    "Dubon2026.SourceDickson.integer_relation_reduction_dvd_constant",
+    "Dubon2026.SourceDickson.embedded_integer_relation_reduction_dvd_constant",
+    "Dubon2026.SourceDickson.integral_unit_ratio_polynomial_map",
+    "Dubon2026.SourceDickson.exists_integral_polynomial_ratio",
+    "Dubon2026.SourceDickson.local_nat_isUnit_of_not_dvd",
+    "Dubon2026.SourceDickson.original_exceptional_trace_polynomial",
+    "Dubon2026.SourceDickson.original_exceptional_characteristic_dvd_relation_constant",
+    "Dubon2026.SourceDickson.not_int_dvd_of_natAbs_lt",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_integer_obstruction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_fixed_local_not_exceptional",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_exclusion_bound",
+    "Dubon2026.SourceDickson.remaining_small_image_of_not_exceptional",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonexceptional_cm_inputs"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.exceptionalTracePolynomial",
+    "Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial",
+    "Dubon2026.SourceDickson.exceptionalCoefficientRamifiedPrimes",
+    "Dubon2026.SourceDickson.HasRemainingSmallProjectiveImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonexceptionalInputs"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalExclusionAudit1.log",
+  "logSha256": "A60D468E1A11E4515DB38C2161F897B9A3AB83B501E29CD2DA4AB8923D64E41D",
+  "auditSha256": "C64880595E08A6E3A683533C9CA68A0476827370C1A81072431D677745CA7B71",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalExclusionDeclarations2552.log",
+  "ownershipSha256": "A4F7A843FA214DE374C34C3163CAEEC7CFA91A5C608B04C08519CAE1B82B6633",
+  "exhaustiveTheorems": 126,
+  "exhaustiveOtherDeclarations": 24,
+  "linterScopes": 28,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 315,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalExclusionDependencyAudit1.log",
+  "dependencyAuditSha256": "1A0714C0519C54B2D85193FB415E9E4A891EC358B7E9250BAB419F6EB81CBE23",
+  "dependencyAuditSourceSha256": "4AB7B040FF807F438A34A5167AB311CC63AF6E13B360E14C7169C227E1C4C5EF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonexceptional_cm_inputs"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-exceptional-exclusion-reuse-review-2552.json",
+  "reuseReviewSha256": "65ED0288B17ACACACF4A0751D9AC8CD297068A8D1F6343888714EF1D79E3BEF8",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> eventual original residual large image -> arithmetic exclusion of A4, S4 and A5 above a bound depending only on the actual primitive form. Original representations, fields, topologies, literal reduction, Hecke data, determinant, oddness, auxiliary primes and all CM deformation conclusions are retained. Exactly cyclic, dihedral and elementary-abelian-by-cyclic small projective cases remain.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "semanticFingerprints": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalExclusionScratchSemantic2553b.lean",
+    "sourceSha256": "35FE922B25B8E901A334409BE0C802B71A0303F374BCDA6D7A34F73165E2D5E6",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExceptionalExclusionScratchSemantic2553b.log",
+    "sha256": "2F687C5725260B2D31A583B5C0233781149CE5ECCE0617304FF70210C6CF1AD7",
+    "declarations": 150
+  }
+}

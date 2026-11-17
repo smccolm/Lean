@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-detecting-family-2-scratch-receipt.json",
+      "sha256": "D6EB8D8B5AB21272E5771AD1308CD4E8073DB28E82D4DF967FE3709B147F10C8",
+      "modules": 9,
+      "queries": 13,
+      "exhaustiveTheorems": 41,
+      "other": 10,
+      "requiredValueEdges": 138
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

@@ -1,0 +1,46 @@
+import SourceExceptionalProjectiveExponent
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional-case
+exclusions. For each actual original residual matrix, exceptional projective
+image forces its 120th power to be scalar over the original residue field.
+No coefficient-field equality or separate image certificate is introduced. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+variable (p : ℕ) [Fact p.Prime]
+
+/-- Exceptional projective image forces scalar powers in the original field. -/
+theorem original_exceptional_residual_pow_scalar
+    {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F)
+    (h : Nonempty ((residualProjectiveAction p j ρ).range ≃*
+        alternatingGroup (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* Equiv.Perm (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 5)))
+    (g : Γ) : ∃ u : Fˣ, ρ g ^ 120 = GeneralLinearGroup.scalar (Fin 2) u := by
+  have hp := exceptional_projective_pow_120 h
+    ((residualProjectiveAction p j ρ).rangeRestrict g)
+  have hproj : residualProjectiveAction p j ρ g ^ 120 = 1 :=
+    congrArg Subtype.val hp
+  have hc : GeneralLinearGroup.map j (ρ g ^ 120) ∈
+      Subgroup.center (GL (Fin 2) (K p)) := by
+    apply (QuotientGroup.eq_one_iff _).mp
+    simpa only [map_pow, residualProjectiveAction, MonoidHom.comp_apply] using hproj
+  have hinj : Function.Injective (GeneralLinearGroup.map j (n := Fin 2)) := by
+    intro A B hAB
+    apply Units.ext
+    ext i k
+    apply j.injective
+    exact congrArg (fun M : GL (Fin 2) (K p) => M.val i k) hAB
+  have hcF : ρ g ^ 120 ∈ Subgroup.center (GL (Fin 2) F) := by
+    apply Subgroup.mem_center_iff.mpr
+    intro A
+    apply hinj
+    simp only [map_mul]
+    exact Subgroup.mem_center_iff.mp hc (GeneralLinearGroup.map j A)
+  rw [GeneralLinearGroup.center_eq_range_scalar] at hcF
+  obtain ⟨u, hu⟩ := hcF
+  exact ⟨u, hu.symm⟩
+
+end
+end Dubon2026.SourceDickson

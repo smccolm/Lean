@@ -1,0 +1,40 @@
+import SourceOriginalMappedDistinctRoots2439e
+import Dubon2026.HomogeneousSymmetricBaseChange
+import Dubon2026.FiniteSymmetricRegularDiagonal
+
+/-! DUB-17/18 -> original regular-prime local invariant dimensions.
+A mapped conjugacy to a torus whose eigenvalues are already original
+constructs the original characteristic roots and trace-zero fixed dimension.
+No original conjugator or equality of coefficient fields is assumed. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- A genuine mapped torus conjugacy supplies all original symmetric
+characteristic roots through the same coefficient embedding. -/
+theorem original_symmetric_characteristic_roots_of_mapped_torus
+    {F E : Type} [Field F] [Field E] (j : F →+* E)
+    (n : ℕ) (A : GeneralLinearGroup (Fin 2) F) (u : Fˣ)
+    (hconj : IsConj (GeneralLinearGroup.map j A)
+      (GeneralLinearGroup.map j (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u)))) :
+    ∀ i : Fin (n + 1), (homogeneousSymmetricGL n A).val.charpoly.IsRoot
+      ((u : F) ^ i.val * (↑u⁻¹ : F) ^ (n - i.val)) := by
+  have hs := (homogeneousSymmetricGL n).map_isConj hconj
+  rw [← homogeneousSymmetricGL_map, ← homogeneousSymmetricGL_map] at hs
+  obtain ⟨C, hC⟩ := isConj_iff.mp hs
+  have he := congrArg (fun M : GeneralLinearGroup (Fin (n + 1)) E => M.val) hC
+  change C.val * (homogeneousSymmetricGL n A).val.map j * (C⁻¹).val =
+    (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))).val.map j at he
+  rw [homogeneousSymmetricGL_unitDiagonal] at he
+  have hd : (Matrix.diagonal (fun i : Fin (n + 1) =>
+      (u : F) ^ i.val * (↑u⁻¹ : F) ^ (n - i.val))).map j =
+      Matrix.diagonal (fun i : Fin (n + 1) =>
+        j ((u : F) ^ i.val * (↑u⁻¹ : F) ^ (n - i.val))) := by
+    ext i k
+    by_cases hik : i = k <;> simp [Matrix.map_apply, Matrix.diagonal, hik]
+  rw [hd] at he
+  exact original_characteristic_roots_of_mapped_diagonal j _ _ C he
+
+
+end
+end Dubon2026

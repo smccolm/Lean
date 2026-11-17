@@ -1,0 +1,614 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Auxiliary Primes Assessment 2026-11-17.md",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/Dubon Original Auxiliary Primes Assessment 2026-11-17.md.txt",
+      "sha256": "161115DB2CDCE013389875FAC78DCA73488271C163BDCF73155AF734BE3A3451"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalRegularDetection.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceFiniteLinearOriginalRegularDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalRegularDetection.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceFiniteLinearOriginalRegularDetection.lean.txt",
+      "sha256": "47177514FD45FA73508E158359290C4F0D7D5941F8050C96E90E3240F7D49F56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalRegularDetection.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceFiniteLinearOriginalRegularDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDetectingFamilies.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalDetectingFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDetectingFamilies.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalDetectingFamilies.lean.txt",
+      "sha256": "718CF8691B872D64B50619F967F1113188E9D69CA283AAE515D1F7FB4980A2FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDetectingFamilies.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalDetectingFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalRegularPrimes.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalRegularPrimes.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalRegularPrimes.lean.txt",
+      "sha256": "019448DA0C606BAA9A40A14C217BB824D10F13401803BB80704CB496ED60FB22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalRegularPrimes.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalUnramifiedDimensions.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalUnramifiedDimensions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalUnramifiedDimensions.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalUnramifiedDimensions.lean.txt",
+      "sha256": "0F4EA61359ECB3199700624A80848FB8BA687AF178661F35DF578D818CCCE405"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalUnramifiedDimensions.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceGammaOneOriginalUnramifiedDimensions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFamilyProperty.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFamilyProperty.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticFamilyProperty.lean.txt",
+      "sha256": "536E382459E87C962DC98C7A5D692B77AD61AB8788779297D43A0A464DDF7B3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFamilyProperty.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularCocycle.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularCocycle.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularCocycle.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularCocycle.lean.txt",
+      "sha256": "568290FC605472AB83FD479795DC82B9C8299BCFE48A9F2D2E8343F608BDA453"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularCocycle.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularCocycle.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimeProperty.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularPrimeProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimeProperty.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularPrimeProperty.lean.txt",
+      "sha256": "7BDF4825CA4B7E43B0B2845A0A47435AEE784A5DBBD6130B53A3B811D673591E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimeProperty.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularPrimeProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimes.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimes.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularPrimes.lean.txt",
+      "sha256": "6BC45757D8F171973E1807DF492AE6FC1FB6801FD73781087E79904433675A13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimes.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRootKernel.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRootKernel.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRootKernel.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRootKernel.lean.txt",
+      "sha256": "3B1775697C73599FD684D6D8A3E508C0A2F5E0594AB8A38379B019A1C1679F8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRootKernel.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalArithmeticRootKernel.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassPrimePredicates.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalClassPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassPrimePredicates.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalClassPrimePredicates.lean.txt",
+      "sha256": "2ED6EFFA5946321EA309D5A960311AFCBE3B767655DDA098AACB429DF6054772"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassPrimePredicates.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalClassPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassRegularPrimes.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalClassRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassRegularPrimes.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalClassRegularPrimes.lean.txt",
+      "sha256": "AEAEBD538A3DD3FCE66E53FD95A6522BBB83877A78F462CC3B305E2684D9E7D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassRegularPrimes.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalClassRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCocycleClassPrimes.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalCocycleClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCocycleClassPrimes.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalCocycleClassPrimes.lean.txt",
+      "sha256": "F616669EE76A83AD2EC4DF02DC387B0F2D80073547520CC248783E2EEA4F83B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCocycleClassPrimes.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalCocycleClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientH1Finite.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalCoefficientH1Finite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientH1Finite.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalCoefficientH1Finite.lean.txt",
+      "sha256": "A01B51DC4D616E04EC590F5E4E9D09ABBD4185A73232B6560E7D34F9E177D057"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientH1Finite.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalCoefficientH1Finite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyDeclarations2427.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyDeclarations2427.log",
+      "sha256": "563E71E665AC47986027CD377976AF3A345A1DDB6C78C31C81FE1612D1592708"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProperty.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProperty.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyProperty.lean.txt",
+      "sha256": "D089F893A5F6469473E0554865C2953590D162F65B37154752179740BF0B8003"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProperty.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyScratchSemantic2428.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyScratchSemantic2428.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyScratchSemantic2428.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyScratchSemantic2428.lean.txt",
+      "sha256": "046818FD4A6F618639A04B4150070D60D2D59B956819CB41A309BD8D30115F98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyScratchSemantic2428.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyScratchSemantic2428.log",
+      "sha256": "E31A44FBC3FE7FD285F16383DAE1A3890FA6057281876F50DD043836B8BAF33D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedTraceTest.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalExtendedTraceTest.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedTraceTest.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalExtendedTraceTest.lean.txt",
+      "sha256": "667572F960F8F6AB87174561233137DCA04501B047E56EFE4150CD62B254A03E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedTraceTest.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalExtendedTraceTest.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDetectingFamily.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalFiniteDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDetectingFamily.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalFiniteDetectingFamily.lean.txt",
+      "sha256": "D1C37096D07F54EB56BEEAEE05F19BA4845E1158799F45AF22C4E96CA77D3865"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDetectingFamily.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalFiniteDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalCoefficientH1Finite.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalLocalCoefficientH1Finite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalCoefficientH1Finite.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalLocalCoefficientH1Finite.lean.txt",
+      "sha256": "2C7576B86C05D1D1AAC272D92227AD863C26B2174C62F2313FCD30FAE2AA8EBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalCoefficientH1Finite.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalLocalCoefficientH1Finite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalUnramifiedDimension.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalLocalUnramifiedDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalUnramifiedDimension.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalLocalUnramifiedDimension.lean.txt",
+      "sha256": "07126AEEEFF8BE22E86C5A395C41C03C5C7ACDAE3E83895E7A2719619FE91E38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalUnramifiedDimension.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalLocalUnramifiedDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeUnramifiedDimension.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalPrimeUnramifiedDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeUnramifiedDimension.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalPrimeUnramifiedDimension.lean.txt",
+      "sha256": "0B9FC0063D107F1B3901087AE6FEC7F1EC54900730CAAC8C436C1376AB084465"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeUnramifiedDimension.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalPrimeUnramifiedDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAssembly.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAssembly.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeAssembly.lean.txt",
+      "sha256": "AF038D865345AECF90D8464EDF3318B8D80B7E49B426B26E7F5BD4388F01FCB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAssembly.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeDeclarations2405.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeDeclarations2405.log",
+      "sha256": "A563C47B0717B7BA30183A4805F7BD9FF29BEF0E3DB228B343F51DA1421C6352"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimePredicates.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimePredicates.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimePredicates.lean.txt",
+      "sha256": "E816684284E4BFE85DE7138927F6261A706370B12559F571040D2DE1499F969E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimePredicates.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeScratchSemantic2406.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeScratchSemantic2406.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeScratchSemantic2406.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeScratchSemantic2406.lean.txt",
+      "sha256": "EDB3D4286D19A1763FC6C4EA919E3F478DB31BEA4E088FF29B042DE983B18273"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeScratchSemantic2406.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeScratchSemantic2406.log",
+      "sha256": "BEFF1DFD9F529C77CA6E1C6655E7F68FBD12A9F760E23A8594A1820078F8F3A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedAdjointProperty.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedAdjointProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedAdjointProperty.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedAdjointProperty.lean.txt",
+      "sha256": "E787CFD95881451B573A3947951019EF388D790D13823D417FD76F83FB968002"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedAdjointProperty.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedAdjointProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionDeclarations2434.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionDeclarations2434.log",
+      "sha256": "EF6DAA9224E8BA4C55D431B0CE025E8B142C061725A8FF75F19AE3B14E300B1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionScratchSemantic2435.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionScratchSemantic2435.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionScratchSemantic2435.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionScratchSemantic2435.lean.txt",
+      "sha256": "96D9F0B0C5DE1F83F45703F2EC9A2D849A36588683C411248250A999873A17EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionScratchSemantic2435.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionScratchSemantic2435.log",
+      "sha256": "D7DDE34A9881C8F77C50F396897CEAB2E50EE055DA1BE75F75E3E0150E3B8B60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeIndexedDetectingFamily.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourcePrimeIndexedDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeIndexedDetectingFamily.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourcePrimeIndexedDetectingFamily.lean.txt",
+      "sha256": "35EDB7230EB319D97CCC93A9F45B9540E2EC2BC9A3EC1612018E6A1DDFBD4A72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeIndexedDetectingFamily.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourcePrimeIndexedDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldProjectorSpan.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldProjectorSpan.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldProjectorSpan.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldProjectorSpan.lean.txt",
+      "sha256": "B4BFAFF4C408E5F1D9550565123FD959537DF31C2CA168BD624208D41A94B0A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldProjectorSpan.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldProjectorSpan.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularKernel.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldRegularKernel.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularKernel.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldRegularKernel.lean.txt",
+      "sha256": "3AE62D2BDE6672029D8AB03D3D9F0D510721C56C321D309CFBD12C7D71A612F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularKernel.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldRegularKernel.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularTrace.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldRegularTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularTrace.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldRegularTrace.lean.txt",
+      "sha256": "EDE192B40714F8793E51648608F7992357DB5D26AAA5672680B358ADF44DDC5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularTrace.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceSubfieldRegularTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroCoefficientEmbedding.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceTraceZeroCoefficientEmbedding.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroCoefficientEmbedding.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceTraceZeroCoefficientEmbedding.lean.txt",
+      "sha256": "84F71AF5CFA33B5561A66390E0C6B701DCD14F865D452B093F5C852393DE760D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroCoefficientEmbedding.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceTraceZeroCoefficientEmbedding.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroConjugacy.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceTraceZeroConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroConjugacy.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceTraceZeroConjugacy.lean.txt",
+      "sha256": "DFA681EBD7BB438C6AC4373373BF7FF590DFB7BA1D22E76CBD719F151055984E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroConjugacy.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceTraceZeroConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-auxiliary-primes-promotion-route-2457.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/original-auxiliary-primes-promotion-route-2457.json",
+      "sha256": "A5C1783B6A6833C3153FC2125A5D2DF86032F97E767678E85C8345549B736651"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-detecting-family-2-scratch-receipt.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/source-original-detecting-family-2-scratch-receipt.json",
+      "sha256": "D6EB8D8B5AB21272E5771AD1308CD4E8073DB28E82D4DF967FE3709B147F10C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-regular-prime-1-scratch-receipt.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/source-original-regular-prime-1-scratch-receipt.json",
+      "sha256": "334EF60FE3B73F047A5F481753159A204503CB6CCD035A70D9244A3F96A75A48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-unramified-dimension-1-scratch-receipt.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/source-original-unramified-dimension-1-scratch-receipt.json",
+      "sha256": "E52346CFD7BCEB752F11156364F26F09705DDB99034F137448DFE5810B7A228D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-regular-prime-reuse-review-2407.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/original-regular-prime-reuse-review-2407.json",
+      "sha256": "127CE56F1EFA9436F414F6A3006C7CE8ADD6F07F103BBBDF71992080A52BE9D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-detecting-family-reuse-review-2429.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/original-detecting-family-reuse-review-2429.json",
+      "sha256": "09EBA42DFAF3BF4D76DD7291C97E59C291185A61D78E92B89C1984ED3E374F82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-unramified-dimension-reuse-review-2436.json",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/original-unramified-dimension-reuse-review-2436.json",
+      "sha256": "380B75893D4B1656AB66B9ED3E5FBB87F0629265268A9CC25DF3D35E225A5448"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAudit1.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeAudit1.log",
+      "sha256": "BCB74963A0117272DB6148AFCC92CC428686CFFAFE809FF991B83EF68558D5BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAudit1.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeAudit1.lean.txt",
+      "sha256": "B896567726A3AA39BF3F22CD9A59E284B4E0CB7F0112FD743B3A528039B509A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAudit1.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeDependencyAudit1.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeDependencyAudit1.log",
+      "sha256": "83056E3C39A5B196A9F5414DFC326F260C918AD2E8C741860EC26F50512F777C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeDependencyAudit1.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeDependencyAudit1.lean.txt",
+      "sha256": "7A31C4ACB2BAFAB83CBBE8E92617A4731DBD5ADA894DB504984A33E9728811BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeDependencyAudit1.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalRegularPrimeDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyAudit2.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyAudit2.log",
+      "sha256": "BF3A14CCE50824DCA691963A2CC4C387C449CB73F933954524C1C37807DB4241"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyAudit2.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyAudit2.lean.txt",
+      "sha256": "1D5FE72A9586757DCB4C0000609E0D02E3D4227264FBD8EAFC0C01FDB92D4550"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyAudit2.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyDependencyAudit2.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyDependencyAudit2.log",
+      "sha256": "533C044AE8938A556FF5285A9E37C8289EE5C1FA36681B977E8D237ACF56F3B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyDependencyAudit2.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyDependencyAudit2.lean.txt",
+      "sha256": "E323B8FCFB3AF2E33D9D2D1C63DCA3A693458122206989E126B2FBC2F3E1908B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyDependencyAudit2.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalDetectingFamilyDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionAudit2.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionAudit2.log",
+      "sha256": "6E370005CCCA2BE4A00B9FF4635C62B5BFC17F6EFB7795374A5EA0B60CE885FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionAudit2.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionAudit2.lean.txt",
+      "sha256": "14569328E3F37674741A9F4D48D4752D77AA23C0E64B93D30F1DB19675737B8A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionAudit2.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionDependencyAudit1.log",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionDependencyAudit1.log",
+      "sha256": "00E28C64FE36CB62645112C43A0F6C9E4FC6C35B05D50A8DF6F055CC217F8204"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionDependencyAudit1.lean",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionDependencyAudit1.lean.txt",
+      "sha256": "DA65EEA06AAAA6D51F5DBE316266F36C5FCB7DE30A44058E2C9D714CD27FA247"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionDependencyAudit1.exit",
+      "path": "Tools/original-auxiliary-primes-20261117-2457/SourceOriginalUnramifiedDimensionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

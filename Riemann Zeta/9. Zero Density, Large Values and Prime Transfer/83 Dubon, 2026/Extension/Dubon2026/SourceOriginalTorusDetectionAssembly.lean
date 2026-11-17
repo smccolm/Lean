@@ -1,0 +1,46 @@
+import Dubon2026.SourceOriginalTorusDetectionPredicate
+
+/-! DUB-17/18 -> original local deformation inputs. The native finite
+affine Chebotarev theorem carries the constructed original torus witness
+to the same local Frobenius, where the proved local dimension theorem applies. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Root-fixing original torus detection supplies genuine congruence
+primes, the same original torus Frobenius and nonzero original localization. -/
+theorem rationalArithmetic_torus_primes_of_root_detection
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p n level : ℕ) [Fact p.Prime]
+    (hpa : (p : 𝓞 ℚ) ∣ a)
+    {K : Type} [Field K]
+    [TopologicalSpace K] [DiscreteTopology K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [Finite A] [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (ρ : rationalArithmeticGaloisGroup a →ₜ* GeneralLinearGroup (Fin (n + 1)) K)
+    (c : continuousRepresentationCocyclesOne A)
+    (hroot : HasArithmeticTorusRootDetection a p n level A ρ.toMonoidHom c) :
+    HasArithmeticTorusDetectingPrimes a p n level A hA ρ.toMonoidHom c := by
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+  have hprimes := rationalArithmetic_exists_conjugate_detecting_cocycle
+    a ha p (level + 1) hpa A hA ρ c
+  obtain ⟨ζ, hζ, D, ψ, hψ, hD⟩ := hprimes
+  obtain ⟨σ, hσζ, hregular, u, hu, htorus, hdetect⟩ := hroot ζ hζ
+  letI : Algebra ℚ D := D.algebra'
+  letI : NumberField D := NumberField.of_module_finite ℚ D
+  refine ⟨u, hu, D, ψ, hψ, ?_⟩
+  intro S
+  obtain ⟨q, hq, hqS, hqa, hmod, hunr, hlocal, hne⟩ := hD σ hσζ hdetect S
+  obtain ⟨γ, hγ, hγσ⟩ := hlocal
+  have hγtorus := hγσ.trans htorus
+  have hγregular : (ρ (rationalPrimeArithmeticRestriction a q hq γ)).val.charpoly.Separable := by
+    rw [generalLinearGroup_charpoly_eq_of_isConj hγσ]
+    exact hregular
+  exact ⟨q, hq, hqS, hqa, hmod, hunr, ⟨γ, hγ, hγtorus, hγregular⟩, hne⟩
+
+end
+end Dubon2026

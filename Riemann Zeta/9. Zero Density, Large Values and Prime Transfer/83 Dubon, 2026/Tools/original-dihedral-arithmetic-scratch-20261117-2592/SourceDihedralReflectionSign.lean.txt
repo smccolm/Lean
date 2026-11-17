@@ -1,0 +1,35 @@
+import Mathlib.GroupTheory.SpecificGroups.Dihedral
+import Mathlib.Data.Complex.Basic
+import Mathlib.Tactic.NormNum
+
+/-! DUB-17/18 -> original dihedral image exclusion -> quadratic parity of the
+actual dihedral projective range. Use the native rotations and reflections;
+negative sign is exactly the reflection coset. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+
+/-- The literal quadratic sign character of the native dihedral group. -/
+def dihedralReflectionSign (n : ℕ) : DihedralGroup n →* ℂ where
+  toFun
+    | .r _ => 1
+    | .sr _ => -1
+  map_one' := rfl
+  map_mul' := by
+    rintro (i | i) (j | j) <;> simp
+
+/-- The native dihedral parity character has square one. -/
+theorem dihedralReflectionSign_sq (n : ℕ) (g : DihedralGroup n) :
+    dihedralReflectionSign n g ^ 2 = 1 := by
+  cases g <;> norm_num [dihedralReflectionSign]
+
+/-- Negative dihedral sign is exactly a native reflection. -/
+theorem dihedralReflectionSign_eq_neg_one (n : ℕ) (g : DihedralGroup n) :
+    dihedralReflectionSign n g = -1 ↔ ∃ i, g = DihedralGroup.sr i := by
+  cases g with
+  | r i =>
+    simp [dihedralReflectionSign]
+    norm_num
+  | sr i => simp [dihedralReflectionSign]
+
+end
+end Dubon2026.SourceDickson

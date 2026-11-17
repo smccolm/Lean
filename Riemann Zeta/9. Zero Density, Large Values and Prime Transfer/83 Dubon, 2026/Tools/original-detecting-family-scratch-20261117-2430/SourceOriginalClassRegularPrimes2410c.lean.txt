@@ -1,0 +1,29 @@
+import SourceOriginalCocycleClassPrimes2414a
+
+/-! Transfer the proved original cocycle detection to its actual H1 quotient. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Pointwise cocycle detection detects every original H1 class through
+the actual localization map, independently of a representative. -/
+theorem rationalArithmetic_original_class_regular_prime
+    (a : 𝓞 ℚ) (p level : ℕ)
+    {K ι : Type} [Field K] [TopologicalSpace K] [Fintype ι] [DecidableEq ι]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup ι K)
+    (hdetect : HasArithmeticRegularCocycleDetection a p level A hA R)
+    (x : ContinuousRepresentationH1 A hA) (hx : x ≠ 0) :
+    HasArithmeticRegularClassPrimes a p level A hA R x := by
+  obtain ⟨c, hc⟩ := (continuousRepresentationCoboundariesOne A hA).mkQ_surjective x
+  change (Submodule.Quotient.mk c : ContinuousRepresentationH1 A hA) = x at hc
+  have hc' : (Submodule.Quotient.mk c : ContinuousRepresentationH1 A hA) ≠ 0 := by
+    simpa only [hc] using hx
+  rw [← hc]
+  exact rationalArithmetic_original_cocycle_class_primes a p level A hA R c (hdetect c hc')
+
+end
+end Dubon2026

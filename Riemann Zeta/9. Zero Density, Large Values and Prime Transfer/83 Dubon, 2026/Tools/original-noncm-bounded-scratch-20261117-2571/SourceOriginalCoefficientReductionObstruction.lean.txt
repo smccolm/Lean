@@ -1,0 +1,31 @@
+import SourceIntegerRelationReduction
+import Dubon2026.SourcePrimitiveLocalCoefficients
+
+/-! DUB-17/18 -> original dihedral image exclusion -> literal Fourier reduction.
+An integer relation for the actual original coefficient forces divisibility of
+its fixed constant whenever that same coefficient reduces to zero in an actual
+local coefficient realization. No independent residue coefficient is used. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+open scoped ValuativeRel
+
+/-- Zero reduction of the original Fourier coefficient forces the residue characteristic to divide its integer relation constant. -/
+theorem original_coefficient_zero_reduction_dvd_relation_constant
+    (Q p : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (q : ℕ) (H : ℤ[X])
+    (hH : H.eval₂ (Int.castRingHom (sourcePrimitiveCoefficientField f))
+      (sourcePrimitiveFieldCoefficient f q) = 0)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (hz : IsLocalRing.residue 𝒪[E]
+      ⟨τ (sourcePrimitiveFieldCoefficient f q), sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ = 0) :
+    (p : ℤ) ∣ H.coeff 0 := by
+  exact embedded_integer_relation_reduction_dvd_constant p H _ hH τ.toRingHom
+    (algebraMap 𝒪[E] E) Subtype.val_injective
+    ⟨τ (sourcePrimitiveFieldCoefficient f q), sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩
+    rfl (IsLocalRing.residue 𝒪[E]) hz
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,58 @@
+{
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original residual and integral deformation inputs -> split-torus auxiliary primes with exact local dimension, a genuine constructed CM field, original integral polarized deformation rings, full-adjoint H0 vanishing and exact cotangent dimension.",
+  "discharged": "For the same actual primitive cusp form of weight at least two and prime p greater than three, split-torus detecting primes have original unramified trace-zero adjoint H1 dimension n for 2*n < p-1. Bounded jointly detecting families retain this property at every selected prime. The actual integral/residual pair constructs a genuine quadratic totally complex field inside its enlarged unramified extension. Its literal support and bottom restrictions carry native symmetric polarizations and complete local Noetherian deformation rings over the original integral coefficient ring. The multiplier is explicitly the determinant character of that original integral pullback with the CM sign correction; its residual comparison and oddness are proved. On the original finite linear subfield branch, the same polarized full adjoint has zero global invariants and its actual ring has cotangent dimension equal to the full-adjoint H1 dimension plus (n+1)^2, for 2*n < p-1. All prior arithmetic data and conclusions concern the same original representations.",
+  "boundary": "The six small-projective-image alternatives remain explicit. Their arithmetic exclusion, required local deformation conditions, CM disjointness where required, automorphy and literal higher symmetric-power continuation remain open. These are unrestricted polarized deformation rings; no crystalline or other source local condition is claimed. The image subfield need not equal the original residue field. The full source domain and proof contract are unchanged. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse native prime-subfield SL2, eigenbasis conjugacy, actual conjugate Chebotarev, cyclic local H1 comparison and bounded detecting families. A primitive fourth root constructs the actual quadratic totally complex field. Native continuous support restriction and its surjectivity transport the same residual bounds and cyclotomic character. Integral involution parity and literal coefficient reduction construct the original odd multiplier. Existing native polarized deformation-ring and cotangent theorems apply to that same multiplier. Finite-subfield CM irreducibility replaces a stronger full-original-field SL2 premise in the native adjoint-invariant proof. Named field and ring data keep elaboration within unchanged default limits. No general cohomology base-change framework, independent representation, root-pin change or new external import is introduced.",
+  "scratchCertificates": [
+    {
+      "path": "source-original-torus-2-scratch-receipt.json",
+      "sha256": "380336BAC96A9A6F0421FD2C04704A3A996063F7EFD7F31B1EAF9679EB36674B"
+    },
+    {
+      "path": "source-original-constructed-cm-1-scratch-receipt.json",
+      "sha256": "0372C6F27357EAFC1306BE3B7042F3B7FE23B87626455766A1F90FDCE776C17E"
+    },
+    {
+      "path": "source-original-integral-cm-1-scratch-receipt.json",
+      "sha256": "CBD7FE92E831D8B618074F7F3B241EE1EF657DF782825A18F7094038C5C7A4DA"
+    },
+    {
+      "path": "source-original-cm-dimensions-1-scratch-receipt.json",
+      "sha256": "F7ED5A5962E49A769F75A263C3AA05F60DCE2395F6D19014300C81C0BE33522D"
+    }
+  ],
+  "immutableScratchArchives": [
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/manifest.json",
+      "sha256": "2075D99527CC406F1234111817EE5F61987FB4D4B2A7F6015F7413F001D0413E"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/manifest.json",
+      "sha256": "8E5A4C0B61FF53913CD807EE2EA18C315B6A9B4D308E0DD3B1282CC47D8CC8C1"
+    },
+    {
+      "path": "Tools/original-integral-cm-scratch-20261117-2511/manifest.json",
+      "sha256": "9CCAA683A7FE3CAE6840E1FC7D01D39277091C153FDF0D1CEFC5A87D3F96DF09"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/manifest.json",
+      "sha256": "C8AB37DB067EA6EAEE845D2DEF27DFA66D330B0EBBEE0F4951B4C7944463E056"
+    }
+  ],
+  "disjointModules": 59,
+  "publicTheorems": 62,
+  "publicConstructions": 23,
+  "exhaustiveTheorems": 347,
+  "exhaustiveOtherDeclarations": 83,
+  "typeValueFingerprints": 430,
+  "proofValueEdges": [
+    189,
+    223,
+    242,
+    257
+  ],
+  "proofBodiesPreserved": true,
+  "changes": "Only import qualification during promotion.",
+  "accepted": 16,
+  "total": 20
+}

@@ -1,0 +1,72 @@
+import SourceOriginalTorusDetectionPredicate2453a
+import SourceOriginalPrimeTorusDimension2448a
+
+/-! DUB-17/18 -> original auxiliary-prime local dimensions. Add the
+proved unramified adjoint dimension at the exact primes and Frobenius
+witnesses already constructed by original torus detection. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- At a fixed genuine finite factor, the original torus Frobenius
+computes each selected prime's actual unramified adjoint dimension. -/
+theorem rationalArithmetic_torus_finite_factor_dimensions
+    (a : 𝓞 ℚ) (p n level : ℕ) [Fact p.Prime] (hn : 2 * n < p - 1)
+    {K : Type} [Field K] [Finite K] [CharP K p]
+    [TopologicalSpace K] [DiscreteTopology K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin (n + 1)) K)
+    (hρ : Continuous ρ) (c : continuousRepresentationCocyclesOne A)
+    (u : Kˣ) (hu : orderOf u = p - 1)
+    (D : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (ψ : Gal(D/ℚ) →* GeneralLinearGroup (Fin (n + 1)) K × Equiv.Perm A)
+    (hψ : ∀ w : rationalArithmeticGaloisGroup a,
+      ψ (AlgEquiv.restrictNormalHom D w) = (ρ w, cocycleAffinePermutation A c.val w))
+    (hD : letI : NumberField D := NumberField.of_module_finite ℚ D
+         ∀ S : Finset ℕ, ∃ q : ℕ, ∃ hq : q.Prime,
+           q ∉ S ∧ ¬ (q : 𝓞 ℚ) ∣ a ∧ q ≡ 1 [MOD p ^ (level + 1)] ∧
+           Chebotarev.UnramifiedIn ℚ D (Ideal.span {(q : 𝓞 ℚ)}) ∧
+           (∃ γ : Gal(rationalPrimeLocalClosure q hq / rationalPrimeLocalField q hq),
+             Chebotarev.frobeniusClass ℚ D (Ideal.span {(q : 𝓞 ℚ)}) =
+               ConjClasses.mk (AlgEquiv.restrictNormalHom D
+                 (rationalPrimeArithmeticRestriction a q hq γ)) ∧
+             IsConj (ρ (rationalPrimeArithmeticRestriction a q hq γ))
+               (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))) ∧
+             (ρ (rationalPrimeArithmeticRestriction a q hq γ)).val.charpoly.Separable) ∧
+           rationalArithmeticH1PrimeRestriction a A hA q hq (Submodule.Quotient.mk c) ≠ 0) :
+    letI : NumberField D := NumberField.of_module_finite ℚ D
+         ∀ S : Finset ℕ, ∃ q : ℕ, ∃ hq : q.Prime,
+           q ∉ S ∧ ¬ (q : 𝓞 ℚ) ∣ a ∧ q ≡ 1 [MOD p ^ (level + 1)] ∧
+           Chebotarev.UnramifiedIn ℚ D (Ideal.span {(q : 𝓞 ℚ)}) ∧
+           (∃ γ : Gal(rationalPrimeLocalClosure q hq / rationalPrimeLocalField q hq),
+             Chebotarev.frobeniusClass ℚ D (Ideal.span {(q : 𝓞 ℚ)}) =
+               ConjClasses.mk (AlgEquiv.restrictNormalHom D
+                 (rationalPrimeArithmeticRestriction a q hq γ)) ∧
+             IsConj (ρ (rationalPrimeArithmeticRestriction a q hq γ))
+               (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))) ∧
+             (ρ (rationalPrimeArithmeticRestriction a q hq γ)).val.charpoly.Separable) ∧
+           (let R := ρ.comp (rationalPrimeArithmeticRestriction a q hq).toMonoidHom
+            let hR := hρ.comp (rationalPrimeArithmeticRestriction a q hq).continuous
+            Module.finrank K (continuousRepresentationH1Restriction
+              (matrixTraceZeroAdjointRep R) (matrixTraceZeroAdjointAction_continuous R hR)
+              (rationalPrimeNormInertia q hq).subtype continuous_subtype_val).ker = n) ∧
+           rationalArithmeticH1PrimeRestriction a A hA q hq (Submodule.Quotient.mk c) ≠ 0 := by
+  letI : NumberField D := NumberField.of_module_finite ℚ D
+  let ψres := (MonoidHom.fst (GeneralLinearGroup (Fin (n + 1)) K) (Equiv.Perm A)).comp ψ
+  have hψres : ∀ w : rationalArithmeticGaloisGroup a, ψres (AlgEquiv.restrictNormalHom D w) = ρ w := by
+    intro w
+    change (ψ (AlgEquiv.restrictNormalHom D w)).1 = ρ w
+    rw [hψ]
+  intro S
+  obtain ⟨q, hq, hqS, hqa, hmod, hunr, hlocal, hne⟩ := hD S
+  obtain ⟨γ, hγ, htorus, hregular⟩ := hlocal
+  have hdim := rationalPrime_original_symmetric_unramified_finrank a q hq p n
+    ρ hρ D ψres hψres hunr γ hγ u (by rw [hu]; exact hn) htorus
+  exact ⟨q, hq, hqS, hqa, hmod, hunr, ⟨γ, hγ, htorus, hregular⟩, hdim, hne⟩
+
+end
+end Dubon2026

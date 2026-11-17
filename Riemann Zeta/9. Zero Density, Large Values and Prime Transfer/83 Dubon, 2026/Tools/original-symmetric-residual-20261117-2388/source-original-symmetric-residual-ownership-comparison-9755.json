@@ -1,0 +1,290 @@
+{
+  "scratchSum": 126,
+  "scratchDistinct": 126,
+  "generatedNameRenamings": {
+    "_private.Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneAbsoluteCyclotomicResidual": "_private.Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneAbsoluteSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneAbsoluteSymmetricResidual": "_private.Dubon2026.SourceGammaOneAbsoluteSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneArithmeticTwistedDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneArithmeticTwistedDetection": "_private.Dubon2026.SourceGammaOneArithmeticTwistedDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneCyclotomicSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneCyclotomicSymmetricResidual": "_private.Dubon2026.SourceGammaOneCyclotomicSymmetricResidual.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneResidueAbsoluteSymmetric.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneResidueAbsoluteSymmetric": "_private.Dubon2026.SourceGammaOneResidueAbsoluteSymmetric.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneSymmetricAdjointVanishing.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneSymmetricAdjointVanishing": "_private.Dubon2026.SourceGammaOneSymmetricAdjointVanishing.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneSymmetricKernelSpanning.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneSymmetricKernelSpanning": "_private.Dubon2026.SourceGammaOneSymmetricKernelSpanning.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneSymmetricResidualCohomology.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneSymmetricResidualCohomology": "_private.Dubon2026.SourceGammaOneSymmetricResidualCohomology.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceGammaOneTwistedKernelDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneTwistedKernelDetection": "_private.Dubon2026.SourceGammaOneTwistedKernelDetection.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+  },
+  "productionFocused": 126,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceFiniteSubfieldIrreducible",
+        "SourceSubfieldSymmetricAbsolute",
+        "SourceFiniteLinearSymmetric",
+        "SourceGammaOneAbsoluteSymmetricResidual",
+        "SourceSubfieldKernelIrreducible",
+        "SourceFiniteLinearKernelSymmetric",
+        "SourceGammaOneCyclotomicSymmetricResidual",
+        "SourceFiniteLinearAbsoluteGalois",
+        "SourceGammaOneAbsoluteCyclotomicResidual",
+        "SourceResidualConjugateIrreducible",
+        "SourceConjugateSymmetricSpanning",
+        "SourceFiniteLinearOriginalSpanning",
+        "SourceOriginalSymmetricSpanningProperty",
+        "SourceGammaOneSymmetricKernelSpanning",
+        "SourceSpanningIrreducibility",
+        "SourceSpanningCoefficientExtension",
+        "SourceOriginalSymmetricAbsolute",
+        "SourceGammaOneResidueAbsoluteSymmetric"
+      ],
+      "count": 68,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricDeclarations2354.log",
+        "sha256": "1AEE96ED7E3BB6FAF9F209C86A1F220B84B24AB336A500EBCF98981CC309C4A3",
+        "sourceSha256": "D722D9AB74320DAC3A865460591CBDBFA50CAE926C47003A82FFBA829C72694B"
+      }
+    },
+    {
+      "modules": [
+        "SourceOriginalSymmetricAdjoint",
+        "SourceGammaOneSymmetricAdjointVanishing"
+      ],
+      "count": 11,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointDeclarations2366.log",
+        "sha256": "4BB30A29B8139BCBA23AAC340E3E07DB6FDD8D4311DE1F7FDEACC2CEC6A9DB81",
+        "sourceSha256": "8A164F3CA55451F4BAD7EEE879C90C60F650A13810AEE5530AF209CDFA20DF06"
+      }
+    },
+    {
+      "modules": [
+        "SourceFiniteLinearOriginalScalar",
+        "SourceFiniteLinearTwistedKernel",
+        "SourceOriginalTwistedDetectionProperty",
+        "SourceOriginalTwistedTopology",
+        "SourceGammaOneTwistedKernelDetection",
+        "SourceArithmeticCyclotomicSquare",
+        "SourceOriginalArithmeticTwistedDetection",
+        "SourceGammaOneArithmeticTwistedDetection"
+      ],
+      "count": 35,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelDeclarations2377.log",
+        "sha256": "0FBAE190B14F47FC4E2F89F927FE4FEA6452D741F8996CE5528F43B56D9E06C1",
+        "sourceSha256": "C56569EBA64A9175EF8C246BFA7ECC818856CF9162D9C66D1A79E9664DDD96C4"
+      }
+    },
+    {
+      "modules": [
+        "SourceFiniteLinearOriginalConsequences",
+        "SourceGammaOneSymmetricResidualCohomology"
+      ],
+      "count": 12,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointDeclarations2383.log",
+        "sha256": "8C74E1B99E23211A319BCDC030F7C9CEF056DAB8E7FDA154924529ACBE0A54F8",
+        "sourceSha256": "386AB3C09A7658A2C17C7B602F8205A164D2C9BEA6B8B4077C4A060160DCFC3F"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricResidualOwnership9755.log",
+    "sha256": "5DBDFCA2E2778524C6F0932FAEE4EF0951957D60CCE9D775B8DFCF408FED8B25",
+    "sourceSha256": "EE397B6EBE0C74D3A3E90FFDDBB90E231F85CC6A96FFC877C994C6C650B68A74"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-050400-196.log",
+    "sha256": "5AFE31DE73442DCB5CA26B82181D530B55E1722FDD7B2B886640F3614305A139"
+  },
+  "verifiedSharedGenerated": {},
+  "unexplainedProductionNames": [],
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 30 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceFiniteSubfieldIrreducible",
+        "scratchSha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82",
+        "productionSha256": "986B6FE840015DDCD47B74ED18021D8BD71E543473E406BBF21FB1562C7AFA82",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceSubfieldSymmetricAbsolute",
+        "scratchSha256": "B99A555F84A74802B472DD05D20762569D57BBB8C161BD17F656C970C3E6EFF3",
+        "productionSha256": "13494D051928BF7803D910510A02C038A3EB03519DC69E73B4D4CFC96E92D10F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearSymmetric",
+        "scratchSha256": "E54F12A3081F52544DE9D508ED151EC6A7AEF45776129771B67EC763F7989915",
+        "productionSha256": "3DD86D7E349688B70869C8862C17122D90754B5C18D2112A29857FF366172391",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAbsoluteSymmetricResidual",
+        "scratchSha256": "7D4C31A1B4A390AD85F3186872CC4E09C241615D29176DE5DEB5F689EAA1C920",
+        "productionSha256": "2D5D6CE15C3C5A835160BFF5471145DC775361685A80DA376975C2F825831D37",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceSubfieldKernelIrreducible",
+        "scratchSha256": "66E5E3F9C5DB9600217BB4B55E214E7B5FD9F4FAF12AD327DD409D4AB6B12477",
+        "productionSha256": "DB985C4E2D2F9A24E02A45177A5A1C86DA5C4AFD6DC9650E9EDC703DEB087672",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearKernelSymmetric",
+        "scratchSha256": "F2DF770FE1766BD0B4D36665DA85C061CD4F14CA316E7F898FC338C2101BB3C0",
+        "productionSha256": "230316F2828864AC794367ACB91104BCFF1A81CE530CDB424C32340A0800EA3B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCyclotomicSymmetricResidual",
+        "scratchSha256": "8A75D0E6E4CA16145E79AB758A466C77355C8879B1E1592A3429C5D18BE601FE",
+        "productionSha256": "0EA632AB3B4C63ACDF0756DEA8695F558712DF2D8EAE050C83A58571150F351F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearAbsoluteGalois",
+        "scratchSha256": "A168949A46010F3074DD154DAE5377267CBABAC319BEE2A8DF326D8B8FDAC9B5",
+        "productionSha256": "56BF4463D4014A64D1DDA28F35662F63CF13FE8D3A9B00B112ED66E46DE62AA5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAbsoluteCyclotomicResidual",
+        "scratchSha256": "8FB1E545FF588E6D4E947DB7E29D86A2CCB17A7AAEDEA21B3DB68F774A1AE4A0",
+        "productionSha256": "98FFE3833BE3BDD3BACC5B6CFA99E6566D87A8E35A8FE060671F8D37FEF7148A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualConjugateIrreducible",
+        "scratchSha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB",
+        "productionSha256": "3C8F05D66794125CCDEE90BAC366C17E3D5A6FF3DD688AF996DD47C4193066CB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceConjugateSymmetricSpanning",
+        "scratchSha256": "22CE25469837F899355071B26F795D7735CDF770BAD668077742AF883A2759A5",
+        "productionSha256": "E0D0BDF97BD84D870B7323B0BC668BB96EED43A53C930617D0AF1118DB56A468",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearOriginalSpanning",
+        "scratchSha256": "D2A1A014618250F32BA1074116604439FAD72B6D08A15CF5B49ABEEE8E5D8401",
+        "productionSha256": "44DEF7DD91495E88B54DD7EB74FE8A3220C6F364ADDCF9976817F4424F58B3DC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalSymmetricSpanningProperty",
+        "scratchSha256": "A530A4D89F1A7819066F2BB606695725CCF1190347E7C4FAD5AB8BF86952A017",
+        "productionSha256": "B6A5C38EF46B56AEBC2CCEBB685BD583CE8BA26842B260144125AEA1A6FA2A8C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSymmetricKernelSpanning",
+        "scratchSha256": "39E4E60FA2315BA45DF58D1F05CB9C8F3AEE90C2165C32843B08619DF2092CFD",
+        "productionSha256": "9690F02C8EA793CDF724A54BD081767DB9E062FB05121A62A6691E7FECE9A043",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceSpanningIrreducibility",
+        "scratchSha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D",
+        "productionSha256": "C2370F435F683424CB636A69ECD24C5607211524FFADC83845DF732015F6FA6D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceSpanningCoefficientExtension",
+        "scratchSha256": "0CF7F178F403BF3509DC73413398E0EFBA5D16673BFAE976B0B6D38A0B88F855",
+        "productionSha256": "9EB96D96B5C6C09C8BC8DB8D262BAE8AFC22AF4AE3A369E0EE55BBCBC0D141F7",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalSymmetricAbsolute",
+        "scratchSha256": "337BD890AF644518ED0A61B57E9703FA43495FFF83D803DB282E8D5F3119C8D0",
+        "productionSha256": "142B97A5C31F1E597D5DAD969CC5D6D680747E528B4757CC243AC4F35AE699B4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueAbsoluteSymmetric",
+        "scratchSha256": "3202D2B167967E84BF53512F98946ABA12F85EC68E9F5E429BF04BD4C4C571CB",
+        "productionSha256": "4D8F66BB66E9664B5C4F1A1BADFE5D7E088E1A36D427A8E40901FC7E9302CA68",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalSymmetricAdjoint",
+        "scratchSha256": "E3D9D11EC88FEB2A5DC3594A58CE05F7B934394BD6D3B24DE942750478D74FFC",
+        "productionSha256": "C088E34134B52FA7042B86014A1821B8D8F7ACBF43150433975E67F4A8472D42",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSymmetricAdjointVanishing",
+        "scratchSha256": "E318E77899A299A51BD0A2C0698EB7CA9BA4B116F7CD750703915F865A22B1DE",
+        "productionSha256": "A991AE3C856FC8359DA6548878AF018303A97F9B620321716109223D2FCDB408",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearOriginalScalar",
+        "scratchSha256": "2017957E5C2AB5674E9F94EDC7F9841B0767163F3CC4B798362B6B25759EB2AF",
+        "productionSha256": "92B9D0BF80EDE942966559C9CF499DD96A3A80C943D1B1D81EB0B09173FAA1B8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearTwistedKernel",
+        "scratchSha256": "190D06C4420AE909E48A0586CE9308405D46D5E12BB1895B6A2FB6618F0FBD11",
+        "productionSha256": "9D9EB82636163A2AA8EF801761B5D2B4A4040AB33DA0D05B690AF2621B15CFA1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalTwistedDetectionProperty",
+        "scratchSha256": "D20EBDE0A64B7D6023598E2C2AC44D7CEBB31C85137BE8397B074EF140B5C9F4",
+        "productionSha256": "2A63FCECDB5E0032B6F9307B88162AEE544CC2B50BB853B74DF305C379227DBF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalTwistedTopology",
+        "scratchSha256": "D2249F10407DE39CCEEBA841A37A7CB68506C4F783E41F89D657BB6207FBBFFC",
+        "productionSha256": "74A2B62EAB31508F94BA82C5C14A8163FEE1D8830E15B84C0F7334DCD097A207",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneTwistedKernelDetection",
+        "scratchSha256": "BEF050403F68319095E86E14F63A7E6CC3203728DA64F89F7D71F670D11F8299",
+        "productionSha256": "852CF72FEE46B6706A21F614E50F2AF037C8747C42D2E8F6DE0165BD875B9D7F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceArithmeticCyclotomicSquare",
+        "scratchSha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A",
+        "productionSha256": "708414879AC6EE0221F6030040182325C7630DADB4FAA165457106858E9A9F7A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalArithmeticTwistedDetection",
+        "scratchSha256": "3974E325BCCD8347744C5086C1C449B4BA459437A1C281AD786F2B2926165E43",
+        "productionSha256": "3CB58D73CDDAD02F3BFC436F5C62574A669583C58E07E801DE46CE5054CDD939",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneArithmeticTwistedDetection",
+        "scratchSha256": "F42BBDE3FE44E7274E459B94B2DA93523550BDA014990A9DFDEB8D1A0549561B",
+        "productionSha256": "F32ED7DD938CFFEADB2356F3EA911194E64AF7801331B281C6A54860722A7E6A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteLinearOriginalConsequences",
+        "scratchSha256": "CA50109AE0FF3792D28F79D5F91FA3F6473C31696CBE1222B412CC5E3A927C4B",
+        "productionSha256": "ECC009B18C02E32381BAA4DE724BBDF61EA67B17385C199EEF7D245A72F203C6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSymmetricResidualCohomology",
+        "scratchSha256": "FCDC290547728B8A9A4171A131D43B029B57859917D0B9E35E166DA06CE53736",
+        "productionSha256": "756CDB18BEE00BCF165343BC65DB6024EE3187776E4EA05F27D52BC1DDCBBFB0",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

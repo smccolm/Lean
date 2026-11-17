@@ -1,0 +1,390 @@
+{
+  "status": "Scratch PASS: the same actual modular-form integral/residual pair, original integral multiplier and genuine CM field have vanishing full polarized adjoint invariants and exact native cotangent dimension, in the finite-subfield image branch and range 2*n < p-1. The actual native complete local Noetherian deformation ring and every prior conclusion are retained. The small-image alternative remains explicit. Production reconciliation and assembled verification remain pending.",
+  "modules": 9,
+  "publicQueries": 13,
+  "publicTheorems": 9,
+  "publicConstructions": 4,
+  "exhaustiveTheorems": 73,
+  "otherDeclarations": 17,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 257,
+  "typeValueFingerprints": 90,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-integral-cm-scratch-20261117-2511/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions.lean.txt",
+      "sha256": "7AEC7FB6DF1A34768EB5225BFBCFC4A7825CB64A5C060A46860C1534F70AFCF0"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions2515a.lean.txt",
+      "sha256": "2A0ABE68C24F1B5344CA9787AE11611D1097FFADC12B4F2E389E333F70E75F46"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions2515b.lean.txt",
+      "sha256": "2634B2E2B458DCAB0314C08D5D9C1722C36EA01161D27D59404D69FDBDF13A8B"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions2515c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions2515c.lean.txt",
+      "sha256": "8403859962A9D42529A1941C356E83D0425F678936E31E1C626403750CA8090F"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceGammaOneOriginalCMDimensions2515c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMAdjointVanishing.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMAdjointVanishing.lean.txt",
+      "sha256": "3FD830A582B2CD7F57EDA60B3F1D8F52CC8E1FDF3C175C5A61A0436C9FA40494"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMAdjointVanishing.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMAdjointVanishing2502a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMAdjointVanishing2502a.lean.txt",
+      "sha256": "3FD830A582B2CD7F57EDA60B3F1D8F52CC8E1FDF3C175C5A61A0436C9FA40494"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMAdjointVanishing2502a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangent.lean.txt",
+      "sha256": "74FA39281CBD2D7714EADDA852E52399D9A24B08D1B4105FFFED141054E8A0A0"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangent2505a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangent2505a.lean.txt",
+      "sha256": "4C3F9B17AC5ABAA97236D2FA8377ED64C10FC61C6EA3A4A77BD6EAB2325F96D2"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangent2505a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangentFormula.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangentFormula.lean.txt",
+      "sha256": "0A7532280958E0E9AD5BB1D53EBC58E1FBB2D23034D3AC60C75E49C2199AE5E3"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangentFormula.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangentFormula2508a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangentFormula2508a.lean.txt",
+      "sha256": "7C1134EC85BAFBBCE651C649E4EA8A9C24EEBDCC6CEB8BC069FE2396D937C071"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMCotangentFormula2508a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsAudit1.lean.txt",
+      "sha256": "9A41173560DDE0E87ED041C536229B2D0C3B70CABEF25A29225B55B92D6A480B"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsAudit1.log",
+      "sha256": "63AD7C91AEC12F4B402B9286B473E2C3C730464E9A9815856BC3006ABDAE8D52"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsDeclarations2518.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsDeclarations2518.lean.txt",
+      "sha256": "4B78DA397B555B0FDB383A14E829282BEB3E5C54C388E7AFD811977B925FA31D"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsDeclarations2518.log",
+      "sha256": "6E46E7130D43D1EF3B4DD6E62D3A03E3784881D1E54B11D9F87C04C631435DFA"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsDependencyAudit1.lean.txt",
+      "sha256": "85AA300A254077F812220B740CF37569B4E282302261BF5C0006768E5856C558"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsDependencyAudit1.log",
+      "sha256": "3B5BCDFD14276606FFE261E9170ABFC2FA27B45112AC25FEF24041CE5C7B4224"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsProductionSemantic2519.lean.txt",
+      "sha256": "BB8B8B4C8C312F600C0C9B620FA1F99C441402F17BDF545AD74BB7438814479D"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsScratchSemantic2519.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsScratchSemantic2519.lean.txt",
+      "sha256": "14586BF878E1FD65E7EF3520439941691C61B934B1ED255E316EBD5B9291DC13"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalCMDimensionsScratchSemantic2519.log",
+      "sha256": "BCD0D623686D245B6C26AAE4AA9DC14598A8BC5F4AD70879A1E8EC2806DD83C0"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly.lean.txt",
+      "sha256": "D5069AC24B15E53758845FB6135617EDBAAA658A4497120AD26358EDA6269EC5"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly2514a.lean.txt",
+      "sha256": "370540D693BFCF9D68423243E206DFCDB45414C1898C96F6DCEB183BD0DE758E"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly2514b.lean.txt",
+      "sha256": "C8E51F8DD4219B883EA4FD02DC3203137C771646FCD6E7612B5D78FA3345333C"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly2514c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly2514c.lean.txt",
+      "sha256": "DB5FCE9FBE5F7180FF0066F595620384953D1C33D8556D98F90508F80F2B42EB"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionAssembly2514c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionData.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionData.lean.txt",
+      "sha256": "079C6B9E47E1AAF227F6FB73689C562FF89985FAA04BC7EF180AB2D23ADDEF0E"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionData.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionData2509a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionData2509a.lean.txt",
+      "sha256": "B11688FFB7C1BDC962B101B8EAE7302F90EC9DA76DFDAB8C45BFE846E9DD66E1"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionData2509a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField.lean.txt",
+      "sha256": "E2EB9853A2CE08056B9B08C1EB64A75D9284D9DE743F29676E338F245A0ABD9F"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512a.lean.txt",
+      "sha256": "390B739FB5C8AC8CE932BDE41880A1D4A577E778437F06A5F0EC408FE8E0E2D5"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512a.log",
+      "sha256": "3C53AE71E8F757E70433DEBEAFFE364CA633DD698B9231BAA6A7E064311B37DB"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512b.lean.txt",
+      "sha256": "D6F620F76EBCDF4BB7FD5EF72A10B7D15E7C545BD1D8BB017C09DFB0A60866F7"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512c.lean.txt",
+      "sha256": "84E7481FAB8578036E599CE4D58253A8D82C28F5E310D724A325527C6D5907C8"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionField2512c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty.lean.txt",
+      "sha256": "A1EE08B1E10835DAE4FE7E94955CA5C2F7399A09CF9AD8244B5E3FFC98DA1BAE"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty2513a.lean.txt",
+      "sha256": "E9B76A036D0E70B99C19850E9EEC52997D46AFA38219ACF99B1640A886D7DE7B"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty2513b.lean.txt",
+      "sha256": "78CAAF4A6376EB2C82BA364FA840F748B9EBF747D6AF81AEFE82284B1DF2A747"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty2513c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty2513c.lean.txt",
+      "sha256": "9A05DE45B39A8C44CE27EA8250D4BBE355E02A1D1C294EE8F5F04BC4B3BB306D"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalIntegralCMDimensionProperty2513c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds.lean.txt",
+      "sha256": "992049C5A00CBE9B9210006D96CBA2305E96E45CC75917FC514D3D677A46D252"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds2516a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds2516a.lean.txt",
+      "sha256": "C4E31E1CF7C2048C02B13CBA7FE1693C08DD14691BAC3E54186C61D4AE4EB52E"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds2516a.log",
+      "sha256": "46D7918F7BC8D6DE045F45A73411E0C51706E4BEE6821EDB393BD176BB69EE8B"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds2516b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds2516b.lean.txt",
+      "sha256": "992049C5A00CBE9B9210006D96CBA2305E96E45CC75917FC514D3D677A46D252"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/SourceOriginalSupportBottomBounds2516b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/archive_original_cm_dimensions_scratch_2521.py",
+      "sha256": "A8FA96EFF0A8D9B0C1CADBE1BA22C42C19D3BF2845146BD44828FF94FF51ABCE"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/build_original_cm_dimension_bounds_split_2516.ps1",
+      "sha256": "80C0F64DF0325A1E081E2E234E99D8F31CDC1B2ED8AB96DF1734BC76A17AFE73"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/build_original_cm_dimension_composite_2516.ps1",
+      "sha256": "7D7B4D73987870DF8E3632BC7DB3345E486AB657FEE6BEB4E48D96EB8F550CDC"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/build_original_cm_dimensions_2518.ps1",
+      "sha256": "590E02A85E7549D6053894F75CF1CD1C6C336BD2DF26C39FDC2ED4FE83B97F03"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/build_original_integral_cm_dimensions_2514.ps1",
+      "sha256": "99948E7A4DC036AC91A8DB1F433979B869286F79BF113FB496C87579C3A72925"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/generate_original_cm_dimensions_audits_2518.py",
+      "sha256": "55CB029E735B87E1D85EF3D9FECD42299DDC060A7C2C4487D8ACA7A98FFB04DA"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/original-cm-adjoint-reuse-review-2502.json",
+      "sha256": "8DC3EC0A4B266DF350D7DC15D7F548610FA4A3B04922EF8F9D343AF0F950FAA5"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/original-cm-dimensions-reuse-review-2518.json",
+      "sha256": "86B0EDDFA251700BD7F986773C194D99E5C22E8CE6A55A08F2F49FF952B6CA17"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/record_original_cm_dimensions_scope_2520.py",
+      "sha256": "A4E43A50D523DA5BF574E17C5546EEA7535456DCAF54DC7EAD8BF83F2C587FD3"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/source-original-cm-dimensions-1-scratch-receipt.json",
+      "sha256": "F7ED5A5962E49A769F75A263C3AA05F60DCE2395F6D19014300C81C0BE33522D"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/source-original-cm-dimensions-audit-config-2518.json",
+      "sha256": "02CAB464AE70635E10F98CA3E815D2B164255250BE1A43145751F4B7D1553C5A"
+    },
+    {
+      "path": "Tools/original-cm-dimensions-scratch-20261117-2521/source-original-cm-dimensions-scratch-summary-2520.json",
+      "sha256": "1F0B39B6359A87C2CCFC0EE3585F45F42A8B71D792D9FBF2926E75A17E5D5AAC"
+    }
+  ]
+}

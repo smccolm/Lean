@@ -1,0 +1,1583 @@
+{
+  "date": "17 November 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalDistinctEigenbasis",
+    "Dubon2026.SourceOriginalDiagonalConjugacy",
+    "Dubon2026.SourceOriginalMappedDistinctRoots",
+    "Dubon2026.SourcePrimeSubfieldSL2Image",
+    "Dubon2026.SourceOriginalMappedTorusConjugacy",
+    "Dubon2026.SourceOriginalSymmetricTorusRoots",
+    "Dubon2026.SourceOriginalSymmetricTorusConjugacy",
+    "Dubon2026.SourceFiniteLinearOriginalTorusDetection",
+    "Dubon2026.SourceOriginalArithmeticTorusCocycle",
+    "Dubon2026.SourceOriginalTorusPrimeLocalProperties",
+    "Dubon2026.SourceOriginalTorusPrimePredicates",
+    "Dubon2026.SourceOriginalTorusDetectionPredicate",
+    "Dubon2026.SourceOriginalPrimeTorusDimension",
+    "Dubon2026.SourceOriginalAffineTorusDimension",
+    "Dubon2026.SourceOriginalTorusDetectionAssembly",
+    "Dubon2026.SourceOriginalTorusPrimeDimensions",
+    "Dubon2026.SourceOriginalTorusPrimeAssembly",
+    "Dubon2026.SourceOriginalArithmeticTorusPrimes",
+    "Dubon2026.SourceOriginalArithmeticTorusPrimeProperty",
+    "Dubon2026.SourceGammaOneOriginalTorusPrimes",
+    "Dubon2026.SourceOriginalTorusClassPredicates",
+    "Dubon2026.SourceOriginalTorusCocycleClass",
+    "Dubon2026.SourceOriginalTorusClassPrimes",
+    "Dubon2026.SourceOriginalTorusFamilyProperty",
+    "Dubon2026.SourceOriginalTorusDetectingFamily",
+    "Dubon2026.SourceOriginalArithmeticTorusFamilies",
+    "Dubon2026.SourceGammaOneOriginalTorusFamilies",
+    "Dubon2026.SourceOriginalCMKernelConsequences",
+    "Dubon2026.SourceOriginalRationalBottomRestriction",
+    "Dubon2026.SourceOriginalRationalCMProperty",
+    "Dubon2026.SourceGammaOneOriginalCMConsequences",
+    "Dubon2026.SourceOriginalRationalBottomOdd",
+    "Dubon2026.SourceOriginalRationalCMPolarized",
+    "Dubon2026.SourceOriginalRationalCMPolarizationProperty",
+    "Dubon2026.SourceGammaOneOriginalCMPolarized",
+    "Dubon2026.SourceOriginalCMQuadraticField",
+    "Dubon2026.SourceOriginalSupportCyclotomic",
+    "Dubon2026.SourceOriginalSupportResidual",
+    "Dubon2026.SourceOriginalConstructedCMProperty",
+    "Dubon2026.SourceOriginalConstructedCMAssembly",
+    "Dubon2026.SourceGammaOneOriginalConstructedCM",
+    "Dubon2026.SourceOriginalIntegralOdd",
+    "Dubon2026.SourceOriginalIntegralCMSimilitude",
+    "Dubon2026.SourceOriginalIntegralCMDeformationRing",
+    "Dubon2026.SourceOriginalIntegralCMRingData",
+    "Dubon2026.SourceOriginalSupportBottomOdd",
+    "Dubon2026.SourceOriginalIntegralCMSupportField",
+    "Dubon2026.SourceOriginalIntegralCMProperty",
+    "Dubon2026.SourceOriginalIntegralCMAssembly",
+    "Dubon2026.SourceGammaOneOriginalIntegralCM",
+    "Dubon2026.SourceOriginalCMAdjointVanishing",
+    "Dubon2026.SourceOriginalCMCotangent",
+    "Dubon2026.SourceOriginalCMCotangentFormula",
+    "Dubon2026.SourceOriginalIntegralCMDimensionData",
+    "Dubon2026.SourceOriginalSupportBottomBounds",
+    "Dubon2026.SourceOriginalIntegralCMDimensionField",
+    "Dubon2026.SourceOriginalIntegralCMDimensionProperty",
+    "Dubon2026.SourceOriginalIntegralCMDimensionAssembly",
+    "Dubon2026.SourceGammaOneOriginalCMDimensions"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original residual and integral deformation inputs -> split-torus auxiliary primes with exact local dimension, a genuine constructed CM field, original integral polarized deformation rings, full-adjoint H0 vanishing and exact cotangent dimension.",
+  "discharged": "For the same actual primitive cusp form of weight at least two and prime p greater than three, split-torus detecting primes have original unramified trace-zero adjoint H1 dimension n for 2*n < p-1. Bounded jointly detecting families retain this property at every selected prime. The actual integral/residual pair constructs a genuine quadratic totally complex field inside its enlarged unramified extension. Its literal support and bottom restrictions carry native symmetric polarizations and complete local Noetherian deformation rings over the original integral coefficient ring. The multiplier is explicitly the determinant character of that original integral pullback with the CM sign correction; its residual comparison and oddness are proved. On the original finite linear subfield branch, the same polarized full adjoint has zero global invariants and its actual ring has cotangent dimension equal to the full-adjoint H1 dimension plus (n+1)^2, for 2*n < p-1. All prior arithmetic data and conclusions concern the same original representations.",
+  "boundary": "The six small-projective-image alternatives remain explicit. Their arithmetic exclusion, required local deformation conditions, CM disjointness where required, automorphy and literal higher symmetric-power continuation remain open. These are unrestricted polarized deformation rings; no crystalline or other source local condition is claimed. The image subfield need not equal the original residue field. The full source domain and proof contract are unchanged. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "status": "The 9,842-module production aggregate and focused original torus primes and CM deformation inputs audit pass with zero diagnostics. Four declaration-value audits verify 189, 223, 242 and 257 required dependency checks, respectively. The six small-projective-image alternatives remain explicit. Their arithmetic exclusion, required local deformation conditions, CM disjointness where required, automorphy and literal higher symmetric-power continuation remain open. These are unrestricted polarized deformation rings; no crystalline or other source local condition is claimed. The image subfield need not equal the original residue field. The full source domain and proof contract are unchanged. Acceptance remains 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-11-17T16:51:54.105129+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceOriginalDistinctEigenbasis",
+        "SourceOriginalDiagonalConjugacy",
+        "SourceOriginalMappedDistinctRoots",
+        "SourcePrimeSubfieldSL2Image",
+        "SourceOriginalMappedTorusConjugacy",
+        "SourceOriginalSymmetricTorusRoots",
+        "SourceOriginalSymmetricTorusConjugacy",
+        "SourceFiniteLinearOriginalTorusDetection",
+        "SourceOriginalArithmeticTorusCocycle",
+        "SourceOriginalTorusPrimeLocalProperties",
+        "SourceOriginalTorusPrimePredicates",
+        "SourceOriginalTorusDetectionPredicate",
+        "SourceOriginalPrimeTorusDimension",
+        "SourceOriginalAffineTorusDimension",
+        "SourceOriginalTorusDetectionAssembly",
+        "SourceOriginalTorusPrimeDimensions",
+        "SourceOriginalTorusPrimeAssembly",
+        "SourceOriginalArithmeticTorusPrimes",
+        "SourceOriginalArithmeticTorusPrimeProperty",
+        "SourceGammaOneOriginalTorusPrimes",
+        "SourceOriginalTorusClassPredicates",
+        "SourceOriginalTorusCocycleClass",
+        "SourceOriginalTorusClassPrimes",
+        "SourceOriginalTorusFamilyProperty",
+        "SourceOriginalTorusDetectingFamily",
+        "SourceOriginalArithmeticTorusFamilies",
+        "SourceGammaOneOriginalTorusFamilies"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.lean",
+          "sha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15",
+          "oleanSha256": "8AE1BE2E3FA36321524D31BC8D4E8A881652CA54B8E5581ACA789F673A846272",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.lean",
+          "sha256": "C22B5A6D3ED47DFA82D4963ECBE3C6D7FD6BCFED4AADF91C7B4FD9106768F6BE",
+          "oleanSha256": "864768A0C5B29B26FF7EB35860E6006337E6537B72210EAE1CCC7C5EAEBA4A64",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.lean",
+          "sha256": "46EB7B08ECB71B189CED3223FB9C773947A8F0B1AEBCB16274A75A6517C585B1",
+          "oleanSha256": "F837A5D67AABC57DC33C29A0943D668CB153099B50BAECB1AE75B13F4369BC9F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.lean",
+          "sha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904",
+          "oleanSha256": "CA082751ECC0AA017734760D02B0FF87A1F1CA8696E5F42DD7FE324697214AF2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.lean",
+          "sha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D",
+          "oleanSha256": "5951F7BA45141DB80674EFEF03DA3664931933189A6F5C00B6A39C5104DB41E0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.lean",
+          "sha256": "6DF9473C4DA8865B08A1F8992BD032482D918D598E0109C3C3590FAEA66F6688",
+          "oleanSha256": "8DDCBFDCD2E9772D258AAC146B3C0E9E94C2775C6B629EED8FA46A5DC34039C1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.lean",
+          "sha256": "8312937EB209EDA5A3BC70E7C5F6AE5567548093683409F4C0B43A3DBF168303",
+          "oleanSha256": "A4EFE6B3D40E763B0E33B0B048EE1494580811C974C31DDDAC905879C485D582",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.lean",
+          "sha256": "8466A6DF0563C2B37C6EEEDD04494BF231A216BA062ECF4FD219723841F6E182",
+          "oleanSha256": "37AE0420150492879599DA37F58DCB8A5242CC2219786624399A04225BBCDD82",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.lean",
+          "sha256": "43ADE52F18FBF7330B4AF2AFBEAF6D349AE1EC53C3AC33FDBA836E59435E0E52",
+          "oleanSha256": "59CE14E71C6071CAEBB09EE994EFD3210F6B8D7EC0B497E7EB82BD221C266D5F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.lean",
+          "sha256": "59339DD5767C0C1CCB74DF6CD6C083F008475BA8D87B15B385DF376F1567300C",
+          "oleanSha256": "7202DEDD4D6DF9ECEFAEF3025893302414FC1DEDED6579D16B6E9F1C234AF5D1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.lean",
+          "sha256": "F9F1BB6E48B9C3A20A980990FC0495E48B1A54ABCC81BBFC2A92FDB8D3BA93C2",
+          "oleanSha256": "8D62C0848EDB7C65FDEAD98CCF8CD445E57D2EB9CA5D5A43ECFB3823A9DA2724",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.lean",
+          "sha256": "AA4FE67E9BE7DCB8918198BE7906C811AB1A0737D701C17BFE672A8E25EBCF1A",
+          "oleanSha256": "13FACE35A7004C0FA8A5373CECC41558DE2709586BB9B7384BBA56953B217D0D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.lean",
+          "sha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C",
+          "oleanSha256": "866BD92AFED4B003967D33B5E3DA5A4959FE599BFA51073D276A9EE983D6A76B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.lean",
+          "sha256": "6254094476437A783AAA244CFFD3A4AC06C6E38DBB6B4CC2752E2DA95F73FC6A",
+          "oleanSha256": "C223AD9C482D1DCAC625E11763B9D124768FD0473226CB7F8D24F0AE169A96A7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.lean",
+          "sha256": "3DD05E45D90646DBBF0FC886F2EE6F1E48B2618A8A0E02B2F509ABF41FD473A4",
+          "oleanSha256": "9DC1AE6C8876FDAFFD54CA61841DA7A6E7DE5A45245614F2C75392A9FD87B01D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.lean",
+          "sha256": "4AF51E18C47A207CCFDE86B10D4D4245D77F7A2200038024900BDA776B6D34FF",
+          "oleanSha256": "768E596C7B03BF4D0A9DE9AE7210B9C680F053A98DD813000BBCA049AAF892DF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.lean",
+          "sha256": "4455832D22EDBB7CB331B3A5E1FCE289E0CC0CE88FC1999F9DBFCB40FAE19F93",
+          "oleanSha256": "2E2FD34ABD5DFB5445E31BA800E867E711F0A9776CF8B568DE5E3EE702980D59",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.lean",
+          "sha256": "562D0D97F5823D7FF34FE8F8D7ADA3CAF804F9D9041887C7444CA50DE903A8C0",
+          "oleanSha256": "FBF847206C68284CC50756DEEFBCE1DFA08FD78FA4C08BCF7413F00FE35D718D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.lean",
+          "sha256": "465F3B902C59FF34961E8B19E11EF6AAA9EF63A0B3657585AAE47A62D9434102",
+          "oleanSha256": "F9CBBFEBA5B93F7ECB130B8B9A0BD940DF338DA4AE1D734C3E2A787A03D3DCBA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.lean",
+          "sha256": "A06A42208B66DE7944764BB718DB50B3C4BF12795525FE5600819E666827FF13",
+          "oleanSha256": "9F1996CF5E47B6B3FF5EA2528CAD422FB6C1A6664324A60CC6066AC942524A1C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.lean",
+          "sha256": "FB1CD63209CF6AC71BFDE4741B552D2C414D90A551766F859F4A4FBDC69B4874",
+          "oleanSha256": "BD031D894045B406CA38F4DD924540DE2DE4315D9658DBBBAB6D7C923E5C432F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.lean",
+          "sha256": "F52324376547C7A0EB6931EBE661E9CDD177D331C035D64DDFB1BB97D20F800D",
+          "oleanSha256": "5B2B26F7B6F7552B3AD87B5AEDF6F03802D7A0D0DE672C4C58A40B351D08B9B9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.lean",
+          "sha256": "C0A7A6F66BAA5EE92A42A453829BB0A53BDC7031FC936C9418E13E6D72B5C53A",
+          "oleanSha256": "C3D892B49FD23AA31299879D6589890B0BAAF1046E912CEC82E51772E9075BB2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.lean",
+          "sha256": "9CB0DBD0883BC4FC26D456F49581A29DA94B8F2573C70FB8934CDEBA3D9B924E",
+          "oleanSha256": "8ECD75B086B6006157FDC1083C2516A4554A75941941503CB854520F216A9938",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.lean",
+          "sha256": "D40E876A0A524961D416DA83C4D14FF99F9F90F6BDE196EE83092BA9C5907C75",
+          "oleanSha256": "F4555E504359CD38AE8607B51AA30B6466400F1F087D7C4FAACC4D22B6D3724E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.lean",
+          "sha256": "55C1BF00613B62A5E3A15BAB7F2A7376E8D5B96BDBC8D362E3318E98EF6EB080",
+          "oleanSha256": "CFBAC01696A450A8A319D3547AB8A1A368A909D038D3260361B5B8CDE4C4CE1E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.lean",
+          "sha256": "0331216E30EFD9C08A405FED3AF7F8B1EEACF22BEFB902EEB28B9F1469F37888",
+          "oleanSha256": "79BD0EB20ACBFF335A938FADEC85556F769A4739787B06C7C4266698629E3932",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.matrix_exists_original_eigenbasis_of_distinct_roots",
+        "Dubon2026.matrix_exists_original_diagonal_conjugator_of_eigenbasis",
+        "Dubon2026.matrix_exists_original_diagonal_conjugator_of_distinct_roots",
+        "Dubon2026.original_characteristic_roots_of_mapped_diagonal",
+        "Dubon2026.SourceDickson.prime_subfield_sl2_image_le",
+        "Dubon2026.original_mapped_torus_conjugacy_of_subfield_lift",
+        "Dubon2026.original_symmetric_characteristic_roots_of_mapped_torus",
+        "Dubon2026.original_symmetric_torus_conjugacy_of_mapped_torus",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_torus_kernel_detection",
+        "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_torus_root_detection",
+        "Dubon2026.OriginalTorusPrimeWitness",
+        "Dubon2026.OriginalPrimeAdjointDimension",
+        "Dubon2026.HasArithmeticTorusRootDetection",
+        "Dubon2026.HasArithmeticTorusDimensionalPrimes",
+        "Dubon2026.HasArithmeticTorusDetectingPrimes",
+        "Dubon2026.rationalPrime_original_symmetric_unramified_finrank",
+        "Dubon2026.rationalPrime_original_affine_torus_unramified_finrank",
+        "Dubon2026.rationalArithmetic_torus_primes_of_root_detection",
+        "Dubon2026.rationalArithmetic_torus_detection_supplies_local_dimensions",
+        "Dubon2026.rationalArithmetic_torus_dimensional_primes_of_root_detection",
+        "Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_torus_primes",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_torus_prime_detection",
+        "Dubon2026.SourceDickson.HasOriginalArithmeticTorusPrimeDetection",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_dimensional_primes",
+        "Dubon2026.RationalArithmeticOriginalTorusAuxiliaryPrime",
+        "Dubon2026.HasArithmeticTorusClassPrimes",
+        "Dubon2026.HasArithmeticTorusCocycleDetection",
+        "Dubon2026.rationalArithmetic_original_torus_cocycle_class_primes",
+        "Dubon2026.rationalArithmetic_original_class_torus_prime",
+        "Dubon2026.HasArithmeticTorusDetectingFamily",
+        "Dubon2026.rationalArithmetic_original_torus_detecting_family",
+        "Dubon2026.SourceDickson.original_torus_prime_detection_gives_finite_families",
+        "Dubon2026.SourceDickson.HasOriginalArithmeticTorusFamilies",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.matrix_exists_original_eigenbasis_of_distinct_roots",
+        "Dubon2026.matrix_exists_original_diagonal_conjugator_of_eigenbasis",
+        "Dubon2026.matrix_exists_original_diagonal_conjugator_of_distinct_roots",
+        "Dubon2026.original_characteristic_roots_of_mapped_diagonal",
+        "Dubon2026.SourceDickson.prime_subfield_sl2_image_le",
+        "Dubon2026.original_mapped_torus_conjugacy_of_subfield_lift",
+        "Dubon2026.original_symmetric_characteristic_roots_of_mapped_torus",
+        "Dubon2026.original_symmetric_torus_conjugacy_of_mapped_torus",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_torus_kernel_detection",
+        "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_torus_root_detection",
+        "Dubon2026.rationalPrime_original_symmetric_unramified_finrank",
+        "Dubon2026.rationalPrime_original_affine_torus_unramified_finrank",
+        "Dubon2026.rationalArithmetic_torus_primes_of_root_detection",
+        "Dubon2026.rationalArithmetic_torus_detection_supplies_local_dimensions",
+        "Dubon2026.rationalArithmetic_torus_dimensional_primes_of_root_detection",
+        "Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_torus_primes",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_torus_prime_detection",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_dimensional_primes",
+        "Dubon2026.rationalArithmetic_original_torus_cocycle_class_primes",
+        "Dubon2026.rationalArithmetic_original_class_torus_prime",
+        "Dubon2026.rationalArithmetic_original_torus_detecting_family",
+        "Dubon2026.SourceDickson.original_torus_prime_detection_gives_finite_families",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.OriginalTorusPrimeWitness",
+        "Dubon2026.OriginalPrimeAdjointDimension",
+        "Dubon2026.HasArithmeticTorusRootDetection",
+        "Dubon2026.HasArithmeticTorusDimensionalPrimes",
+        "Dubon2026.HasArithmeticTorusDetectingPrimes",
+        "Dubon2026.SourceDickson.HasOriginalArithmeticTorusPrimeDetection",
+        "Dubon2026.RationalArithmeticOriginalTorusAuxiliaryPrime",
+        "Dubon2026.HasArithmeticTorusClassPrimes",
+        "Dubon2026.HasArithmeticTorusCocycleDetection",
+        "Dubon2026.HasArithmeticTorusDetectingFamily",
+        "Dubon2026.SourceDickson.HasOriginalArithmeticTorusFamilies"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusAudit2.log",
+      "logSha256": "6723D1715DD8340C01CB193ACF56F9E3CAE7790B7DA74F15FA252F781615C066",
+      "auditSha256": "4EB9C2F6C9682A7182F76CDEFB41549153970597AC9241789D04D8533333684D",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDeclarations2480.log",
+      "ownershipSha256": "3A0E8C009645CD69E34B47D18EBBAEAE39B49F2A19925F0D5C8597CA25187B36",
+      "exhaustiveTheorems": 112,
+      "exhaustiveOtherDeclarations": 21,
+      "linterScopes": 27,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 189,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDependencyAudit2.log",
+      "dependencyAuditSha256": "B1F9EBF929EB0ED91D30CCF4507ECD1BAF4FD611A9EBAF6220D9F665109FF5F9",
+      "dependencyAuditSourceSha256": "DF4444B687DE1D937848FB01B29259AA51AE505BD582D14B1A6DADE9B82B81BE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-torus-reuse-review-2482.json",
+      "reuseReviewSha256": "E3969BA8F2B9BECCDC794FBFC1385EEC6241D5BB850A3B393514E48C2CA34B20",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original residual deformation inputs -> original split-torus detecting primes with exact local adjoint dimension and bounded detecting families for the same actual modular-form residual representation. All prior original data and the explicit small-image alternative are retained.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "semanticFingerprints": {
+        "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.lean",
+        "sourceSha256": "18AF77CDF66CE28DF6EAF7C146C9D8810470FE3685963331FFA440A86D0AAC36",
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.log",
+        "sha256": "828E8884962A70300DFEAAA2D3499C5B0ACDD804E47E0741FF8CEC1524E84831",
+        "declarations": 133
+      }
+    },
+    {
+      "recordedUTC": "2026-11-17T17:12:23.069588+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceOriginalCMKernelConsequences",
+        "SourceOriginalRationalBottomRestriction",
+        "SourceOriginalRationalCMProperty",
+        "SourceGammaOneOriginalCMConsequences",
+        "SourceOriginalRationalBottomOdd",
+        "SourceOriginalRationalCMPolarized",
+        "SourceOriginalRationalCMPolarizationProperty",
+        "SourceGammaOneOriginalCMPolarized",
+        "SourceOriginalCMQuadraticField",
+        "SourceOriginalSupportCyclotomic",
+        "SourceOriginalSupportResidual",
+        "SourceOriginalConstructedCMProperty",
+        "SourceOriginalConstructedCMAssembly",
+        "SourceGammaOneOriginalConstructedCM"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMKernelConsequences.lean",
+          "sha256": "58EDDE68FB4868FF93BE4BA45E0C228049369FFDD59A1AF2CD50DB04F3916497",
+          "oleanSha256": "6C8880A1F47901EB8B1AD4DA64FCE26F28772A1DCE86E31EC22E2A77DFA1CA4D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMKernelConsequences.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMKernelConsequences.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomRestriction.lean",
+          "sha256": "C8F02BB47CB13D14E17C09D0424385A04CEB5927E2FD02F7DDAE770A13BF7CFF",
+          "oleanSha256": "609197BCA293B927D7E5108F232191C1B4658363E05AE9A68A8E69FF99F89A91",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomRestriction.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomRestriction.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMProperty.lean",
+          "sha256": "262D6431D236759C9B284C85C8B40799D32C185B0D8B96E15AD5897B51FC79EF",
+          "oleanSha256": "F9B7EF5D397563D6E89ED9ECAF58673C734A5F0004124C6BB0DEA73FEA953F8A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMConsequences.lean",
+          "sha256": "FB6E729C99C631FF2A7DF53B277DC7DE4ACB6BD401A457F6FF1A6BB7615FB37B",
+          "oleanSha256": "FB239C03D66A21C7A14B106BF713CF96F60EEA2DE859AC27331BE48A469F7256",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMConsequences.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMConsequences.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomOdd.lean",
+          "sha256": "AA5A8C4CE319E14766A67AF9FEC7253650C0CFDFE920CEC13032C9808B9A5C66",
+          "oleanSha256": "15E5B48501F457138562A3027307E368EB0200C4E85870EFDB7EE8F91FA4AA3B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomOdd.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomOdd.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarized.lean",
+          "sha256": "AC2A42A609FD5E3F5FA472951CE5FB3EB1EFF0B65269C480E366966723F1C78B",
+          "oleanSha256": "8883E0F86BD893F2761246B30CCB47315BDA824E6284FADD1EBF639D459E7D96",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarized.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarized.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarizationProperty.lean",
+          "sha256": "88EE75B4D83BEA3A965113CED94C70D98F3688A8473AB9C2233DA20B358B94F3",
+          "oleanSha256": "2FD593EA6F063A2755AF4A81CC462D39735C5C13F8F6097011C668305E2CCCD9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarizationProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarizationProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMPolarized.lean",
+          "sha256": "B5AA286B5D6C6B1F5D42175136A7356D06C796FF70514C96D1FEE5277B3846AE",
+          "oleanSha256": "E7224AD0260C4DE26B89D0D90BCB6970AD98D47E6BBD431C44F16AD810B0997B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMPolarized.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMPolarized.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMQuadraticField.lean",
+          "sha256": "450564D997D9F2C3D60D74AE5587B1BD6A16F61621F985885D99F9B2F310B294",
+          "oleanSha256": "4E91D4B7B5997D47242D5666BA9D65EA558312E5EF32E9005E21B1DADBCE5A5E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMQuadraticField.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMQuadraticField.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportCyclotomic.lean",
+          "sha256": "E949CF05F4232E7D0FD1466D1DBF413F97178BFC0D6ABEFCF0E606B3F5CA1049",
+          "oleanSha256": "6DF7023C39F90FAE9024F3E9E1B675A477C9D126BF208E4564FCF2F918BB261E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportCyclotomic.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportCyclotomic.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportResidual.lean",
+          "sha256": "414742F0C997F47A58405147A681D10E2EFCCB64476803C862A56760B7D5DA16",
+          "oleanSha256": "87410AFB27FE576523EE4445D97579B07AE8361F74722F4EB3A5388E6574EBCC",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportResidual.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportResidual.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProperty.lean",
+          "sha256": "44D2FBBF19747F33C678571592DDE530C09EF663150875BD72FD15FF425DDBA9",
+          "oleanSha256": "642F09FB0A20E8C01C50D1BCEB13BCB18875776214305D45E4676D9F5945E2C3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAssembly.lean",
+          "sha256": "BA2F52F318AD11C82AE4F655E8E7BD58D3BFA483CF691A99C1D3BA5A2184E563",
+          "oleanSha256": "D2F23E07533B437CA093E658B03486CF9D5E5FF70E03DE51BF48FA714C3375F7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAssembly.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAssembly.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalConstructedCM.lean",
+          "sha256": "A027556D4A9AE1BBB6703EE8EE92671A7E1FC50C80B0102256961E22BC776735",
+          "oleanSha256": "2927F07ED75EF7E42C32899D0BBCCEF629CFE7DF22661D6C09C7B6FE10847C22",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalConstructedCM.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalConstructedCM.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_kernel_consequences",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_matrix_span",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_absolute_irreducible",
+        "Dubon2026.SourceDickson.originalRationalBottomRestriction_surjective",
+        "Dubon2026.SourceDickson.original_finite_linear_bounds_rational_bottom",
+        "Dubon2026.SourceDickson.originalRationalBottomRestriction",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_rational_cm_consequences",
+        "Dubon2026.SourceDickson.HasOriginalRationalCMConsequences",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_kernel_consequences",
+        "Dubon2026.SourceDickson.original_primitive_determinantExponent_odd",
+        "Dubon2026.SourceDickson.original_rational_bottom_odd_of_cyclotomic",
+        "Dubon2026.SourceDickson.original_rational_cm_exists_polarized_symmetric",
+        "Dubon2026.SourceDickson.original_rational_cyclotomic_cm_polarizations",
+        "Dubon2026.SourceDickson.HasOriginalRationalCMPolarizations",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_polarized_symmetric_residual",
+        "Dubon2026.SourceDickson.original_unramified_exists_cm_quadratic_of_four_dvd",
+        "Dubon2026.SourceDickson.original_support_cyclotomic_compatibility",
+        "Dubon2026.SourceDickson.original_support_cyclotomic_unit_compatibility",
+        "Dubon2026.SourceDickson.original_support_residual_determinant",
+        "Dubon2026.SourceDickson.original_support_finite_linear_bounds",
+        "Dubon2026.SourceDickson.HasOriginalConstructedCMResidual",
+        "Dubon2026.SourceDickson.original_cyclotomic_constructed_cm_residual",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_kernel_consequences",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_matrix_span",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_absolute_irreducible",
+        "Dubon2026.SourceDickson.originalRationalBottomRestriction_surjective",
+        "Dubon2026.SourceDickson.original_finite_linear_bounds_rational_bottom",
+        "Dubon2026.SourceDickson.finite_linear_bounds_original_rational_cm_consequences",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_kernel_consequences",
+        "Dubon2026.SourceDickson.original_primitive_determinantExponent_odd",
+        "Dubon2026.SourceDickson.original_rational_bottom_odd_of_cyclotomic",
+        "Dubon2026.SourceDickson.original_rational_cm_exists_polarized_symmetric",
+        "Dubon2026.SourceDickson.original_rational_cyclotomic_cm_polarizations",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_polarized_symmetric_residual",
+        "Dubon2026.SourceDickson.original_unramified_exists_cm_quadratic_of_four_dvd",
+        "Dubon2026.SourceDickson.original_support_cyclotomic_compatibility",
+        "Dubon2026.SourceDickson.original_support_cyclotomic_unit_compatibility",
+        "Dubon2026.SourceDickson.original_support_residual_determinant",
+        "Dubon2026.SourceDickson.original_support_finite_linear_bounds",
+        "Dubon2026.SourceDickson.original_cyclotomic_constructed_cm_residual",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceDickson.originalRationalBottomRestriction",
+        "Dubon2026.SourceDickson.HasOriginalRationalCMConsequences",
+        "Dubon2026.SourceDickson.HasOriginalRationalCMPolarizations",
+        "Dubon2026.SourceDickson.HasOriginalConstructedCMResidual"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAudit1.log",
+      "logSha256": "3099F3884F98D76897CC4C8724E99A89E086498801E095126968D185234591DB",
+      "auditSha256": "97EBD9A5AD5DAA063F73880484DD1E57AB7CBDAB0DBB8A51C276A40167EB90F9",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMDeclarations2491.log",
+      "ownershipSha256": "A6941CE65E15C0C48CE505F447CB72BBA0FAD67E10DC11B31E0A7DD3E70EC32D",
+      "exhaustiveTheorems": 101,
+      "exhaustiveOtherDeclarations": 29,
+      "linterScopes": 14,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 223,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMDependencyAudit1.log",
+      "dependencyAuditSha256": "381A51F5482FE0318210769376EC35E9529E2147AEE0696C5ABF33645A921809",
+      "dependencyAuditSourceSha256": "123DF1D35E16FA66D1E59BA5C083E4D947026956A2D13B9A1D79CA16738090D1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-constructed-cm-reuse-review-2491.json",
+      "reuseReviewSha256": "DF74670E851AC82C7AD032285B87E02BA2C26558D52B8D90B088AA280D10403B",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original residual CM deformation inputs -> actual original-field CM kernel consequences, native polarized symmetric representations and a genuine constructed CM field on enlarged support for the same original modular-form residual representation. All prior original data and the explicit small-image alternative are retained.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "semanticFingerprints": {
+        "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.lean",
+        "sourceSha256": "C2AE2ED8B6897F6EE53FA2B9CAE66C880C6B567ABC698A8AA149D70F76DB541C",
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.log",
+        "sha256": "498710093BDEC90B04027155558F73386E2F0705FF9F997BB9E0010387ED15E0",
+        "declarations": 130
+      }
+    },
+    {
+      "recordedUTC": "2026-11-17T17:39:35.751912+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceOriginalIntegralOdd",
+        "SourceOriginalIntegralCMSimilitude",
+        "SourceOriginalIntegralCMDeformationRing",
+        "SourceOriginalIntegralCMRingData",
+        "SourceOriginalSupportBottomOdd",
+        "SourceOriginalIntegralCMSupportField",
+        "SourceOriginalIntegralCMProperty",
+        "SourceOriginalIntegralCMAssembly",
+        "SourceGammaOneOriginalIntegralCM"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralOdd.lean",
+          "sha256": "2B8543CCA393FEACE0F8708730F023FD8FD215F8F39FD24AAF4F33E738A29B50",
+          "oleanSha256": "A7912EA90CF60295D1D8E7A42640ED5042B632D86F23B479D093B36E2D2E5F06",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralOdd.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralOdd.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMSimilitude.lean",
+          "sha256": "885C9FF283BEE87967D92386D28E20F8FCE1C04CDBD0F494C7CE2719F93A4F68",
+          "oleanSha256": "E9BF8AF8F2F3FFF8F2995AC5EA01D2947D5E61008B06369B16B2823485B5B5A4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMSimilitude.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMSimilitude.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDeformationRing.lean",
+          "sha256": "1B59013467CAE48BCF82BD4C4CC65D5CFFC7F64B3FBBE776E82A0DBBE7EA6DEC",
+          "oleanSha256": "E5A58B62F176F0DD3DE1219F66E334FC0FE3E70FB78E5EA65EA0EAB48741276F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDeformationRing.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDeformationRing.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMRingData.lean",
+          "sha256": "2A9B237F4F3FDF2848AD35442197BB0565E8AA6EA10CA648A016D042C21F75A9",
+          "oleanSha256": "C0D5665A96027A03883AE5A2190D98E3B3C89BF5001A3A7DF8C529FCD9E996C7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMRingData.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMRingData.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomOdd.lean",
+          "sha256": "51216F68D3127AE94AF8FA9AE3DB43D5B79959C3A34FDABCD4CC7D112C5753E5",
+          "oleanSha256": "FF968E7A28BE15E63C4ADD3D525438193CEA35D87AB484DA716BCB66392107D3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomOdd.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomOdd.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMSupportField.lean",
+          "sha256": "9CCDC454BF26D51AD676621A6E1EEF003B78D7885E5309A130FFB6D76ACB8B0A",
+          "oleanSha256": "F75443D300E8191192EBED5B793F99AE9666A8CDAE396BEAA953558CB68B1685",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMSupportField.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMSupportField.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMProperty.lean",
+          "sha256": "64A2896005961C235A38C9BBD651AC63964CF618B5D01A2A531DD74804649DC7",
+          "oleanSha256": "4501F8A99667404EA82B46FB5E2949E41A30550434222DD8627AAC0AED88DD40",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMAssembly.lean",
+          "sha256": "8CC4D6CB40998441F0E8FCB1AEEC054D17D82D788033949B65E1A81CA7DD00E9",
+          "oleanSha256": "07E8ECCF31C8C1A903DD51E3748FBADBC2C29F21E97A06145E42FEB41DD3735A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMAssembly.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMAssembly.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalIntegralCM.lean",
+          "sha256": "D247939CCF2ADC39BBD3618E6C3D68824D266D6D2FABB0B6EAF9004EEEA3972A",
+          "oleanSha256": "0CC96603F3665D5E03534605BE5C0BF53940DFDEA9C3AECF671E7413DB8FDB47",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalIntegralCM.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalIntegralCM.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceDickson.original_integral_residual_determinant_map",
+        "Dubon2026.SourceDickson.original_integral_involution_odd_of_residual",
+        "Dubon2026.SourceDickson.original_integral_cm_similitude_kernel",
+        "Dubon2026.SourceDickson.original_integral_cm_similitude_odd",
+        "Dubon2026.SourceDickson.original_integral_cm_similitude_reduction",
+        "Dubon2026.SourceDickson.originalIntegralCMSymmetricSimilitude",
+        "Dubon2026.SourceDickson.original_integral_cm_exists_deformation_ring",
+        "Dubon2026.SourceDickson.original_integral_cm_symmetric_ring_data",
+        "Dubon2026.SourceDickson.OriginalIntegralCMSymmetricRingData",
+        "Dubon2026.SourceDickson.original_support_bottom_cyclotomic_odd",
+        "Dubon2026.SourceDickson.original_integral_cm_support_field_data",
+        "Dubon2026.SourceDickson.OriginalIntegralCMSupportFieldData",
+        "Dubon2026.SourceDickson.HasOriginalIntegralCMDeformations",
+        "Dubon2026.SourceDickson.original_integral_constructed_cm_deformations",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceDickson.original_integral_residual_determinant_map",
+        "Dubon2026.SourceDickson.original_integral_involution_odd_of_residual",
+        "Dubon2026.SourceDickson.original_integral_cm_similitude_kernel",
+        "Dubon2026.SourceDickson.original_integral_cm_similitude_odd",
+        "Dubon2026.SourceDickson.original_integral_cm_similitude_reduction",
+        "Dubon2026.SourceDickson.original_integral_cm_exists_deformation_ring",
+        "Dubon2026.SourceDickson.original_integral_cm_symmetric_ring_data",
+        "Dubon2026.SourceDickson.original_support_bottom_cyclotomic_odd",
+        "Dubon2026.SourceDickson.original_integral_cm_support_field_data",
+        "Dubon2026.SourceDickson.original_integral_constructed_cm_deformations",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceDickson.originalIntegralCMSymmetricSimilitude",
+        "Dubon2026.SourceDickson.OriginalIntegralCMSymmetricRingData",
+        "Dubon2026.SourceDickson.OriginalIntegralCMSupportFieldData",
+        "Dubon2026.SourceDickson.HasOriginalIntegralCMDeformations"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMAudit1.log",
+      "logSha256": "51CAFDD3AB9B1156D8390E5C3455A86AE246AB3EDB96C370C966F0F8CC8097CD",
+      "auditSha256": "AFDDC6018C438C9F9DE2DA9113C7118C6DE47594D5BDCF1AE929CCB89A0866D9",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDeclarations2506.log",
+      "ownershipSha256": "FB1A94BACDD6B15BA9348A36DD64A47A251EFC4DEF6B275F2D0DDF2F6A9B22E1",
+      "exhaustiveTheorems": 61,
+      "exhaustiveOtherDeclarations": 16,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 242,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDependencyAudit1.log",
+      "dependencyAuditSha256": "1E294CF8AB9F7A0A1B4DE5391C15025F8CEFDE867CE11DA24CF990A0CC5B2E93",
+      "dependencyAuditSourceSha256": "9712ABC21EFE58FBAA6D682D26BF6F207F4A63FF52F17CECE0035898A8F2D9BA",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-integral-cm-reuse-review-2506.json",
+      "reuseReviewSha256": "32A91F834F78A7CDC03EC78417EA7B2BC13BF4658B2B2C16F0BEB7EF57BFB6E3",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original integral CM deformation inputs -> genuine CM field and native complete local Noetherian polarized symmetric deformation rings over the original integral ring, with explicit original multiplier, residual comparison and oddness for the same actual modular-form integral/residual pair. All prior original data and the explicit small-image alternative are retained.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "semanticFingerprints": {
+        "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMScratchSemantic2507.lean",
+        "sourceSha256": "CF946000F4E6196A497CC570F90482B713E82A2299078FB69D8FA83BE77D35DD",
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMScratchSemantic2507.log",
+        "sha256": "58CF139DD00F55458B9D46F6DD40878EB8AB4F97C30E1205CBFD81251F5A87CB",
+        "declarations": 77
+      }
+    },
+    {
+      "recordedUTC": "2026-11-17T17:47:59.632802+00:00",
+      "date": "2026-11-17",
+      "modules": [
+        "SourceOriginalCMAdjointVanishing",
+        "SourceOriginalCMCotangent",
+        "SourceOriginalCMCotangentFormula",
+        "SourceOriginalIntegralCMDimensionData",
+        "SourceOriginalSupportBottomBounds",
+        "SourceOriginalIntegralCMDimensionField",
+        "SourceOriginalIntegralCMDimensionProperty",
+        "SourceOriginalIntegralCMDimensionAssembly",
+        "SourceGammaOneOriginalCMDimensions"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMAdjointVanishing.lean",
+          "sha256": "3FD830A582B2CD7F57EDA60B3F1D8F52CC8E1FDF3C175C5A61A0436C9FA40494",
+          "oleanSha256": "ADE80D49D108095D116153D227E48DA3CF53D90394D5C91EBC105226D82408F1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMAdjointVanishing.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMAdjointVanishing.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangent.lean",
+          "sha256": "74FA39281CBD2D7714EADDA852E52399D9A24B08D1B4105FFFED141054E8A0A0",
+          "oleanSha256": "F18B8D564BA60E5F5DFA54EE1EC16B5BC3F8A492FCF6291BF27157A2CDF66E09",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangent.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangent.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangentFormula.lean",
+          "sha256": "0A7532280958E0E9AD5BB1D53EBC58E1FBB2D23034D3AC60C75E49C2199AE5E3",
+          "oleanSha256": "88FD1AB63A4B4E5B6992551808827751E2949ED5275FD01E311234A46EA4E403",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangentFormula.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangentFormula.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionData.lean",
+          "sha256": "079C6B9E47E1AAF227F6FB73689C562FF89985FAA04BC7EF180AB2D23ADDEF0E",
+          "oleanSha256": "76D22DB4049B3B76425A756B503C4C005B31412D40FA7C742C3B2F4A231AF30C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionData.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionData.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomBounds.lean",
+          "sha256": "992049C5A00CBE9B9210006D96CBA2305E96E45CC75917FC514D3D677A46D252",
+          "oleanSha256": "74428B748997FBACCF9B75D7520F6D2DF5C7E4F56901D742E664DB8DC3AE6DA3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomBounds.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomBounds.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionField.lean",
+          "sha256": "E2EB9853A2CE08056B9B08C1EB64A75D9284D9DE743F29676E338F245A0ABD9F",
+          "oleanSha256": "B225D33510AFFBF3262B742AD4AEE1D23FB1006520EE15EA37E3F7247DDC4B3E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionField.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionField.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionProperty.lean",
+          "sha256": "A1EE08B1E10835DAE4FE7E94955CA5C2F7399A09CF9AD8244B5E3FFC98DA1BAE",
+          "oleanSha256": "150F60799E0EAEEB64EB2F0FAAF305869958A57A8D184C66E7C95C0E670376BE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionProperty.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionProperty.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionAssembly.lean",
+          "sha256": "D5069AC24B15E53758845FB6135617EDBAAA658A4497120AD26358EDA6269EC5",
+          "oleanSha256": "EF6BD985A5659F9D719F6616DC52AE60D5DC6B280B591AC2CAFD880AAEFF6741",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionAssembly.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionAssembly.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMDimensions.lean",
+          "sha256": "7AEC7FB6DF1A34768EB5225BFBCFC4A7825CB64A5C060A46860C1534F70AFCF0",
+          "oleanSha256": "3A453543B4FBC99B09F98704F32ACBAADA8F8E2DFF49C3801625BD559EFCBEFA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMDimensions.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMDimensions.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariant_eq_zero",
+        "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariants_eq_bot",
+        "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_finrank",
+        "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_formula",
+        "Dubon2026.SourceDickson.OriginalCMSymmetricCotangentFormula",
+        "Dubon2026.SourceDickson.original_integral_cm_symmetric_dimension_data",
+        "Dubon2026.SourceDickson.OriginalIntegralCMSymmetricDimensionData",
+        "Dubon2026.SourceDickson.original_support_bottom_finite_linear_bounds",
+        "Dubon2026.SourceDickson.original_integral_cm_dimension_field_data",
+        "Dubon2026.SourceDickson.OriginalIntegralCMDimensionFieldData",
+        "Dubon2026.SourceDickson.HasOriginalIntegralCMDimensions",
+        "Dubon2026.SourceDickson.original_integral_constructed_cm_dimensions",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariant_eq_zero",
+        "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariants_eq_bot",
+        "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_finrank",
+        "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_formula",
+        "Dubon2026.SourceDickson.original_integral_cm_symmetric_dimension_data",
+        "Dubon2026.SourceDickson.original_support_bottom_finite_linear_bounds",
+        "Dubon2026.SourceDickson.original_integral_cm_dimension_field_data",
+        "Dubon2026.SourceDickson.original_integral_constructed_cm_dimensions",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceDickson.OriginalCMSymmetricCotangentFormula",
+        "Dubon2026.SourceDickson.OriginalIntegralCMSymmetricDimensionData",
+        "Dubon2026.SourceDickson.OriginalIntegralCMDimensionFieldData",
+        "Dubon2026.SourceDickson.HasOriginalIntegralCMDimensions"
+      ],
+      "separatelyAxiomChecked": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsAudit1.log",
+      "logSha256": "63AD7C91AEC12F4B402B9286B473E2C3C730464E9A9815856BC3006ABDAE8D52",
+      "auditSha256": "9A41173560DDE0E87ED041C536229B2D0C3B70CABEF25A29225B55B92D6A480B",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsDeclarations2518.log",
+      "ownershipSha256": "6E46E7130D43D1EF3B4DD6E62D3A03E3784881D1E54B11D9F87C04C631435DFA",
+      "exhaustiveTheorems": 73,
+      "exhaustiveOtherDeclarations": 17,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 257,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsDependencyAudit1.log",
+      "dependencyAuditSha256": "3B5BCDFD14276606FFE261E9170ABFC2FA27B45112AC25FEF24041CE5C7B4224",
+      "dependencyAuditSourceSha256": "85AA300A254077F812220B740CF37569B4E282302261BF5C0006768E5856C558",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+      ],
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-cm-dimensions-reuse-review-2518.json",
+      "reuseReviewSha256": "86B0EDDFA251700BD7F986773C194D99E5C22E8CE6A55A08F2F49FF952B6CA17",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original integral CM deformation inputs -> vanishing full polarized adjoint invariants and exact native cotangent dimension for the same original integral multiplier, residual representation and genuine CM field, in the explicit finite-subfield image branch and range 2*n < p-1. All prior original data and the explicit small-image alternative are retained.",
+      "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+      "productionDeclarationRenames": {},
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "semanticFingerprints": {
+        "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.lean",
+        "sourceSha256": "14586BF878E1FD65E7EF3520439941691C61B934B1ED255E316EBD5B9291DC13",
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.log",
+        "sha256": "BCD0D623686D245B6C26AAE4AA9DC14598A8BC5F4AD70879A1E8EC2806DD83C0",
+        "declarations": 90
+      }
+    }
+  ],
+  "reviews": [
+    "Tools/original-torus-reuse-review-2482.json",
+    "Tools/original-constructed-cm-reuse-review-2491.json",
+    "Tools/original-integral-cm-reuse-review-2506.json",
+    "Tools/original-cm-dimensions-reuse-review-2518.json"
+  ],
+  "productionDeclarationRenames": {},
+  "dependencyRouteAssessment": {
+    "path": "Tools/original-cm-inputs-20261117-2528/original-cm-inputs-promotion-route-2528.json",
+    "sha256": "9054A5FA803195D14E952478984A7B834534CF3D22921735CA9DEE22986ED3B5"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/original-cm-inputs-20261117-2528/archive-manifest.json",
+    "sha256": "BBCD0B20D436687D483C418333D7DE09C0022DFA00CAD1F5923FC83F1DB60195",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9842": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDependencyAudit2Production9842.log",
+        "sha256": "B1F9EBF929EB0ED91D30CCF4507ECD1BAF4FD611A9EBAF6220D9F665109FF5F9",
+        "requiredProofValueEdges": 189,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+        ],
+        "sourceSha256": "0941F9EED64A8DF286175A120FA27B9F74EA628CFF78F746E3E08241DC44ABDA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMDependencyAudit1Production9842.log",
+        "sha256": "381A51F5482FE0318210769376EC35E9529E2147AEE0696C5ABF33645A921809",
+        "requiredProofValueEdges": 223,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+        ],
+        "sourceSha256": "255DFD13C1ADF1EDD54177AF866598DA5736F778870A4681297FA2D9E0D46E47"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDependencyAudit1Production9842.log",
+        "sha256": "1E294CF8AB9F7A0A1B4DE5391C15025F8CEFDE867CE11DA24CF990A0CC5B2E93",
+        "requiredProofValueEdges": 242,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations"
+        ],
+        "sourceSha256": "71CED0911C366586D103F1B6B18174B70C66BFA8A3A3BD2C45865F847A314B38"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsDependencyAudit1Production9842.log",
+        "sha256": "3B5BCDFD14276606FFE261E9170ABFC2FA27B45112AC25FEF24041CE5C7B4224",
+        "requiredProofValueEdges": 257,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+        ],
+        "sourceSha256": "B6CCCC122AE94322817EF2159CE72FB3AA4409AEE031D9E7358B6A6AFD23A0D5"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMInputsProductionAudit9842.log",
+    "sha256": "85B5101C53D18A3E207807DC303805B8B62FCD34978949D55E830D541B3FD24C",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-cm-inputs-production-build-9842.log",
+    "aggregateSha256": "00132A5D4335510C722D847A93ED8003FBCF0200B7C56972DFB0F2F3850727D7",
+    "productionModules": 9842,
+    "incrementModules": 59,
+    "axiomChecks": 85,
+    "exhaustiveIncrementTheorems": 347,
+    "linterScopes": 59,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 347,
+    "productionReuse": "Only scratch imports are qualified to registered production modules. All audited statements, proof bodies and comments remain identical. Exact ownership and normalized type/value reconciliation are mandatory. The same actual original residual representation carries every stated consequence; no assumption or completion criterion is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionTypeAndValue": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-cm-inputs-semantic-comparison-9842.json",
+      "sha256": "1823D88179D8FBD3280F2492DCA1FE6C09CF2CA247D44B73EC635897E89BF025",
+      "passed": true,
+      "declarations": 430,
+      "missing": [],
+      "extra": [],
+      "different": {},
+      "evidence": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.log",
+          "sha256": "828E8884962A70300DFEAAA2D3499C5B0ACDD804E47E0741FF8CEC1524E84831"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.lean",
+          "sha256": "18AF77CDF66CE28DF6EAF7C146C9D8810470FE3685963331FFA440A86D0AAC36"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusProductionSemantic2481.log",
+          "sha256": "AD5FCDDBEA2CBB059C76889D4F2B37CFA6ABA1FC2008AC19CEFBF0C36165D62A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusProductionSemantic2481.lean",
+          "sha256": "D98061F9F63AA66226E0EEEEFF072C6940F49FF25F94CFDE93C13D617FEF9DDE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusProductionSemantic2481.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.log",
+          "sha256": "498710093BDEC90B04027155558F73386E2F0705FF9F997BB9E0010387ED15E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.lean",
+          "sha256": "C2AE2ED8B6897F6EE53FA2B9CAE66C880C6B567ABC698A8AA149D70F76DB541C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProductionSemantic2492.log",
+          "sha256": "7F718594FA51107DE216C7739D171334BAB81605512A778ACC46044646088E85"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProductionSemantic2492.lean",
+          "sha256": "775CEE5AF73406E638C0E730E32CEC892E721B61C3026F4DCDA6E5231B9133D3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProductionSemantic2492.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMScratchSemantic2507.log",
+          "sha256": "58CF139DD00F55458B9D46F6DD40878EB8AB4F97C30E1205CBFD81251F5A87CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMScratchSemantic2507.lean",
+          "sha256": "CF946000F4E6196A497CC570F90482B713E82A2299078FB69D8FA83BE77D35DD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMScratchSemantic2507.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMProductionSemantic2507.log",
+          "sha256": "93B86425E3C0CA85851DF7FA6CCD7B5B29FC60F107F874407275D6669172DAF0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMProductionSemantic2507.lean",
+          "sha256": "056BAE8100687D4CC89F65060FDCAB12197D98826F0FBBCF0BF6AAE0C0C717E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMProductionSemantic2507.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.log",
+          "sha256": "BCD0D623686D245B6C26AAE4AA9DC14598A8BC5F4AD70879A1E8EC2806DD83C0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.lean",
+          "sha256": "14586BF878E1FD65E7EF3520439941691C61B934B1ED255E316EBD5B9291DC13"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsProductionSemantic2519.log",
+          "sha256": "4ED2B5BBD58424FDA2313EA2A9869EC0E8F19FA8E62C80A09CCB22DCE12909E1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsProductionSemantic2519.lean",
+          "sha256": "BB8B8B4C8C312F600C0C9B620FA1F99C441402F17BDF545AD74BB7438814479D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsProductionSemantic2519.exit",
+          "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+        }
+      ],
+      "normalization": "Names are rewritten structurally, retaining numerical Name components: only the exact import-qualified private prefixes, generated auxiliary macro/unexpander names and three verified prime-instance names change. Bound binder names are alpha-normalized, expression metadata is removed after recursive child traversal, and closed Name literals are normalized only in generated notation declarations. Every public/private/generated type and available value is checked with exact owner/name sets; no declaration is omitted. Identical mathematical source bodies are independently checked after stripping imports."
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 347,
+      "scratchDistinct": 347,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneOriginalCMConsequences.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalCMConsequences": "_private.Dubon2026.SourceGammaOneOriginalCMConsequences.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalCMDimensions.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalCMDimensions": "_private.Dubon2026.SourceGammaOneOriginalCMDimensions.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalCMPolarized.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalCMPolarized": "_private.Dubon2026.SourceGammaOneOriginalCMPolarized.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalConstructedCM.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalConstructedCM": "_private.Dubon2026.SourceGammaOneOriginalConstructedCM.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalIntegralCM.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalIntegralCM": "_private.Dubon2026.SourceGammaOneOriginalIntegralCM.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalTorusFamilies.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalTorusFamilies": "_private.Dubon2026.SourceGammaOneOriginalTorusFamilies.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026",
+        "_private.Dubon2026.SourceGammaOneOriginalTorusPrimes.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_sourceGammaOneOriginalTorusPrimes": "_private.Dubon2026.SourceGammaOneOriginalTorusPrimes.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsGaloisRatAlgebraicClosure_dubon2026"
+      },
+      "productionFocused": 347,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalDistinctEigenbasis",
+            "SourceOriginalDiagonalConjugacy",
+            "SourceOriginalMappedDistinctRoots",
+            "SourcePrimeSubfieldSL2Image",
+            "SourceOriginalMappedTorusConjugacy",
+            "SourceOriginalSymmetricTorusRoots",
+            "SourceOriginalSymmetricTorusConjugacy",
+            "SourceFiniteLinearOriginalTorusDetection",
+            "SourceOriginalArithmeticTorusCocycle",
+            "SourceOriginalTorusPrimeLocalProperties",
+            "SourceOriginalTorusPrimePredicates",
+            "SourceOriginalTorusDetectionPredicate",
+            "SourceOriginalPrimeTorusDimension",
+            "SourceOriginalAffineTorusDimension",
+            "SourceOriginalTorusDetectionAssembly",
+            "SourceOriginalTorusPrimeDimensions",
+            "SourceOriginalTorusPrimeAssembly",
+            "SourceOriginalArithmeticTorusPrimes",
+            "SourceOriginalArithmeticTorusPrimeProperty",
+            "SourceGammaOneOriginalTorusPrimes",
+            "SourceOriginalTorusClassPredicates",
+            "SourceOriginalTorusCocycleClass",
+            "SourceOriginalTorusClassPrimes",
+            "SourceOriginalTorusFamilyProperty",
+            "SourceOriginalTorusDetectingFamily",
+            "SourceOriginalArithmeticTorusFamilies",
+            "SourceGammaOneOriginalTorusFamilies"
+          ],
+          "count": 112,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDeclarations2480.log",
+            "sha256": "3A0E8C009645CD69E34B47D18EBBAEAE39B49F2A19925F0D5C8597CA25187B36",
+            "sourceSha256": "037A608B8FC4CB4613D22B734E67DC8921A47A2A37CCF51FD27A161CA1C32871"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCMKernelConsequences",
+            "SourceOriginalRationalBottomRestriction",
+            "SourceOriginalRationalCMProperty",
+            "SourceGammaOneOriginalCMConsequences",
+            "SourceOriginalRationalBottomOdd",
+            "SourceOriginalRationalCMPolarized",
+            "SourceOriginalRationalCMPolarizationProperty",
+            "SourceGammaOneOriginalCMPolarized",
+            "SourceOriginalCMQuadraticField",
+            "SourceOriginalSupportCyclotomic",
+            "SourceOriginalSupportResidual",
+            "SourceOriginalConstructedCMProperty",
+            "SourceOriginalConstructedCMAssembly",
+            "SourceGammaOneOriginalConstructedCM"
+          ],
+          "count": 101,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMDeclarations2491.log",
+            "sha256": "A6941CE65E15C0C48CE505F447CB72BBA0FAD67E10DC11B31E0A7DD3E70EC32D",
+            "sourceSha256": "EBC578EEAA32805CCDBB511190AA166BE290C2EFE70422D4734C4ACEEF1D157F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalIntegralOdd",
+            "SourceOriginalIntegralCMSimilitude",
+            "SourceOriginalIntegralCMDeformationRing",
+            "SourceOriginalIntegralCMRingData",
+            "SourceOriginalSupportBottomOdd",
+            "SourceOriginalIntegralCMSupportField",
+            "SourceOriginalIntegralCMProperty",
+            "SourceOriginalIntegralCMAssembly",
+            "SourceGammaOneOriginalIntegralCM"
+          ],
+          "count": 61,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDeclarations2506.log",
+            "sha256": "FB1A94BACDD6B15BA9348A36DD64A47A251EFC4DEF6B275F2D0DDF2F6A9B22E1",
+            "sourceSha256": "FB005A5C040B3005907522A3F2C1BED6C840E11E277C71A6ACC375642469A062"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCMAdjointVanishing",
+            "SourceOriginalCMCotangent",
+            "SourceOriginalCMCotangentFormula",
+            "SourceOriginalIntegralCMDimensionData",
+            "SourceOriginalSupportBottomBounds",
+            "SourceOriginalIntegralCMDimensionField",
+            "SourceOriginalIntegralCMDimensionProperty",
+            "SourceOriginalIntegralCMDimensionAssembly",
+            "SourceGammaOneOriginalCMDimensions"
+          ],
+          "count": 73,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsDeclarations2518.log",
+            "sha256": "6E46E7130D43D1EF3B4DD6E62D3A03E3784881D1E54B11D9F87C04C631435DFA",
+            "sourceSha256": "4B78DA397B555B0FDB383A14E829282BEB3E5C54C388E7AFD811977B925FA31D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMInputsOwnership9842.log",
+        "sha256": "521E6B917F6DBA39EDE4D10AFC203B01ACE1EACF784872AE9220C0003C70EA5A",
+        "sourceSha256": "A28A37F01795BCE43FB5613A87CB2E5A3B67B85D40F6E7FF5876177292013609"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261117-094320-171.log",
+        "sha256": "07259FB1D53A2B9220AF3934E88800D62DCFB9CE698662BF2B41DD731FF75E6F"
+      },
+      "verifiedSharedGenerated": {},
+      "unexplainedProductionNames": [],
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 59 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceOriginalDistinctEigenbasis",
+            "scratchSha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15",
+            "productionSha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalDiagonalConjugacy",
+            "scratchSha256": "C22B5A6D3ED47DFA82D4963ECBE3C6D7FD6BCFED4AADF91C7B4FD9106768F6BE",
+            "productionSha256": "EA84408E807BC3B0E63D524277629E059242B0868253DECA5F890C70EF14D8CA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalMappedDistinctRoots",
+            "scratchSha256": "46EB7B08ECB71B189CED3223FB9C773947A8F0B1AEBCB16274A75A6517C585B1",
+            "productionSha256": "AAD6BF81B8B634FF731A827CB4AC4FACFB0063DB9942FE325339412F3E0A93C5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimeSubfieldSL2Image",
+            "scratchSha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904",
+            "productionSha256": "F2D549D0B69794C8722BDB30DFE4449241D9B29BDC24EB2FE335B48EAD69A237",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalMappedTorusConjugacy",
+            "scratchSha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D",
+            "productionSha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSymmetricTorusRoots",
+            "scratchSha256": "6DF9473C4DA8865B08A1F8992BD032482D918D598E0109C3C3590FAEA66F6688",
+            "productionSha256": "2A332E27FB4B5071BC04A327FDCF5E94DCFE565881261F96BC7BA4D4DD1742F1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSymmetricTorusConjugacy",
+            "scratchSha256": "8312937EB209EDA5A3BC70E7C5F6AE5567548093683409F4C0B43A3DBF168303",
+            "productionSha256": "9AC70341E6B62D3CF3F8CFAA0373A4B3E822CDBDAD25EA68C3C5882554D3610C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteLinearOriginalTorusDetection",
+            "scratchSha256": "8466A6DF0563C2B37C6EEEDD04494BF231A216BA062ECF4FD219723841F6E182",
+            "productionSha256": "81350C50721DAA63D577B730D3715ABDB6053384D505A2F0E7FEF369D853D99E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalArithmeticTorusCocycle",
+            "scratchSha256": "43ADE52F18FBF7330B4AF2AFBEAF6D349AE1EC53C3AC33FDBA836E59435E0E52",
+            "productionSha256": "C5B1F8F7F59FA116D979CF6833FD636A8687CC1F80AE34024B70B53471636BC4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusPrimeLocalProperties",
+            "scratchSha256": "59339DD5767C0C1CCB74DF6CD6C083F008475BA8D87B15B385DF376F1567300C",
+            "productionSha256": "59339DD5767C0C1CCB74DF6CD6C083F008475BA8D87B15B385DF376F1567300C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusPrimePredicates",
+            "scratchSha256": "F9F1BB6E48B9C3A20A980990FC0495E48B1A54ABCC81BBFC2A92FDB8D3BA93C2",
+            "productionSha256": "F5710AA045FAA2F19EF760941E3BD037BDD0775BAAFBCFFBC63F3E2EA6151A87",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusDetectionPredicate",
+            "scratchSha256": "AA4FE67E9BE7DCB8918198BE7906C811AB1A0737D701C17BFE672A8E25EBCF1A",
+            "productionSha256": "F09BEC64BC65FCF2400E3F76256BB0843CE9FD01F216B7422F4223521FD6E9C2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimeTorusDimension",
+            "scratchSha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C",
+            "productionSha256": "A6B0886C35130705C4FC223A734A366233A672E654AD0FED4A7ABBEE0904F1C3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalAffineTorusDimension",
+            "scratchSha256": "6254094476437A783AAA244CFFD3A4AC06C6E38DBB6B4CC2752E2DA95F73FC6A",
+            "productionSha256": "BBC8106087727C9EA644ABCF7D2DDE193E1D6B4FDE80652DAA2108C40D0D9ABA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusDetectionAssembly",
+            "scratchSha256": "3DD05E45D90646DBBF0FC886F2EE6F1E48B2618A8A0E02B2F509ABF41FD473A4",
+            "productionSha256": "DFA0B31CD0422D851DB4FFCEF177908F0E14BFC11669911A087CF4233017B620",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusPrimeDimensions",
+            "scratchSha256": "4AF51E18C47A207CCFDE86B10D4D4245D77F7A2200038024900BDA776B6D34FF",
+            "productionSha256": "D13D05BA2C7F03CB3E091F869BC3C82010B81FD71AD9E005A0B48EC98078DCC1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusPrimeAssembly",
+            "scratchSha256": "4455832D22EDBB7CB331B3A5E1FCE289E0CC0CE88FC1999F9DBFCB40FAE19F93",
+            "productionSha256": "D75F6F1D15C1C3D5BE46815A1690E4E80282727DAB0E591521A8A9948E2D9967",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalArithmeticTorusPrimes",
+            "scratchSha256": "562D0D97F5823D7FF34FE8F8D7ADA3CAF804F9D9041887C7444CA50DE903A8C0",
+            "productionSha256": "97B29F075462F9B51B98FF3E0F529312D9B708C1E9BF4B81185CD9C78AC7241D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalArithmeticTorusPrimeProperty",
+            "scratchSha256": "465F3B902C59FF34961E8B19E11EF6AAA9EF63A0B3657585AAE47A62D9434102",
+            "productionSha256": "F2A067A4536E6A6337B0390CADC2D6ACC321208AB14DC0ABBC5E5AD729592C75",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalTorusPrimes",
+            "scratchSha256": "A06A42208B66DE7944764BB718DB50B3C4BF12795525FE5600819E666827FF13",
+            "productionSha256": "80AB8FD0974058C283E999F522A8F2DACEE7287D3C28F2E95ACC575A10CD1F72",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusClassPredicates",
+            "scratchSha256": "FB1CD63209CF6AC71BFDE4741B552D2C414D90A551766F859F4A4FBDC69B4874",
+            "productionSha256": "0921FE7967C5F4647591380A3AD74FBDF32F6E0F98D31763A01E14FADF13EA23",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusCocycleClass",
+            "scratchSha256": "F52324376547C7A0EB6931EBE661E9CDD177D331C035D64DDFB1BB97D20F800D",
+            "productionSha256": "EC08715DB07083F7D2277A09A319A2CDA27278B09514A1368EE43F2EDF88F3BB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusClassPrimes",
+            "scratchSha256": "C0A7A6F66BAA5EE92A42A453829BB0A53BDC7031FC936C9418E13E6D72B5C53A",
+            "productionSha256": "8DFAB65C064397C28433042AAF9F2043B8261450497E8875772B5C280A04EE0D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusFamilyProperty",
+            "scratchSha256": "9CB0DBD0883BC4FC26D456F49581A29DA94B8F2573C70FB8934CDEBA3D9B924E",
+            "productionSha256": "9002021148B0E6450B385A01D1F71DEC74EE225D9570A1DC7DC876E17B67B0D8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalTorusDetectingFamily",
+            "scratchSha256": "D40E876A0A524961D416DA83C4D14FF99F9F90F6BDE196EE83092BA9C5907C75",
+            "productionSha256": "4B3178F422A16C948997BF6323E273CC3541DCFC34AA9DD21CBEF5CDF1BFBF11",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalArithmeticTorusFamilies",
+            "scratchSha256": "55C1BF00613B62A5E3A15BAB7F2A7376E8D5B96BDBC8D362E3318E98EF6EB080",
+            "productionSha256": "524AB8C46F00A90CE83784F01397EF2EB754CFE5AD6569185C4E9C5A5D8A5454",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalTorusFamilies",
+            "scratchSha256": "0331216E30EFD9C08A405FED3AF7F8B1EEACF22BEFB902EEB28B9F1469F37888",
+            "productionSha256": "0A93857DBA11F46D31D364FDC9A237F251B123E2411AE3D3DC1E915C8E763189",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalCMKernelConsequences",
+            "scratchSha256": "58EDDE68FB4868FF93BE4BA45E0C228049369FFDD59A1AF2CD50DB04F3916497",
+            "productionSha256": "D94BB7A9271E82BB88A7A9F59933290F082A150D2CD0E1753CBBF665FC66CBEF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalRationalBottomRestriction",
+            "scratchSha256": "C8F02BB47CB13D14E17C09D0424385A04CEB5927E2FD02F7DDAE770A13BF7CFF",
+            "productionSha256": "6BD93995168FDA951BC2DCC1D730ED9A61F5C918C84E720268F8A536C3237C23",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalRationalCMProperty",
+            "scratchSha256": "262D6431D236759C9B284C85C8B40799D32C185B0D8B96E15AD5897B51FC79EF",
+            "productionSha256": "87FF1754FB937C3762E7DD869F1AFB26482C316AFF8F90AC932BC549881F46E6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalCMConsequences",
+            "scratchSha256": "FB6E729C99C631FF2A7DF53B277DC7DE4ACB6BD401A457F6FF1A6BB7615FB37B",
+            "productionSha256": "0A041D787672661C2E5135132661804B78558F613E513A8AD182EBF7250F25C8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalRationalBottomOdd",
+            "scratchSha256": "AA5A8C4CE319E14766A67AF9FEC7253650C0CFDFE920CEC13032C9808B9A5C66",
+            "productionSha256": "84D8F5C0FEBA0343F44A366186D5D998FE70CC737C180387DF64D8F660793F8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalRationalCMPolarized",
+            "scratchSha256": "AC2A42A609FD5E3F5FA472951CE5FB3EB1EFF0B65269C480E366966723F1C78B",
+            "productionSha256": "10DA6CC5FFDE9E9E3A2F85DD2F303623FAEC3A2127B69F263AD5D269333A0275",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalRationalCMPolarizationProperty",
+            "scratchSha256": "88EE75B4D83BEA3A965113CED94C70D98F3688A8473AB9C2233DA20B358B94F3",
+            "productionSha256": "06E49A93E1B73B0CAF74DB6E92089EE60DF6405F7C6604EE4914A68F5C727313",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalCMPolarized",
+            "scratchSha256": "B5AA286B5D6C6B1F5D42175136A7356D06C796FF70514C96D1FEE5277B3846AE",
+            "productionSha256": "BA57CD4835CEDCEA1F2A6AC025AEEF08083A575A8577D752AB7064C46D3FB325",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalCMQuadraticField",
+            "scratchSha256": "450564D997D9F2C3D60D74AE5587B1BD6A16F61621F985885D99F9B2F310B294",
+            "productionSha256": "450564D997D9F2C3D60D74AE5587B1BD6A16F61621F985885D99F9B2F310B294",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSupportCyclotomic",
+            "scratchSha256": "E949CF05F4232E7D0FD1466D1DBF413F97178BFC0D6ABEFCF0E606B3F5CA1049",
+            "productionSha256": "E949CF05F4232E7D0FD1466D1DBF413F97178BFC0D6ABEFCF0E606B3F5CA1049",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSupportResidual",
+            "scratchSha256": "414742F0C997F47A58405147A681D10E2EFCCB64476803C862A56760B7D5DA16",
+            "productionSha256": "611CC36010A066F5B9CEDE56D0BEB5AB0C1A508467A5503F9AC9BBB6CBA84C69",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalConstructedCMProperty",
+            "scratchSha256": "44D2FBBF19747F33C678571592DDE530C09EF663150875BD72FD15FF425DDBA9",
+            "productionSha256": "CA232B7B17099178AB986C2C7E48B61847565FFB765BA526F09CAD634F2EEAF8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalConstructedCMAssembly",
+            "scratchSha256": "BA2F52F318AD11C82AE4F655E8E7BD58D3BFA483CF691A99C1D3BA5A2184E563",
+            "productionSha256": "4E22490F62A39CC74C4F9F767B9679681DB0D0679252519EB3B75B8935EF797B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalConstructedCM",
+            "scratchSha256": "A027556D4A9AE1BBB6703EE8EE92671A7E1FC50C80B0102256961E22BC776735",
+            "productionSha256": "0ECF18E3F637FC47E4A59C74201501422381A7EA839790D3940061F8B6E37076",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralOdd",
+            "scratchSha256": "2B8543CCA393FEACE0F8708730F023FD8FD215F8F39FD24AAF4F33E738A29B50",
+            "productionSha256": "2B8543CCA393FEACE0F8708730F023FD8FD215F8F39FD24AAF4F33E738A29B50",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMSimilitude",
+            "scratchSha256": "885C9FF283BEE87967D92386D28E20F8FCE1C04CDBD0F494C7CE2719F93A4F68",
+            "productionSha256": "FFA6664B5EAD1103D9B003CCF8122E532D3ED2742902A249F8D29DD093DC1AB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMDeformationRing",
+            "scratchSha256": "1B59013467CAE48BCF82BD4C4CC65D5CFFC7F64B3FBBE776E82A0DBBE7EA6DEC",
+            "productionSha256": "8C3B04720BE5EC917271DB293801098FE9AF968A0D55F8ADB5906CC509537713",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMRingData",
+            "scratchSha256": "2A9B237F4F3FDF2848AD35442197BB0565E8AA6EA10CA648A016D042C21F75A9",
+            "productionSha256": "21F78EEC8E86E5F2B25BD179C06FE947E48F361109E5FE1C9AB07D3398C5D519",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSupportBottomOdd",
+            "scratchSha256": "51216F68D3127AE94AF8FA9AE3DB43D5B79959C3A34FDABCD4CC7D112C5753E5",
+            "productionSha256": "36815079A5C3E985AD5FB0FB52E0474869B6211B38E95340C96A0CC1BB080E6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMSupportField",
+            "scratchSha256": "9CCDC454BF26D51AD676621A6E1EEF003B78D7885E5309A130FFB6D76ACB8B0A",
+            "productionSha256": "18A5ABA4538F9A27AAFE226E67ED5F9B3B56ABBB428711FCC5C7AD7B7FEB7D9D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMProperty",
+            "scratchSha256": "64A2896005961C235A38C9BBD651AC63964CF618B5D01A2A531DD74804649DC7",
+            "productionSha256": "94BC93DE8EA9ABEE52322A573A4C857B383C0D0F74DD8ED13CCE5325812677F1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMAssembly",
+            "scratchSha256": "8CC4D6CB40998441F0E8FCB1AEEC054D17D82D788033949B65E1A81CA7DD00E9",
+            "productionSha256": "3E77BB7D5FB28DEC68757D6EC834478E9A9EB13B0F5A76FA0376A3AD17F16AE6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalIntegralCM",
+            "scratchSha256": "D247939CCF2ADC39BBD3618E6C3D68824D266D6D2FABB0B6EAF9004EEEA3972A",
+            "productionSha256": "ADC55602D7641CD8927553AF15056E50A7C3B0D46D841A819603DA4F196FE7FB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalCMAdjointVanishing",
+            "scratchSha256": "3FD830A582B2CD7F57EDA60B3F1D8F52CC8E1FDF3C175C5A61A0436C9FA40494",
+            "productionSha256": "287668673346204E32CF0734F8E0055AFAAC22DAEC9CFBF4CB6AE0DE0A3052BE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalCMCotangent",
+            "scratchSha256": "74FA39281CBD2D7714EADDA852E52399D9A24B08D1B4105FFFED141054E8A0A0",
+            "productionSha256": "0AA7BA355DE75E186CDD1867256DB9D9149CF236E6DF9FEB3F0280AE25C9D426",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalCMCotangentFormula",
+            "scratchSha256": "0A7532280958E0E9AD5BB1D53EBC58E1FBB2D23034D3AC60C75E49C2199AE5E3",
+            "productionSha256": "48779279FDD642082C0B77537CE55A8600F9B2CE49BA6888492BBD3C5E4AE3B3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMDimensionData",
+            "scratchSha256": "079C6B9E47E1AAF227F6FB73689C562FF89985FAA04BC7EF180AB2D23ADDEF0E",
+            "productionSha256": "E7781B4CACA26B2DACF28976BEEB36AF0EC2CA982077AFC2EBC8B7447B03EA02",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSupportBottomBounds",
+            "scratchSha256": "992049C5A00CBE9B9210006D96CBA2305E96E45CC75917FC514D3D677A46D252",
+            "productionSha256": "2739C3223D42991054EF9E879FCBB93A54AFDC4FEB8709C65274A4D531F55244",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMDimensionField",
+            "scratchSha256": "E2EB9853A2CE08056B9B08C1EB64A75D9284D9DE743F29676E338F245A0ABD9F",
+            "productionSha256": "675F7D5AA8AFE7F86D44C7B1AA465E05913915671A436C02680E3A668144E3C2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMDimensionProperty",
+            "scratchSha256": "A1EE08B1E10835DAE4FE7E94955CA5C2F7399A09CF9AD8244B5E3FFC98DA1BAE",
+            "productionSha256": "8BA79BF3D10B93F1C6A446535AF8FBB42328A699086C228B8C43B729BC2D4803",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalIntegralCMDimensionAssembly",
+            "scratchSha256": "D5069AC24B15E53758845FB6135617EDBAAA658A4497120AD26358EDA6269EC5",
+            "productionSha256": "90EAEA433CD7E39005D6593A761A85412D78C40D5A33E1F865D2FC68FE7CBD39",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalCMDimensions",
+            "scratchSha256": "7AEC7FB6DF1A34768EB5225BFBCFC4A7825CB64A5C060A46860C1534F70AFCF0",
+            "productionSha256": "1F67D293A50F948ABE660F529A52DCA7A54BC0B99FCB6C534A333F9C18B1A1BD",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 347 distinct names from 347 exhaustive scratch checks are retained: 347 in the production focused scope and 0 previously audited generated names. Every focused theorem is accounted for; no unexplained additional or missing theorem is accepted. Independently normalized declaration types and values are checked across all four source scopes.",
+    "boundary": "The six small-projective-image alternatives remain explicit. Their arithmetic exclusion, required local deformation conditions, CM disjointness where required, automorphy and literal higher symmetric-power continuation remain open. These are unrestricted polarized deformation rings; no crystalline or other source local condition is claimed. The image subfield need not equal the original residue field. The full source domain and proof contract are unchanged. Acceptance remains 16/20; DUB-17--20 OPEN."
+  }
+}

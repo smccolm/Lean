@@ -1,0 +1,49 @@
+import SourceOriginalDihedralCharacter
+import Mathlib.Topology.Instances.Matrix
+import Mathlib.Topology.Algebra.Constructions
+import Mathlib.Analysis.Complex.Basic
+
+/-! DUB-17/18 -> original dihedral image exclusion -> continuous original
+quadratic character. The character factors through the same original matrix
+image, so the existing residue topology and continuity suffice. No topology
+on a replacement coefficient field is chosen. Trivial original matrices act
+trivially under the character, preserving original unramified restrictions. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+variable (p : ℕ) [Fact p.Prime] {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+variable (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F) (n : ℕ)
+variable (e : (residualProjectiveAction p j ρ).range ≃* DihedralGroup n)
+
+/-- Equality of original matrices implies equality of their actual dihedral parity values. -/
+theorem originalDihedralCharacter_eq_of_rep_eq (a b : Γ) (h : ρ a = ρ b) :
+    originalDihedralCharacter p j ρ n e a = originalDihedralCharacter p j ρ n e b := by
+  have hr : (residualProjectiveAction p j ρ).rangeRestrict a =
+      (residualProjectiveAction p j ρ).rangeRestrict b := by
+    apply Subtype.ext
+    change residualProjectiveAction p j ρ a = residualProjectiveAction p j ρ b
+    simp only [residualProjectiveAction, MonoidHom.comp_apply, h]
+  exact congrArg (fun x => dihedralReflectionSign n (e x)) hr
+
+/-- The actual dihedral character is trivial wherever the original residual matrices are trivial. -/
+theorem originalDihedralCharacter_eq_one_of_rep_eq_one (g : Γ) (h : ρ g = 1) :
+    originalDihedralCharacter p j ρ n e g = 1 := by
+  have he := originalDihedralCharacter_eq_of_rep_eq p j ρ n e g 1 (by simpa using h)
+  exact he.trans (map_one _)
+
+/-- The original residual topology and continuity make its actual dihedral parity character continuous. -/
+theorem originalDihedralCharacter_continuous
+    [TopologicalSpace Γ] [TopologicalSpace F] [DiscreteTopology F] (hρ : Continuous ρ) :
+    Continuous (originalDihedralCharacter p j ρ n e) := by
+  letI : DiscreteTopology (Matrix (Fin 2) (Fin 2) F) := inferInstance
+  letI : DiscreteTopology (GeneralLinearGroup (Fin 2) F) := inferInstance
+  let ψ : ρ.range → ℂ := fun x => originalDihedralCharacter p j ρ n e (Classical.choose x.property)
+  have hψ : Continuous ψ := continuous_of_discreteTopology
+  have hr : Continuous ρ.rangeRestrict := hρ.subtype_mk (fun g => ⟨g, rfl⟩)
+  apply (hψ.comp hr).congr
+  intro g
+  exact originalDihedralCharacter_eq_of_rep_eq p j ρ n e _ g
+    (Classical.choose_spec (ρ.rangeRestrict g).property)
+
+end
+end Dubon2026.SourceDickson

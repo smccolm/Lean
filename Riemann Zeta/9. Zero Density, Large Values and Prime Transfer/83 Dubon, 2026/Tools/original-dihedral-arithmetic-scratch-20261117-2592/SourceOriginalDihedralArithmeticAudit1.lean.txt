@@ -1,0 +1,66 @@
+import SourceGammaOneOriginalDihedralInputs
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.noncentral_scalar_square_trace_zero
+#print axioms Dubon2026.SourceDickson.original_projective_involution_trace_zero
+#print axioms Dubon2026.SourceDickson.dihedralReflectionSign_sq
+#print axioms Dubon2026.SourceDickson.dihedralReflectionSign_eq_neg_one
+#print axioms Dubon2026.SourceDickson.dihedralReflectionSign
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter_sq
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter_ne_one
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter_negative_trace_zero
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter_eq_of_rep_eq
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter_eq_one_of_rep_eq_one
+#print axioms Dubon2026.SourceDickson.originalDihedralCharacter_continuous
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_dihedral_arithmetic_characters
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalDihedralArithmeticCharacters
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonCMDihedralInputs
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_dihedral_character_inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceProjectiveInvolutionTrace, `SourceOriginalProjectiveInvolutionTrace, `SourceDihedralReflectionSign, `SourceOriginalDihedralCharacter, `SourceOriginalDihedralContinuity, `SourceOriginalDihedralArithmetic, `SourceOriginalNonCMDihedralInputsProperty, `SourceGammaOneOriginalDihedralInputs]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL DIHEDRAL ARITHMETIC AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceProjectiveInvolutionTrace
+#lint in SourceOriginalProjectiveInvolutionTrace
+#lint in SourceDihedralReflectionSign
+#lint in SourceOriginalDihedralCharacter
+#lint in SourceOriginalDihedralContinuity
+#lint in SourceOriginalDihedralArithmetic
+#lint in SourceOriginalNonCMDihedralInputsProperty
+#lint in SourceGammaOneOriginalDihedralInputs

@@ -1,0 +1,62 @@
+import SourceGammaOneOriginalIntegralCM
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.original_integral_residual_determinant_map
+#print axioms Dubon2026.SourceDickson.original_integral_involution_odd_of_residual
+#print axioms Dubon2026.SourceDickson.original_integral_cm_similitude_kernel
+#print axioms Dubon2026.SourceDickson.original_integral_cm_similitude_odd
+#print axioms Dubon2026.SourceDickson.original_integral_cm_similitude_reduction
+#print axioms Dubon2026.SourceDickson.originalIntegralCMSymmetricSimilitude
+#print axioms Dubon2026.SourceDickson.original_integral_cm_exists_deformation_ring
+#print axioms Dubon2026.SourceDickson.original_integral_cm_symmetric_ring_data
+#print axioms Dubon2026.SourceDickson.OriginalIntegralCMSymmetricRingData
+#print axioms Dubon2026.SourceDickson.original_support_bottom_cyclotomic_odd
+#print axioms Dubon2026.SourceDickson.original_integral_cm_support_field_data
+#print axioms Dubon2026.SourceDickson.OriginalIntegralCMSupportFieldData
+#print axioms Dubon2026.SourceDickson.HasOriginalIntegralCMDeformations
+#print axioms Dubon2026.SourceDickson.original_integral_constructed_cm_deformations
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceOriginalIntegralOdd, `SourceOriginalIntegralCMSimilitude, `SourceOriginalIntegralCMDeformationRing, `SourceOriginalIntegralCMRingData, `SourceOriginalSupportBottomOdd, `SourceOriginalIntegralCMSupportField, `SourceOriginalIntegralCMProperty, `SourceOriginalIntegralCMAssembly, `SourceGammaOneOriginalIntegralCM]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL INTEGRAL CM AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceOriginalIntegralOdd
+#lint in SourceOriginalIntegralCMSimilitude
+#lint in SourceOriginalIntegralCMDeformationRing
+#lint in SourceOriginalIntegralCMRingData
+#lint in SourceOriginalSupportBottomOdd
+#lint in SourceOriginalIntegralCMSupportField
+#lint in SourceOriginalIntegralCMProperty
+#lint in SourceOriginalIntegralCMAssembly
+#lint in SourceGammaOneOriginalIntegralCM

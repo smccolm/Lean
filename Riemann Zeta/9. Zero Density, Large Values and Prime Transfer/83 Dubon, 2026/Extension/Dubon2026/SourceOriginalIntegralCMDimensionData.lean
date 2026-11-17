@@ -1,0 +1,63 @@
+import Dubon2026.SourceOriginalIntegralCMRingData
+import Dubon2026.SourceOriginalCMCotangentFormula
+
+/-! DUB-17/18 -> actual original CM deformation dimension. The same
+constructed original integral multiplier and native coefficient ring acquire
+full-adjoint vanishing and the exact cotangent formula from finite linear bounds. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix IsLocalRing
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalIntegralCMDimensionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+variable {O : Type} [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (ResidueField O)] [TopologicalSpace (ResidueField O)]
+  [DiscreteTopology (ResidueField O)]
+  (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+  [FiniteDimensional ℚ F] [IsTotallyReal F]
+  (C : IntermediateField F (rationalUnramifiedExtension a))
+  [IsQuadraticExtension F C] [IsTotallyComplex C]
+  (p n : ℕ) [Fact p.Prime] [CharP (ResidueField O) p] (hn : n < p)
+  (ρi : finiteBaseArithmeticGaloisGroup a F →* GeneralLinearGroup (Fin 2) O)
+  (ρr : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) (ResidueField O))
+  (hodd : (ρr (finiteBaseRealConjugation a F)).val.det = -1)
+  (ha : a ≠ 0) (hpa : (p : 𝓞 ℚ) ∣ a)
+
+/-- The actual integral multiplier, its native complete local ring, original
+full-adjoint vanishing and exact cotangent formula for that same ring. -/
+def OriginalIntegralCMSymmetricDimensionData : Prop :=
+  ∃ ν : finiteBaseArithmeticGaloisGroup a F →* Oˣ,
+    ν = originalIntegralCMSymmetricSimilitude a F C n ρi ∧
+    ∃ hνk : ∀ g : FiniteBaseCMKernel a F C,
+      (GeneralLinearGroup.det (ρr g.val)) ^ n =
+        Units.map (algebraMap O (ResidueField O)) (ν g.val),
+    ∃ hνc : ν (finiteBaseRealConjugation a F) = -1,
+      (let R := FiniteBaseCMSymmetricCoefficientRing a F C n ρr
+          (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν ha p Fact.out hpa
+       ∃ hlocal : IsLocalRing R, letI := hlocal
+         IsNoetherianRing R ∧ IsAdic (maximalIdeal R) ∧ IsAdicComplete (maximalIdeal R) R) ∧
+      Representation.invariants (polarizedAdjointRepresentation.comp
+        (finiteBaseCMSymmetricPolarizedRepresentation a F C n ρr
+          (factorial_cast_ne_zero_of_lt_char p n hn) hodd).toMonoidHom) = ⊥ ∧
+      OriginalCMSymmetricCotangentFormula a F C p n hn ρr hodd ν hνk hνc ha hpa
+
+/-- The original integral pair and actual finite linear bounds supply all
+three conclusions for one multiplier and one native deformation ring. -/
+theorem original_integral_cm_symmetric_dimension_data [NoZeroDivisors O]
+    (hp3 : 3 < p) (hsize : 2 * n < p - 1)
+    (j : ResidueField O →+* K p)
+    (hfinite : HasFiniteLinearSubfieldBounds p j ρr.toMonoidHom)
+    (hred : ∀ g i j, (ρr g).val i j = residue O ((ρi g).val i j)) :
+    OriginalIntegralCMSymmetricDimensionData a F C p n hn ρi ρr hodd ha hpa := by
+  obtain ⟨ν, hν, hνk, hνc, hlocal⟩ :=
+    original_integral_cm_symmetric_ring_data a F C p n hn ρi ρr hodd ha hpa (by omega) hred
+  exact ⟨ν, hν, hνk, hνc, hlocal,
+    original_cm_polarized_adjoint_invariants_eq_bot a F C p n hn ρr hodd hp3 hsize j hfinite,
+    original_cm_symmetric_cotangent_formula a F C p n hn ρr hodd ν hνk hνc ha hpa
+      hp3 hsize j hfinite⟩
+
+end
+end Dubon2026.SourceDickson

@@ -28367,6 +28367,98 @@ private def publicConsumers : Array Name := #[
   ,``Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences
   ,``Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences
   ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology
+  ,``Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_nonzero_root_kernel
+  ,``Dubon2026.finiteSymmetric_projector_conjugates_span_extension
+  ,``Dubon2026.finiteSymmetric_exists_projector_trace_ne_zero_extension
+  ,``Dubon2026.finiteSymmetric_exists_regular_conjugate_commuting_trace_extension
+  ,``Dubon2026.finiteSubfield_exists_regular_character_kernel_trace
+  ,``Dubon2026.traceZeroCoefficientEmbedding_injective
+  ,``Dubon2026.traceZeroCoefficientEmbedding_action
+  ,``Dubon2026.traceZeroConjugation_injective
+  ,``Dubon2026.traceZero_twisted_conjugate_action
+  ,``Dubon2026.traceZero_notMem_coboundary_of_extended_conjugate_test
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_regular_kernel_detection
+  ,``Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_regular_root_detection
+  ,``Dubon2026.rationalArithmetic_regular_primes_of_root_detection
+  ,``Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_regular_primes
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_regular_prime_detection
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes
+  ,``Dubon2026.rationalArithmeticOriginalCoefficientCocycles_finite
+  ,``Dubon2026.rationalArithmeticOriginalCoefficientH1_finite
+  ,``Dubon2026.rationalArithmetic_original_cocycle_class_primes
+  ,``Dubon2026.rationalArithmetic_original_class_regular_prime
+  ,``Dubon2026.finite_detecting_prime_family_of_pointwise
+  ,``Dubon2026.rationalArithmetic_original_finite_detecting_family
+  ,``Dubon2026.SourceDickson.original_regular_prime_detection_gives_finite_families
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_detecting_families
+  ,``Dubon2026.localFieldOriginalCoefficientCocycles_finite
+  ,``Dubon2026.localFieldOriginalCoefficientH1_finite
+  ,``Dubon2026.algebraicLocal_originalCoefficient_unramified_finrank_eq_invariants
+  ,``Dubon2026.rationalPrime_originalCoefficient_unramified_finrank_eq_invariants
+  ,``Dubon2026.SourceDickson.original_finite_residual_unramified_adjoint_dimensions
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions
+  ,``Dubon2026.matrix_exists_original_eigenbasis_of_distinct_roots
+  ,``Dubon2026.matrix_exists_original_diagonal_conjugator_of_eigenbasis
+  ,``Dubon2026.matrix_exists_original_diagonal_conjugator_of_distinct_roots
+  ,``Dubon2026.original_characteristic_roots_of_mapped_diagonal
+  ,``Dubon2026.SourceDickson.prime_subfield_sl2_image_le
+  ,``Dubon2026.original_mapped_torus_conjugacy_of_subfield_lift
+  ,``Dubon2026.original_symmetric_characteristic_roots_of_mapped_torus
+  ,``Dubon2026.original_symmetric_torus_conjugacy_of_mapped_torus
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_torus_kernel_detection
+  ,``Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_torus_root_detection
+  ,``Dubon2026.rationalPrime_original_symmetric_unramified_finrank
+  ,``Dubon2026.rationalPrime_original_affine_torus_unramified_finrank
+  ,``Dubon2026.rationalArithmetic_torus_primes_of_root_detection
+  ,``Dubon2026.rationalArithmetic_torus_detection_supplies_local_dimensions
+  ,``Dubon2026.rationalArithmetic_torus_dimensional_primes_of_root_detection
+  ,``Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_torus_primes
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_torus_prime_detection
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_dimensional_primes
+  ,``Dubon2026.rationalArithmetic_original_torus_cocycle_class_primes
+  ,``Dubon2026.rationalArithmetic_original_class_torus_prime
+  ,``Dubon2026.rationalArithmetic_original_torus_detecting_family
+  ,``Dubon2026.SourceDickson.original_torus_prime_detection_gives_finite_families
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_cm_kernel_consequences
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_cm_matrix_span
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_cm_absolute_irreducible
+  ,``Dubon2026.SourceDickson.originalRationalBottomRestriction_surjective
+  ,``Dubon2026.SourceDickson.original_finite_linear_bounds_rational_bottom
+  ,``Dubon2026.SourceDickson.finite_linear_bounds_original_rational_cm_consequences
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_kernel_consequences
+  ,``Dubon2026.SourceDickson.original_primitive_determinantExponent_odd
+  ,``Dubon2026.SourceDickson.original_rational_bottom_odd_of_cyclotomic
+  ,``Dubon2026.SourceDickson.original_rational_cm_exists_polarized_symmetric
+  ,``Dubon2026.SourceDickson.original_rational_cyclotomic_cm_polarizations
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_polarized_symmetric_residual
+  ,``Dubon2026.SourceDickson.original_unramified_exists_cm_quadratic_of_four_dvd
+  ,``Dubon2026.SourceDickson.original_support_cyclotomic_compatibility
+  ,``Dubon2026.SourceDickson.original_support_cyclotomic_unit_compatibility
+  ,``Dubon2026.SourceDickson.original_support_residual_determinant
+  ,``Dubon2026.SourceDickson.original_support_finite_linear_bounds
+  ,``Dubon2026.SourceDickson.original_cyclotomic_constructed_cm_residual
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual
+  ,``Dubon2026.SourceDickson.original_integral_residual_determinant_map
+  ,``Dubon2026.SourceDickson.original_integral_involution_odd_of_residual
+  ,``Dubon2026.SourceDickson.original_integral_cm_similitude_kernel
+  ,``Dubon2026.SourceDickson.original_integral_cm_similitude_odd
+  ,``Dubon2026.SourceDickson.original_integral_cm_similitude_reduction
+  ,``Dubon2026.SourceDickson.original_integral_cm_exists_deformation_ring
+  ,``Dubon2026.SourceDickson.original_integral_cm_symmetric_ring_data
+  ,``Dubon2026.SourceDickson.original_support_bottom_cyclotomic_odd
+  ,``Dubon2026.SourceDickson.original_integral_cm_support_field_data
+  ,``Dubon2026.SourceDickson.original_integral_constructed_cm_deformations
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations
+  ,``Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariant_eq_zero
+  ,``Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariants_eq_bot
+  ,``Dubon2026.SourceDickson.original_cm_symmetric_cotangent_finrank
+  ,``Dubon2026.SourceDickson.original_cm_symmetric_cotangent_formula
+  ,``Dubon2026.SourceDickson.original_integral_cm_symmetric_dimension_data
+  ,``Dubon2026.SourceDickson.original_support_bottom_finite_linear_bounds
+  ,``Dubon2026.SourceDickson.original_integral_cm_dimension_field_data
+  ,``Dubon2026.SourceDickson.original_integral_constructed_cm_dimensions
+  ,``Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions
 ]
 
 private def publicConstructions : Array Name := #[
@@ -31547,6 +31639,39 @@ private def publicConstructions : Array Name := #[
   ,``Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology
   ,``Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection
   ,``Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences
+  ,``Dubon2026.traceZeroCoefficientEmbedding
+  ,``Dubon2026.HasArithmeticRegularRootDetection
+  ,``Dubon2026.HasArithmeticRegularDetectingPrimes
+  ,``Dubon2026.SourceDickson.HasOriginalArithmeticRegularPrimeDetection
+  ,``Dubon2026.RationalArithmeticOriginalRegularAuxiliaryPrime
+  ,``Dubon2026.HasArithmeticRegularClassPrimes
+  ,``Dubon2026.HasArithmeticRegularCocycleDetection
+  ,``Dubon2026.HasArithmeticRegularDetectingFamily
+  ,``Dubon2026.SourceDickson.HasOriginalArithmeticDetectingFamilies
+  ,``Dubon2026.SourceDickson.HasOriginalUnramifiedAdjointDimensions
+  ,``Dubon2026.OriginalTorusPrimeWitness
+  ,``Dubon2026.OriginalPrimeAdjointDimension
+  ,``Dubon2026.HasArithmeticTorusRootDetection
+  ,``Dubon2026.HasArithmeticTorusDimensionalPrimes
+  ,``Dubon2026.HasArithmeticTorusDetectingPrimes
+  ,``Dubon2026.SourceDickson.HasOriginalArithmeticTorusPrimeDetection
+  ,``Dubon2026.RationalArithmeticOriginalTorusAuxiliaryPrime
+  ,``Dubon2026.HasArithmeticTorusClassPrimes
+  ,``Dubon2026.HasArithmeticTorusCocycleDetection
+  ,``Dubon2026.HasArithmeticTorusDetectingFamily
+  ,``Dubon2026.SourceDickson.HasOriginalArithmeticTorusFamilies
+  ,``Dubon2026.SourceDickson.originalRationalBottomRestriction
+  ,``Dubon2026.SourceDickson.HasOriginalRationalCMConsequences
+  ,``Dubon2026.SourceDickson.HasOriginalRationalCMPolarizations
+  ,``Dubon2026.SourceDickson.HasOriginalConstructedCMResidual
+  ,``Dubon2026.SourceDickson.originalIntegralCMSymmetricSimilitude
+  ,``Dubon2026.SourceDickson.OriginalIntegralCMSymmetricRingData
+  ,``Dubon2026.SourceDickson.OriginalIntegralCMSupportFieldData
+  ,``Dubon2026.SourceDickson.HasOriginalIntegralCMDeformations
+  ,``Dubon2026.SourceDickson.OriginalCMSymmetricCotangentFormula
+  ,``Dubon2026.SourceDickson.OriginalIntegralCMSymmetricDimensionData
+  ,``Dubon2026.SourceDickson.OriginalIntegralCMDimensionFieldData
+  ,``Dubon2026.SourceDickson.HasOriginalIntegralCMDimensions
 ]
 
 private def runAudit : CoreM Unit := do

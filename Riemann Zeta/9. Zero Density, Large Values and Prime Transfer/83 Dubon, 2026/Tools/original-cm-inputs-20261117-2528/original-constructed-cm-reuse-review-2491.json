@@ -1,0 +1,55 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": "literal higher symmetric-power continuation -> automorphy -> actual original residual CM and polarization inputs",
+  "route": "Use original finite linear subfield character-kernel consequences on the native quadratic component; the rational bottom restriction is surjective. Derive oddness from the actual primitive even weight and global cyclotomic determinant. Construct the native polarized symmetric representation over the same original residue field. Construct a genuine imaginary quadratic field inside support 4a using the proved primitive fourth root; compare actual cyclotomic characters under existing support restriction and retain finite linear bounds by surjectivity. Apply these to the same actual modular-form residual witness.",
+  "reused": [
+    "finite_linear_bounds_original_symmetric_kernel_consequences",
+    "finiteBaseCMSymmetricPolarizedRepresentation",
+    "sourceArithmetic_real_det_of_cyclotomic",
+    "sourcePrimitive_weight_even",
+    "originalQUnramifiedUnion_exists_primitiveRoot",
+    "rationalArithmeticSupportRestriction_surjective",
+    "rationalArithmeticSupportRestriction_commutes",
+    "rationalArithmeticCyclotomicCharacter_apply_root",
+    "IsCyclotomicExtension.finrank"
+  ],
+  "removedAssumptions": [
+    "Full SL2 image over the entire original residue field is unnecessary for CM kernel symmetric spanning and absolute irreducibility.",
+    "An independently supplied CM field is replaced by a genuine field in enlarged support 4a.",
+    "Cyclotomic determinant compatibility under support enlargement is proved on primitive roots.",
+    "No new finite image assumption is supplied after support enlargement or bottom restriction."
+  ],
+  "preserved": [
+    "The same original modular-form residual representation, coefficient field and all preceding conclusions remain in the actual-form consumer.",
+    "The enlarged action is its literal pullback through the existing continuous surjective restriction.",
+    "The small-image alternative is explicit; the CM symmetric kernel consequences still require the original finite linear subfield branch."
+  ],
+  "open": [
+    "Arithmetic exclusion of small images",
+    "CM disjointness and further source local conditions",
+    "Original local deformation conditions",
+    "Automorphy",
+    "Literal higher symmetric-power continuation",
+    "Full source domains and acceptance gates DUB-17--20"
+  ],
+  "deferred": [
+    "No general H1 scalar-extension or new quadratic ramification framework is introduced.",
+    "No independent Weil-purity detour is required by the existing analytic continuation contract."
+  ],
+  "status": "All component scratch modules compile; final actual-form consumer and exhaustive audits pending. No source acceptance gate closed.",
+  "failedVariantsRetained": [
+    "2473a",
+    "2474a",
+    "2474b",
+    "2474c",
+    "2477a",
+    "2485a",
+    "2485b",
+    "2485c",
+    "2486a",
+    "2487a"
+  ]
+}

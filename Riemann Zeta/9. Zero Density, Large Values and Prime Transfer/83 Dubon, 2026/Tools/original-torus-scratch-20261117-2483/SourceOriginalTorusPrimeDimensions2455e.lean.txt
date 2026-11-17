@@ -1,0 +1,43 @@
+import SourceOriginalTorusDetectionPredicate2453b
+import SourceOriginalAffineTorusDimension2458a
+
+/-! DUB-17/18 -> original auxiliary-prime local dimensions. Add the
+proved unramified adjoint dimension at the exact primes and Frobenius
+witnesses already constructed by original torus detection. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- The original torus prime output supplies every input to the native
+cyclic-image calculation over the same original coefficient field. -/
+theorem rationalArithmetic_torus_detection_supplies_local_dimensions
+    (a : 𝓞 ℚ) (p n level : ℕ) [Fact p.Prime] (hn : 2 * n < p - 1)
+    {K : Type} [Field K] [Finite K] [CharP K p]
+    [TopologicalSpace K] [DiscreteTopology K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin (n + 1)) K)
+    (hρ : Continuous ρ) (c : continuousRepresentationCocyclesOne A)
+    (hprimes : HasArithmeticTorusDetectingPrimes a p n level A hA ρ c) :
+    HasArithmeticTorusDimensionalPrimes a p n level A hA ρ hρ c := by
+  dsimp only [HasArithmeticTorusDimensionalPrimes]
+  dsimp only [HasArithmeticTorusDetectingPrimes] at hprimes
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+  obtain ⟨u, hu, D, ψ, hψ, hD⟩ := hprimes
+  letI : Algebra ℚ D := D.algebra'
+  letI : NumberField D := NumberField.of_module_finite ℚ D
+  refine ⟨u, hu, D, ψ, hψ, ?_⟩
+  intro S
+  obtain ⟨q, hq, hqS, hqa, hmod, hunr, hlocal, hne⟩ := hD S
+  obtain ⟨γ, hγ, htorus, hregular⟩ := hlocal
+  have hdim := rationalPrime_original_affine_torus_unramified_finrank a q hq p n
+    ρ hρ D ψ (fun w => congrArg Prod.fst (hψ w)) hunr γ hγ u (by rw [hu]; exact hn) htorus
+  exact ⟨q, hq, hqS, hqa, hmod, hunr, ⟨γ, hγ, htorus, hregular⟩, hdim, hne⟩
+
+end
+end Dubon2026

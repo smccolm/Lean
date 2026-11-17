@@ -1,0 +1,71 @@
+import Dubon2026.SourceFiniteLinearOriginalConsequences
+import Dubon2026.FiniteBaseCMSymmetricMatrices
+
+/-! DUB-17/18 -> automorphy -> polarized CM deformation input. Apply the
+already proved original-field character-kernel theorem to the actual native
+quadratic component. This removes the stronger full-residue-field SL2-image
+hypothesis from the native CM symmetric irreducibility consumer. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix
+open scoped NumberField
+/-- Keep the literal rational scalar structure on the original union. -/
+private local instance originalCMKernelUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+/-- The actual CM component kernel retains full original symmetric spans,
+absolute irreducibility and trace-zero adjoint vanishing under the constructed
+finite linear subfield bounds. No full original-field SL2 image is assumed. -/
+theorem finite_linear_bounds_original_cm_kernel_consequences
+    (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F]
+    (C : IntermediateField F (rationalUnramifiedExtension a))
+    [IsQuadraticExtension F C]
+    (p : ℕ) [Fact p.Prime] {L : Type} [Field L] [CharP L p]
+    [TopologicalSpace L] [DiscreteTopology L]
+    (j : L →+* K p)
+    (ρ : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) L)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ.toMonoidHom) :
+    HasOriginalSymmetricKernelConsequences p
+      (ρ.toMonoidHom.comp (finiteBaseQuadraticComponent a F C).toMonoidHom.ker.subtype) := by
+  exact finite_linear_bounds_original_symmetric_kernel_consequences p j ρ.toMonoidHom
+    (finiteBaseQuadraticComponent a F C).toMonoidHom hp3 h
+
+/-- The first component of the actual native CM symmetric matrices spans
+its entire matrix algebra over the original residue field. -/
+theorem finite_linear_bounds_original_cm_matrix_span
+    (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F]
+    (C : IntermediateField F (rationalUnramifiedExtension a))
+    [IsQuadraticExtension F C]
+    (p n : ℕ) [Fact p.Prime] {L : Type} [Field L] [CharP L p]
+    [TopologicalSpace L] [DiscreteTopology L]
+    (j : L →+* K p)
+    (ρ : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) L)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ.toMonoidHom)
+    (hn : 2 * n < p - 1) :
+    Submodule.span L (Set.range (fun g : FiniteBaseCMKernel a F C =>
+      ((finiteBaseCMSymmetricMatrices a F C n ρ g).1).val)) = ⊤ := by
+  exact (finite_linear_bounds_original_cm_kernel_consequences a F C p j ρ hp3 h).1 n hn
+
+/-- The actual native CM symmetric matrices are absolutely irreducible
+throughout the source degree range, over the original coefficient field. -/
+theorem finite_linear_bounds_original_cm_absolute_irreducible
+    (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F]
+    (C : IntermediateField F (rationalUnramifiedExtension a))
+    [IsQuadraticExtension F C]
+    (p n : ℕ) [Fact p.Prime] {L : Type} [Field L] [CharP L p]
+    [TopologicalSpace L] [DiscreteTopology L]
+    (j : L →+* K p)
+    (ρ : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) L)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ.toMonoidHom)
+    (hn : 2 * n < p - 1) {E : Type} [Field E] [Algebra L E] :
+    Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := E)
+        ((MonoidHom.fst _ _).comp (finiteBaseCMSymmetricMatrices a F C n ρ).toMonoidHom))) := by
+  exact matrixRepresentation_absolute_irreducible_of_span _
+    (finite_linear_bounds_original_cm_matrix_span a F C p n j ρ hp3 h hn)
+
+end
+end Dubon2026.SourceDickson

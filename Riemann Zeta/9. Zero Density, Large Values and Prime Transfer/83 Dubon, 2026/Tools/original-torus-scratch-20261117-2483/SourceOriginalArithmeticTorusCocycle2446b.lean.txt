@@ -1,0 +1,95 @@
+import SourceOriginalArithmeticRootKernel
+import SourceFiniteLinearOriginalTorusDetection2443b
+
+/-! DUB-17/18 -> original regular auxiliary primes. Combine the genuine
+root-fixing kernel value with the subfield regular trace test and native
+kernel translation. The non-coboundary statement and symmetric torus conjugacy both remain over the original field; the unit has exact order p-1. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+
+/-- Actual finite linear bounds construct a root-fixing original torus element
+whose original twisted cocycle value is outside the original coboundary range. -/
+theorem original_arithmetic_symmetricH1_exists_torus_root_detection
+    (a : 𝓞 ℚ) (p degree level : ℕ) [Fact p.Prime]
+    (hpa : (p : 𝓞 ℚ) ∣ a)
+    {F : Type} [Field F] [CharP F p] [TopologicalSpace F] [IsTopologicalRing F]
+    (j : F →+* K p)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) F)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ) (hn : 2 * degree < p - 1)
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a ×
+        matrixTraceZeroSubmodule (Fin (degree + 1)) F =>
+      (matrixTraceZeroCharacterRep ((homogeneousSymmetricGL degree).comp ρ)
+        (rationalArithmeticCyclotomicCoefficientCharacter a p hpa F).toMonoidHom).ρ
+          z.1 z.2))
+    (c : continuousRepresentationCocyclesOne (matrixTraceZeroCharacterRep
+      ((homogeneousSymmetricGL degree).comp ρ)
+      (rationalArithmeticCyclotomicCoefficientCharacter a p hpa F).toMonoidHom))
+    (hc : (Submodule.Quotient.mk c : ContinuousRepresentationH1
+      (matrixTraceZeroCharacterRep ((homogeneousSymmetricGL degree).comp ρ)
+        (rationalArithmeticCyclotomicCoefficientCharacter a p hpa F).toMonoidHom) hA) ≠ 0) :
+    let U := rationalUnramifiedExtension a
+    letI : Algebra ℚ U := U.algebra'
+    ∀ ζ : U, IsPrimitiveRoot ζ (p ^ (level + 1)) →
+      ∃ σ : Gal(U/ℚ), σ ζ = ζ ∧
+        (homogeneousSymmetricGL degree (ρ σ)).val.charpoly.Separable ∧
+        ∃ u : Fˣ, orderOf u = p - 1 ∧
+          IsConj (homogeneousSymmetricGL degree (ρ σ))
+            (homogeneousSymmetricGL degree (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))) ∧
+          c.val σ ∉ LinearMap.range
+          ((matrixTraceZeroCharacterRep ((homogeneousSymmetricGL degree).comp ρ)
+            (rationalArithmeticCyclotomicCoefficientCharacter a p hpa F).toMonoidHom).ρ σ - 1) := by
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  dsimp only
+  intro ζ hζ
+  obtain ⟨τ, hτζ, hρτ, hχτ, hcτ⟩ := original_arithmetic_symmetricH1_exists_nonzero_root_kernel
+    a p degree level hpa j ρ hp3 h hA c hc ζ hζ
+  let χp := (rationalArithmeticCyclotomicCharacter a p hpa).toMonoidHom
+  let χ := (hζ.autToPow ℚ).prod χp
+  let ω := (finiteCyclotomicCoefficientMap p F).toMonoidHom.comp
+    (MonoidHom.snd (ZMod (p ^ (level + 1)))ˣ (ZMod p)ˣ)
+  let R := (homogeneousSymmetricGL degree).comp ρ
+  let ξ := (rationalArithmeticCyclotomicCoefficientCharacter a p hpa F).toMonoidHom
+  let A := matrixTraceZeroCharacterRep R ξ
+  obtain ⟨g, hg, hregular, u, hu, hconj, hnonmem⟩ := finite_linear_bounds_original_torus_kernel_detection
+    p degree j ρ χ ω hp3 h hn (c.val τ) hcτ
+  have hgζ : (show Gal(U/ℚ) from g) ζ = ζ := by
+    have hr : hζ.autToPow ℚ g = 1 := congrArg Prod.fst hg
+    have he : hζ.autToPow ℚ g = hζ.autToPow ℚ 1 := hr.trans (map_one _).symm
+    rw [← hζ.autToPow_spec ℚ g, he, hζ.autToPow_spec ℚ 1]
+    rfl
+  have hξτ : ξ τ = 1 := by
+    change finiteCyclotomicCoefficientMap p F (rationalArithmeticCyclotomicCharacter a p hpa τ) = 1
+    rw [hχτ, map_one]
+  have hRτ : R τ = 1 := by change homogeneousSymmetricGL degree (ρ τ) = 1; rw [hρτ, map_one]
+  have hscalar : (R τ).val = (1 : F) • (1 : Matrix (Fin (degree + 1)) (Fin (degree + 1)) F) := by
+    rw [hRτ]; simp
+  have hAτ : A.ρ τ = 1 := matrixTraceZeroCharacterRep_eq_one_of_scalar R ξ τ hξτ 1 hscalar
+  let H : Subgroup (rationalArithmeticGaloisGroup a) := MulAction.stabilizer Gal(U/ℚ) ζ
+  have hgH : g ∈ H := by
+    change (show Gal(U/ℚ) from g) ∈ MulAction.stabilizer Gal(U/ℚ) ζ
+    exact MulAction.mem_stabilizer_iff.mpr hgζ
+  have hτH : τ ∈ H := by
+    change (show Gal(U/ℚ) from τ) ∈ MulAction.stabilizer Gal(U/ℚ) ζ
+    exact MulAction.mem_stabilizer_iff.mpr hτζ
+  obtain ⟨σ, hσH, hσ, hdetect⟩ := cocycle_exists_detecting_kernel_translate
+    A c.val H g τ hgH hτH hAτ hnonmem
+  have hσζ : (show Gal(U/ℚ) from σ) ζ = ζ := by
+    change (show Gal(U/ℚ) from σ) ∈ MulAction.stabilizer Gal(U/ℚ) ζ at hσH
+    exact MulAction.mem_stabilizer_iff.mp hσH
+  have hRσ : R σ = R g := by
+    rcases hσ with rfl | rfl
+    · rfl
+    · rw [map_mul, hRτ, one_mul]
+  refine ⟨σ, hσζ, ?_, u, hu, ?_, hdetect⟩
+  · change (R σ).val.charpoly.Separable
+    rw [hRσ]
+    exact hregular
+  · change IsConj (R σ) _
+    rw [hRσ]
+    exact hconj
+
+end
+end Dubon2026.SourceDickson

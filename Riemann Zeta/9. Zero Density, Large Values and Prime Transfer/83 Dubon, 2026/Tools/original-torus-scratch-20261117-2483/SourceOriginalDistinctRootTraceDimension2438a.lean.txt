@@ -1,0 +1,29 @@
+import SourceOriginalDiagonalConjugacy2433a
+import Dubon2026.DistinctDiagonalTraceFixed
+import Dubon2026.RepresentationConjugateFixedSpace
+
+/-! DUB-17/18 -> exact original local invariant dimensions. Distinct
+characteristic roots in the original field now suffice: construct its
+conjugator and reuse the native trace-zero diagonal dimension theorem. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- Distinct original characteristic roots determine the trace-zero
+adjoint fixed dimension over the original field, with no conjugator premise. -/
+theorem matrixOriginalDistinctRootsTraceFixed_finrank
+    {F ι : Type} [Field F] [Fintype ι] [DecidableEq ι] [Nonempty ι]
+    (A : GeneralLinearGroup ι F) (w : ι → F) (hw : Function.Injective w)
+    (hroot : ∀ i, A.val.charpoly.IsRoot (w i)) :
+    Module.finrank F (LinearMap.ker
+      ((matrixTraceZeroAdjointRep (MonoidHom.id (GeneralLinearGroup ι F))).ρ A - 1)) + 1 =
+      Fintype.card ι := by
+  obtain ⟨C, hC⟩ := matrix_exists_original_diagonal_conjugator_of_distinct_roots
+    A.val w hw hroot
+  have hd := matrixDistinctDiagonalTraceFixed_finrank
+    (MonoidHom.id (GeneralLinearGroup ι F)) (C * A * C⁻¹) w hw hC
+  rw [representationConjugateFixed_finrank] at hd
+  exact hd
+
+end
+end Dubon2026

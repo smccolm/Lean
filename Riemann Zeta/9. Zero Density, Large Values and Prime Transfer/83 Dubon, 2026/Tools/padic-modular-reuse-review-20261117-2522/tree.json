@@ -1,0 +1,763 @@
+{
+  "sha": "018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+  "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f168bb4f3a7a5e889a0f986cc4ba7125c5890786",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/f168bb4f3a7a5e889a0f986cc4ba7125c5890786"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "748602121fbbc2ee4b99ae56adc1e6fa191649da",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/748602121fbbc2ee4b99ae56adc1e6fa191649da"
+    },
+    {
+      "path": ".github/workflows/create-release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dacf77ca24a1a2a99dc974d16c53408e8b32058",
+      "size": 427,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/6dacf77ca24a1a2a99dc974d16c53408e8b32058"
+    },
+    {
+      "path": ".github/workflows/lean_action_ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "066d1fb8e33bfc22788a93f71bbbcebfec550a17",
+      "size": 5420,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/066d1fb8e33bfc22788a93f71bbbcebfec550a17"
+    },
+    {
+      "path": ".github/workflows/update.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b7622a72a1c6d92e3927a2f494656c0797fc00",
+      "size": 1950,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/96b7622a72a1c6d92e3927a2f494656c0797fc00"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47aa2d30ef754b504d465a5d6c77b39b3d8877ad",
+      "size": 543,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/47aa2d30ef754b504d465a5d6c77b39b3d8877ad"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4648ae92f262c2531cabdb0f69c92885bfbbaece",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/4648ae92f262c2531cabdb0f69c92885bfbbaece"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acf12cdca972ba1a3c8b2a5e4b4f1446a5c15b8e",
+      "size": 374,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/acf12cdca972ba1a3c8b2a5e4b4f1446a5c15b8e"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d84076a7f8e079ac61d713a9352b69e97c6bb88a",
+      "size": 1834,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/d84076a7f8e079ac61d713a9352b69e97c6bb88a"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8f8e60ea062f7daa4fba9cc005ac709acd82ebf",
+      "size": 13313,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/c8f8e60ea062f7daa4fba9cc005ac709acd82ebf"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47740160bd3f8c0018e9c4bbffc6da9dcba2e046",
+      "size": 233,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/47740160bd3f8c0018e9c4bbffc6da9dcba2e046"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf17439856f5ca8340b782fa241e2dde3c97d006",
+      "size": 10767,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/bf17439856f5ca8340b782fa241e2dde3c97d006"
+    },
+    {
+      "path": "PadicModForms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59f213d0d0c3e907d752280e9afc3336ba786ae9",
+      "size": 2719,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/59f213d0d0c3e907d752280e9afc3336ba786ae9"
+    },
+    {
+      "path": "PadicModForms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66c25b7111a8c3666f59b9c961e0216e4bebb0e4",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/66c25b7111a8c3666f59b9c961e0216e4bebb0e4"
+    },
+    {
+      "path": "PadicModForms/ForMathlib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e8048122ff89390052ed0a71cd2e28c0155d03a",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/2e8048122ff89390052ed0a71cd2e28c0155d03a"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/38813.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd553169d1ed919aa11126f1dae0e0ded2c46258",
+      "size": 16026,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/bd553169d1ed919aa11126f1dae0e0ded2c46258"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/Bernoulli.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1affacce8bc129ae5526e9ae03f1b24f8c4adb1f",
+      "size": 12919,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1affacce8bc129ae5526e9ae03f1b24f8c4adb1f"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/Choose.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "431835d58d507654bc593e2416c47e5cbd1610b9",
+      "size": 1709,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/431835d58d507654bc593e2416c47e5cbd1610b9"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/ContinuousMonoidHom.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1deb96c0f62bbd3c6abf9d2bf2ddc99b95f160ce",
+      "size": 1045,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1deb96c0f62bbd3c6abf9d2bf2ddc99b95f160ce"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/DirectSum.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "091104ba0c004311790391dc3bfe669720cd0e81",
+      "size": 712,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/091104ba0c004311790391dc3bfe669720cd0e81"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/E2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8174dec5836f4d2ced84c164c9ea2f21630b0f5f",
+      "size": 2068,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/8174dec5836f4d2ced84c164c9ea2f21630b0f5f"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/EInt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a34fe569c33d48f1268ed7372c375a66c2269a5c",
+      "size": 2826,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/a34fe569c33d48f1268ed7372c375a66c2269a5c"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/Finsupp.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f555449aa0b9f68e14f527222da9f93d8c7449b",
+      "size": 2450,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/8f555449aa0b9f68e14f527222da9f93d8c7449b"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/IntLocalization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae1bfff0c94cd27e2c533ddda8e9b270fb63cff9",
+      "size": 14457,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/ae1bfff0c94cd27e2c533ddda8e9b270fb63cff9"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/LinearIndependent.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "938ef5bcf18a7951e96eb406721eb363ca9065f1",
+      "size": 6345,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/938ef5bcf18a7951e96eb406721eb363ca9065f1"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/MvPolynomial.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e34b2e83b52a8e8f2d9413a104d9b6d0b73e46b1",
+      "size": 5781,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/e34b2e83b52a8e8f2d9413a104d9b6d0b73e46b1"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/NatPrime.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b4675c7f84e3789526df5301caad813936eafc9",
+      "size": 1336,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/3b4675c7f84e3789526df5301caad813936eafc9"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/Padic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcda6aa71da52cfa1edeee0e3cd43bf31284d096",
+      "size": 5362,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/bcda6aa71da52cfa1edeee0e3cd43bf31284d096"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/PadicUnits.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce345ee2bdc11f97af75ff22e1fdd4f7de438455",
+      "size": 7645,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/ce345ee2bdc11f97af75ff22e1fdd4f7de438455"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/PowerSeries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cbe31688d3aec7ac7fdd30392e3f157acaa295d",
+      "size": 2226,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/5cbe31688d3aec7ac7fdd30392e3f157acaa295d"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/PowerSeriesTopology.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d2d280f88a6bfc52f8099db371707a71fec9050",
+      "size": 7364,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/5d2d280f88a6bfc52f8099db371707a71fec9050"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/QExpansion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90da0535bcff8ca4658461d8ebcb65ec9a79a9a6",
+      "size": 9017,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/90da0535bcff8ca4658461d8ebcb65ec9a79a9a6"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/QExpansionDeriv.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c899b411ae9027cb44fa9a439c1bc6bcd4a4b48e",
+      "size": 7171,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/c899b411ae9027cb44fa9a439c1bc6bcd4a4b48e"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/RationalRoot.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7dd3ee3a425a376523ce4a726e3ce16ff6c8b0d",
+      "size": 1868,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/d7dd3ee3a425a376523ce4a726e3ce16ff6c8b0d"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/SigmaSeries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c00551469a44b519a533c0a3e85df67495c6eb5c",
+      "size": 9517,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/c00551469a44b519a533c0a3e85df67495c6eb5c"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/SpecificLimits.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92c6be73ab352ae7a2aae834f4c5a6f345ea4117",
+      "size": 755,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/92c6be73ab352ae7a2aae834f4c5a6f345ea4117"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/Theta.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229cc89b87e83c7665f07a16169d7ba8ff07bcd7",
+      "size": 2602,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/229cc89b87e83c7665f07a16169d7ba8ff07bcd7"
+    },
+    {
+      "path": "PadicModForms/ForMathlib/WeightedHomogeneous.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bab3eb5d2793e87dad5f7aefb46c812a1f0716e2",
+      "size": 15323,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/bab3eb5d2793e87dad5f7aefb46c812a1f0716e2"
+    },
+    {
+      "path": "PadicModForms/ModP",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a80a1ab99e4a4d6b1f9ebb17b70b5e5f466cb9d",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/9a80a1ab99e4a4d6b1f9ebb17b70b5e5f466cb9d"
+    },
+    {
+      "path": "PadicModForms/ModP/ArtinSchreier.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e09175513bb2a475c8d5fb2e6393720eb5bb11d",
+      "size": 7023,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1e09175513bb2a475c8d5fb2e6393720eb5bb11d"
+    },
+    {
+      "path": "PadicModForms/ModP/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8bc50e844f7f77b9781923c035cf3030a484474",
+      "size": 5194,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/b8bc50e844f7f77b9781923c035cf3030a484474"
+    },
+    {
+      "path": "PadicModForms/ModP/Congruences.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "169bc60cebeaa31910e846b5103f64c12f7a84e3",
+      "size": 9676,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/169bc60cebeaa31910e846b5103f64c12f7a84e3"
+    },
+    {
+      "path": "PadicModForms/ModP/Differential.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44b8df3ae12e8120ad537e1fdeee1dda7b573b7f",
+      "size": 9723,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/44b8df3ae12e8120ad537e1fdeee1dda7b573b7f"
+    },
+    {
+      "path": "PadicModForms/ModP/Eisenstein.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30fb5892a83a61c70b2150b5a23f15e9b91d749a",
+      "size": 3351,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/30fb5892a83a61c70b2150b5a23f15e9b91d749a"
+    },
+    {
+      "path": "PadicModForms/ModP/Filtration.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e97d2fc2acb272eaf27eacc25d2e73cc5896311",
+      "size": 14638,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1e97d2fc2acb272eaf27eacc25d2e73cc5896311"
+    },
+    {
+      "path": "PadicModForms/ModP/Graded.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eff6b579c5cb8bf6ae5354c1160a2f6edd51dcb6",
+      "size": 7671,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/eff6b579c5cb8bf6ae5354c1160a2f6edd51dcb6"
+    },
+    {
+      "path": "PadicModForms/ModP/Hasse.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afbec8bdb303704c87f13ead75b4a13800ab7294",
+      "size": 4103,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/afbec8bdb303704c87f13ead75b4a13800ab7294"
+    },
+    {
+      "path": "PadicModForms/ModP/KerEval.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3589a5bfd9a463155dca8832c99dcf2354360dc3",
+      "size": 12916,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/3589a5bfd9a463155dca8832c99dcf2354360dc3"
+    },
+    {
+      "path": "PadicModForms/ModP/Ramanujan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d3170f9890785ea825a5a97f7e26f588dd7e1a4",
+      "size": 3270,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/9d3170f9890785ea825a5a97f7e26f588dd7e1a4"
+    },
+    {
+      "path": "PadicModForms/ModP/Squarefree.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "249c598c8cec8e417d07ced0f13ca17cd5737214",
+      "size": 16722,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/249c598c8cec8e417d07ced0f13ca17cd5737214"
+    },
+    {
+      "path": "PadicModForms/ModP/ThetaFiltration.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a5fd9e3a19cb1d22b5fbd576c4470fba5140a34",
+      "size": 9079,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/6a5fd9e3a19cb1d22b5fbd576c4470fba5140a34"
+    },
+    {
+      "path": "PadicModForms/ModP/WeightZero.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cff34000964334e7d9545e5973d44694935fc63",
+      "size": 16476,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/6cff34000964334e7d9545e5973d44694935fc63"
+    },
+    {
+      "path": "PadicModForms/ModP/Weights.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63f9f2ce6738708fd86999e234207c20d02f729b",
+      "size": 3659,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/63f9f2ce6738708fd86999e234207c20d02f729b"
+    },
+    {
+      "path": "PadicModForms/PAdic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d284d362892d1770ccda45d27d7052527b414ab",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/3d284d362892d1770ccda45d27d7052527b414ab"
+    },
+    {
+      "path": "PadicModForms/PAdic/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7934b015789261510af5b939fd33e310a1ebf15",
+      "size": 15498,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/e7934b015789261510af5b939fd33e310a1ebf15"
+    },
+    {
+      "path": "PadicModForms/PAdic/Classical.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e0bee48593733c6b8bb4a5fa26f3be33d160e34",
+      "size": 6619,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/2e0bee48593733c6b8bb4a5fa26f3be33d160e34"
+    },
+    {
+      "path": "PadicModForms/PAdic/Defs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e95517fe2530f34cab1254dee947885ab1787d8",
+      "size": 4421,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1e95517fe2530f34cab1254dee947885ab1787d8"
+    },
+    {
+      "path": "PadicModForms/PAdic/Eisenstein.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb235b0c2bbbbb0e2d995e496a6beb73995abdf5",
+      "size": 3129,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/eb235b0c2bbbbb0e2d995e496a6beb73995abdf5"
+    },
+    {
+      "path": "PadicModForms/PAdic/Weights",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad3ee9bf16f2900633ba8bb5e5c6b91a4f85748a",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/ad3ee9bf16f2900633ba8bb5e5c6b91a4f85748a"
+    },
+    {
+      "path": "PadicModForms/PAdic/Weights/Congruence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "145ceeefe709ab447c3d73a6ad4c4b65f98dc56a",
+      "size": 5939,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/145ceeefe709ab447c3d73a6ad4c4b65f98dc56a"
+    },
+    {
+      "path": "PadicModForms/PAdic/Weights/CongruencePow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71789e669caef6db47a406ede70a82e132a0cb6f",
+      "size": 13955,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/71789e669caef6db47a406ede70a82e132a0cb6f"
+    },
+    {
+      "path": "PadicModForms/PAdic/Weights/Defs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c6e22d1be4a64da0125af2da0c6a80fd8415127",
+      "size": 3628,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/3c6e22d1be4a64da0125af2da0c6a80fd8415127"
+    },
+    {
+      "path": "PadicModForms/PAdic/Weights/Presentation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "072de180537d0fe42e240076b0dfe608357e4798",
+      "size": 9489,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/072de180537d0fe42e240076b0dfe608357e4798"
+    },
+    {
+      "path": "PadicModForms/PAdic/Weights/Topology.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82f5300a83d674193620021d10dcf95affec7e5e",
+      "size": 7966,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/82f5300a83d674193620021d10dcf95affec7e5e"
+    },
+    {
+      "path": "PadicModForms/Rational",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99ae176b05c85816a4d2f1a8717091ad99854922",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/99ae176b05c85816a4d2f1a8717091ad99854922"
+    },
+    {
+      "path": "PadicModForms/Rational/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9be685f0b8b079bd98a2af374d08db5b391d9a39",
+      "size": 11384,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/9be685f0b8b079bd98a2af374d08db5b391d9a39"
+    },
+    {
+      "path": "PadicModForms/Rational/E2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "191170327a01189ccda5f03a2a4e487734a8c8f9",
+      "size": 1427,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/191170327a01189ccda5f03a2a4e487734a8c8f9"
+    },
+    {
+      "path": "PadicModForms/Rational/Eisenstein.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63344bfb4cb06f80eaa8a3622ac46ecf3ac3b624",
+      "size": 7791,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/63344bfb4cb06f80eaa8a3622ac46ecf3ac3b624"
+    },
+    {
+      "path": "PadicModForms/Rational/Graded.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3ee0450bd5d97da1e9e9af4890ecc52f95cb128",
+      "size": 14571,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/d3ee0450bd5d97da1e9e9af4890ecc52f95cb128"
+    },
+    {
+      "path": "PadicModForms/Rational/Ramanujan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69f9ce54c37c24b911c2bc295f212e4c2f822b34",
+      "size": 5434,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/69f9ce54c37c24b911c2bc295f212e4c2f822b34"
+    },
+    {
+      "path": "PadicModForms/pLocalInt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8fc6fb5ee33077c5f3d78f6e3881b35311eef71",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/f8fc6fb5ee33077c5f3d78f6e3881b35311eef71"
+    },
+    {
+      "path": "PadicModForms/pLocalInt/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f67b5641b69ff3fffeb3ee024726c19c8bb5354e",
+      "size": 6920,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/f67b5641b69ff3fffeb3ee024726c19c8bb5354e"
+    },
+    {
+      "path": "PadicModForms/pLocalInt/Discriminant.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d0dca138ab551b00705fb987fae80b0afab8a7f",
+      "size": 16409,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/0d0dca138ab551b00705fb987fae80b0afab8a7f"
+    },
+    {
+      "path": "PadicModForms/pLocalInt/Eisenstein.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ee8f1fb074038131884283cb513ae6f7163ccab",
+      "size": 9251,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/4ee8f1fb074038131884283cb513ae6f7163ccab"
+    },
+    {
+      "path": "PadicModForms/pLocalInt/Graded.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a3c18406741934491592de277c27c5e6b3c201",
+      "size": 10519,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/49a3c18406741934491592de277c27c5e6b3c201"
+    },
+    {
+      "path": "PadicModForms/pLocalInt/Ramanujan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a0333c5e24d927bf808ba63f896aa1bcbb08a3e",
+      "size": 1879,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/4a0333c5e24d927bf808ba63f896aa1bcbb08a3e"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a796c6bb164fe0a5e6a47c38800d5d1bd51d886",
+      "size": 2535,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/5a796c6bb164fe0a5e6a47c38800d5d1bd51d886"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01bbffdd8b8e62105077eeb403c5d2afaf888c25",
+      "size": 3150,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/01bbffdd8b8e62105077eeb403c5d2afaf888c25"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ea5bb3cc3a74cf3a9fae156dee111ada437f0c1",
+      "size": 615,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/9ea5bb3cc3a74cf3a9fae156dee111ada437f0c1"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b8f26832579c0d872b03e43784c74f9bdf83070",
+      "size": 28,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/9b8f26832579c0d872b03e43784c74f9bdf83070"
+    },
+    {
+      "path": "verso",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc20fcfd2b6261de320395518602b76d4cc36d51",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/bc20fcfd2b6261de320395518602b76d4cc36d51"
+    },
+    {
+      "path": "verso/Doc.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287f0dff22294071d17fef37613158e350d4c06e",
+      "size": 509,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/287f0dff22294071d17fef37613158e350d4c06e"
+    },
+    {
+      "path": "verso/Doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10cd2cd8442340a37db5b74500287c66694fa5e9",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/10cd2cd8442340a37db5b74500287c66694fa5e9"
+    },
+    {
+      "path": "verso/Doc/Introduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1838da2f4c3a9d2c0b617e6decd92f618fb31c69",
+      "size": 3760,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1838da2f4c3a9d2c0b617e6decd92f618fb31c69"
+    },
+    {
+      "path": "verso/Doc/ModP.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d9d9c07a83a52ba462d3658c0108fbd726b6fc3",
+      "size": 3077,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/9d9d9c07a83a52ba462d3658c0108fbd726b6fc3"
+    },
+    {
+      "path": "verso/Doc/PAdic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b29182584858a4ab4237ff2a95199e8edf6b516",
+      "size": 3758,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/1b29182584858a4ab4237ff2a95199e8edf6b516"
+    },
+    {
+      "path": "verso/Doc/PLocalInt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ae6e372b563217d46c7fd18524224bc2a980baf",
+      "size": 4528,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/3ae6e372b563217d46c7fd18524224bc2a980baf"
+    },
+    {
+      "path": "verso/Doc/Preliminaries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9e071cdbbc69d639136dec63c7453fc3115cb2f",
+      "size": 5314,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/a9e071cdbbc69d639136dec63c7453fc3115cb2f"
+    },
+    {
+      "path": "verso/Doc/Rational.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b6216d1b2a3c1d7913f93dfb0952fbd45a7bbe7",
+      "size": 3983,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/7b6216d1b2a3c1d7913f93dfb0952fbd45a7bbe7"
+    },
+    {
+      "path": "verso/Doc/References.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d6eaaf15365b8f78226dde9b9180fd3b289b853",
+      "size": 844,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/5d6eaaf15365b8f78226dde9b9180fd3b289b853"
+    },
+    {
+      "path": "verso/Doc/TitleMath.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b3e7c7b3ced88bb322097a8c8d727460e560477",
+      "size": 1590,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/8b3e7c7b3ced88bb322097a8c8d727460e560477"
+    },
+    {
+      "path": "verso/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "177999264263cbfeb0f4072107602edd0a3a0066",
+      "size": 634,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/177999264263cbfeb0f4072107602edd0a3a0066"
+    },
+    {
+      "path": "verso/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d20a528b0407827425d181febe79eb1ae8e841",
+      "size": 3493,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/e0d20a528b0407827425d181febe79eb1ae8e841"
+    },
+    {
+      "path": "verso/lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43e546ada872a5d893215cbe404cf5dfb4bc1c6",
+      "size": 1163,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/c43e546ada872a5d893215cbe404cf5dfb4bc1c6"
+    },
+    {
+      "path": "verso/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b8f26832579c0d872b03e43784c74f9bdf83070",
+      "size": 28,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/9b8f26832579c0d872b03e43784c74f9bdf83070"
+    },
+    {
+      "path": "verso/theme.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8985392acdde4ce3c18713543f476afa25d1f60c",
+      "size": 5041,
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/blobs/8985392acdde4ce3c18713543f476afa25d1f60c"
+    }
+  ],
+  "truncated": false
+}

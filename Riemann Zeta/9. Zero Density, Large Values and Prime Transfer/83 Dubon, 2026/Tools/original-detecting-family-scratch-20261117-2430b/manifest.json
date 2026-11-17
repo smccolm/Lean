@@ -1,0 +1,670 @@
+{
+  "status": "Scratch PASS: the same actual original residual representation has dimension-bounded jointly detecting regular-prime families for every original symmetric twisted H1 subspace on its finite linear subfield branch. Full arithmetic data and all preceding conclusions are retained. Production promotion and assembled verification remain pending.",
+  "modules": 9,
+  "publicQueries": 13,
+  "publicTheorems": 8,
+  "publicConstructions": 5,
+  "exhaustiveTheorems": 41,
+  "otherDeclarations": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 138,
+  "typeValueFingerprints": 51,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-regular-prime-scratch-20261117-2408/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies.lean.txt",
+      "sha256": "718CF8691B872D64B50619F967F1113188E9D69CA283AAE515D1F7FB4980A2FA"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies2417a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies2417a.lean.txt",
+      "sha256": "DF2171E4CC474CF942DAAC03F9CB3C4E5FF37D7DF2492EC1D19CA1FFB7543491"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies2417a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies2417b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies2417b.lean.txt",
+      "sha256": "4B352B66791F7B6EA7D538B44B999EB5AE9B5BCAE273030F933E3DBB5050E788"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceGammaOneOriginalDetectingFamilies2417b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty.lean.txt",
+      "sha256": "536E382459E87C962DC98C7A5D692B77AD61AB8788779297D43A0A464DDF7B3E"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415a.lean.txt",
+      "sha256": "338D685FB228A3465007F266AC8A7E56CF26583953533C118A800E8863420CBA"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415b.lean.txt",
+      "sha256": "401A5E294080F31130830D0A353F2065744AD25079FDD98E52D92D365C051CDE"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415c.lean.txt",
+      "sha256": "302FC76819E1F7B3B73F250C3B21621FC1B81D47AE9E9E202F4CE478425CCC58"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalArithmeticFamilyProperty2415c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates.lean.txt",
+      "sha256": "2ED6EFFA5946321EA309D5A960311AFCBE3B767655DDA098AACB429DF6054772"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates2412a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates2412a.lean.txt",
+      "sha256": "E9D71D0EB722DA3362366381E140A718737F55C49921D4235B42045715D5A981"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates2412a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates2412b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates2412b.lean.txt",
+      "sha256": "2ED6EFFA5946321EA309D5A960311AFCBE3B767655DDA098AACB429DF6054772"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassPrimePredicates2412b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes.lean.txt",
+      "sha256": "AEAEBD538A3DD3FCE66E53FD95A6522BBB83877A78F462CC3B305E2684D9E7D5"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410a.lean.txt",
+      "sha256": "850F3B5805AE8E64AA9DB443620DBC552850F8E627963D94AD08D9E54A54A449"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410a.log",
+      "sha256": "D866BB3508D1E1A73348AE57F12174047F0E96FC174264B37E1C965FB1EEA2E6"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410b.lean.txt",
+      "sha256": "EB93A03BE823F6153F2985812FE8B94F1E1EA39ED669D43C040002D1293DA546"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410b.log",
+      "sha256": "DE2D6307F94562197E652ADD289EC7387045591E69B8E1F404EC2C231AEC5567"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410c.lean.txt",
+      "sha256": "A94DD29980C80F4EA526BD146C1122548057DB602992AFC678D82104A084C9AA"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410d.lean.txt",
+      "sha256": "6F5C0273D781A0096C2BB19F3E867CE50693C6D80B7D247C03E0A9977E70A36E"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalClassRegularPrimes2410d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes.lean.txt",
+      "sha256": "F616669EE76A83AD2EC4DF02DC387B0F2D80073547520CC248783E2EEA4F83B4"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes2414a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes2414a.lean.txt",
+      "sha256": "C6BFA62889EEEDA7044A8DB87A7C8892801FD4EC8236B68AC04E6DBD21C16D21"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes2414a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes2414b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes2414b.lean.txt",
+      "sha256": "52B5F1B06B9A14198779D113E78570D82821D98A90FE6089FFAADE639C392A2C"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCocycleClassPrimes2414b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite.lean.txt",
+      "sha256": "A01B51DC4D616E04EC590F5E4E9D09ABBD4185A73232B6560E7D34F9E177D057"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite2409a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite2409a.lean.txt",
+      "sha256": "0DC0A6D360F1F5C7FC957E1544480DFA51C58F760C0CF37C1CE6D3A0897659BD"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite2409a.log",
+      "sha256": "44D2DE04DBFBCD310232F22E00054266C1977CE1CADF53D23739E41DA03BEED4"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite2409b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite2409b.lean.txt",
+      "sha256": "A01B51DC4D616E04EC590F5E4E9D09ABBD4185A73232B6560E7D34F9E177D057"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalCoefficientH1Finite2409b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyAudit1.lean.txt",
+      "sha256": "1D5FE72A9586757DCB4C0000609E0D02E3D4227264FBD8EAFC0C01FDB92D4550"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyAudit1.log",
+      "sha256": "C91025292B9B9F63964BB78E3917E56D84B6652D37EE19F83DBA7A130B8718A9"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyAudit2.lean.txt",
+      "sha256": "1D5FE72A9586757DCB4C0000609E0D02E3D4227264FBD8EAFC0C01FDB92D4550"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyAudit2.log",
+      "sha256": "BF3A14CCE50824DCA691963A2CC4C387C449CB73F933954524C1C37807DB4241"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyDeclarations2427.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyDeclarations2427.lean.txt",
+      "sha256": "27E239A852FE42726E00AD30D5A975EC5A7F2261883421F1D2C25887D7F37364"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyDeclarations2427.log",
+      "sha256": "563E71E665AC47986027CD377976AF3A345A1DDB6C78C31C81FE1612D1592708"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyDependencyAudit2.lean.txt",
+      "sha256": "E323B8FCFB3AF2E33D9D2D1C63DCA3A693458122206989E126B2FBC2F3E1908B"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyDependencyAudit2.log",
+      "sha256": "533C044AE8938A556FF5285A9E37C8289EE5C1FA36681B977E8D237ACF56F3B7"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProductionSemantic2428.lean.txt",
+      "sha256": "107C74A4C189C572322E73C21C2DB49600FC8769FC40F91A285BE897E8C92F25"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty.lean.txt",
+      "sha256": "D089F893A5F6469473E0554865C2953590D162F65B37154752179740BF0B8003"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty2413a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty2413a.lean.txt",
+      "sha256": "1888E408040FD7B6D830392B246244F53934D47D7C6A5A8549159A58CFCAF050"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty2413a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty2413b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty2413b.lean.txt",
+      "sha256": "A5ACF16929219739F74672F8664A47D94D78C3A6685391B622607872FE2E849E"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyProperty2413b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyScratchSemantic2428.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyScratchSemantic2428.lean.txt",
+      "sha256": "046818FD4A6F618639A04B4150070D60D2D59B956819CB41A309BD8D30115F98"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalDetectingFamilyScratchSemantic2428.log",
+      "sha256": "E31A44FBC3FE7FD285F16383DAE1A3890FA6057281876F50DD043836B8BAF33D"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily.lean.txt",
+      "sha256": "D1C37096D07F54EB56BEEAEE05F19BA4845E1158799F45AF22C4E96CA77D3865"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411a.lean.txt",
+      "sha256": "6DE8991788A96182BBAD92565F16D04733E94928853943E68A33B0918DCF4914"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411b.lean.txt",
+      "sha256": "ACE80146C26EF5DAB9EBB194760D96F8BC25089DDB6D84E00BB66794E36C266E"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411c.lean.txt",
+      "sha256": "ACFDE1D934A8EC01073898FFEBCBED1376F32EDE8006D9392929BF1802E571CB"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411c.log",
+      "sha256": "627758149E2D9061A5931D0424EACB48A91A441BFC0F12728CCC65573F45DBA2"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411d.lean.txt",
+      "sha256": "5A7C169C99DC29F3DB6EFABF9AEE1C68689AFCD4B36D366A8B27DCA94A6A5293"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411e.lean.txt",
+      "sha256": "CC12F4CFB1981B08F9E7698F0B91B1799D19B01EF82B14794EA26EAC1C0F5B38"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourceOriginalFiniteDetectingFamily2411e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourcePrimeIndexedDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourcePrimeIndexedDetectingFamily.lean.txt",
+      "sha256": "35EDB7230EB319D97CCC93A9F45B9540E2EC2BC9A3EC1612018E6A1DDFBD4A72"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourcePrimeIndexedDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourcePrimeIndexedDetectingFamily2416a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourcePrimeIndexedDetectingFamily2416a.lean.txt",
+      "sha256": "9A5DECD83FD211A57862E822D169B8071853107534D55FAFEA85DEFC6AD294CA"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/SourcePrimeIndexedDetectingFamily2416a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/archive_original_detecting_family_scratch_2421.py",
+      "sha256": "F2A0BAECF427E80FB5BE249562C8453A682049F4CCF80F4511C8CA8CBBC426FE"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/archive_original_detecting_family_scratch_2430.py",
+      "sha256": "71404DD95090F02A5AD2587506DCA3B93618068910A92A9FACD0EBE47BF1217E"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/build_original_detecting_families_2427.ps1",
+      "sha256": "EAE454C53B6FCE5DB7B68EDD9AB1E8FC8D67B1B2328CD7BC5126DD705FB95651"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-build-2418.exit",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-build-2418b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-build-2418b.log",
+      "sha256": "C11736BF9611EB3439C43E1F24837B11CDB6DB37FDEC5BE3B61759A93C6321AF"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-build-2427.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-build-2427.log",
+      "sha256": "F69D517AFEF8AA17C249D258C327DCD7BE369B7D9E36B7FFB79FBDBBA877B821"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-reuse-review-2420.json",
+      "sha256": "02B76034A8897C97CED73FFF06C934148DE974509AD867DAF7B35B8CA0095E35"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-reuse-review-2429.json",
+      "sha256": "09EBA42DFAF3BF4D76DD7291C97E59C291185A61D78E92B89C1984ED3E374F82"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-detecting-family-runner-review-2418.json",
+      "sha256": "D7F05B8FE3C1D9D740B7BC92BE1A9DE8A3DD0A39D1D11F8E98D3063BAC75BE92"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-family-archive-review-2430.json",
+      "sha256": "CB3F51DB098C12EDAACF4948C8917174162B5B3F578C54B0144DC42B41A3ADF0"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/original-family-successor-review-2427.json",
+      "sha256": "07EF647084FD8FC4B4ACE1C26EC34A87DF946BEFA26E3C21EFE30F22F77B49A8"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/prepare_original_detecting_family_audits_2418.py",
+      "sha256": "CA47EEDADB6EF81F8328534D94F42468D34EB3A6F7D884B7DD1C08904C567737"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/prepare_original_detecting_family_audits_2427.py",
+      "sha256": "844B6C300E0AC74712E1679353A082AE68C86F8CC72154F9036A6A63445D97EC"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/record_original_detecting_family_scope_2420.py",
+      "sha256": "76E72D34694687CC334CC5F9D3EBF42CDA9C523077DB57060660BE1E50E5442F"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/record_original_detecting_family_scope_2429.py",
+      "sha256": "D906D20610A6B60C3E3124B8C77F7C7FFBFD3567EB014D545C0CDBE079F8BE33"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/source-original-detecting-family-2-scratch-receipt.json",
+      "sha256": "D6EB8D8B5AB21272E5771AD1308CD4E8073DB28E82D4DF967FE3709B147F10C8"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/source-original-detecting-family-audit-config-2418.json",
+      "sha256": "E63D56845D1FAA20A6C8A7C3EF43FF3B6991AB6D17C3135C52280712690C523A"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/source-original-detecting-family-audit-config-2427.json",
+      "sha256": "34D7F93D3E01B1A852003F50ACACB830D40776BFD3AF358020E29EBCCFC9685B"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/source-original-detecting-family-scratch-summary-2429.json",
+      "sha256": "F223ED8C24F0C203E5E25D92D80BFFE4D68106DF6529948EBFA0E80DBC5F729C"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-manifest.json",
+      "sha256": "9AC993B901B1FD839077F832C2DD046DB8E288A15194157446308CCBC989ED02"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-original-detecting-family-build-2418b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-original-detecting-family-build-2418b.log",
+      "sha256": "C11736BF9611EB3439C43E1F24837B11CDB6DB37FDEC5BE3B61759A93C6321AF"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-original-detecting-family-runner-review-2418.json",
+      "sha256": "D7F05B8FE3C1D9D740B7BC92BE1A9DE8A3DD0A39D1D11F8E98D3063BAC75BE92"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-source-original-detecting-family-audit-config-2418.json",
+      "sha256": "E63D56845D1FAA20A6C8A7C3EF43FF3B6991AB6D17C3135C52280712690C523A"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceGammaOneOriginalDetectingFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceGammaOneOriginalDetectingFamilies.lean.txt",
+      "sha256": "718CF8691B872D64B50619F967F1113188E9D69CA283AAE515D1F7FB4980A2FA"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceGammaOneOriginalDetectingFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalArithmeticFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalArithmeticFamilyProperty.lean.txt",
+      "sha256": "536E382459E87C962DC98C7A5D692B77AD61AB8788779297D43A0A464DDF7B3E"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalArithmeticFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalClassPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalClassPrimePredicates.lean.txt",
+      "sha256": "E9D71D0EB722DA3362366381E140A718737F55C49921D4235B42045715D5A981"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalClassPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalClassRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalClassRegularPrimes.lean.txt",
+      "sha256": "AEAEBD538A3DD3FCE66E53FD95A6522BBB83877A78F462CC3B305E2684D9E7D5"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalClassRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalCocycleClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalCocycleClassPrimes.lean.txt",
+      "sha256": "F616669EE76A83AD2EC4DF02DC387B0F2D80073547520CC248783E2EEA4F83B4"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalCocycleClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalCoefficientH1Finite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalCoefficientH1Finite.lean.txt",
+      "sha256": "A01B51DC4D616E04EC590F5E4E9D09ABBD4185A73232B6560E7D34F9E177D057"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalCoefficientH1Finite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalDetectingFamilyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalDetectingFamilyAudit1.lean.txt",
+      "sha256": "1D5FE72A9586757DCB4C0000609E0D02E3D4227264FBD8EAFC0C01FDB92D4550"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalDetectingFamilyAudit1.log",
+      "sha256": "C91025292B9B9F63964BB78E3917E56D84B6652D37EE19F83DBA7A130B8718A9"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalDetectingFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalDetectingFamilyProperty.lean.txt",
+      "sha256": "D089F893A5F6469473E0554865C2953590D162F65B37154752179740BF0B8003"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalDetectingFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalFiniteDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalFiniteDetectingFamily.lean.txt",
+      "sha256": "D1C37096D07F54EB56BEEAEE05F19BA4845E1158799F45AF22C4E96CA77D3865"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourceOriginalFiniteDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourcePrimeIndexedDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourcePrimeIndexedDetectingFamily.lean.txt",
+      "sha256": "35EDB7230EB319D97CCC93A9F45B9540E2EC2BC9A3EC1612018E6A1DDFBD4A72"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/failed-2418-SourcePrimeIndexedDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

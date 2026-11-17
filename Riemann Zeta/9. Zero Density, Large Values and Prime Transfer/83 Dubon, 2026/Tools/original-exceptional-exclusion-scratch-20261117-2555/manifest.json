@@ -1,0 +1,1218 @@
+{
+  "status": "Scratch PASS: a form-dependent bound removes the A4, S4 and A5 projective alternatives for the same original integral and residual representations. All prior arithmetic, Hecke, determinant, oddness, auxiliary-prime and CM deformation conclusions are retained. Exactly cyclic, dihedral and elementary-abelian-by-cyclic alternatives remain. Full source local conditions and higher continuation remain open. Production reconciliation and assembled verification remain pending.",
+  "modules": 28,
+  "publicQueries": 51,
+  "publicTheorems": 46,
+  "publicConstructions": 5,
+  "exhaustiveTheorems": 126,
+  "otherDeclarations": 24,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 315,
+  "typeValueFingerprints": 150,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-cm-inputs-20261117-2528/archive-manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientNonvanishing.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientNonvanishing.lean.txt",
+      "sha256": "929BDB21CE1BABF2B2405859A915D0CA872933996ED05C4688EBB42B949F098B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientNonvanishing.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientNonvanishing2536a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientNonvanishing2536a.lean.txt",
+      "sha256": "EB12BCE05F6730FB6518DC6EADC579A6C58B572DDA02B8E5D7794560F4ADF43C"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientNonvanishing2536a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport.lean.txt",
+      "sha256": "E619CC87573C9B48E3F66D8B04A60991938B23230871E459D5DB9FC7EF014B37"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport2538a.lean.txt",
+      "sha256": "34D818B0EDFC8E34909031416C5DEE0B107A04F5FD15B6598DDA6DAEEFBB70DD"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport2538b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport2538b.lean.txt",
+      "sha256": "BB347653233FBF81FE1023AA80974CEBE3AB6152E53879067F48BBA31A72A013"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalCoefficientPrimeSupport2538b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial.lean.txt",
+      "sha256": "7F51222C1792693587402B50202F41DBBFD585D38AAB8DEA13E5E07AF0D9C68A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530a.lean.txt",
+      "sha256": "B23C7FDEC26872998552B8DBD966C3405CB323BC1ECEEB4FAC7064A27F86D2EE"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530a.log",
+      "sha256": "12652BC8366038065ABEEB43CB767A3DE6D0BF9BDC2B3C5630E959E0C23B33A5"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530b.lean.txt",
+      "sha256": "1DF7BF30831DB0C2DC67746D775723837B2A0709B0AEA7C35C6F21333191A736"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530b.log",
+      "sha256": "CF6224BF830435584452C5806A75561B3820F4965ECC47587470BD530252E42A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530c.lean.txt",
+      "sha256": "7E377D3D6B187B0181CBBAD4060B64D5F424C59A169D062EC285F87524505C55"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530c.log",
+      "sha256": "6749841E5EB08FCF65545E271E3500EC4ED8ECDEE38B9690929E01FF9F777ECF"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530d.lean.txt",
+      "sha256": "7F51222C1792693587402B50202F41DBBFD585D38AAB8DEA13E5E07AF0D9C68A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalIntegralPolynomial2530d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare.lean.txt",
+      "sha256": "1D42CBB87B3A70DFC98A32EF06E1FA7C4CA0734D27A00884C9963D88D43EF80F"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare2526a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare2526a.lean.txt",
+      "sha256": "EC0E641FB3CA034CA8BDFC30414312882BBD183BE9A5D213CF196D6FC571C654"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare2526a.log",
+      "sha256": "6535211981D3FEE3E0F75B2EA8D38116AB0569D77CC7D2734928E83D613F6C6B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare2526b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare2526b.lean.txt",
+      "sha256": "3B9A07143A134D621B09A9BE42D67CDCCCBEE9FF3341FBD9157B49EDCE8EE71D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNormalizedSquare2526b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot.lean.txt",
+      "sha256": "B0C823F3942E5E9259CB13361B1AAF3D26B327C6BDDA7A5F55E78A346BEF2BB9"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot2535a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot2535a.lean.txt",
+      "sha256": "06CF077738138E32FFB65AE80EFC76A36B7AA9F0AED2D786FD8472232CA2FFEC"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot2535a.log",
+      "sha256": "6BCBA3E61E484A66391EF2CB6C7046EB74E8F82E5C2117F4D0F4E6D6B8726120"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot2535b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot2535b.lean.txt",
+      "sha256": "88A34FD58EADF5165BC746C4F679BF047F2C70A5457270F2136F0FBD93961549"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalNumberFieldRoot2535b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant.lean.txt",
+      "sha256": "0D2458C38D9A78074384C2219D0835F7879E2155D54664FB042540FF1F8312DA"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant2531a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant2531a.lean.txt",
+      "sha256": "DC89047B80320790E936AAC7352994AE40072E4CAE20D0608BB3E23A535C3DB4"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant2531a.log",
+      "sha256": "DD7734ED3FF03270E839B95D1028EAD353CD598E9E86C6696F303EC48B104B79"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant2531b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant2531b.lean.txt",
+      "sha256": "CCE7F6F088CC7FD0CED4375B2E3912D97C548D046D760F9C83F8DCF402D910A5"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalPolynomialConstant2531b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent.lean.txt",
+      "sha256": "653E674D7B01B1B121399C2FBE97053E048CCBB202B44AEC6C7341058F4516C2"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent2523a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent2523a.lean.txt",
+      "sha256": "BBCC731D7BA5EF79D988B8CCC7EA474B6820AB3A8BACB50DFAC5CFCB836868B1"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent2523a.log",
+      "sha256": "DB34D73B0D2834401DFA50569F369970B2FA9E0E5519F3B385BC6B5D7CCD3D04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent2523b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent2523b.lean.txt",
+      "sha256": "653E674D7B01B1B121399C2FBE97053E048CCBB202B44AEC6C7341058F4516C2"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalProjectiveExponent2523b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic.lean.txt",
+      "sha256": "4689AA1567860BC7A4C139B20D53C7423E3986014B70FA51FA2F51E98E5815E4"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic2533a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic2533a.lean.txt",
+      "sha256": "1B2676A9349020BE2815CE24CE42BBCA00F0BF09739AA9B6226D7B4627FEE5FF"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic2533a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic2533b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic2533b.lean.txt",
+      "sha256": "A1E77A30A094222D3008AE3469C691D559B8388D8BF693AEDA098A6226937CF3"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalRootArithmetic2533b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev.lean.txt",
+      "sha256": "F983CF4F3E769B60A82CC5760FDEBD3AF68FD3BEF93CEE7705A02D726EBC1D44"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev2525a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev2525a.lean.txt",
+      "sha256": "8ED0D8C2F1106B0BD0BAB7E1852D9AFE460D570FF04A6381BBA53AB35B283F97"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev2525a.log",
+      "sha256": "2209B83BD6052E4A42343F09C58C9535FC6900B1ACC3A5749B738C3EE087B0EE"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev2525b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev2525b.lean.txt",
+      "sha256": "F983CF4F3E769B60A82CC5760FDEBD3AF68FD3BEF93CEE7705A02D726EBC1D44"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalTraceChebyshev2525b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime.lean.txt",
+      "sha256": "14E55DEE9B7855E0C61E7CFE4B231149B3176655977D25C79FF0E686D0003560"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537a.lean.txt",
+      "sha256": "EE1B195A12EFB08F5DC77108E412A76A18E2B9EDE8A770A21B8F6A844216EC1F"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537a.log",
+      "sha256": "842099688911A3633D51AD4591486BD04FC881A5133EA3BAC8A2D7092D6AE2F9"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537b.lean.txt",
+      "sha256": "F70D82FE32194353EF0E8C9E38249B36C246FA8848D69142A970AE2A40F2263B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537b.log",
+      "sha256": "C90229BD170DDBCABA93C62F425C6A491008738385FA3516951EF168B3EE9057"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537c.lean.txt",
+      "sha256": "65A199E30AA411738E3E67F8F034592FD27FB50ABB117F550DB9225BA938D722"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalUnramifiedPrime2537c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity.lean.txt",
+      "sha256": "CF63243D13407DBBC7EEDFC60651D8B45AE20B62B18D5BA2AB28B0EC25842294"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity2534a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity2534a.lean.txt",
+      "sha256": "6720F1D781DF10C6E2810504BB8918698A69CAAB8F48C42F7518376A2EB42A03"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity2534a.log",
+      "sha256": "21761E4478BAF280F53CBDDE944B0BBAF9BFEF999A0C3338B91A55F9E8D5C999"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity2534b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity2534b.lean.txt",
+      "sha256": "CF63243D13407DBBC7EEDFC60651D8B45AE20B62B18D5BA2AB28B0EC25842294"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceExceptionalValuationParity2534b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs.lean.txt",
+      "sha256": "133F3F36BBC656128BFFF709966F55766993257BCC3204AEEA8C92F6EE15472D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551a.lean.txt",
+      "sha256": "47A12C419FA88BA682619C215867725377B4F57BC301B46413B29A0502FD6CA6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551b.lean.txt",
+      "sha256": "F75BFD949BD97F094714A00F1C23BE50650E24388E86B4E163D2AC43317D2E80"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551b.log",
+      "sha256": "D927AAD1C043B92B9B2F789B6A4CF254EDFEAA3FB90418011316006C74C8EE6D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551c.lean.txt",
+      "sha256": "DF229B32330C341691DE8995592CFD12EF9C8D562BF4EFA443C020B9D4DF2173"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceGammaOneOriginalNonexceptionalInputs2551c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction.lean.txt",
+      "sha256": "E771F5698D1D2D9B101BEE8DF33B5C1C50926CC92811C0BFE76A601FEE0737C3"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544a.lean.txt",
+      "sha256": "EBD5939F96DA590B06F2F9DE78CA57A5A83C03AB82E9EC76FD6B2F3208A9D019"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544b.lean.txt",
+      "sha256": "C598158F8D916446522B9E400E7CB78392CEBF21973DD29B8A609852DC7B1F54"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544b.log",
+      "sha256": "EAC6DDDA0C0384AEDCE69E708B3948C1ADEF4B718222D7BCE5B93936AFDC8E34"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544c.lean.txt",
+      "sha256": "05AF67723260DDE6C13B9AF5E8AD160634A06F2C20436E184BF7C3DFCC8C0340"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544c.log",
+      "sha256": "E4EBBEC688438C4AC43009A796EAE515C4BBD0D46CEB28E506B93C719EB001EB"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544d.lean.txt",
+      "sha256": "16A2039BE0C22B484AD501631D127E0BA8AB136F4076C1A111D288316CC1AA04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegerRelationReduction2544d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegralPolynomialRatio.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegralPolynomialRatio.lean.txt",
+      "sha256": "33AAD0D58FEA10BE87E0FFD18F77892766F30181831CD58BE8DDF2EDFF3AC65C"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegralPolynomialRatio.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegralPolynomialRatio2545a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegralPolynomialRatio2545a.lean.txt",
+      "sha256": "EB5D3C4F0005CDC2A94AB107C0B536215B806B7991D291FC34DB59EB685EB7AD"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceIntegralPolynomialRatio2545a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonexceptionalSmallAlternatives.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonexceptionalSmallAlternatives.lean.txt",
+      "sha256": "1302FA4DD132F7B5A8B5C8976B780E7F0423AACEF0B9E34AD3DFC8A0D26B96E0"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonexceptionalSmallAlternatives.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonexceptionalSmallAlternatives2550a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonexceptionalSmallAlternatives2550a.lean.txt",
+      "sha256": "1302FA4DD132F7B5A8B5C8976B780E7F0423AACEF0B9E34AD3DFC8A0D26B96E0"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonexceptionalSmallAlternatives2550a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation.lean.txt",
+      "sha256": "F178074C60D13033413F75B224121CC0A343F91A172CF805E8049E30F8BC937A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543a.lean.txt",
+      "sha256": "173AE77481A3A684928FA1559B70D074D950B081CC410F3786B9101DC719851D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543a.log",
+      "sha256": "F752B2B6F912AB99B28A7BAD9C91230D48CE2761D8510D43F911A0E223AA68D6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543b.lean.txt",
+      "sha256": "173AE77481A3A684928FA1559B70D074D950B081CC410F3786B9101DC719851D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543b.log",
+      "sha256": "884958E363A0F68673093C6FB24233B729EFFD1E7D7B0F72933312CE1096F053"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543c.lean.txt",
+      "sha256": "F178074C60D13033413F75B224121CC0A343F91A172CF805E8049E30F8BC937A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceNonzeroAlgebraicIntegerRelation2543c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionAudit1.lean.txt",
+      "sha256": "C64880595E08A6E3A683533C9CA68A0476827370C1A81072431D677745CA7B71"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionAudit1.log",
+      "sha256": "A60D468E1A11E4515DB38C2161F897B9A3AB83B501E29CD2DA4AB8923D64E41D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionDeclarations2552.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionDeclarations2552.lean.txt",
+      "sha256": "AA1E11D38F35AA519C2A3FBBE7636F67E0DDF5C076B577558694382A07692F79"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionDeclarations2552.log",
+      "sha256": "A4F7A843FA214DE374C34C3163CAEEC7CFA91A5C608B04C08519CAE1B82B6633"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionDependencyAudit1.lean.txt",
+      "sha256": "4AB7B040FF807F438A34A5167AB311CC63AF6E13B360E14C7169C227E1C4C5EF"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionDependencyAudit1.log",
+      "sha256": "1A0714C0519C54B2D85193FB415E9E4A891EC358B7E9250BAB419F6EB81CBE23"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionProductionSemantic2553.lean.txt",
+      "sha256": "63062DC94F08FD092AF905C7461C0B75B3459E1DC78A7F973500227469FBAB45"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionProductionSemantic2553b.lean.txt",
+      "sha256": "14E357B3E27DB4ED238C19ABBA61718F0EAF848B404BE886701AAD722137F0FD"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionScratchSemantic2553.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionScratchSemantic2553.lean.txt",
+      "sha256": "EBDB8C0ACF3867CE3813BB2D411517D3360C58EE24D944DDE7628C983746D83A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionScratchSemantic2553.log",
+      "sha256": "05F3B2696884B53481883CD7BFBA5DBA0D27372EFFD6F72B1FC102DFCBA05E9B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionScratchSemantic2553b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionScratchSemantic2553b.lean.txt",
+      "sha256": "35FE922B25B8E901A334409BE0C802B71A0303F374BCDA6D7A34F73165E2D5E6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalExclusionScratchSemantic2553b.log",
+      "sha256": "2F687C5725260B2D31A583B5C0233781149CE5ECCE0617304FF70210C6CF1AD7"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction.lean.txt",
+      "sha256": "85B80AE3DD57751948A55A692881C8E4200113B6EB971B93E277EF2A99EA40CB"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction2547a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction2547a.lean.txt",
+      "sha256": "0EB1F401E6956BF1D0415A17E75A0B24E547DCD130A7DAFD9771818F9BC29D9D"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction2547a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction2547b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction2547b.lean.txt",
+      "sha256": "7115506EB613B05466D448C88D1C8A3378812D01980BEE441F826B05E2742927"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalFixedObstruction2547b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalIntegerObstruction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalIntegerObstruction.lean.txt",
+      "sha256": "3B1B0EEB0894C4345D942DB319B6D9D6504C6A67C333A786BEC32B7BAED91D78"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalIntegerObstruction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalIntegerObstruction2546a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalIntegerObstruction2546a.lean.txt",
+      "sha256": "F4914F18658B4CB40BE9E818D769253B78E64EDB61423663DAD20D69777F54A7"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalIntegerObstruction2546a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot.lean.txt",
+      "sha256": "D4992A1CB59EE3F942D86B557476583F4B903034B0606A32BDF923796CD3ED91"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532a.lean.txt",
+      "sha256": "BA312ADB130565CAB98ECDEE6AE63D9476FEE3E1A3301A9CF6F5A813617A4105"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532a.log",
+      "sha256": "34C5C972033B79AC54EF810DECE5151E49BC61E1B10BF1B1A5412880B3B3B8F9"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532b.lean.txt",
+      "sha256": "4C8E13F4CA5A30EDBFA85B15E25BD20431836BD7A33B27C6827FD942AC7E10D3"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532c.lean.txt",
+      "sha256": "6F6109C09ADC030D7DB1DE1FBB4842EC607741A03B13705105C3EBF774C3A575"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPolynomialRoot2532c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction.lean.txt",
+      "sha256": "9BDCC770A67E81CA100685831A3DADD74B04525330E5F3814FB40B7D98C5465A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction2542a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction2542a.lean.txt",
+      "sha256": "D479953CFA1F3CFEF204F706A7A5E9630E62FAD5E01B0E5192C0B625C316A18B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction2542a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction2542b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction2542b.lean.txt",
+      "sha256": "94F5D6533F0DE5DC989447DFC547E71C35D0FD770EA200DFAE2C73D437236DC9"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalPrimeObstruction2542b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalScalarPower.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalScalarPower.lean.txt",
+      "sha256": "9FD47C766459CF073C7FFD084C7D1FEA56653010F1CAD9D476F3C50518909923"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalScalarPower.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalScalarPower2524a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalScalarPower2524a.lean.txt",
+      "sha256": "06E21E698EF0479B4ADCC0FAC507E02A484FE570606E236AE6D35340F036AE4E"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalScalarPower2524a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation.lean.txt",
+      "sha256": "DD82A61BD621BCA4CEA9DC1B04AB66C7141EE9F10268F7CBFC1F032119A348DE"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527a.lean.txt",
+      "sha256": "8697FF616203B13C6BF775E316A5D290349DD88CC329B31867A46219628F2B84"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527a.log",
+      "sha256": "A8E94B871076300300608752A3BD055E22EB4788C6BC27C52DE9ABE4714A7BAC"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527b.lean.txt",
+      "sha256": "A02457303018FE153211925C65BB6710F817F1825FC7983D674CB3E15B24C307"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527b.log",
+      "sha256": "437FC0B2BE889AAE72F5F0D2E37F66798FDC58BBC0CDBA68EFE0B9FD6935C808"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527c.lean.txt",
+      "sha256": "E287E0258EE64EE35274A68D094BFEA0058E90E675C9C1577E79DD5BBA69B910"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalTraceEquation2527c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound.lean.txt",
+      "sha256": "8AC5545E163F183A7742DCDCE34D3835825C3783DABA296C855A6566B5DCA30A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound2549a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound2549a.lean.txt",
+      "sha256": "7C494C91100305076E51BBA144C6A28CE4B5323DDA6BE0689FC28682117734C6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound2549a.log",
+      "sha256": "AF0A944B2173747F1FC169004A25A0449999096271FFCD27D9C507412A5E379B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound2549b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound2549b.lean.txt",
+      "sha256": "874E7F7EA5039C076B1D46B903EBA80AD8A38E54D43FA08EBC79F9214C79D4C6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalExceptionalUniformBound2549b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion.lean.txt",
+      "sha256": "82D23385FC9C7FCA3CDC648417FAB8DD197006556A1C9BA9213A507BB4B084B9"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion2548a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion2548a.lean.txt",
+      "sha256": "78AF0AEEFDF5F56B5F3E3B78EBAA014870DBB31222FA9AE31DDDD458A137529F"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion2548a.log",
+      "sha256": "3F9740C42C13B82A10B80F95219E581550EA1A3E82EA97CF9FBF8EA7973579A6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion2548b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion2548b.lean.txt",
+      "sha256": "2FA64FBA3C617093BAC181A1D374A3C90856F44C7AEE26A0A718379F3762E15C"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalFixedLocalExceptionalExclusion2548b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalIdentityFrobenius.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalIdentityFrobenius.lean.txt",
+      "sha256": "BE1C6C78252AE8903A035B05D9BE49EC21E60533154B0D7FF30282AEB7FC84D0"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalIdentityFrobenius.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalIdentityFrobenius2539a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalIdentityFrobenius2539a.lean.txt",
+      "sha256": "BE1C6C78252AE8903A035B05D9BE49EC21E60533154B0D7FF30282AEB7FC84D0"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalIdentityFrobenius2539a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient.lean.txt",
+      "sha256": "79A83C6F38A7EBE6C57A8CECD8F9D352A09AD3F8B74CD182535991B45811A1FB"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541a.lean.txt",
+      "sha256": "2EFF1FE77EC988666B7F45EB05F2C4D2B598A0A1A152EF8E0BA3C27E3891E417"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541a.log",
+      "sha256": "5746C214E96DAA0A112F8B7F974EC8E6CC9512C668BD4F4A84845558D044F7F4"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541b.lean.txt",
+      "sha256": "6FEE1602F6A9A2AFBBA9039E6C4DF817E3B6392BBEAA60A6712E0910D85307C3"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541b.log",
+      "sha256": "C898BD596F17BF1166FD43CF9D0E1BF188C3FD9799AE88043CC75328E0CE725B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541c.lean.txt",
+      "sha256": "A4F746B4CB05891C54CFB2F2F0D798A87F25E0EA10E61531EDBB8A9BC7273AE5"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541c.log",
+      "sha256": "D1E11F12F079CE25F452E192D628F6B14DDAC5AD4C858B36AB4209B7852AAA42"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541d.lean.txt",
+      "sha256": "E90AABB7204BE89C349AE5DCE229B5EC618B122F1490F195658095DC8679E7E5"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalLocalNonzeroPrimeCoefficient2541d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonexceptionalInputsProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonexceptionalInputsProperty.lean.txt",
+      "sha256": "67205669A3C8D44426C0AD509C7621BA31A630C681417314E2AB7E9E9A99579A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonexceptionalInputsProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonexceptionalInputsProperty2556a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonexceptionalInputsProperty2556a.lean.txt",
+      "sha256": "13844007356EB893E87075F0AA7F2A212C730A7C328BAD99FF0C15B8043727BB"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonexceptionalInputsProperty2556a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient.lean.txt",
+      "sha256": "2FC6D7B64147E989E9B0D129395A1ABBC641EB04769A37CA654117A3C893F96A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540a.lean.txt",
+      "sha256": "0565A9537E8B8615BCBA354EC2FBAB1E6EA5882413E1F61DBE2B2A26B94C8DF9"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540a.log",
+      "sha256": "06772D11D91DD86488EC72C5A64E31AC282A27D5A1F36EEF04A6AD5C1D07DA81"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540b.lean.txt",
+      "sha256": "27A22C681D6260DFDB2AA3F4DDD2DD62867114B5D41FC3C512B9B25CC3B89FCB"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540b.log",
+      "sha256": "2BBEAAD0ACFC2E463F10B206EF1BFA04CA87C501F7807F40B0E772232628CBDC"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540c.lean.txt",
+      "sha256": "DE134B6E0AB11E1BEB15F01608BA497A371B47EFFB5C41755F853FA51EEE30CE"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540d.lean.txt",
+      "sha256": "DDB8A55979F70E39EC10611EA6FDC6F12D6901243B369A367CEC2F9D5AF6702E"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540e.lean.txt",
+      "sha256": "77A0FE2F2E7DE6E8712D22F5556FCAA2ECD052591247E75B6AC5AEBAE9B8359B"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540e.log",
+      "sha256": "A48D97270C44C3AA5605A008DEC92DE75E85474655D0619917A608331C5E0D3E"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540f.lean.txt",
+      "sha256": "484A7C214DC637BE7AD12398A8A62951C9A8B35C33373CA2D7EA78189FE499FD"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/SourceOriginalNonzeroPrimeCoefficient2540f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/archive_original_exceptional_exclusion_scratch_2555.py",
+      "sha256": "3DB4DFC4940EF687F4CDA808F85E8C459A04F3E2E8A6E92DB51F50465097AF0F"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/archive_original_exceptional_exclusion_scratch_2555b.py",
+      "sha256": "5260B1962092A3BEB3C4B17B2EBCACA586C9FCE090273340ED968655FEDCC4E4"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/archive_original_exceptional_exclusion_scratch_2555c.py",
+      "sha256": "99BE758A4F2E198127CB7BB33024430E49C36834D187586090D337D6E351FC95"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/build_original_exceptional_exclusion_2552.ps1",
+      "sha256": "AB9863DEB64051124686224C3B7908E2B3A5F9998180E740E1800F121680D2B6"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/generate_original_exceptional_exclusion_audits_2552.py",
+      "sha256": "6DE4E8658A3BB97D29372D0B26581FA9B1EB7902580CB8B9DB2739700015C13E"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/generate_original_exceptional_exclusion_audits_2552b.py",
+      "sha256": "5AAA27BE0049C540B53B4E5EB2231F4B30343679BA32697BBB2CC542A10F84A2"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/generate_original_exceptional_exclusion_audits_2552c.py",
+      "sha256": "3EDBEDA9124C20CD9563F519292C75D86C6A91DE716EF651836513C6D2AAFF91"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/generate_original_exceptional_exclusion_audits_2552d.py",
+      "sha256": "9C2F8B63A79FBBE07DFDBC6BFC789E242450490F0E286F5F9DCDE6D81DF082C3"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/original-exceptional-exclusion-reuse-review-2552.json",
+      "sha256": "65ED0288B17ACACACF4A0751D9AC8CD297068A8D1F6343888714EF1D79E3BEF8"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/original-exceptional-image-route-review-2523.json",
+      "sha256": "9FA15C97660AB9C7729F43D8F1EE234B5FFF7D174DF6528AE2DBC068E24E91AF"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/record_original_exceptional_exclusion_scope_2554.py",
+      "sha256": "FC87A6504FB8BE9E9D45F7538B8108303E7201599975FF93FF5402BF1E3E543A"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/record_original_exceptional_exclusion_scope_2554b.py",
+      "sha256": "7F52CA1C93071201CA0EECF4862945C69347300855E7FFC4960A70BE09752678"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/semantic-module-normalizer-repair-2572.json",
+      "sha256": "C8BF4CA886267D275A94E4C07761B1336466728193C9C1BD9F16F38DF838A412"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/source-original-exceptional-exclusion-1-scratch-receipt.json",
+      "sha256": "1D00A6EE78D0D27084270404DDF1CABAE9C1983F2A0E49B8B96BD74C2BFE7199"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/source-original-exceptional-exclusion-audit-config-2552.json",
+      "sha256": "2DD31BAA3A83B910D512A081E0B43223A88406370BFE8E35C844243A6C13BF19"
+    },
+    {
+      "path": "Tools/original-exceptional-exclusion-scratch-20261117-2555/source-original-exceptional-exclusion-scratch-summary-2554.json",
+      "sha256": "5E9866A328076093C17D69FFC1C10F9922E077D05F46DE3B0EACFEF4ABD0A3DE"
+    }
+  ]
+}

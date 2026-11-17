@@ -1,0 +1,71 @@
+{
+  "scripts": [
+    {
+      "file": "archive_original_symmetric_residual_canonical_9755.py",
+      "sha256": "480E70520320153D913BF90858A0BF02C1ED8DAD3E5ABB2FCFFBCF714502E8DF",
+      "executed": false
+    },
+    {
+      "file": "compare_original_symmetric_residual_9755.py",
+      "sha256": "CB24AE6CE644581544CD154C6828FD05016A96D2F11062D45A3BD2C75760A81D",
+      "executed": false
+    },
+    {
+      "file": "compare_original_symmetric_semantics_9755.py",
+      "sha256": "EA82F1475F80DE612F6BD747BBCFE7513DE7B2C6B8B1ABD3E53C86E4CDFB9E9B",
+      "executed": false
+    },
+    {
+      "file": "integrate_source_original_symmetric_residual_9755.py",
+      "sha256": "046D97429A33A5048C71B8E538D795EF16E40CBD404F3FC25F1EEA3B989EA12A",
+      "executed": false
+    },
+    {
+      "file": "integrate_source_original_symmetric_residual_9755b.py",
+      "sha256": "BD3E3B378AEEFF2D09568D4B94BAD76506AACFF71AFC53E5C7C2BEF094F5A913",
+      "executed": false
+    },
+    {
+      "file": "prepare_original_symmetric_residual_global_ownership_9755.py",
+      "sha256": "098C511489DEC283488A3EA9AF872F36C2D8C0AC3A4A65EEBB11706BACFB2B8E",
+      "executed": false
+    },
+    {
+      "file": "prepare_original_symmetric_residual_production_ownership_9755.py",
+      "sha256": "02EFC278E1D1ADB6283EE79577B4C2C6AA3E8A209614F230FAD260A85DBE4518",
+      "executed": false
+    },
+    {
+      "file": "prepare_original_symmetric_verification_9755.py",
+      "sha256": "F470159440738B46A0BE118EBE037E750C45F6E5B3304C040A7DD490D7404740",
+      "executed": false
+    },
+    {
+      "file": "record_source_original_symmetric_residual_9755.py",
+      "sha256": "83AB8453E969EA47F9BE9C77164AF99A460D4BFE8BB4F0F0ECB404F02ED3E102",
+      "executed": false
+    },
+    {
+      "file": "record_source_original_symmetric_residual_9755b.py",
+      "sha256": "21AE3139AC2625B7EB686179FCDA4C5262B615FE6F943D8EFE3C775B010B2ED2",
+      "executed": false
+    },
+    {
+      "file": "verify_original_symmetric_residual_9755.ps1",
+      "sha256": "B7217072FF52BC35D051A84C06C3B16B9AC33E1AC0F45B1AC933378EB91B1F20",
+      "executed": false
+    },
+    {
+      "file": "verify_original_symmetric_residual_9755b.ps1",
+      "sha256": "1807CA021669A1FBA9D3F197FA232F95D76C3CF3C052A9B8B04A70E0DC7CA86E",
+      "executed": false
+    }
+  ],
+  "review": [
+    "The unused first integration draft had the prior metadata key renamed by an overly broad transformation; successor b restores the exact projective receipt prerequisite.",
+    "The unused first recorder draft transformed a numeric prefix in the consumer count; successor b derives the expected count from the preceding canonical receipt plus the actual new public theorem registrations.",
+    "The verification successor invokes the corrected recorder. All failed and superseded script drafts are retained.",
+    "Production statements and proof bodies are unchanged; only import prefixes are qualified. Four strict semantic comparisons cover all 178 scratch declarations.",
+    "All 258 source proof dependencies and the additional 26-edge single-consumer audit are retained; all 13 regression stages and the original sequential BATs remain mandatory."
+  ]
+}

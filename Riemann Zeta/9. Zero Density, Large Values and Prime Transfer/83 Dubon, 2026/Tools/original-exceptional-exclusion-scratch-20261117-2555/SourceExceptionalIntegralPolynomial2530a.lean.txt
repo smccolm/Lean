@@ -1,0 +1,68 @@
+import Mathlib.RingTheory.Polynomial.Chebyshev
+import Mathlib.Algebra.Polynomial.Degree.IsMonicOfDegree
+import Mathlib.Algebra.Polynomial.Monic
+
+/-! DUB-17/18 -> exceptional original image exclusion -> arithmetic contradiction.
+The native Chebyshev relation is a monic integral polynomial. Removing its zero
+root will retain integrality while permitting a nonzero constant-term test. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- Positive rescaled Chebyshev polynomials over the integers are monic of their exact degree. -/
+theorem integral_chebyshev_isMonicOfDegree (n : ℕ) (hn : 0 < n) :
+    IsMonicOfDegree (Chebyshev.C ℤ (n : ℤ)) n := by
+  have h : ∀ m : ℕ, (Chebyshev.C ℤ (m : ℤ)).natDegree ≤ m ∧
+      (0 < m → IsMonicOfDegree (Chebyshev.C ℤ (m : ℤ)) m) := by
+    intro m
+    induction m using Nat.twoStepInduction with
+    | zero => simp
+    | one => simp [isMonicOfDegree_X]
+    | more m ih0 ih1 =>
+      have hm := (isMonicOfDegree_X ℤ).mul (ih1.2 (by omega))
+      have hd : (Chebyshev.C ℤ (m : ℤ)).natDegree < 1 + (m + 1) := by omega
+      have hs := hm.sub hd
+      have he : 1 + (m + 1) = m + 2 := by omega
+      rw [he] at hs
+      have hc : Chebyshev.C ℤ ((m + 2 : ℕ) : ℤ) =
+          X * Chebyshev.C ℤ ((m + 1 : ℕ) : ℤ) - Chebyshev.C ℤ (m : ℤ) := by
+        simp only [Nat.cast_add, Nat.cast_one, Nat.cast_ofNat, Chebyshev.C_add_two]
+      rw [hc]
+      exact ⟨hs.natDegree_eq.le, fun _ => hs⟩
+  exact (h n).2 hn
+
+/-- The fixed integral equation forced by every exceptional original residual image. -/
+def exceptionalTracePolynomial : ℤ[X] :=
+  (Chebyshev.C ℤ 120).comp (X - 2) - 2
+
+/-- The fixed exceptional trace polynomial has exact degree 120 and is monic. -/
+theorem exceptionalTracePolynomial_isMonicOfDegree :
+    IsMonicOfDegree exceptionalTracePolynomial 120 := by
+  have hc := (integral_chebyshev_isMonicOfDegree 120 (by omega)).comp
+    (by omega : (1 : ℕ) ≠ 0) (isMonicOfDegree_X_sub_one (2 : ℤ))
+  norm_num only [Nat.mul_one, map_ofNat] at hc
+  exact hc.sub (by norm_num)
+
+/-- Zero is an exact root of the fixed integral exceptional trace polynomial. -/
+theorem exceptionalTracePolynomial_eval_zero : exceptionalTracePolynomial.eval 0 = 0 := by
+  norm_num [exceptionalTracePolynomial, eval_comp, Chebyshev.C_eval_neg_two,
+    Int.negOnePow_def]
+
+/-- Remove precisely the zero root from the fixed integral exceptional trace equation. -/
+def exceptionalNonzeroTracePolynomial : ℤ[X] := exceptionalTracePolynomial.divX
+
+/-- Multiplication by X recovers the original fixed exceptional trace equation. -/
+theorem exceptionalNonzeroTracePolynomial_mul_X :
+    exceptionalNonzeroTracePolynomial * X = exceptionalTracePolynomial := by
+  have h := divX_mul_X_add exceptionalTracePolynomial
+  rw [coeff_zero_eq_eval_zero, exceptionalTracePolynomial_eval_zero, map_zero, add_zero] at h
+  exact h
+
+/-- The zero-root-removed polynomial remains monic over the integers. -/
+theorem exceptionalNonzeroTracePolynomial_monic : exceptionalNonzeroTracePolynomial.Monic := by
+  apply monic_X.of_mul_monic_right
+  rw [exceptionalNonzeroTracePolynomial_mul_X]
+  exact exceptionalTracePolynomial_isMonicOfDegree.monic
+
+end
+end Dubon2026.SourceDickson

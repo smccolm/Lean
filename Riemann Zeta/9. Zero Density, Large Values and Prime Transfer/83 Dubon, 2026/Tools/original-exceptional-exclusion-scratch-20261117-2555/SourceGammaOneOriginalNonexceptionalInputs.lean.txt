@@ -1,0 +1,65 @@
+import Dubon2026.SourceGammaOneOriginalCMDimensions
+import SourceOriginalExceptionalUniformBound
+import SourceOriginalNonexceptionalInputsProperty
+import SourceNonexceptionalSmallAlternatives
+
+/-! DUB-17/18 -> eventual original residual large image -> actual-form
+exceptional exclusion. One form-dependent bound removes A4, S4 and A5 from
+the original representation's classification while preserving every integral,
+residual, Hecke, auxiliary-prime and CM deformation conclusion. Exactly cyclic,
+dihedral and elementary-abelian-by-cyclic alternatives remain. Required local
+conditions, the remaining image exclusions and higher continuation are open. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q : ℕ) [NeZero Q] {k : ℤ}
+
+/-- The actual original integral/residual pair retains all proved CM and local consequences and has no exceptional projective branch above a fixed form-dependent bound. -/
+theorem exists_gammaOne_original_nonexceptional_cm_inputs
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ B : ℕ, 3 ≤ B ∧ ∀ (p : ℕ) [Fact p.Prime], B < p →
+    HasOriginalNonexceptionalInputs Q p f hk := by
+  obtain ⟨B, hB, hex⟩ := exists_original_exceptional_exclusion_bound Q f hk
+  refine ⟨B, hB, ?_⟩
+  intro p _ hp
+  have hlarge : 3 < p := lt_of_le_of_lt hB hp
+  unfold HasOriginalNonexceptionalInputs
+  letI := sourcePrimitiveCoefficientField_numberField f hk
+  letI := rationalPrimeLocalField_charZero p (Fact.out : p.Prime)
+  let F := rationalPrimeLocalField p (Fact.out : p.Prime)
+  let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+  have hs := exists_gammaOne_original_cm_deformation_dimensions Q p f hk hlarge
+  dsimp only at hs
+  obtain ⟨u, v, hu, hv, hext, hfin, hfinite, hdiscrete, hchar,
+    τ, ρint, ρres, hi, hr, hred, hdet, hmax, himage, hlocal, hclass,
+    hdims, hpolar, hcm, hintegral, hodd⟩ := hs
+  letI : UniformSpace L := u
+  letI : TopologicalSpace L := u.toTopologicalSpace
+  letI : ValuativeRel L := v
+  letI : TopologicalSpace 𝓀[L] :=
+    inferInstanceAs (TopologicalSpace (𝒪[L] ⧸ IsLocalRing.maximalIdeal 𝒪[L]))
+  letI : CharP 𝓀[L] p := hchar
+  refine ⟨u, v, hu, hv, hext, hfin, hfinite, hdiscrete, hchar,
+    τ, ρint, ρres, hi, hr, hred, hdet, hmax, himage, hlocal, ?_,
+    hdims, hpolar, hcm, hintegral, hodd⟩
+  obtain ⟨j, hj, hAlt⟩ := hclass
+  refine ⟨j, hj, ?_⟩
+  rcases hAlt with hsmall | hlargeImage
+  · apply Or.inl
+    apply remaining_small_image_of_not_exceptional p _ hsmall
+    apply hex p hp τ ρres j
+    intro q hq ha φ hφ
+    exact ((hlocal q hq ha).2 φ hφ).2
+  · exact Or.inr hlargeImage
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

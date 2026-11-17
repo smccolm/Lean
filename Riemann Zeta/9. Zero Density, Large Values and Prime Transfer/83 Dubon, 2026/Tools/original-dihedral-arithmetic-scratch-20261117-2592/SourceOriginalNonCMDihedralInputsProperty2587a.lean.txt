@@ -1,0 +1,99 @@
+import Dubon2026.SourceGammaOneOriginalCMDimensions
+import SourceNonexceptionalSmallAlternatives2550a
+import SourceOriginalBoundedQuadraticFrobenius2565a
+import SourceOriginalDihedralArithmetic2585a
+
+/-! DUB-17/18 -> original residual large image -> exact source conclusion after
+exceptional exclusion. This names the full literal original representation
+conclusion, without changing any field, topology, assumption or arithmetic data.
+It permits assembling the uniform characteristic bound under default limits. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q : ℕ) [NeZero Q] {k : ℤ}
+
+/-- The complete original arithmetic and CM data, three remaining small-image alternatives, actual nonzero inert Frobenius witnesses for every bounded-conductor source character, and literal continuous quadratic arithmetic characters in every dihedral branch. -/
+def HasOriginalNonCMDihedralInputs (p M : ℕ) [Fact p.Prime]
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) : Prop :=
+    letI := sourcePrimitiveCoefficientField_numberField f hk
+    letI := rationalPrimeLocalField_charZero p (Fact.out : p.Prime)
+    let F := rationalPrimeLocalField p (Fact.out : p.Prime)
+    let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+    ∃ (u : UniformSpace L) (_ : ValuativeRel L),
+      letI : TopologicalSpace L := u.toTopologicalSpace
+      letI : TopologicalSpace 𝓀[L] :=
+        inferInstanceAs (TopologicalSpace (𝒪[L] ⧸ IsLocalRing.maximalIdeal 𝒪[L]))
+      IsUniformAddGroup L ∧ IsNonarchimedeanLocalField L ∧
+      (ValuativeRel.valuation F).HasExtension (ValuativeRel.valuation L) ∧
+      FiniteDimensional F L ∧ Finite 𝓀[L] ∧ DiscreteTopology 𝓀[L] ∧
+      ∃ hchar : CharP 𝓀[L] p, letI := hchar;
+      ∃ τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] L,
+      ∃ (ρint : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+          Matrix.GeneralLinearGroup (Fin 2) 𝒪[L])
+        (ρres : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+          Matrix.GeneralLinearGroup (Fin 2) 𝓀[L]),
+        Continuous ρint ∧ Continuous ρres ∧
+        (∀ g i j, (ρres g).val i j = IsLocalRing.residue 𝒪[L] ((ρint g).val i j)) ∧
+        (Matrix.GeneralLinearGroup.det.comp ρres =
+          (sourceArithmeticCyclotomicUnitCharacter (F := 𝓀[L]) p
+            ((Q * p : ℕ) : 𝓞 ℚ) ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩).toMonoidHom ^
+              Int.toNat (k - 1)) ∧
+        (RingHom.ker (sourcePrimitiveResidualHeckeCharacter f hk τ)).IsMaximal ∧
+        (Set.range ρres).Finite ∧
+        (∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+      (∀ g ∈ rationalPrimeNormInertia q hq,
+        ρres (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq g) = 1) ∧
+      ∀ g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq),
+        (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+          (rationalPrimeLocalClosure q hq)), g • z = z ^ q) →
+        let a : 𝓀[L] := sourcePrimitiveResidualHeckeCharacter f hk τ
+          ⟨Dubon2026.cuspHeckeLinear Q k q,
+            Algebra.subset_adjoin ⟨(⟨q, hq.pos⟩ : ℕ+), rfl⟩⟩
+        let A := (ρres (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq g)).val
+        A.charpoly = (Polynomial.X : Polynomial 𝓀[L]) ^ 2 - Polynomial.C a * (Polynomial.X : Polynomial 𝓀[L]) +
+          Polynomial.C ((q : 𝓀[L]) ^ Int.toNat (k - 1)) ∧
+        A.trace = a ∧ A.det = (q : 𝓀[L]) ^ Int.toNat (k - 1)) ∧
+        (∃ j : 𝓀[L] →+* K p,
+          HasProjectiveMatrixAlternatives p (residualProjectiveAction p j ρres).range ∧
+          (HasRemainingSmallProjectiveImage p (residualProjectiveAction p j ρres).range ∨
+            (HasFiniteLinearSubfieldBounds p j ρres ∧
+              HasOriginalSymmetricKernelConsequences p
+                (ρres.comp (rationalArithmeticCyclotomicCharacter
+                  ((Q * p : ℕ) : 𝓞 ℚ) p ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩).toMonoidHom.ker.subtype) ∧
+              HasOriginalSymmetricKernelConsequences p
+                ((ρres.comp (sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)).toMonoidHom).comp
+                  (sourceAbsoluteCyclotomicCharacter p).toMonoidHom.ker.subtype) ∧
+              HasOriginalArithmeticSymmetricTwistedKernelDetection
+                ((Q * p : ℕ) : 𝓞 ℚ) p ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩ ρres ∧
+              HasOriginalArithmeticRegularPrimeDetection
+                ((Q * p : ℕ) : 𝓞 ℚ) p ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩ ρres ∧
+              HasOriginalArithmeticDetectingFamilies
+                ((Q * p : ℕ) : 𝓞 ℚ) p ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩ ρres ∧
+              HasOriginalArithmeticTorusPrimeDetection
+                ((Q * p : ℕ) : 𝓞 ℚ) p ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩ ρres ∧
+              HasOriginalArithmeticTorusFamilies
+                ((Q * p : ℕ) : 𝓞 ℚ) p ⟨(Q : 𝓞 ℚ), by simp [mul_comm]⟩ ρres ∧
+              HasOriginalRationalCMConsequences ((Q * p : ℕ) : 𝓞 ℚ) p ρres ∧
+              HasOriginalIntegralCMDimensions ((Q * p : ℕ) : 𝓞 ℚ) p ρint ρres))) ∧
+        HasOriginalUnramifiedAdjointDimensions ((Q * p : ℕ) : 𝓞 ℚ) ρres ∧
+        HasOriginalRationalCMPolarizations ((Q * p : ℕ) : 𝓞 ℚ) p ρres ∧
+        HasOriginalConstructedCMResidual ((Q * p : ℕ) : 𝓞 ℚ) p ρres ∧
+        HasOriginalIntegralCMDeformations ((Q * p : ℕ) : 𝓞 ℚ) p ρint ρres ∧
+        HasOriginalBoundedQuadraticFrobenius Q p M ρres ∧
+        HasOriginalDihedralArithmeticCharacters Q p ρres ∧
+        ∀ e : Qbar →ₐ[ℚ] ℂ,
+          let g := sourceAbsoluteArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ)
+            (sourceAbsoluteComplexConjugation e)
+          (ρres g).val.det = -1 ∧ Matrix.trace (ρres g).val = 0
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

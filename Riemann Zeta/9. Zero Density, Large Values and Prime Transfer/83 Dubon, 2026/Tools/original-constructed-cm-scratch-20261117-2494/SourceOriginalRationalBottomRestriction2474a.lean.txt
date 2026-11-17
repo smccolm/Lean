@@ -1,0 +1,42 @@
+import SourceFiniteLinearAbsoluteGalois
+import Dubon2026.FiniteBaseArithmeticResidualPresentation
+
+/-! DUB-17/18 -> actual CM deformation input. The rational bottom field
+has the same original Galois group. Its native finite-base restriction is
+surjective, so the original finite linear subfield bounds transfer literally. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- The native finite-base group at the rational bottom field includes
+continuously into the original rational arithmetic group. -/
+def originalRationalBottomRestriction (a : 𝓞 ℚ) :
+    finiteBaseArithmeticGaloisGroup a (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) →ₜ*
+      rationalArithmeticGaloisGroup a where
+  toMonoidHom := (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)).fixingSubgroup.subtype
+  continuous_toFun := continuous_subtype_val
+
+/-- Every original rational arithmetic automorphism fixes the bottom field. -/
+theorem originalRationalBottomRestriction_surjective (a : 𝓞 ℚ) :
+    Function.Surjective (originalRationalBottomRestriction a) := by
+  intro g
+  refine ⟨⟨g, ?_⟩, rfl⟩
+  simp only [IntermediateField.fixingSubgroup_bot, Subgroup.mem_top]
+
+/-- Original finite linear bounds are unchanged on the native bottom-field
+arithmetic group; no independent image or coefficient witness is supplied. -/
+theorem original_finite_linear_bounds_rational_bottom
+    (a : 𝓞 ℚ) (p : ℕ) [Fact p.Prime] {L : Type} [Field L]
+    (j : L →+* K p)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) L)
+    (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    HasFiniteLinearSubfieldBounds p j
+      (ρ.comp (originalRationalBottomRestriction a).toMonoidHom) := by
+  exact finite_linear_bounds_precomp_surjective p j ρ
+    (originalRationalBottomRestriction a).toMonoidHom
+    (originalRationalBottomRestriction_surjective a) h
+
+end
+end Dubon2026.SourceDickson

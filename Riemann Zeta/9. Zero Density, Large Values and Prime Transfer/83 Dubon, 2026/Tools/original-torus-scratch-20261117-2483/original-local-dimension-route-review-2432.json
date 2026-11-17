@@ -1,0 +1,12 @@
+{
+  "recordedUTC": "2026-11-17T15:08:28.631635+00:00",
+  "obligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "chain": "higher continuation -> automorphy -> original residual local deformation input -> exact original local unramified adjoint dimension -> regular Frobenius invariant dimension",
+  "provedReuse": "Native continuous_unramified_finrank_eq_invariants_of_cyclic_depth is already general over finite fields. Local original cocycle/H1 finiteness by prime-field scalar restriction suffices; no general H1 base-change equivalence needed.",
+  "nextShorterRoute": "Choose the regular torus unit in ZMod p, which already embeds in the original field, and use only the prime-field SL2 subgroup of the existing finite-subfield lower bound. The source range 2*n < p-1 suffices for the projector-span and distinct-weight arguments. Native distinct-eigenvector independence and finite-dimensional basis construction then diagonalize the resulting original matrix over the original field. Retain the original local Frobenius conjugacy and reuse the native trace-zero fixed-dimension formula.",
+  "deferredAlternative": "SourceOriginalSubfieldTraceDescent2431a compiles and proves that a full conjugated subfield SL2 forces its coefficients into the original trace field, but this extra descent is unnecessary if the prime-field torus route succeeds. Retain it as a checked scratch experiment; do not expand, promote or credit it toward the chosen local chain yet. General tensor/kernel base-change and broad diagonalizability infrastructure are also deferred.",
+  "boundary": "No original-field splitting is inferred from mere separability. The new prime-field torus consumer and original local fixed dimension must still be proved and audited."
+}

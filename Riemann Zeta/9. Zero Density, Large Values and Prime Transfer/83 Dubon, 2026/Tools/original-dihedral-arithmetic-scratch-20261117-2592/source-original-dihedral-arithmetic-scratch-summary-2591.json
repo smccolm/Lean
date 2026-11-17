@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-dihedral-arithmetic-1-scratch-receipt.json",
+      "sha256": "2D0A60BA8F081DC0BCD98745CB7F7560A5B660294CD29AAB0E1747F9A7B56B0D",
+      "modules": 8,
+      "queries": 16,
+      "exhaustiveTheorems": 63,
+      "other": 14,
+      "requiredValueEdges": 345
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

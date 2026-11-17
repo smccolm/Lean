@@ -1,0 +1,19 @@
+import SourceOriginalExceptionalTraceEquation2527c
+import SourceExceptionalPolynomialConstant2531b
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional image
+exclusions. The actual residual trace relation is evaluated from one fixed
+integer polynomial, with the zero root removed when the trace is nonzero.
+Characteristic-zero coefficient nonvanishing and reduction remain open. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+
+/-- The fixed integral polynomial evaluates to the native trace equation in every field. -/
+theorem exceptionalTracePolynomial_eval₂ {F : Type*} [Field F] (x : F) :
+    exceptionalTracePolynomial.eval₂ (Int.castRingHom F) x =
+      (Chebyshev.C F 120).eval (x - 2) - 2 := by
+  simp [exceptionalTracePolynomial, eval₂_eq_eval_map, Polynomial.map_comp, eval_comp]
+
+end
+end Dubon2026.SourceDickson

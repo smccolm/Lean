@@ -1,0 +1,48 @@
+import SourceIntegerRelationReduction2544d
+import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+
+/-! DUB-17/18 -> exceptional residual image exclusion -> literal integral
+trace-ratio polynomial. A unit denominator produces one actual integral value
+whose coefficient embedding and every residue evaluation are both proved. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- Evaluation of the same integral unit-denominator ratio commutes with a field-valued ring map. -/
+theorem integral_unit_ratio_polynomial_map
+    {R F : Type*} [CommRing R] [Field F] (P : ℤ[X]) (a : R)
+    (u : Rˣ) (w : ℕ) (π : R →+* F) :
+    π (P.eval₂ (Int.castRingHom R) (a ^ 2 * (↑(u⁻¹) : R) ^ w)) =
+      P.eval₂ (Int.castRingHom F) ((π a) ^ 2 / (π (u : R)) ^ w) := by
+  have hint : π.comp (Int.castRingHom R) = Int.castRingHom F := Subsingleton.elim _ _
+  rw [Polynomial.hom_eval₂, hint, map_mul, map_pow, map_pow, map_units_inv]
+  simp only [div_eq_mul_inv, inv_pow]
+
+/-- The original embedded coefficient and unit integer denominator give an integral polynomial value with literal reduction. -/
+theorem exists_integral_polynomial_ratio
+    {F R E : Type*} [Field F] [CommRing R] [Field E]
+    (P : ℤ[X]) (τ : F →+* E) (ι : R →+* E)
+    (a : F) (A : R) (hA : ι A = τ a) (q w : ℕ) (hq : IsUnit (q : R)) :
+    ∃ b : R,
+      ι b = τ (P.eval₂ (Int.castRingHom F) (a ^ 2 / (q : F) ^ w)) ∧
+      ∀ {K : Type*} [Field K] (π : R →+* K),
+        π b = P.eval₂ (Int.castRingHom K) ((π A) ^ 2 / (q : K) ^ w) := by
+  let u : Rˣ := hq.unit
+  have hu : (u : R) = (q : R) := hq.unit_spec
+  refine ⟨P.eval₂ (Int.castRingHom R) (A ^ 2 * (↑(u⁻¹) : R) ^ w), ?_, ?_⟩
+  · rw [integral_unit_ratio_polynomial_map, hu, map_natCast, hA]
+    have hint : τ.comp (Int.castRingHom F) = Int.castRingHom E := Subsingleton.elim _ _
+    rw [Polynomial.hom_eval₂, hint, map_div₀, map_pow, map_pow, map_natCast]
+  · intro K _ π
+    rw [integral_unit_ratio_polynomial_map, hu, map_natCast]
+
+/-- Away from the residue characteristic an integer prime is already a unit in the original local ring. -/
+theorem local_nat_isUnit_of_not_dvd
+    {R : Type*} [CommRing R] [IsLocalRing R] (p q : ℕ)
+    [CharP (IsLocalRing.ResidueField R) p] (hpq : ¬p ∣ q) : IsUnit (q : R) := by
+  apply (IsLocalRing.residue_ne_zero_iff_isUnit _).mp
+  rw [map_natCast]
+  exact fun h => hpq ((CharP.cast_eq_zero_iff (IsLocalRing.ResidueField R) p q).mp h)
+
+end
+end Dubon2026.SourceDickson

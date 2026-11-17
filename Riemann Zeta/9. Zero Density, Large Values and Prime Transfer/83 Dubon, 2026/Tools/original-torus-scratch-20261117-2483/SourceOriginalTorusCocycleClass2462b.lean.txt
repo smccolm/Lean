@@ -1,0 +1,33 @@
+import SourceOriginalTorusClassPredicates2461b
+
+/-! Transfer the proved original cocycle detection to its actual H1 quotient. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Retain the representation component of the finite affine factor and
+all regular-prime properties for the same original cocycle class. -/
+theorem rationalArithmetic_original_torus_cocycle_class_primes
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    {K : Type} [Field K] [TopologicalSpace K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup (Fin (n + 1)) K)
+    (hR : Continuous R)
+    (c : continuousRepresentationCocyclesOne A)
+    (hprimes : HasArithmeticTorusDimensionalPrimes a p n level A hA R hR c) :
+    HasArithmeticTorusClassPrimes a p n level A hA R hR (Submodule.Quotient.mk c) := by
+  intro S
+  obtain ⟨u, hu, D, ψ, hψ, hD⟩ := hprimes
+  obtain ⟨q, hq, hqS, hqa, hmod, hunr, hlocal, hdim, hne⟩ := hD S
+  refine ⟨⟨q, hq⟩, hqS, ⟨hqa, hmod, hdim, u, hu, D,
+    (MonoidHom.fst (Matrix.GeneralLinearGroup (Fin (n + 1)) K) (Equiv.Perm A)).comp ψ,
+    ?_, hunr, hlocal⟩, ?_⟩
+  · intro w
+    exact congrArg Prod.fst (hψ w)
+  · exact hne
+
+end
+end Dubon2026

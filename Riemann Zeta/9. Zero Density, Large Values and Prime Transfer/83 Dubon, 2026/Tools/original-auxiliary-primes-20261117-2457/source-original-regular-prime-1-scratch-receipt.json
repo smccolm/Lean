@@ -1,0 +1,192 @@
+{
+  "recordedUTC": "2026-11-17T14:42:22.239008+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalArithmeticRootKernel",
+    "SourceSubfieldProjectorSpan",
+    "SourceSubfieldRegularTrace",
+    "SourceSubfieldRegularKernel",
+    "SourceTraceZeroCoefficientEmbedding",
+    "SourceTraceZeroConjugacy",
+    "SourceOriginalExtendedTraceTest",
+    "SourceFiniteLinearOriginalRegularDetection",
+    "SourceOriginalArithmeticRegularCocycle",
+    "SourceOriginalRegularPrimePredicates",
+    "SourceOriginalRegularPrimeAssembly",
+    "SourceOriginalArithmeticRegularPrimes",
+    "SourceOriginalArithmeticRegularPrimeProperty",
+    "SourceGammaOneOriginalRegularPrimes"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRootKernel.lean",
+      "sha256": "3B1775697C73599FD684D6D8A3E508C0A2F5E0594AB8A38379B019A1C1679F8D",
+      "oleanSha256": "6A72228C81477BD2D81778A067D3B926D1935CDDA19AF5DFF4777F154F2A97E9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRootKernel.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRootKernel.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldProjectorSpan.lean",
+      "sha256": "B4BFAFF4C408E5F1D9550565123FD959537DF31C2CA168BD624208D41A94B0A7",
+      "oleanSha256": "EA0BD011739A22C17F64D958322BC5DE567946BAE0FD19BC69CF96C5F245446E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldProjectorSpan.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldProjectorSpan.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularTrace.lean",
+      "sha256": "EDE192B40714F8793E51648608F7992357DB5D26AAA5672680B358ADF44DDC5C",
+      "oleanSha256": "9A99801A53E518E973DAE1B67B011C28B18D2A37E2324A86DAD4CCFA46C47892",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularTrace.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularTrace.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularKernel.lean",
+      "sha256": "3AE62D2BDE6672029D8AB03D3D9F0D510721C56C321D309CFBD12C7D71A612F8",
+      "oleanSha256": "4D98D2BD0DB5B70EDC46EF55EB6FEDC0E4F27E35004378441E62C5B18264AD68",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularKernel.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSubfieldRegularKernel.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroCoefficientEmbedding.lean",
+      "sha256": "84F71AF5CFA33B5561A66390E0C6B701DCD14F865D452B093F5C852393DE760D",
+      "oleanSha256": "17F35E57D0229AA8CADF82CA58D7791C411E07D5C8697551CD79BDA469694B0F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroCoefficientEmbedding.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroCoefficientEmbedding.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroConjugacy.lean",
+      "sha256": "DFA681EBD7BB438C6AC4373373BF7FF590DFB7BA1D22E76CBD719F151055984E",
+      "oleanSha256": "B87E3DB6AE63EE669CBE3D3C904B3E2F271514C7A129DC59EEE9117B0C6298CF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroConjugacy.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTraceZeroConjugacy.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedTraceTest.lean",
+      "sha256": "667572F960F8F6AB87174561233137DCA04501B047E56EFE4150CD62B254A03E",
+      "oleanSha256": "23B8282257B1CFBE806B2E4CA719F4DFC0B32760BA535C83DAB41CE366883C46",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedTraceTest.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedTraceTest.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalRegularDetection.lean",
+      "sha256": "47177514FD45FA73508E158359290C4F0D7D5941F8050C96E90E3240F7D49F56",
+      "oleanSha256": "C1D7839A08A87A63D3F75C03CE338BA9D912DBF59DA051D0399618BB488E0561",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalRegularDetection.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalRegularDetection.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularCocycle.lean",
+      "sha256": "568290FC605472AB83FD479795DC82B9C8299BCFE48A9F2D2E8343F608BDA453",
+      "oleanSha256": "47D7F9FE746C085A6224FE6D818D0DC584CE8DEF033ED4FB7B6CB27B2B83B3F1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularCocycle.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularCocycle.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimePredicates.lean",
+      "sha256": "E816684284E4BFE85DE7138927F6261A706370B12559F571040D2DE1499F969E",
+      "oleanSha256": "BB3B03FCB42FFA77BF999FEA4FE50D07EAB676CBA95268A66DD7C3F35E0BEF16",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimePredicates.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimePredicates.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAssembly.lean",
+      "sha256": "AF038D865345AECF90D8464EDF3318B8D80B7E49B426B26E7F5BD4388F01FCB7",
+      "oleanSha256": "A8CA69BACAE115A4CB47C3E616D4E422AE0E602078AD3FC29D0940BACCFCC1EC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAssembly.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAssembly.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimes.lean",
+      "sha256": "6BC45757D8F171973E1807DF492AE6FC1FB6801FD73781087E79904433675A13",
+      "oleanSha256": "B7E3D5081189954B7116C71204DC950486F668D5BC8332625A61A7BC6F7FACE8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimes.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimes.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimeProperty.lean",
+      "sha256": "7BDF4825CA4B7E43B0B2845A0A47435AEE784A5DBBD6130B53A3B811D673591E",
+      "oleanSha256": "7D1ADF14F1C67B534831944AE4C4C67A613D78E6F232C3CA555A20818EEC9EC6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimeProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticRegularPrimeProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalRegularPrimes.lean",
+      "sha256": "019448DA0C606BAA9A40A14C217BB824D10F13401803BB80704CB496ED60FB22",
+      "oleanSha256": "7F4D475603E61AFF474FFDFAE596C586A2C32C5C085B217B4B05C1229DA05402",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalRegularPrimes.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalRegularPrimes.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_nonzero_root_kernel",
+    "Dubon2026.finiteSymmetric_projector_conjugates_span_extension",
+    "Dubon2026.finiteSymmetric_exists_projector_trace_ne_zero_extension",
+    "Dubon2026.finiteSymmetric_exists_regular_conjugate_commuting_trace_extension",
+    "Dubon2026.finiteSubfield_exists_regular_character_kernel_trace",
+    "Dubon2026.traceZeroCoefficientEmbedding_injective",
+    "Dubon2026.traceZeroCoefficientEmbedding_action",
+    "Dubon2026.traceZeroCoefficientEmbedding",
+    "Dubon2026.traceZeroConjugation_injective",
+    "Dubon2026.traceZero_twisted_conjugate_action",
+    "Dubon2026.traceZero_notMem_coboundary_of_extended_conjugate_test",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_regular_kernel_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_regular_root_detection",
+    "Dubon2026.HasArithmeticRegularRootDetection",
+    "Dubon2026.HasArithmeticRegularDetectingPrimes",
+    "Dubon2026.rationalArithmetic_regular_primes_of_root_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_regular_primes",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_regular_prime_detection",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticRegularPrimeDetection",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_nonzero_root_kernel",
+    "Dubon2026.finiteSymmetric_projector_conjugates_span_extension",
+    "Dubon2026.finiteSymmetric_exists_projector_trace_ne_zero_extension",
+    "Dubon2026.finiteSymmetric_exists_regular_conjugate_commuting_trace_extension",
+    "Dubon2026.finiteSubfield_exists_regular_character_kernel_trace",
+    "Dubon2026.traceZeroCoefficientEmbedding_injective",
+    "Dubon2026.traceZeroCoefficientEmbedding_action",
+    "Dubon2026.traceZeroConjugation_injective",
+    "Dubon2026.traceZero_twisted_conjugate_action",
+    "Dubon2026.traceZero_notMem_coboundary_of_extended_conjugate_test",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_regular_kernel_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_regular_root_detection",
+    "Dubon2026.rationalArithmetic_regular_primes_of_root_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_regular_primes",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_regular_prime_detection",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.traceZeroCoefficientEmbedding",
+    "Dubon2026.HasArithmeticRegularRootDetection",
+    "Dubon2026.HasArithmeticRegularDetectingPrimes",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticRegularPrimeDetection"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeAudit1.log",
+  "logSha256": "BCB74963A0117272DB6148AFCC92CC428686CFFAFE809FF991B83EF68558D5BC",
+  "auditSha256": "B896567726A3AA39BF3F22CD9A59E284B4E0CB7F0112FD743B3A528039B509A5",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeDeclarations2405.log",
+  "ownershipSha256": "A563C47B0717B7BA30183A4805F7BD9FF29BEF0E3DB228B343F51DA1421C6352",
+  "exhaustiveTheorems": 57,
+  "exhaustiveOtherDeclarations": 9,
+  "linterScopes": 14,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 123,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeDependencyAudit1.log",
+  "dependencyAuditSha256": "83056E3C39A5B196A9F5414DFC326F260C918AD2E8C741860EC26F50512F777C",
+  "dependencyAuditSourceSha256": "7A31C4ACB2BAFAB83CBBE8E92617A4731DBD5ADA894DB504984A33E9728811BB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-regular-prime-reuse-review-2407.json",
+  "reuseReviewSha256": "127CE56F1EFA9436F414F6A3006C7CE8ADD6F07F103BBBDF71992080A52BE9D4",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> actual original regular detecting primes for the same residual representation and original twisted cohomology classes. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

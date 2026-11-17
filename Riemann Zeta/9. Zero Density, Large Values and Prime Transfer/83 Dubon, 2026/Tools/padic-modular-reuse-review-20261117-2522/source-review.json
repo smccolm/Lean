@@ -1,0 +1,39 @@
+{
+  "reviewUTC": "2026-11-17T17:31:05.346198+00:00",
+  "commit": "018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+  "commitUTC": "2026-11-07T16:09:04Z",
+  "repository": "https://github.com/ANR-FALSE/PadicModForms",
+  "license": "Apache-2.0; source license and author headers retained",
+  "leanSourceFiles": 67,
+  "toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "mathlibRevision": "4dcd48f9a8a6bc61472af7148f179a36c4b47c75",
+  "findings": {
+    "Galois": [],
+    "crystalline": [],
+    "FontaineLaffaille": [],
+    "eigenvariety": [
+      {
+        "path": "verso/Doc/Introduction.lean.txt",
+        "line": 31,
+        "text": "eigenvariety, including classicality results."
+      }
+    ],
+    "proofShortcutOrLimitTokens": [
+      {
+        "path": "verso/Doc/PAdic.lean.txt",
+        "line": 116,
+        "text": "The presentation and the limit are chosen with the axiom of choice."
+      }
+    ]
+  },
+  "inspected": [
+    "PadicModForms/PAdic/Classical.lean",
+    "PadicModForms/PAdic/Defs.lean",
+    "PadicModForms/ModP/Hasse.lean",
+    "PadicModForms/ModP/Weights.lean",
+    "README.md"
+  ],
+  "assessment": "This pinned snapshot supplies level-one q-expansion, coefficient reduction, Hasse invariant, filtration/weight congruence and Serre p-adic weight infrastructure. PAdic/Classical embeds rational classical forms into Serre p-adic forms; it is not a Galois crystalline comparison theorem. No Galois, crystalline or Fontaine-Laffaille implementation was located in this complete fetched Lean-source snapshot. The eigenvariety/classicality description in the README is not accepted as a proved endpoint. No external proof closure was built or accepted; no root pins changed.",
+  "decision": "Retain as a potential source for a future exact level-one coefficient/weight obligation. Defer adoption on the present DUB-17/18 original-residual local-condition and automorphy chain: its inspected results do not discharge the missing Galois comparison, image exclusions or automorphy. Existing native deformation-ring and CM dimension results remain the shorter applicable route.",
+  "wordTokenReview": "The sole raw proof-shortcut-token hit is a prose reference to the axiom of choice in verso/Doc/PAdic.lean; this is not a project axiom declaration or an admitted proof."
+}

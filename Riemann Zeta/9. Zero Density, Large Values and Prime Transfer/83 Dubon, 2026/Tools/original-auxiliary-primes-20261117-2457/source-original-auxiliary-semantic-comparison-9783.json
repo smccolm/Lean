@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "declarations": 147,
+  "missing": [],
+  "extra": [],
+  "different": {},
+  "evidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeScratchSemantic2406.log",
+      "sha256": "BEFF1DFD9F529C77CA6E1C6655E7F68FBD12A9F760E23A8594A1820078F8F3A9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeScratchSemantic2406.lean",
+      "sha256": "EDB3D4286D19A1763FC6C4EA919E3F478DB31BEA4E088FF29B042DE983B18273"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeScratchSemantic2406.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeProductionSemantic2406.log",
+      "sha256": "92EEE10C4D61FA0718DF737852FB2CF17A975D993D698A034E80FDF573B8FA51"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeProductionSemantic2406.lean",
+      "sha256": "BD17008C432A3B2C10D51FDBEF6E117DDF27ED9885F190EE0F06E7B669DC1229"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPrimeProductionSemantic2406.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyScratchSemantic2428.log",
+      "sha256": "E31A44FBC3FE7FD285F16383DAE1A3890FA6057281876F50DD043836B8BAF33D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyScratchSemantic2428.lean",
+      "sha256": "046818FD4A6F618639A04B4150070D60D2D59B956819CB41A309BD8D30115F98"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyScratchSemantic2428.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProductionSemantic2428.log",
+      "sha256": "E32F47757EDCE0019DE427E2D3969D31B5D1DDC82975995DD38C88FF0AEE2484"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProductionSemantic2428.lean",
+      "sha256": "107C74A4C189C572322E73C21C2DB49600FC8769FC40F91A285BE897E8C92F25"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProductionSemantic2428.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionScratchSemantic2435.log",
+      "sha256": "D7DDE34A9881C8F77C50F396897CEAB2E50EE055DA1BE75F75E3E0150E3B8B60"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionScratchSemantic2435.lean",
+      "sha256": "96D9F0B0C5DE1F83F45703F2EC9A2D849A36588683C411248250A999873A17EA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionScratchSemantic2435.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionProductionSemantic2435.log",
+      "sha256": "629182F6765ACA556E6DC4B5A67480E30D0257D49D453A3E104CA757E9A70651"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionProductionSemantic2435.lean",
+      "sha256": "16A491C9BCA76DCBB1C7F6017CE13E30EA19E82F0F959BE50EC70B42A6F4EFFE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionProductionSemantic2435.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "normalization": "Names are rewritten structurally, retaining numerical Name components: only the exact import-qualified private prefixes, generated auxiliary macro/unexpander names and three verified prime-instance names change. Bound binder names are alpha-normalized, expression metadata is removed after recursive child traversal, and closed Name literals are normalized only in generated notation declarations. Every public/private/generated type and available value is checked with exact owner/name sets; no declaration is omitted. Identical mathematical source bodies are independently checked after stripping imports."
+}

@@ -1,0 +1,27 @@
+import SourceOriginalExceptionalPrimeObstruction2542a
+import SourceNonzeroAlgebraicIntegerRelation2543c
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional cases.
+The same actual primitive form supplies one good coefficient prime and one
+nonzero integer relation constant, both independent of residual characteristic. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- A fixed good prime and fixed nonzero integer constant obstruct exceptional reduction for the actual form. -/
+theorem exists_original_exceptional_integer_obstruction
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ (q : ℕ) (H : ℤ[X]), q.Prime ∧ ¬q ∣ Q ∧ H.coeff 0 ≠ 0 ∧
+      H.eval₂ (Int.castRingHom (sourcePrimitiveCoefficientField f))
+        (exceptionalTracePolynomial.eval₂ (Int.castRingHom (sourcePrimitiveCoefficientField f))
+          ((sourcePrimitiveFieldCoefficient f q) ^ 2 /
+            (q : sourcePrimitiveCoefficientField f) ^ (k - 1).toNat)) = 0 := by
+  letI := sourcePrimitiveCoefficientField_numberField f hk
+  obtain ⟨q, hq, _hqS, hqQ, _ha, hP⟩ :=
+    exists_original_exceptional_prime_obstruction Q f hk ∅
+  obtain ⟨H, hH0, hH⟩ := nonzero_numberField_integer_relation _ hP
+  exact ⟨q, H, hq, hqQ, hH0, hH⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

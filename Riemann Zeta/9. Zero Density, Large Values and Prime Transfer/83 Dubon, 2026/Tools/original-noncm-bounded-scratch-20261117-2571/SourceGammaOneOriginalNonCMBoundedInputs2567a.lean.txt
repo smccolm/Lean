@@ -1,0 +1,60 @@
+import SourceGammaOneOriginalNonexceptionalInputs2551c
+import SourceOriginalNonCMBoundedInputsProperty2566a
+
+/-! DUB-17/18 -> eventual original residual large image -> actual non-CM
+bounded-conductor obstruction. The same original integral/residual pair retains
+all previous conclusions and has a nonzero inert Frobenius trace for every
+primitive nontrivial quadratic character of conductor at most M. The source
+must still bound the actual dihedral character conductor independently of p
+and identify its trace relation. No dihedral or final acceptance gate is closed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+variable (Q : ℕ) [NeZero Q] {k : ℤ}
+
+
+/-- The actual non-CM source form constructs the same complete original arithmetic and CM inputs together with uniform bounded-conductor inert Frobenius obstructions. -/
+theorem exists_gammaOne_original_nonCM_bounded_inputs
+    (f : NonCMPrimitiveCuspForm Q k) (hk : 2 ≤ k) (M : ℕ) :
+    ∃ B : ℕ, 3 ≤ B ∧ ∀ (p : ℕ) [Fact p.Prime], B < p →
+      HasOriginalNonCMBoundedInputs Q p M f.toPrimitiveCuspForm hk := by
+  obtain ⟨B0, hB0, h0⟩ := exists_gammaOne_original_nonexceptional_cm_inputs Q f.toPrimitiveCuspForm hk
+  obtain ⟨B1, hB1⟩ := nonCM_exists_original_bounded_conductor_reduction_bound Q f hk M
+  refine ⟨max B0 B1, le_trans hB0 (le_max_left _ _), ?_⟩
+  intro p _ hp
+  unfold HasOriginalNonCMBoundedInputs
+  letI := sourcePrimitiveCoefficientField_numberField f.toPrimitiveCuspForm hk
+  letI := rationalPrimeLocalField_charZero p (Fact.out : p.Prime)
+  let F := rationalPrimeLocalField p (Fact.out : p.Prime)
+  let L := commonCoefficientField (sourcePrimitiveCoefficientField f.toPrimitiveCuspForm) F
+  have hs := h0 p (lt_of_le_of_lt (le_max_left _ _) hp)
+  unfold HasOriginalNonexceptionalInputs at hs
+  dsimp only at hs
+  obtain ⟨u, v, hu, hv, hext, hfin, hfinite, hdiscrete, hchar,
+    τ, ρint, ρres, hi, hr, hred, hdet, hmax, himage, hlocal, hclass,
+    hdims, hpolar, hcm, hintegral, hodd⟩ := hs
+  letI : UniformSpace L := u
+  letI : TopologicalSpace L := u.toTopologicalSpace
+  letI : ValuativeRel L := v
+  letI : TopologicalSpace 𝓀[L] :=
+    inferInstanceAs (TopologicalSpace (𝒪[L] ⧸ IsLocalRing.maximalIdeal 𝒪[L]))
+  letI : CharP 𝓀[L] p := hchar
+  refine ⟨u, v, hu, hv, hext, hfin, hfinite, hdiscrete, hchar,
+    τ, ρint, ρres, hi, hr, hred, hdet, hmax, himage, hlocal, hclass,
+    hdims, hpolar, hcm, hintegral, ?_, hodd⟩
+  apply original_bounded_quadratic_frobenius_of_coefficients Q p M f.toPrimitiveCuspForm hk τ ρres
+  · exact hB1 p (lt_of_le_of_lt (le_max_right _ _) hp) τ
+  · intro q hq ha φ hφ
+    exact ((hlocal q hq ha).2 φ hφ).2.1
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

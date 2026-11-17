@@ -1,0 +1,145 @@
+{
+  "recordedUTC": "2026-11-17T17:47:59.632802+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalCMAdjointVanishing",
+    "SourceOriginalCMCotangent",
+    "SourceOriginalCMCotangentFormula",
+    "SourceOriginalIntegralCMDimensionData",
+    "SourceOriginalSupportBottomBounds",
+    "SourceOriginalIntegralCMDimensionField",
+    "SourceOriginalIntegralCMDimensionProperty",
+    "SourceOriginalIntegralCMDimensionAssembly",
+    "SourceGammaOneOriginalCMDimensions"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMAdjointVanishing.lean",
+      "sha256": "3FD830A582B2CD7F57EDA60B3F1D8F52CC8E1FDF3C175C5A61A0436C9FA40494",
+      "oleanSha256": "ADE80D49D108095D116153D227E48DA3CF53D90394D5C91EBC105226D82408F1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMAdjointVanishing.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMAdjointVanishing.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangent.lean",
+      "sha256": "74FA39281CBD2D7714EADDA852E52399D9A24B08D1B4105FFFED141054E8A0A0",
+      "oleanSha256": "F18B8D564BA60E5F5DFA54EE1EC16B5BC3F8A492FCF6291BF27157A2CDF66E09",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangent.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangent.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangentFormula.lean",
+      "sha256": "0A7532280958E0E9AD5BB1D53EBC58E1FBB2D23034D3AC60C75E49C2199AE5E3",
+      "oleanSha256": "88FD1AB63A4B4E5B6992551808827751E2949ED5275FD01E311234A46EA4E403",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangentFormula.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMCotangentFormula.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionData.lean",
+      "sha256": "079C6B9E47E1AAF227F6FB73689C562FF89985FAA04BC7EF180AB2D23ADDEF0E",
+      "oleanSha256": "76D22DB4049B3B76425A756B503C4C005B31412D40FA7C742C3B2F4A231AF30C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionData.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionData.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomBounds.lean",
+      "sha256": "992049C5A00CBE9B9210006D96CBA2305E96E45CC75917FC514D3D677A46D252",
+      "oleanSha256": "74428B748997FBACCF9B75D7520F6D2DF5C7E4F56901D742E664DB8DC3AE6DA3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomBounds.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportBottomBounds.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionField.lean",
+      "sha256": "E2EB9853A2CE08056B9B08C1EB64A75D9284D9DE743F29676E338F245A0ABD9F",
+      "oleanSha256": "B225D33510AFFBF3262B742AD4AEE1D23FB1006520EE15EA37E3F7247DDC4B3E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionField.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionField.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionProperty.lean",
+      "sha256": "A1EE08B1E10835DAE4FE7E94955CA5C2F7399A09CF9AD8244B5E3FFC98DA1BAE",
+      "oleanSha256": "150F60799E0EAEEB64EB2F0FAAF305869958A57A8D184C66E7C95C0E670376BE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionAssembly.lean",
+      "sha256": "D5069AC24B15E53758845FB6135617EDBAAA658A4497120AD26358EDA6269EC5",
+      "oleanSha256": "EF6BD985A5659F9D719F6616DC52AE60D5DC6B280B591AC2CAFD880AAEFF6741",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionAssembly.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralCMDimensionAssembly.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMDimensions.lean",
+      "sha256": "7AEC7FB6DF1A34768EB5225BFBCFC4A7825CB64A5C060A46860C1534F70AFCF0",
+      "oleanSha256": "3A453543B4FBC99B09F98704F32ACBAADA8F8E2DFF49C3801625BD559EFCBEFA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMDimensions.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMDimensions.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariant_eq_zero",
+    "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariants_eq_bot",
+    "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_finrank",
+    "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_formula",
+    "Dubon2026.SourceDickson.OriginalCMSymmetricCotangentFormula",
+    "Dubon2026.SourceDickson.original_integral_cm_symmetric_dimension_data",
+    "Dubon2026.SourceDickson.OriginalIntegralCMSymmetricDimensionData",
+    "Dubon2026.SourceDickson.original_support_bottom_finite_linear_bounds",
+    "Dubon2026.SourceDickson.original_integral_cm_dimension_field_data",
+    "Dubon2026.SourceDickson.OriginalIntegralCMDimensionFieldData",
+    "Dubon2026.SourceDickson.HasOriginalIntegralCMDimensions",
+    "Dubon2026.SourceDickson.original_integral_constructed_cm_dimensions",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariant_eq_zero",
+    "Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariants_eq_bot",
+    "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_finrank",
+    "Dubon2026.SourceDickson.original_cm_symmetric_cotangent_formula",
+    "Dubon2026.SourceDickson.original_integral_cm_symmetric_dimension_data",
+    "Dubon2026.SourceDickson.original_support_bottom_finite_linear_bounds",
+    "Dubon2026.SourceDickson.original_integral_cm_dimension_field_data",
+    "Dubon2026.SourceDickson.original_integral_constructed_cm_dimensions",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.OriginalCMSymmetricCotangentFormula",
+    "Dubon2026.SourceDickson.OriginalIntegralCMSymmetricDimensionData",
+    "Dubon2026.SourceDickson.OriginalIntegralCMDimensionFieldData",
+    "Dubon2026.SourceDickson.HasOriginalIntegralCMDimensions"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsAudit1.log",
+  "logSha256": "63AD7C91AEC12F4B402B9286B473E2C3C730464E9A9815856BC3006ABDAE8D52",
+  "auditSha256": "9A41173560DDE0E87ED041C536229B2D0C3B70CABEF25A29225B55B92D6A480B",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsDeclarations2518.log",
+  "ownershipSha256": "6E46E7130D43D1EF3B4DD6E62D3A03E3784881D1E54B11D9F87C04C631435DFA",
+  "exhaustiveTheorems": 73,
+  "exhaustiveOtherDeclarations": 17,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 257,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsDependencyAudit1.log",
+  "dependencyAuditSha256": "3B5BCDFD14276606FFE261E9170ABFC2FA27B45112AC25FEF24041CE5C7B4224",
+  "dependencyAuditSourceSha256": "85AA300A254077F812220B740CF37569B4E282302261BF5C0006768E5856C558",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-cm-dimensions-reuse-review-2518.json",
+  "reuseReviewSha256": "86B0EDDFA251700BD7F986773C194D99E5C22E8CE6A55A08F2F49FF952B6CA17",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original integral CM deformation inputs -> vanishing full polarized adjoint invariants and exact native cotangent dimension for the same original integral multiplier, residual representation and genuine CM field, in the explicit finite-subfield image branch and range 2*n < p-1. All prior original data and the explicit small-image alternative are retained.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "semanticFingerprints": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.lean",
+    "sourceSha256": "14586BF878E1FD65E7EF3520439941691C61B934B1ED255E316EBD5B9291DC13",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMDimensionsScratchSemantic2519.log",
+    "sha256": "BCD0D623686D245B6C26AAE4AA9DC14598A8BC5F4AD70879A1E8EC2806DD83C0",
+    "declarations": 90
+  }
+}

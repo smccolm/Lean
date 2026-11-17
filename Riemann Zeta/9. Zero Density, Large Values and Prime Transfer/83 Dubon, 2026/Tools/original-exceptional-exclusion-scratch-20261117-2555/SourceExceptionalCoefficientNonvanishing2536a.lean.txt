@@ -1,0 +1,25 @@
+import SourceExceptionalNumberFieldRoot2535b
+import SourceExceptionalValuationParity2534b
+
+/-! DUB-17/18 -> exceptional original image exclusion -> the characteristic-zero
+Fourier coefficient obstruction. A nonzero coefficient with an odd weight
+exponent cannot satisfy the fixed exceptional polynomial at an unramified prime
+outside the fixed constant's support. The actual prime inputs are isolated. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial IsDedekindDomain
+open scoped NumberField WithZero
+
+/-- The exact exceptional trace polynomial is nonzero at a good odd-weight coefficient ratio. -/
+theorem exceptional_coefficient_ratio_nonvanishing
+    {F : Type*} [Field F] [NumberField F] (v : HeightOneSpectrum (𝓞 F))
+    (q : ℕ) (hq : v.valuation F (q : F) = WithZero.exp (-1 : ℤ))
+    (hc : (-14400 : 𝓞 F) ∉ v.asIdeal) (a : F) (ha : a ≠ 0)
+    (w : ℕ) (hw : Odd w) :
+    exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom F) (a ^ 2 / (q : F) ^ w) ≠ 0 := by
+  intro h
+  exact odd_square_ratio_valuation_ne_one (v.valuation F) a (q : F) ha hq w hw
+    (exceptional_numberField_root_valuation_one v _ h hc)
+
+end
+end Dubon2026.SourceDickson

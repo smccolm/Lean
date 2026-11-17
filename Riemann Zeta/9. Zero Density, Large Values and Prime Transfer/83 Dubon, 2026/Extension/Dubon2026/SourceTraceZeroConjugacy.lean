@@ -1,0 +1,51 @@
+import Dubon2026.TraceCocycleKernelDetection
+
+/-! DUB-17/18 -> regular auxiliary-prime detection over the original field.
+The literal trace-zero action transports a commuting extended-field test
+through the already constructed change of basis. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+variable {G ι E : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field E]
+
+/-- Conjugation by the actual invertible matrix is injective on trace-zero matrices. -/
+theorem traceZeroConjugation_injective (C : GeneralLinearGroup ι E) :
+    Function.Injective
+      ((matrixTraceZeroAdjointRep (MonoidHom.id (GeneralLinearGroup ι E))).ρ C) := by
+  let T := (matrixTraceZeroAdjointRep (MonoidHom.id (GeneralLinearGroup ι E))).ρ
+  intro X Y h
+  have he := congrArg (T C⁻¹) h
+  change T C⁻¹ (T C X) = T C⁻¹ (T C Y) at he
+  simpa only [← Module.End.mul_apply, ← map_mul, inv_mul_cancel, map_one,
+    Module.End.one_apply] using he
+
+/-- The actual conjugation intertwines the two twisted trace-zero actions. -/
+theorem traceZero_twisted_conjugate_action
+    (ρ : G →* GeneralLinearGroup ι E) (χ : G →* E)
+    (C : GeneralLinearGroup ι E) (g : G) (X : matrixTraceZeroSubmodule ι E) :
+    (matrixTraceZeroCharacterRep
+      ((MulEquiv.toMonoidHom (MulAut.conj C)).comp ρ) χ).ρ g
+        ((matrixTraceZeroAdjointRep (MonoidHom.id (GeneralLinearGroup ι E))).ρ C X) =
+      (matrixTraceZeroAdjointRep (MonoidHom.id (GeneralLinearGroup ι E))).ρ C
+        ((matrixTraceZeroCharacterRep ρ χ).ρ g X) := by
+  let T := (matrixTraceZeroAdjointRep (MonoidHom.id (GeneralLinearGroup ι E))).ρ
+  have hT (ψ : G →* GeneralLinearGroup ι E) (s : G)
+      (Y : matrixTraceZeroSubmodule ι E) :
+      (matrixTraceZeroAdjointRep ψ).ρ s Y = T (ψ s) Y := by
+    apply Subtype.ext
+    change (ψ s).val * Y.val * (ψ s⁻¹).val = (ψ s).val * Y.val * ((ψ s)⁻¹).val
+    rw [map_inv]
+  change χ g • (matrixTraceZeroAdjointRep
+      ((MulEquiv.toMonoidHom (MulAut.conj C)).comp ρ)).ρ g (T C X) =
+    T C (χ g • (matrixTraceZeroAdjointRep ρ).ρ g X)
+  rw [hT, hT]
+  change χ g • T (C * ρ g * C⁻¹) (T C X) = T C (χ g • T (ρ g) X)
+  rw [map_smul]
+  have he : T (C * ρ g * C⁻¹) (T C X) = T C (T (ρ g) X) := by
+    rw [← Module.End.mul_apply, ← map_mul, ← Module.End.mul_apply, ← map_mul]
+    simp only [mul_assoc, inv_mul_cancel, mul_one]
+  rw [he]
+
+end
+end Dubon2026

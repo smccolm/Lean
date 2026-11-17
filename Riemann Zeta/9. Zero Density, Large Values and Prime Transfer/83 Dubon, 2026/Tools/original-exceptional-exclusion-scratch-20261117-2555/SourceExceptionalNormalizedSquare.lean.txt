@@ -1,0 +1,43 @@
+import SourceExceptionalTraceChebyshev
+
+/-! DUB-17/18 -> exceptional original image exclusion -> Frobenius polynomial.
+The determinant-normalized square converts scalar powers of the actual rank-two
+matrix to finite order in determinant one, with the exact original trace ratio. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+variable {F : Type*} [Field F]
+
+/-- The determinant-normalized square of a nonsingular rank-two matrix has determinant one. -/
+theorem normalized_square_det_one (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det ≠ 0) : (A.det⁻¹ • A ^ 2).det = 1 := by
+  rw [det_smul, det_pow, Fintype.card_fin, ← mul_pow, inv_mul_cancel₀ h, one_pow]
+
+/-- The exact normalized-square trace is the original squared trace divided by determinant. -/
+theorem normalized_square_trace (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det ≠ 0) : (A.det⁻¹ • A ^ 2).trace = A.trace ^ 2 / A.det - 2 := by
+  have hs : (A ^ 2).trace = A.trace ^ 2 - 2 * A.det := by
+    simp only [pow_two, trace_fin_two, Matrix.mul_apply, Fin.sum_univ_two, det_fin_two]
+    ring
+  rw [trace_smul, hs, smul_eq_mul]
+  field_simp
+
+/-- Scalar matrix powers give finite order after taking the determinant-normalized square. -/
+theorem normalized_square_pow_one (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det ≠ 0) (n : ℕ) (c : F) (hc : A ^ n = c • 1) :
+    (A.det⁻¹ • A ^ 2) ^ n = 1 := by
+  have hd := congrArg Matrix.det hc
+  simp only [det_pow, det_smul, Fintype.card_fin, det_one, mul_one] at hd
+  rw [smul_pow, ← pow_mul, mul_comm 2 n, pow_mul, hc, smul_pow, one_pow,
+    smul_smul, ← hd, ← mul_pow, inv_mul_cancel₀ h, one_pow, one_smul]
+
+/-- Scalar matrix powers force a fixed polynomial equation in the actual trace and determinant. -/
+theorem scalar_power_trace_chebyshev_equation (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det ≠ 0) (n : ℕ) (c : F) (hc : A ^ n = c • 1) :
+    (Chebyshev.C F (n : ℤ)).eval (A.trace ^ 2 / A.det - 2) = 2 := by
+  rw [← normalized_square_trace A h]
+  exact det_one_finite_order_trace_equation _ (normalized_square_det_one A h) n
+    (normalized_square_pow_one A h n c hc)
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,97 @@
+import SourceGammaOneOriginalTorusFamilies
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.matrix_exists_original_eigenbasis_of_distinct_roots
+#print axioms Dubon2026.matrix_exists_original_diagonal_conjugator_of_eigenbasis
+#print axioms Dubon2026.matrix_exists_original_diagonal_conjugator_of_distinct_roots
+#print axioms Dubon2026.original_characteristic_roots_of_mapped_diagonal
+#print axioms Dubon2026.SourceDickson.prime_subfield_sl2_image_le
+#print axioms Dubon2026.original_mapped_torus_conjugacy_of_subfield_lift
+#print axioms Dubon2026.original_symmetric_characteristic_roots_of_mapped_torus
+#print axioms Dubon2026.original_symmetric_torus_conjugacy_of_mapped_torus
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_torus_kernel_detection
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_torus_root_detection
+#print axioms Dubon2026.OriginalTorusPrimeWitness
+#print axioms Dubon2026.OriginalPrimeAdjointDimension
+#print axioms Dubon2026.HasArithmeticTorusRootDetection
+#print axioms Dubon2026.HasArithmeticTorusDimensionalPrimes
+#print axioms Dubon2026.HasArithmeticTorusDetectingPrimes
+#print axioms Dubon2026.rationalPrime_original_symmetric_unramified_finrank
+#print axioms Dubon2026.rationalPrime_original_affine_torus_unramified_finrank
+#print axioms Dubon2026.rationalArithmetic_torus_primes_of_root_detection
+#print axioms Dubon2026.rationalArithmetic_torus_detection_supplies_local_dimensions
+#print axioms Dubon2026.rationalArithmetic_torus_dimensional_primes_of_root_detection
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_torus_primes
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_torus_prime_detection
+#print axioms Dubon2026.SourceDickson.HasOriginalArithmeticTorusPrimeDetection
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_dimensional_primes
+#print axioms Dubon2026.RationalArithmeticOriginalTorusAuxiliaryPrime
+#print axioms Dubon2026.HasArithmeticTorusClassPrimes
+#print axioms Dubon2026.HasArithmeticTorusCocycleDetection
+#print axioms Dubon2026.rationalArithmetic_original_torus_cocycle_class_primes
+#print axioms Dubon2026.rationalArithmetic_original_class_torus_prime
+#print axioms Dubon2026.HasArithmeticTorusDetectingFamily
+#print axioms Dubon2026.rationalArithmetic_original_torus_detecting_family
+#print axioms Dubon2026.SourceDickson.original_torus_prime_detection_gives_finite_families
+#print axioms Dubon2026.SourceDickson.HasOriginalArithmeticTorusFamilies
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families
+
+
+
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceOriginalDistinctEigenbasis, `SourceOriginalDiagonalConjugacy, `SourceOriginalMappedDistinctRoots, `SourcePrimeSubfieldSL2Image, `SourceOriginalMappedTorusConjugacy, `SourceOriginalSymmetricTorusRoots, `SourceOriginalSymmetricTorusConjugacy, `SourceFiniteLinearOriginalTorusDetection, `SourceOriginalArithmeticTorusCocycle, `SourceOriginalTorusPrimeLocalProperties, `SourceOriginalTorusPrimePredicates, `SourceOriginalTorusDetectionPredicate, `SourceOriginalPrimeTorusDimension, `SourceOriginalAffineTorusDimension, `SourceOriginalTorusDetectionAssembly, `SourceOriginalTorusPrimeDimensions, `SourceOriginalTorusPrimeAssembly, `SourceOriginalArithmeticTorusPrimes, `SourceOriginalArithmeticTorusPrimeProperty, `SourceGammaOneOriginalTorusPrimes, `SourceOriginalTorusClassPredicates, `SourceOriginalTorusCocycleClass, `SourceOriginalTorusClassPrimes, `SourceOriginalTorusFamilyProperty, `SourceOriginalTorusDetectingFamily, `SourceOriginalArithmeticTorusFamilies, `SourceGammaOneOriginalTorusFamilies]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL TORUS AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceOriginalDistinctEigenbasis
+#lint in SourceOriginalDiagonalConjugacy
+#lint in SourceOriginalMappedDistinctRoots
+#lint in SourcePrimeSubfieldSL2Image
+#lint in SourceOriginalMappedTorusConjugacy
+#lint in SourceOriginalSymmetricTorusRoots
+#lint in SourceOriginalSymmetricTorusConjugacy
+#lint in SourceFiniteLinearOriginalTorusDetection
+#lint in SourceOriginalArithmeticTorusCocycle
+#lint in SourceOriginalTorusPrimeLocalProperties
+#lint in SourceOriginalTorusPrimePredicates
+#lint in SourceOriginalTorusDetectionPredicate
+#lint in SourceOriginalPrimeTorusDimension
+#lint in SourceOriginalAffineTorusDimension
+#lint in SourceOriginalTorusDetectionAssembly
+#lint in SourceOriginalTorusPrimeDimensions
+#lint in SourceOriginalTorusPrimeAssembly
+#lint in SourceOriginalArithmeticTorusPrimes
+#lint in SourceOriginalArithmeticTorusPrimeProperty
+#lint in SourceGammaOneOriginalTorusPrimes
+#lint in SourceOriginalTorusClassPredicates
+#lint in SourceOriginalTorusCocycleClass
+#lint in SourceOriginalTorusClassPrimes
+#lint in SourceOriginalTorusFamilyProperty
+#lint in SourceOriginalTorusDetectingFamily
+#lint in SourceOriginalArithmeticTorusFamilies
+#lint in SourceGammaOneOriginalTorusFamilies

@@ -1,0 +1,176 @@
+{
+  "recordedUTC": "2026-11-17T14:59:07.106807+00:00",
+  "status": "FAILED linter: the original regular-prime arithmetic predicate has an unused TopologicalSpace K parameter. All theorem/definition axioms are standard; all other lint scopes pass. No suppression allowed. Fresh successor removes exactly this unused predicate parameter and preserves every proof body; all audits will rerun.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDetectingFamilies.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceGammaOneOriginalDetectingFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDetectingFamilies.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceGammaOneOriginalDetectingFamilies.lean.txt",
+      "sha256": "718CF8691B872D64B50619F967F1113188E9D69CA283AAE515D1F7FB4980A2FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDetectingFamilies.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceGammaOneOriginalDetectingFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFamilyProperty.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalArithmeticFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFamilyProperty.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalArithmeticFamilyProperty.lean.txt",
+      "sha256": "536E382459E87C962DC98C7A5D692B77AD61AB8788779297D43A0A464DDF7B3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFamilyProperty.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalArithmeticFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassPrimePredicates.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalClassPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassPrimePredicates.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalClassPrimePredicates.lean.txt",
+      "sha256": "E9D71D0EB722DA3362366381E140A718737F55C49921D4235B42045715D5A981"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassPrimePredicates.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalClassPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassRegularPrimes.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalClassRegularPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassRegularPrimes.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalClassRegularPrimes.lean.txt",
+      "sha256": "AEAEBD538A3DD3FCE66E53FD95A6522BBB83877A78F462CC3B305E2684D9E7D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClassRegularPrimes.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalClassRegularPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCocycleClassPrimes.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalCocycleClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCocycleClassPrimes.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalCocycleClassPrimes.lean.txt",
+      "sha256": "F616669EE76A83AD2EC4DF02DC387B0F2D80073547520CC248783E2EEA4F83B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCocycleClassPrimes.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalCocycleClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientH1Finite.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalCoefficientH1Finite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientH1Finite.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalCoefficientH1Finite.lean.txt",
+      "sha256": "A01B51DC4D616E04EC590F5E4E9D09ABBD4185A73232B6560E7D34F9E177D057"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientH1Finite.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalCoefficientH1Finite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyAudit1.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalDetectingFamilyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyAudit1.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalDetectingFamilyAudit1.lean.txt",
+      "sha256": "1D5FE72A9586757DCB4C0000609E0D02E3D4227264FBD8EAFC0C01FDB92D4550"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyAudit1.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalDetectingFamilyAudit1.log",
+      "sha256": "C91025292B9B9F63964BB78E3917E56D84B6652D37EE19F83DBA7A130B8718A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProperty.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalDetectingFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProperty.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalDetectingFamilyProperty.lean.txt",
+      "sha256": "D089F893A5F6469473E0554865C2953590D162F65B37154752179740BF0B8003"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDetectingFamilyProperty.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalDetectingFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDetectingFamily.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalFiniteDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDetectingFamily.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalFiniteDetectingFamily.lean.txt",
+      "sha256": "D1C37096D07F54EB56BEEAEE05F19BA4845E1158799F45AF22C4E96CA77D3865"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDetectingFamily.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourceOriginalFiniteDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeIndexedDetectingFamily.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourcePrimeIndexedDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeIndexedDetectingFamily.lean",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourcePrimeIndexedDetectingFamily.lean.txt",
+      "sha256": "35EDB7230EB319D97CCC93A9F45B9540E2EC2BC9A3EC1612018E6A1DDFBD4A72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeIndexedDetectingFamily.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\SourcePrimeIndexedDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-detecting-family-build-2418b.exit",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\original-detecting-family-build-2418b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-detecting-family-build-2418b.log",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\original-detecting-family-build-2418b.log",
+      "sha256": "C11736BF9611EB3439C43E1F24837B11CDB6DB37FDEC5BE3B61759A93C6321AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-detecting-family-runner-review-2418.json",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\original-detecting-family-runner-review-2418.json",
+      "sha256": "D7F05B8FE3C1D9D740B7BC92BE1A9DE8A3DD0A39D1D11F8E98D3063BAC75BE92"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-detecting-family-audit-config-2418.json",
+      "archived": "E:\\Lean\\.tmp\\dubon83\\original-family-failed-audit-2418\\source-original-detecting-family-audit-config-2418.json",
+      "sha256": "E63D56845D1FAA20A6C8A7C3EF43FF3B6991AB6D17C3135C52280712690C523A"
+    }
+  ]
+}

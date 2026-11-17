@@ -1,0 +1,34 @@
+import SourceOriginalExceptionalScalarPower
+import SourceExceptionalNormalizedSquare
+
+/-! DUB-17/18 -> eventual residual large image -> exceptional-case exclusions.
+The original residual matrices themselves now satisfy one fixed integral
+Chebyshev trace/determinant equation. Actual Frobenius coefficient substitution
+and the characteristic-zero nonvanishing argument are still required. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+variable (p : ℕ) [Fact p.Prime]
+
+/-- The three exceptional projective alternatives force the same original trace equation. -/
+theorem original_exceptional_residual_trace_equation
+    {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F)
+    (h : Nonempty ((residualProjectiveAction p j ρ).range ≃*
+        alternatingGroup (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* Equiv.Perm (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 5)))
+    (g : Γ) :
+    (Chebyshev.C F 120).eval ((ρ g).val.trace ^ 2 / (ρ g).val.det - 2) = 2 := by
+  obtain ⟨u, hu⟩ := original_exceptional_residual_pow_scalar p j ρ h g
+  have hpow : (ρ g).val ^ 120 = (u : F) • 1 := by
+    have hv := congrArg Units.val hu
+    change (ρ g).val ^ 120 = Matrix.scalar (Fin 2) (u : F) at hv
+    rw [hv]
+    ext i k
+    by_cases hik : i = k <;> simp [Matrix.scalar_apply, hik]
+  exact scalar_power_trace_chebyshev_equation (ρ g).val
+    (GeneralLinearGroup.det_ne_zero (ρ g)) 120 (u : F) hpow
+
+end
+end Dubon2026.SourceDickson

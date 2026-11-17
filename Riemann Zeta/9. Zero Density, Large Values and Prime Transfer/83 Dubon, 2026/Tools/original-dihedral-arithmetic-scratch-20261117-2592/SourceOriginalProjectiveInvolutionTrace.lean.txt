@@ -1,0 +1,39 @@
+import SourceProjectiveInvolutionTrace
+import Dubon2026.SourceResidualProjectiveClassification
+
+/-! DUB-17/18 -> original dihedral image exclusion -> original trace zero on
+reflections. A nonidentity involution in the actual projective range forces
+zero trace over the original residue field. The embedding is used injectively;
+the original field is never identified with its algebraic closure. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+
+/-- A nonidentity projective involution of the original action has zero original-field trace. -/
+theorem original_projective_involution_trace_zero
+    (p : ℕ) [Fact p.Prime] {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F) (g : Γ)
+    (h2 : residualProjectiveAction p j ρ g ^ 2 = 1)
+    (hne : residualProjectiveAction p j ρ g ≠ 1) : (ρ g).val.trace = 0 := by
+  let A : GL (Fin 2) (K p) := GeneralLinearGroup.map j (ρ g)
+  have hc : A ^ 2 ∈ Subgroup.center (GL (Fin 2) (K p)) := by
+    apply (QuotientGroup.eq_one_iff _).mp
+    simpa only [A, map_pow, residualProjectiveAction, MonoidHom.comp_apply] using h2
+  have hn : A ∉ Subgroup.center (GL (Fin 2) (K p)) := by
+    intro h
+    exact hne ((QuotientGroup.eq_one_iff _).mpr h)
+  rw [GeneralLinearGroup.center_eq_range_scalar] at hc
+  obtain ⟨u, hu⟩ := hc
+  have hs : A.val ^ 2 = (u : K p) • (1 : Matrix (Fin 2) (Fin 2) (K p)) := by
+    have hv := congrArg Units.val hu.symm
+    change A.val ^ 2 = Matrix.scalar (Fin 2) (u : K p) at hv
+    rw [hv]
+    ext i k
+    by_cases hik : i = k <;> simp [Matrix.scalar_apply, hik]
+  have ht := noncentral_scalar_square_trace_zero A (u : K p) hs hn
+  apply j.injective
+  rw [map_zero]
+  exact (AddMonoidHom.map_trace j (ρ g).val).trans ht
+
+end
+end Dubon2026.SourceDickson

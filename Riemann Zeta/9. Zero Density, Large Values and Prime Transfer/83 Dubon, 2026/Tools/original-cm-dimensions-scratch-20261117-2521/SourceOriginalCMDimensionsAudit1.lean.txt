@@ -1,0 +1,61 @@
+import SourceGammaOneOriginalCMDimensions
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariant_eq_zero
+#print axioms Dubon2026.SourceDickson.original_cm_polarized_adjoint_invariants_eq_bot
+#print axioms Dubon2026.SourceDickson.original_cm_symmetric_cotangent_finrank
+#print axioms Dubon2026.SourceDickson.original_cm_symmetric_cotangent_formula
+#print axioms Dubon2026.SourceDickson.OriginalCMSymmetricCotangentFormula
+#print axioms Dubon2026.SourceDickson.original_integral_cm_symmetric_dimension_data
+#print axioms Dubon2026.SourceDickson.OriginalIntegralCMSymmetricDimensionData
+#print axioms Dubon2026.SourceDickson.original_support_bottom_finite_linear_bounds
+#print axioms Dubon2026.SourceDickson.original_integral_cm_dimension_field_data
+#print axioms Dubon2026.SourceDickson.OriginalIntegralCMDimensionFieldData
+#print axioms Dubon2026.SourceDickson.HasOriginalIntegralCMDimensions
+#print axioms Dubon2026.SourceDickson.original_integral_constructed_cm_dimensions
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceOriginalCMAdjointVanishing, `SourceOriginalCMCotangent, `SourceOriginalCMCotangentFormula, `SourceOriginalIntegralCMDimensionData, `SourceOriginalSupportBottomBounds, `SourceOriginalIntegralCMDimensionField, `SourceOriginalIntegralCMDimensionProperty, `SourceOriginalIntegralCMDimensionAssembly, `SourceGammaOneOriginalCMDimensions]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL CM DIMENSIONS AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceOriginalCMAdjointVanishing
+#lint in SourceOriginalCMCotangent
+#lint in SourceOriginalCMCotangentFormula
+#lint in SourceOriginalIntegralCMDimensionData
+#lint in SourceOriginalSupportBottomBounds
+#lint in SourceOriginalIntegralCMDimensionField
+#lint in SourceOriginalIntegralCMDimensionProperty
+#lint in SourceOriginalIntegralCMDimensionAssembly
+#lint in SourceGammaOneOriginalCMDimensions

@@ -1,0 +1,119 @@
+import SourceGammaOneOriginalNonexceptionalInputs
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.exceptional_projective_pow_120
+#print axioms Dubon2026.SourceDickson.original_exceptional_residual_pow_scalar
+#print axioms Dubon2026.SourceDickson.det_one_matrix_trace_pow_chebyshev
+#print axioms Dubon2026.SourceDickson.det_one_finite_order_trace_equation
+#print axioms Dubon2026.SourceDickson.normalized_square_det_one
+#print axioms Dubon2026.SourceDickson.normalized_square_trace
+#print axioms Dubon2026.SourceDickson.normalized_square_pow_one
+#print axioms Dubon2026.SourceDickson.scalar_power_trace_chebyshev_equation
+#print axioms Dubon2026.SourceDickson.original_exceptional_residual_trace_equation
+#print axioms Dubon2026.SourceDickson.integral_chebyshev_isMonicOfDegree
+#print axioms Dubon2026.SourceDickson.exceptionalTracePolynomial_isMonicOfDegree
+#print axioms Dubon2026.SourceDickson.exceptionalTracePolynomial_eval_zero
+#print axioms Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_mul_X
+#print axioms Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_monic
+#print axioms Dubon2026.SourceDickson.exceptionalTracePolynomial
+#print axioms Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial
+#print axioms Dubon2026.SourceDickson.integral_chebyshev_derivative_eval_neg_two
+#print axioms Dubon2026.SourceDickson.exceptionalNonzeroTracePolynomial_constant
+#print axioms Dubon2026.SourceDickson.exceptionalTracePolynomial_eval₂
+#print axioms Dubon2026.SourceDickson.exceptional_nonzero_trace_root_isIntegral
+#print axioms Dubon2026.SourceDickson.exceptional_nonzero_trace_root_dvd_constant
+#print axioms Dubon2026.SourceDickson.odd_square_ratio_valuation_ne_one
+#print axioms Dubon2026.SourceDickson.exceptional_numberField_root_valuation_one
+#print axioms Dubon2026.SourceDickson.exceptional_coefficient_ratio_nonvanishing
+#print axioms Dubon2026.SourceDickson.exceptional_unramified_prime_valuation
+#print axioms Dubon2026.SourceDickson.exceptional_unramified_coefficient_ratio_nonvanishing
+#print axioms Dubon2026.SourceDickson.exceptional_coefficient_prime_unramified
+#print axioms Dubon2026.SourceDickson.exists_exceptional_unramified_coefficient_prime
+#print axioms Dubon2026.SourceDickson.exceptional_coefficient_ratio_nonvanishing_outside_support
+#print axioms Dubon2026.SourceDickson.exceptionalCoefficientRamifiedPrimes
+#print axioms Dubon2026.original_arithmetic_exists_identity_norm_frobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_local_nonzero_prime_coefficient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_nonzero_prime_coefficient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_prime_obstruction
+#print axioms Dubon2026.SourceDickson.nonzero_numberField_integer_relation
+#print axioms Dubon2026.SourceDickson.integer_relation_lifts_to_integral_ring
+#print axioms Dubon2026.SourceDickson.integer_relation_reduction_dvd_constant
+#print axioms Dubon2026.SourceDickson.embedded_integer_relation_reduction_dvd_constant
+#print axioms Dubon2026.SourceDickson.integral_unit_ratio_polynomial_map
+#print axioms Dubon2026.SourceDickson.exists_integral_polynomial_ratio
+#print axioms Dubon2026.SourceDickson.local_nat_isUnit_of_not_dvd
+#print axioms Dubon2026.SourceDickson.original_exceptional_trace_polynomial
+#print axioms Dubon2026.SourceDickson.original_exceptional_characteristic_dvd_relation_constant
+#print axioms Dubon2026.SourceDickson.not_int_dvd_of_natAbs_lt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_integer_obstruction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_fixed_local_not_exceptional
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_original_exceptional_exclusion_bound
+#print axioms Dubon2026.SourceDickson.remaining_small_image_of_not_exceptional
+#print axioms Dubon2026.SourceDickson.HasRemainingSmallProjectiveImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonexceptionalInputs
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonexceptional_cm_inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private def audit : CoreM Unit := do
+  let env ← getEnv
+  let modules : Array Name := #[`SourceExceptionalProjectiveExponent, `SourceOriginalExceptionalScalarPower, `SourceExceptionalTraceChebyshev, `SourceExceptionalNormalizedSquare, `SourceOriginalExceptionalTraceEquation, `SourceExceptionalIntegralPolynomial, `SourceExceptionalPolynomialConstant, `SourceOriginalExceptionalPolynomialRoot, `SourceExceptionalRootArithmetic, `SourceExceptionalValuationParity, `SourceExceptionalNumberFieldRoot, `SourceExceptionalCoefficientNonvanishing, `SourceExceptionalUnramifiedPrime, `SourceExceptionalCoefficientPrimeSupport, `SourceOriginalIdentityFrobenius, `SourceOriginalLocalNonzeroPrimeCoefficient, `SourceOriginalNonzeroPrimeCoefficient, `SourceOriginalExceptionalPrimeObstruction, `SourceNonzeroAlgebraicIntegerRelation, `SourceIntegerRelationReduction, `SourceIntegralPolynomialRatio, `SourceOriginalExceptionalIntegerObstruction, `SourceOriginalExceptionalFixedObstruction, `SourceOriginalFixedLocalExceptionalExclusion, `SourceOriginalExceptionalUniformBound, `SourceNonexceptionalSmallAlternatives, `SourceOriginalNonexceptionalInputsProperty, `SourceGammaOneOriginalNonexceptionalInputs]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut nt := 0
+  let mut nd := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Project postulate: {name}"
+        let axioms ← Lean.collectAxioms name
+        let forbidden := axioms.filter fun a => !allowed.contains a
+        unless forbidden.isEmpty do throwError "Forbidden dependencies: {name}: {forbidden}"
+        if info.isTheorem then nt := nt + 1 else nd := nd + 1
+  logInfo m!"SOURCE ORIGINAL EXCEPTIONAL EXCLUSION AXIOM AUDIT PASS: {nt} theorems and {nd} other declarations, including private/generated declarations. One actual original residual action has the image alternatives, original symmetric spanning, absolute irreducibility, adjoint H0 vanishing and actual arithmetic twisted-kernel detection. Arithmetic image exclusions and remaining local and auxiliary-prime conditions remain OPEN."
+
+#eval audit
+
+#lint in SourceExceptionalProjectiveExponent
+#lint in SourceOriginalExceptionalScalarPower
+#lint in SourceExceptionalTraceChebyshev
+#lint in SourceExceptionalNormalizedSquare
+#lint in SourceOriginalExceptionalTraceEquation
+#lint in SourceExceptionalIntegralPolynomial
+#lint in SourceExceptionalPolynomialConstant
+#lint in SourceOriginalExceptionalPolynomialRoot
+#lint in SourceExceptionalRootArithmetic
+#lint in SourceExceptionalValuationParity
+#lint in SourceExceptionalNumberFieldRoot
+#lint in SourceExceptionalCoefficientNonvanishing
+#lint in SourceExceptionalUnramifiedPrime
+#lint in SourceExceptionalCoefficientPrimeSupport
+#lint in SourceOriginalIdentityFrobenius
+#lint in SourceOriginalLocalNonzeroPrimeCoefficient
+#lint in SourceOriginalNonzeroPrimeCoefficient
+#lint in SourceOriginalExceptionalPrimeObstruction
+#lint in SourceNonzeroAlgebraicIntegerRelation
+#lint in SourceIntegerRelationReduction
+#lint in SourceIntegralPolynomialRatio
+#lint in SourceOriginalExceptionalIntegerObstruction
+#lint in SourceOriginalExceptionalFixedObstruction
+#lint in SourceOriginalFixedLocalExceptionalExclusion
+#lint in SourceOriginalExceptionalUniformBound
+#lint in SourceNonexceptionalSmallAlternatives
+#lint in SourceOriginalNonexceptionalInputsProperty
+#lint in SourceGammaOneOriginalNonexceptionalInputs

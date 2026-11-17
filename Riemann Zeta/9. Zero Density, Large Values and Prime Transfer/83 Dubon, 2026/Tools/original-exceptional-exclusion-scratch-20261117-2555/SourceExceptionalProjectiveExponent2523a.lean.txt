@@ -1,0 +1,30 @@
+import Dubon2026.SourceResidualProjectiveClassification
+import Mathlib.GroupTheory.SpecificGroups.Alternating
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional-case
+exclusions. The three actual exceptional projective-image alternatives have
+uniform exponent dividing 120. This is only their finite-group input; the
+Frobenius coefficient contradiction remains to be proved. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+
+private theorem pow_120_of_card_dvd {G : Type*} [Group G]
+    (h : Nat.card G ∣ 120) (g : G) : g ^ 120 = 1 := by
+  exact orderOf_dvd_iff_pow_eq_one.mp ((orderOf_dvd_natCard g).trans h)
+
+/-- Each of the three exceptional projective groups has exponent dividing 120. -/
+theorem exceptional_projective_pow_120 {G : Type*} [Group G]
+    (h : Nonempty (G ≃* alternatingGroup (Fin 4)) ∨
+      Nonempty (G ≃* Equiv.Perm (Fin 4)) ∨
+      Nonempty (G ≃* alternatingGroup (Fin 5))) (g : G) : g ^ 120 = 1 := by
+  apply pow_120_of_card_dvd
+  rcases h with ⟨e⟩ | ⟨e⟩ | ⟨e⟩
+  · rw [Nat.card_congr e.toEquiv, nat_card_alternatingGroup]
+    norm_num [Nat.card_fin, Nat.factorial]
+  · rw [Nat.card_congr e.toEquiv, Nat.card_perm]
+    norm_num [Nat.card_fin, Nat.factorial]
+  · rw [Nat.card_congr e.toEquiv, nat_card_alternatingGroup]
+    norm_num [Nat.card_fin, Nat.factorial]
+
+end
+end Dubon2026.SourceDickson

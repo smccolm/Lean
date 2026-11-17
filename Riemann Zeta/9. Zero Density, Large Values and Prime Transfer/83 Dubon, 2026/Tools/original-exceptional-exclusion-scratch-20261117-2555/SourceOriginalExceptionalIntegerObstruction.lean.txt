@@ -1,0 +1,56 @@
+import SourceIntegralPolynomialRatio
+import SourceOriginalExceptionalPolynomialRoot
+
+/-! DUB-17/18 -> original residual exceptional image exclusion -> a fixed
+nonzero integer obstruction. Literal coefficient embedding, integral lift,
+residue map, original matrix trace and determinant are all kept in the chain. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+
+/-- Every exceptional original projective image satisfies the full fixed polynomial, including zero traces. -/
+theorem original_exceptional_trace_polynomial
+    (p : ℕ) [Fact p.Prime] {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F)
+    (h : Nonempty ((residualProjectiveAction p j ρ).range ≃*
+        alternatingGroup (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* Equiv.Perm (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 5)))
+    (g : Γ) : exceptionalTracePolynomial.eval₂ (Int.castRingHom F)
+      ((ρ g).val.trace ^ 2 / (ρ g).val.det) = 0 := by
+  rw [exceptionalTracePolynomial_eval₂,
+    original_exceptional_residual_trace_equation p j ρ h g, sub_self]
+
+/-- Exceptional original Frobenius trace and determinant force the characteristic to divide a fixed integer relation constant. -/
+theorem original_exceptional_characteristic_dvd_relation_constant
+    {F E R k : Type*} [Field F] [Field E] [CommRing R] [IsLocalRing R] [Field k]
+    (p : ℕ) [Fact p.Prime] [CharP k p] [CharP (IsLocalRing.ResidueField R) p]
+    {Γ : Type*} [Group Γ] (j : k →+* K p) (ρ : Γ →* GL (Fin 2) k)
+    (h : Nonempty ((residualProjectiveAction p j ρ).range ≃*
+        alternatingGroup (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* Equiv.Perm (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 5)))
+    (τ : F →+* E) (ι : R →+* E) (hι : Function.Injective ι)
+    (π : R →+* k) (a : F) (A : R) (hA : ι A = τ a)
+    (q w : ℕ) (hpq : ¬p ∣ q) (g : Γ)
+    (htrace : (ρ g).val.trace = π A) (hdet : (ρ g).val.det = (q : k) ^ w)
+    (H : ℤ[X]) (hH : H.eval₂ (Int.castRingHom F)
+      (exceptionalTracePolynomial.eval₂ (Int.castRingHom F) (a ^ 2 / (q : F) ^ w)) = 0) :
+    (p : ℤ) ∣ H.coeff 0 := by
+  obtain ⟨b, hb, hres⟩ := exists_integral_polynomial_ratio exceptionalTracePolynomial τ ι
+    a A hA q w (local_nat_isUnit_of_not_dvd p q hpq)
+  apply embedded_integer_relation_reduction_dvd_constant p H _ hH τ ι hι b hb π
+  rw [hres π]
+  have he := original_exceptional_trace_polynomial p j ρ h g
+  rwa [htrace, hdet] at he
+
+/-- A nonzero fixed integer constant excludes every characteristic larger than its absolute value. -/
+theorem not_int_dvd_of_natAbs_lt {m : ℤ} (hm : m ≠ 0) {p : ℕ}
+    (hp : m.natAbs < p) : ¬(p : ℤ) ∣ m := by
+  intro hd
+  have hd' : p ∣ m.natAbs := Int.natCast_dvd_natCast.mp (Int.dvd_natAbs.mpr hd)
+  have hm' : 0 < m.natAbs := Int.natAbs_pos.mpr hm
+  exact (not_le_of_gt hp) (Nat.le_of_dvd hm' hd')
+
+end
+end Dubon2026.SourceDickson

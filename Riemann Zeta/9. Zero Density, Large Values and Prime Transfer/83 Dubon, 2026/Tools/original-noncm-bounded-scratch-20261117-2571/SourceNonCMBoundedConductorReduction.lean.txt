@@ -1,0 +1,42 @@
+import SourceNonCMOriginalInertReductionBound
+import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
+import Mathlib.Data.Fintype.Sigma
+
+/-! DUB-17/18 -> original dihedral image exclusion -> bounded-conductor
+quadratic-character obstruction. Native finiteness of Dirichlet characters
+makes the fixed-character bounds uniform over every conductor at most M.
+The source Galois/Dirichlet comparison and an actual characteristic-independent
+conductor bound remain required; neither is introduced as a proved conclusion. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open scoped ValuativeRel
+
+/-- For an actual non-CM form, one bound supplies a nonzero original inert residue coefficient simultaneously for every primitive nontrivial quadratic character of bounded conductor. -/
+theorem nonCM_exists_original_bounded_conductor_reduction_bound
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : NonCMPrimitiveCuspForm Q k) (hk : 2 ≤ k) (M : ℕ) :
+    ∃ B : ℕ, ∀ (p : ℕ) [Fact p.Prime], B < p →
+      ∀ {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+        (τ : sourcePrimitiveCoefficientField f.toPrimitiveCuspForm →ₐ[ℚ] E)
+        (D : ℕ+) (χ : DirichletCharacter ℂ D), D ≤ M → χ.IsPrimitive → χ ≠ 1 → χ.IsQuadratic →
+        ∃ q : ℕ, q.Prime ∧ q.Coprime (Q * D * p) ∧ characterCoefficients χ q = -1 ∧
+          IsLocalRing.residue 𝒪[E]
+            ⟨τ (sourcePrimitiveFieldCoefficient f.toPrimitiveCuspForm q),
+              sourcePrimitiveCoefficient_valuation_le_one f.toPrimitiveCuspForm hk τ q⟩ ≠ 0 := by
+  classical
+  let I := {d : ℕ // d ∈ Finset.Icc 1 M}
+  let J := Σ d : I, {χ : DirichletCharacter ℂ d.val // χ.IsPrimitive ∧ χ ≠ 1 ∧ χ.IsQuadratic}
+  letI : Fintype I := Fintype.ofFinset (Finset.Icc 1 M) (fun _ => Iff.rfl)
+  letI : Fintype J := Fintype.ofFinite J
+  have h := fun t : J => nonCM_exists_original_inert_reduction_bound Q f hk
+    (⟨t.1.val, by have hd := (Finset.mem_Icc.mp t.1.property).1; omega⟩ : ℕ+)
+    t.2.val t.2.property.1 t.2.property.2.1 t.2.property.2.2
+  choose B hB using h
+  refine ⟨Finset.univ.sup B, ?_⟩
+  intro p _ hp E _ _ _ _ τ D χ hD hχp hχ1 hχq
+  let d : I := ⟨D, Finset.mem_Icc.mpr ⟨D.property, hD⟩⟩
+  let t : J := ⟨d, χ, hχp, hχ1, hχq⟩
+  have hbp : B t < p := lt_of_le_of_lt (Finset.le_sup (Finset.mem_univ t)) hp
+  exact hB t p hbp τ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

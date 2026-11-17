@@ -1,0 +1,12 @@
+{
+  "recordedUTC": "2026-11-17T19:02:14.352358+00:00",
+  "failure": "Fresh fingerprint generators retained the existing numeric-versus-textual module-name self-test but replaced its mapping inventory with only the new modules. The self-test correctly failed because SourceGammaOneProjectiveResidual was absent from that inventory.",
+  "repair": "Fresh b fingerprint scripts restore all prior exact module-name mappings and add the new audited modules. The numeric/textual self-tests, complete type/value hashing algorithm, ownership selection and all mathematical source bodies are unchanged.",
+  "failedExceptional": "SourceOriginalExceptionalExclusionScratchSemantic2553",
+  "freshExceptional": "SourceOriginalExceptionalExclusionScratchSemantic2553b",
+  "initialNonCM": "SourceOriginalNonCMBoundedScratchSemantic2569",
+  "freshNonCM": "SourceOriginalNonCMBoundedScratchSemantic2569b",
+  "omittedDeclarations": [],
+  "mathematicalSourcesChanged": false,
+  "verificationRequirementsWeakened": false
+}

@@ -1,0 +1,9 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": "literal higher symmetric-power continuation -> automorphy -> the original mixed-characteristic CM deformation ring -> a genuine integral odd similitude lifting the same residual CM determinant",
+  "reuse": "FiniteBaseCMSymmetricCoefficientRing_localData already constructs the complete local Noetherian polarized coefficient ring once its original coefficient-valued similitude, CM-kernel reduction equation and odd real sign are supplied. The actual modular-form consumer already retains an integral rank-two representation and its literal residual matrix reduction. Use its determinant, with the native quadratic sign correction. A genuine involution over a domain has determinant +/-1; odd residual reduction in characteristic greater than two determines the integral sign. This avoids constructing a new coefficient ring, changing the original residue field or replacing the original lattice with a separate Witt-coordinate model.",
+  "boundary": "Only the required integral character and compatibility are targeted. Local crystalline/deformation conditions, automorphy, image exclusions and DUB-17--20 remain open."
+}

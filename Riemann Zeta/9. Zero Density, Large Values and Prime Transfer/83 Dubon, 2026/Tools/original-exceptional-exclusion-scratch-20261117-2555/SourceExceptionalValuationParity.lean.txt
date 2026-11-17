@@ -1,0 +1,29 @@
+import Mathlib.RingTheory.Valuation.Basic
+import Mathlib.Algebra.GroupWithZero.WithZero
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> exceptional original image exclusion -> nonvanishing of the
+fixed trace polynomial. At a prime of ramification index one the odd weight
+exponent prevents a nonzero squared Fourier coefficient divided by that prime
+power from being a valuation unit. This is the exact parity input. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open scoped WithZero
+
+/-- An odd prime-power denominator cannot give a valuation unit after squaring a nonzero numerator. -/
+theorem odd_square_ratio_valuation_ne_one {F : Type*} [Field F]
+    (v : Valuation F ℤᵐ⁰) (a q : F) (ha : a ≠ 0)
+    (hq : v q = WithZero.exp (-1 : ℤ)) (w : ℕ) (hw : Odd w) :
+    v (a ^ 2 / q ^ w) ≠ 1 := by
+  intro h
+  have hva : v a ≠ 0 := (map_ne_zero v).mpr ha
+  rw [map_div₀, map_pow, map_pow, hq] at h
+  have hl := congrArg WithZero.log h
+  rw [WithZero.log_div (pow_ne_zero _ hva) (pow_ne_zero _ WithZero.exp_ne_zero),
+    WithZero.log_pow, WithZero.log_pow, WithZero.log_exp, WithZero.log_one] at hl
+  simp only [nsmul_eq_mul, Nat.cast_ofNat, mul_neg, mul_one] at hl
+  obtain ⟨m, hm⟩ := hw
+  omega
+
+end
+end Dubon2026.SourceDickson

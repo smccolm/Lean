@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-exceptional-exclusion-1-scratch-receipt.json",
+      "sha256": "1D00A6EE78D0D27084270404DDF1CABAE9C1983F2A0E49B8B96BD74C2BFE7199",
+      "modules": 28,
+      "queries": 51,
+      "exhaustiveTheorems": 126,
+      "other": 24,
+      "requiredValueEdges": 315
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

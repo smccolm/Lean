@@ -1,0 +1,64 @@
+import SourceNonCMBoundedConductorReduction2564c
+import Dubon2026.SourceOriginalResidualLocalInterface
+
+/-! DUB-17/18 -> original dihedral image exclusion -> actual bounded-conductor
+Frobenius obstruction. Nonzero original residue coefficients become nonzero
+traces of the same actual residual action at inert good-prime norm Frobenius.
+The dihedral-character comparison and uniform conductor bound remain open. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+
+
+/-- The original residual action has a nonzero inert good-prime trace for every source quadratic character of conductor at most M. -/
+def HasOriginalBoundedQuadraticFrobenius (Q p M : ℕ) {F : Type} [Field F]
+    (ρ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+      GeneralLinearGroup (Fin 2) F) : Prop :=
+    ∀ (D : ℕ+) (χ : DirichletCharacter ℂ D), D ≤ M → χ.IsPrimitive → χ ≠ 1 → χ.IsQuadratic →
+      ∃ (q : ℕ) (hq : q.Prime), q.Coprime (Q * D * p) ∧ characterCoefficients χ q = -1 ∧
+        ∃ φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq),
+          (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+            (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) ∧
+          (ρ (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq φ)).val.trace ≠ 0
+
+/-- The actual fixed-local Hecke trace comparison turns the original bounded-conductor coefficient obstruction into an original Frobenius trace obstruction. -/
+theorem original_bounded_quadratic_frobenius_of_coefficients
+    (Q p M : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (ρ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+      GeneralLinearGroup (Fin 2) 𝓀[E])
+    (hcoeff : ∀ (D : ℕ+) (χ : DirichletCharacter ℂ D), D ≤ M → χ.IsPrimitive → χ ≠ 1 → χ.IsQuadratic →
+      ∃ q : ℕ, q.Prime ∧ q.Coprime (Q * D * p) ∧ characterCoefficients χ q = -1 ∧
+        IsLocalRing.residue 𝒪[E]
+          ⟨τ (sourcePrimitiveFieldCoefficient f q), sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ ≠ 0)
+    (hlocal : ∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+      ∀ φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq),
+        (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+          (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+        (ρ (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq φ)).val.trace =
+          sourcePrimitiveResidualHeckeCharacter f hk τ
+            ⟨Dubon2026.cuspHeckeLinear Q k q,
+              Algebra.subset_adjoin ⟨(⟨q, hq.pos⟩ : ℕ+), rfl⟩⟩) :
+    HasOriginalBoundedQuadraticFrobenius Q p M ρ := by
+  intro D χ hD hχp hχ1 hχq
+  obtain ⟨q, hq, hgood, hinert, hnonzero⟩ := hcoeff D χ hD hχp hχ1 hχq
+  have hsplit := Nat.coprime_mul_iff_right.mp hgood
+  have hQ := (Nat.coprime_mul_iff_right.mp hsplit.1).1
+  have hQp : q.Coprime (Q * p) := Nat.coprime_mul_iff_right.mpr ⟨hQ, hsplit.2⟩
+  have haway : ¬q ∣ Q * p := hq.coprime_iff_not_dvd.mp hQp
+  obtain ⟨φ, hφ⟩ := rationalPrimeOriginalNorm_exists_frobenius q hq
+  refine ⟨q, hq, hgood, hinert, φ, hφ, ?_⟩
+  have ht := (hlocal q hq haway φ hφ).trans
+    (sourcePrimitiveResidualHeckeCharacter_hecke f hk τ ⟨q, hq.pos⟩)
+  exact fun hz => hnonzero (ht.symm.trans hz)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

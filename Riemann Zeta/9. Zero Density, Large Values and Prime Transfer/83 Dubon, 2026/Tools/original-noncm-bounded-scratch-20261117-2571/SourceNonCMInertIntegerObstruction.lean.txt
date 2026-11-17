@@ -1,0 +1,27 @@
+import SourceNonCMInertPrime
+import SourceNonzeroAlgebraicIntegerRelation
+
+/-! DUB-17/18 -> original dihedral image exclusion -> fixed quadratic character
+obstruction. The actual non-CM inert coefficient has a fixed nonzero integer
+relation constant, using the already proved algebraic relation route. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- An actual non-CM form supplies a fixed inert coefficient and nonzero integer obstruction for each source quadratic character. -/
+theorem nonCM_exists_original_inert_integer_obstruction
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : NonCMPrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (D : ℕ+) (χ : DirichletCharacter ℂ D) (hχp : χ.IsPrimitive)
+    (hχ1 : χ ≠ 1) (hχq : χ.IsQuadratic) :
+    ∃ (q : ℕ) (H : ℤ[X]), q.Prime ∧ q.Coprime (Q * D) ∧
+      characterCoefficients χ q = -1 ∧ H.coeff 0 ≠ 0 ∧
+      H.eval₂ (Int.castRingHom (sourcePrimitiveCoefficientField f.toPrimitiveCuspForm))
+        (sourcePrimitiveFieldCoefficient f.toPrimitiveCuspForm q) = 0 := by
+  letI := sourcePrimitiveCoefficientField_numberField f.toPrimitiveCuspForm hk
+  obtain ⟨q, hq, hgood, hinert, ha⟩ := nonCM_exists_original_inert_prime_coefficient Q f D χ hχp hχ1 hχq
+  obtain ⟨H, hH0, hH⟩ := nonzero_numberField_integer_relation _ ha
+  exact ⟨q, H, hq, hgood, hinert, hH0, hH⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

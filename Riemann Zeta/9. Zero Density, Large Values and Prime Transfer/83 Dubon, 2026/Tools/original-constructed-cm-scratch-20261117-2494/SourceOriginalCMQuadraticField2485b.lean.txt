@@ -1,0 +1,56 @@
+import Dubon2026.UnramifiedUnionCyclotomicRoots
+import Dubon2026.RationalArithmeticGaloisGroup
+import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.Algebra.Polynomial.Eval.Irreducible
+
+/-! DUB-17/18 -> actual CM residual construction. The original unramified
+union contains a primitive fourth root when four divides its support. Its
+literal simple subfield over the rational bottom field is imaginary quadratic.
+This uses the proved cyclotomic root construction and pinned degree/real-place
+results, without a new quadratic-field or ramification framework. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Polynomial
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalCMFieldUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+/-- A genuine totally complex quadratic subfield is constructed inside the
+same original arithmetic extension after adjoining four to the support. -/
+theorem original_unramified_exists_cm_quadratic_of_four_dvd
+    (a : 𝓞 ℚ) (h4 : (4 : 𝓞 ℚ) ∣ a) :
+    ∃ C : IntermediateField (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a))
+        (rationalUnramifiedExtension a),
+      IsQuadraticExtension (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) C ∧
+        IsTotallyComplex C := by
+  let U := rationalUnramifiedExtension a
+  let B : IntermediateField ℚ U := ⊥
+  obtain ⟨ζ, hζ⟩ := originalQUnramifiedUnion_exists_primitiveRoot
+    (Ω := AlgebraicClosure ℚ) a 4 h4
+  let C := IntermediateField.adjoin B ({ζ} : Set U)
+  letI : IsCyclotomicExtension {4} B C := hζ.intermediateField_adjoin_isCyclotomicExtension B
+  letI : FiniteDimensional B C := IsCyclotomicExtension.finiteDimensional {4} B C
+  letI : NumberField B := NumberField.of_module_finite ℚ B
+  letI : NumberField C := IsCyclotomicExtension.numberField {4} B C
+  have hirr : Irreducible (Polynomial.cyclotomic 4 B) := by
+    apply Polynomial.Monic.irreducible_of_irreducible_map
+      (φ := (IntermediateField.botEquiv ℚ U).toRingHom)
+      (Polynomial.cyclotomic 4 B) (Polynomial.cyclotomic.monic 4 B)
+    rw [Polynomial.map_cyclotomic]
+    exact Polynomial.cyclotomic.irreducible_rat (by decide : 0 < 4)
+  have hdegree : Module.finrank B C = 2 := by
+    rw [IsCyclotomicExtension.finrank C hirr]
+    decide
+  letI : IsQuadraticExtension B C := ⟨hdegree⟩
+  let z : C := ⟨ζ, IntermediateField.subset_adjoin B _ (Set.mem_singleton ζ)⟩
+  have hz : IsPrimitiveRoot z 4 := IsPrimitiveRoot.coe_submonoidClass_iff.mp hζ
+  have hcomplex : IsTotallyComplex C :=
+    NumberField.nrRealPlaces_eq_zero_iff.mp
+      (IsPrimitiveRoot.nrRealPlaces_eq_zero_of_two_lt (by decide : 2 < 4) hz)
+  exact ⟨C, inferInstance, hcomplex⟩
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,15 @@
+{
+  "existingLeanUnchanged": 9755,
+  "frozenFilesUnchanged": {
+    "E:\\Lean\\Riemann Zeta\\lean-toolchain": "54727EEC5CBA149C18842E6DEB5C41B369D66455C93CE135D7D5347C782B2325",
+    "E:\\Lean\\Riemann Zeta\\lakefile.toml": "45F9C3D3C46F17435C792FB7C858AE3119C461D2E0C0EB5650D546E2A85327C0",
+    "E:\\Lean\\Riemann Zeta\\lake-manifest.json": "F4A0E8A914FE4D3A3936777AF0E77FE79E965D8FE7725113D6CEF3BB1370BFAA",
+    "E:\\Lean\\Riemann Zeta\\run_lake_build.bat": "A726C1AFBC7870391088977CC5BE23CF7DF9741713B18A7F830E9BFD6850D303",
+    "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\run_dubon_build.bat": "B78E937871B3D5ED9222977B38D797B12628480C9B27C219910F6C3B6BC1716A",
+    "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\push_to_github.bat": "9DD7C9F61AEB2704832C897475A76D471F855150FF6CDE03E08CEE141A090114"
+  },
+  "newModules": 28,
+  "importsOnly": true,
+  "accepted": 16,
+  "total": 20
+}

@@ -1,0 +1,34 @@
+{
+  "recordedUTC": "2026-11-17T18:40:54.385957+00:00",
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependency": "Literal higher symmetric-power continuation -> automorphy -> eventual original residual large image -> dihedral exclusion -> no residual quadratic coefficient self-twist for characters in a fixed finite family.",
+  "reuse": [
+    {
+      "module": "CuspSelfTwists",
+      "theorems": [
+        "IsNonCMCuspForm",
+        "coefficientSelfTwist_iff_inert_zero"
+      ],
+      "role": "The actual source non-CM condition already forces a nonzero original Fourier coefficient at a good prime inert under each nontrivial primitive quadratic character."
+    },
+    {
+      "module": "SourcePrimitiveLocalCoefficients",
+      "theorems": [
+        "sourcePrimitiveFieldCoefficient_coe",
+        "sourcePrimitiveCoefficient_valuation_le_one"
+      ],
+      "role": "Carry that same actual coefficient into its original number field, every actual local embedding and its integral ring."
+    },
+    {
+      "module": "SourceNonzeroAlgebraicIntegerRelation / SourceIntegerRelationReduction",
+      "role": "Reuse the fixed nonzero integer relation and literal reduction divisibility argument from exceptional exclusion; no new norm theory or independent purity theorem is needed for this fixed-character step."
+    }
+  ],
+  "boundedTask": "Prove the actual inert-prime witness and the resulting eventual exclusion of a fixed character, then a finite family if its native finiteness interface applies. Keep the original coefficient ring and reduction map.",
+  "remaining": "A dihedral original projective action still must yield a compatible primitive quadratic Dirichlet character and trace vanishing, with a conductor bound independent of residual characteristic. Local inertia and the source crystalline/local deformation comparison remain unresolved. No unconditional dihedral exclusion or full large-image theorem is claimed.",
+  "limitsChanged": false,
+  "productionMutation": false
+}

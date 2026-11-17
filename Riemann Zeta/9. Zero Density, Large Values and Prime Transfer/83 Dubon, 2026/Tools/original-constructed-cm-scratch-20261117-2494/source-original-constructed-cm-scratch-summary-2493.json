@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-constructed-cm-1-scratch-receipt.json",
+      "sha256": "0372C6F27357EAFC1306BE3B7042F3B7FE23B87626455766A1F90FDCE776C17E",
+      "modules": 14,
+      "queries": 23,
+      "exhaustiveTheorems": 101,
+      "other": 29,
+      "requiredValueEdges": 223
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

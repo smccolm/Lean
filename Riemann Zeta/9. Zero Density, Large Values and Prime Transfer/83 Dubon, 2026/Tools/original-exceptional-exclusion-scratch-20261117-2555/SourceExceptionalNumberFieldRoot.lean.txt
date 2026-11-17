@@ -1,0 +1,35 @@
+import SourceExceptionalRootArithmetic
+import Mathlib.NumberTheory.NumberField.Basic
+import Mathlib.RingTheory.DedekindDomain.AdicValuation
+
+/-! DUB-17/18 -> exceptional original image exclusion -> the actual coefficient
+field contradiction. A root of the fixed monic polynomial is an actual algebraic
+integer; outside the fixed constant's support its original prime valuation is one.
+The good-prime and odd-weight consumer follows separately. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial IsDedekindDomain NumberField
+open scoped NumberField WithZero
+variable {F : Type*} [Field F] [NumberField F]
+
+/-- A root in the actual number field has valuation one away from the fixed constant. -/
+theorem exceptional_numberField_root_valuation_one
+    (v : HeightOneSpectrum (𝓞 F)) (x : F)
+    (h : exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom F) x = 0)
+    (hv : (-14400 : 𝓞 F) ∉ v.asIdeal) : v.valuation F x = 1 := by
+  let b : 𝓞 F := ⟨x, exceptional_nonzero_trace_root_isIntegral x h⟩
+  have hb : exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom (𝓞 F)) b = 0 := by
+    apply RingOfIntegers.coe_injective
+    rw [map_zero, Polynomial.hom_eval₂]
+    have hc : (algebraMap (𝓞 F) F).comp (Int.castRingHom (𝓞 F)) =
+        Int.castRingHom F := Subsingleton.elim _ _
+    rw [hc]
+    exact h
+  have hd := exceptional_nonzero_trace_root_dvd_constant b hb
+  have hbnot : b ∉ v.asIdeal := by
+    intro hmem
+    exact hv (Ideal.mem_of_dvd _ hd hmem)
+  exact (v.valuation_eq_one_iff_notMem (K := F)).mpr hbnot
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,161 @@
+import Dubon2026.SourceOriginalArithmeticRootKernel
+import Dubon2026.SourceSubfieldProjectorSpan
+import Dubon2026.SourceSubfieldRegularTrace
+import Dubon2026.SourceSubfieldRegularKernel
+import Dubon2026.SourceTraceZeroCoefficientEmbedding
+import Dubon2026.SourceTraceZeroConjugacy
+import Dubon2026.SourceOriginalExtendedTraceTest
+import Dubon2026.SourceFiniteLinearOriginalRegularDetection
+import Dubon2026.SourceOriginalArithmeticRegularCocycle
+import Dubon2026.SourceOriginalRegularPrimePredicates
+import Dubon2026.SourceOriginalRegularPrimeAssembly
+import Dubon2026.SourceOriginalArithmeticRegularPrimes
+import Dubon2026.SourceOriginalArithmeticRegularPrimeProperty
+import Dubon2026.SourceGammaOneOriginalRegularPrimes
+import Dubon2026.SourceOriginalCoefficientH1Finite
+import Dubon2026.SourceOriginalClassPrimePredicates
+import Dubon2026.SourceOriginalCocycleClassPrimes
+import Dubon2026.SourceOriginalClassRegularPrimes
+import Dubon2026.SourceOriginalDetectingFamilyProperty
+import Dubon2026.SourcePrimeIndexedDetectingFamily
+import Dubon2026.SourceOriginalFiniteDetectingFamily
+import Dubon2026.SourceOriginalArithmeticFamilyProperty
+import Dubon2026.SourceGammaOneOriginalDetectingFamilies
+import Dubon2026.SourceOriginalLocalCoefficientH1Finite
+import Dubon2026.SourceOriginalLocalUnramifiedDimension
+import Dubon2026.SourceOriginalPrimeUnramifiedDimension
+import Dubon2026.SourceOriginalUnramifiedAdjointProperty
+import Dubon2026.SourceGammaOneOriginalUnramifiedDimensions
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_nonzero_root_kernel
+#print axioms Dubon2026.finiteSymmetric_projector_conjugates_span_extension
+#print axioms Dubon2026.finiteSymmetric_exists_projector_trace_ne_zero_extension
+#print axioms Dubon2026.finiteSymmetric_exists_regular_conjugate_commuting_trace_extension
+#print axioms Dubon2026.finiteSubfield_exists_regular_character_kernel_trace
+#print axioms Dubon2026.traceZeroCoefficientEmbedding_injective
+#print axioms Dubon2026.traceZeroCoefficientEmbedding_action
+#print axioms Dubon2026.traceZeroCoefficientEmbedding
+#print axioms Dubon2026.traceZeroConjugation_injective
+#print axioms Dubon2026.traceZero_twisted_conjugate_action
+#print axioms Dubon2026.traceZero_notMem_coboundary_of_extended_conjugate_test
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_regular_kernel_detection
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_regular_root_detection
+#print axioms Dubon2026.HasArithmeticRegularRootDetection
+#print axioms Dubon2026.HasArithmeticRegularDetectingPrimes
+#print axioms Dubon2026.rationalArithmetic_regular_primes_of_root_detection
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_regular_primes
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_regular_prime_detection
+#print axioms Dubon2026.SourceDickson.HasOriginalArithmeticRegularPrimeDetection
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes
+#print axioms Dubon2026.rationalArithmeticOriginalCoefficientCocycles_finite
+#print axioms Dubon2026.rationalArithmeticOriginalCoefficientH1_finite
+#print axioms Dubon2026.RationalArithmeticOriginalRegularAuxiliaryPrime
+#print axioms Dubon2026.HasArithmeticRegularClassPrimes
+#print axioms Dubon2026.HasArithmeticRegularCocycleDetection
+#print axioms Dubon2026.rationalArithmetic_original_cocycle_class_primes
+#print axioms Dubon2026.rationalArithmetic_original_class_regular_prime
+#print axioms Dubon2026.HasArithmeticRegularDetectingFamily
+#print axioms Dubon2026.finite_detecting_prime_family_of_pointwise
+#print axioms Dubon2026.rationalArithmetic_original_finite_detecting_family
+#print axioms Dubon2026.SourceDickson.original_regular_prime_detection_gives_finite_families
+#print axioms Dubon2026.SourceDickson.HasOriginalArithmeticDetectingFamilies
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_detecting_families
+#print axioms Dubon2026.localFieldOriginalCoefficientCocycles_finite
+#print axioms Dubon2026.localFieldOriginalCoefficientH1_finite
+#print axioms Dubon2026.algebraicLocal_originalCoefficient_unramified_finrank_eq_invariants
+#print axioms Dubon2026.rationalPrime_originalCoefficient_unramified_finrank_eq_invariants
+#print axioms Dubon2026.SourceDickson.original_finite_residual_unramified_adjoint_dimensions
+#print axioms Dubon2026.SourceDickson.HasOriginalUnramifiedAdjointDimensions
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceOriginalArithmeticRootKernel, `Dubon2026.SourceSubfieldProjectorSpan, `Dubon2026.SourceSubfieldRegularTrace, `Dubon2026.SourceSubfieldRegularKernel, `Dubon2026.SourceTraceZeroCoefficientEmbedding, `Dubon2026.SourceTraceZeroConjugacy, `Dubon2026.SourceOriginalExtendedTraceTest, `Dubon2026.SourceFiniteLinearOriginalRegularDetection, `Dubon2026.SourceOriginalArithmeticRegularCocycle, `Dubon2026.SourceOriginalRegularPrimePredicates, `Dubon2026.SourceOriginalRegularPrimeAssembly, `Dubon2026.SourceOriginalArithmeticRegularPrimes, `Dubon2026.SourceOriginalArithmeticRegularPrimeProperty, `Dubon2026.SourceGammaOneOriginalRegularPrimes, `Dubon2026.SourceOriginalCoefficientH1Finite, `Dubon2026.SourceOriginalClassPrimePredicates, `Dubon2026.SourceOriginalCocycleClassPrimes, `Dubon2026.SourceOriginalClassRegularPrimes, `Dubon2026.SourceOriginalDetectingFamilyProperty, `Dubon2026.SourcePrimeIndexedDetectingFamily, `Dubon2026.SourceOriginalFiniteDetectingFamily, `Dubon2026.SourceOriginalArithmeticFamilyProperty, `Dubon2026.SourceGammaOneOriginalDetectingFamilies, `Dubon2026.SourceOriginalLocalCoefficientH1Finite, `Dubon2026.SourceOriginalLocalUnramifiedDimension, `Dubon2026.SourceOriginalPrimeUnramifiedDimension, `Dubon2026.SourceOriginalUnramifiedAdjointProperty, `Dubon2026.SourceGammaOneOriginalUnramifiedDimensions]
+  let theorems : Array Name := #[`Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_nonzero_root_kernel, `Dubon2026.finiteSymmetric_projector_conjugates_span_extension, `Dubon2026.finiteSymmetric_exists_projector_trace_ne_zero_extension, `Dubon2026.finiteSymmetric_exists_regular_conjugate_commuting_trace_extension, `Dubon2026.finiteSubfield_exists_regular_character_kernel_trace, `Dubon2026.traceZeroCoefficientEmbedding_injective, `Dubon2026.traceZeroCoefficientEmbedding_action, `Dubon2026.traceZeroConjugation_injective, `Dubon2026.traceZero_twisted_conjugate_action, `Dubon2026.traceZero_notMem_coboundary_of_extended_conjugate_test, `Dubon2026.SourceDickson.finite_linear_bounds_original_regular_kernel_detection, `Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_regular_root_detection, `Dubon2026.rationalArithmetic_regular_primes_of_root_detection, `Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_regular_primes, `Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_regular_prime_detection, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_regular_auxiliary_primes, `Dubon2026.rationalArithmeticOriginalCoefficientCocycles_finite, `Dubon2026.rationalArithmeticOriginalCoefficientH1_finite, `Dubon2026.rationalArithmetic_original_cocycle_class_primes, `Dubon2026.rationalArithmetic_original_class_regular_prime, `Dubon2026.finite_detecting_prime_family_of_pointwise, `Dubon2026.rationalArithmetic_original_finite_detecting_family, `Dubon2026.SourceDickson.original_regular_prime_detection_gives_finite_families, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_finite_detecting_families, `Dubon2026.localFieldOriginalCoefficientCocycles_finite, `Dubon2026.localFieldOriginalCoefficientH1_finite, `Dubon2026.algebraicLocal_originalCoefficient_unramified_finrank_eq_invariants, `Dubon2026.rationalPrime_originalCoefficient_unramified_finrank_eq_invariants, `Dubon2026.SourceDickson.original_finite_residual_unramified_adjoint_dimensions, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions]
+  let constructions : Array Name := #[`Dubon2026.traceZeroCoefficientEmbedding, `Dubon2026.HasArithmeticRegularRootDetection, `Dubon2026.HasArithmeticRegularDetectingPrimes, `Dubon2026.SourceDickson.HasOriginalArithmeticRegularPrimeDetection, `Dubon2026.RationalArithmeticOriginalRegularAuxiliaryPrime, `Dubon2026.HasArithmeticRegularClassPrimes, `Dubon2026.HasArithmeticRegularCocycleDetection, `Dubon2026.HasArithmeticRegularDetectingFamily, `Dubon2026.SourceDickson.HasOriginalArithmeticDetectingFamilies, `Dubon2026.SourceDickson.HasOriginalUnramifiedAdjointDimensions]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL AUXILIARY PRIMES AUDIT PASS: {count} theorems including private/generated declarations. Original regular primes, bounded detecting families and unramified H1/invariant dimension comparison proved. Remaining association and higher continuation OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceOriginalArithmeticRootKernel
+
+#lint in Dubon2026.SourceSubfieldProjectorSpan
+
+#lint in Dubon2026.SourceSubfieldRegularTrace
+
+#lint in Dubon2026.SourceSubfieldRegularKernel
+
+#lint in Dubon2026.SourceTraceZeroCoefficientEmbedding
+
+#lint in Dubon2026.SourceTraceZeroConjugacy
+
+#lint in Dubon2026.SourceOriginalExtendedTraceTest
+
+#lint in Dubon2026.SourceFiniteLinearOriginalRegularDetection
+
+#lint in Dubon2026.SourceOriginalArithmeticRegularCocycle
+
+#lint in Dubon2026.SourceOriginalRegularPrimePredicates
+
+#lint in Dubon2026.SourceOriginalRegularPrimeAssembly
+
+#lint in Dubon2026.SourceOriginalArithmeticRegularPrimes
+
+#lint in Dubon2026.SourceOriginalArithmeticRegularPrimeProperty
+
+#lint in Dubon2026.SourceGammaOneOriginalRegularPrimes
+
+#lint in Dubon2026.SourceOriginalCoefficientH1Finite
+
+#lint in Dubon2026.SourceOriginalClassPrimePredicates
+
+#lint in Dubon2026.SourceOriginalCocycleClassPrimes
+
+#lint in Dubon2026.SourceOriginalClassRegularPrimes
+
+#lint in Dubon2026.SourceOriginalDetectingFamilyProperty
+
+#lint in Dubon2026.SourcePrimeIndexedDetectingFamily
+
+#lint in Dubon2026.SourceOriginalFiniteDetectingFamily
+
+#lint in Dubon2026.SourceOriginalArithmeticFamilyProperty
+
+#lint in Dubon2026.SourceGammaOneOriginalDetectingFamilies
+
+#lint in Dubon2026.SourceOriginalLocalCoefficientH1Finite
+
+#lint in Dubon2026.SourceOriginalLocalUnramifiedDimension
+
+#lint in Dubon2026.SourceOriginalPrimeUnramifiedDimension
+
+#lint in Dubon2026.SourceOriginalUnramifiedAdjointProperty
+
+#lint in Dubon2026.SourceGammaOneOriginalUnramifiedDimensions

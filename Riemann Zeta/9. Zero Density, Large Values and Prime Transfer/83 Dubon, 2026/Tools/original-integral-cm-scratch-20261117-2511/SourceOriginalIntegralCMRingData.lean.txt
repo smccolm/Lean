@@ -1,0 +1,50 @@
+import SourceOriginalIntegralCMDeformationRing
+
+/-! DUB-17/18 -> actual integral CM deformation ring. Name the exact
+native ring conclusion so the constructed-field assembly can be checked in
+small kernel steps at unchanged limits. No mathematical input is added. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix IsLocalRing
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalIntegralCMRingDataAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+variable {O : Type} [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (ResidueField O)] [TopologicalSpace (ResidueField O)]
+  [DiscreteTopology (ResidueField O)]
+  (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+  [FiniteDimensional ℚ F] [IsTotallyReal F]
+  (C : IntermediateField F (rationalUnramifiedExtension a))
+  [IsQuadraticExtension F C] [IsTotallyComplex C]
+  (p n : ℕ) [Fact p.Prime] [CharP (ResidueField O) p] (hn : n < p)
+  (ρi : finiteBaseArithmeticGaloisGroup a F →* GeneralLinearGroup (Fin 2) O)
+  (ρr : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) (ResidueField O))
+  (hodd : (ρr (finiteBaseRealConjugation a F)).val.det = -1)
+  (ha : a ≠ 0) (hpa : (p : 𝓞 ℚ) ∣ a)
+
+/-- The exact integral multiplier, residual comparison and complete local
+Noetherian native ring for one original symmetric degree. -/
+def OriginalIntegralCMSymmetricRingData : Prop :=
+    ∃ ν : finiteBaseArithmeticGaloisGroup a F →* Oˣ,
+      ν = originalIntegralCMSymmetricSimilitude a F C n ρi ∧
+      (∀ g : FiniteBaseCMKernel a F C,
+        (GeneralLinearGroup.det (ρr g.val)) ^ n =
+          Units.map (algebraMap O (ResidueField O)) (ν g.val)) ∧
+      ν (finiteBaseRealConjugation a F) = -1 ∧
+      (let R := FiniteBaseCMSymmetricCoefficientRing a F C n ρr
+          (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν ha p Fact.out hpa
+       ∃ hlocal : IsLocalRing R, letI := hlocal
+         IsNoetherianRing R ∧ IsAdic (maximalIdeal R) ∧ IsAdicComplete (maximalIdeal R) R)
+
+/-- The existing original-pair proof establishes the named exact ring data. -/
+theorem original_integral_cm_symmetric_ring_data [NoZeroDivisors O]
+    (hp2 : 2 < p)
+    (hred : ∀ g i j, (ρr g).val i j = residue O ((ρi g).val i j)) :
+    OriginalIntegralCMSymmetricRingData a F C p n hn ρi ρr hodd ha hpa := by
+  exact original_integral_cm_exists_deformation_ring a F C p n hp2 hn ρi ρr hred hodd ha hpa
+
+end
+end Dubon2026.SourceDickson

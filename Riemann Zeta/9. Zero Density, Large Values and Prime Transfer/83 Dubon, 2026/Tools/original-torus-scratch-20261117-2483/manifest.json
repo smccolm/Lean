@@ -1,0 +1,1825 @@
+{
+  "status": "Scratch PASS: the same actual original modular-form residual representation has original split-torus detecting primes, exact unramified trace-zero adjoint H1 dimension equal to the symmetric degree, and bounded jointly detecting families with that dimension at every chosen prime. Every prior original conclusion and the explicit small-image alternative are retained. Production promotion and assembled verification remain pending.",
+  "modules": 27,
+  "publicQueries": 34,
+  "publicTheorems": 23,
+  "publicConstructions": 11,
+  "exhaustiveTheorems": 112,
+  "otherDeclarations": 21,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 189,
+  "typeValueFingerprints": 133,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-unramified-dimension-scratch-20261117-2437/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "deferredRoutes": [
+    "Subfield trace descent and a separate invariant-kernel dimension argument are retained as unpromoted experiments; the selected prime-field torus and native cyclic-invariant route needs neither."
+  ],
+  "files": [
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection.lean.txt",
+      "sha256": "8466A6DF0563C2B37C6EEEDD04494BF231A216BA062ECF4FD219723841F6E182"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection2443a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection2443a.lean.txt",
+      "sha256": "2C2C766657EDFA62BEABAA96F4459B410F754CF681D3C188BD1ECBC267FC7A4B"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection2443a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection2443b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection2443b.lean.txt",
+      "sha256": "01BD43FE937614A1D9115F9646D4A9EDB869CB2A722E54C62BEFF8793B15AC6E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceFiniteLinearOriginalTorusDetection2443b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies.lean.txt",
+      "sha256": "0331216E30EFD9C08A405FED3AF7F8B1EEACF22BEFB902EEB28B9F1469F37888"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467a.lean.txt",
+      "sha256": "6F75A6D8CA5EEEA9E32CE0CF578719B7B51B3B2E33D88DB385B102DAD109E708"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467b.lean.txt",
+      "sha256": "EE4ACE084D8908A83D81EAAA9E92B2585FC0540F3E4EB0A92633FEFECCDB0027"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467c.lean.txt",
+      "sha256": "3D3459304569EC0C03A6E028980AAFF6855B01B7576C0502B3D4D4677A71243F"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusFamilies2467c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes.lean.txt",
+      "sha256": "A06A42208B66DE7944764BB718DB50B3C4BF12795525FE5600819E666827FF13"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452a.lean.txt",
+      "sha256": "0343EE6850CC3D8BAFB8EEB193169753D947C058FDBAB53021F04E9337F6D887"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452b.lean.txt",
+      "sha256": "FF5D4DD7E4CD987BEFFA0ACB1FAF12EAA52C70D75F374822478E35BDDBB28B56"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452c.lean.txt",
+      "sha256": "D720B2EF09CFE4F0E04E829C9CCDDDD22DB0F254A2D36D856C26D5E57D17162E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceGammaOneOriginalTorusPrimes2452c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalAffineTorusDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalAffineTorusDimension.lean.txt",
+      "sha256": "6254094476437A783AAA244CFFD3A4AC06C6E38DBB6B4CC2752E2DA95F73FC6A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalAffineTorusDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalAffineTorusDimension2458a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalAffineTorusDimension2458a.lean.txt",
+      "sha256": "ADFFBBC65AED29C2CAA2F1D935A600DB83687BEE0178038DA93B599788B1CA33"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalAffineTorusDimension2458a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle.lean.txt",
+      "sha256": "43ADE52F18FBF7330B4AF2AFBEAF6D349AE1EC53C3AC33FDBA836E59435E0E52"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle2446a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle2446a.lean.txt",
+      "sha256": "1C8D49FA653D167A2D5FD80724E22B66D7BB0E66A8420E773AC37EF0F5038B82"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle2446a.log",
+      "sha256": "BCEABEE479BCA8A25A767F8D604BF10336B8F29C6E27C92C5394AD0AC2AA1D76"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle2446b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle2446b.lean.txt",
+      "sha256": "1227D8E71985FC56892661A6F0E7EEF3B7E52618BDB6869AE9259ACFE6D53016"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusCocycle2446b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies.lean.txt",
+      "sha256": "55C1BF00613B62A5E3A15BAB7F2A7376E8D5B96BDBC8D362E3318E98EF6EB080"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466a.lean.txt",
+      "sha256": "048488F79966F8C288332A6D47D8F357BD4A149327A473243D2975EF1D831779"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466b.lean.txt",
+      "sha256": "8ECA745A5B4F94FA4CF79246BE7905A986D42B5B0D606B9514A2C258F5D3E1DC"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466c.lean.txt",
+      "sha256": "50F0402767B22068F2264F75A3D8B22A93A1A84676D15CF66A73645594876B87"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusFamilies2466c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty.lean.txt",
+      "sha256": "465F3B902C59FF34961E8B19E11EF6AAA9EF63A0B3657585AAE47A62D9434102"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451a.lean.txt",
+      "sha256": "467B4486102398FCD59A55D23C27A276BD4C5D2B90C5B2FB454C94D2D2DF6FB6"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451b.lean.txt",
+      "sha256": "AC069E94760D1DC49C07BB8713B9959977216CF6A561E95B72EFF75B49847E0C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451c.lean.txt",
+      "sha256": "CC63E0C6B27E36F948A8C0DF66F1246A9325B834E271885A5743371C172FA378"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimeProperty2451c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes.lean.txt",
+      "sha256": "562D0D97F5823D7FF34FE8F8D7ADA3CAF804F9D9041887C7444CA50DE903A8C0"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450a.lean.txt",
+      "sha256": "B747FB0A41F37365319A7E887A18756E23C1425CA61940542E5D8688EF74B916"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450b.lean.txt",
+      "sha256": "8A1EAA99747D4C57EB52F40C2DC1B47C996311E0BE384611BD6659BFF17E1AD2"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450c.lean.txt",
+      "sha256": "D514E51AA0604AB117224953635F389C063E67E3E0381155AB5511820CEEBBD5"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalArithmeticTorusPrimes2450c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDiagonalConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDiagonalConjugacy.lean.txt",
+      "sha256": "C22B5A6D3ED47DFA82D4963ECBE3C6D7FD6BCFED4AADF91C7B4FD9106768F6BE"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDiagonalConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDiagonalConjugacy2433a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDiagonalConjugacy2433a.lean.txt",
+      "sha256": "4A1B9C0E046D0D54BDAE49FF3EC814FEC58FC0C3FC0797CE15A9898CD2692265"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDiagonalConjugacy2433a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis.lean.txt",
+      "sha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis2432a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis2432a.lean.txt",
+      "sha256": "23091F169B1637A7BFBDD424E2EA4F171309CB31F8E53CB10DE48A53AE32A025"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis2432a.log",
+      "sha256": "65D196FFE8686511575297F2C17BD221DF393EC8325F41ABDBA891FF3F4C9D82"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis2432b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis2432b.lean.txt",
+      "sha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctEigenbasis2432b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctRootTraceDimension2438a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctRootTraceDimension2438a.lean.txt",
+      "sha256": "A3200706AC19D5DA5B1E672E98A9C044EBEBE40E44644CF20020BA897FCD1238"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalDistinctRootTraceDimension2438a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots.lean.txt",
+      "sha256": "46EB7B08ECB71B189CED3223FB9C773947A8F0B1AEBCB16274A75A6517C585B1"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439a.lean.txt",
+      "sha256": "D6D3F01244C632C46C472FC5FFD2FD97C22C68B8E1FCD6C51D125A4699B175D4"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439b.lean.txt",
+      "sha256": "594776C6505B1C9606B4BED108CAC5CCA9395A7BC78BB1950C30EB377D469E92"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439b.log",
+      "sha256": "811F6C1D79FF10B300438F8AB1B0C8F48DD247DE5B5BAA2F2CEBDCE057E172FA"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439c.lean.txt",
+      "sha256": "9E62D4343BA4D60564625E7CDB66488CBB4C1FA97E63552BD879C9F8EC6C8FFF"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439c.log",
+      "sha256": "6630D97AB316FA65B267187233ADB222C2F555BBC85C8FD843CBE8E91D88DD2F"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439d.lean.txt",
+      "sha256": "013C0D97137044C74F8FF307DDD85AED078267C6B018CBBCD69E740C406C0AB1"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439e.lean.txt",
+      "sha256": "06DB5FE4E192D0D145AE9E68347CE1992207FA16B0657B722F989994994EC435"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedDistinctRoots2439e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy.lean.txt",
+      "sha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442a.lean.txt",
+      "sha256": "35A3D3FA18B89ADB6E3BB8B24ACEF2B4FBCFC70B278B6BC5B5A7AE232DD552B5"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442a.log",
+      "sha256": "2A055D50CA0EC62FEF79CD682EC37F0B040BA6E43754928EBC6ECEFC6DA32813"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442b.lean.txt",
+      "sha256": "35A3D3FA18B89ADB6E3BB8B24ACEF2B4FBCFC70B278B6BC5B5A7AE232DD552B5"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442c.lean.txt",
+      "sha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalMappedTorusConjugacy2442c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalPrimeTorusDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalPrimeTorusDimension.lean.txt",
+      "sha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalPrimeTorusDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalPrimeTorusDimension2448a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalPrimeTorusDimension2448a.lean.txt",
+      "sha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalPrimeTorusDimension2448a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSubfieldTraceDescent2431a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSubfieldTraceDescent2431a.lean.txt",
+      "sha256": "65D700659E6DF47748D8F09033DF9FFEEE2B0E77DEFB89AC974CE35B9590E190"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSubfieldTraceDescent2431a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusConjugacy.lean.txt",
+      "sha256": "8312937EB209EDA5A3BC70E7C5F6AE5567548093683409F4C0B43A3DBF168303"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusConjugacy2445a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusConjugacy2445a.lean.txt",
+      "sha256": "BFC40590786EB8B5CA2AA4358C8602055AD5B6732F5E0B681D517C5DE619F78C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusConjugacy2445a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusDimension2441a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusDimension2441a.lean.txt",
+      "sha256": "02804663F5254D8689660743F892B4F882DD1D981EE1056BDD666B194B1EADA8"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusDimension2441a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusRoots.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusRoots.lean.txt",
+      "sha256": "6DF9473C4DA8865B08A1F8992BD032482D918D598E0109C3C3590FAEA66F6688"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusRoots.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusRoots2444a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusRoots2444a.lean.txt",
+      "sha256": "1F1733DD3C0E1D6CA944C18352EA7DAE7B3649549560BC7EF385E7AEF020514F"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalSymmetricTorusRoots2444a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusAudit1.lean.txt",
+      "sha256": "4EB9C2F6C9682A7182F76CDEFB41549153970597AC9241789D04D8533333684D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusAudit1.log",
+      "sha256": "67002633A48435F33ADA93C9E565AD2242FF0C99AB46E983A26C64306A424C0C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusAudit2.lean.txt",
+      "sha256": "4EB9C2F6C9682A7182F76CDEFB41549153970597AC9241789D04D8533333684D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusAudit2.log",
+      "sha256": "6723D1715DD8340C01CB193ACF56F9E3CAE7790B7DA74F15FA252F781615C066"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates.lean.txt",
+      "sha256": "FB1CD63209CF6AC71BFDE4741B552D2C414D90A551766F859F4A4FBDC69B4874"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates2461a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates2461a.lean.txt",
+      "sha256": "FED50752A01C12FB466EEBDAAD5588635A3B20F80BECCD5E6AAEABA1430A6D6D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates2461a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates2461b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates2461b.lean.txt",
+      "sha256": "B5FA33829041EC43FCD25DB45BA514E3AB77E8DBFEB74C318FED545A05F89B9C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPredicates2461b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes.lean.txt",
+      "sha256": "C0A7A6F66BAA5EE92A42A453829BB0A53BDC7031FC936C9418E13E6D72B5C53A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes2463a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes2463a.lean.txt",
+      "sha256": "F55BC75B1FAE56000DDE416E2FD36F2F40192CABFCD2D13E1456541E8713B80E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes2463a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes2463b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes2463b.lean.txt",
+      "sha256": "92187B6F5B7E03E09A1C8FE1AA168DC3D3F4E743851CA1AB3448E834039ED3F5"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusClassPrimes2463b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass.lean.txt",
+      "sha256": "F52324376547C7A0EB6931EBE661E9CDD177D331C035D64DDFB1BB97D20F800D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass2462a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass2462a.lean.txt",
+      "sha256": "8D8A8090D56C08504E1540B9771AE892E95B96B85FAEC3E6F87898BA722BFB7A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass2462a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass2462b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass2462b.lean.txt",
+      "sha256": "4403ADC83C1427B8FF55AECB65BCDD6761627E932CCF077FA41102083274BF8D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusCocycleClass2462b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDeclarations2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDeclarations2480.lean.txt",
+      "sha256": "037A608B8FC4CB4613D22B734E67DC8921A47A2A37CCF51FD27A161CA1C32871"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDeclarations2480.log",
+      "sha256": "3A0E8C009645CD69E34B47D18EBBAEAE39B49F2A19925F0D5C8597CA25187B36"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDependencyAudit2.lean.txt",
+      "sha256": "DF4444B687DE1D937848FB01B29259AA51AE505BD582D14B1A6DADE9B82B81BE"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDependencyAudit2.log",
+      "sha256": "B1F9EBF929EB0ED91D30CCF4507ECD1BAF4FD611A9EBAF6220D9F665109FF5F9"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily.lean.txt",
+      "sha256": "D40E876A0A524961D416DA83C4D14FF99F9F90F6BDE196EE83092BA9C5907C75"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily2465a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily2465a.lean.txt",
+      "sha256": "839B7969918C1E1213DECF7A28E558EC56BD49FFDCCC7FBA3C085F00687AAF6D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily2465a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily2465b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily2465b.lean.txt",
+      "sha256": "289A55913AA519FD3A487CD62034E8D7F8B20F98EF0EF628ED2FF8D84347D535"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectingFamily2465b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly.lean.txt",
+      "sha256": "3DD05E45D90646DBBF0FC886F2EE6F1E48B2618A8A0E02B2F509ABF41FD473A4"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454a.lean.txt",
+      "sha256": "04BD0E54F231908406E2120C4ED20F22144E7B3BAD3282A4EFA45A6EB610D2AD"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454b.lean.txt",
+      "sha256": "0FB9C594687823A96C3C1C6F60F05BC3F6A103AC5DE0C77651DF6C8E8797439E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454c.lean.txt",
+      "sha256": "45BAEC3FA27894B3662E3C10690D9E46FBC4A146C7A69CE381D174EF44B94E9A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454d.lean.txt",
+      "sha256": "39EC27CC21F7D214E8C70671184737DF658276A8F94DC5FF1F71CDB7AEEC3C4C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionAssembly2454d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate.lean.txt",
+      "sha256": "AA4FE67E9BE7DCB8918198BE7906C811AB1A0737D701C17BFE672A8E25EBCF1A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453a.lean.txt",
+      "sha256": "A6D8AF3C8742ED912E812B3057C8D6CF8EDB9D29AAFDC66C30AE34BB70D52C66"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453b.lean.txt",
+      "sha256": "B2FE905A02A73D0D1570B0FA37E8517B428E0482CD1B00F3BD767FCB05923383"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453c.lean.txt",
+      "sha256": "3CE5A87882D9CAD3B468497B13A1BD2282E4430D6ECAED3601D17796E743FFD2"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusDetectionPredicate2453c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty.lean.txt",
+      "sha256": "9CB0DBD0883BC4FC26D456F49581A29DA94B8F2573C70FB8934CDEBA3D9B924E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty2464a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty2464a.lean.txt",
+      "sha256": "AB130DFF7C142EE81CC6FF280777A2027DC52859B2AC2D991594A0F7C7CE4B73"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty2464a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty2464b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty2464b.lean.txt",
+      "sha256": "7D29AEF4DE84C23D0156DE89DD023CB4EB23FD3FDF46784DA800EE46429AEED9"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFamilyProperty2464b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFiniteFactorDimensions2456a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFiniteFactorDimensions2456a.lean.txt",
+      "sha256": "B5CBE7698DD60BE0749DC15FCBAEEB3DBFD501D0352BB746C33278FB4DA70E71"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusFiniteFactorDimensions2456a.log",
+      "sha256": "D0F88F264065BBEB375B65C02AAFA1625FF5FBE7F18A413FD63C9D6D77DB2395"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly.lean.txt",
+      "sha256": "4455832D22EDBB7CB331B3A5E1FCE289E0CC0CE88FC1999F9DBFCB40FAE19F93"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449a.lean.txt",
+      "sha256": "483EAE1093D5CE8C7A5CC522E2E2A5F8FD577DAAE755C29A19FF1CD5A2711005"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449a.log",
+      "sha256": "EFEA2BC42D6E3059535C0D8125F0B21C80285E26AAE6BA0A285EB0D9D2EC29B9"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449b.lean.txt",
+      "sha256": "94C48899EDAF4D4232FCAA9FA049B991B08959FDD1658C6158D764729BE76C8B"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449b.log",
+      "sha256": "22C8B5F775541A69BECEFFC2484D43C38AA6263CAD5B46C1CA812A83435643E5"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449c.lean.txt",
+      "sha256": "31190BAEA42E18794BC0D63912A0DAACE1505B8314784BB9CB409BFFC3CFC7B8"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449d.lean.txt",
+      "sha256": "5BA3D85670362C56FF8466A678D2D020F422DCAEE2099C69F8F8A7BCF1D7E34B"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449e.lean.txt",
+      "sha256": "26CCC2649215D1C08EC7818170B2C9A9BB1D9D1C6BD0F8F920F4BBA69714C269"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449f.lean.txt",
+      "sha256": "FB8A61A3BF4888800A3464728AAB0067ADB5A8162F659641C34CF548C1B9CB17"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeAssembly2449f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions.lean.txt",
+      "sha256": "4AF51E18C47A207CCFDE86B10D4D4245D77F7A2200038024900BDA776B6D34FF"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455a.lean.txt",
+      "sha256": "DA485D11FE6F156C04D1CD3B30B7AE700D40CA7198916A35772F82FF626BB1D6"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455a.log",
+      "sha256": "F76C08656DE401E8490DA14B66CCAFF1FAFD92B080DCB2BA3550541C3A7CF5C8"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455b.lean.txt",
+      "sha256": "EEEF3A28371863024A18AD7BF3DFA1A6E1E9E16E2AF85AE9080F3E944CA92B6A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455b.log",
+      "sha256": "85874B75171F5626AEA148A791C67C44B8BA8471C68E757FE94054DC914AB768"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455c.lean.txt",
+      "sha256": "E951DE7571A2B2FF36AC2BC611410F70C294E874864DE31B307544C81B74E3F2"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455d.lean.txt",
+      "sha256": "B16084849301A8F65442DA914F1F51F4FBE15539293875DC25912989F90659EC"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455d.log",
+      "sha256": "3E7DDFD05D3050AF8936DA2E6EC7D5047B1238A2A594C7C466CC4B1F6D0D39D7"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455e.lean.txt",
+      "sha256": "8C214A09514B31B745A874E0624A2DB232E4F822592EB4444EA58316A0178E2A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455f.lean.txt",
+      "sha256": "52CD5795DBA9D55D39D2C0F94A6301BB8D8D032C80B25C3B7DCCA8442A246A7C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeDimensions2455f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties.lean.txt",
+      "sha256": "59339DD5767C0C1CCB74DF6CD6C083F008475BA8D87B15B385DF376F1567300C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties2459a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties2459a.lean.txt",
+      "sha256": "85A3248DE9F58094E4FCD80E83D84CC433E6C97A86DAC7BE39A7E1FAE3321A1E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties2459a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties2459b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties2459b.lean.txt",
+      "sha256": "59339DD5767C0C1CCB74DF6CD6C083F008475BA8D87B15B385DF376F1567300C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimeLocalProperties2459b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates.lean.txt",
+      "sha256": "F9F1BB6E48B9C3A20A980990FC0495E48B1A54ABCC81BBFC2A92FDB8D3BA93C2"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates.pre2480.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates.pre2480.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447a.lean.txt",
+      "sha256": "F0538B52416390BF0161556B06AD011C53E5FB7D46C372EFDC6B35448A866251"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447b.lean.txt",
+      "sha256": "5E03B82EDC5EAF547D8AF5516B7EE15B5FF9249F6D42A980FD8D34348B1D08D4"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447c.lean.txt",
+      "sha256": "8C95F91D219E6D779D99DD020F387143AEBBB693EE12818EB5692501B3EBB7CB"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusPrimePredicates2447c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusProductionSemantic2481.lean.txt",
+      "sha256": "D98061F9F63AA66226E0EEEEFF072C6940F49FF25F94CFDE93C13D617FEF9DDE"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusScratchSemantic2481.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusScratchSemantic2481.lean.txt",
+      "sha256": "18AF77CDF66CE28DF6EAF7C146C9D8810470FE3685963331FFA440A86D0AAC36"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourceOriginalTorusScratchSemantic2481.log",
+      "sha256": "828E8884962A70300DFEAAA2D3499C5B0ACDD804E47E0741FF8CEC1524E84831"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image.lean.txt",
+      "sha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image2440a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image2440a.lean.txt",
+      "sha256": "7B8FFB35362F381FA458BEBB28DEB84D1BAE4C9E14B179A2145B60B86C99DA94"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image2440a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image2440b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image2440b.lean.txt",
+      "sha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/SourcePrimeSubfieldSL2Image2440b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/archive_original_torus_scratch_2472.py",
+      "sha256": "7AA6CCEF1A7F756C2D5657729A1AA4F0CA716A464D084F96B8C6390AE37E257D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/archive_original_torus_scratch_2483.py",
+      "sha256": "2ACED42E71ACEAF05A13D488EF82B5B1FD5334A53F1843500C1B5E12377FFE23"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/build_original_torus_2469.ps1",
+      "sha256": "F37CCD33AB32B838E889985FBE38FBA43D7B74271F99BA7B7CA2DFBDE603B4A1"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/build_original_torus_2480.ps1",
+      "sha256": "21158E356132A7AAE2896CC2C03993208051BCFB13531CE7FC67F74CC611CF25"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/build_original_torus_fresh_consumers_2468.ps1",
+      "sha256": "C5D478DA8B859FE0E21AE72F4453006417FDCC7130D2895B59366EC7F4AEF64E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/build_original_torus_parameter_revision_2480.ps1",
+      "sha256": "B6235B5553ADF1791FD797C916469ECEA1B50FF3EF01099BE8B0ACD6BCA70698"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/generate_original_torus_audits_2469.py",
+      "sha256": "39758C833C661873495BB62280797F56B0F91038B05B1C6150E727068E5537B4"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/generate_original_torus_audits_2480.py",
+      "sha256": "B62D9D619A8CD5128F24021F86250285D63CD1AFB98920B9855D6905583F9BAC"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-local-dimension-route-review-2432.json",
+      "sha256": "22359ECCF7A7765A6E857902D5E61E8267AE9AE0E76406CEC2F50DFE451F3B54"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-assembly-comment-review-2468.json",
+      "sha256": "E552F3E5BC66ACB1D867C6F9ECA120D90DA49EB32D1EBF4FC7B51DA7C0BB3C7E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceFiniteLinearOriginalTorusDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceFiniteLinearOriginalTorusDetection.lean.txt",
+      "sha256": "8466A6DF0563C2B37C6EEEDD04494BF231A216BA062ECF4FD219723841F6E182"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceFiniteLinearOriginalTorusDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceGammaOneOriginalTorusFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceGammaOneOriginalTorusFamilies.lean.txt",
+      "sha256": "0331216E30EFD9C08A405FED3AF7F8B1EEACF22BEFB902EEB28B9F1469F37888"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceGammaOneOriginalTorusFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceGammaOneOriginalTorusPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceGammaOneOriginalTorusPrimes.lean.txt",
+      "sha256": "A06A42208B66DE7944764BB718DB50B3C4BF12795525FE5600819E666827FF13"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceGammaOneOriginalTorusPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalAffineTorusDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalAffineTorusDimension.lean.txt",
+      "sha256": "6254094476437A783AAA244CFFD3A4AC06C6E38DBB6B4CC2752E2DA95F73FC6A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalAffineTorusDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusCocycle.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusCocycle.lean.txt",
+      "sha256": "43ADE52F18FBF7330B4AF2AFBEAF6D349AE1EC53C3AC33FDBA836E59435E0E52"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusCocycle.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusFamilies.lean.txt",
+      "sha256": "55C1BF00613B62A5E3A15BAB7F2A7376E8D5B96BDBC8D362E3318E98EF6EB080"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusPrimeProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusPrimeProperty.lean.txt",
+      "sha256": "465F3B902C59FF34961E8B19E11EF6AAA9EF63A0B3657585AAE47A62D9434102"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusPrimeProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusPrimes.lean.txt",
+      "sha256": "562D0D97F5823D7FF34FE8F8D7ADA3CAF804F9D9041887C7444CA50DE903A8C0"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalArithmeticTorusPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalDiagonalConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalDiagonalConjugacy.lean.txt",
+      "sha256": "C22B5A6D3ED47DFA82D4963ECBE3C6D7FD6BCFED4AADF91C7B4FD9106768F6BE"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalDiagonalConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalDistinctEigenbasis.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalDistinctEigenbasis.lean.txt",
+      "sha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalDistinctEigenbasis.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalMappedDistinctRoots.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalMappedDistinctRoots.lean.txt",
+      "sha256": "46EB7B08ECB71B189CED3223FB9C773947A8F0B1AEBCB16274A75A6517C585B1"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalMappedDistinctRoots.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalMappedTorusConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalMappedTorusConjugacy.lean.txt",
+      "sha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalMappedTorusConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalPrimeTorusDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalPrimeTorusDimension.lean.txt",
+      "sha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalPrimeTorusDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalSymmetricTorusConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalSymmetricTorusConjugacy.lean.txt",
+      "sha256": "8312937EB209EDA5A3BC70E7C5F6AE5567548093683409F4C0B43A3DBF168303"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalSymmetricTorusConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalSymmetricTorusRoots.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalSymmetricTorusRoots.lean.txt",
+      "sha256": "6DF9473C4DA8865B08A1F8992BD032482D918D598E0109C3C3590FAEA66F6688"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalSymmetricTorusRoots.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusAudit1.lean.txt",
+      "sha256": "4EB9C2F6C9682A7182F76CDEFB41549153970597AC9241789D04D8533333684D"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusAudit1.log",
+      "sha256": "67002633A48435F33ADA93C9E565AD2242FF0C99AB46E983A26C64306A424C0C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusClassPredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusClassPredicates.lean.txt",
+      "sha256": "4E0AF1D804DA46F38BC169A3C4B2AE36DFE44FC83783E7B793536DB705CCF311"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusClassPredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusClassPrimes.lean.txt",
+      "sha256": "EAD801BB9D660AE70D1930FF0C3BB409CF935BC8A0C3D2FF5C2525433EB4EA7C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusCocycleClass.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusCocycleClass.lean.txt",
+      "sha256": "863C7DAD6B38DC57D37A60014EAA79CAF93C926026BEDF9EC7B4038D0EC11025"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusCocycleClass.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectingFamily.lean.txt",
+      "sha256": "6DE62888AE4E6F827C0F4B6D33379AF55AC7F32621BED4AF89F1C00F19BF3B56"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectionAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectionAssembly.lean.txt",
+      "sha256": "3DD05E45D90646DBBF0FC886F2EE6F1E48B2618A8A0E02B2F509ABF41FD473A4"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectionAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectionPredicate.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectionPredicate.lean.txt",
+      "sha256": "AA4FE67E9BE7DCB8918198BE7906C811AB1A0737D701C17BFE672A8E25EBCF1A"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusDetectionPredicate.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusFamilyProperty.lean.txt",
+      "sha256": "FE185BB7F8EF6BA575F6459ADC78198FDD956CE45D6EA1847E3E4DCC71600669"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeAssembly.lean.txt",
+      "sha256": "4455832D22EDBB7CB331B3A5E1FCE289E0CC0CE88FC1999F9DBFCB40FAE19F93"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeDimensions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeDimensions.lean.txt",
+      "sha256": "4AF51E18C47A207CCFDE86B10D4D4245D77F7A2200038024900BDA776B6D34FF"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeDimensions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeLocalProperties.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeLocalProperties.lean.txt",
+      "sha256": "85A3248DE9F58094E4FCD80E83D84CC433E6C97A86DAC7BE39A7E1FAE3321A1E"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimeLocalProperties.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimePredicates.lean.txt",
+      "sha256": "7B32E5C8D20B34EDE3965818B41A14E617BC7FD05BBDCF6C1D0905307486005C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourceOriginalTorusPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourcePrimeSubfieldSL2Image.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourcePrimeSubfieldSL2Image.lean.txt",
+      "sha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/SourcePrimeSubfieldSL2Image.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/manifest.json",
+      "sha256": "D252D214D23D62E3618DEDC133461F0E35FE8877D6CFF230FA8CA0C2AF62892B"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-failed-audit-2469/source-original-torus-audit-config-2469.json",
+      "sha256": "86D699674F7A04DBFAC7B9F3B98CB07FF2C660CF3861CC2C77CBFC4FE1F4485C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-recorder-review-2471.json",
+      "sha256": "0D6D039CFA5B9C1BF5598029A885EC3913C1E6F98657D0FC6D6969A088EB5EFD"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-reuse-review-2471.json",
+      "sha256": "D653E66BCE7E065625A517B7DBF035D00D14F73F4ABB5B75A62677E8EDB50716"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-reuse-review-2482.json",
+      "sha256": "E3969BA8F2B9BECCDC794FBFC1385EEC6241D5BB850A3B393514E48C2CA34B20"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/original-torus-unused-parameter-review-2480.json",
+      "sha256": "19387E6F6AF02E940930ED8C4C363A0E4D826456E7F40DF10F10863583324334"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/prepare_original_torus_audits_2469.py",
+      "sha256": "7BA06B04BA109F6F0C237CA206704C5A8F05A3D55B9E17AEE6E647589FA7B5FF"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/prepare_original_torus_audits_2469b.py",
+      "sha256": "D3C273182AEA43C922B9CBD84F14844FDE98FB984ACF2CB8873117B12D60406B"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/record_original_torus_scope_2471.py",
+      "sha256": "F263C67E3EA2D0EAC1EB3C25339BB50DC51BC9DF8CFC62266D85CE6F1EDE7C73"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/record_original_torus_scope_2471b.py",
+      "sha256": "DBF73D08FE9E8BA8975562DE48F96704979A73FA502E08F84A32CEBCE20473C6"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/record_original_torus_scope_2482.py",
+      "sha256": "5DCDFB9A2B8D77B918AD345492EABBDC7A6233C79A2A9489D966162423C13ED3"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/source-original-torus-2-scratch-receipt.json",
+      "sha256": "380336BAC96A9A6F0421FD2C04704A3A996063F7EFD7F31B1EAF9679EB36674B"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/source-original-torus-audit-config-2469.json",
+      "sha256": "86D699674F7A04DBFAC7B9F3B98CB07FF2C660CF3861CC2C77CBFC4FE1F4485C"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/source-original-torus-audit-config-2480.json",
+      "sha256": "497A2BC992424F19598985AEE7A06F1D667CF74D13F6F9AE70901EB4C61BB142"
+    },
+    {
+      "path": "Tools/original-torus-scratch-20261117-2483/source-original-torus-scratch-summary-2482.json",
+      "sha256": "412D621CC67FCA77F3213529C93185AC8CE68A10172117B1CCE22FB083FC483C"
+    }
+  ]
+}

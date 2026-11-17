@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-torus-2-scratch-receipt.json",
+      "sha256": "380336BAC96A9A6F0421FD2C04704A3A996063F7EFD7F31B1EAF9679EB36674B",
+      "modules": 27,
+      "queries": 34,
+      "exhaustiveTheorems": 112,
+      "other": 21,
+      "requiredValueEdges": 189
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

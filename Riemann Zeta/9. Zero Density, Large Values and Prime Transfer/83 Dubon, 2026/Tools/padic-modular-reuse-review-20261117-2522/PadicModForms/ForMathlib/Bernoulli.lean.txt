@@ -1,0 +1,258 @@
+/-
+Copyright (c) 2026 Riccardo Brasca. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Riccardo Brasca
+-/
+
+module
+
+public import Mathlib.NumberTheory.Bernoulli
+public import PadicModForms.ForMathlib.IntLocalization
+import Mathlib.Data.Nat.Choose.Dvd
+import Mathlib.NumberTheory.LSeries.Dirichlet
+import Mathlib.NumberTheory.LSeries.HurwitzZetaValues
+import PadicModForms.ForMathlib.Choose
+
+/-!
+# Values and `p`-adic properties of Bernoulli numbers
+
+Explicit values of `bernoulli'` and `bernoulli` beyond the ones computed in mathlib, together with
+the consequences of von Staudt–Clausen describing the behaviour of `Bₖ` at a prime `p`, and the
+instance `k = p + 1` of Kummer's congruence.
+
+## Main results
+
+* `bernoulli_mem_pLocalInt`: if `p - 1 ∤ k` then `Bₖ` is `p`-integral.
+* `bernoulli_add_inv_mem_pLocalInt`: if `p - 1 ∣ k` then `Bₖ + 1/p` is `p`-integral; equivalently
+  `p Bₖ ≡ -1` modulo `p` (`toZMod_mul_bernoulli`), so `p Bₖ` is a unit of `ℤ₍ₚ₎`
+  (`isUnit_mul_bernoulli`).
+* `inv_bernoulli_mem_pLocalInt`, `toZMod_inv_bernoulli_eq_zero`: if `p - 1 ∣ k` then `Bₖ⁻¹` is
+  `p`-integral and reduces to `0` modulo `p`.
+* `exists_bernoulli_p_add_one`, `toZMod_bernoulli_p_add_one_mul_twelve`: Kummer's congruence
+  `B_{p+1}/(p+1) ≡ B₂/2` modulo `p`, in the form `12 B_{p+1} ≡ 1`.
+* `toZMod_inv_bernoulli_p_add_one`: the form used for Eisenstein series, `B_{p+1}⁻¹ ≡ 12`.
+-/
+
+public section
+
+open Finset Nat
+
+variable {k : ℕ}
+
+/-! ### Nonvanishing -/
+
+theorem bernoulli_ne_zero_of_even (hk : 3 ≤ k) (hk2 : Even k) : bernoulli k ≠ 0 :=
+    fun h ↦ by
+  rcases hk2 with ⟨m, rfl⟩
+  refine riemannZeta_ne_zero_of_one_lt_re (s := 2 * m) (by norm_cast; lia) ?_
+  rw [← two_mul] at h
+  simpa [h] using riemannZeta_two_mul_nat (k := m) (by lia)
+
+variable {p : ℕ} [hp : Fact p.Prime]
+
+/-! ### Integrality of `Bₖ⁻¹` at `p` -/
+
+/-- If `p` is prime, `k ≥ 3` is even, and `p - 1 ∣ k`, then `Bₖ⁻¹` is `p`-integral: by von
+Staudt–Clausen, `Bₖ` has `p`-adic valuation `-1`, i.e. `Rat.padicValuation p Bₖ = exp 1`
+(`Bernoulli.padicValuation_bernoulli`). -/
+theorem inv_bernoulli_mem_pLocalInt (hk : 3 ≤ k) (hk2 : Even k)
+    (hpk : p - 1 ∣ k) : (bernoulli k)⁻¹ ∈ pLocalInt p := by
+  obtain ⟨m, rfl⟩ := hk2
+  rw [← two_mul] at hk hpk ⊢
+  rw [mem_pLocalInt_iff_padicValuation_le_one, map_inv₀,
+    Bernoulli.padicValuation_bernoulli (by lia) hpk]
+  simp
+
+/-- If `p - 1 ∣ k`, then `p` divides `Bₖ⁻¹` in the localization of `ℤ` at `p`: the quotient
+`Bₖ⁻¹ / p` has `p`-adic valuation `0` (`Bernoulli.padicValuation_bernoulli`), so it is
+`p`-integral. -/
+theorem p_dvd_inv_bernoulli (hk : 3 ≤ k) (hk2 : Even k)
+    (hpk : p - 1 ∣ k) : (p : pLocalInt p) ∣ ⟨_, inv_bernoulli_mem_pLocalInt hk hk2 hpk⟩ := by
+  refine ⟨⟨(bernoulli k)⁻¹ / p, ?_⟩, ?_⟩
+  · obtain ⟨m, rfl⟩ := hk2
+    rw [← two_mul] at hk hpk ⊢
+    rw [mem_pLocalInt_iff_padicValuation_le_one, map_div₀, map_inv₀,
+      Bernoulli.padicValuation_bernoulli (by lia) hpk, Rat.padicValuation_natCast,
+      Int.padicValuation_self]
+    simp
+  · ext
+    exact (mul_div_cancel₀ _ (Nat.cast_ne_zero.2 hp.out.ne_zero)).symm
+
+/-- If `p` is prime, `k ≥ 3` is even, and `p - 1 ∣ k`, then `Bₖ⁻¹` reduces to zero
+modulo `p`. -/
+theorem toZMod_inv_bernoulli_eq_zero (hk : 3 ≤ k) (hk2 : Even k) (hpk : p - 1 ∣ k) :
+    pLocalInt.toZMod ⟨(bernoulli k)⁻¹, inv_bernoulli_mem_pLocalInt hk hk2 hpk⟩ = 0 :=
+  pLocalInt.toZMod_eq_zero_iff.2 (p_dvd_inv_bernoulli hk hk2 hpk)
+
+/-! ### Small values -/
+
+-- should go to Mathlib.NumberTheory.Bernoulli
+@[simp]
+theorem bernoulli'_five : bernoulli' 5 = 0 :=
+  bernoulli'_eq_zero_of_odd (by decide) (by decide)
+
+-- should go to Mathlib.NumberTheory.Bernoulli
+@[simp]
+theorem bernoulli'_six : bernoulli' 6 = 1 / 42 := by
+  have h₂ : choose 6 2 = 15 := by decide
+  have h₃ : choose 6 3 = 20 := by decide
+  have h₄ : choose 6 4 = 15 := by decide
+  rw [bernoulli'_def]
+  norm_num [sum_range_succ, sum_range_zero, h₂, h₃, h₄]
+
+-- should go to Mathlib.NumberTheory.Bernoulli
+@[simp]
+theorem bernoulli_four : bernoulli 4 = -1 / 30 := by
+  rw [bernoulli_eq_bernoulli'_of_ne_one (by norm_num), bernoulli'_four]
+
+-- should go to Mathlib.NumberTheory.Bernoulli
+@[simp]
+theorem bernoulli_six : bernoulli 6 = 1 / 42 := by
+  rw [bernoulli_eq_bernoulli'_of_ne_one (by norm_num), bernoulli'_six]
+
+/-! ### von Staudt–Clausen: `p`-integrality of `Bₖ` -/
+
+section Kummer
+
+/-- If `p - 1` does not divide `k`, then `Bₖ` is `p`-integral. -/
+theorem bernoulli_mem_pLocalInt (hpk : ¬ (p - 1) ∣ k) : bernoulli k ∈ pLocalInt p := by
+  rcases even_or_odd k with hk2 | hk2
+  · obtain ⟨m, rfl⟩ := hk2
+    rw [← two_mul] at hpk ⊢
+    obtain ⟨z, hz⟩ := Bernoulli.vonStaudt_clausen m
+    rw [show bernoulli (2 * m) = (z : ℚ) -
+      ∑ q ∈ range (2 * m + 2) with q.Prime ∧ (q - 1) ∣ 2 * m, (1 : ℚ) / q by grind]
+    refine sub_mem (intCast_mem _ _) (sum_mem fun q hq ↦ ?_)
+    simp only [mem_filter, mem_range] at hq
+    have hqp : q ≠ p := by rintro rfl; exact hpk hq.2.2
+    rw [mem_pLocalInt_iff, show ((1 : ℚ) / q).den = q from by simp [hq.2.1.ne_zero]]
+    exact fun h ↦ hqp ((prime_dvd_prime_iff_eq hp.out hq.2.1).mp h).symm
+  · rcases eq_or_ne k 1 with rfl | hk1
+    · rw [bernoulli_one, mem_pLocalInt_iff, show ((-1 / 2 : ℚ)).den = 2 from by norm_num]
+      exact fun h ↦ hpk (by simp [(prime_dvd_prime_iff_eq hp.out prime_two).mp h])
+    · rw [bernoulli_eq_zero_of_odd hk2 (by rcases hk2 with ⟨j, rfl⟩; lia)]
+      exact zero_mem _
+
+/-- Von Staudt–Clausen at `p`: if `p - 1 ∣ k` with `k` positive and even, then `Bₖ + 1/p` is
+`p`-integral. -/
+theorem bernoulli_add_inv_mem_pLocalInt (hk : 0 < k) (hk2 : Even k) (hpk : (p - 1) ∣ k) :
+    bernoulli k + (p : ℚ)⁻¹ ∈ pLocalInt p := by
+  obtain ⟨m, rfl⟩ := hk2
+  rw [← two_mul] at hk hpk ⊢
+  obtain ⟨z, hz⟩ := Bernoulli.vonStaudt_clausen m
+  have hpS : p ∈ (range (2 * m + 2)).filter (fun q ↦ q.Prime ∧ (q - 1) ∣ 2 * m) := by
+    simpa using ⟨by grind [le_of_dvd hk hpk], hp.out, hpk⟩
+  rw [← Finset.add_sum_erase _ _ hpS] at hz
+  have hB : bernoulli (2 * m) + (p : ℚ)⁻¹ = z - ∑ q ∈ ((range (2 * m + 2)).filter
+    (fun q ↦ q.Prime ∧ (q - 1) ∣ 2 * m)).erase p, (1 : ℚ) / q := by rw [hz]; ring
+  rw [hB]
+  refine sub_mem (intCast_mem _ _) (sum_mem fun q hq ↦ ?_)
+  have hqprime : q.Prime := by simpa using (mem_filter.mp (mem_of_mem_erase hq)).2.1
+  rw [mem_pLocalInt_iff, show ((1 : ℚ) / q).den = q by simp [hqprime.ne_zero]]
+  exact fun h ↦ ((mem_erase.mp hq).1) ((prime_dvd_prime_iff_eq hp.out hqprime).mp h).symm
+
+/-- Von Staudt–Clausen at `p`, multiplied by `p`: if `p - 1 ∣ k` with `k` positive and even, then
+`p Bₖ` is `p`-integral. -/
+theorem mul_bernoulli_mem_pLocalInt (hk : 0 < k) (hk2 : Even k) (hpk : (p - 1) ∣ k) :
+    p * bernoulli k ∈ pLocalInt p := by
+  have := sub_mem (mul_mem (natCast_mem (pLocalInt p) p)
+    (bernoulli_add_inv_mem_pLocalInt hk hk2 hpk)) (one_mem _)
+  rwa [mul_add, mul_inv_cancel₀ (Nat.cast_ne_zero.2 hp.out.ne_zero), add_sub_cancel_right] at this
+
+/-- Von Staudt–Clausen at `p`, reduced modulo `p`: if `p - 1 ∣ k` with `k` positive and even,
+then `p Bₖ ≡ -1` modulo `p`. -/
+theorem toZMod_mul_bernoulli (hk : 0 < k) (hk2 : Even k) (hpk : (p - 1) ∣ k) :
+    pLocalInt.toZMod ⟨_, mul_bernoulli_mem_pLocalInt hk hk2 hpk⟩ = -1 := by
+  have : (⟨_, mul_bernoulli_mem_pLocalInt hk hk2 hpk⟩ : pLocalInt p) =
+      (p : pLocalInt p) * ⟨_, bernoulli_add_inv_mem_pLocalInt hk hk2 hpk⟩ - 1 := by
+    ext
+    simp [mul_add, mul_inv_cancel₀ (Nat.cast_ne_zero.2 hp.out.ne_zero : (p : ℚ) ≠ 0)]
+  rw [this]
+  simp
+
+/-- If `p - 1 ∣ k` with `k` positive and even, then `p Bₖ` is a unit of `ℤ₍ₚ₎`. -/
+theorem isUnit_mul_bernoulli (hk : 0 < k) (hk2 : Even k) (hpk : (p - 1) ∣ k) :
+    IsUnit (⟨_, mul_bernoulli_mem_pLocalInt hk hk2 hpk⟩ : pLocalInt p) :=
+  pLocalInt.isUnit_iff_toZMod_ne_zero.2 <| by
+    rw [toZMod_mul_bernoulli hk hk2 hpk]
+    exact neg_ne_zero.2 one_ne_zero
+
+/-! ### Kummer's congruence in weight `p + 1` -/
+
+/-- Kummer's congruence `B_{p+1}/(p+1) ≡ B₂/2` modulo `p`, in the explicit form
+`12 B_{p+1} - 1 ∈ p ℤ₍ₚ₎`. -/
+theorem exists_bernoulli_p_add_one (hp5 : 5 ≤ p) :
+    ∃ w ∈ pLocalInt p, 12 * bernoulli (p + 1) - 1 = p * w := by
+  obtain ⟨r, rfl⟩ : ∃ r, p = r + 5 := ⟨p - 5, by lia⟩
+  have hc1 : (r + 7).choose (r + 6) = r + 7 := by grind
+  have hc2 : (r + 7).choose (r + 5) = (r + 7).choose 2 := by
+    rw [show r + 5 = (r + 7) - 2 by lia, choose_symm (by lia)]
+  have hc3 : (r + 7).choose (r + 4) = (r + 7).choose 3 := by
+    rw [show r + 4 = (r + 7) - 3 by lia, choose_symm (by lia)]
+  have hb5 := bernoulli_eq_zero_of_odd (hp.1.odd_of_ne_two (by lia)) (by lia)
+  have hv2 : ((r + 7).choose 2) = (r + 7) * ((r : ℚ) + 6) / 2 := by grind [cast_choose_two]
+  have hv3 : (((r + 7).choose 3) : ℚ) = (r + 7) * (r + 6) * (r + 5) / 6 := by
+    grind [cast_choose_three]
+  have key := sum_bernoulli (r + 7)
+  rw [ite_eq_right (by lia), sum_range_succ, sum_range_succ, sum_range_succ, range_eq_Ico,
+    ← sum_Ico_consecutive _ (zero_le 3) (by lia : 3 ≤ r + 4), ← range_eq_Ico] at key
+  simp only [sum_range_succ, sum_range_zero, choose_zero_right, choose_one_right, bernoulli_zero,
+    bernoulli_one, bernoulli_two, hc1, hc2, hc3, hb5, hv2, hv3] at key
+  push_cast at key
+  obtain ⟨T, hTmem, hT⟩ := exists_sum_natCast_mul_eq_mul (s := Ico 3 (r + 4)) (b := bernoulli)
+    (c := ((r + 7).choose ·))
+    (fun _ _ ↦ hp.out.dvd_choose (by grind) (by grind) (by grind))
+    (fun _ _ ↦ bernoulli_mem_pLocalInt (by
+      rw [show r + 5 - 1 = r + 4 by lia]
+      exact not_dvd_of_pos_of_lt (by grind) (by grind)))
+  obtain ⟨j, hj⟩ := hp.out.odd_of_ne_two (by lia : r + 5 ≠ 2)
+  obtain ⟨v, hvmem, hv⟩ : ∃ v ∈ pLocalInt _, (r + 5) * bernoulli (r + 4) + 1 = (r + 5) * v :=
+      ⟨bernoulli (r + 4) + (↑(r + 5) : ℚ)⁻¹, bernoulli_add_inv_mem_pLocalInt (by lia)
+        ⟨j, by lia⟩ (by simp), (by grind)⟩
+  have h7 : ((↑(r + 7) : ℚ))⁻¹ ∈ pLocalInt (r + 5) := inv_natCast_mem_pLocalInt (by lia)
+    fun h ↦ by grind [le_of_dvd (by lia) (dvd_sub h (dvd_refl _))]
+  rw [hT] at key
+  refine ⟨(↑(r + 7) : ℚ)⁻¹ * ((↑(r + 13)) - 12 * T - 2 * ↑(r + 7) * ↑(r + 6) * v), ?_, ?_⟩
+  · exact mul_mem h7 (by apply_rules [sub_mem, mul_mem, natCast_mem])
+  · grind [show ((r : ℚ) + 7) ≠ 0 by positivity]
+
+/-- For `p ≥ 5`, `B_{p+1}` is `p`-integral. -/
+theorem bernoulli_p_add_one_mem_pLocalInt (hp5 : 5 ≤ p) : bernoulli (p + 1) ∈ pLocalInt p := by
+  obtain ⟨w, hwmem, hw⟩ := exists_bernoulli_p_add_one hp5
+  suffices (12 : ℚ)⁻¹ ∈ pLocalInt p  by
+    rw [show bernoulli (p + 1) = (12 : ℚ)⁻¹ * (1 + p * w) by grind]
+    exact mul_mem this (add_mem (one_mem _) (mul_mem (natCast_mem _ _) hwmem))
+  refine inv_natCast_mem_pLocalInt (by norm_num) fun (h : p ∣ 4 * 3) ↦ ?_
+  rcases (Nat.Prime.dvd_mul hp.out).mp h with h' | h' <;>
+  grind [le_of_dvd (by norm_num) h']
+
+/-- Kummer's congruence in weight `p + 1`: `12 B_{p+1} ≡ 1` modulo `p`. -/
+theorem toZMod_bernoulli_p_add_one_mul_twelve (hp5 : 5 ≤ p) :
+    pLocalInt.toZMod ⟨bernoulli (p + 1), bernoulli_p_add_one_mem_pLocalInt hp5⟩ * 12 = 1 := by
+  obtain ⟨w, hwmem, hw⟩ := exists_bernoulli_p_add_one hp5
+  suffices (12 : pLocalInt p) * ⟨_, bernoulli_p_add_one_mem_pLocalInt hp5⟩ - 1 = p * ⟨w, hwmem⟩ by
+    simpa [map_ofNat, sub_eq_zero, mul_comm] using congr(pLocalInt.toZMod $this)
+  exact Subtype.ext hw
+
+/-- For `p ≥ 5`, `B_{p+1}⁻¹` is `p`-integral. -/
+theorem inv_bernoulli_p_add_one_mem_pLocalInt (hp5 : 5 ≤ p) :
+    (bernoulli (p + 1))⁻¹ ∈ pLocalInt p :=
+  inv_mem_pLocalInt (bernoulli_p_add_one_mem_pLocalInt hp5) fun h ↦
+    by grind [toZMod_bernoulli_p_add_one_mul_twelve hp5]
+
+/-- Kummer's congruence in weight `p + 1`, in the form used for the Eisenstein series:
+`B_{p+1}⁻¹ ≡ 12` modulo `p`. -/
+theorem toZMod_inv_bernoulli_p_add_one (hp5 : 5 ≤ p) :
+    pLocalInt.toZMod ⟨(bernoulli (p + 1))⁻¹, inv_bernoulli_p_add_one_mem_pLocalInt hp5⟩ = 12 := by
+  obtain ⟨j, hj⟩ := hp.out.odd_of_ne_two (by lia)
+  suffices bernoulli (p + 1) ≠ 0 by
+    have h12 := toZMod_bernoulli_p_add_one_mul_twelve hp5
+    refine mul_left_cancel₀ (a := pLocalInt.toZMod ⟨_, bernoulli_p_add_one_mem_pLocalInt hp5⟩) ?_ ?_
+    · exact fun h ↦ zero_ne_one (by rwa [h, zero_mul] at h12)
+    rw [← map_mul, show (⟨_, bernoulli_p_add_one_mem_pLocalInt hp5⟩ *
+      ⟨_, inv_bernoulli_p_add_one_mem_pLocalInt hp5⟩ : pLocalInt p) = 1 from
+        Subtype.ext (by push_cast; field_simp), map_one]
+    grind
+  exact bernoulli_ne_zero_of_even (by lia) ⟨(p + 1) / 2, by lia⟩
+
+end Kummer

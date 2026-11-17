@@ -1,0 +1,36 @@
+{
+  "recordedUTC": "2026-11-17T14:48:42.679787+00:00",
+  "obligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "chain": "literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> bounded regular-prime families jointly detecting original symmetric twisted H1 subspaces",
+  "reuse": [
+    {
+      "result": "rationalArithmeticFiniteCoefficientCocycles_finite",
+      "application": "Restrict the scalars of the same original continuous action and inject its same continuous cocycles into the native finite prime-field cocycle space. Quotient surjectivity proves finiteness of original H1."
+    },
+    {
+      "result": "finite_detecting_family_of_pointwise",
+      "application": "Reuse its proved dimension induction; a small natural-prime indexing lemma handles the original forbidden prime set."
+    },
+    {
+      "result": "exists_gammaOne_original_regular_auxiliary_primes",
+      "application": "Keep the very same original residual action and all earlier arithmetic and symmetric conclusions. Its actual original regular-prime conclusion supplies pointwise detection."
+    }
+  ],
+  "discharged": [
+    "No supplied global H1 finiteness or finite-dimensionality premise",
+    "No supplied finite detecting family",
+    "Joint injectivity on every original H1 subspace, with cardinality bounded by its original-field dimension"
+  ],
+  "retained": [
+    "Actual coefficient field and topology, action and original continuous H1 localization",
+    "Actual finite representation factor, unramified Chebotarev Frobenius and original separable characteristic polynomial",
+    "Congruence modulo p^(level+1), avoidance of every finite forbidden set, original residual arithmetic tuple",
+    "Small-projective-image alternative remains explicit"
+  ],
+  "shorterRoute": "No comparison between scalar-extended H1 spaces and no new finite-family induction. Named exact predicates and small assembly lemmas avoid default elaboration timeouts without changing statements or proof limits.",
+  "boundary": "Versioned consumer compiles; nine-module canonical scratch audits running. Production promotion and assembled verification pending. 16/20 accepted; DUB-17--20 remain open.",
+  "linterCorrection": "The first canonical audit rejected one unused TopologicalSpace parameter in RationalArithmeticOriginalRegularAuxiliaryPrime. All 34 previous canonical source/compile/audit evidence files are retained under original-family-failed-audit-2418. Seven fresh versioned successors compile; only that unused definition parameter changed, and no theorem proof body changed. All nine canonical modules and all checks rerun in 2427."
+}

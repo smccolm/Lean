@@ -1,0 +1,94 @@
+{
+  "recordedUTC": "2026-11-17T15:40:13.818703+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalLocalCoefficientH1Finite",
+    "SourceOriginalLocalUnramifiedDimension",
+    "SourceOriginalPrimeUnramifiedDimension",
+    "SourceOriginalUnramifiedAdjointProperty",
+    "SourceGammaOneOriginalUnramifiedDimensions"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalCoefficientH1Finite.lean",
+      "sha256": "2C7576B86C05D1D1AAC272D92227AD863C26B2174C62F2313FCD30FAE2AA8EBB",
+      "oleanSha256": "928BB04F01852252D2619208B08891B28757BC674BD59B79FD79F4C1E6E2CFCF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalCoefficientH1Finite.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalCoefficientH1Finite.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalUnramifiedDimension.lean",
+      "sha256": "07126AEEEFF8BE22E86C5A395C41C03C5C7ACDAE3E83895E7A2719619FE91E38",
+      "oleanSha256": "81A9634E7AD39CCE6D89F29915FC14997C5D0C76CA89598AD522AB9EE5CC6ABC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalUnramifiedDimension.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalUnramifiedDimension.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeUnramifiedDimension.lean",
+      "sha256": "0B9FC0063D107F1B3901087AE6FEC7F1EC54900730CAAC8C436C1376AB084465",
+      "oleanSha256": "38C97435A68209D5D1A4B5B42359D88E7738EA214A02C4798E3B4EA7898A8AB5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeUnramifiedDimension.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeUnramifiedDimension.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedAdjointProperty.lean",
+      "sha256": "E787CFD95881451B573A3947951019EF388D790D13823D417FD76F83FB968002",
+      "oleanSha256": "00E43ED2237471EDC73F3F7C4C603FC02B608AAE66C9E97E2BB873F91454ABC3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedAdjointProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedAdjointProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalUnramifiedDimensions.lean",
+      "sha256": "0F4EA61359ECB3199700624A80848FB8BA687AF178661F35DF578D818CCCE405",
+      "oleanSha256": "A285516E45E881E6EF6F5958E59AED12B0D72765F69F6CDD9349D1AE5F0CFE5D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalUnramifiedDimensions.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalUnramifiedDimensions.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.localFieldOriginalCoefficientCocycles_finite",
+    "Dubon2026.localFieldOriginalCoefficientH1_finite",
+    "Dubon2026.algebraicLocal_originalCoefficient_unramified_finrank_eq_invariants",
+    "Dubon2026.rationalPrime_originalCoefficient_unramified_finrank_eq_invariants",
+    "Dubon2026.SourceDickson.original_finite_residual_unramified_adjoint_dimensions",
+    "Dubon2026.SourceDickson.HasOriginalUnramifiedAdjointDimensions",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.localFieldOriginalCoefficientCocycles_finite",
+    "Dubon2026.localFieldOriginalCoefficientH1_finite",
+    "Dubon2026.algebraicLocal_originalCoefficient_unramified_finrank_eq_invariants",
+    "Dubon2026.rationalPrime_originalCoefficient_unramified_finrank_eq_invariants",
+    "Dubon2026.SourceDickson.original_finite_residual_unramified_adjoint_dimensions",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.HasOriginalUnramifiedAdjointDimensions"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionAudit2.log",
+  "logSha256": "6E370005CCCA2BE4A00B9FF4635C62B5BFC17F6EFB7795374A5EA0B60CE885FD",
+  "auditSha256": "14569328E3F37674741A9F4D48D4752D77AA23C0E64B93D30F1DB19675737B8A",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionDeclarations2434.log",
+  "ownershipSha256": "EF6DAA9224E8BA4C55D431B0CE025E8B142C061725A8FF75F19AE3B14E300B1A",
+  "exhaustiveTheorems": 24,
+  "exhaustiveOtherDeclarations": 6,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 151,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnramifiedDimensionDependencyAudit1.log",
+  "dependencyAuditSha256": "00E28C64FE36CB62645112C43A0F6C9E4FC6C35B05D50A8DF6F055CC217F8204",
+  "dependencyAuditSourceSha256": "DA65EEA06AAAA6D51F5DBE316266F36C5FCB7DE30A44058E2C9D714CD27FA247",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-unramified-dimension-reuse-review-2436.json",
+  "reuseReviewSha256": "380B75893D4B1656AB66B9ED3E5FBB87F0629265268A9CC25DF3D35E225A5448",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual residual deformation inputs -> actual original-field unramified adjoint H1/invariant dimension equality on the same residual representation at every prime and symmetric degree. The large-image branch is constructed as an alternative, not assumed for the actual source form.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

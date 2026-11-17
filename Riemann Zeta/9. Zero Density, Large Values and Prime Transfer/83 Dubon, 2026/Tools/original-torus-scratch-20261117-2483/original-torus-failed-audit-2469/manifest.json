@@ -1,0 +1,430 @@
+{
+  "reason": "The exhaustive audit found one unused DiscreteTopology parameter in OriginalPrimeAdjointDimension. All 27 modules compile, but this scope fails the linter gate. Preserve its canonical sources and compilation/audit evidence before a fresh correction.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalDistinctEigenbasis.lean.txt",
+      "sha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalDistinctEigenbasis.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalDistinctEigenbasis.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalDiagonalConjugacy.lean.txt",
+      "sha256": "C22B5A6D3ED47DFA82D4963ECBE3C6D7FD6BCFED4AADF91C7B4FD9106768F6BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalDiagonalConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalDiagonalConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalMappedDistinctRoots.lean.txt",
+      "sha256": "46EB7B08ECB71B189CED3223FB9C773947A8F0B1AEBCB16274A75A6517C585B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalMappedDistinctRoots.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalMappedDistinctRoots.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourcePrimeSubfieldSL2Image.lean.txt",
+      "sha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourcePrimeSubfieldSL2Image.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourcePrimeSubfieldSL2Image.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalMappedTorusConjugacy.lean.txt",
+      "sha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalMappedTorusConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalMappedTorusConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalSymmetricTorusRoots.lean.txt",
+      "sha256": "6DF9473C4DA8865B08A1F8992BD032482D918D598E0109C3C3590FAEA66F6688"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalSymmetricTorusRoots.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalSymmetricTorusRoots.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalSymmetricTorusConjugacy.lean.txt",
+      "sha256": "8312937EB209EDA5A3BC70E7C5F6AE5567548093683409F4C0B43A3DBF168303"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalSymmetricTorusConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalSymmetricTorusConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceFiniteLinearOriginalTorusDetection.lean.txt",
+      "sha256": "8466A6DF0563C2B37C6EEEDD04494BF231A216BA062ECF4FD219723841F6E182"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceFiniteLinearOriginalTorusDetection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceFiniteLinearOriginalTorusDetection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusCocycle.lean.txt",
+      "sha256": "43ADE52F18FBF7330B4AF2AFBEAF6D349AE1EC53C3AC33FDBA836E59435E0E52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusCocycle.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusCocycle.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeLocalProperties.lean.txt",
+      "sha256": "85A3248DE9F58094E4FCD80E83D84CC433E6C97A86DAC7BE39A7E1FAE3321A1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeLocalProperties.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeLocalProperties.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimePredicates.lean.txt",
+      "sha256": "7B32E5C8D20B34EDE3965818B41A14E617BC7FD05BBDCF6C1D0905307486005C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimePredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimePredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectionPredicate.lean.txt",
+      "sha256": "AA4FE67E9BE7DCB8918198BE7906C811AB1A0737D701C17BFE672A8E25EBCF1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectionPredicate.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectionPredicate.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalPrimeTorusDimension.lean.txt",
+      "sha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalPrimeTorusDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalPrimeTorusDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalAffineTorusDimension.lean.txt",
+      "sha256": "6254094476437A783AAA244CFFD3A4AC06C6E38DBB6B4CC2752E2DA95F73FC6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalAffineTorusDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalAffineTorusDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectionAssembly.lean.txt",
+      "sha256": "3DD05E45D90646DBBF0FC886F2EE6F1E48B2618A8A0E02B2F509ABF41FD473A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectionAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectionAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeDimensions.lean.txt",
+      "sha256": "4AF51E18C47A207CCFDE86B10D4D4245D77F7A2200038024900BDA776B6D34FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeDimensions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeDimensions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeAssembly.lean.txt",
+      "sha256": "4455832D22EDBB7CB331B3A5E1FCE289E0CC0CE88FC1999F9DBFCB40FAE19F93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusPrimeAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusPrimes.lean.txt",
+      "sha256": "562D0D97F5823D7FF34FE8F8D7ADA3CAF804F9D9041887C7444CA50DE903A8C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusPrimeProperty.lean.txt",
+      "sha256": "465F3B902C59FF34961E8B19E11EF6AAA9EF63A0B3657585AAE47A62D9434102"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusPrimeProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusPrimeProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceGammaOneOriginalTorusPrimes.lean.txt",
+      "sha256": "A06A42208B66DE7944764BB718DB50B3C4BF12795525FE5600819E666827FF13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceGammaOneOriginalTorusPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceGammaOneOriginalTorusPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusClassPredicates.lean.txt",
+      "sha256": "4E0AF1D804DA46F38BC169A3C4B2AE36DFE44FC83783E7B793536DB705CCF311"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusClassPredicates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusClassPredicates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusCocycleClass.lean.txt",
+      "sha256": "863C7DAD6B38DC57D37A60014EAA79CAF93C926026BEDF9EC7B4038D0EC11025"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusCocycleClass.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusCocycleClass.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusClassPrimes.lean.txt",
+      "sha256": "EAD801BB9D660AE70D1930FF0C3BB409CF935BC8A0C3D2FF5C2525433EB4EA7C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusClassPrimes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusClassPrimes.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusFamilyProperty.lean.txt",
+      "sha256": "FE185BB7F8EF6BA575F6459ADC78198FDD956CE45D6EA1847E3E4DCC71600669"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusFamilyProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusFamilyProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectingFamily.lean.txt",
+      "sha256": "6DE62888AE4E6F827C0F4B6D33379AF55AC7F32621BED4AF89F1C00F19BF3B56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectingFamily.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusDetectingFamily.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusFamilies.lean.txt",
+      "sha256": "55C1BF00613B62A5E3A15BAB7F2A7376E8D5B96BDBC8D362E3318E98EF6EB080"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalArithmeticTorusFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceGammaOneOriginalTorusFamilies.lean.txt",
+      "sha256": "0331216E30EFD9C08A405FED3AF7F8B1EEACF22BEFB902EEB28B9F1469F37888"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceGammaOneOriginalTorusFamilies.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceGammaOneOriginalTorusFamilies.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-torus-audit-config-2469.json",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\source-original-torus-audit-config-2469.json",
+      "sha256": "86D699674F7A04DBFAC7B9F3B98CB07FF2C660CF3861CC2C77CBFC4FE1F4485C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusAudit1.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusAudit1.lean.txt",
+      "sha256": "4EB9C2F6C9682A7182F76CDEFB41549153970597AC9241789D04D8533333684D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusAudit1.log",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusAudit1.log",
+      "sha256": "67002633A48435F33ADA93C9E565AD2242FF0C99AB46E983A26C64306A424C0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusAudit1.exit",
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\SourceOriginalTorusAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+import SourceGammaOneOriginalNonCMBoundedInputs
+import Mathlib.Tactic
+
+open Lean
+
+private def runProjectiveClassificationDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonCM_bounded_inputs]
+  let localModules : Array Name := #[`SourceExceptionalProjectiveExponent, `SourceOriginalExceptionalScalarPower, `SourceExceptionalTraceChebyshev, `SourceExceptionalNormalizedSquare, `SourceOriginalExceptionalTraceEquation, `SourceExceptionalIntegralPolynomial, `SourceExceptionalPolynomialConstant, `SourceOriginalExceptionalPolynomialRoot, `SourceExceptionalRootArithmetic, `SourceExceptionalValuationParity, `SourceExceptionalNumberFieldRoot, `SourceExceptionalCoefficientNonvanishing, `SourceExceptionalUnramifiedPrime, `SourceExceptionalCoefficientPrimeSupport, `SourceOriginalIdentityFrobenius, `SourceOriginalLocalNonzeroPrimeCoefficient, `SourceOriginalNonzeroPrimeCoefficient, `SourceOriginalExceptionalPrimeObstruction, `SourceNonzeroAlgebraicIntegerRelation, `SourceIntegerRelationReduction, `SourceIntegralPolynomialRatio, `SourceOriginalExceptionalIntegerObstruction, `SourceOriginalExceptionalFixedObstruction, `SourceOriginalFixedLocalExceptionalExclusion, `SourceOriginalExceptionalUniformBound, `SourceNonexceptionalSmallAlternatives, `SourceOriginalNonexceptionalInputsProperty, `SourceGammaOneOriginalNonexceptionalInputs, `SourceNonCMInertPrime, `SourceNonCMInertIntegerObstruction, `SourceOriginalCoefficientReductionObstruction, `SourceNonCMOriginalInertReductionBound, `SourceNonCMBoundedConductorReduction, `SourceOriginalBoundedQuadraticFrobenius, `SourceOriginalNonCMBoundedInputsProperty, `SourceGammaOneOriginalNonCMBoundedInputs]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  for name in #[`Dubon2026.sourcePrimitiveFieldCoefficient_coe, `Dubon2026.sourcePrimitiveFieldCoefficient] do
+    logInfo m!"PROBE {name}: exists={env.contains name} proofValue={seen.contains name}"
+
+#eval runProjectiveClassificationDependencyAudit

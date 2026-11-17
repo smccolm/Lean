@@ -1,0 +1,32 @@
+import SourceOriginalSymmetricTorusRoots2444a
+
+/-! DUB-17/18 -> original regular auxiliary-prime local conditions.
+Construct the actual original-field symmetric torus conjugacy, so the
+existing original cyclic-image invariant dimension theorem applies directly. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+
+/-- Distinct original torus weights descend the actual symmetric conjugacy
+to the original field. The original conjugator is constructed from roots. -/
+theorem original_symmetric_torus_conjugacy_of_mapped_torus
+    {F E : Type} [Field F] [Field E] (j : F →+* E)
+    (n : ℕ) (A : GeneralLinearGroup (Fin 2) F) (u : Fˣ)
+    (hu : 2 * n < orderOf u)
+    (hconj : IsConj (GeneralLinearGroup.map j A)
+      (GeneralLinearGroup.map j (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u)))) :
+    IsConj (homogeneousSymmetricGL n A)
+      (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))) := by
+  obtain ⟨C, hC⟩ := matrix_exists_original_diagonal_conjugator_of_distinct_roots
+    (homogeneousSymmetricGL n A).val
+    _ (symmetric_unit_weights_injective u n hu)
+    (original_symmetric_characteristic_roots_of_mapped_torus j n A u hconj)
+  apply isConj_iff.mpr
+  refine ⟨C, Units.ext ?_⟩
+  change C.val * (homogeneousSymmetricGL n A).val * (C⁻¹).val =
+    (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))).val
+  rw [homogeneousSymmetricGL_unitDiagonal]
+  exact hC
+
+end
+end Dubon2026

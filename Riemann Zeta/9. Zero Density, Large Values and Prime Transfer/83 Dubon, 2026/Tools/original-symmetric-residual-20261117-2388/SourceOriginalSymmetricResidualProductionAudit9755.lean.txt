@@ -1,0 +1,171 @@
+import Dubon2026.SourceFiniteSubfieldIrreducible
+import Dubon2026.SourceSubfieldSymmetricAbsolute
+import Dubon2026.SourceFiniteLinearSymmetric
+import Dubon2026.SourceGammaOneAbsoluteSymmetricResidual
+import Dubon2026.SourceSubfieldKernelIrreducible
+import Dubon2026.SourceFiniteLinearKernelSymmetric
+import Dubon2026.SourceGammaOneCyclotomicSymmetricResidual
+import Dubon2026.SourceFiniteLinearAbsoluteGalois
+import Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual
+import Dubon2026.SourceResidualConjugateIrreducible
+import Dubon2026.SourceConjugateSymmetricSpanning
+import Dubon2026.SourceFiniteLinearOriginalSpanning
+import Dubon2026.SourceOriginalSymmetricSpanningProperty
+import Dubon2026.SourceGammaOneSymmetricKernelSpanning
+import Dubon2026.SourceSpanningIrreducibility
+import Dubon2026.SourceSpanningCoefficientExtension
+import Dubon2026.SourceOriginalSymmetricAbsolute
+import Dubon2026.SourceGammaOneResidueAbsoluteSymmetric
+import Dubon2026.SourceOriginalSymmetricAdjoint
+import Dubon2026.SourceGammaOneSymmetricAdjointVanishing
+import Dubon2026.SourceFiniteLinearOriginalScalar
+import Dubon2026.SourceFiniteLinearTwistedKernel
+import Dubon2026.SourceOriginalTwistedDetectionProperty
+import Dubon2026.SourceOriginalTwistedTopology
+import Dubon2026.SourceGammaOneTwistedKernelDetection
+import Dubon2026.SourceArithmeticCyclotomicSquare
+import Dubon2026.SourceOriginalArithmeticTwistedDetection
+import Dubon2026.SourceGammaOneArithmeticTwistedDetection
+import Dubon2026.SourceFiniteLinearOriginalConsequences
+import Dubon2026.SourceGammaOneSymmetricResidualCohomology
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image
+#print axioms Dubon2026.finiteSubfield_symmetric_absoluteIrreducible
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual
+#print axioms Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_absolute_cyclotomic_irreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual
+#print axioms Dubon2026.representation_irreducible_iff_of_equiv
+#print axioms Dubon2026.matrixRepresentation_irreducible_iff_conjugate
+#print axioms Dubon2026.original_symmetric_matrix_span_of_conjugated_extension
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span
+#print axioms Dubon2026.HasOriginalSymmetricSpanning
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning
+#print axioms Dubon2026.representation_irreducible_of_asAlgebraHom_surjective
+#print axioms Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span
+#print axioms Dubon2026.matrixRepresentation_irreducible_of_span
+#print axioms Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension
+#print axioms Dubon2026.matrixRepresentation_absolute_irreducible_of_span
+#print axioms Dubon2026.original_symmetric_absolute_irreducibility_of_spanning
+#print axioms Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility
+#print axioms Dubon2026.original_symmetric_adjoint_vanishing_of_absolute
+#print axioms Dubon2026.HasOriginalSymmetricAdjointVanishing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_scalar_character_square
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_kernel_detection
+#print axioms Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetection
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_detection_atTopology
+#print axioms Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_twisted_kernel_detection
+#print axioms Dubon2026.originalArithmeticCyclotomicCoefficient_exists_square_ne_one
+#print axioms Dubon2026.SourceDickson.original_arithmetic_symmetric_twisted_detection_of_original
+#print axioms Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection
+#print axioms Dubon2026.SourceDickson.original_symmetric_kernel_consequences_of_spanning
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences
+#print axioms Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences
+#print axioms Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceFiniteSubfieldIrreducible, `Dubon2026.SourceSubfieldSymmetricAbsolute, `Dubon2026.SourceFiniteLinearSymmetric, `Dubon2026.SourceGammaOneAbsoluteSymmetricResidual, `Dubon2026.SourceSubfieldKernelIrreducible, `Dubon2026.SourceFiniteLinearKernelSymmetric, `Dubon2026.SourceGammaOneCyclotomicSymmetricResidual, `Dubon2026.SourceFiniteLinearAbsoluteGalois, `Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual, `Dubon2026.SourceResidualConjugateIrreducible, `Dubon2026.SourceConjugateSymmetricSpanning, `Dubon2026.SourceFiniteLinearOriginalSpanning, `Dubon2026.SourceOriginalSymmetricSpanningProperty, `Dubon2026.SourceGammaOneSymmetricKernelSpanning, `Dubon2026.SourceSpanningIrreducibility, `Dubon2026.SourceSpanningCoefficientExtension, `Dubon2026.SourceOriginalSymmetricAbsolute, `Dubon2026.SourceGammaOneResidueAbsoluteSymmetric, `Dubon2026.SourceOriginalSymmetricAdjoint, `Dubon2026.SourceGammaOneSymmetricAdjointVanishing, `Dubon2026.SourceFiniteLinearOriginalScalar, `Dubon2026.SourceFiniteLinearTwistedKernel, `Dubon2026.SourceOriginalTwistedDetectionProperty, `Dubon2026.SourceOriginalTwistedTopology, `Dubon2026.SourceGammaOneTwistedKernelDetection, `Dubon2026.SourceArithmeticCyclotomicSquare, `Dubon2026.SourceOriginalArithmeticTwistedDetection, `Dubon2026.SourceGammaOneArithmeticTwistedDetection, `Dubon2026.SourceFiniteLinearOriginalConsequences, `Dubon2026.SourceGammaOneSymmetricResidualCohomology]
+  let theorems : Array Name := #[`Dubon2026.finiteSubfield_matrixRepresentation_irreducible_of_symmetricSL2_image, `Dubon2026.finiteSubfield_symmetric_absoluteIrreducible, `Dubon2026.SourceDickson.finite_linear_bounds_absolute_symmetric_irreducibility, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_symmetric_residual, `Dubon2026.finiteSubfield_symmetric_kernel_absoluteIrreducible, `Dubon2026.SourceDickson.finite_linear_bounds_kernel_absolute_symmetric_irreducibility, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cyclotomic_symmetric_residual, `Dubon2026.SourceDickson.finite_linear_bounds_precomp_surjective, `Dubon2026.SourceDickson.finite_linear_bounds_absolute_cyclotomic_irreducibility, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_absolute_cyclotomic_symmetric_residual, `Dubon2026.representation_irreducible_iff_of_equiv, `Dubon2026.matrixRepresentation_irreducible_iff_conjugate, `Dubon2026.original_symmetric_matrix_span_of_conjugated_extension, `Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_span, `Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_span, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_kernel_spanning, `Dubon2026.representation_irreducible_of_asAlgebraHom_surjective, `Dubon2026.matrixRepresentation_asAlgebraHom_surjective_of_span, `Dubon2026.matrixRepresentation_irreducible_of_span, `Dubon2026.matrixRepresentation_span_eq_top_coefficientExtension, `Dubon2026.matrixRepresentation_absolute_irreducible_of_span, `Dubon2026.original_symmetric_absolute_irreducibility_of_spanning, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_residue_absolute_symmetric_irreducibility, `Dubon2026.original_symmetric_adjoint_vanishing_of_absolute, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_traceZeroAdjoint_vanishing, `Dubon2026.SourceDickson.finite_linear_bounds_original_scalar_character_square, `Dubon2026.SourceDickson.finite_linear_bounds_symmetricTwistedH1_exists_nonzero_joint_kernel, `Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_kernel_detection, `Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_twisted_detection_atTopology, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_twisted_kernel_detection, `Dubon2026.originalArithmeticCyclotomicCoefficient_exists_square_ne_one, `Dubon2026.SourceDickson.original_arithmetic_symmetric_twisted_detection_of_original, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_arithmetic_twisted_kernel_detection, `Dubon2026.SourceDickson.original_symmetric_kernel_consequences_of_spanning, `Dubon2026.SourceDickson.finite_linear_bounds_original_symmetric_kernel_consequences, `Dubon2026.SourceDickson.finite_linear_bounds_original_absolute_cyclotomic_consequences, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_symmetric_residual_cohomology]
+  let constructions : Array Name := #[`Dubon2026.HasOriginalSymmetricSpanning, `Dubon2026.HasOriginalSymmetricAbsoluteIrreducibility, `Dubon2026.HasOriginalSymmetricAdjointVanishing, `Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetection, `Dubon2026.SourceDickson.HasOriginalSymmetricTwistedKernelDetectionAtTopology, `Dubon2026.SourceDickson.HasOriginalArithmeticSymmetricTwistedKernelDetection, `Dubon2026.SourceDickson.HasOriginalSymmetricKernelConsequences]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL SYMMETRIC RESIDUAL AUDIT PASS: {count} theorems including private/generated declarations. Original symmetric irreducibility, adjoint vanishing and arithmetic twisted-cohomology detection proved on the large-image branch. Remaining association and higher continuation OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceFiniteSubfieldIrreducible
+
+#lint in Dubon2026.SourceSubfieldSymmetricAbsolute
+
+#lint in Dubon2026.SourceFiniteLinearSymmetric
+
+#lint in Dubon2026.SourceGammaOneAbsoluteSymmetricResidual
+
+#lint in Dubon2026.SourceSubfieldKernelIrreducible
+
+#lint in Dubon2026.SourceFiniteLinearKernelSymmetric
+
+#lint in Dubon2026.SourceGammaOneCyclotomicSymmetricResidual
+
+#lint in Dubon2026.SourceFiniteLinearAbsoluteGalois
+
+#lint in Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual
+
+#lint in Dubon2026.SourceResidualConjugateIrreducible
+
+#lint in Dubon2026.SourceConjugateSymmetricSpanning
+
+#lint in Dubon2026.SourceFiniteLinearOriginalSpanning
+
+#lint in Dubon2026.SourceOriginalSymmetricSpanningProperty
+
+#lint in Dubon2026.SourceGammaOneSymmetricKernelSpanning
+
+#lint in Dubon2026.SourceSpanningIrreducibility
+
+#lint in Dubon2026.SourceSpanningCoefficientExtension
+
+#lint in Dubon2026.SourceOriginalSymmetricAbsolute
+
+#lint in Dubon2026.SourceGammaOneResidueAbsoluteSymmetric
+
+#lint in Dubon2026.SourceOriginalSymmetricAdjoint
+
+#lint in Dubon2026.SourceGammaOneSymmetricAdjointVanishing
+
+#lint in Dubon2026.SourceFiniteLinearOriginalScalar
+
+#lint in Dubon2026.SourceFiniteLinearTwistedKernel
+
+#lint in Dubon2026.SourceOriginalTwistedDetectionProperty
+
+#lint in Dubon2026.SourceOriginalTwistedTopology
+
+#lint in Dubon2026.SourceGammaOneTwistedKernelDetection
+
+#lint in Dubon2026.SourceArithmeticCyclotomicSquare
+
+#lint in Dubon2026.SourceOriginalArithmeticTwistedDetection
+
+#lint in Dubon2026.SourceGammaOneArithmeticTwistedDetection
+
+#lint in Dubon2026.SourceFiniteLinearOriginalConsequences
+
+#lint in Dubon2026.SourceGammaOneSymmetricResidualCohomology

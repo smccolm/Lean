@@ -1,0 +1,30 @@
+import Dubon2026.SourceOriginalTorusCocycleClass
+
+/-! Transfer the proved original cocycle detection to its actual H1 quotient. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Pointwise cocycle detection detects every original H1 class through
+the actual localization map, independently of a representative. -/
+theorem rationalArithmetic_original_class_torus_prime
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    {K : Type} [Field K] [TopologicalSpace K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup (Fin (n + 1)) K)
+    (hR : Continuous R)
+    (hdetect : HasArithmeticTorusCocycleDetection a p n level A hA R hR)
+    (x : ContinuousRepresentationH1 A hA) (hx : x ≠ 0) :
+    HasArithmeticTorusClassPrimes a p n level A hA R hR x := by
+  obtain ⟨c, hc⟩ := (continuousRepresentationCoboundariesOne A hA).mkQ_surjective x
+  change (Submodule.Quotient.mk c : ContinuousRepresentationH1 A hA) = x at hc
+  have hc' : (Submodule.Quotient.mk c : ContinuousRepresentationH1 A hA) ≠ 0 := by
+    simpa only [hc] using hx
+  rw [← hc]
+  exact rationalArithmetic_original_torus_cocycle_class_primes a p n level A hA R hR c (hdetect c hc')
+
+end
+end Dubon2026

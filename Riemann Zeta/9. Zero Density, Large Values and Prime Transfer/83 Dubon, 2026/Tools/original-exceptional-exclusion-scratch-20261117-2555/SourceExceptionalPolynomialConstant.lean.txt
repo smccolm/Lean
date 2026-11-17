@@ -1,0 +1,45 @@
+import SourceExceptionalIntegralPolynomial
+
+/-! DUB-17/18 -> exceptional image exclusion -> a unit test at good coefficient
+primes. The zero-root-removed integral trace polynomial has constant term
+-120^2. Only the rational primes 2, 3 and 5 can divide this constant. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- The exact derivative at the negative endpoint of the integral Chebyshev polynomial. -/
+theorem integral_chebyshev_derivative_eval_neg_two (n : ℕ) :
+    (Chebyshev.C ℤ (n : ℤ)).derivative.eval (-2) =
+      (-1 : ℤ) ^ (n + 1) * (n : ℤ) ^ 2 := by
+  have hv (m : ℕ) : (Chebyshev.C ℤ (m : ℤ)).eval (-2) = 2 * (-1 : ℤ) ^ m := by
+    rw [Chebyshev.C_eval_neg_two, Int.coe_negOnePow_natCast]
+    norm_cast
+  induction n using Nat.twoStepInduction with
+  | zero => simp
+  | one => simp
+  | more n ih0 ih1 =>
+    have hc : Chebyshev.C ℤ ((n + 2 : ℕ) : ℤ) =
+        X * Chebyshev.C ℤ ((n + 1 : ℕ) : ℤ) - Chebyshev.C ℤ (n : ℤ) := by
+      simp only [Nat.cast_add, Nat.cast_one, Nat.cast_ofNat, Chebyshev.C_add_two]
+    rw [hc, derivative_sub, derivative_mul, derivative_X, one_mul,
+      eval_sub, eval_add, eval_mul, eval_X, hv, ih0, ih1]
+    simp only [pow_succ, Nat.cast_add, Nat.cast_one, Nat.cast_ofNat]
+    ring
+
+/-- The fixed nonzero-trace polynomial has the exact nonzero constant term -14400. -/
+theorem exceptionalNonzeroTracePolynomial_constant :
+    exceptionalNonzeroTracePolynomial.coeff 0 = -14400 := by
+  rw [exceptionalNonzeroTracePolynomial, coeff_divX, zero_add]
+  have he : exceptionalTracePolynomial.coeff 1 =
+      exceptionalTracePolynomial.derivative.eval 0 := by
+    simp [← coeff_zero_eq_eval_zero, coeff_derivative]
+  rw [he]
+  simp only [exceptionalTracePolynomial, derivative_sub, derivative_comp,
+    derivative_ofNat, derivative_X, sub_zero, one_mul, eval_sub, eval_comp,
+    eval_X, eval_ofNat, zero_sub]
+  have hd := integral_chebyshev_derivative_eval_neg_two 120
+  norm_num at hd
+  exact hd
+
+end
+end Dubon2026.SourceDickson

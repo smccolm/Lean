@@ -1,0 +1,34 @@
+import Dubon2026.SourceResidualLinearAlternatives
+
+/-! DUB-17/18 -> eventual residual large image -> exact remaining alternatives.
+After the arithmetic exclusion of A4, S4 and A5, cyclic, dihedral and wild
+solvable projective images remain explicit. No remaining case is discharged by
+definition, finite-field enlargement or a stronger image hypothesis. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+variable (p : ℕ) [Fact p.Prime]
+
+/-- The three still unresolved small projective alternatives after exceptional-image exclusion. -/
+def HasRemainingSmallProjectiveImage (G : Subgroup (PGLOf (K p))) : Prop :=
+    IsCyclic G ∨
+    (∃ n : ℕ, n ≥ 2 ∧ Nonempty (G ≃* DihedralGroup n)) ∨
+    (∃ (m t : ℕ) (_ : m ≥ 1) (_ : Nat.Coprime t p) (_ : t ∣ p ^ m - 1)
+      (φ : Multiplicative (ZMod t) →* MulAut (Multiplicative (Fin m → ZMod p))),
+      Nonempty (G ≃* (Multiplicative (Fin m → ZMod p)) ⋊[φ] Multiplicative (ZMod t)))
+
+/-- Removing exactly the three exceptional branches leaves exactly the three unresolved small-image cases. -/
+theorem remaining_small_image_of_not_exceptional
+    (G : Subgroup (PGLOf (K p))) (h : HasSmallProjectiveImage p G)
+    (hex : ¬(Nonempty (G ≃* alternatingGroup (Fin 4)) ∨
+      Nonempty (G ≃* Equiv.Perm (Fin 4)) ∨ Nonempty (G ≃* alternatingGroup (Fin 5)))) :
+    HasRemainingSmallProjectiveImage p G := by
+  rcases h with hc | hd | ha | hs | ha5 | hw
+  · exact Or.inl hc
+  · exact Or.inr (Or.inl hd)
+  · exact (hex (Or.inl ha)).elim
+  · exact (hex (Or.inr (Or.inl hs))).elim
+  · exact (hex (Or.inr (Or.inr ha5))).elim
+  · exact Or.inr (Or.inr hw)
+
+end
+end Dubon2026.SourceDickson

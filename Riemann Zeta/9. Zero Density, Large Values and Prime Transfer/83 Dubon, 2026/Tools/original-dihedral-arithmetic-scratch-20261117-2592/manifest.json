@@ -1,0 +1,374 @@
+{
+  "status": "Scratch PASS: the same actual non-CM original integral/residual pair retains all earlier conclusions and constructs the literal nontrivial continuous quadratic character of every dihedral realization of its actual projective range. Negative values force original-field trace zero and original inertia is trivial away from Qp. The Dirichlet comparison and uniform conductor bound remain open. No final acceptance gate is closed. Production reconciliation and assembled verification remain pending.",
+  "modules": 8,
+  "publicQueries": 16,
+  "publicTheorems": 12,
+  "publicConstructions": 4,
+  "exhaustiveTheorems": 63,
+  "otherDeclarations": 14,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 345,
+  "typeValueFingerprints": 77,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-noncm-bounded-scratch-20261117-2571/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign.lean.txt",
+      "sha256": "1E41E3946B028D6ABD5194BAE87085032C326DC45C283D5766B10352691D8BB8"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582a.lean.txt",
+      "sha256": "876C95E855D4FA685ADB117013D72F9EFE08B5ACED79079358EE30DBAA3FE8A2"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582a.log",
+      "sha256": "DA56FC541BDE6A2E0FC05D87D1D9276DFEBFC9F8B7A5F78805337F05BF53E9AB"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582b.lean.txt",
+      "sha256": "8EBD5128AB307DAF6D18FFB7DE79899F6A39351AB34EEAF69CC87045F56A8A5F"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582b.log",
+      "sha256": "36BFB2E7F3D37D17D72B22B44F86F8181D911F7EC64F410820242F28BB815DC9"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582c.lean.txt",
+      "sha256": "7D0ADC76ECDE8E847220F7983BA644372DE43B0BF9D9C73A4C45636097D30FCB"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582c.log",
+      "sha256": "8D677524B1386A84EA8620C3BDB3DB7C39D9E6853C87EFF68CDDE42B14B756DA"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582d.lean.txt",
+      "sha256": "1E41E3946B028D6ABD5194BAE87085032C326DC45C283D5766B10352691D8BB8"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceDihedralReflectionSign2582d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceGammaOneOriginalDihedralInputs.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceGammaOneOriginalDihedralInputs.lean.txt",
+      "sha256": "FCB38E996F550F66BD79966D3A9B42EB99238A5A9F21CEC8A79F8AF8F9651BFF"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceGammaOneOriginalDihedralInputs.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceGammaOneOriginalDihedralInputs2588a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceGammaOneOriginalDihedralInputs2588a.lean.txt",
+      "sha256": "13D417016186E692EE738B6A4523457BBCCEF4AD2D32D0C8341063A59375DBD0"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceGammaOneOriginalDihedralInputs2588a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmetic.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmetic.lean.txt",
+      "sha256": "27E66DC4E400D0801B4BB7A9011EAF3899CF105B030A0E0FD13BE61EFC55E45C"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmetic.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmetic2585a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmetic2585a.lean.txt",
+      "sha256": "721C2DA7B977E28B57A27EEA5E283B74AC784A39BB8AFBE9A0D58FB112DC6B54"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmetic2585a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticAudit1.lean.txt",
+      "sha256": "8B11B4CA651AEEC936D0AB3BE1C95A7CCC41FE3A6EA2AAEB264ABA7E0C0FFC36"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticAudit1.log",
+      "sha256": "BF0A5FED8AAAD355E414038E3B04E1B692FF34EE9D4B345D51403C3583E9BBF3"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticDeclarations2589.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticDeclarations2589.lean.txt",
+      "sha256": "AF1C0193D0DCA77AA3824AE46CC68AE1E272CC8F132CC8B11BAC91EA50C2515C"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticDeclarations2589.log",
+      "sha256": "2E74D0CD3CD78188998304913118416C5E792D6243FBA338E67BC2EAC2EC0AE1"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticDependencyAudit1.lean.txt",
+      "sha256": "702CA3843257850AC508190BCE38E0D94DC69CC1EE89201BEDEEE7BC75F24C6B"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticDependencyAudit1.log",
+      "sha256": "CACBC8430B9465F9E113911E5014D6C0A2FB11791A4FFA39B6B4E98FA4ACB103"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticProductionSemantic2590.lean.txt",
+      "sha256": "CB72E43171D8A5F8B0C68607CABABB893B94BEBFDEE07EEEEAB20D8995943AD9"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticScratchSemantic2590.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticScratchSemantic2590.lean.txt",
+      "sha256": "769502E3E1F277E936748A7CA891D64F053B33705FA1CA4093B9ABEC235A11E2"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralArithmeticScratchSemantic2590.log",
+      "sha256": "38FC6BD98FB41D5DC94550D085E4AB6FA4D6FDEBC9C30998801A06143C6A0ACF"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter.lean.txt",
+      "sha256": "5241B1C0B02BE5B638C3268E6E117F2878C52F859E3E39D5F5B7BEA661843549"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583a.lean.txt",
+      "sha256": "AA6D123A80AEDD3CA5F19F04D8CBE078EACFC9AF59FFD4A6F4FBDCEFFAED714B"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583a.log",
+      "sha256": "0142184547F122A185D0A9459F38D7E2F25B485A752B6DED1874A6489E186380"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583b.lean.txt",
+      "sha256": "C08572FF66B5EECDCF76DD28611FFF6DC0856D995334C7186A66F74643F70FFC"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583b.log",
+      "sha256": "43CE6C17CAC8519F6CAAEB20CBC400B69585395182DB0673CC600557ED17DA10"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583c.lean.txt",
+      "sha256": "797B76CD76FCE152749D8DD14A952C7DCA08ACAA8BEBA185738E7097CB195564"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralCharacter2583c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralContinuity.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralContinuity.lean.txt",
+      "sha256": "0E5AEE430798CD0216D5041C67E781F2D41A695B375BE0C7DDE9ABD3014D5F0A"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralContinuity.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralContinuity2584a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralContinuity2584a.lean.txt",
+      "sha256": "F0C0538D5BB3116922B9B4E9AD1B5C3D95EADAA80A82C9964FA5A7B502EA67CA"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalDihedralContinuity2584a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalNonCMDihedralInputsProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalNonCMDihedralInputsProperty.lean.txt",
+      "sha256": "8B00772BE5C1E6377E319410FEB173E2A1ACE90F734717DCED1C968B77224991"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalNonCMDihedralInputsProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalNonCMDihedralInputsProperty2587a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalNonCMDihedralInputsProperty2587a.lean.txt",
+      "sha256": "BB3F8B27BB9B1EA877366839CB4AA2E8A960E4B2806C5B1AB2B213772246820C"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalNonCMDihedralInputsProperty2587a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalProjectiveInvolutionTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalProjectiveInvolutionTrace.lean.txt",
+      "sha256": "21BF52AEAD55FA621845E165FDFBEC2D39031901A9CE3DBF863AD53AD30064DF"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalProjectiveInvolutionTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalProjectiveInvolutionTrace2581a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalProjectiveInvolutionTrace2581a.lean.txt",
+      "sha256": "DFC824CE672E465E2B7ED4B1ADAFB90786483C20A4534C6B3FBFF91175A6832C"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceOriginalProjectiveInvolutionTrace2581a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace.lean.txt",
+      "sha256": "999F5BEE1AFF4E79E51C64B2AC2A48A028453C8C8C980556E3D984C11B9DD5A5"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580a.lean.txt",
+      "sha256": "6D2983ADEC92DBE8FB692E78BDB459C265A48E1B01E28CF72AAAD6D5D9062F77"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580a.log",
+      "sha256": "53ED372744B2A2CE5E00360A0A39272717DD5841D1B541CBC908CB10C8EDCE66"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580b.lean.txt",
+      "sha256": "999F5BEE1AFF4E79E51C64B2AC2A48A028453C8C8C980556E3D984C11B9DD5A5"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/archive_original_dihedral_arithmetic_scratch_2592.py",
+      "sha256": "739626AD7154DDB38CDD719EC1BF41008D8CA9483873667FFB62CE61009E1DD5"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/build_original_dihedral_arithmetic_2589.ps1",
+      "sha256": "85A59F90ABE49725E3C254F687B1BCC5454D63732EF1D6D6B19FFF4D254DEB58"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/generate_original_dihedral_arithmetic_audits_2589.py",
+      "sha256": "8004128AD08D964B0F9EE982E08A4A237045F256B4ACD0BB464C1E76964AC811"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/original-dihedral-arithmetic-reuse-review-2589.json",
+      "sha256": "B7B088959ED1FD49145654AE82F1CDF2F3523D1E82D359C471A1FA49CDC1F70F"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/original-dihedral-character-route-review-2580.json",
+      "sha256": "F340D35E46E42103FF90EBBD03E81E3C7AB80661DC200C77C6D1688BF59D9033"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/record_original_dihedral_arithmetic_scope_2591.py",
+      "sha256": "BF694D5B1CB2A920B10220B57ED23187108D90829329BB5BF25DB564E6E31491"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/source-original-dihedral-arithmetic-1-scratch-receipt.json",
+      "sha256": "2D0A60BA8F081DC0BCD98745CB7F7560A5B660294CD29AAB0E1747F9A7B56B0D"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/source-original-dihedral-arithmetic-audit-config-2589.json",
+      "sha256": "47D60BE2294D5034A5EBDC445A173A528A6F2B27347392D59E47527E6C147BBB"
+    },
+    {
+      "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/source-original-dihedral-arithmetic-scratch-summary-2591.json",
+      "sha256": "D9E1CAB5CE2138C8D9BB6D580EDCD791C29478D00CBB43CE2F88076CCE00331F"
+    }
+  ]
+}

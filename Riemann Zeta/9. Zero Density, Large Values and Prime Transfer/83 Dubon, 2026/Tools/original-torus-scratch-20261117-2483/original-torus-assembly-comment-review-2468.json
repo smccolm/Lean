@@ -1,0 +1,36 @@
+{
+  "reason": "The pre-dimension torus detection lemma had an overbroad docstring inherited from the final assembly. Its docstring now states precisely its detecting-prime and torus conclusion; exact local dimension is supplied by the separate proven dimension lemma. No theorem statement or proof changes.",
+  "freshVariants": [
+    [
+      "SourceOriginalTorusDetectionAssembly2454b",
+      "SourceOriginalTorusDetectionAssembly2454c"
+    ],
+    [
+      "SourceOriginalTorusPrimeAssembly2449d",
+      "SourceOriginalTorusPrimeAssembly2449e"
+    ],
+    [
+      "SourceOriginalArithmeticTorusPrimes2450a",
+      "SourceOriginalArithmeticTorusPrimes2450b"
+    ],
+    [
+      "SourceOriginalArithmeticTorusPrimeProperty2451a",
+      "SourceOriginalArithmeticTorusPrimeProperty2451b"
+    ],
+    [
+      "SourceGammaOneOriginalTorusPrimes2452a",
+      "SourceGammaOneOriginalTorusPrimes2452b"
+    ],
+    [
+      "SourceOriginalArithmeticTorusFamilies2466a",
+      "SourceOriginalArithmeticTorusFamilies2466b"
+    ],
+    [
+      "SourceGammaOneOriginalTorusFamilies2467a",
+      "SourceGammaOneOriginalTorusFamilies2467b"
+    ]
+  ],
+  "oldVariantsRetained": true,
+  "proofBodiesChanged": false,
+  "productionMutation": false
+}

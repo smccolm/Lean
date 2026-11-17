@@ -1,0 +1,54 @@
+import SourceNonzeroAlgebraicIntegerRelation2543c
+import Mathlib.Algebra.Polynomial.Div
+import Mathlib.Algebra.CharP.Defs
+
+/-! DUB-17/18 -> exceptional original residual image exclusion -> a fixed
+integer obstruction to zero reduction. The same integer relation follows an
+actual coefficient embedding into the integral ring, then its actual reduction
+map. No norm, denominator-clearing framework or field-identification is needed. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+
+/-- An integer relation transfers through the actual injective integral inclusion and coefficient embedding. -/
+theorem integer_relation_lifts_to_integral_ring
+    {F R E : Type*} [CommRing F] [CommRing R] [CommRing E]
+    (P : ℤ[X]) (x : F) (hx : P.eval₂ (Int.castRingHom F) x = 0)
+    (τ : F →+* E) (ι : R →+* E) (hι : Function.Injective ι)
+    (b : R) (hb : ι b = τ x) : P.eval₂ (Int.castRingHom R) b = 0 := by
+  have hτint : τ.comp (Int.castRingHom F) = Int.castRingHom E := Subsingleton.elim _ _
+  have hιint : ι.comp (Int.castRingHom R) = Int.castRingHom E := Subsingleton.elim _ _
+  apply hι
+  rw [map_zero, Polynomial.hom_eval₂, hιint, hb]
+  have he := congrArg τ hx
+  rw [map_zero, Polynomial.hom_eval₂, hτint] at he
+  exact he
+
+/-- Reducing an actual root to zero forces its residue characteristic to divide the fixed constant coefficient. -/
+theorem integer_relation_reduction_dvd_constant
+    {R K : Type*} [CommRing R] [Field K] (p : ℕ) [CharP K p]
+    (P : ℤ[X]) (b : R) (hb : P.eval₂ (Int.castRingHom R) b = 0)
+    (π : R →+* K) (hπ : π b = 0) : (p : ℤ) ∣ P.coeff 0 := by
+  have hr : (P.map (Int.castRingHom R)).IsRoot b := by
+    simpa only [IsRoot.def, ← eval₂_eq_eval_map] using hb
+  have hd : b ∣ (P.coeff 0 : R) := by
+    simpa only [coeff_map] using hr.dvd_coeff_zero
+  obtain ⟨c, hc⟩ := hd
+  have he := congrArg π hc
+  have hz : (P.coeff 0 : K) = 0 := by
+    simpa only [map_intCast, map_mul, hπ, zero_mul] using he
+  exact (CharP.intCast_eq_zero_iff K p _).mp hz
+
+/-- Literal coefficient embedding, integral inclusion and zero reduction consume the same fixed integer relation. -/
+theorem embedded_integer_relation_reduction_dvd_constant
+    {F R E K : Type*} [CommRing F] [CommRing R] [CommRing E] [Field K]
+    (p : ℕ) [CharP K p] (P : ℤ[X]) (x : F)
+    (hx : P.eval₂ (Int.castRingHom F) x = 0)
+    (τ : F →+* E) (ι : R →+* E) (hι : Function.Injective ι)
+    (b : R) (hb : ι b = τ x) (π : R →+* K) (hπ : π b = 0) :
+    (p : ℤ) ∣ P.coeff 0 := by
+  exact integer_relation_reduction_dvd_constant p P b
+    (integer_relation_lifts_to_integral_ring P x hx τ ι hι b hb) π hπ
+
+end
+end Dubon2026.SourceDickson

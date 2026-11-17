@@ -1,0 +1,49 @@
+{
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> actual original residual deformation inputs -> regular auxiliary-prime detection, bounded jointly detecting families and original-field unramified adjoint dimension comparison.",
+  "discharged": "For an actual original primitive cusp form of weight at least two and prime p greater than three, the same constructed residual representation retains all its original integral, reduction, Hecke, Frobenius, determinant and oddness data. In its finite linear subfield branch, every nonzero original symmetric twisted-H1 class with 2*n < p-1 has regular detecting primes outside any finite set and congruent to one modulo every prescribed p-power. The actual common finite affine factor, unramified Frobenius and nonzero original localization are constructed. Every subspace of the original global H1 has a jointly detecting family of cardinality at most its original-field dimension; global H1 finiteness is derived rather than supplied. For every symmetric degree and every rational prime, the original local unramified adjoint H1 dimension equals the actual invariant-space dimension, without a large-image assumption. All prior conclusions concern the same original representation.",
+  "boundary": "The six small-projective-image alternatives remain explicit and their arithmetic exclusion is still required. The regular-prime invariant dimension is not yet computed in this promoted scope; original local deformation conditions, automorphy and literal higher symmetric-power continuation remain open. The finite subfield is not identified with the original residue field. The actual-form consumer retains weight at least two and p greater than three; full source-domain obligations remain. Acceptance remains 16/20; DUB-17--20 OPEN, with every source and verification criterion unchanged.",
+  "route": "Reuse native subfield projectors, perfect SL2 kernels, the original cyclotomic root-fixing argument and genuine conjugate Chebotarev. Original non-coboundary detection avoids a separate H1 scalar-extension comparison. Restricting coefficient scalars injects the same global and local continuous cocycles into already proved finite prime-field cocycle spaces; the original H1 quotient is finite. Native finite_detecting_family_of_pointwise constructs the bounded family. The existing finite-field cyclic-depth theorem proves the original unramified H1/invariant dimension formula. No additional external import, root-pin change, proof-limit change, general cohomology base-change theory or independent image certificate is introduced.",
+  "scratchCertificates": [
+    {
+      "path": "source-original-regular-prime-1-scratch-receipt.json",
+      "sha256": "334EF60FE3B73F047A5F481753159A204503CB6CCD035A70D9244A3F96A75A48"
+    },
+    {
+      "path": "source-original-detecting-family-2-scratch-receipt.json",
+      "sha256": "D6EB8D8B5AB21272E5771AD1308CD4E8073DB28E82D4DF967FE3709B147F10C8"
+    },
+    {
+      "path": "source-original-unramified-dimension-1-scratch-receipt.json",
+      "sha256": "E52346CFD7BCEB752F11156364F26F09705DDB99034F137448DFE5810B7A228D"
+    }
+  ],
+  "immutableScratchArchives": [
+    {
+      "path": "Tools/original-regular-prime-scratch-20261117-2408/manifest.json",
+      "sha256": "870D73AEAD1E86320582C53CDCF7ACAF45D167DE5262AE2B85DAEFBD9A9E2359"
+    },
+    {
+      "path": "Tools/original-detecting-family-scratch-20261117-2430b/manifest.json",
+      "sha256": "521E117D88D7F503F829696B63F1E5CD0998890C8FAA4C4DD07775139963B5EC"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/manifest.json",
+      "sha256": "C92C0259AC1A366415395CDA10E3B484441E4E47DEF5A5D654F19EF44928ABC8"
+    }
+  ],
+  "disjointModules": 28,
+  "publicTheorems": 30,
+  "publicConstructions": 10,
+  "exhaustiveTheorems": 122,
+  "exhaustiveOtherDeclarations": 25,
+  "typeValueFingerprints": 147,
+  "proofValueEdges": [
+    123,
+    138,
+    151
+  ],
+  "proofBodiesPreserved": true,
+  "changes": "Only import qualification during promotion.",
+  "accepted": 16,
+  "total": 20
+}

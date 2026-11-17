@@ -1,0 +1,14 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": "literal higher symmetric-power continuation -> automorphy -> eventual original residual large image -> exclusion of the A4, S4 and A5 projective alternatives",
+  "reuse": "The pinned native Dickson classification already supplies the actual projective-image subgroup and equivalences. Mathlib supplies alternating/permutation cardinalities, Lagrange exponent bounds and quotient-center/scalar comparison. Native original characteristic polynomials and literal coefficient reduction remain the arithmetic consumers.",
+  "chosenFirstStep": "Derive exponent dividing 120 for the three exceptional alternatives, then scalar 120th powers of the same original embedded residual matrices. Use these in a universal Frobenius trace/determinant polynomial relation.",
+  "shorterRouteAssessment": "A fixed trace/determinant polynomial relation, together with one nonzero good Fourier coefficient and odd weight exponent at an unramified coefficient-field prime, may exclude all sufficiently large residual characteristics without p-adic Hodge foundations. The polynomial, valuation-parity and finite norm-divisor bridges are still to be proved; this is a route assessment, not an exclusion theorem.",
+  "deferred": "No general p-adic Hodge theory or classification of all finite-order ratios is started. Cyclic, dihedral and elementary-abelian-by-cyclic alternatives remain separate.",
+  "status": "New scratch proof attempt. No production change and no gate closure.",
+  "accepted": 16,
+  "total": 20
+}

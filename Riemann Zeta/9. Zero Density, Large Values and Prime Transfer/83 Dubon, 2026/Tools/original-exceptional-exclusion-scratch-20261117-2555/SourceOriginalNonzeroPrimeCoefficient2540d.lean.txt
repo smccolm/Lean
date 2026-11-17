@@ -1,0 +1,43 @@
+import SourceOriginalLocalNonzeroPrimeCoefficient2541b
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional image
+exclusion. The actual primitive form has a nonzero Fourier coefficient at a
+prime outside every finite set. Apply the already constructed residual action
+at p=5 and native identity Frobenius; no large-image or purity premise is used. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+/-- Every actual primitive form has a nonzero original prime coefficient outside any finite set. -/
+theorem exists_original_nonzero_prime_coefficient
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (S : Finset ℕ) :
+    ∃ q : ℕ, q.Prime ∧ q ∉ S ∧ sourcePrimitiveFieldCoefficient f q ≠ 0 := by
+  letI : Fact (Nat.Prime 5) := ⟨by decide⟩
+  letI := sourcePrimitiveCoefficientField_numberField f hk
+  letI := rationalPrimeLocalField_charZero 5 (Fact.out : Nat.Prime 5)
+  let F := rationalPrimeLocalField 5 (Fact.out : Nat.Prime 5)
+  let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+  let τ := sourceCommonFieldEmbedding (sourcePrimitiveCoefficientField f) F
+  have hc := sourcePrimitiveCoefficient_exists_local_structure f hk 5 (Fact.out : Nat.Prime 5)
+  dsimp only at hc
+  obtain ⟨u, v, hu, hv, hext, _hfin, _hadic⟩ := hc
+  letI : UniformSpace L := u
+  letI : TopologicalSpace L := u.toTopologicalSpace
+  letI : ValuativeRel L := v
+  letI : IsUniformAddGroup L := hu
+  letI : IsNonarchimedeanLocalField L := hv
+  letI : (ValuativeRel.valuation F).HasExtension (ValuativeRel.valuation L) := hext
+  letI : CharP 𝓀[L] 5 := sourceRationalPrimeExtensionResidue_charP 5 (Fact.out : Nat.Prime 5) L
+  exact exists_original_local_nonzero_prime_coefficient Q f hk τ S
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-noncm-bounded-1-scratch-receipt.json",
+      "sha256": "D8A8119C1C8899ACD0C26A162DF3C6985A41F440A0C1AB1AB930C6BA727B2908",
+      "modules": 8,
+      "queries": 9,
+      "exhaustiveTheorems": 56,
+      "other": 10,
+      "requiredValueEdges": 326
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

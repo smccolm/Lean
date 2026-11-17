@@ -1,0 +1,65 @@
+import SourceOriginalIntegralCMSimilitude2496a
+
+/-! DUB-17/18 -> actual original mixed-characteristic CM deformation ring.
+The original integral/residual matrix pair constructs the odd integral multiplier
+and proves its required residual equation. The existing native coefficient-ring
+construction then supplies local Noetherian and adic completeness properties. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix IsLocalRing
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalIntegralCMRingUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+/-- The same actual integral/residual pair supplies the native complete local
+Noetherian polarized symmetric-power deformation ring. Its integral multiplier,
+residual compatibility and real sign are constructed, not separately assumed. -/
+theorem original_integral_cm_exists_deformation_ring
+    {O : Type} [CommRing O] [NoZeroDivisors O] [IsLocalRing O] [IsNoetherianRing O]
+    [Finite (ResidueField O)] [TopologicalSpace (ResidueField O)]
+    [DiscreteTopology (ResidueField O)]
+    (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [IsTotallyReal F]
+    (C : IntermediateField F (rationalUnramifiedExtension a))
+    [IsQuadraticExtension F C] [IsTotallyComplex C]
+    (p n : ℕ) [Fact p.Prime] [CharP (ResidueField O) p]
+    (hp2 : 2 < p) (hn : n < p)
+    (ρi : finiteBaseArithmeticGaloisGroup a F →* GeneralLinearGroup (Fin 2) O)
+    (ρr : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) (ResidueField O))
+    (hred : ∀ g i j, (ρr g).val i j = residue O ((ρi g).val i j))
+    (hodd : (ρr (finiteBaseRealConjugation a F)).val.det = -1)
+    (ha : a ≠ 0) (hpa : (p : 𝓞 ℚ) ∣ a) :
+    ∃ ν : finiteBaseArithmeticGaloisGroup a F →* Oˣ,
+      (∀ g : FiniteBaseCMKernel a F C,
+        (GeneralLinearGroup.det (ρr g.val)) ^ n =
+          Units.map (algebraMap O (ResidueField O)) (ν g.val)) ∧
+      ν (finiteBaseRealConjugation a F) = -1 ∧
+      (let R := FiniteBaseCMSymmetricCoefficientRing a F C n ρr
+          (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν ha p Fact.out hpa
+       ∃ hlocal : IsLocalRing R, letI := hlocal
+         IsNoetherianRing R ∧ IsAdic (maximalIdeal R) ∧ IsAdicComplete (maximalIdeal R) R) := by
+  have h2 : (2 : ResidueField O) ≠ 0 := by
+    intro h
+    have hd : p ∣ 2 := (CharP.cast_eq_zero_iff (ResidueField O) p 2).mp h
+    have hle := Nat.le_of_dvd (by decide : 0 < 2) hd
+    omega
+  have hiodd : (ρi (finiteBaseRealConjugation a F)).val.det = -1 :=
+    original_integral_involution_odd_of_residual (residue O) h2 ρi ρr.toMonoidHom hred
+      (finiteBaseRealConjugation a F) (finiteBaseRealConjugation_mul_self a F) hodd
+  let ν := originalIntegralCMSymmetricSimilitude a F C n ρi
+  have hνk : ∀ g : FiniteBaseCMKernel a F C,
+      (GeneralLinearGroup.det (ρr g.val)) ^ n =
+        Units.map (algebraMap O (ResidueField O)) (ν g.val) :=
+    original_integral_cm_similitude_reduction a F C n ρi (residue O) ρr.toMonoidHom hred
+  have hνc : ν (finiteBaseRealConjugation a F) = -1 :=
+    original_integral_cm_similitude_odd a F C n ρi hiodd
+  refine ⟨ν, hνk, hνc, ?_⟩
+  letI := finiteBaseCMSymmetricCoefficientRing_isLocal a F C n ρr
+    (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν hνk hνc ha p Fact.out hpa
+  exact ⟨inferInstance, finiteBaseCMSymmetricCoefficientRing_localData a F C n ρr
+    (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν hνk hνc ha p Fact.out hpa⟩
+
+end
+end Dubon2026.SourceDickson

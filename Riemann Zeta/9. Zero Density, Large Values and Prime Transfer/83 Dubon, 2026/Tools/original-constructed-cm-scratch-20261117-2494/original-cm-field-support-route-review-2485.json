@@ -1,0 +1,15 @@
+{
+  "recordedUTC": "2026-11-17T16:31:59.834133+00:00",
+  "dependency": "DUB-17/18 -> literal higher symmetric continuation -> automorphy -> actual polarized CM residual representation -> existence of a genuine CM field for the same original representation",
+  "provedReuse": [
+    "rationalArithmeticSupportRestriction and its continuity/surjectivity",
+    "sourceArithmeticSupport_local_charpoly and sourceArithmeticSupport_local_inflate_eq_one",
+    "originalQUnramifiedUnion_exists_primitiveRoot",
+    "IsPrimitiveRoot.intermediateField_adjoin_isCyclotomicExtension",
+    "IsCyclotomicExtension.finrank",
+    "IsPrimitiveRoot.nrRealPlaces_eq_zero_of_two_lt"
+  ],
+  "shorterRoute": "Enlarge actual support from a to 4*a by the existing continuous surjective Galois restriction. The original representation is pulled back literally, preserving its image and local characteristic data. A primitive fourth root in that same union constructs a genuine imaginary quadratic field over its rational bottom field.",
+  "stillRequired": "Prove the field constructor, exact original determinant/cyclotomic support compatibility, and actual-form inflation/CM consumer. This does not provide CM disjointness, original local deformation conditions, arithmetic small-image exclusions or automorphy.",
+  "productionMutation": false
+}

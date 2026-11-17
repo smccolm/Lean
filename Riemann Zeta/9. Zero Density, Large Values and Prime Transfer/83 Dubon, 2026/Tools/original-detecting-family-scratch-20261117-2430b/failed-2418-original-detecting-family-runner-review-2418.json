@@ -1,0 +1,6 @@
+{
+  "recordedUTC": "2026-11-17T14:47:27.607907+00:00",
+  "status": "Runner invocation failed before any compilation: parent PowerShell execution policy refused direct invocation of the child script. Its outer LASTEXITCODE was not a success test and is not accepted as evidence. Fresh invocation 2418b uses the standard explicit powershell -NoProfile -ExecutionPolicy Bypass -File runner. Neither proof settings nor acceptance checks changed.",
+  "failedLog": "original-detecting-family-build-2418.log",
+  "freshLog": "original-detecting-family-build-2418b.log"
+}

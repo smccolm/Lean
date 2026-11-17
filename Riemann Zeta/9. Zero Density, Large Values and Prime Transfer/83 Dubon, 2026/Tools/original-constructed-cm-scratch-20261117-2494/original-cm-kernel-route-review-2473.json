@@ -1,0 +1,11 @@
+{
+  "recordedUTC": "2026-11-17T16:10:05.670369+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original polarized CM deformation -> original CM symmetric matrix spanning, absolute irreducibility and adjoint invariants",
+  "exactNativeConsumer": "Dubon2026.finiteBaseCMSymmetricMatrices_absoluteIrreducible",
+  "hypothesisToRemove": "Full SL2 over the original residue field lies in the residual image.",
+  "provedShorterRoute": "finite_linear_bounds_original_symmetric_kernel_consequences applies directly to the actual finiteBaseQuadraticComponent. finiteBaseCMKernelGaloisEquiv already identifies this kernel with the actual CM Galois group, including both topologies. No new perfect-group or Galois-kernel theory is needed.",
+  "remaining": "Connect the same actual original modular-form residual witness by restriction to the rational bottom field; retain all data. Constructing a suitable CM field and the remaining actual local/deformation/automorphy inputs remain required.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "productionMutation": false
+}

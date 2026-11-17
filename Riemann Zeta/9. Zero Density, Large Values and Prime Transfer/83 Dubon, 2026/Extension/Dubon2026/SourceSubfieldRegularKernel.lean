@@ -1,0 +1,55 @@
+import Dubon2026.SourceSubfieldRegularTrace
+import Dubon2026.SymmetricResidualRootLifts
+import Dubon2026.HomogeneousSymmetricBaseChange
+
+/-! DUB-17/18 -> original auxiliary primes -> a regular detecting element
+inside the required abelian-character kernel. Native perfection of SL2
+lifts the subfield trace test without a separate disjointness theorem. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+open scoped MatrixGroups
+
+/-- A finite subfield image supplies a regular trace-detecting element in
+any specified abelian-character kernel, retaining its exact matrix lift. -/
+theorem finiteSubfield_exists_regular_character_kernel_trace
+    {G A K L : Type} [Group G] [CommGroup A] [Field K] [Finite K] [Field L]
+    [NeZero (2 : K)] [NeZero (3 : K)]
+    (p n : ℕ) [Fact p.Prime] [CharP K p] (θ : K →+* L)
+    (hsize : 2 * n < Nat.card K - 1) (hchar : n + 1 < p)
+    (ρ : G →* GeneralLinearGroup (Fin 2) L) (χ : G →* A)
+    (himage : ((GeneralLinearGroup.map θ).comp
+      (SpecialLinearGroup.toGL (n := Fin 2) (R := K))).range ≤ ρ.range)
+    (X : matrixTraceZeroSubmodule (Fin (n + 1)) L) (hX : X ≠ 0) :
+    ∃ u : Kˣ, orderOf u = Nat.card K - 1 ∧
+      ∃ h : SL(2, K), ∃ g : G, χ g = 1 ∧
+        ρ g = GeneralLinearGroup.map θ
+          (SpecialLinearGroup.toGL (h * ringSL2UnitDiagonal u * h⁻¹)) ∧
+        (homogeneousSymmetricGL n (ρ g)).val.charpoly.Separable ∧
+        ∃ M : matrixTraceZeroSubmodule (Fin (n + 1)) L,
+          (homogeneousSymmetricGL n (ρ g)).val * M.val =
+            M.val * (homogeneousSymmetricGL n (ρ g)).val ∧
+          Matrix.trace (X.val * M.val) ≠ 0 := by
+  obtain ⟨u, hu, h, hs, M, hM, htrace⟩ :=
+    finiteSymmetric_exists_regular_conjugate_commuting_trace_extension
+      p n θ hsize hchar X hX
+  let ψ := (GeneralLinearGroup.map θ).comp (SpecialLinearGroup.toGL (n := Fin 2) (R := K))
+  letI : Group.IsPerfect SL(2, K) := fieldSL2_isPerfect
+  letI : Group.IsPerfect ψ.range := Group.IsPerfect.range ψ
+  have hk := perfect_subgroup_le_map_character_kernel ρ χ ψ.range himage
+  have hx : ψ (h * ringSL2UnitDiagonal u * h⁻¹) ∈ ψ.range := ⟨_, rfl⟩
+  obtain ⟨g, hg, hρg⟩ := Subgroup.mem_map.mp (hk hx)
+  refine ⟨u, hu, h, g, hg, hρg, ?_, M, ?_, ?_⟩
+  · rw [hρg]
+    change (homogeneousSymmetricGL n (GeneralLinearGroup.map θ _)).val.charpoly.Separable
+    rw [← homogeneousSymmetricGL_map]
+    exact hs
+  · rw [hρg]
+    change (homogeneousSymmetricGL n (GeneralLinearGroup.map θ _)).val * M.val =
+      M.val * (homogeneousSymmetricGL n (GeneralLinearGroup.map θ _)).val
+    rw [← homogeneousSymmetricGL_map]
+    exact hM
+  · exact htrace
+
+end
+end Dubon2026

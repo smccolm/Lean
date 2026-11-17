@@ -1,0 +1,414 @@
+{
+  "status": "Scratch PASS: the same actual original non-CM integral/residual pair retains all prior conclusions and has a nonzero inert good-prime norm Frobenius trace for each source primitive nontrivial quadratic character of conductor at most M, above one form-dependent bound. The actual dihedral-character comparison and a conductor bound independent of characteristic remain open. No final acceptance gate is closed. Production reconciliation and assembled verification remain pending.",
+  "modules": 8,
+  "publicQueries": 9,
+  "publicTheorems": 7,
+  "publicConstructions": 2,
+  "exhaustiveTheorems": 56,
+  "otherDeclarations": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 326,
+  "typeValueFingerprints": 66,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-exceptional-exclusion-scratch-20261117-2555/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceGammaOneOriginalNonCMBoundedInputs.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceGammaOneOriginalNonCMBoundedInputs.lean.txt",
+      "sha256": "82E02CC8261A8A6C53F162B3C34F039346C75B894062FF88D6DE2594EE9AABDF"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceGammaOneOriginalNonCMBoundedInputs.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceGammaOneOriginalNonCMBoundedInputs2567a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceGammaOneOriginalNonCMBoundedInputs2567a.lean.txt",
+      "sha256": "AE81B2B4B9FD3D506961DFBB47277BF3E5DB0529A86421E9AD418AC55195C10B"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceGammaOneOriginalNonCMBoundedInputs2567a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction.lean.txt",
+      "sha256": "1A139EA390277FA2250307995FE7712AEEABDF9331AA8EB88D8EE2D6FA3A5871"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564a.lean.txt",
+      "sha256": "17518BD7035A53122C4EB3A61A8AFF8E5234F6773A7ADBA1DF0519445693E876"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564a.log",
+      "sha256": "4DD749518DCE05C66027078E133CE1C516A717D50F40B266162331B7DC2E74B7"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564b.lean.txt",
+      "sha256": "CF0ECDD742C10062BF6D11F350B8D18D874174436EAF7DF7C9E98C4D76722827"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564b.log",
+      "sha256": "CD06FBAEF2A15B7D986B25233B88604D46D7BFEFFA37885784696F4E3D2BC6B5"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564c.lean.txt",
+      "sha256": "C3E48F969505070951B229CB62CE0C43A4766993C4EAFFA5E52FCE6D1EE1DE49"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMBoundedConductorReduction2564c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertIntegerObstruction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertIntegerObstruction.lean.txt",
+      "sha256": "7504049E86C64F51E7F924BC4B48618A2CFE8E697FAC5BC4F93DF68CC960501D"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertIntegerObstruction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertIntegerObstruction2561a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertIntegerObstruction2561a.lean.txt",
+      "sha256": "051AD8FB0F820E05D6F29D1F1EADD1970A501341E473AB66E5D94CD68D52A19F"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertIntegerObstruction2561a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertPrime.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertPrime.lean.txt",
+      "sha256": "B59CD402FC9942B6A86E20122A06A446714D42A8FFA8E0C2EA55A1F7BC0866F5"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertPrime.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertPrime2560a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertPrime2560a.lean.txt",
+      "sha256": "B59CD402FC9942B6A86E20122A06A446714D42A8FFA8E0C2EA55A1F7BC0866F5"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMInertPrime2560a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMOriginalInertReductionBound.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMOriginalInertReductionBound.lean.txt",
+      "sha256": "E74E83512D9F7B8AC4DE0CDC0B20AC7EA034526C8D41E98547E630A003895947"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMOriginalInertReductionBound.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMOriginalInertReductionBound2563a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMOriginalInertReductionBound2563a.lean.txt",
+      "sha256": "986101AC907EB15BD6D6979967C883E2FF6AB22A21C1F57DB67E6AA8DEC7C853"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceNonCMOriginalInertReductionBound2563a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalBoundedQuadraticFrobenius.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalBoundedQuadraticFrobenius.lean.txt",
+      "sha256": "B8B1DF42042DF58BA20BB920522169A7744B3E4B27F54761C53AF332CF80BF0A"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalBoundedQuadraticFrobenius.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalBoundedQuadraticFrobenius2565a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalBoundedQuadraticFrobenius2565a.lean.txt",
+      "sha256": "80F31E3F0865F03270E352A48A746506EC0EFD5B5C107BACAC3CFB8195966FB4"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalBoundedQuadraticFrobenius2565a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction.lean.txt",
+      "sha256": "B1BC2DCD910806FBB633574B30D21FE025FBB1023E988D14631223B539708AD2"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction2562a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction2562a.lean.txt",
+      "sha256": "ADCCD84B13105AAAB06789CAD4D939F403C9A60B2286CB478F81222FA80FC879"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction2562a.log",
+      "sha256": "2FBF77BEA2A2BE8AC652DBCA6F60B649DE137A7B8F3200A0C620ADCFC83163EE"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction2562b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction2562b.lean.txt",
+      "sha256": "BE3E3C37A149014350D6145A7FD4F0C48A14F3B695203CA0C71CC21B5821F6A2"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalCoefficientReductionObstruction2562b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedAudit1.lean.txt",
+      "sha256": "30D17473D7622A29719775472049446CADAEF85FDA55FA728722F80522C28887"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedAudit1.log",
+      "sha256": "B87EB7E65688CD921BE30D42EBF748937EE3966D44023B8EAC820EDD1F87D8E6"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDeclarations2568.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDeclarations2568.lean.txt",
+      "sha256": "E839BE7BBD6E84C771CA8F7932445F8227156E20775D5933A4F2E770224505EF"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDeclarations2568.log",
+      "sha256": "45D7FE26131F6FD51B0F75A598E9ED631A11D472C9691D19CEB9428B8AC6F084"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit1.lean.txt",
+      "sha256": "D1C41A3E6A049D6799D787FA9AC86F23E88FAED483848163E55A8FD00C28FBD6"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit1.log",
+      "sha256": "EE33801728704A2AD8A4784D7D6548D9E67BFE1135B53E6B0C4029843A26DF76"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit2.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit2.lean.txt",
+      "sha256": "0E52EAC4401631F4D6294BD52D5DAC9ADC1643AB7486C641303BFA39B1B97519"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit2.log",
+      "sha256": "523250EBEABF03D24EE398A3878427932257D7C47566CD611B1F3CCF7ADA2AEA"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit3.lean.txt",
+      "sha256": "2635AF5A0F5B6B641FE521727D5D6CDD7401C25F2B940ACC17C68E795C33A2D3"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyAudit3.log",
+      "sha256": "C98429C947623D7E02B905714A49FD0BC189BCD86F905A9A1457569A1F3BA0D3"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyProbe2573.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyProbe2573.lean.txt",
+      "sha256": "C9DF4D3E75CC6EBB04656D0B3C243C38B70BF42EB76B60EE3B43873684C8DE6A"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedDependencyProbe2573.log",
+      "sha256": "F6F3B4AA4F1936851882461CD7316928AD5C3CA19985B7F88B853FD0421E3BE5"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedInputsProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedInputsProperty.lean.txt",
+      "sha256": "E1408E710F91FC575D88954E027FF1CB69AE5E0E18ABD76FAD3C5ACD5EEB3778"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedInputsProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedInputsProperty2566a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedInputsProperty2566a.lean.txt",
+      "sha256": "8BF8DE6715267D9BDF864E401A5923EAF2D4FE96082A21E2839F388592D0A009"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedInputsProperty2566a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedProductionSemantic2569.lean.txt",
+      "sha256": "4628666049BD655D73AF3B4FA7B2AA19B3C58552330B1BAFAA64A556BA8C00AC"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedProductionSemantic2569b.lean.txt",
+      "sha256": "13FBC461860395644A801990514918931B33C72CC2305A61A87377F90CB762F2"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedScratchSemantic2569.lean.txt",
+      "sha256": "3A92F31C0CA07EFC2CF5DE09605855112301CF501D7447DCE9934357448F0BBA"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedScratchSemantic2569b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedScratchSemantic2569b.lean.txt",
+      "sha256": "7EE9F1361AC1ACF21BF18C22C284FC343EA93B3817C258139EBEC5792E8647D3"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/SourceOriginalNonCMBoundedScratchSemantic2569b.log",
+      "sha256": "90ED179BDAA88D1F73892A7D0D35DABC1FE95633B422C46A00DEC60C7D7D7B57"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/archive_original_noncm_bounded_scratch_2571.py",
+      "sha256": "116F79AE9FE9B5650C6E4C44FB5A03A1A972CFDBA822DBAED98007F4D5D79F00"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/archive_original_noncm_bounded_scratch_2571b.py",
+      "sha256": "F5430D80D83213032DC9422BC27552CDD845E441A2B5D4EF9DFE34648A28E5FC"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/archive_original_noncm_bounded_scratch_2571c.py",
+      "sha256": "1DC44DDD52218647D7A9690E170601E2A82473CEE930F7E78A0073C46DCF6698"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/build_original_noncm_bounded_2568.ps1",
+      "sha256": "BD4DEE5845B9A48529A06F5938C6062F85979F0D2644BBADBC9E9B8487149E8F"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/generate_original_noncm_bounded_audits_2568.py",
+      "sha256": "FE57E025118156B8713FC44BB310567B8C3ECD2055E2B3309E83B0453A3EED05"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/original-noncm-bounded-reuse-review-2568.json",
+      "sha256": "EF4CAA5BE2546C075AA0642D00E2C342C3D89D17009F19C23622A8F7D3221C5C"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/original-noncm-selftwist-route-review-2560.json",
+      "sha256": "3CB72CA982796D47EA484F3619467B8D2FE1E5FAA4EB7E50170FB547B10A183A"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/record_original_noncm_bounded_scope_2570.py",
+      "sha256": "42F29A5D3835356B8967AD6CB6ABB1977C7A750EACE5DBBDB5A1D82C1C24D172"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/record_original_noncm_bounded_scope_2570b.py",
+      "sha256": "B67072FA437552F09CA14914869DB31F784F7AE1A8B20A112DCB1F749A51B0CE"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/record_original_noncm_bounded_scope_2570c.py",
+      "sha256": "9D6A9F6692FE043F1169BD455D151559EDEE5D9CD33A4D0A03D7B2CB6E42CDC2"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/record_original_noncm_bounded_scope_2570d.py",
+      "sha256": "33BE4D6FCDCD153A8840F28F635C6874EA6B5FE23BD9F847DDD093E1DA2E528D"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/semantic-module-normalizer-repair-2572.json",
+      "sha256": "C8BF4CA886267D275A94E4C07761B1336466728193C9C1BD9F16F38DF838A412"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/source-original-noncm-bounded-1-scratch-receipt.json",
+      "sha256": "D8A8119C1C8899ACD0C26A162DF3C6985A41F440A0C1AB1AB930C6BA727B2908"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/source-original-noncm-bounded-audit-config-2568.json",
+      "sha256": "FAC3F49DEE8A047D3FC48C62FFD445534F407EEAC3825CDAEE2AE7DF33E094A8"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/source-original-noncm-bounded-audit-config-2568b.json",
+      "sha256": "58963DA70BAC51AD608370BD411B4E33E63EAF255834416F990BC19D5791E325"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/source-original-noncm-bounded-audit-config-2568c.json",
+      "sha256": "52A8768AC7985777992343CB6ADF43AF649056F0A3200196FA1B2CDCABA14350"
+    },
+    {
+      "path": "Tools/original-noncm-bounded-scratch-20261117-2571/source-original-noncm-bounded-scratch-summary-2570.json",
+      "sha256": "2042CC40208934E5B32E0844CEBE90C1F51A059F816B9ED4046D237D177018AF"
+    }
+  ]
+}

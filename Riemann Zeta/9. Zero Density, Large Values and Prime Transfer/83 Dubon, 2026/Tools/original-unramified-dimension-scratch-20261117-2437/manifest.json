@@ -1,0 +1,302 @@
+{
+  "status": "Scratch PASS: the same actual original residual representation has original-field local unramified adjoint H1/invariant dimension equality in every degree at every prime, retaining its preceding detecting-family alternative. Full arithmetic data and all preceding conclusions are retained. Production promotion and assembled verification remain pending.",
+  "modules": 5,
+  "publicQueries": 7,
+  "publicTheorems": 6,
+  "publicConstructions": 1,
+  "exhaustiveTheorems": 24,
+  "otherDeclarations": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 151,
+  "typeValueFingerprints": 30,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-detecting-family-scratch-20261117-2430b/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions.lean.txt",
+      "sha256": "0F4EA61359ECB3199700624A80848FB8BA687AF178661F35DF578D818CCCE405"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions2426a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions2426a.lean.txt",
+      "sha256": "E12F7214F7B6FE60C09F1695E0C96BD5342B93C50B65E2E1ED85B968A7643583"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions2426a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions2426b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions2426b.lean.txt",
+      "sha256": "2B1BD3FD38FA41B37A793F6CFF9AF8E295120CB2639F1FDD775DFC665974B3B7"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceGammaOneOriginalUnramifiedDimensions2426b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite.lean.txt",
+      "sha256": "2C7576B86C05D1D1AAC272D92227AD863C26B2174C62F2313FCD30FAE2AA8EBB"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite2422a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite2422a.lean.txt",
+      "sha256": "BA5B45B039727B2D49BDA2AB584D53AC2DAB49F4FDC5F3C9D08D3040EB81B27C"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite2422a.log",
+      "sha256": "2AC1E05D60717F79F303797E96CF7786513BFE032C37758500194CD84A470F58"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite2422b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite2422b.lean.txt",
+      "sha256": "2C7576B86C05D1D1AAC272D92227AD863C26B2174C62F2313FCD30FAE2AA8EBB"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalCoefficientH1Finite2422b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension.lean.txt",
+      "sha256": "07126AEEEFF8BE22E86C5A395C41C03C5C7ACDAE3E83895E7A2719619FE91E38"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension2423a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension2423a.lean.txt",
+      "sha256": "F30557FBC5E0B4DD88335831544B68A9D746D86F6D57A313F031B23D081B586F"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension2423a.log",
+      "sha256": "D99414D69B6611A994EE11CDF15A7B6EEE5BCDEAB78B73BD82B4C9CBEA31659B"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension2423b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension2423b.lean.txt",
+      "sha256": "B9B9329E626B0CEF7296D23D312120B9CD64BE1E39EF0ABE8C390B4DFFE818EA"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalLocalUnramifiedDimension2423b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalPrimeUnramifiedDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalPrimeUnramifiedDimension.lean.txt",
+      "sha256": "0B9FC0063D107F1B3901087AE6FEC7F1EC54900730CAAC8C436C1376AB084465"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalPrimeUnramifiedDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalPrimeUnramifiedDimension2424a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalPrimeUnramifiedDimension2424a.lean.txt",
+      "sha256": "E82BD5505CA1C6667FE60DDA558AE87158B826E80B49F56AF71AD7CE9F3BDF6F"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalPrimeUnramifiedDimension2424a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty.lean.txt",
+      "sha256": "E787CFD95881451B573A3947951019EF388D790D13823D417FD76F83FB968002"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425a.lean.txt",
+      "sha256": "B4ADB37668E681629AFDB41BAB34BDA59FED22F3075B219CED69C74CDFE312D8"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425a.log",
+      "sha256": "1D69715FF80D327F67A7F255F0F861D07A0EE80352B94B3593639DC471111F8A"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425b.lean.txt",
+      "sha256": "2869A9BFDF117DEB3E55322B47173B4E83E1AE71EE7BA520F436264347E65E39"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425c.lean.txt",
+      "sha256": "3D678460AEC8E29B3EEC9F5FBE503C32325FEECB62C07EFE0C15472071872F25"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedAdjointProperty2425c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionAudit1.lean.txt",
+      "sha256": "04AE9C7E75350C21850F28431D65A9127716282ED8D58AA6551303B70FD4D029"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionAudit1.log",
+      "sha256": "BF3A14CCE50824DCA691963A2CC4C387C449CB73F933954524C1C37807DB4241"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionAudit2.lean.txt",
+      "sha256": "14569328E3F37674741A9F4D48D4752D77AA23C0E64B93D30F1DB19675737B8A"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionAudit2.log",
+      "sha256": "6E370005CCCA2BE4A00B9FF4635C62B5BFC17F6EFB7795374A5EA0B60CE885FD"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionDeclarations2434.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionDeclarations2434.lean.txt",
+      "sha256": "B767D6380B85C34F43B6C99321F5FC3CF3B46427EDCB17BD5291F4FE999A507E"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionDeclarations2434.log",
+      "sha256": "EF6DAA9224E8BA4C55D431B0CE025E8B142C061725A8FF75F19AE3B14E300B1A"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionDependencyAudit1.lean.txt",
+      "sha256": "DA65EEA06AAAA6D51F5DBE316266F36C5FCB7DE30A44058E2C9D714CD27FA247"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionDependencyAudit1.log",
+      "sha256": "00E28C64FE36CB62645112C43A0F6C9E4FC6C35B05D50A8DF6F055CC217F8204"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionProductionSemantic2435.lean.txt",
+      "sha256": "16A491C9BCA76DCBB1C7F6017CE13E30EA19E82F0F959BE50EC70B42A6F4EFFE"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionScratchSemantic2435.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionScratchSemantic2435.lean.txt",
+      "sha256": "96D9F0B0C5DE1F83F45703F2EC9A2D849A36588683C411248250A999873A17EA"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/SourceOriginalUnramifiedDimensionScratchSemantic2435.log",
+      "sha256": "D7DDE34A9881C8F77C50F396897CEAB2E50EE055DA1BE75F75E3E0150E3B8B60"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/build_original_unramified_dimensions_2434.ps1",
+      "sha256": "A329D2F16174706D401BA65AAA68BB2D455AD2E4E956A5A91D4AF3D7F6E27FFD"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/original-unramified-audit-scope-review-2436.json",
+      "sha256": "2E4DDA966AE27DF7E95B9D6531A91C79220725F7A7586631BF5AC6B1B9FA233F"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/original-unramified-dimension-reuse-review-2436.json",
+      "sha256": "380B75893D4B1656AB66B9ED3E5FBB87F0629265268A9CC25DF3D35E225A5448"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/prepare_original_unramified_dimension_audits_2434.py",
+      "sha256": "10C585F9DA038687A02E9639B659890FFD1D00E7A21AED8F363A277A76F6BAFE"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/record_original_unramified_dimension_scope_2436.py",
+      "sha256": "32201C5DE310E7B3CE90AFAEF621001A772957AB61D0C4E869101E9B1CCDCCE6"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/record_original_unramified_dimension_scope_2436b.py",
+      "sha256": "0956D3E495666AE29B725390BBDADA8BD50C8C988DCF36EA7F20EE013A0591F9"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/source-original-unramified-dimension-1-scratch-receipt.json",
+      "sha256": "E52346CFD7BCEB752F11156364F26F09705DDB99034F137448DFE5810B7A228D"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/source-original-unramified-dimension-audit-config-2434.json",
+      "sha256": "95F77F71F69AA90FD64F505D60550346483CDABF98642AD440F915B334DA5335"
+    },
+    {
+      "path": "Tools/original-unramified-dimension-scratch-20261117-2437/source-original-unramified-dimension-scratch-summary-2436.json",
+      "sha256": "5594A93BDA72AB2F5E78ED0523369668CE5EB0CAC8061272963636259BC65442"
+    }
+  ]
+}

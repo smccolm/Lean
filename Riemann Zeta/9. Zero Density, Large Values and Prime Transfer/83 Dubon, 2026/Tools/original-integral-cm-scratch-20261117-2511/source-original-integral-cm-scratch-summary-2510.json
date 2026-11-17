@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-integral-cm-1-scratch-receipt.json",
+      "sha256": "CBD7FE92E831D8B618074F7F3B241EE1EF657DF782825A18F7094038C5C7A4DA",
+      "modules": 9,
+      "queries": 15,
+      "exhaustiveTheorems": 61,
+      "other": 16,
+      "requiredValueEdges": 242
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

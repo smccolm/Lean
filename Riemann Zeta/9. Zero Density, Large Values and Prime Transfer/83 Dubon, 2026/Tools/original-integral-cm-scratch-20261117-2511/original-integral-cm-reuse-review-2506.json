@@ -1,0 +1,25 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": "literal higher symmetric-power continuation -> automorphy -> the original mixed-characteristic CM deformation ring -> a genuine integral odd similitude lifting the same residual CM determinant",
+  "reuse": "FiniteBaseCMSymmetricCoefficientRing_localData already constructs the complete local Noetherian polarized coefficient ring once its original coefficient-valued similitude, CM-kernel reduction equation and odd real sign are supplied. The actual modular-form consumer already retains an integral rank-two representation and its literal residual matrix reduction. Use its determinant, with the native quadratic sign correction. A genuine involution over a domain has determinant +/-1; odd residual reduction in characteristic greater than two determines the integral sign. This avoids constructing a new coefficient ring, changing the original residue field or replacing the original lattice with a separate Witt-coordinate model.",
+  "boundary": "Only the required integral character and compatibility are targeted. Local crystalline/deformation conditions, automorphy, image exclusions and DUB-17--20 remain open.",
+  "status": "All nine selected versioned modules and the actual-form consumer compile with zero diagnostics. Full canonical scratch audit is pending.",
+  "sourceConsumer": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_integral_cm_deformations",
+  "removedAssumptions": [
+    "The original integral coefficient ring is proved Noetherian from its actual nonarchimedean local field; the residue field is the same original finite residue field.",
+    "The same original integral/residual pair gives the exact CM-kernel multiplier reduction equation.",
+    "Oddness of the original integral determinant is proved from the real involution and literal odd residual reduction.",
+    "The integral multiplier is explicitly equal to the original integral determinant character with native CM sign correction.",
+    "A genuine CM field, nonzero enlarged support and the native complete local Noetherian polarized deformation ring are constructed."
+  ],
+  "retainedFailures": [
+    "2495a malformed nested comment, corrected in 2495b",
+    "2498a unused original integral pullback, corrected by an explicit multiplier provenance equation in 2497b and 2498b",
+    "2499b and 2499c default kernel timeouts, resolved by exact named ring data and the support/bottom real-sign and fixed-CM-field proof decomposition; no limit changed"
+  ],
+  "limitsChanged": false,
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

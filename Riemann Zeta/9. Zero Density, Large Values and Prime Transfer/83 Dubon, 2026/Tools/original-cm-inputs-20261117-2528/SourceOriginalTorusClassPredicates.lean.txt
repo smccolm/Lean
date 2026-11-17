@@ -1,0 +1,60 @@
+import SourceOriginalTorusPrimePredicates
+
+/-! DUB-17/18 -> finite original dual-Selmer detecting families ->
+regular detecting primes for each original H1 class. Retain the literal
+original representation, its finite factor and the local Frobenius. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- A regular congruence prime for the original coefficient field and
+representation. The torus and its exact unramified adjoint dimension are over the original field. -/
+def RationalArithmeticOriginalTorusAuxiliaryPrime
+    {K : Type} [Field K] [TopologicalSpace K] [IsTopologicalRing K]
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup (Fin (n + 1)) K)
+    (hR : Continuous R)
+    (q : Nat.Primes) : Prop :=
+  ¬ (q.val : 𝓞 ℚ) ∣ a ∧ q.val ≡ 1 [MOD p ^ (level + 1)] ∧
+  OriginalPrimeAdjointDimension a n R hR q.val q.property ∧
+  ∃ u : Kˣ, orderOf u = p - 1 ∧
+  (let U := rationalUnramifiedExtension a
+   letI : Algebra ℚ U := U.algebra'
+   letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+   ∃ D : FiniteGaloisIntermediateField ℚ U,
+     ∃ ψ : Gal(D/ℚ) →* Matrix.GeneralLinearGroup (Fin (n + 1)) K,
+       (∀ w : Gal(U/ℚ), ψ (AlgEquiv.restrictNormalHom D w) = R w) ∧
+       (letI : NumberField D := NumberField.of_module_finite ℚ D
+        Chebotarev.UnramifiedIn ℚ D (Ideal.span {(q.val : 𝓞 ℚ)}) ∧
+        OriginalTorusPrimeWitness a n u R D q.val q.property))
+
+/-- Exact pointwise regular-prime conclusion for an original class. -/
+def HasArithmeticTorusClassPrimes
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    {K : Type} [Field K] [TopologicalSpace K] [IsTopologicalRing K] 
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup (Fin (n + 1)) K)
+    (hR : Continuous R)
+    (x : ContinuousRepresentationH1 A hA) : Prop :=
+  ∀ S : Finset ℕ, ∃ q : Nat.Primes, q.val ∉ S ∧
+    RationalArithmeticOriginalTorusAuxiliaryPrime a p n level R hR q ∧
+    rationalArithmeticH1PrimeRestriction a A hA q.val q.property x ≠ 0
+
+/-- Every nonzero original cocycle class has the native regular-prime output. -/
+def HasArithmeticTorusCocycleDetection
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    {K : Type} [Field K] [TopologicalSpace K] [IsTopologicalRing K] 
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup (Fin (n + 1)) K)
+    (hR : Continuous R) : Prop :=
+  ∀ c : continuousRepresentationCocyclesOne A,
+    (Submodule.Quotient.mk c : ContinuousRepresentationH1 A hA) ≠ 0 →
+      HasArithmeticTorusDimensionalPrimes a p n level A hA R hR c
+
+end
+end Dubon2026

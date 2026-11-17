@@ -1,0 +1,205 @@
+{
+  "recordedUTC": "2026-11-17T17:12:23.069588+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalCMKernelConsequences",
+    "SourceOriginalRationalBottomRestriction",
+    "SourceOriginalRationalCMProperty",
+    "SourceGammaOneOriginalCMConsequences",
+    "SourceOriginalRationalBottomOdd",
+    "SourceOriginalRationalCMPolarized",
+    "SourceOriginalRationalCMPolarizationProperty",
+    "SourceGammaOneOriginalCMPolarized",
+    "SourceOriginalCMQuadraticField",
+    "SourceOriginalSupportCyclotomic",
+    "SourceOriginalSupportResidual",
+    "SourceOriginalConstructedCMProperty",
+    "SourceOriginalConstructedCMAssembly",
+    "SourceGammaOneOriginalConstructedCM"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMKernelConsequences.lean",
+      "sha256": "58EDDE68FB4868FF93BE4BA45E0C228049369FFDD59A1AF2CD50DB04F3916497",
+      "oleanSha256": "6C8880A1F47901EB8B1AD4DA64FCE26F28772A1DCE86E31EC22E2A77DFA1CA4D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMKernelConsequences.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMKernelConsequences.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomRestriction.lean",
+      "sha256": "C8F02BB47CB13D14E17C09D0424385A04CEB5927E2FD02F7DDAE770A13BF7CFF",
+      "oleanSha256": "609197BCA293B927D7E5108F232191C1B4658363E05AE9A68A8E69FF99F89A91",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomRestriction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomRestriction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMProperty.lean",
+      "sha256": "262D6431D236759C9B284C85C8B40799D32C185B0D8B96E15AD5897B51FC79EF",
+      "oleanSha256": "F9B7EF5D397563D6E89ED9ECAF58673C734A5F0004124C6BB0DEA73FEA953F8A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMConsequences.lean",
+      "sha256": "FB6E729C99C631FF2A7DF53B277DC7DE4ACB6BD401A457F6FF1A6BB7615FB37B",
+      "oleanSha256": "FB239C03D66A21C7A14B106BF713CF96F60EEA2DE859AC27331BE48A469F7256",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMConsequences.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMConsequences.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomOdd.lean",
+      "sha256": "AA5A8C4CE319E14766A67AF9FEC7253650C0CFDFE920CEC13032C9808B9A5C66",
+      "oleanSha256": "15E5B48501F457138562A3027307E368EB0200C4E85870EFDB7EE8F91FA4AA3B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomOdd.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalBottomOdd.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarized.lean",
+      "sha256": "AC2A42A609FD5E3F5FA472951CE5FB3EB1EFF0B65269C480E366966723F1C78B",
+      "oleanSha256": "8883E0F86BD893F2761246B30CCB47315BDA824E6284FADD1EBF639D459E7D96",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarized.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarized.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarizationProperty.lean",
+      "sha256": "88EE75B4D83BEA3A965113CED94C70D98F3688A8473AB9C2233DA20B358B94F3",
+      "oleanSha256": "2FD593EA6F063A2755AF4A81CC462D39735C5C13F8F6097011C668305E2CCCD9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarizationProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCMPolarizationProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMPolarized.lean",
+      "sha256": "B5AA286B5D6C6B1F5D42175136A7356D06C796FF70514C96D1FEE5277B3846AE",
+      "oleanSha256": "E7224AD0260C4DE26B89D0D90BCB6970AD98D47E6BBD431C44F16AD810B0997B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMPolarized.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalCMPolarized.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMQuadraticField.lean",
+      "sha256": "450564D997D9F2C3D60D74AE5587B1BD6A16F61621F985885D99F9B2F310B294",
+      "oleanSha256": "4E91D4B7B5997D47242D5666BA9D65EA558312E5EF32E9005E21B1DADBCE5A5E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMQuadraticField.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCMQuadraticField.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportCyclotomic.lean",
+      "sha256": "E949CF05F4232E7D0FD1466D1DBF413F97178BFC0D6ABEFCF0E606B3F5CA1049",
+      "oleanSha256": "6DF7023C39F90FAE9024F3E9E1B675A477C9D126BF208E4564FCF2F918BB261E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportCyclotomic.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportCyclotomic.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportResidual.lean",
+      "sha256": "414742F0C997F47A58405147A681D10E2EFCCB64476803C862A56760B7D5DA16",
+      "oleanSha256": "87410AFB27FE576523EE4445D97579B07AE8361F74722F4EB3A5388E6574EBCC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportResidual.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSupportResidual.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProperty.lean",
+      "sha256": "44D2FBBF19747F33C678571592DDE530C09EF663150875BD72FD15FF425DDBA9",
+      "oleanSha256": "642F09FB0A20E8C01C50D1BCEB13BCB18875776214305D45E4676D9F5945E2C3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAssembly.lean",
+      "sha256": "BA2F52F318AD11C82AE4F655E8E7BD58D3BFA483CF691A99C1D3BA5A2184E563",
+      "oleanSha256": "D2F23E07533B437CA093E658B03486CF9D5E5FF70E03DE51BF48FA714C3375F7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAssembly.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAssembly.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalConstructedCM.lean",
+      "sha256": "A027556D4A9AE1BBB6703EE8EE92671A7E1FC50C80B0102256961E22BC776735",
+      "oleanSha256": "2927F07ED75EF7E42C32899D0BBCCEF629CFE7DF22661D6C09C7B6FE10847C22",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalConstructedCM.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalConstructedCM.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_kernel_consequences",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_matrix_span",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_absolute_irreducible",
+    "Dubon2026.SourceDickson.originalRationalBottomRestriction_surjective",
+    "Dubon2026.SourceDickson.original_finite_linear_bounds_rational_bottom",
+    "Dubon2026.SourceDickson.originalRationalBottomRestriction",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_rational_cm_consequences",
+    "Dubon2026.SourceDickson.HasOriginalRationalCMConsequences",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_kernel_consequences",
+    "Dubon2026.SourceDickson.original_primitive_determinantExponent_odd",
+    "Dubon2026.SourceDickson.original_rational_bottom_odd_of_cyclotomic",
+    "Dubon2026.SourceDickson.original_rational_cm_exists_polarized_symmetric",
+    "Dubon2026.SourceDickson.original_rational_cyclotomic_cm_polarizations",
+    "Dubon2026.SourceDickson.HasOriginalRationalCMPolarizations",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_polarized_symmetric_residual",
+    "Dubon2026.SourceDickson.original_unramified_exists_cm_quadratic_of_four_dvd",
+    "Dubon2026.SourceDickson.original_support_cyclotomic_compatibility",
+    "Dubon2026.SourceDickson.original_support_cyclotomic_unit_compatibility",
+    "Dubon2026.SourceDickson.original_support_residual_determinant",
+    "Dubon2026.SourceDickson.original_support_finite_linear_bounds",
+    "Dubon2026.SourceDickson.HasOriginalConstructedCMResidual",
+    "Dubon2026.SourceDickson.original_cyclotomic_constructed_cm_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_kernel_consequences",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_matrix_span",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_cm_absolute_irreducible",
+    "Dubon2026.SourceDickson.originalRationalBottomRestriction_surjective",
+    "Dubon2026.SourceDickson.original_finite_linear_bounds_rational_bottom",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_rational_cm_consequences",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_kernel_consequences",
+    "Dubon2026.SourceDickson.original_primitive_determinantExponent_odd",
+    "Dubon2026.SourceDickson.original_rational_bottom_odd_of_cyclotomic",
+    "Dubon2026.SourceDickson.original_rational_cm_exists_polarized_symmetric",
+    "Dubon2026.SourceDickson.original_rational_cyclotomic_cm_polarizations",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_polarized_symmetric_residual",
+    "Dubon2026.SourceDickson.original_unramified_exists_cm_quadratic_of_four_dvd",
+    "Dubon2026.SourceDickson.original_support_cyclotomic_compatibility",
+    "Dubon2026.SourceDickson.original_support_cyclotomic_unit_compatibility",
+    "Dubon2026.SourceDickson.original_support_residual_determinant",
+    "Dubon2026.SourceDickson.original_support_finite_linear_bounds",
+    "Dubon2026.SourceDickson.original_cyclotomic_constructed_cm_residual",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.originalRationalBottomRestriction",
+    "Dubon2026.SourceDickson.HasOriginalRationalCMConsequences",
+    "Dubon2026.SourceDickson.HasOriginalRationalCMPolarizations",
+    "Dubon2026.SourceDickson.HasOriginalConstructedCMResidual"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMAudit1.log",
+  "logSha256": "3099F3884F98D76897CC4C8724E99A89E086498801E095126968D185234591DB",
+  "auditSha256": "97EBD9A5AD5DAA063F73880484DD1E57AB7CBDAB0DBB8A51C276A40167EB90F9",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMDeclarations2491.log",
+  "ownershipSha256": "A6941CE65E15C0C48CE505F447CB72BBA0FAD67E10DC11B31E0A7DD3E70EC32D",
+  "exhaustiveTheorems": 101,
+  "exhaustiveOtherDeclarations": 29,
+  "linterScopes": 14,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 223,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMDependencyAudit1.log",
+  "dependencyAuditSha256": "381A51F5482FE0318210769376EC35E9529E2147AEE0696C5ABF33645A921809",
+  "dependencyAuditSourceSha256": "123DF1D35E16FA66D1E59BA5C083E4D947026956A2D13B9A1D79CA16738090D1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_constructed_cm_residual"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-constructed-cm-reuse-review-2491.json",
+  "reuseReviewSha256": "DF74670E851AC82C7AD032285B87E02BA2C26558D52B8D90B088AA280D10403B",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original residual CM deformation inputs -> actual original-field CM kernel consequences, native polarized symmetric representations and a genuine constructed CM field on enlarged support for the same original modular-form residual representation. All prior original data and the explicit small-image alternative are retained.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "semanticFingerprints": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.lean",
+    "sourceSha256": "C2AE2ED8B6897F6EE53FA2B9CAE66C880C6B567ABC698A8AA149D70F76DB541C",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedCMScratchSemantic2492.log",
+    "sha256": "498710093BDEC90B04027155558F73386E2F0705FF9F997BB9E0010387ED15E0",
+    "declarations": 130
+  }
+}

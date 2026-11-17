@@ -1,0 +1,45 @@
+import SourceOriginalExceptionalTraceEquation2527c
+import SourceExceptionalPolynomialConstant2531b
+import Mathlib.RingTheory.IntegralClosure.IsIntegral.Defs
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional image
+exclusions. The actual residual trace relation is evaluated from one fixed
+integer polynomial, with the zero root removed when the trace is nonzero.
+Characteristic-zero coefficient nonvanishing and reduction remain open. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+
+/-- The fixed integral polynomial evaluates to the native trace equation in every field. -/
+theorem exceptionalTracePolynomial_eval₂ {F : Type*} [Field F] (x : F) :
+    exceptionalTracePolynomial.eval₂ (Int.castRingHom F) x =
+      (Chebyshev.C F 120).eval (x - 2) - 2 := by
+  simp [exceptionalTracePolynomial, eval₂_eq_eval_map, Polynomial.map_comp, eval_comp]
+
+/-- A nonzero root of the fixed exceptional equation is a root after removing the zero factor. -/
+theorem exceptionalNonzeroTracePolynomial_eval₂_eq_zero
+    {F : Type*} [Field F] (x : F) (hx : x ≠ 0)
+    (h : (Chebyshev.C F 120).eval (x - 2) = 2) :
+    exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom F) x = 0 := by
+  have he := congrArg (fun P : ℤ[X] => P.eval₂ (Int.castRingHom F) x)
+    exceptionalNonzeroTracePolynomial_mul_X
+  rw [eval₂_mul, eval₂_X, exceptionalTracePolynomial_eval₂, h, sub_self] at he
+  exact (mul_eq_zero.mp he).resolve_right hx
+
+/-- In an exceptional projective branch, each nonzero original trace ratio is a root of the same integer polynomial. -/
+theorem original_exceptional_nonzero_trace_polynomial
+    (p : ℕ) [Fact p.Prime] {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+    (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F)
+    (h : Nonempty ((residualProjectiveAction p j ρ).range ≃*
+        alternatingGroup (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* Equiv.Perm (Fin 4)) ∨
+      Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 5)))
+    (g : Γ) (ht : (ρ g).val.trace ≠ 0) :
+    exceptionalNonzeroTracePolynomial.eval₂ (Int.castRingHom F)
+      ((ρ g).val.trace ^ 2 / (ρ g).val.det) = 0 := by
+  exact exceptionalNonzeroTracePolynomial_eval₂_eq_zero _
+    (div_ne_zero (pow_ne_zero _ ht) (GeneralLinearGroup.det_ne_zero (ρ g)))
+    (original_exceptional_residual_trace_equation p j ρ h g)
+
+end
+end Dubon2026.SourceDickson

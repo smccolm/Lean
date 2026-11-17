@@ -1,0 +1,22 @@
+{
+  "recordedUTC": "2026-11-17T15:34:08.708120+00:00",
+  "status": "First focused audit misconfigured: generator matched only seed names ending Audit1, while the seed was Audit2. It retained the preceding nine-module axiom/linter scope, so the recorder correctly rejected 41 theorem owners versus 24 actual five-module owners. No acceptance receipt was written. The five-module dependency, ownership and semantic probes use the correct scope. Fresh focused audit2 explicitly contains exactly the five configured modules, seven queries and five sixteen-linter scopes. No proof sources or checks weakened.",
+  "oldAuditSha256": "9C04264DDC6C47A716AF30C5493296502E3692D796D946D256EC3DC9A84C5ECF",
+  "newAuditSha256": "57486ADF12C9ADBEA1703E988C0092DD98894F45F9F1935B9A49E3DBC0AAA195",
+  "modules": [
+    "SourceOriginalLocalCoefficientH1Finite",
+    "SourceOriginalLocalUnramifiedDimension",
+    "SourceOriginalPrimeUnramifiedDimension",
+    "SourceOriginalUnramifiedAdjointProperty",
+    "SourceGammaOneOriginalUnramifiedDimensions"
+  ],
+  "queries": [
+    "Dubon2026.localFieldOriginalCoefficientCocycles_finite",
+    "Dubon2026.localFieldOriginalCoefficientH1_finite",
+    "Dubon2026.algebraicLocal_originalCoefficient_unramified_finrank_eq_invariants",
+    "Dubon2026.rationalPrime_originalCoefficient_unramified_finrank_eq_invariants",
+    "Dubon2026.SourceDickson.original_finite_residual_unramified_adjoint_dimensions",
+    "Dubon2026.SourceDickson.HasOriginalUnramifiedAdjointDimensions",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_unramified_adjoint_dimensions"
+  ]
+}

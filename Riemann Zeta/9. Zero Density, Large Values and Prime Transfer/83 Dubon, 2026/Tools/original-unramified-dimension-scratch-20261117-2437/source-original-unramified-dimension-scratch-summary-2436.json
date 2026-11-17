@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-unramified-dimension-1-scratch-receipt.json",
+      "sha256": "E52346CFD7BCEB752F11156364F26F09705DDB99034F137448DFE5810B7A228D",
+      "modules": 5,
+      "queries": 7,
+      "exhaustiveTheorems": 24,
+      "other": 6,
+      "requiredValueEdges": 151
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

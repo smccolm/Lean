@@ -1,0 +1,62 @@
+import SourceOriginalProjectiveInvolutionTrace
+import SourceDihedralReflectionSign
+
+/-! DUB-17/18 -> original dihedral image exclusion -> the actual quadratic
+character and original trace relation. Pull back native dihedral reflection
+sign through the same original projective range. Nontriviality is derived
+from the range isomorphism, and negative character values force original-field
+trace zero. Continuity and the arithmetic Dirichlet comparison remain next. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+variable (p : ℕ) [Fact p.Prime] {F : Type*} [Field F] {Γ : Type*} [Group Γ]
+variable (j : F →+* K p) (ρ : Γ →* GL (Fin 2) F) (n : ℕ)
+variable (e : (residualProjectiveAction p j ρ).range ≃* DihedralGroup n)
+
+/-- The quadratic parity character of the same original dihedral projective action. -/
+def originalDihedralCharacter : Γ →* ℂ :=
+  (dihedralReflectionSign n).comp
+    (e.toMonoidHom.comp (residualProjectiveAction p j ρ).rangeRestrict)
+
+/-- The original dihedral character has square one at every original group element. -/
+theorem originalDihedralCharacter_sq (g : Γ) : originalDihedralCharacter p j ρ n e g ^ 2 = 1 :=
+  dihedralReflectionSign_sq n _
+
+/-- The actual original dihedral character is nontrivial. -/
+theorem originalDihedralCharacter_ne_one : originalDihedralCharacter p j ρ n e ≠ 1 := by
+  obtain ⟨g, hg⟩ := (residualProjectiveAction p j ρ).rangeRestrict_surjective
+    (e.symm (DihedralGroup.sr 0))
+  have he : e ((residualProjectiveAction p j ρ).rangeRestrict g) = DihedralGroup.sr 0 := by
+    rw [hg, e.apply_symm_apply]
+  have hneg : originalDihedralCharacter p j ρ n e g = -1 := by
+    change dihedralReflectionSign n (e ((residualProjectiveAction p j ρ).rangeRestrict g)) = -1
+    rw [he]
+    rfl
+  intro h
+  have hv := congrArg (fun χ : Γ →* ℂ => χ g) h
+  change originalDihedralCharacter p j ρ n e g = 1 at hv
+  rw [hneg] at hv
+  norm_num at hv
+
+/-- Negative values of the same original quadratic character force zero trace in the original residue field. -/
+theorem originalDihedralCharacter_negative_trace_zero (g : Γ)
+    (hg : originalDihedralCharacter p j ρ n e g = -1) : (ρ g).val.trace = 0 := by
+  obtain ⟨i, hi⟩ := (dihedralReflectionSign_eq_neg_one n _).mp hg
+  change e ((residualProjectiveAction p j ρ).rangeRestrict g) = DihedralGroup.sr i at hi
+  have h2 : ((residualProjectiveAction p j ρ).rangeRestrict g) ^ 2 = 1 := by
+    apply e.injective
+    rw [map_pow, hi, map_one, pow_two, DihedralGroup.sr_mul_self]
+  have hn : (residualProjectiveAction p j ρ).rangeRestrict g ≠ 1 := by
+    intro he
+    have hbad := congrArg e he
+    rw [hi, map_one] at hbad
+    change DihedralGroup.sr i = DihedralGroup.r 0 at hbad
+    cases hbad
+  apply original_projective_involution_trace_zero p j ρ g
+  · exact congrArg Subtype.val h2
+  · intro he
+    apply hn
+    exact Subtype.ext he
+
+end
+end Dubon2026.SourceDickson

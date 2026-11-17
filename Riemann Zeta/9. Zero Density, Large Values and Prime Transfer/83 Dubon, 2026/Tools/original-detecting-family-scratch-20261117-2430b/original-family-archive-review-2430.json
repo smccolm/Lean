@@ -1,0 +1,5 @@
+{
+  "status": "Archive-only failure after all scratch proof checks passed. The initial direct PowerShell invocation was rejected before a redirected log was created; its missing original-detecting-family-build-2418.log must not be fabricated. The tool output and runner review describe that failed invocation. Fresh archive 2430b excludes only this nonexistent file, retains actual runner evidence, all failed Lean variants and all checks, and preserves the partial archive separately.",
+  "missingNonexistentFile": "original-detecting-family-build-2418.log",
+  "initialRunnerReview": "original-detecting-family-runner-review-2418.json"
+}

@@ -1,0 +1,90 @@
+import SourceGammaOneOriginalCMDimensions
+import Mathlib.Tactic
+
+open Lean
+
+private def moduleNames : Array String := #["SourceDicksonObjects", "SourceDicksonPGLBasic", "SourceDicksonNatClassEquation", "SourceDicksonPSLBasic", "SourceDicksonPartitionHelpers", "SourceDicksonCyclicPartition", "SourceDicksonRecognitionA5", "SourceDicksonFieldReconstruction", "SourceDicksonPartitionProof", "SourceDicksonPSLRecognition", "SourceDicksonTameClassification", "SourceDicksonWildClassification", "SourceDicksonClassification", "SourceResidualProjectiveClassification", "SourceGammaOneProjectiveResidual", "SourceDicksonProjectiveConjugacy", "SourceDicksonMatrixAlternatives", "SourceGammaOneProjectiveMatrixResidual", "SourceProjectivePerfectLift", "SourceProjectiveSL2Lift", "SourceProjectiveSubfieldBounds", "SourceResidualLinearAlternatives", "SourceGammaOneProjectiveLinearResidual", "SourceResidualFiniteAmbient", "SourceResidualFiniteDescent", "SourceResidualFiniteBounds", "SourceResidualFiniteLinearAlternatives", "SourceGammaOneFiniteProjectiveLinearResidual", "SourceFiniteSubfieldIrreducible", "SourceSubfieldSymmetricAbsolute", "SourceFiniteLinearSymmetric", "SourceGammaOneAbsoluteSymmetricResidual", "SourceSubfieldKernelIrreducible", "SourceFiniteLinearKernelSymmetric", "SourceGammaOneCyclotomicSymmetricResidual", "SourceFiniteLinearAbsoluteGalois", "SourceGammaOneAbsoluteCyclotomicResidual", "SourceResidualConjugateIrreducible", "SourceConjugateSymmetricSpanning", "SourceFiniteLinearOriginalSpanning", "SourceOriginalSymmetricSpanningProperty", "SourceGammaOneSymmetricKernelSpanning", "SourceSpanningIrreducibility", "SourceSpanningCoefficientExtension", "SourceOriginalSymmetricAbsolute", "SourceGammaOneResidueAbsoluteSymmetric", "SourceOriginalSymmetricAdjoint", "SourceGammaOneSymmetricAdjointVanishing", "SourceFiniteLinearOriginalScalar", "SourceFiniteLinearTwistedKernel", "SourceOriginalTwistedDetectionProperty", "SourceOriginalTwistedTopology", "SourceGammaOneTwistedKernelDetection", "SourceArithmeticCyclotomicSquare", "SourceOriginalArithmeticTwistedDetection", "SourceGammaOneArithmeticTwistedDetection", "SourceFiniteLinearOriginalConsequences", "SourceGammaOneSymmetricResidualCohomology", "SourceOriginalArithmeticRootKernel", "SourceSubfieldProjectorSpan", "SourceSubfieldRegularTrace", "SourceSubfieldRegularKernel", "SourceTraceZeroCoefficientEmbedding", "SourceTraceZeroConjugacy", "SourceOriginalExtendedTraceTest", "SourceFiniteLinearOriginalRegularDetection", "SourceOriginalArithmeticRegularCocycle", "SourceOriginalRegularPrimePredicates", "SourceOriginalRegularPrimeAssembly", "SourceOriginalArithmeticRegularPrimes", "SourceOriginalArithmeticRegularPrimeProperty", "SourceGammaOneOriginalRegularPrimes", "SourceOriginalCoefficientH1Finite", "SourceOriginalClassPrimePredicates", "SourceOriginalCocycleClassPrimes", "SourceOriginalClassRegularPrimes", "SourceOriginalDetectingFamilyProperty", "SourcePrimeIndexedDetectingFamily", "SourceOriginalFiniteDetectingFamily", "SourceOriginalArithmeticFamilyProperty", "SourceGammaOneOriginalDetectingFamilies", "SourceOriginalLocalCoefficientH1Finite", "SourceOriginalLocalUnramifiedDimension", "SourceOriginalPrimeUnramifiedDimension", "SourceOriginalUnramifiedAdjointProperty", "SourceGammaOneOriginalUnramifiedDimensions", "SourceOriginalDistinctEigenbasis", "SourceOriginalDiagonalConjugacy", "SourceOriginalMappedDistinctRoots", "SourcePrimeSubfieldSL2Image", "SourceOriginalMappedTorusConjugacy", "SourceOriginalSymmetricTorusRoots", "SourceOriginalSymmetricTorusConjugacy", "SourceFiniteLinearOriginalTorusDetection", "SourceOriginalArithmeticTorusCocycle", "SourceOriginalTorusPrimeLocalProperties", "SourceOriginalTorusPrimePredicates", "SourceOriginalTorusDetectionPredicate", "SourceOriginalPrimeTorusDimension", "SourceOriginalAffineTorusDimension", "SourceOriginalTorusDetectionAssembly", "SourceOriginalTorusPrimeDimensions", "SourceOriginalTorusPrimeAssembly", "SourceOriginalArithmeticTorusPrimes", "SourceOriginalArithmeticTorusPrimeProperty", "SourceGammaOneOriginalTorusPrimes", "SourceOriginalTorusClassPredicates", "SourceOriginalTorusCocycleClass", "SourceOriginalTorusClassPrimes", "SourceOriginalTorusFamilyProperty", "SourceOriginalTorusDetectingFamily", "SourceOriginalArithmeticTorusFamilies", "SourceGammaOneOriginalTorusFamilies", "SourceOriginalCMKernelConsequences", "SourceOriginalRationalBottomRestriction", "SourceOriginalRationalCMProperty", "SourceGammaOneOriginalCMConsequences", "SourceOriginalRationalBottomOdd", "SourceOriginalRationalCMPolarized", "SourceOriginalRationalCMPolarizationProperty", "SourceGammaOneOriginalCMPolarized", "SourceOriginalCMQuadraticField", "SourceOriginalSupportCyclotomic", "SourceOriginalSupportResidual", "SourceOriginalConstructedCMProperty", "SourceOriginalConstructedCMAssembly", "SourceGammaOneOriginalConstructedCM", "SourceOriginalIntegralOdd", "SourceOriginalIntegralCMSimilitude", "SourceOriginalIntegralCMDeformationRing", "SourceOriginalIntegralCMRingData", "SourceOriginalSupportBottomOdd", "SourceOriginalIntegralCMSupportField", "SourceOriginalIntegralCMProperty", "SourceOriginalIntegralCMAssembly", "SourceGammaOneOriginalIntegralCM", "SourceOriginalCMAdjointVanishing", "SourceOriginalCMCotangent", "SourceOriginalCMCotangentFormula", "SourceOriginalIntegralCMDimensionData", "SourceOriginalSupportBottomBounds", "SourceOriginalIntegralCMDimensionField", "SourceOriginalIntegralCMDimensionProperty", "SourceOriginalIntegralCMDimensionAssembly", "SourceGammaOneOriginalCMDimensions"]
+
+private def auditedModuleNames : Array String := #["SourceOriginalCMAdjointVanishing", "SourceOriginalCMCotangent", "SourceOriginalCMCotangentFormula", "SourceOriginalIntegralCMDimensionData", "SourceOriginalSupportBottomBounds", "SourceOriginalIntegralCMDimensionField", "SourceOriginalIntegralCMDimensionProperty", "SourceOriginalIntegralCMDimensionAssembly", "SourceGammaOneOriginalCMDimensions"]
+
+private def mapProjectiveNameParts (f : String → String) : Name → Name
+  | .anonymous => .anonymous
+  | .str parent part => .str (mapProjectiveNameParts f parent) (f part)
+  | .num parent part => .num (mapProjectiveNameParts f parent) part
+
+private def normalizeProjectiveName (name : Name) : Name := Id.run do
+  let mut name := name
+  for m in moduleNames do
+    name := name.replacePrefix (("_private." ++ m).toName)
+      (("_private.Dubon2026." ++ m).toName)
+    if name.getRoot == `_private then
+      let marker := "_" ++ (m.take 1).toString.toLower ++ (m.drop 1).toString
+      name := mapProjectiveNameParts (fun s =>
+        ((s.replace marker "_dubon2026").replace
+          ("_aux_" ++ m ++ "___") ("_aux_Dubon2026_" ++ m ++ "___")).replace
+          ("__private_" ++ m ++ "_0_") ("__private_Dubon2026_" ++ m ++ "_0_")) name
+  return mapProjectiveNameParts (fun s =>
+    s.replace "instFactPrimeOfNatNat_sourceDicksonPGLBasic" "instFactPrimeOfNatNat_dubon2026") name
+
+private def projectiveNatLiteral? (e : Expr) : Option Nat :=
+  match e with
+  | .lit (.natVal n) => some n
+  | _ => e.nat?
+
+private def projectiveStringLiteral? : Expr → Option String
+  | .lit (.strVal s) => some s
+  | _ => none
+
+private partial def projectiveNameLiteral? (e : Expr) : Option Name := do
+  let head ← e.getAppFn.constName?
+  let args := e.getAppArgs
+  if head == ``Name.anonymous && args.isEmpty then return .anonymous
+  if (head == ``Name.str || head == ``Name.mkStr) && args.size == 2 then
+    return .str (← projectiveNameLiteral? args[0]!) (← projectiveStringLiteral? args[1]!)
+  if (head == ``Name.num || head == ``Name.mkNum) && args.size == 2 then
+    return .num (← projectiveNameLiteral? args[0]!) (← projectiveNatLiteral? args[1]!)
+  let text := head.toString
+  if text.startsWith "Lean.Name.mkStr" then
+    let size ← (text.drop 15).toString.toNat?
+    if size == args.size then
+      let mut name := Name.anonymous
+      for arg in args do
+        name := .str name (← projectiveStringLiteral? arg)
+      return name
+  none
+
+private def normalizeProjectiveExpr (syntaxDecl : Bool) (e : Expr) : CoreM Expr :=
+  Core.transform e (post := fun x => do
+    if syntaxDecl then
+      if let some name := projectiveNameLiteral? x then
+        return .done (toExpr (normalizeProjectiveName name))
+    return .done (match x with
+      | .const n us => .const (normalizeProjectiveName n) us
+      | .proj n i body => .proj (normalizeProjectiveName n) i body
+      | .lam _ ty body bi => .lam .anonymous ty body bi
+      | .forallE _ ty body bi => .forallE .anonymous ty body bi
+      | .letE _ ty value body nd => .letE .anonymous ty value body nd
+      | .mdata _ body => body
+      | _ => x))
+
+private def auditSemanticFingerprints : CoreM Unit := do
+  let env ← getEnv
+  let numeric := Name.num `_private.SourceGammaOneProjectiveResidual 0
+  let textual := Name.str `_private.SourceGammaOneProjectiveResidual "0"
+  unless normalizeProjectiveName numeric == Name.num `_private.Dubon2026.SourceGammaOneProjectiveResidual 0 do
+    throwError "Numeric module-name component was not preserved"
+  if normalizeProjectiveName numeric == normalizeProjectiveName textual then
+    throwError "Numeric and textual name components collapsed"
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      let owner := env.allImportedModuleNames[idx.toNat]!.toString
+      let localName := if owner.startsWith "Dubon2026." then (owner.drop 10).toString else owner
+      if auditedModuleNames.contains localName then
+        let normalized := normalizeProjectiveName name
+        let syntaxDecl := name.toString.contains "_aux_" || name.toString.endsWith ".termQbar"
+        let ty := hash (← normalizeProjectiveExpr syntaxDecl info.type)
+        match info.value? (allowOpaque := true) with
+        | some v => logInfo m!"SEMANTIC Dubon2026.{localName} {normalized}: {ty} {hash (← normalizeProjectiveExpr syntaxDecl v)}"
+        | none => logInfo m!"SEMANTIC Dubon2026.{localName} {normalized}: {ty} NONE"
+
+#eval auditSemanticFingerprints

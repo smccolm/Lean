@@ -1,0 +1,331 @@
+{
+  "recordedUTC": "2026-11-17T16:51:54.105129+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceOriginalDistinctEigenbasis",
+    "SourceOriginalDiagonalConjugacy",
+    "SourceOriginalMappedDistinctRoots",
+    "SourcePrimeSubfieldSL2Image",
+    "SourceOriginalMappedTorusConjugacy",
+    "SourceOriginalSymmetricTorusRoots",
+    "SourceOriginalSymmetricTorusConjugacy",
+    "SourceFiniteLinearOriginalTorusDetection",
+    "SourceOriginalArithmeticTorusCocycle",
+    "SourceOriginalTorusPrimeLocalProperties",
+    "SourceOriginalTorusPrimePredicates",
+    "SourceOriginalTorusDetectionPredicate",
+    "SourceOriginalPrimeTorusDimension",
+    "SourceOriginalAffineTorusDimension",
+    "SourceOriginalTorusDetectionAssembly",
+    "SourceOriginalTorusPrimeDimensions",
+    "SourceOriginalTorusPrimeAssembly",
+    "SourceOriginalArithmeticTorusPrimes",
+    "SourceOriginalArithmeticTorusPrimeProperty",
+    "SourceGammaOneOriginalTorusPrimes",
+    "SourceOriginalTorusClassPredicates",
+    "SourceOriginalTorusCocycleClass",
+    "SourceOriginalTorusClassPrimes",
+    "SourceOriginalTorusFamilyProperty",
+    "SourceOriginalTorusDetectingFamily",
+    "SourceOriginalArithmeticTorusFamilies",
+    "SourceGammaOneOriginalTorusFamilies"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.lean",
+      "sha256": "0E633194A8E7ED7B29CDFBE0FFED79BC25BCAE5F7E8FE100618BA0795D62FC15",
+      "oleanSha256": "8AE1BE2E3FA36321524D31BC8D4E8A881652CA54B8E5581ACA789F673A846272",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDistinctEigenbasis.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.lean",
+      "sha256": "C22B5A6D3ED47DFA82D4963ECBE3C6D7FD6BCFED4AADF91C7B4FD9106768F6BE",
+      "oleanSha256": "864768A0C5B29B26FF7EB35860E6006337E6537B72210EAE1CCC7C5EAEBA4A64",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiagonalConjugacy.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.lean",
+      "sha256": "46EB7B08ECB71B189CED3223FB9C773947A8F0B1AEBCB16274A75A6517C585B1",
+      "oleanSha256": "F837A5D67AABC57DC33C29A0943D668CB153099B50BAECB1AE75B13F4369BC9F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedDistinctRoots.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.lean",
+      "sha256": "5AAD1DBFEB3FC03D5A839E5DF25E655FF1ADE1C29B17A8D58B35E2B0BAA0D904",
+      "oleanSha256": "CA082751ECC0AA017734760D02B0FF87A1F1CA8696E5F42DD7FE324697214AF2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeSubfieldSL2Image.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.lean",
+      "sha256": "4A00DC5259045132F0EF60E824507BC8D33481DB6919A794AEA40B236BFEC29D",
+      "oleanSha256": "5951F7BA45141DB80674EFEF03DA3664931933189A6F5C00B6A39C5104DB41E0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMappedTorusConjugacy.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.lean",
+      "sha256": "6DF9473C4DA8865B08A1F8992BD032482D918D598E0109C3C3590FAEA66F6688",
+      "oleanSha256": "8DDCBFDCD2E9772D258AAC146B3C0E9E94C2775C6B629EED8FA46A5DC34039C1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusRoots.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.lean",
+      "sha256": "8312937EB209EDA5A3BC70E7C5F6AE5567548093683409F4C0B43A3DBF168303",
+      "oleanSha256": "A4EFE6B3D40E763B0E33B0B048EE1494580811C974C31DDDAC905879C485D582",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricTorusConjugacy.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.lean",
+      "sha256": "8466A6DF0563C2B37C6EEEDD04494BF231A216BA062ECF4FD219723841F6E182",
+      "oleanSha256": "37AE0420150492879599DA37F58DCB8A5242CC2219786624399A04225BBCDD82",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteLinearOriginalTorusDetection.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.lean",
+      "sha256": "43ADE52F18FBF7330B4AF2AFBEAF6D349AE1EC53C3AC33FDBA836E59435E0E52",
+      "oleanSha256": "59CE14E71C6071CAEBB09EE994EFD3210F6B8D7EC0B497E7EB82BD221C266D5F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusCocycle.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.lean",
+      "sha256": "59339DD5767C0C1CCB74DF6CD6C083F008475BA8D87B15B385DF376F1567300C",
+      "oleanSha256": "7202DEDD4D6DF9ECEFAEF3025893302414FC1DEDED6579D16B6E9F1C234AF5D1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeLocalProperties.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.lean",
+      "sha256": "F9F1BB6E48B9C3A20A980990FC0495E48B1A54ABCC81BBFC2A92FDB8D3BA93C2",
+      "oleanSha256": "8D62C0848EDB7C65FDEAD98CCF8CD445E57D2EB9CA5D5A43ECFB3823A9DA2724",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimePredicates.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.lean",
+      "sha256": "AA4FE67E9BE7DCB8918198BE7906C811AB1A0737D701C17BFE672A8E25EBCF1A",
+      "oleanSha256": "13FACE35A7004C0FA8A5373CECC41558DE2709586BB9B7384BBA56953B217D0D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionPredicate.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.lean",
+      "sha256": "F36F11792B7DE4F7E0C2EFF644EA36EE8B677D973E7B9B758F2C46A40A54528C",
+      "oleanSha256": "866BD92AFED4B003967D33B5E3DA5A4959FE599BFA51073D276A9EE983D6A76B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTorusDimension.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.lean",
+      "sha256": "6254094476437A783AAA244CFFD3A4AC06C6E38DBB6B4CC2752E2DA95F73FC6A",
+      "oleanSha256": "C223AD9C482D1DCAC625E11763B9D124768FD0473226CB7F8D24F0AE169A96A7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAffineTorusDimension.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.lean",
+      "sha256": "3DD05E45D90646DBBF0FC886F2EE6F1E48B2618A8A0E02B2F509ABF41FD473A4",
+      "oleanSha256": "9DC1AE6C8876FDAFFD54CA61841DA7A6E7DE5A45245614F2C75392A9FD87B01D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectionAssembly.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.lean",
+      "sha256": "4AF51E18C47A207CCFDE86B10D4D4245D77F7A2200038024900BDA776B6D34FF",
+      "oleanSha256": "768E596C7B03BF4D0A9DE9AE7210B9C680F053A98DD813000BBCA049AAF892DF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeDimensions.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.lean",
+      "sha256": "4455832D22EDBB7CB331B3A5E1FCE289E0CC0CE88FC1999F9DBFCB40FAE19F93",
+      "oleanSha256": "2E2FD34ABD5DFB5445E31BA800E867E711F0A9776CF8B568DE5E3EE702980D59",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusPrimeAssembly.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.lean",
+      "sha256": "562D0D97F5823D7FF34FE8F8D7ADA3CAF804F9D9041887C7444CA50DE903A8C0",
+      "oleanSha256": "FBF847206C68284CC50756DEEFBCE1DFA08FD78FA4C08BCF7413F00FE35D718D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimes.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.lean",
+      "sha256": "465F3B902C59FF34961E8B19E11EF6AAA9EF63A0B3657585AAE47A62D9434102",
+      "oleanSha256": "F9CBBFEBA5B93F7ECB130B8B9A0BD940DF338DA4AE1D734C3E2A787A03D3DCBA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusPrimeProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.lean",
+      "sha256": "A06A42208B66DE7944764BB718DB50B3C4BF12795525FE5600819E666827FF13",
+      "oleanSha256": "9F1996CF5E47B6B3FF5EA2528CAD422FB6C1A6664324A60CC6066AC942524A1C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusPrimes.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.lean",
+      "sha256": "FB1CD63209CF6AC71BFDE4741B552D2C414D90A551766F859F4A4FBDC69B4874",
+      "oleanSha256": "BD031D894045B406CA38F4DD924540DE2DE4315D9658DBBBAB6D7C923E5C432F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPredicates.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.lean",
+      "sha256": "F52324376547C7A0EB6931EBE661E9CDD177D331C035D64DDFB1BB97D20F800D",
+      "oleanSha256": "5B2B26F7B6F7552B3AD87B5AEDF6F03802D7A0D0DE672C4C58A40B351D08B9B9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusCocycleClass.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.lean",
+      "sha256": "C0A7A6F66BAA5EE92A42A453829BB0A53BDC7031FC936C9418E13E6D72B5C53A",
+      "oleanSha256": "C3D892B49FD23AA31299879D6589890B0BAAF1046E912CEC82E51772E9075BB2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusClassPrimes.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.lean",
+      "sha256": "9CB0DBD0883BC4FC26D456F49581A29DA94B8F2573C70FB8934CDEBA3D9B924E",
+      "oleanSha256": "8ECD75B086B6006157FDC1083C2516A4554A75941941503CB854520F216A9938",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusFamilyProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.lean",
+      "sha256": "D40E876A0A524961D416DA83C4D14FF99F9F90F6BDE196EE83092BA9C5907C75",
+      "oleanSha256": "F4555E504359CD38AE8607B51AA30B6466400F1F087D7C4FAACC4D22B6D3724E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDetectingFamily.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.lean",
+      "sha256": "55C1BF00613B62A5E3A15BAB7F2A7376E8D5B96BDBC8D362E3318E98EF6EB080",
+      "oleanSha256": "CFBAC01696A450A8A319D3547AB8A1A368A909D038D3260361B5B8CDE4C4CE1E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorusFamilies.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.lean",
+      "sha256": "0331216E30EFD9C08A405FED3AF7F8B1EEACF22BEFB902EEB28B9F1469F37888",
+      "oleanSha256": "79BD0EB20ACBFF335A938FADEC85556F769A4739787B06C7C4266698629E3932",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalTorusFamilies.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.matrix_exists_original_eigenbasis_of_distinct_roots",
+    "Dubon2026.matrix_exists_original_diagonal_conjugator_of_eigenbasis",
+    "Dubon2026.matrix_exists_original_diagonal_conjugator_of_distinct_roots",
+    "Dubon2026.original_characteristic_roots_of_mapped_diagonal",
+    "Dubon2026.SourceDickson.prime_subfield_sl2_image_le",
+    "Dubon2026.original_mapped_torus_conjugacy_of_subfield_lift",
+    "Dubon2026.original_symmetric_characteristic_roots_of_mapped_torus",
+    "Dubon2026.original_symmetric_torus_conjugacy_of_mapped_torus",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_torus_kernel_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_torus_root_detection",
+    "Dubon2026.OriginalTorusPrimeWitness",
+    "Dubon2026.OriginalPrimeAdjointDimension",
+    "Dubon2026.HasArithmeticTorusRootDetection",
+    "Dubon2026.HasArithmeticTorusDimensionalPrimes",
+    "Dubon2026.HasArithmeticTorusDetectingPrimes",
+    "Dubon2026.rationalPrime_original_symmetric_unramified_finrank",
+    "Dubon2026.rationalPrime_original_affine_torus_unramified_finrank",
+    "Dubon2026.rationalArithmetic_torus_primes_of_root_detection",
+    "Dubon2026.rationalArithmetic_torus_detection_supplies_local_dimensions",
+    "Dubon2026.rationalArithmetic_torus_dimensional_primes_of_root_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_torus_primes",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_torus_prime_detection",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticTorusPrimeDetection",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_dimensional_primes",
+    "Dubon2026.RationalArithmeticOriginalTorusAuxiliaryPrime",
+    "Dubon2026.HasArithmeticTorusClassPrimes",
+    "Dubon2026.HasArithmeticTorusCocycleDetection",
+    "Dubon2026.rationalArithmetic_original_torus_cocycle_class_primes",
+    "Dubon2026.rationalArithmetic_original_class_torus_prime",
+    "Dubon2026.HasArithmeticTorusDetectingFamily",
+    "Dubon2026.rationalArithmetic_original_torus_detecting_family",
+    "Dubon2026.SourceDickson.original_torus_prime_detection_gives_finite_families",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticTorusFamilies",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.matrix_exists_original_eigenbasis_of_distinct_roots",
+    "Dubon2026.matrix_exists_original_diagonal_conjugator_of_eigenbasis",
+    "Dubon2026.matrix_exists_original_diagonal_conjugator_of_distinct_roots",
+    "Dubon2026.original_characteristic_roots_of_mapped_diagonal",
+    "Dubon2026.SourceDickson.prime_subfield_sl2_image_le",
+    "Dubon2026.original_mapped_torus_conjugacy_of_subfield_lift",
+    "Dubon2026.original_symmetric_characteristic_roots_of_mapped_torus",
+    "Dubon2026.original_symmetric_torus_conjugacy_of_mapped_torus",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_torus_kernel_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetricH1_exists_torus_root_detection",
+    "Dubon2026.rationalPrime_original_symmetric_unramified_finrank",
+    "Dubon2026.rationalPrime_original_affine_torus_unramified_finrank",
+    "Dubon2026.rationalArithmetic_torus_primes_of_root_detection",
+    "Dubon2026.rationalArithmetic_torus_detection_supplies_local_dimensions",
+    "Dubon2026.rationalArithmetic_torus_dimensional_primes_of_root_detection",
+    "Dubon2026.SourceDickson.original_arithmetic_symmetric_nonzero_class_torus_primes",
+    "Dubon2026.SourceDickson.finite_linear_bounds_original_arithmetic_torus_prime_detection",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_dimensional_primes",
+    "Dubon2026.rationalArithmetic_original_torus_cocycle_class_primes",
+    "Dubon2026.rationalArithmetic_original_class_torus_prime",
+    "Dubon2026.rationalArithmetic_original_torus_detecting_family",
+    "Dubon2026.SourceDickson.original_torus_prime_detection_gives_finite_families",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.OriginalTorusPrimeWitness",
+    "Dubon2026.OriginalPrimeAdjointDimension",
+    "Dubon2026.HasArithmeticTorusRootDetection",
+    "Dubon2026.HasArithmeticTorusDimensionalPrimes",
+    "Dubon2026.HasArithmeticTorusDetectingPrimes",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticTorusPrimeDetection",
+    "Dubon2026.RationalArithmeticOriginalTorusAuxiliaryPrime",
+    "Dubon2026.HasArithmeticTorusClassPrimes",
+    "Dubon2026.HasArithmeticTorusCocycleDetection",
+    "Dubon2026.HasArithmeticTorusDetectingFamily",
+    "Dubon2026.SourceDickson.HasOriginalArithmeticTorusFamilies"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusAudit2.log",
+  "logSha256": "6723D1715DD8340C01CB193ACF56F9E3CAE7790B7DA74F15FA252F781615C066",
+  "auditSha256": "4EB9C2F6C9682A7182F76CDEFB41549153970597AC9241789D04D8533333684D",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDeclarations2480.log",
+  "ownershipSha256": "3A0E8C009645CD69E34B47D18EBBAEAE39B49F2A19925F0D5C8597CA25187B36",
+  "exhaustiveTheorems": 112,
+  "exhaustiveOtherDeclarations": 21,
+  "linterScopes": 27,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 189,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusDependencyAudit2.log",
+  "dependencyAuditSha256": "B1F9EBF929EB0ED91D30CCF4507ECD1BAF4FD611A9EBAF6220D9F665109FF5F9",
+  "dependencyAuditSourceSha256": "DF4444B687DE1D937848FB01B29259AA51AE505BD582D14B1A6DADE9B82B81BE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_torus_detecting_families"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-torus-reuse-review-2482.json",
+  "reuseReviewSha256": "E3969BA8F2B9BECCDC794FBFC1385EEC6241D5BB850A3B393514E48C2CA34B20",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original residual deformation inputs -> original split-torus detecting primes with exact local adjoint dimension and bounded detecting families for the same actual modular-form residual representation. All prior original data and the explicit small-image alternative are retained.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "semanticFingerprints": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.lean",
+    "sourceSha256": "18AF77CDF66CE28DF6EAF7C146C9D8810470FE3685963331FFA440A86D0AAC36",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorusScratchSemantic2481.log",
+    "sha256": "828E8884962A70300DFEAAA2D3499C5B0ACDD804E47E0741FF8CEC1524E84831",
+    "declarations": 133
+  }
+}

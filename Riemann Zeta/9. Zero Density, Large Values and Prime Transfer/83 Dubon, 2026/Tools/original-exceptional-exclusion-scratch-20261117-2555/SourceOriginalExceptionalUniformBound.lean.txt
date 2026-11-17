@@ -1,0 +1,55 @@
+import SourceOriginalFixedLocalExceptionalExclusion
+
+/-! DUB-17/18 -> eventual original residual large image -> uniform exceptional
+exclusion. The bound depends only on the actual form; every original coefficient
+embedding and residual representation satisfying its literal Frobenius data is
+covered. No nonzero residue coefficient, purity or large-image premise is used. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+
+
+/-- One form-dependent bound excludes A4, S4 and A5 for every original residual realization. -/
+theorem exists_original_exceptional_exclusion_bound
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ B : ℕ, 3 ≤ B ∧ ∀ (p : ℕ) [Fact p.Prime], B < p →
+      ∀ {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+        (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+        (ρ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →*
+          GeneralLinearGroup (Fin 2) 𝓀[E]) (j : 𝓀[E] →+* K p),
+        (∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p →
+          ∀ φ : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq),
+            (∀ z : IsLocalRing.ResidueField (algebraicLocalIntegerRing
+              (rationalPrimeLocalClosure q hq)), φ • z = z ^ q) →
+            let a := sourcePrimitiveResidualHeckeCharacter f hk τ
+              ⟨Dubon2026.cuspHeckeLinear Q k q,
+                Algebra.subset_adjoin ⟨(⟨q, hq.pos⟩ : ℕ+), rfl⟩⟩
+            let A := (ρ (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq φ)).val
+            A.trace = a ∧ A.det = (q : 𝓀[E]) ^ (k - 1).toNat) →
+        ¬(Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 4)) ∨
+          Nonempty ((residualProjectiveAction p j ρ).range ≃* Equiv.Perm (Fin 4)) ∨
+          Nonempty ((residualProjectiveAction p j ρ).range ≃* alternatingGroup (Fin 5))) := by
+  obtain ⟨q, H, hq, hqQ, hH0, hH⟩ := exists_original_exceptional_integer_obstruction Q f hk
+  refine ⟨max 3 (max q (H.coeff 0).natAbs), le_max_left _ _, ?_⟩
+  intro p _ hp E _ _ _ _ τ ρ j hlocal
+  have hqp : q < p := lt_of_le_of_lt (le_trans (le_max_left _ _) (le_max_right _ _)) hp
+  have hpH : (H.coeff 0).natAbs < p :=
+    lt_of_le_of_lt (le_trans (le_max_right _ _) (le_max_right _ _)) hp
+  have haway : ¬q ∣ Q * p := by
+    intro hd
+    rcases hq.dvd_mul.mp hd with h | h
+    · exact hqQ h
+    · have he : q = p := (Nat.prime_dvd_prime_iff_eq hq (Fact.out : p.Prime)).mp h
+      omega
+  exact original_fixed_local_not_exceptional Q p f hk q hq hqp H hH0 hpH hH
+    τ ρ j (hlocal q hq haway)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

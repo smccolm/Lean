@@ -1,0 +1,83 @@
+{
+  "reason": "Remove only the unused coefficient DiscreteTopology K parameter from the named local-dimension definition and its downstream predicates/logical adapters. The actual local-dimension proof and Chebotarev construction retain discreteness where mathematically needed. Every theorem proof body is unchanged; no proof limit or linter is weakened.",
+  "freshVariants": [
+    [
+      "SourceOriginalTorusPrimeLocalProperties2459a",
+      "SourceOriginalTorusPrimeLocalProperties2459b"
+    ],
+    [
+      "SourceOriginalTorusPrimePredicates2447b",
+      "SourceOriginalTorusPrimePredicates2447c"
+    ],
+    [
+      "SourceOriginalTorusDetectionPredicate2453b",
+      "SourceOriginalTorusDetectionPredicate2453c"
+    ],
+    [
+      "SourceOriginalTorusDetectionAssembly2454c",
+      "SourceOriginalTorusDetectionAssembly2454d"
+    ],
+    [
+      "SourceOriginalTorusPrimeDimensions2455e",
+      "SourceOriginalTorusPrimeDimensions2455f"
+    ],
+    [
+      "SourceOriginalTorusPrimeAssembly2449e",
+      "SourceOriginalTorusPrimeAssembly2449f"
+    ],
+    [
+      "SourceOriginalArithmeticTorusPrimes2450b",
+      "SourceOriginalArithmeticTorusPrimes2450c"
+    ],
+    [
+      "SourceOriginalArithmeticTorusPrimeProperty2451b",
+      "SourceOriginalArithmeticTorusPrimeProperty2451c"
+    ],
+    [
+      "SourceGammaOneOriginalTorusPrimes2452b",
+      "SourceGammaOneOriginalTorusPrimes2452c"
+    ],
+    [
+      "SourceOriginalTorusClassPredicates2461a",
+      "SourceOriginalTorusClassPredicates2461b"
+    ],
+    [
+      "SourceOriginalTorusCocycleClass2462a",
+      "SourceOriginalTorusCocycleClass2462b"
+    ],
+    [
+      "SourceOriginalTorusClassPrimes2463a",
+      "SourceOriginalTorusClassPrimes2463b"
+    ],
+    [
+      "SourceOriginalTorusFamilyProperty2464a",
+      "SourceOriginalTorusFamilyProperty2464b"
+    ],
+    [
+      "SourceOriginalTorusDetectingFamily2465a",
+      "SourceOriginalTorusDetectingFamily2465b"
+    ],
+    [
+      "SourceOriginalArithmeticTorusFamilies2466b",
+      "SourceOriginalArithmeticTorusFamilies2466c"
+    ],
+    [
+      "SourceGammaOneOriginalTorusFamilies2467b",
+      "SourceGammaOneOriginalTorusFamilies2467c"
+    ]
+  ],
+  "removedUnusedParameters": {
+    "SourceOriginalTorusPrimeLocalProperties2459a": 1,
+    "SourceOriginalTorusPrimePredicates2447b": 1,
+    "SourceOriginalTorusClassPredicates2461a": 3,
+    "SourceOriginalTorusCocycleClass2462a": 1,
+    "SourceOriginalTorusClassPrimes2463a": 1,
+    "SourceOriginalTorusFamilyProperty2464a": 1,
+    "SourceOriginalTorusDetectingFamily2465a": 1
+  },
+  "failedCanonicalManifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-torus-failed-audit-2469\\manifest.json",
+    "sha256": "D252D214D23D62E3618DEDC133461F0E35FE8877D6CFF230FA8CA0C2AF62892B"
+  },
+  "productionMutation": false
+}

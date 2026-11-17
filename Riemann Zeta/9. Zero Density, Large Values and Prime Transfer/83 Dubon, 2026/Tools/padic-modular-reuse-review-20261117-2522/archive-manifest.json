@@ -1,0 +1,352 @@
+{
+  "status": "Pinned public source inspection; no proof adoption or endpoint closure claimed.",
+  "review": {
+    "reviewUTC": "2026-11-17T17:31:05.346198+00:00",
+    "commit": "018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+    "commitUTC": "2026-11-07T16:09:04Z",
+    "repository": "https://github.com/ANR-FALSE/PadicModForms",
+    "license": "Apache-2.0; source license and author headers retained",
+    "leanSourceFiles": 67,
+    "toolchain": "leanprover/lean4:v4.36.0-rc2",
+    "mathlibRevision": "4dcd48f9a8a6bc61472af7148f179a36c4b47c75",
+    "findings": {
+      "Galois": [],
+      "crystalline": [],
+      "FontaineLaffaille": [],
+      "eigenvariety": [
+        {
+          "path": "verso/Doc/Introduction.lean.txt",
+          "line": 31,
+          "text": "eigenvariety, including classicality results."
+        }
+      ],
+      "proofShortcutOrLimitTokens": [
+        {
+          "path": "verso/Doc/PAdic.lean.txt",
+          "line": 116,
+          "text": "The presentation and the limit are chosen with the axiom of choice."
+        }
+      ]
+    },
+    "inspected": [
+      "PadicModForms/PAdic/Classical.lean",
+      "PadicModForms/PAdic/Defs.lean",
+      "PadicModForms/ModP/Hasse.lean",
+      "PadicModForms/ModP/Weights.lean",
+      "README.md"
+    ],
+    "assessment": "This pinned snapshot supplies level-one q-expansion, coefficient reduction, Hasse invariant, filtration/weight congruence and Serre p-adic weight infrastructure. PAdic/Classical embeds rational classical forms into Serre p-adic forms; it is not a Galois crystalline comparison theorem. No Galois, crystalline or Fontaine-Laffaille implementation was located in this complete fetched Lean-source snapshot. The eigenvariety/classicality description in the README is not accepted as a proved endpoint. No external proof closure was built or accepted; no root pins changed.",
+    "decision": "Retain as a potential source for a future exact level-one coefficient/weight obligation. Defer adoption on the present DUB-17/18 original-residual local-condition and automorphy chain: its inspected results do not discharge the missing Galois comparison, image exclusions or automorphy. Existing native deformation-ring and CM dimension results remain the shorter applicable route.",
+    "wordTokenReview": "The sole raw proof-shortcut-token hit is a prose reference to the axiom of choice in verso/Doc/PAdic.lean; this is not a project axiom declaration or an admitted proof."
+  },
+  "files": [
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/head.json",
+      "sha256": "15C727C2BA0657D426AA614C2B0FF82ADE8461E937F191FC7E5D1D7599847B9D"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/lake-manifest.json",
+      "sha256": "CE54C9E09A390AC6A8FE6EE8F1319AD6FE393D068644EF02F30246959A1BF94E"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/lakefile.toml",
+      "sha256": "4CF839436CFF7F61CD2CCB6C19B5C1787A13211F4C8E22C51E8F1075F455B9C6"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/lean-toolchain",
+      "sha256": "414ACABC0B69C985A83EB7015AF2317F0DF08F7513779D512945456F8EEDFDD9"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/LICENSE",
+      "sha256": "2C27810A0EB7D63C4FFDA9D635136ED427679252DC6390E791CF66F9BFC776E9"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/manifest.json",
+      "sha256": "CB4DDDE8BE7E766C88CB80E08CAC1ECF23A6CF235192D3B594836B4C1F011CB4"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms.lean.txt",
+      "sha256": "6A757FD62377C448A45E584A078E993D9BDF476D9D00FFACDB2A40F038521C8F"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/README.md",
+      "sha256": "D9897C12CD0E4E63D874912EDC3F9F5D66211A987F34C7862DA7CC7A20D14532"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/source-review.json",
+      "sha256": "55F6E617F200A0BADDF8E835FECDAEB94D8EE3ADB573D76308766EF9E4ABF236"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/tree.json",
+      "sha256": "FC11E769449D26B9D3704CE0837EBDEC07185DBEA13EACA0ED181ABBEE430AF2"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc.lean.txt",
+      "sha256": "CF13E11B5D8127C9576C93F36A1B5E7CEC1967AFD08B57E0290F59BE1E9132E2"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Main.lean.txt",
+      "sha256": "A4BA776FC7E5945840CC0C5AE2C3B1B89DEEFD07884C1D7C37F9761C5E10B00E"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/Introduction.lean.txt",
+      "sha256": "A2FE045465EF6E20452750D072E58C14DDB8A8AF7AFC4D01B0920CD3E6C2FB22"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/ModP.lean.txt",
+      "sha256": "83CD9F7B182D8B55A7964914AE3D84BD66513B32A69CEA74439341E5AEACD166"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/PAdic.lean.txt",
+      "sha256": "647E387DAA927D50D7B71DD25C055FCEDEE74B43428E386BCC5E317ECADB6A4B"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/PLocalInt.lean.txt",
+      "sha256": "CCCD46C7B85F46E0EDD2E51E9A0364C879446086353BF6F29AE9EBB5C134F372"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/Preliminaries.lean.txt",
+      "sha256": "975C63BA71EF3873B3E65DC4BFAEF88CF9BFF2FA72EDCC61988A2839D1D4F7AA"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/Rational.lean.txt",
+      "sha256": "40805D63357F048A567D952B31339DA0621D915A04A90257AE49D0248C0F66D2"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/References.lean.txt",
+      "sha256": "BA129165230835EC3C37319DA7B4D1B4D234E8E0A0E152548DA22056A4D56EFC"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/verso/Doc/TitleMath.lean.txt",
+      "sha256": "E87B8F2962A5F2C1D4C8941C9FF5021BFEA43D58789C93037D962F2E22B5A721"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/38813.lean.txt",
+      "sha256": "E77DF30E6898A6D27EAE0ABBA80A19E88D3B16C61122EE5B4C20317D0629CE42"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/Bernoulli.lean.txt",
+      "sha256": "A89AAD58B11E59567F81A9D424A149C5E84560A37CA3CFB138316029EDFED5A0"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/Choose.lean.txt",
+      "sha256": "90E9EAC43AF34C681B49C895CBA008D453A8FCDEDB4EF2504B6F0A53298E045E"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/ContinuousMonoidHom.lean.txt",
+      "sha256": "B8740228654CB92238EC8F834F278EB8E8CDCF2ED492CBEC54FC95D29CF65AEB"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/DirectSum.lean.txt",
+      "sha256": "7EF3D060A32103A3FD0E69D4E8DA9BA17EC25E5E7BC39C72B828816785EA2059"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/E2.lean.txt",
+      "sha256": "F16A757E80710F08F60E881B5C8C1BE85BF45A8BFEDF5AE4293BF08F655C150A"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/EInt.lean.txt",
+      "sha256": "A098B9697047ADD2A0C33503CD9BFB8B73F6FE4585663336742CD0CC1C314EE7"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/Finsupp.lean.txt",
+      "sha256": "47491606F5B9448784C0FC6ED51C12711B48471FC89AA696A62236381239A9F5"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/IntLocalization.lean.txt",
+      "sha256": "221B0AA168B7D1545281670E32FFDD2DCFD3AD6034B538043ABA69F6DE936249"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/LinearIndependent.lean.txt",
+      "sha256": "F7A3A7DC47197768B85248290F72101C5FE5C10D52E43BCA683B0C5E7F3B13C1"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/MvPolynomial.lean.txt",
+      "sha256": "F47F01B788583D24B5297CBC4A431BA30823D4027A870178466AA39047C1F53D"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/NatPrime.lean.txt",
+      "sha256": "5F24C6AFFDEC16447FD9AAD57892852B9824D694FEA4524E8918B85BDC653D57"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/Padic.lean.txt",
+      "sha256": "4B90A7AC40080E261D0CE19893D5A471EB3291F8C84B14233B730B621C484794"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/PadicUnits.lean.txt",
+      "sha256": "D3230EE65617ED76D41338409C256A573CBEC6008070A957D9DCB69D9442F5B5"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/PowerSeries.lean.txt",
+      "sha256": "E8EDFD8476DD1B9A2590D09EB6AE48F457D216C3432EF830D822A82B3A4B85B9"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/PowerSeriesTopology.lean.txt",
+      "sha256": "8A6F17DF38A823AEBDDC9DDC48428C5D7F9E96A11B7DBA107606882C37DCA250"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/QExpansion.lean.txt",
+      "sha256": "7440932845688562B3FA5E35BB7B52788D4B49E6091EB33FEE13001AA2C7C03A"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/QExpansionDeriv.lean.txt",
+      "sha256": "748274B7F9F597E65A04AEF3932B2C30F35931AEDC48A5FA1AE2A1E94F4D04FB"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/RationalRoot.lean.txt",
+      "sha256": "0D65A778DF864AD0B2C1EABFE71FABB2E0A7C3BA45686C688F37E93B797385EB"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/SigmaSeries.lean.txt",
+      "sha256": "16070BC3D29C5D71EC486EC9CF2FAD77EDAC00C90CE90CADD9FFC4E91E3DA316"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/SpecificLimits.lean.txt",
+      "sha256": "4E08F93CABC56776D0D7822B627FC4744C2ACA85B7F5868F8B7737621E3299F3"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/Theta.lean.txt",
+      "sha256": "C9F5898E776AEF26B5F70D1DB979BE3C25354D8645D7DE1AC5E9436FEEC0AE83"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ForMathlib/WeightedHomogeneous.lean.txt",
+      "sha256": "D57E6C92DEE8508A5942C034523E1970D3CCED208D9120D7424EDB6228ACE727"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/ArtinSchreier.lean.txt",
+      "sha256": "2BBB3F199BC48CCFA4520063089FC2175AC5C5D030102F1C365A9C1FB338564C"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Basic.lean.txt",
+      "sha256": "CBCB1C88FAAEA12228A04F133F45D4DDB8DDBC7EB91459950BA3A7C9812C014B"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Congruences.lean.txt",
+      "sha256": "B7F3C3164070B9BA5A63EAF9E857B748B0BEE81B5D4F2299283C380FE3647FA1"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Differential.lean.txt",
+      "sha256": "23D074E6943D134DC93D201E2001D396B7F52FFAC8E8FA4D4383ECA6BB1949ED"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Eisenstein.lean.txt",
+      "sha256": "82388C8353F8B0A402975673E913BBAB79E44EE28273EC3FB685DF18BFA0B0F0"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Filtration.lean.txt",
+      "sha256": "0E282F64A71DCDDD20407A0D212480DF763C21FEE4DFA9441CC50A0A68F38224"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Graded.lean.txt",
+      "sha256": "4BF2B9904EF662DBC7C0BEC4EE4465986D43E56448A775F7BC53DCEED01DCB54"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Hasse.lean.txt",
+      "sha256": "D88C2D328BC494E0208DBF002BC2CD4F44A3E0D366CB638DC011B42E2DC47340"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/KerEval.lean.txt",
+      "sha256": "2D163EBE6834D6812BCD3ED400396CC6392DAA2E16706D9E210E1A409C0644A8"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Ramanujan.lean.txt",
+      "sha256": "2CF145B99B80AE7D6E2E1D6864A78421B9D42C3C0D8D9832EECC39562A3B2CF5"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Squarefree.lean.txt",
+      "sha256": "9BCFBBB7518D5231413ED75E5B6562E3BCA0A2049D2B916DA4C76924EC547E6D"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/ThetaFiltration.lean.txt",
+      "sha256": "36E7A7205B534C2FCC771B73C5CC57689ECD523194240D3B10AD7DE134E26832"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/Weights.lean.txt",
+      "sha256": "9CFEB8D89CF5C65142E1FFFA73B2B8B8ED1704EA127AB1602A3085FD86B801ED"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/ModP/WeightZero.lean.txt",
+      "sha256": "C94B3CFFFF4C7A42F099026915B8DED546BD5D7E31DC4EB060A5FD66CCF5A81B"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Basic.lean.txt",
+      "sha256": "82974A32B44FAD255D5853CE10302C3B550801D33BADC4E5A913A57A48E1F312"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Classical.lean.txt",
+      "sha256": "CEF42E769C2144FD2717D3C0BB5E4E68E2A583345B3F1656B27AFB1E4F589CAC"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Defs.lean.txt",
+      "sha256": "409FB2E816691B799B805329CA20423AACE4E2373F5D2FCFFE52D4018BD876F4"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Eisenstein.lean.txt",
+      "sha256": "55BA80469C84C33C23D66367AB531053F18BCDEB5CC96C10B52EB0D300D6D333"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/pLocalInt/Basic.lean.txt",
+      "sha256": "5F16FAC84EC0E72C1C3BB4C0D0258041581110276F518BE6697256C55B9289DB"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/pLocalInt/Discriminant.lean.txt",
+      "sha256": "0C1B01078860D029E29A454D824C11083031AB271169FB554B27BFE6EDA0B02A"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/pLocalInt/Eisenstein.lean.txt",
+      "sha256": "1BB087B4626D1F9EDD333C09B5F32E09454435623A49B9CB412834EFCD426B92"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/pLocalInt/Graded.lean.txt",
+      "sha256": "06A608661F3FC9168C416B3D202C03882AF337EA4ADFACBBC685DEA8696CA8F4"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/pLocalInt/Ramanujan.lean.txt",
+      "sha256": "F453E9B9A0E0AF48D89E908E4D1F1DE45039657496A7BE12BA4E57A59B73AA84"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/Rational/Basic.lean.txt",
+      "sha256": "A09268322A40643442185AD2A2B923C81029C7F5AED952D4B64F43DBBC732583"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/Rational/E2.lean.txt",
+      "sha256": "11F0E7D7A6909B825D64C3DE78C671456558A9F205AE46F5505DEEB60AB62071"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/Rational/Eisenstein.lean.txt",
+      "sha256": "EFCC8CD6F70DDFC033215331CCDDD50E2C2D3B732FE886D0FB44A7919CE02BF3"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/Rational/Graded.lean.txt",
+      "sha256": "FA7C62BB5857DD5F9AC5F9F50B8AD7B5F4B869D0803521267F2585DF8701EBA2"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/Rational/Ramanujan.lean.txt",
+      "sha256": "6377F4E87294CEE7FD5FB09515D54325AFB37D473C12BB790ACB1958D98CBD1A"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Weights/Congruence.lean.txt",
+      "sha256": "BA0840230E74107F9692A8F7002071DC829F08458A5E2CD62FFD198C05C292D0"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Weights/CongruencePow.lean.txt",
+      "sha256": "69E4657E8FA8B2537EA5331ADA9CD7250F66D11D70F8F70E07B8BAD106878D84"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Weights/Defs.lean.txt",
+      "sha256": "4B91B0AD0A741EB5481BA2FD45C83F43A00FF25B4E6C4F72B8E5ED71D2CEA9CA"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Weights/Presentation.lean.txt",
+      "sha256": "B158065AEDBC505CCE314C9AF1ECEA96E11C6EA30A26D412D0C57AC706F77122"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/PadicModForms/PAdic/Weights/Topology.lean.txt",
+      "sha256": "E0C7E3B0A822113ADE445D9C5C7D93591E3C190B20BDB6D78A3A3A6CB4C50FB7"
+    },
+    {
+      "path": "Tools/padic-modular-reuse-review-20261117-2522/fetch_padic_modular_review_2517.py",
+      "sha256": "615887101C2B8CB3671A8F4FBA6CE6ED2949D86C302C8C7923E083195C1686C0"
+    }
+  ]
+}

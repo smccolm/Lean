@@ -1,0 +1,143 @@
+{
+  "recordedUTC": "2026-11-17T19:31:36.411962+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceProjectiveInvolutionTrace",
+    "SourceOriginalProjectiveInvolutionTrace",
+    "SourceDihedralReflectionSign",
+    "SourceOriginalDihedralCharacter",
+    "SourceOriginalDihedralContinuity",
+    "SourceOriginalDihedralArithmetic",
+    "SourceOriginalNonCMDihedralInputsProperty",
+    "SourceGammaOneOriginalDihedralInputs"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveInvolutionTrace.lean",
+      "sha256": "999F5BEE1AFF4E79E51C64B2AC2A48A028453C8C8C980556E3D984C11B9DD5A5",
+      "oleanSha256": "9CE199A20EB4A4753367C17A51EC931EEF0287D97A5A482063B610D5C6CE5669",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveInvolutionTrace.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceProjectiveInvolutionTrace.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalProjectiveInvolutionTrace.lean",
+      "sha256": "21BF52AEAD55FA621845E165FDFBEC2D39031901A9CE3DBF863AD53AD30064DF",
+      "oleanSha256": "2C98F017212CF9BECA4D89DA78217BF5BCEA9B9717A8D70DDB53F0D8CAD97438",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalProjectiveInvolutionTrace.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalProjectiveInvolutionTrace.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceDihedralReflectionSign.lean",
+      "sha256": "1E41E3946B028D6ABD5194BAE87085032C326DC45C283D5766B10352691D8BB8",
+      "oleanSha256": "84798DD470DFE492BE5350661A39EA4AC5CE84ED2791328372119CC84911554C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceDihedralReflectionSign.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceDihedralReflectionSign.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralCharacter.lean",
+      "sha256": "5241B1C0B02BE5B638C3268E6E117F2878C52F859E3E39D5F5B7BEA661843549",
+      "oleanSha256": "91D424BA7DF8AF07BA084C6D04DBDE4AAA1CDAFF2C2779F491485AE884A6E176",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralCharacter.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralCharacter.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralContinuity.lean",
+      "sha256": "0E5AEE430798CD0216D5041C67E781F2D41A695B375BE0C7DDE9ABD3014D5F0A",
+      "oleanSha256": "5FB4EC89DEAEF9C9ADC8D514328246C630BBFB0F4573B19827455359E4C6FB70",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralContinuity.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralContinuity.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmetic.lean",
+      "sha256": "27E66DC4E400D0801B4BB7A9011EAF3899CF105B030A0E0FD13BE61EFC55E45C",
+      "oleanSha256": "17C1C113CD62891503EBD49EE8A4801447809B595C980BA3F8ADA9ECD03EFE89",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmetic.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmetic.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMDihedralInputsProperty.lean",
+      "sha256": "8B00772BE5C1E6377E319410FEB173E2A1ACE90F734717DCED1C968B77224991",
+      "oleanSha256": "0853FF74482A97DC1F4155B3C585B5A901C9E0C903FB456153A79EB6D756E75B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMDihedralInputsProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMDihedralInputsProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDihedralInputs.lean",
+      "sha256": "FCB38E996F550F66BD79966D3A9B42EB99238A5A9F21CEC8A79F8AF8F9651BFF",
+      "oleanSha256": "D3A5EA0AC3C9DA1A10E7CDA6BD3FA0A7E7FA32D8781C968CEF3CD00ECDD58F1D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDihedralInputs.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalDihedralInputs.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceDickson.noncentral_scalar_square_trace_zero",
+    "Dubon2026.SourceDickson.original_projective_involution_trace_zero",
+    "Dubon2026.SourceDickson.dihedralReflectionSign_sq",
+    "Dubon2026.SourceDickson.dihedralReflectionSign_eq_neg_one",
+    "Dubon2026.SourceDickson.dihedralReflectionSign",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_sq",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_ne_one",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_negative_trace_zero",
+    "Dubon2026.SourceDickson.originalDihedralCharacter",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_eq_of_rep_eq",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_eq_one_of_rep_eq_one",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_dihedral_arithmetic_characters",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalDihedralArithmeticCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonCMDihedralInputs",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_dihedral_character_inputs"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceDickson.noncentral_scalar_square_trace_zero",
+    "Dubon2026.SourceDickson.original_projective_involution_trace_zero",
+    "Dubon2026.SourceDickson.dihedralReflectionSign_sq",
+    "Dubon2026.SourceDickson.dihedralReflectionSign_eq_neg_one",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_sq",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_ne_one",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_negative_trace_zero",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_eq_of_rep_eq",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_eq_one_of_rep_eq_one",
+    "Dubon2026.SourceDickson.originalDihedralCharacter_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_dihedral_arithmetic_characters",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_dihedral_character_inputs"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceDickson.dihedralReflectionSign",
+    "Dubon2026.SourceDickson.originalDihedralCharacter",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalDihedralArithmeticCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonCMDihedralInputs"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmeticAudit1.log",
+  "logSha256": "BF0A5FED8AAAD355E414038E3B04E1B692FF34EE9D4B345D51403C3583E9BBF3",
+  "auditSha256": "8B11B4CA651AEEC936D0AB3BE1C95A7CCC41FE3A6EA2AAEB264ABA7E0C0FFC36",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmeticDeclarations2589.log",
+  "ownershipSha256": "2E74D0CD3CD78188998304913118416C5E792D6243FBA338E67BC2EAC2EC0AE1",
+  "exhaustiveTheorems": 63,
+  "exhaustiveOtherDeclarations": 14,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 345,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmeticDependencyAudit1.log",
+  "dependencyAuditSha256": "CACBC8430B9465F9E113911E5014D6C0A2FB11791A4FFA39B6B4E98FA4ACB103",
+  "dependencyAuditSourceSha256": "702CA3843257850AC508190BCE38E0D94DC69CC1EE89201BEDEEE7BC75F24C6B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_dihedral_character_inputs"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-dihedral-arithmetic-reuse-review-2589.json",
+  "reuseReviewSha256": "B7B088959ED1FD49145654AE82F1CDF2F3523D1E82D359C471A1FA49CDC1F70F",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> eventual original residual large image -> dihedral exclusion -> the literal nontrivial continuous quadratic character of each original dihedral projective range, with zero original trace on negative values and trivial original inertia away from Qp. All preceding arithmetic, CM and bounded-conductor trace conclusions are retained. The Dirichlet comparison and uniform conductor bound remain open.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "semanticFingerprints": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmeticScratchSemantic2590.lean",
+    "sourceSha256": "769502E3E1F277E936748A7CA891D64F053B33705FA1CA4093B9ABEC235A11E2",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDihedralArithmeticScratchSemantic2590.log",
+    "sha256": "38FC6BD98FB41D5DC94550D085E4AB6FA4D6FDEBC9C30998801A06143C6A0ACF",
+    "declarations": 77
+  }
+}

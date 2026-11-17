@@ -1,0 +1,56 @@
+import SourceOriginalDihedralContinuity2584a
+import Dubon2026.SourceOriginalResidualLocalInterface
+
+/-! DUB-17/18 -> original dihedral image exclusion -> actual continuous
+quadratic arithmetic character. Every dihedral isomorphism of the same original
+projective range constructs its literal nontrivial parity character, zero
+original traces on negative values and triviality on every original inertia
+group away from Qp. The Dirichlet comparison and uniform conductor bound remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+open Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+
+
+
+/-- Literal continuous quadratic characters and original trace/inertia data for each dihedral realization of the same original projective range. -/
+def HasOriginalDihedralArithmeticCharacters (Q p : ℕ) [Fact p.Prime]
+    {F : Type} [Field F]
+    (ρ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →* GeneralLinearGroup (Fin 2) F) : Prop :=
+    ∀ (j : F →+* K p) (n : ℕ)
+      (e : (residualProjectiveAction p j ρ).range ≃* DihedralGroup n),
+      ∃ χ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →* ℂ,
+        χ = originalDihedralCharacter p j ρ n e ∧ Continuous χ ∧ χ ≠ 1 ∧
+        (∀ g, χ g ^ 2 = 1) ∧ (∀ g, χ g = -1 → (ρ g).val.trace = 0) ∧
+        ∀ (q : ℕ) (hq : q.Prime), ¬q ∣ Q * p → ∀ φ ∈ rationalPrimeNormInertia q hq,
+          χ (rationalPrimeArithmeticRestriction ((Q * p : ℕ) : 𝓞 ℚ) q hq φ) = 1
+
+/-- The same continuous original residual action constructs its actual dihedral quadratic characters, with the literal original field, trace and inertia comparisons. -/
+theorem original_dihedral_arithmetic_characters
+    (Q p : ℕ) [Fact p.Prime] {F : Type} [Field F]
+    [TopologicalSpace F] [DiscreteTopology F]
+    (ρ : rationalArithmeticGaloisGroup ((Q * p : ℕ) : 𝓞 ℚ) →* GeneralLinearGroup (Fin 2) F)
+    (hρ : Continuous ρ) : HasOriginalDihedralArithmeticCharacters Q p ρ := by
+  intro j n e
+  refine ⟨originalDihedralCharacter p j ρ n e, rfl,
+    originalDihedralCharacter_continuous p j ρ n e hρ,
+    originalDihedralCharacter_ne_one p j ρ n e,
+    originalDihedralCharacter_sq p j ρ n e,
+    originalDihedralCharacter_negative_trace_zero p j ρ n e, ?_⟩
+  intro q hq haway φ hφ
+  have haway' : ¬(q : 𝓞 ℚ) ∣ ((Q * p : ℕ) : 𝓞 ℚ) := by
+    intro hd
+    have hz := map_dvd Rat.ringOfIntegersEquiv.toRingHom hd
+    have hn : (q : ℤ) ∣ ((Q * p : ℕ) : ℤ) := by simpa only [map_natCast] using hz
+    exact haway (Int.natCast_dvd_natCast.mp hn)
+  apply originalDihedralCharacter_eq_one_of_rep_eq_one p j ρ n e
+  rw [rationalPrimeArithmeticRestriction_inertia_eq_one_of_away _ q hq haway' φ hφ, map_one]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

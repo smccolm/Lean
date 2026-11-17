@@ -1,0 +1,63 @@
+import Dubon2026.SourceOriginalRationalCMPolarized
+
+/-! DUB-17/18 -> polarized residual automorphy inputs. The original
+cyclotomic determinant gives the native real sign. Existing symmetric duality
+then constructs the actual polarized representation, with exact kernel matrices,
+CM component and odd similitude, over the same original coefficient field. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix
+open scoped NumberField
+
+/-- Keep the original rational scalar structure. -/
+private local instance originalCMPolarizedUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+/-- The actual rational bottom field is totally real. -/
+private local instance originalCMPolarizedBottomReal (a : 𝓞 ℚ) :
+    IsTotallyReal (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) :=
+  IsTotallyReal.ofRingEquiv (IntermediateField.botEquiv ℚ (rationalUnramifiedExtension a)).symm.toRingEquiv
+
+/-- Each genuine CM subfield supports the actual original polarized
+symmetric representation, with its literal kernel action, component and odd
+similitude. No CM existence or automorphy statement is hidden in this property. -/
+def HasOriginalRationalCMPolarizations
+    (a : 𝓞 ℚ) (p : ℕ) {L : Type} [Field L] [TopologicalSpace L]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) L) : Prop :=
+  ∀ (_ : DiscreteTopology L) (hρ : Continuous ρ)
+    (C : IntermediateField (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a))
+      (rationalUnramifiedExtension a))
+    (hC : IsQuadraticExtension (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) C)
+    (hComplex : IsTotallyComplex C) (n : ℕ), n < p →
+    letI := hC
+    letI := hComplex
+    let ρb : finiteBaseArithmeticGaloisGroup a
+        (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) →ₜ*
+        GeneralLinearGroup (Fin 2) L :=
+      (show rationalArithmeticGaloisGroup a →ₜ* GeneralLinearGroup (Fin 2) L from ⟨ρ, hρ⟩).comp
+        (originalRationalBottomRestriction a)
+    ∃ R : finiteBaseArithmeticGaloisGroup a
+        (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) →ₜ*
+        PolarizedGaloisGroup (Fin (n + 1)) L,
+      (∀ g : FiniteBaseCMKernel a ⊥ C,
+        R g.val = polarizedIdentityComponent
+          (homogeneousSymmetricGL n (ρb g.val), (GeneralLinearGroup.det (ρb g.val)) ^ n)) ∧
+      (∀ g, polarizedComponent (R g) = finiteBaseQuadraticComponent a ⊥ C g) ∧
+      polarizedSimilitude (R (finiteBaseRealConjugation a ⊥)) = -1
+
+/-- The proved original odd cyclotomic determinant constructs the entire
+polarized symmetric family over the same actual coefficient field. -/
+theorem original_rational_cyclotomic_cm_polarizations
+    (a : 𝓞 ℚ) (p w : ℕ) [Fact p.Prime] (hpa : (p : 𝓞 ℚ) ∣ a)
+    (hw : Odd w) {L : Type} [Field L] [Finite L] [CharP L p] [TopologicalSpace L]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) L)
+    (hdet : GeneralLinearGroup.det.comp ρ =
+      (sourceArithmeticCyclotomicUnitCharacter (F := L) p a hpa).toMonoidHom ^ w) :
+    HasOriginalRationalCMPolarizations a p ρ := by
+  intro hDiscrete hρ C hC hComplex n hn
+  letI := hC
+  letI := hComplex
+  exact original_rational_cm_exists_polarized_symmetric a p w n hpa hw hn ρ hρ hdet C
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-17T19:12:21.540466+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original large residual image -> dihedral image exclusion -> the original dihedral parity character and zero trace on its negative Frobenius classes.",
+  "reuseReview": "The native Dickson classification already supplies the actual projective range and a dihedral isomorphism. Mathlib has the literal DihedralGroup rotations/reflections, their multiplication and reflection square, matrix Cayley-Hamilton and GL center/scalar characterization. No matching original-field projective-involution trace-zero lemma was found in the bounded searches of the local matrix and source Dickson modules. Native quadratic rational idele-character to Dirichlet classification exists and will be reused after the original arithmetic character and reciprocity comparison are constructed.",
+  "boundedNextTask": "Prove trace zero for a nonidentity projective involution using the native rank-two characteristic polynomial, then construct the actual dihedral parity character of the same original projective range. Defer general projective representation classification and general character frameworks.",
+  "remaining": "The arithmetic character/Dirichlet comparison, its uniform conductor bound away from the varying residual characteristic, remaining cyclic/wild exclusions, required local deformation conditions and automorphy remain open.",
+  "noProductionMutation": true,
+  "limitsChanged": false,
+  "completedMathematicalObligation": "The same actual non-CM original integral and residual pair retains every prior arithmetic and CM conclusion and bounded-conductor inert Frobenius obstruction, and constructs each literal nontrivial continuous quadratic character of its original dihedral projective range. Negative values force zero original-field trace, and actual inertia away from Qp is trivial.",
+  "boundary": "A dihedral-character comparison and a conductor bound independent of residual characteristic still must be proved. No dihedral branch or final gate is closed; DUB-17--20 remain OPEN at 16/20.",
+  "scopeModules": [
+    "SourceProjectiveInvolutionTrace",
+    "SourceOriginalProjectiveInvolutionTrace",
+    "SourceDihedralReflectionSign",
+    "SourceOriginalDihedralCharacter",
+    "SourceOriginalDihedralContinuity",
+    "SourceOriginalDihedralArithmetic",
+    "SourceOriginalNonCMDihedralInputsProperty",
+    "SourceGammaOneOriginalDihedralInputs"
+  ]
+}

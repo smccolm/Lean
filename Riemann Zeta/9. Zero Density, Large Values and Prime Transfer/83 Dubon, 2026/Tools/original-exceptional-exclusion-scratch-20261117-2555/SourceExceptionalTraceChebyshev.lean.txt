@@ -1,0 +1,50 @@
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
+import Mathlib.RingTheory.Polynomial.Chebyshev
+
+/-! DUB-17/18 -> exceptional residual image exclusion -> a uniform polynomial
+relation in the actual Frobenius trace and determinant. Native Cayley-Hamilton
+and rescaled Chebyshev recursion avoid a new eigenvalue or diagonalization
+framework. The arithmetic nonvanishing and reduction bridges remain open. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix Polynomial
+variable {F : Type*} [Field F]
+
+private theorem det_one_matrix_square (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det = 1) : A ^ 2 = A.trace • A - 1 := by
+  have hc := Matrix.aeval_self_charpoly A
+  rw [Matrix.charpoly_fin_two] at hc
+  simp only [map_add, map_sub, map_mul, map_pow, aeval_X, aeval_C, h,
+    map_one, Algebra.algebraMap_eq_smul_one, smul_mul_assoc, one_mul] at hc
+  apply sub_eq_zero.mp
+  calc
+    A ^ 2 - (A.trace • A - 1) = A ^ 2 - A.trace • A + 1 := by abel
+    _ = 0 := hc
+
+/-- Traces of determinant-one matrix powers are the native rescaled Chebyshev values. -/
+theorem det_one_matrix_trace_pow_chebyshev (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det = 1) (n : ℕ) :
+    (A ^ n).trace = (Chebyshev.C F (n : ℤ)).eval A.trace := by
+  induction n using Nat.twoStepInduction with
+  | zero => simp
+  | one => simp
+  | more n ih0 ih1 =>
+    have hp : A ^ (n + 2) = A.trace • A ^ (n + 1) - A ^ n := by
+      calc
+        A ^ (n + 2) = A ^ 2 * A ^ n := by rw [← pow_add, Nat.add_comm]
+        _ = (A.trace • A - 1) * A ^ n := by rw [det_one_matrix_square A h]
+        _ = A.trace • A ^ (n + 1) - A ^ n := by
+          rw [sub_mul, smul_mul_assoc, one_mul, ← pow_succ']
+    rw [hp, trace_sub, trace_smul, ih0, ih1]
+    simp only [Nat.cast_add, Nat.cast_one, Nat.cast_ofNat, Chebyshev.C_add_two,
+      eval_sub, eval_mul, eval_X, smul_eq_mul]
+
+/-- A finite-order determinant-one matrix supplies its exact Chebyshev equation. -/
+theorem det_one_finite_order_trace_equation (A : Matrix (Fin 2) (Fin 2) F)
+    (h : A.det = 1) (n : ℕ) (hn : A ^ n = 1) :
+    (Chebyshev.C F (n : ℤ)).eval A.trace = 2 := by
+  rw [← det_one_matrix_trace_pow_chebyshev A h n, hn]
+  simp
+
+end
+end Dubon2026.SourceDickson

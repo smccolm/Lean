@@ -1,0 +1,45 @@
+import SourceOriginalIntegralCMDimensionField2512c
+
+/-! DUB-17/18 -> actual mixed-characteristic CM deformation input. Record
+the native complete local polarized quotient over the original integral ring,
+for the literal support pullbacks of the same integral and residual actions. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix IsLocalRing
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalIntegralCMDimensionPropertyUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+/-- The actual rational bottom field is totally real. -/
+private local instance originalIntegralCMDimensionPropertyBottomReal (a : 𝓞 ℚ) :
+    IsTotallyReal (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) :=
+  IsTotallyReal.ofRingEquiv (IntermediateField.botEquiv ℚ (rationalUnramifiedExtension a)).symm.toRingEquiv
+
+/-- A genuine CM field and the native complete local Noetherian polarized
+symmetric deformation rings over the original integral coefficient ring, with original full-adjoint vanishing and the exact native cotangent dimension in the range 2n<p-1.
+Noetherianity, finite residue, nonzero support, integral multiplier, residual
+compatibility and odd sign are conclusions. Source local conditions and
+automorphy are not asserted by this unrestricted deformation construction. -/
+def HasOriginalIntegralCMDimensions
+    (a : 𝓞 ℚ) (p : ℕ) [Fact p.Prime]
+    {O : Type} [CommRing O] [IsLocalRing O]
+    [TopologicalSpace (ResidueField O)] [CharP (ResidueField O) p]
+    (ρi : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) O)
+    (ρr : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) (ResidueField O)) : Prop :=
+  ∃ hNoeth : IsNoetherianRing O, ∃ hFinite : Finite (ResidueField O),
+  letI := hNoeth
+  letI := hFinite
+  ∀ (_ : DiscreteTopology (ResidueField O)) (hρr : Continuous ρr),
+  ∃ ha4 : (4 * a : 𝓞 ℚ) ≠ 0, ∃ hp4 : (p : 𝓞 ℚ) ∣ 4 * a,
+  ∃ C : IntermediateField (⊥ : IntermediateField ℚ (rationalUnramifiedExtension (4 * a)))
+      (rationalUnramifiedExtension (4 * a)),
+  ∃ hC : IsQuadraticExtension (⊥ : IntermediateField ℚ (rationalUnramifiedExtension (4 * a))) C,
+  ∃ hComplex : IsTotallyComplex C,
+  letI := hC
+  letI := hComplex
+  OriginalIntegralCMDimensionFieldData a p ha4 hp4 ρi ρr hρr C
+
+end
+end Dubon2026.SourceDickson

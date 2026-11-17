@@ -1,0 +1,11 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": "literal higher symmetric-power continuation -> automorphy -> actual CM polarized deformation dimension -> vanishing of the original full-adjoint global H0 term",
+  "reuse": "FiniteBaseCMSymmetricAdjointInvariants already proves the exact result from absolute CM irreducibility and the real component sign, but its public theorem assumes full SL2 image over the entire original residue field. The newly compiled finite_linear_bounds_original_cm_absolute_irreducible supplies the same native irreducibility from the constructed proper finite-subfield bounds. Reuse the existing scalar-descent and real-sign proof, changing only that upstream application and the degree range to 2n<p-1.",
+  "removedAssumption": "No full-original-field SL2-image premise is required; the original finite linear subfield branch suffices.",
+  "nextConsumer": "The native finiteBasePolarizedCotangent_finrank_add_invariants then gives the actual CM symmetric cotangent dimension after this H0 term is set to zero.",
+  "boundary": "Arithmetic image exclusions, local deformation conditions and automorphy remain open. No independent generalized Schur or scalar-extension framework is needed."
+}

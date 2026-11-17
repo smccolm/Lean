@@ -1,0 +1,58 @@
+import Dubon2026.SourceOriginalTorusPrimeLocalProperties
+import Dubon2026.ArithmeticConjugateCocycleFrobenius
+import Dubon2026.RationalPrimeSymmetricUnramifiedDimension
+
+/-! Exact original-object interfaces for DUB-17/18's split regular
+detecting primes and their local adjoint dimension. Every condition is
+about the same original field, action, cocycle, finite factor and Frobenius. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- The root-fixing original torus input to the native conjugate
+Chebotarev theorem, retaining the original non-coboundary condition. -/
+def HasArithmeticTorusRootDetection
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    {K : Type} [Field K] [TopologicalSpace K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a)) [TopologicalSpace A]
+    [DiscreteTopology A] [ContinuousSMul K A]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin (n + 1)) K)
+    (c : continuousRepresentationCocyclesOne A) : Prop :=
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  ∀ ζ : U, IsPrimitiveRoot ζ (p ^ (level + 1)) →
+    ∃ σ : Gal(U/ℚ), σ ζ = ζ ∧ (ρ σ).val.charpoly.Separable ∧
+      ∃ u : Kˣ, orderOf u = p - 1 ∧
+        IsConj (ρ σ) (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))) ∧
+        c.val σ ∉ LinearMap.range (A.ρ σ - 1)
+
+/-- Genuine regular detecting primes with an original torus Frobenius
+and the exact original local unramified adjoint H1 dimension. -/
+def HasArithmeticTorusDimensionalPrimes
+    (a : 𝓞 ℚ) (p n level : ℕ)
+    {K : Type} [Field K] [TopologicalSpace K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin (n + 1)) K)
+    (hρ : Continuous ρ) (c : continuousRepresentationCocyclesOne A) : Prop :=
+  let U := rationalUnramifiedExtension a
+  letI : Algebra ℚ U := U.algebra'
+  letI : IsGalois ℚ U := originalUnramifiedGaloisUnion_isGalois a
+  ∃ u : Kˣ, orderOf u = p - 1 ∧
+    ∃ D : FiniteGaloisIntermediateField ℚ U,
+      ∃ ψ : Gal(D/ℚ) →* GeneralLinearGroup (Fin (n + 1)) K × Equiv.Perm A,
+        (∀ w : Gal(U/ℚ), ψ (AlgEquiv.restrictNormalHom D w) =
+          (ρ w, cocycleAffinePermutation A c.val w)) ∧
+        (letI : NumberField D := NumberField.of_module_finite ℚ D
+         ∀ S : Finset ℕ, ∃ q : ℕ, ∃ hq : q.Prime,
+           q ∉ S ∧ ¬ (q : 𝓞 ℚ) ∣ a ∧ q ≡ 1 [MOD p ^ (level + 1)] ∧
+           Chebotarev.UnramifiedIn ℚ D (Ideal.span {(q : 𝓞 ℚ)}) ∧
+           OriginalTorusPrimeWitness a n u ρ D q hq ∧
+           OriginalPrimeAdjointDimension a n ρ hρ q hq ∧
+           rationalArithmeticH1PrimeRestriction a A hA q hq (Submodule.Quotient.mk c) ≠ 0)
+
+end
+end Dubon2026

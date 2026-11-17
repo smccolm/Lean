@@ -1,0 +1,66 @@
+import SourceOriginalIntegralCMDeformationRing2497b
+import SourceOriginalConstructedCMAssembly2489a
+
+/-! DUB-17/18 -> actual mixed-characteristic CM deformation input. Record
+the native complete local polarized quotient over the original integral ring,
+for the literal support pullbacks of the same integral and residual actions. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix IsLocalRing
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalIntegralCMPropertyUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+/-- The actual rational bottom field is totally real. -/
+private local instance originalIntegralCMPropertyBottomReal (a : 𝓞 ℚ) :
+    IsTotallyReal (⊥ : IntermediateField ℚ (rationalUnramifiedExtension a)) :=
+  IsTotallyReal.ofRingEquiv (IntermediateField.botEquiv ℚ (rationalUnramifiedExtension a)).symm.toRingEquiv
+
+/-- A genuine CM field and the native complete local Noetherian polarized
+symmetric deformation rings over the original integral coefficient ring.
+Noetherianity, finite residue, nonzero support, integral multiplier, residual
+compatibility and odd sign are conclusions. Source local conditions and
+automorphy are not asserted by this unrestricted deformation construction. -/
+def HasOriginalIntegralCMDeformations
+    (a : 𝓞 ℚ) (p : ℕ) [Fact p.Prime]
+    {O : Type} [CommRing O] [IsLocalRing O]
+    [TopologicalSpace (ResidueField O)] [CharP (ResidueField O) p]
+    (ρi : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) O)
+    (ρr : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) (ResidueField O)) : Prop :=
+  ∃ hNoeth : IsNoetherianRing O, ∃ hFinite : Finite (ResidueField O),
+  letI := hNoeth
+  letI := hFinite
+  ∀ (_ : DiscreteTopology (ResidueField O)) (hρr : Continuous ρr),
+  ∃ ha4 : (4 * a : 𝓞 ℚ) ≠ 0, ∃ hp4 : (p : 𝓞 ℚ) ∣ 4 * a,
+  ∃ C : IntermediateField (⊥ : IntermediateField ℚ (rationalUnramifiedExtension (4 * a)))
+      (rationalUnramifiedExtension (4 * a)),
+  ∃ hC : IsQuadraticExtension (⊥ : IntermediateField ℚ (rationalUnramifiedExtension (4 * a))) C,
+  ∃ hComplex : IsTotallyComplex C,
+  letI := hC
+  letI := hComplex
+  let π := (rationalArithmeticSupportRestriction a (4 * a) (dvd_mul_left a 4)).comp
+    (originalRationalBottomRestriction (4 * a))
+  let ρib := ρi.comp π.toMonoidHom
+  let ρrb : finiteBaseArithmeticGaloisGroup (4 * a)
+      (⊥ : IntermediateField ℚ (rationalUnramifiedExtension (4 * a))) →ₜ*
+      GeneralLinearGroup (Fin 2) (ResidueField O) :=
+    (show rationalArithmeticGaloisGroup a →ₜ* GeneralLinearGroup (Fin 2) (ResidueField O)
+      from ⟨ρr, hρr⟩).comp π
+  ∃ hodd : (ρrb (finiteBaseRealConjugation (4 * a) ⊥)).val.det = -1,
+  ∀ n : ℕ, ∀ hn : n < p,
+  ∃ ν : finiteBaseArithmeticGaloisGroup (4 * a)
+      (⊥ : IntermediateField ℚ (rationalUnramifiedExtension (4 * a))) →* Oˣ,
+    ν = originalIntegralCMSymmetricSimilitude (4 * a) ⊥ C n ρib ∧
+    (∀ g : FiniteBaseCMKernel (4 * a) ⊥ C,
+      (GeneralLinearGroup.det (ρrb g.val)) ^ n =
+        Units.map (algebraMap O (ResidueField O)) (ν g.val)) ∧
+    ν (finiteBaseRealConjugation (4 * a) ⊥) = -1 ∧
+    (let R := FiniteBaseCMSymmetricCoefficientRing (4 * a) ⊥ C n ρrb
+        (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν ha4 p Fact.out hp4
+     ∃ hlocal : IsLocalRing R, letI := hlocal
+       IsNoetherianRing R ∧ IsAdic (maximalIdeal R) ∧ IsAdicComplete (maximalIdeal R) R)
+
+end
+end Dubon2026.SourceDickson

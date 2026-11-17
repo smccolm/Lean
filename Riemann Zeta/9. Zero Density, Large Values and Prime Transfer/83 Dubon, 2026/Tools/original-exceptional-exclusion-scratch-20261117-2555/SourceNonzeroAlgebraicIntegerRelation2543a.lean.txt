@@ -1,0 +1,23 @@
+import Mathlib.NumberTheory.NumberField.Basic
+import Mathlib.RingTheory.Algebraic.Integral
+
+/-! DUB-17/18 -> exceptional original residual image exclusion -> finitely
+many possible residual characteristics. A nonzero actual coefficient-field
+value has an integer polynomial relation with nonzero constant coefficient.
+The native algebraicity theorem avoids a separate norm or denominator theory. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Polynomial
+open scoped nonZeroDivisors
+
+/-- Every nonzero number-field value has an integer relation with nonzero constant term. -/
+theorem nonzero_numberField_integer_relation
+    {F : Type*} [Field F] [NumberField F] (x : F) (hx : x ≠ 0) :
+    ∃ P : ℤ[X], P.coeff 0 ≠ 0 ∧ P.eval₂ (Int.castRingHom F) x = 0 := by
+  letI : Algebra.IsAlgebraic ℤ ℚ := IsLocalization.isAlgebraic (nonZeroDivisors ℤ)
+  have ha : IsAlgebraic ℤ x :=
+    (Algebra.IsAlgebraic.isAlgebraic (R := ℚ) x).restrictScalars ℤ
+  exact ha.exists_nonzero_coeff_and_aeval_eq_zero (mem_nonZeroDivisors_iff_ne_zero.mpr hx)
+
+end
+end Dubon2026.SourceDickson

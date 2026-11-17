@@ -1,0 +1,66 @@
+import Dubon2026.SourceOriginalCMAdjointVanishing
+import Dubon2026.FiniteBaseCMSymmetricCotangent
+
+/-! DUB-17/18 -> actual CM polarized deformation dimension. The native
+cotangent/cocycle comparison is reused with original-field adjoint vanishing
+derived from finite linear subfield bounds, removing a full-residue-field image
+assumption from the exact cotangent dimension formula. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open NumberField Algebra Matrix
+open scoped NumberField
+
+/-- Preserve the original rational scalar structure. -/
+private local instance originalCMCotangentUnionAlgebra (a : 𝓞 ℚ) :
+    Algebra ℚ (rationalUnramifiedExtension a) := (rationalUnramifiedExtension a).algebra'
+
+variable {O : Type} [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+  (a : 𝓞 ℚ) (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+  [FiniteDimensional ℚ F] [IsTotallyReal F]
+  (C : IntermediateField F (rationalUnramifiedExtension a))
+  [IsQuadraticExtension F C] [IsTotallyComplex C]
+  (p n : ℕ) [Fact p.Prime] [CharP (IsLocalRing.ResidueField O) p] (hn : n < p)
+  (ρ : finiteBaseArithmeticGaloisGroup a F →ₜ* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+  (hodd : (ρ (finiteBaseRealConjugation a F)).val.det = -1)
+  (ν : finiteBaseArithmeticGaloisGroup a F →* Oˣ)
+  (hνk : ∀ g : FiniteBaseCMKernel a F C,
+    (GeneralLinearGroup.det (ρ g.val)) ^ n =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (ν g.val))
+  (hνc : ν (finiteBaseRealConjugation a F) = -1)
+  (ha : a ≠ 0) (hpa : (p : 𝓞 ℚ) ∣ a)
+
+/-- The genuine original CM symmetric-power cotangent dimension equals its continuous full-adjoint H1 dimension plus the full matrix dimension; the invariant term is derived to vanish. -/
+theorem original_cm_symmetric_cotangent_finrank
+    (hp : 3 < p) (hsize : 2 * n < p - 1)
+    (j : IsLocalRing.ResidueField O →+* K p)
+    (hfinite : HasFiniteLinearSubfieldBounds p j ρ.toMonoidHom) :
+    (letI := finiteBaseCMSymmetricCoefficientRing_isLocal a F C n ρ
+       (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν hνk hνc ha p Fact.out hpa
+     letI := originalMaximalCotangentResidueModule
+       (finiteBaseCMSymmetricCoefficientResidueEquiv a F C p n hn ρ hodd ν hνk hνc ha hpa)
+     Module.finrank (IsLocalRing.ResidueField O)
+       (RelativeMaximalCotangent O (FiniteBaseCMSymmetricCoefficientRing a F C n ρ
+         (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν ha p Fact.out hpa)) =
+       Module.finrank (IsLocalRing.ResidueField O)
+         (ContinuousRepresentationH1 (polarizedAdjointRep
+           (finiteBaseCMSymmetricPolarizedRepresentation a F C n ρ
+             (factorial_cast_ne_zero_of_lt_char p n hn) hodd).toMonoidHom)
+           (polarizedAdjointAction_continuous _
+             (finiteBaseCMSymmetricPolarizedRepresentation a F C n ρ
+               (factorial_cast_ne_zero_of_lt_char p n hn) hodd).continuous)) + (n + 1) ^ 2) := by
+  letI := finiteBaseCMSymmetricCoefficientRing_isLocal a F C n ρ
+    (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν hνk hνc ha p Fact.out hpa
+  have h := finiteBasePolarizedCotangent_finrank_add_invariants a F ha p Fact.out hpa
+    (finiteBaseCMSymmetricPolarizedRepresentation a F C n ρ
+      (factorial_cast_ne_zero_of_lt_char p n hn) hodd) ν
+    (finiteBaseCMSymmetricResidualSimilitude a F C n ρ
+      (factorial_cast_ne_zero_of_lt_char p n hn) hodd ν hνk hνc)
+  rw [original_cm_polarized_adjoint_invariants_eq_bot a F C p n hn ρ hodd hp hsize j hfinite,
+    finrank_bot, add_zero, Fintype.card_fin] at h
+  exact h
+
+
+end
+end Dubon2026.SourceDickson

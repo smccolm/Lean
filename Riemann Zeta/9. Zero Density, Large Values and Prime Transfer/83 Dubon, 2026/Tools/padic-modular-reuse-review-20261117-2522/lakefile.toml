@@ -1,0 +1,25 @@
+name = "PadicModForms"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["PadicModForms"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+autoImplicit = false
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+
+# mathlib's linter set (`mathlibOnlyLinters` in mathlib's lakefile)
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header = true
+weak.linter.checkInitImports = true
+weak.linter.allScriptsDocumented = true
+weak.linter.pythonStyle = true
+weak.linter.style.longFile = 1500
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "PadicModForms"

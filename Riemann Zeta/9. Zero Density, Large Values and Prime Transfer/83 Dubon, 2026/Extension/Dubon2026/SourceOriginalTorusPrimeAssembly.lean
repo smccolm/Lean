@@ -1,0 +1,33 @@
+import Dubon2026.SourceOriginalTorusDetectionAssembly
+import Dubon2026.SourceOriginalTorusPrimeDimensions
+
+/-! DUB-17/18 -> original local deformation inputs. The native finite
+affine Chebotarev theorem carries the constructed original torus witness
+to the same local Frobenius, where the proved local dimension theorem applies. -/
+namespace Dubon2026
+noncomputable section
+open Matrix
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Root-fixing original torus detection supplies genuine congruence
+primes, nonzero original localization and exact local adjoint dimension. -/
+theorem rationalArithmetic_torus_dimensional_primes_of_root_detection
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p n level : ℕ) [Fact p.Prime]
+    (hpa : (p : 𝓞 ℚ) ∣ a) (hn : 2 * n < p - 1)
+    {K : Type} [Field K] [Finite K] [CharP K p]
+    [TopologicalSpace K] [DiscreteTopology K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [Finite A] [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (ρ : rationalArithmeticGaloisGroup a →ₜ* GeneralLinearGroup (Fin (n + 1)) K)
+    (c : continuousRepresentationCocyclesOne A)
+    (hroot : HasArithmeticTorusRootDetection a p n level A ρ.toMonoidHom c) :
+    HasArithmeticTorusDimensionalPrimes a p n level A hA ρ.toMonoidHom ρ.continuous c := by
+  have hprimes := rationalArithmetic_torus_primes_of_root_detection
+    a ha p n level hpa A hA ρ c hroot
+  exact rationalArithmetic_torus_detection_supplies_local_dimensions
+    a p n level hn A hA ρ.toMonoidHom ρ.continuous c hprimes
+
+end
+end Dubon2026

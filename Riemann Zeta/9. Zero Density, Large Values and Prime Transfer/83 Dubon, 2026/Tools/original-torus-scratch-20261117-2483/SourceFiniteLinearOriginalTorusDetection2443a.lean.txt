@@ -1,0 +1,100 @@
+import SourceSubfieldRegularKernel
+import SourceOriginalExtendedTraceTest
+import Dubon2026.SourceResidualFiniteLinearAlternatives
+import SourcePrimeSubfieldSL2Image2440a
+import SourceOriginalMappedTorusConjugacy2442c
+import SourceOriginalSymmetricTorusConjugacy2445a
+
+/-! DUB-17/18 -> actual original split regular detecting primes ->
+original local invariant dimensions. Restrict the already constructed SL2
+subfield lower bound to its canonical prime field. The regular unit then
+has original coefficients, and the original symmetric torus conjugator is
+constructed from the literal mapped roots. The original non-coboundary
+trace test is retained; no field-equality or original conjugator is supplied. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+
+/-- The actual finite subfield bounds construct the regular detecting element
+for every nonzero original trace-zero vector, without an extended-field H1 premise. -/
+theorem finite_linear_bounds_original_torus_kernel_detection
+    (p n : ℕ) [Fact p.Prime]
+    {G A F : Type} [Group G] [CommGroup A] [Field F] [CharP F p]
+    (j : F →+* K p) (ρ : G →* GeneralLinearGroup (Fin 2) F)
+    (χ : G →* A) (ω : A →* F) (hp3 : 3 < p)
+    (h : HasFiniteLinearSubfieldBounds p j ρ) (hn : 2 * n < p - 1)
+    (X : matrixTraceZeroSubmodule (Fin (n + 1)) F) (hX : X ≠ 0) :
+    ∃ g : G, χ g = 1 ∧ (homogeneousSymmetricGL n (ρ g)).val.charpoly.Separable ∧
+      ∃ u : Fˣ, orderOf u = p - 1 ∧
+        IsConj (homogeneousSymmetricGL n (ρ g))
+          (homogeneousSymmetricGL n (SpecialLinearGroup.toGL (ringSL2UnitDiagonal u))) ∧
+        X ∉ LinearMap.range
+        ((matrixTraceZeroCharacterRep ((homogeneousSymmetricGL n).comp ρ) (ω.comp χ)).ρ g - 1) := by
+  obtain ⟨m, _, E, _, jE, θ, B, _, _, hlo, _⟩ := h
+  let ρE := (MulEquiv.toMonoidHom (MulAut.conj B)).comp
+    ((GeneralLinearGroup.map jE).comp ρ)
+  let R := (homogeneousSymmetricGL n).comp ρ
+  let C := homogeneousSymmetricGL n B
+  let RE := (MulEquiv.toMonoidHom (MulAut.conj C)).comp
+    ((GeneralLinearGroup.map jE).comp R)
+  let T := (matrixTraceZeroAdjointRep
+    (MonoidHom.id (GeneralLinearGroup (Fin (n + 1)) E))).ρ
+  let Y := T C (traceZeroCoefficientEmbedding jE X)
+  have hY : Y ≠ 0 := by
+    intro hz
+    apply hX
+    apply traceZeroCoefficientEmbedding_injective jE
+    apply traceZeroConjugation_injective C
+    simpa only [map_zero] using hz
+  let θP := ZMod.castHom (dvd_refl p) E
+  let φ := ZMod.castHom (dvd_refl p) F
+  have hsize : 2 * n < Nat.card (ZMod p) - 1 := by
+    simpa only [Nat.card_eq_fintype_card, ZMod.card] using hn
+  letI : NeZero (2 : ZMod p) := ⟨fun hzero => by
+    have hle := Nat.le_of_dvd (by decide : 0 < 2)
+      ((CharP.cast_eq_zero_iff (ZMod p) p 2).mp hzero)
+    omega⟩
+  letI : NeZero (3 : ZMod p) := ⟨fun hzero => by
+    have hle := Nat.le_of_dvd (by decide : 0 < 3)
+      ((CharP.cast_eq_zero_iff (ZMod p) p 3).mp hzero)
+    omega⟩
+  have himage : ((GeneralLinearGroup.map θ).comp
+      (SpecialLinearGroup.toGL (n := Fin 2) (R := GaloisField p m))).range ≤ ρE.range := by
+    simpa only [MonoidHom.map_range] using hlo
+  have hprimeImage : ((GeneralLinearGroup.map θP).comp
+      (SpecialLinearGroup.toGL (n := Fin 2) (R := ZMod p))).range ≤ ρE.range :=
+    (prime_subfield_sl2_image_le p θ).trans himage
+  obtain ⟨u, hu, h₀, g, hg, hρg, hs, M, hM, htrace⟩ :=
+    finiteSubfield_exists_regular_character_kernel_trace p n θP hsize (by omega)
+      ρE χ hprimeImage Y hY
+  let uF := Units.map φ.toMonoidHom u
+  have huF : orderOf uF = p - 1 := by
+    change orderOf (Units.map φ.toMonoidHom u) = _
+    rw [orderOf_injective _ (Units.map_injective φ.injective), hu]
+    simp only [Nat.card_eq_fintype_card, ZMod.card]
+  have hconj := original_mapped_torus_conjugacy_of_subfield_lift jE φ θP
+    (Subsingleton.elim _ _) (ρ g) B u h₀ hρg
+  have hOriginal := original_symmetric_torus_conjugacy_of_mapped_torus jE n (ρ g) uF
+    (by rw [huF]; exact hn) hconj
+  have he : ((homogeneousSymmetricGL n).comp ρE) = RE := by
+    apply MonoidHom.ext
+    intro s
+    change homogeneousSymmetricGL n (B * GeneralLinearGroup.map jE (ρ s) * B⁻¹) =
+      C * GeneralLinearGroup.map jE (homogeneousSymmetricGL n (ρ s)) * C⁻¹
+    rw [map_mul, map_mul, map_inv, ← homogeneousSymmetricGL_map]
+  change (((homogeneousSymmetricGL n).comp ρE) g).val.charpoly.Separable at hs
+  change (((homogeneousSymmetricGL n).comp ρE) g).val * M.val =
+    M.val * (((homogeneousSymmetricGL n).comp ρE) g).val at hM
+  rw [he] at hs hM
+  have hpol : (RE g).val.charpoly = ((R g).val.charpoly).map jE := by
+    change (C.val * (R g).val.map jE * (C⁻¹).val).charpoly = _
+    rw [GeneralLinearGroup.coe_inv, Matrix.charpoly_units_conj, Matrix.charpoly_map]
+  refine ⟨g, hg, ?_, uF, huF, hOriginal, ?_⟩
+  · rw [hpol] at hs
+    exact (Polynomial.separable_map jE).mp hs
+  · apply traceZero_notMem_coboundary_of_extended_conjugate_test jE R (ω.comp χ) C g
+      (by change ω (χ g) = 1; rw [hg, map_one]) X M hM
+    exact htrace
+
+end
+end Dubon2026.SourceDickson

@@ -1,0 +1,54 @@
+import SourceOriginalNonzeroPrimeCoefficient2540f
+import SourceExceptionalCoefficientPrimeSupport2538b
+import SourceOriginalRationalBottomOdd
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional image
+exclusions. The actual primitive form supplies a fixed good prime whose actual
+Fourier trace ratio has a nonzero value under the same integer polynomial that
+vanishes in all three exceptional residual branches. Finite-characteristic
+reduction of this nonzero algebraic value is the remaining exclusion step. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open Polynomial Dubon2026.SourceDickson
+
+/-- The actual primitive form supplies a nonzero fixed exceptional-polynomial obstruction at a good prime outside any finite set. -/
+theorem exists_original_exceptional_prime_obstruction
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (S : Finset ℕ) :
+    ∃ q : ℕ, q.Prime ∧ q ∉ S ∧ ¬ q ∣ Q ∧
+      sourcePrimitiveFieldCoefficient f q ≠ 0 ∧
+      exceptionalTracePolynomial.eval₂ (Int.castRingHom (sourcePrimitiveCoefficientField f))
+        (sourcePrimitiveFieldCoefficient f q ^ 2 /
+          (q : sourcePrimitiveCoefficientField f) ^ (k - 1).toNat) ≠ 0 := by
+  letI := sourcePrimitiveCoefficientField_numberField f hk
+  let F := sourcePrimitiveCoefficientField f
+  let bad := exceptionalCoefficientRamifiedPrimes F
+  obtain ⟨q, hq, hqS, ha⟩ := exists_original_nonzero_prime_coefficient Q f hk
+    ((S ∪ bad) ∪ (14400 * Q).primeFactors)
+  have hqS0 : q ∉ S := fun h => hqS (Finset.mem_union_left _ (Finset.mem_union_left _ h))
+  have hqbad : q ∉ bad := fun h => hqS (Finset.mem_union_left _ (Finset.mem_union_right _ h))
+  have hqprod : ¬ q ∣ 14400 * Q := by
+    intro h
+    exact hqS (Finset.mem_union_right _ (Nat.mem_primeFactors.mpr
+      ⟨hq, h, mul_ne_zero (by omega) (NeZero.ne Q)⟩))
+  have hqQ : ¬ q ∣ Q := fun h => hqprod (dvd_mul_of_dvd_right h 14400)
+  have hqconst : ¬ (q : ℤ) ∣ (-14400 : ℤ) := by
+    intro h
+    have hn : q ∣ 14400 := Int.natCast_dvd_natCast.mp (dvd_neg.mp h)
+    exact hqprod (dvd_mul_of_dvd_left hn Q)
+  have hw := original_primitive_determinantExponent_odd f hk
+  have hnonzero := exceptional_coefficient_ratio_nonvanishing_outside_support F q hq
+    hqbad hqconst (sourcePrimitiveFieldCoefficient f q) ha (k - 1).toNat hw
+  refine ⟨q, hq, hqS0, hqQ, ha, ?_⟩
+  let x : F := sourcePrimitiveFieldCoefficient f q ^ 2 / (q : F) ^ (k - 1).toNat
+  have hx : x ≠ 0 := div_ne_zero (pow_ne_zero _ ha)
+    (pow_ne_zero _ (by exact_mod_cast hq.ne_zero))
+  have he := congrArg (fun P : ℤ[X] => P.eval₂ (Int.castRingHom F) x)
+    exceptionalNonzeroTracePolynomial_mul_X
+  dsimp only at he
+  rw [eval₂_mul, eval₂_X] at he
+  rw [← he]
+  exact mul_ne_zero hnonzero hx
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

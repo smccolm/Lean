@@ -1,0 +1,16 @@
+{
+  "scopes": [
+    {
+      "receipt": "source-original-cm-dimensions-1-scratch-receipt.json",
+      "sha256": "F7ED5A5962E49A769F75A263C3AA05F60DCE2395F6D19014300C81C0BE33522D",
+      "modules": 9,
+      "queries": 13,
+      "exhaustiveTheorems": 73,
+      "other": 17,
+      "requiredValueEdges": 257
+    }
+  ],
+  "overlappingScopes": false,
+  "distinctFinalGatesClosed": 0,
+  "productionMutation": false
+}

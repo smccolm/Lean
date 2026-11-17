@@ -1,0 +1,20 @@
+{
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "dependencyChain": "literal higher symmetric-power continuation -> automorphy -> actual CM polarized deformation dimension -> vanishing of the original full-adjoint global H0 term",
+  "reuse": "FiniteBaseCMSymmetricAdjointInvariants already proves the exact result from absolute CM irreducibility and the real component sign, but its public theorem assumes full SL2 image over the entire original residue field. The newly compiled finite_linear_bounds_original_cm_absolute_irreducible supplies the same native irreducibility from the constructed proper finite-subfield bounds. Reuse the existing scalar-descent and real-sign proof, changing only that upstream application and the degree range to 2n<p-1.",
+  "removedAssumption": "No full-original-field SL2-image premise is required; the original finite linear subfield branch suffices.",
+  "nextConsumer": "The native finiteBasePolarizedCotangent_finrank_add_invariants then gives the actual CM symmetric cotangent dimension after this H0 term is set to zero.",
+  "boundary": "Arithmetic image exclusions, local deformation conditions and automorphy remain open. No independent generalized Schur or scalar-extension framework is needed.",
+  "status": "All nine selected versioned modules and the actual-form dimension consumer compile with zero diagnostics. Full scratch audit pending.",
+  "sourceConsumer": "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_cm_deformation_dimensions",
+  "scope": "On the original finite linear subfield branch, the same actual modular-form integral/residual pair supplies a genuine CM field, an explicitly original integral multiplier, and one native complete local Noetherian polarized ring with full-adjoint H0 zero and cotangent dimension equal to original full-adjoint H1 dimension plus (n+1)^2 in the range 2n<p-1. Every earlier original conclusion and the small-image alternative remain.",
+  "reuseRoute": "Apply the proved finite-subfield CM absolute irreducibility inside the native scalar-descent and real-sign argument. Reuse the native cotangent/cocycle equality. Unpack the already constructed integral multiplier and apply both results to that same native ring. Transport the original bounds directly through the composite support/bottom restriction using its proved surjectivity, avoiding costly reassociation normalization.",
+  "failuresRetained": [
+    "SourceOriginalIntegralCMDimensionField2512a and SourceOriginalSupportBottomBounds2516a hit default elaboration limits. Selected 2516b uses the literal composite directly, and selected 2512c--2515c compile without raising limits. Unexecuted intervening variants remain retained."
+  ],
+  "limitsChanged": false,
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

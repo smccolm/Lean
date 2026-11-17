@@ -1,0 +1,142 @@
+{
+  "recordedUTC": "2026-11-17T19:12:54.918942+00:00",
+  "date": "2026-11-17",
+  "modules": [
+    "SourceNonCMInertPrime",
+    "SourceNonCMInertIntegerObstruction",
+    "SourceOriginalCoefficientReductionObstruction",
+    "SourceNonCMOriginalInertReductionBound",
+    "SourceNonCMBoundedConductorReduction",
+    "SourceOriginalBoundedQuadraticFrobenius",
+    "SourceOriginalNonCMBoundedInputsProperty",
+    "SourceGammaOneOriginalNonCMBoundedInputs"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMInertPrime.lean",
+      "sha256": "B59CD402FC9942B6A86E20122A06A446714D42A8FFA8E0C2EA55A1F7BC0866F5",
+      "oleanSha256": "A7E9953A52FDC893608557F615043D89F50C4B459B528FF205BE6BE389B9ED5A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMInertPrime.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMInertPrime.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMInertIntegerObstruction.lean",
+      "sha256": "7504049E86C64F51E7F924BC4B48618A2CFE8E697FAC5BC4F93DF68CC960501D",
+      "oleanSha256": "3BFBA15DE7401054B009756F9A35E181DB975D879B5A416CC59BBDB64FE4CE91",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMInertIntegerObstruction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMInertIntegerObstruction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientReductionObstruction.lean",
+      "sha256": "B1BC2DCD910806FBB633574B30D21FE025FBB1023E988D14631223B539708AD2",
+      "oleanSha256": "7C24F1AD3AB5E09D3017BF5E9818D1F269F33214A14B998605CE977B1DB61BB0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientReductionObstruction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientReductionObstruction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMOriginalInertReductionBound.lean",
+      "sha256": "E74E83512D9F7B8AC4DE0CDC0B20AC7EA034526C8D41E98547E630A003895947",
+      "oleanSha256": "57A9636945EBC150AF568F306D881971F0389B2336BE99FA706BD423A79EA473",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMOriginalInertReductionBound.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMOriginalInertReductionBound.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMBoundedConductorReduction.lean",
+      "sha256": "1A139EA390277FA2250307995FE7712AEEABDF9331AA8EB88D8EE2D6FA3A5871",
+      "oleanSha256": "8CB45403D3292883AE43FF4A8A92CE1DBE7F0AE3550602974A7D558C083814CC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMBoundedConductorReduction.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNonCMBoundedConductorReduction.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBoundedQuadraticFrobenius.lean",
+      "sha256": "B8B1DF42042DF58BA20BB920522169A7744B3E4B27F54761C53AF332CF80BF0A",
+      "oleanSha256": "33938DD1C8A1A387CAAACD1F8BD864DAA1FF5AA5E48161FE7C307969E28EEF66",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBoundedQuadraticFrobenius.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBoundedQuadraticFrobenius.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedInputsProperty.lean",
+      "sha256": "E1408E710F91FC575D88954E027FF1CB69AE5E0E18ABD76FAD3C5ACD5EEB3778",
+      "oleanSha256": "A2572E8893F3186E3EFFF53BB46A6EDE4F2CD1313CE76D3247124EAC06DD72C6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedInputsProperty.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedInputsProperty.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalNonCMBoundedInputs.lean",
+      "sha256": "82E02CC8261A8A6C53F162B3C34F039346C75B894062FF88D6DE2594EE9AABDF",
+      "oleanSha256": "8C90EAEAC65EB02A52D8A16E31AADCF027795B2E090610A89134A4013E8C1D7E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalNonCMBoundedInputs.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalNonCMBoundedInputs.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_prime_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_integer_obstruction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_coefficient_zero_reduction_dvd_relation_constant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_reduction_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_bounded_conductor_reduction_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_bounded_quadratic_frobenius_of_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalBoundedQuadraticFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonCMBoundedInputs",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonCM_bounded_inputs"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_prime_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_integer_obstruction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_coefficient_zero_reduction_dvd_relation_constant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_inert_reduction_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonCM_exists_original_bounded_conductor_reduction_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.original_bounded_quadratic_frobenius_of_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonCM_bounded_inputs"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalBoundedQuadraticFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.HasOriginalNonCMBoundedInputs"
+  ],
+  "separatelyAxiomChecked": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedAudit1.log",
+  "logSha256": "B87EB7E65688CD921BE30D42EBF748937EE3966D44023B8EAC820EDD1F87D8E6",
+  "auditSha256": "30D17473D7622A29719775472049446CADAEF85FDA55FA728722F80522C28887",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedDeclarations2568.log",
+  "ownershipSha256": "45D7FE26131F6FD51B0F75A598E9ED631A11D472C9691D19CEB9428B8AC6F084",
+  "exhaustiveTheorems": 56,
+  "exhaustiveOtherDeclarations": 10,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 326,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedDependencyAudit3.log",
+  "dependencyAuditSha256": "C98429C947623D7E02B905714A49FD0BC189BCD86F905A9A1457569A1F3BA0D3",
+  "dependencyAuditSourceSha256": "2635AF5A0F5B6B641FE521727D5D6CDD7401C25F2B940ACC17C68E795C33A2D3",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_original_nonCM_bounded_inputs"
+  ],
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\original-noncm-bounded-reuse-review-2568.json",
+  "reuseReviewSha256": "EF4CAA5BE2546C075AA0642D00E2C342C3D89D17009F19C23622A8F7D3221C5C",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> eventual original residual large image -> dihedral exclusion -> original nonzero inert Frobenius traces for every source primitive nontrivial quadratic character of bounded conductor. The same complete original integral/residual pair and all prior arithmetic and CM conclusions are retained. The actual dihedral-character comparison and an independent uniform conductor bound remain open.",
+  "boundary": "Scratch PASS; production promotion, exact ownership/type/value reconciliation and full assembled verification remain pending. 16/20 accepted; DUB-17--20 OPEN.",
+  "proofValueReconciliation": {
+    "initialAudits": [
+      "SourceOriginalNonCMBoundedDependencyAudit1",
+      "SourceOriginalNonCMBoundedDependencyAudit2"
+    ],
+    "passingCandidate": "SourceOriginalNonCMBoundedDependencyAudit3",
+    "replacementRequired": "Dubon2026.sourcePrimitiveFieldCoefficient",
+    "reason": "The first audit over-qualified the native coefficient coercion lemma namespace. The second also over-qualified the underlying definition. A separate proof-value probe of the actual native names confirms the correct coercion theorem exists but is absent from the compiled closure, while the literal sourcePrimitiveFieldCoefficient definition is present. The coercion theorem is rfl and its simp use reduces definitionally. The fresh strict audit requires that actual definition, with all other 325 requirements and all mathematical source bodies unchanged.",
+    "probe": "SourceOriginalNonCMBoundedDependencyProbe2573.log",
+    "probeSha256": "F6F3B4AA4F1936851882461CD7316928AD5C3CA19985B7F88B853FD0421E3BE5",
+    "mathematicalProofChanged": false,
+    "sourceAssumptionsChanged": false
+  },
+  "productionDeclarationRenames": {},
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "semanticFingerprints": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedScratchSemantic2569b.lean",
+    "sourceSha256": "7EE9F1361AC1ACF21BF18C22C284FC343EA93B3817C258139EBEC5792E8647D3",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonCMBoundedScratchSemantic2569b.log",
+    "sha256": "90ED179BDAA88D1F73892A7D0D35DABC1FE95633B422C46A00DEC60C7D7D7B57",
+    "declarations": 66
+  }
+}

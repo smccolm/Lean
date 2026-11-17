@@ -1,0 +1,40 @@
+import SourceOriginalTorusClassPrimes
+import SourceOriginalTorusFamilyProperty
+import SourceOriginalCoefficientH1Finite
+import SourcePrimeIndexedDetectingFamily
+
+/-! DUB-17/18 -> original dual-Selmer prime selection. Original-coefficient
+global H1 finiteness and native finite detecting families remove both a
+finite-dimensionality premise and a supplied family of auxiliary primes. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+
+/-- The same original H1 subspace admits jointly injective localization
+at at most its dimension many regular primes outside any forbidden set. -/
+theorem rationalArithmetic_original_torus_detecting_family
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p n level : ℕ) [Fact p.Prime]
+    (hpa : (p : 𝓞 ℚ) ∣ a)
+    {K : Type} [Field K] [CharP K p] [TopologicalSpace K]
+    [DiscreteTopology K] [IsTopologicalRing K]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [Finite A] [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup (Fin (n + 1)) K)
+    (hR : Continuous R)
+    (hdetect : HasArithmeticTorusCocycleDetection a p n level A hA R hR) :
+    HasArithmeticTorusDetectingFamily a p n level A hA R hR := by
+  intro P S
+  classical
+  haveI := rationalArithmeticOriginalCoefficientH1_finite a ha p hpa A hA
+  haveI : Module.Finite K P := Module.Finite.of_finite
+  let L (q : Nat.Primes) :=
+    (rationalArithmeticH1PrimeRestriction a A hA q.val q.property).comp P.subtype
+  apply finite_detecting_prime_family_of_pointwise L
+    (RationalArithmeticOriginalTorusAuxiliaryPrime a p n level R hR) ?_ S
+  intro x hx
+  exact rationalArithmetic_original_class_torus_prime a p n level A hA R hR hdetect
+    x.val (fun h => hx (Subtype.ext h))
+
+end
+end Dubon2026

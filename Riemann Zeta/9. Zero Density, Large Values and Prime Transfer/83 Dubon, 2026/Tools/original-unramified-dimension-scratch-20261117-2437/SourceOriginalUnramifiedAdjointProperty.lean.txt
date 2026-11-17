@@ -1,0 +1,44 @@
+import SourceOriginalPrimeUnramifiedDimension
+import Dubon2026.RationalPrimeSymmetricUnramifiedDimension
+import Dubon2026.HomogeneousSymmetricContinuity
+
+/-! DUB-17/18 -> original local deformation dimensions. The exact local
+unramified H1/invariant equality holds for the original coefficient field
+and every symmetric adjoint of the same original arithmetic action. The
+remaining regular-Frobenius invariant dimension is not assumed here. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+
+/-- The actual local unramified adjoint dimension equals the actual
+invariant dimension over the specified original coefficient field. -/
+def HasOriginalUnramifiedAdjointDimensions
+    (a : 𝓞 ℚ)
+    {F : Type} [Field F] [TopologicalSpace F]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  ∀ (_ : DiscreteTopology F) (_ : IsTopologicalRing F) (hρ : Continuous ρ)
+    (n q : ℕ) (hq : q.Prime),
+    let R := ((homogeneousSymmetricGL n).comp ρ).comp
+      (rationalPrimeArithmeticRestriction a q hq).toMonoidHom
+    let hR := ((homogeneousSymmetricGL_continuous n).comp hρ).comp
+      (rationalPrimeArithmeticRestriction a q hq).continuous
+    let A := matrixTraceZeroAdjointRep R
+    let hA := matrixTraceZeroAdjointAction_continuous R hR
+    Module.finrank F (continuousRepresentationH1Restriction A hA
+      (rationalPrimeNormInertia q hq).subtype continuous_subtype_val).ker =
+      Module.finrank F A.ρ.invariants
+
+/-- Native local arithmetic and proved original coefficient finiteness
+discharge the complete local unramified/invariant comparison. -/
+theorem original_finite_residual_unramified_adjoint_dimensions
+    (a : 𝓞 ℚ) (p : ℕ) [Fact p.Prime]
+    {F : Type} [Field F] [Finite F] [CharP F p] [TopologicalSpace F]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) F) :
+    HasOriginalUnramifiedAdjointDimensions a ρ := by
+  intro hDiscrete hRing hρ n q hq
+  dsimp only
+  exact rationalPrime_originalCoefficient_unramified_finrank_eq_invariants q hq p _ _
+
+end
+end Dubon2026.SourceDickson

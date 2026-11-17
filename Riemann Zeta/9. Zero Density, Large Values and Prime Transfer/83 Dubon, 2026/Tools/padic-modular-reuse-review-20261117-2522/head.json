@@ -1,0 +1,137 @@
+{
+  "sha": "018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+  "node_id": "C_kwDORvWFE9oAKDAxOGU5N2QxZWE0M2ZjMjlkOTYxZDJkM2E5N2ZmZjg1YmNiNDgxZjA",
+  "commit": {
+    "author": {
+      "name": "Riccardo Brasca",
+      "email": "riccardo.brasca@gmail.com",
+      "date": "2026-11-07T16:09:04Z"
+    },
+    "committer": {
+      "name": "Riccardo Brasca",
+      "email": "riccardo.brasca@gmail.com",
+      "date": "2026-11-07T16:09:04Z"
+    },
+    "message": "bump",
+    "tree": {
+      "sha": "3386c9eb659346ba2b7d256f8aa76bc62a530d48",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/trees/3386c9eb659346ba2b7d256f8aa76bc62a530d48"
+    },
+    "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/git/commits/018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgzIkUkbfsKKpEEOseMxBDdzR4Io\nQEqGRm4veCk9q2IGgAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQJXaxBipmC357ZBgFbZPRXTGREzoTMHWV6qYuYr3iErDxPBIP6fXPPDT72fbWw+7+7\n3mPAhUq8w82LSqF84Fmws=\n-----END SSH SIGNATURE-----",
+      "payload": "tree 3386c9eb659346ba2b7d256f8aa76bc62a530d48\nparent 54474a913c18a3468a087d0800ec43c7e7579a14\nauthor Riccardo Brasca <riccardo.brasca@gmail.com> 1794067744 +0100\ncommitter Riccardo Brasca <riccardo.brasca@gmail.com> 1794067744 +0100\n\nbump\n",
+      "verified_at": "2026-11-07T16:09:11Z"
+    }
+  },
+  "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/commits/018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+  "html_url": "https://github.com/ANR-FALSE/PadicModForms/commit/018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+  "comments_url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/commits/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/comments",
+  "author": {
+    "login": "riccardobrasca",
+    "id": 32490532,
+    "node_id": "MDQ6VXNlcjMyNDkwNTMy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32490532?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/riccardobrasca",
+    "html_url": "https://github.com/riccardobrasca",
+    "followers_url": "https://api.github.com/users/riccardobrasca/followers",
+    "following_url": "https://api.github.com/users/riccardobrasca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/riccardobrasca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/riccardobrasca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/riccardobrasca/subscriptions",
+    "organizations_url": "https://api.github.com/users/riccardobrasca/orgs",
+    "repos_url": "https://api.github.com/users/riccardobrasca/repos",
+    "events_url": "https://api.github.com/users/riccardobrasca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/riccardobrasca/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "riccardobrasca",
+    "id": 32490532,
+    "node_id": "MDQ6VXNlcjMyNDkwNTMy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32490532?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/riccardobrasca",
+    "html_url": "https://github.com/riccardobrasca",
+    "followers_url": "https://api.github.com/users/riccardobrasca/followers",
+    "following_url": "https://api.github.com/users/riccardobrasca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/riccardobrasca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/riccardobrasca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/riccardobrasca/subscriptions",
+    "organizations_url": "https://api.github.com/users/riccardobrasca/orgs",
+    "repos_url": "https://api.github.com/users/riccardobrasca/repos",
+    "events_url": "https://api.github.com/users/riccardobrasca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/riccardobrasca/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "54474a913c18a3468a087d0800ec43c7e7579a14",
+      "url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/commits/54474a913c18a3468a087d0800ec43c7e7579a14",
+      "html_url": "https://github.com/ANR-FALSE/PadicModForms/commit/54474a913c18a3468a087d0800ec43c7e7579a14"
+    }
+  ],
+  "stats": {
+    "total": 115,
+    "additions": 51,
+    "deletions": 64
+  },
+  "files": [
+    {
+      "sha": "1affacce8bc129ae5526e9ae03f1b24f8c4adb1f",
+      "filename": "PadicModForms/ForMathlib/Bernoulli.lean",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 37,
+      "changes": 65,
+      "blob_url": "https://github.com/ANR-FALSE/PadicModForms/blob/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/PadicModForms%2FForMathlib%2FBernoulli.lean",
+      "raw_url": "https://github.com/ANR-FALSE/PadicModForms/raw/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/PadicModForms%2FForMathlib%2FBernoulli.lean",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/contents/PadicModForms%2FForMathlib%2FBernoulli.lean?ref=018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+      "patch": "@@ -35,11 +35,11 @@ instance `k = p + 1` of Kummer's congruence.\n \n public section\n \n-open Finset Ideal Nat\n+open Finset Nat\n \n variable {k : \u2115}\n \n-/-! ### Nonvanishing and denominators -/\n+/-! ### Nonvanishing -/\n \n theorem bernoulli_ne_zero_of_even (hk : 3 \u2264 k) (hk2 : Even k) : bernoulli k \u2260 0 :=\n     fun h \u21a6 by\n@@ -50,48 +50,39 @@ theorem bernoulli_ne_zero_of_even (hk : 3 \u2264 k) (hk2 : Even k) : bernoulli k \n \n variable {p : \u2115} [hp : Fact p.Prime]\n \n-/-- If `k` is positive and even, and `p - 1 \u2223 k`, then the denominator of `B\u2096\u207b\u00b9` is\n-not divisible by `p`. -/\n-theorem not_dvd_den_inv_bernoulli (hk : 0 < k) (hk2 : Even k)\n-    (hpk : p - 1 \u2223 k) : \u00ac p \u2223 (bernoulli k)\u207b\u00b9.den := by\n-  obtain \u27e8m, rfl\u27e9 := hk2\n-  rw [\u2190 two_mul] at hk hpk \u22a2\n-  have hnum : \u00ac p \u2223 (bernoulli (2 * m)).num.natAbs :=\n-    Int.natCast_dvd.not.1 (Bernoulli.not_dvd_num_bernoulli (by lia) hpk)\n-  rwa [Rat.den_inv_of_ne_zero fun h \u21a6 hnum (by simp [h])]\n-\n-/-- If `k` is positive and even, and `p - 1 \u2223 k`, then `p` divides the numerator of `B\u2096\u207b\u00b9`:\n-by von Staudt\u2013Clausen `p` divides the denominator of `B\u2096`. -/\n-theorem dvd_num_inv_bernoulli (hk : 0 < k) (hk2 : Even k)\n-    (hpk : p - 1 \u2223 k) : (p : \u2124) \u2223 (bernoulli k)\u207b\u00b9.num := by\n-  obtain \u27e8m, rfl\u27e9 := hk2\n-  rw [\u2190 two_mul] at hk hpk \u22a2\n-  rw [Rat.num_inv]\n-  exact dvd_mul_of_dvd_right (mod_cast Bernoulli.dvd_den_bernoulli (by lia) hpk) _\n-\n /-! ### Integrality of `B\u2096\u207b\u00b9` at `p` -/\n \n-/-- If `p` is prime, `k \u2265 3` is even, and `p - 1 \u2223 k`, then `B\u2096\u207b\u00b9` is `p`-integral. -/\n+/-- If `p` is prime, `k \u2265 3` is even, and `p - 1 \u2223 k`, then `B\u2096\u207b\u00b9` is `p`-integral: by von\n+Staudt\u2013Clausen, `B\u2096` has `p`-adic valuation `-1`, i.e. `Rat.padicValuation p B\u2096 = exp 1`\n+(`Bernoulli.padicValuation_bernoulli`). -/\n theorem inv_bernoulli_mem_pLocalInt (hk : 3 \u2264 k) (hk2 : Even k)\n-    (hpk : p - 1 \u2223 k) : (bernoulli k)\u207b\u00b9 \u2208 pLocalInt p :=\n-  (mem_pLocalInt_iff p).2 <| not_dvd_den_inv_bernoulli (by lia) hk2 hpk\n+    (hpk : p - 1 \u2223 k) : (bernoulli k)\u207b\u00b9 \u2208 pLocalInt p := by\n+  obtain \u27e8m, rfl\u27e9 := hk2\n+  rw [\u2190 two_mul] at hk hpk \u22a2\n+  rw [mem_pLocalInt_iff_padicValuation_le_one, map_inv\u2080,\n+    Bernoulli.padicValuation_bernoulli (by lia) hpk]\n+  simp\n+\n+/-- If `p - 1 \u2223 k`, then `p` divides `B\u2096\u207b\u00b9` in the localization of `\u2124` at `p`: the quotient\n+`B\u2096\u207b\u00b9 / p` has `p`-adic valuation `0` (`Bernoulli.padicValuation_bernoulli`), so it is\n+`p`-integral. -/\n+theorem p_dvd_inv_bernoulli (hk : 3 \u2264 k) (hk2 : Even k)\n+    (hpk : p - 1 \u2223 k) : (p : pLocalInt p) \u2223 \u27e8_, inv_bernoulli_mem_pLocalInt hk hk2 hpk\u27e9 := by\n+  refine \u27e8\u27e8(bernoulli k)\u207b\u00b9 / p, ?_\u27e9, ?_\u27e9\n+  \u00b7 obtain \u27e8m, rfl\u27e9 := hk2\n+    rw [\u2190 two_mul] at hk hpk \u22a2\n+    rw [mem_pLocalInt_iff_padicValuation_le_one, map_div\u2080, map_inv\u2080,\n+      Bernoulli.padicValuation_bernoulli (by lia) hpk, Rat.padicValuation_natCast,\n+      Int.padicValuation_self]\n+    simp\n+  \u00b7 ext\n+    exact (mul_div_cancel\u2080 _ (Nat.cast_ne_zero.2 hp.out.ne_zero)).symm\n \n /-- If `p` is prime, `k \u2265 3` is even, and `p - 1 \u2223 k`, then `B\u2096\u207b\u00b9` reduces to zero\n modulo `p`. -/\n theorem toZMod_inv_bernoulli_eq_zero (hk : 3 \u2264 k) (hk2 : Even k) (hpk : p - 1 \u2223 k) :\n-    pLocalInt.toZMod \u27e8(bernoulli k)\u207b\u00b9, inv_bernoulli_mem_pLocalInt hk hk2 hpk\u27e9 = 0 := by\n-  let qden : (span {(p : \u2124)}).primeCompl := \u27e8(bernoulli k)\u207b\u00b9.den, fun h \u21a6\n-    not_dvd_den_inv_bernoulli (by lia) hk2 hpk (by exact_mod_cast mem_span_singleton.mp h)\u27e9\n-  rw [show (\u27e8(bernoulli k)\u207b\u00b9, inv_bernoulli_mem_pLocalInt hk hk2 hpk\u27e9 : pLocalInt p) =\n-        IsLocalization.mk' (pLocalInt p) (bernoulli k)\u207b\u00b9.num qden from\n-      IsLocalization.eq_mk'_iff_mul_eq.2 (Subtype.ext (Rat.mul_den_eq_num _)),\n-    pLocalInt.toZMod, IsLocalization.lift_mk'_spec]\n-  simpa using (ZMod.intCast_zmod_eq_zero_iff_dvd _ p).2 (dvd_num_inv_bernoulli (by lia) hk2 hpk)\n-\n-/-- If `p - 1 \u2223 k`, then `p` divides `B\u2096\u207b\u00b9` in the localization of `\u2124` at `p`. -/\n-theorem p_dvd_inv_bernoulli (hk : 3 \u2264 k) (hk2 : Even k)\n-    (hpk : p - 1 \u2223 k) : (p : pLocalInt p) \u2223 \u27e8_, inv_bernoulli_mem_pLocalInt hk hk2 hpk\u27e9 :=\n-  pLocalInt.dvd_of_toZMod_eq_zero (toZMod_inv_bernoulli_eq_zero hk hk2 hpk)\n+    pLocalInt.toZMod \u27e8(bernoulli k)\u207b\u00b9, inv_bernoulli_mem_pLocalInt hk hk2 hpk\u27e9 = 0 :=\n+  pLocalInt.toZMod_eq_zero_iff.2 (p_dvd_inv_bernoulli hk hk2 hpk)\n \n /-! ### Small values -/\n "
+    },
+    {
+      "sha": "ae1bfff0c94cd27e2c533ddda8e9b270fb63cff9",
+      "filename": "PadicModForms/ForMathlib/IntLocalization.lean",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 0,
+      "changes": 8,
+      "blob_url": "https://github.com/ANR-FALSE/PadicModForms/blob/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/PadicModForms%2FForMathlib%2FIntLocalization.lean",
+      "raw_url": "https://github.com/ANR-FALSE/PadicModForms/raw/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/PadicModForms%2FForMathlib%2FIntLocalization.lean",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/contents/PadicModForms%2FForMathlib%2FIntLocalization.lean?ref=018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+      "patch": "@@ -7,6 +7,7 @@ Authors: Riccardo Brasca\n module\n \n public import Mathlib.Algebra.Field.ZMod\n+public import Mathlib.NumberTheory.Padics.PadicNumbers\n public import Mathlib.RingTheory.DedekindDomain.AdicValuation.Valuation\n import Mathlib.Data.ZMod.Units\n import Mathlib.RingTheory.Int.Basic\n@@ -68,6 +69,13 @@ theorem mem_pLocalInt_iff {q : \u211a} : q \u2208 pLocalInt p \u2194 \u00ac p \u2223 q.den := by\n     Rat.valuation_le_one_iff_den]\n   simp [heightOneSpec, mem_span_singleton, Int.natCast_dvd_natCast]\n \n+-- should go to Mathlib.NumberTheory.Padics.HeightOneSpectrum\n+/-- A rational number is `p`-integral exactly when its `p`-adic valuation is at most `1`: the\n+valuation subring of `Rat.padicValuation p` is `pLocalInt p`. -/\n+theorem mem_pLocalInt_iff_padicValuation_le_one {q : \u211a} :\n+    q \u2208 pLocalInt p \u2194 Rat.padicValuation p q \u2264 1 := by\n+  rw [mem_pLocalInt_iff, Rat.padicValuation_le_one_iff]\n+\n variable {p}\n \n -- should go to Mathlib.RingTheory.Valuation.ValuationSubring, for a general `ValuationSubring`"
+    },
+    {
+      "sha": "bcda6aa71da52cfa1edeee0e3cd43bf31284d096",
+      "filename": "PadicModForms/ForMathlib/Padic.lean",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 24,
+      "changes": 36,
+      "blob_url": "https://github.com/ANR-FALSE/PadicModForms/blob/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/PadicModForms%2FForMathlib%2FPadic.lean",
+      "raw_url": "https://github.com/ANR-FALSE/PadicModForms/raw/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/PadicModForms%2FForMathlib%2FPadic.lean",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/contents/PadicModForms%2FForMathlib%2FPadic.lean?ref=018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+      "patch": "@@ -9,6 +9,7 @@ module\n public import Mathlib.NumberTheory.Padics.PadicNumbers\n public import PadicModForms.ForMathlib.IntLocalization\n public import Mathlib.Order.WithBotTop\n+import Mathlib.NumberTheory.Padics.WithVal\n \n /-!\n # Auxiliary results on the additive valuation on `\u211a_[p]`\n@@ -61,8 +62,7 @@ variable (x : pLocalInt p)\n -- should go to Mathlib.NumberTheory.Padics.HeightOneSpectrum\n /-- A `p`-integral rational has `p`-adic norm at most `1`. -/\n theorem norm_coe_le_one : \u2016(x : \u211a_[p])\u2016 \u2264 1 :=\n-  (zero_le_addValuation_iff_norm_le_one _).1\n-    ((zero_le_addValuation_ratCast_iff p _).2 ((mem_pLocalInt_iff _).1 x.2))\n+  Padic.norm_rat_le_one ((mem_pLocalInt_iff p).1 x.2)\n \n variable {x}\n \n@@ -78,31 +78,19 @@ theorem norm_coe_eq_one (hx : pLocalInt.toZMod x \u2260 0) : \u2016(x : \u211a_[p])\u2016 =\n     rw [\u2190 norm_mul, mul_inv_cancel\u2080 hx0, norm_one]\n   nlinarith [norm_nonneg (x : \u211a_[p]), norm_coe_le_one x]\n \n+/-- A `p`-integral rational with nonzero reduction modulo `p ^ m` has `p`-adic norm larger than\n+`(p ^ m)\u207b\u00b9`: if `\u2016x\u2016 \u2264 (p ^ m)\u207b\u00b9` then `x / p ^ m` is `p`-integral, so `p ^ m` divides `x`. -/\n theorem pow_lt_norm_coe {m : \u2115} (hx : pLocalInt.toZModPow m x \u2260 0) :\n     ((p : \u211d) ^ m)\u207b\u00b9 < \u2016(x : \u211a_[p])\u2016 := by\n-  by_cases hxzero : x = 0\n-  \u00b7 simp [hxzero] at hx\n   contrapose! hx\n-  rw [\u2190 zpow_natCast, \u2190 zpow_neg, \u2190 intCast_le_addValuation_iff_norm_le_pow,\n-    Padic.addValuation.apply (mod_cast hxzero), WithBotTop.coe, Function.comp_apply,\n-    WithBot.coe_le_coe, WithTop.coe_le_coe, valuation_ratCast] at hx\n-  obtain \u27e8y, z, hy\u27e9 := IsLocalization.exists_mk'_eq (Ideal.span {(p : \u2124)}).primeCompl x\n-  have heq : x * z = y := by simpa using IsLocalization.eq_mk'_iff_mul_eq.mp hy.symm\n-  have hvaleq : padicValRat p x + padicValRat p z = padicValRat p y := by\n-    rw [\u2190 padicValRat.mul (by simp [hxzero])]\n-    \u00b7 congr; norm_cast\n-    simp only [ne_eq, Int.cast_eq_zero]\n-    exact fun h \u21a6 (h \u25b8 (Ideal.mem_primeCompl_iff.mp z.property)) (Ideal.span {(p : \u2124)}).zero_mem\n-  simp only [padicValRat.of_int] at hvaleq\n-  have hvaly : m \u2264 padicValInt p y := by\n-    rw [\u2190 Nat.cast_le (\u03b1 := \u2124), \u2190 hvaleq]\n-    linarith\n-  have hdvdy : (p : (pLocalInt p)) ^ m \u2223 y := by\n-    obtain \u27e8b, hb\u27e9 := (padicValInt_dvd_iff m y).mpr (Or.inr hvaly)\n-    exact \u27e8b, by rw [hb]; push_cast; ring\u27e9\n-  rw [\u2190 heq] at hdvdy\n-  rw [pLocalInt.toZModPow_eq_zero_iff]\n-  exact (IsLocalization.map_units (pLocalInt p) z).dvd_mul_right.mp hdvdy\n+  refine pLocalInt.toZModPow_eq_zero_of_dvd \u27e8\u27e8x / p ^ m, ?_\u27e9, ?_\u27e9\n+  \u00b7 rw [mem_pLocalInt_iff, \u2190 Rat.padicValuation_le_one_iff,\n+      \u2190 Padic.norm_rat_le_one_iff_padicValuation_le_one]\n+    push_cast\n+    rw [norm_div, norm_pow, Padic.norm_p, inv_pow]\n+    exact div_le_one_of_le\u2080 hx (by positivity)\n+  \u00b7 ext\n+    exact (mul_div_cancel\u2080 _ (pow_ne_zero m (Nat.cast_ne_zero.2 hp.out.ne_zero))).symm\n \n variable (x)\n "
+    },
+    {
+      "sha": "01bbffdd8b8e62105077eeb403c5d2afaf888c25",
+      "filename": "lake-manifest.json",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/ANR-FALSE/PadicModForms/blob/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/lake-manifest.json",
+      "raw_url": "https://github.com/ANR-FALSE/PadicModForms/raw/018e97d1ea43fc29d961d2d3a97fff85bcb481f0/lake-manifest.json",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/PadicModForms/contents/lake-manifest.json?ref=018e97d1ea43fc29d961d2d3a97fff85bcb481f0",
+      "patch": "@@ -5,7 +5,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"ca6c6bdbe4c0eced9a9ba74e929d449d57a13fa8\",\n+   \"rev\": \"4dcd48f9a8a6bc61472af7148f179a36c4b47c75\",\n    \"name\": \"mathlib\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"master\",\n@@ -35,7 +35,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"b8cc5dd0a36233b88a6ed5a7dbf1207d09338c60\",\n+   \"rev\": \"e5d5639bedc7feecfbcb98e30b3bf26463d9f722\",\n    \"name\": \"importGraph\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\",\n@@ -75,7 +75,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"08a1d53cd0bbb78442973b751c8e6f98e75b12be\",\n+   \"rev\": \"b10a69d76de0195db7f9a961d09a83b4fc77fd02\",\n    \"name\": \"batteries\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\","
+    }
+  ]
+}

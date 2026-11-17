@@ -1,0 +1,43 @@
+import SourceOriginalArithmeticTorusPrimes2450c
+
+/-! DUB-17/18 -> original modular-form auxiliary primes. State the exact
+regular detecting-prime conclusion for the specified original field, topology
+and residual action. Topological hypotheses below concern that same topology. -/
+namespace Dubon2026.SourceDickson
+noncomputable section
+open Matrix
+open scoped NumberField
+
+/-- Every nonzero original symmetric twisted class is detected by genuine
+split regular congruence primes, with the original torus Frobenius and exact local adjoint dimension. -/
+def HasOriginalArithmeticTorusPrimeDetection
+    (a : 𝓞 ℚ) (p : ℕ) [Fact p.Prime] (hpa : (p : 𝓞 ℚ) ∣ a)
+    {F : Type} [Field F] [CharP F p] [TopologicalSpace F]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) F) : Prop :=
+  ∀ (_ : DiscreteTopology F) (_ : IsTopologicalRing F) (hρ : Continuous ρ) (n level : ℕ),
+    2 * n < p - 1 →
+    let R := (homogeneousSymmetricGL n).comp ρ
+    let hR := (homogeneousSymmetricGL_continuous n).comp hρ
+    let ξ := rationalArithmeticCyclotomicCoefficientCharacter a p hpa F
+    let A := matrixTraceZeroCharacterRep R ξ.toMonoidHom
+    let hA := matrixTraceZeroCharacterAction_continuous R hR ξ.toMonoidHom ξ.continuous
+    ∀ c : continuousRepresentationCocyclesOne A,
+      (Submodule.Quotient.mk c : ContinuousRepresentationH1 A hA) ≠ 0 →
+        HasArithmeticTorusDimensionalPrimes a p n level A hA R hR c
+
+/-- The constructed finite linear bounds supply all original regular-prime
+detection inputs; no regular element, trace test or Frobenius witness is assumed. -/
+theorem finite_linear_bounds_original_arithmetic_torus_prime_detection
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) [Fact p.Prime] (hpa : (p : 𝓞 ℚ) ∣ a)
+    {F : Type} [Field F] [Finite F] [CharP F p] [TopologicalSpace F]
+    (j : F →+* K p) (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) F)
+    (hp3 : 3 < p) (h : HasFiniteLinearSubfieldBounds p j ρ) :
+    HasOriginalArithmeticTorusPrimeDetection a p hpa ρ := by
+  intro hDiscrete hRing hρ n level hn
+  dsimp only
+  intro c hc
+  exact original_arithmetic_symmetric_nonzero_class_torus_primes
+    a ha p n level hpa j ρ hρ hp3 h hn c hc
+
+end
+end Dubon2026.SourceDickson

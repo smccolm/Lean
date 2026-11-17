@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "declarations": 178,
+  "missing": [],
+  "extra": [],
+  "different": {},
+  "evidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricScratchSemantic2360.log",
+      "sha256": "348695A0F37188AA4C903FE7EA95DF2AEB058F133D7C436500DD3B3ED880B370"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricScratchSemantic2360.lean",
+      "sha256": "7CF81950ABFE86D6D9A353D8C139808AF0562CECA1C313666FC63C95DAAFD035"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricScratchSemantic2360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricProductionSemantic2360.log",
+      "sha256": "2D091B2E7715CCEAE9B48F72ED04606C65934E426B352855F344575C6DEC5FBF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricProductionSemantic2360.lean",
+      "sha256": "B873E9931DD2D543AF5E17D182AB7D59D8A2B55BA4C8368814E71EF2DEE81571"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricProductionSemantic2360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointScratchSemantic2375.log",
+      "sha256": "D5BD465F06211A9498BF8928D70A4A5CB205AF3AC932557EC632B14D44E228BE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointScratchSemantic2375.lean",
+      "sha256": "F62646FBE8A85B58601E5EFF3F873FA76B898D51CA57D4936D6378729898C013"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointScratchSemantic2375.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointProductionSemantic2375.log",
+      "sha256": "EBFF441351824117C0F0F746E61ADBA21383451489CFCB444208BAFBB1495184"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointProductionSemantic2375.lean",
+      "sha256": "C7D1122EBF1242AE91EAFF65226D63C8421AAC6E0F89894338881E1F0D0B2964"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricAdjointProductionSemantic2375.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelScratchSemantic2379.log",
+      "sha256": "2383138833BC2B7B2C7EEE1074399DC4FF462F62A98173D7AE28AEEE31826FAC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelScratchSemantic2379.lean",
+      "sha256": "41133A5275804B2F3863F42F6C039996797611179E78BAD072F144B5CC674E27"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelScratchSemantic2379.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelProductionSemantic2379.log",
+      "sha256": "92DB08D4772B0A1D3FD6C6B001F059DBF310E81EE0B34CD0414BCEBBF4E7801E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelProductionSemantic2379.lean",
+      "sha256": "CC1D4FA6FB8E15A22E0501EC8B64B8BB8926778E6557AA79BD07F2980163BB91"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwistedKernelProductionSemantic2379.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointScratchSemantic2385.log",
+      "sha256": "4E547C37F5348D342959032867975C00470A2607525E92DEE88CB2995AE75A51"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointScratchSemantic2385.lean",
+      "sha256": "840BB58949B2BA2C3F616E81DAD24BF6A5017A36E0A986746302CD834A32DF0B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointScratchSemantic2385.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointProductionSemantic2385.log",
+      "sha256": "6BDEC30EA99DDB40B69514A3075734D0ED2D76A749C77D818B1CDAF90D29568C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointProductionSemantic2385.lean",
+      "sha256": "AD343C610A620D78F1E37A6565A1D1F48640E05AED1B9740BDD57C196CB24227"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSymmetricJointProductionSemantic2385.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "normalization": "Names are rewritten structurally, retaining numerical Name components: only the exact import-qualified private prefixes, generated auxiliary macro/unexpander names and three verified prime-instance names change. Bound binder names are alpha-normalized, expression metadata is removed after recursive child traversal, and closed Name literals are normalized only in generated notation declarations. Every public/private/generated type and available value is checked with exact owner/name sets; no declaration is omitted. Identical mathematical source bodies are independently checked after stripping imports."
+}

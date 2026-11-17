@@ -1,0 +1,61 @@
+import SourceOriginalIdentityFrobenius
+import Mathlib.Topology.Instances.Matrix
+import Mathlib.Topology.Algebra.Constructions
+import Dubon2026.SourceGammaOneResidualRankTwo
+
+/-! DUB-17/18 -> eventual original residual large image -> exceptional image
+exclusion. The actual primitive form has a nonzero Fourier coefficient at a
+prime outside every finite set. Apply the already constructed residual action
+at p=5 and native identity Frobenius; no large-image or purity premise is used. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open Matrix Polynomial
+open scoped ValuativeRel NumberField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+
+private local instance {E : Type} [Field E] [ValuativeRel E] [UniformSpace E] : TopologicalSpace 𝓀[E] :=
+  inferInstanceAs (TopologicalSpace (𝒪[E] ⧸ IsLocalRing.maximalIdeal 𝒪[E]))
+
+/-- The actual local original residual action supplies a nonzero prime coefficient outside any finite set. -/
+theorem exists_original_local_nonzero_prime_coefficient
+    (Q : ℕ) [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [UniformSpace E]
+    [IsUniformAddGroup E] [IsNonarchimedeanLocalField E] [CharP 𝓀[E] 5]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E) (S : Finset ℕ) :
+    ∃ q : ℕ, q.Prime ∧ q ∉ S ∧ sourcePrimitiveFieldCoefficient f q ≠ 0 := by
+  letI : Fact (Nat.Prime 5) := ⟨by decide⟩
+  letI : DiscreteTopology 𝓀[E] := (localCoefficientResidue_finite_discrete E).2
+  obtain ⟨_ρint, ρres, _hi, hr, _hred, hFrob, _hodd⟩ :=
+    exists_gammaOne_original_local_residual_rankTwo Q 5 f hk (by omega) τ
+  letI : DiscreteTopology (Matrix (Fin 2) (Fin 2) 𝓀[E]) := inferInstance
+  letI : DiscreteTopology (GeneralLinearGroup (Fin 2) 𝓀[E]) := inferInstance
+  have hr' : Continuous ρres := hr
+  obtain ⟨q, hq, hqS, e, φ, hφ, hidentity⟩ :=
+    original_arithmetic_exists_identity_norm_frobenius ((Q * 5 : ℕ) : 𝓞 ℚ)
+      ρres hr' (S ∪ (Q * 5).primeFactors)
+  have hqbad : q ∉ (Q * 5).primeFactors := fun h => hqS (Finset.mem_union_right S h)
+  have haway : ¬ q ∣ Q * 5 := by
+    intro h
+    exact hqbad (Nat.mem_primeFactors.mpr ⟨hq, h, mul_ne_zero (NeZero.ne Q) (by omega)⟩)
+  refine ⟨q, hq, fun h => hqS (Finset.mem_union_left _ h), ?_⟩
+  intro hz
+  have hf := (hFrob q hq haway e φ hφ).1
+  rw [hidentity] at hf
+  have hzint : (⟨τ (sourcePrimitiveFieldCoefficient f q),
+      sourcePrimitiveCoefficient_valuation_le_one f hk τ q⟩ : 𝒪[E]) = 0 := by
+    apply Subtype.ext
+    change τ (sourcePrimitiveFieldCoefficient f q) = 0
+    rw [hz, map_zero]
+  rw [hzint, map_zero] at hf
+  have htwo : (2 : 𝓀[E]) = 0 := by simpa using hf
+  have hd := (CharP.cast_eq_zero_iff 𝓀[E] 5 2).mp htwo
+  norm_num at hd
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,197 @@
+/-
+Copyright (c) 2026 Riccardo Brasca. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Riccardo Brasca
+-/
+
+module
+
+public import PadicModForms.ForMathlib.SigmaSeries
+public import PadicModForms.ModP.Eisenstein
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
+import Mathlib.Tactic.NormNum.Parity
+
+/-!
+# Congruences for Eisenstein series
+
+This file proves congruences between normalized Eisenstein series and `1` modulo powers of `p`,
+and Serre's congruence `E₂ ≡ E_{p+1}` modulo `p`.
+
+## Main results
+
+* `E_int_mod_p`, `E_int_mod_p_pow_of_dvd`, `E_int_mod_two_pow_of_dvd`: `Eₖ ≡ 1` modulo `pᵐ` when
+  `(p - 1) pᵐ⁻¹ ∣ k`, and its variant at `p = 2`.
+* `E_p_sub_one_mod_p`: the case `k = p - 1`, which is what the Hasse invariant is built from.
+* `E_int_sub_one_eq_smul_sigmaSeries`: `Eₖ - 1 = -(2k / Bₖ) Φₖ`, with `Φₖ = ∑ σ_{k-1}(n) qⁿ`.
+* `associated_pow_neg_two_mul_inv_bernoulli`: for `p ≥ 5` and `p - 1 ∣ k`, the coefficient
+  `-2k / Bₖ` is `p ^ (v_p(k) + 1)` times a unit of `ℤ₍ₚ₎`.
+* `E_int_sub_one_eq_unit_smul_sigmaSeries`: the exact form of the Eisenstein congruence,
+  `Eₖ - 1 = p^r λ Φₖ` with `r = v_p(k) + 1` and `λ` a unit.
+* `E₂_int_map_toZMod`: **Serre's congruence** `E₂ ≡ E_{p+1}` modulo `p`.
+* `E₂_int_map_toZMod_mem_modPModularForms`: consequently the reduction of `E₂` is a mod-`p`
+  modular form of weight `p + 1`, although `E₂` itself is not modular.
+-/
+
+open PowerSeries ArithmeticFunction sigma
+
+variable {p k m : ℕ} [Hp : Fact p.Prime]
+
+namespace EisensteinSeries
+
+open ModP
+
+/-- Every congruence `Eₖ ≡ 1` below comes from the same computation: the constant coefficient of
+`Eₖ` is `1`, and every other one carries the scalar `2 k Bₖ⁻¹` as a factor, so any ring map
+killing that scalar sends `Eₖ` to `1`. -/
+theorem E_int_map_eq_one {R : Type*} [CommRing R] (φ : pLocalInt p →+* R) (hk : 3 ≤ k)
+    (hk2 : Even k) (hB : (bernoulli k)⁻¹ ∈ pLocalInt p) (hφ : φ (2 * k * ⟨_, hB⟩) = 0) :
+    (E_int hk hk2 hB).map φ = 1 := by
+  ext n
+  rcases eq_or_ne n 0 with rfl | hn
+  · simp [coeff_E_int_zero hk hk2 hB]
+  · simp [hn, coeff_E_int_of_ne_zero hk hk2 hB hn, map_mul, map_neg, hφ]
+
+/-- If `p - 1 ∣ k`, then the normalized Eisenstein series of weight `k` is congruent to `1`
+modulo `p`. -/
+public theorem E_int_mod_p (hk : 3 ≤ k) (hk2 : Even k) (hpk : p - 1 ∣ k) :
+    (E_int hk hk2 (inv_bernoulli_mem_pLocalInt hk hk2 hpk)).map pLocalInt.toZMod = 1 :=
+  E_int_map_eq_one _ hk hk2 _ <| by
+    rw [map_mul, toZMod_inv_bernoulli_eq_zero hk hk2 hpk, mul_zero]
+
+/-- If `(p - 1) * p ^ (m - 1) ∣ k`, then `E_k` is congruent to `1` modulo `p ^ m`. -/
+public theorem E_int_mod_p_pow_of_dvd (hm : 1 ≤ m) (hk : 3 ≤ k) (hk2 : Even k)
+  (hkm : (p - 1) * p ^ (m - 1) ∣ k) :
+    (E_int hk hk2 (inv_bernoulli_mem_pLocalInt hk hk2 ((dvd_mul_right _ _).trans hkm))).map
+      (pLocalInt.toZModPow m) = 1 := by
+  let hpk : p - 1 ∣ k := (dvd_mul_right _ _).trans hkm
+  refine E_int_map_eq_one _ hk hk2 _ (pLocalInt.toZModPow_eq_zero_of_dvd ?_)
+  obtain ⟨a, ha⟩ : (p : pLocalInt p) ^ (m - 1) ∣ (k : pLocalInt p) := by
+    obtain ⟨c, hc⟩ := (dvd_mul_left _ _).trans hkm
+    exact ⟨c, Subtype.ext (by norm_num [hc])⟩
+  obtain ⟨b, hb⟩ : (p : pLocalInt p) ∣ ⟨_, inv_bernoulli_mem_pLocalInt hk hk2 hpk⟩ :=
+    p_dvd_inv_bernoulli hk hk2 hpk
+  exact ⟨2 * a * b, by rw [ha, hb, ← pow_sub_one_mul (by lia : m ≠ 0) _]; ring⟩
+
+/-- If `2 ^ (m - 2) ∣ k`, then `E_k` is congruent to `1` modulo `2 ^ m`. -/
+theorem E_int_mod_two_pow_of_dvd (hm : 2 ≤ m) (hk : 3 ≤ k) (hk2 : Even k) (hkm : 2 ^ (m - 2) ∣ k) :
+    (E_int (p := 2) hk hk2 (inv_bernoulli_mem_pLocalInt hk hk2 (by simp))).map
+      (pLocalInt.toZModPow m) = 1 := by
+  let hpk : 2 - 1 ∣ k := by simp
+  refine E_int_map_eq_one _ hk hk2 _ (pLocalInt.toZModPow_eq_zero_of_dvd ?_)
+  obtain ⟨a, ha⟩ : (2 : pLocalInt 2) ^ (m - 2) ∣ (k : pLocalInt 2) := by
+    obtain ⟨c, hc⟩ := hkm
+    exact ⟨c, Subtype.ext (by norm_num [hc])⟩
+  obtain ⟨b, hb⟩ : (2 : pLocalInt 2) ∣ ⟨_, inv_bernoulli_mem_pLocalInt hk hk2 hpk⟩ :=
+    p_dvd_inv_bernoulli hk hk2 hpk
+  refine ⟨a * b, ?_⟩
+  calc _ = 2 ^ (m - 2 + 2) * a * b := by rw [ha, hb]; ring
+    _ = _ := by rw [show m - 2 + 2 = m by lia]; ring
+
+/-- The normalized Eisenstein series of weight `p - 1` is congruent to `1` modulo `p`. -/
+public theorem E_p_sub_one_mod_p (hp : 5 ≤ p) : (E hp).map pLocalInt.toZMod = 1 :=
+  E_int_mod_p (by lia) (Hp.out.even_sub_one (by lia)) (by rfl)
+
+/-! ### Serre's congruence `E₂ ≡ E_{p+1}` modulo `p` -/
+
+section E₂
+
+variable (hp5 : 5 ≤ p)
+
+include hp5
+
+/-- Weight `p + 1` is even, since `p` is an odd prime. -/
+theorem even_p_add_one : Even (p + 1) :=
+  (Hp.out.odd_of_ne_two (by lia)).add_one
+
+/-- The normalized Eisenstein series of weight `p + 1` over the localization of `ℤ` at `p`. -/
+public noncomputable def E_p_add_one : (pLocalInt p)⟦X⟧ :=
+  E_int (by lia) (even_p_add_one hp5) (inv_bernoulli_p_add_one_mem_pLocalInt hp5)
+
+/-- `E_{p+1}` is a `p`-integral modular form of weight `p + 1`. -/
+theorem E_p_add_one_mem_pLocalIntModularForms : E_p_add_one hp5 ∈ pLocalIntModularForms p (p + 1) :=
+  E_int_mem_pLocalIntModularForms ..
+
+omit hp5
+
+/-- The nonconstant coefficients of `E₂_int`. -/
+@[simp]
+public theorem coeff_E₂_int_of_ne_zero {n : ℕ} (hn : n ≠ 0) :
+    coeff n E₂_int = -24 * (σ 1 n : pLocalInt p) :=
+  Subtype.ext <| by simp [hn]
+
+include hp5
+
+/-- **Serre's congruence**: `E₂ ≡ E_{p+1}` modulo `p`. Consequently the reduction of `E₂` is a
+mod-`p` modular form of weight `p + 1`, which is what makes `Θ` raise weights by `p + 1`. -/
+public theorem E₂_int_map_toZMod :
+    (E₂_int : (pLocalInt p)⟦X⟧).map pLocalInt.toZMod = (E_p_add_one hp5).map pLocalInt.toZMod := by
+  ext n
+  rcases eq_or_ne n 0 with rfl | hn
+  · simp [E_p_add_one]
+  · simp [hn, E_p_add_one, coeff_E_int_of_ne_zero _ _ _ hn, map_ofNat,
+      toZMod_inv_bernoulli_p_add_one hp5, sigma_apply,
+      show (24 : ZMod p) = 2 * 12 by norm_num]
+
+/-- The reduction of `E₂` modulo `p` is a mod-`p` modular form of weight `p + 1`. -/
+public theorem E₂_int_map_toZMod_mem_modPModularForms : (E₂_int :
+    (pLocalInt p)⟦X⟧).map pLocalInt.toZMod ∈
+      modPModularForms p ((p + 1 : ℕ) : ℤ) := by
+  rw [mem_modPModularForms, E₂_int_map_toZMod hp5]
+  obtain ⟨F, hF⟩ := E_p_add_one_mem_pLocalIntModularForms hp5
+  exact ⟨_, F, hF, rfl⟩
+
+end E₂
+
+/-! ### The exact form of the Eisenstein congruence -/
+
+/-- The nonconstant part of `Eₖ` is the divisor-sum series `Φₖ = ∑ σ_{k-1}(n) qⁿ` scaled by the
+coefficient `-2k / Bₖ`. -/
+public theorem E_int_sub_one_eq_smul_sigmaSeries (hk : 3 ≤ k) (hk2 : Even k)
+    (hB : (bernoulli k)⁻¹ ∈ pLocalInt p) :
+    E_int hk hk2 hB - 1 = (-(2 * k) * ⟨_, hB⟩ : pLocalInt p) • sigmaSeries _ (k - 1) := by
+  ext n
+  rcases eq_or_ne n 0 with rfl | hn
+  · rw [map_sub, PowerSeries.coeff_smul, coeff_E_int_zero, coeff_sigmaSeries]
+    simp
+  · simp [coeff_E_int_of_ne_zero hk hk2 hB, coeff_sigmaSeries, hn]
+
+/-- **The valuation of the Eisenstein coefficient**: for `p` odd and `p - 1 ∣ k`, the coefficient
+`-2k / Bₖ` of `Eₖ` is `p ^ (v_p(k) + 1)` times a unit of `ℤ₍ₚ₎`. Indeed `p Bₖ` is a unit by von
+Staudt–Clausen, and writing `k = p ^ v k'` with `p ∤ k'` the coefficient is
+`p ^ (v + 1) · (-2 k' / (p Bₖ))`, where `-2 k'` is a unit because `p` is odd and `p ∤ k'`. -/
+public theorem associated_pow_neg_two_mul_inv_bernoulli (hp2 : p ≠ 2) (hk : 3 ≤ k) (hk2 : Even k)
+    (hpk : p - 1 ∣ k) :
+    Associated ((p : pLocalInt p) ^ (padicValNat p k + 1))
+      (-(2 * k) * ⟨_, inv_bernoulli_mem_pLocalInt hk hk2 hpk⟩ : pLocalInt p) := by
+  have hp0 : (p : ℚ) ≠ 0 := Nat.cast_ne_zero.2 Hp.out.ne_zero
+  have hB0 : bernoulli k ≠ 0 := bernoulli_ne_zero_of_even hk hk2
+  -- Write `k = p ^ v * k'` with `p ∤ k'`.
+  have hfin : FiniteMultiplicity p k := Nat.finiteMultiplicity_iff.2 ⟨Hp.out.ne_one, by lia⟩
+  obtain ⟨k', hk', hpk'⟩ := hfin.exists_eq_pow_mul_and_not_dvd
+  have hp2k' : ¬p ∣ 2 * k' := fun h ↦ (Hp.out.dvd_mul.1 h).elim
+    (fun h2 ↦ hp2 ((Nat.prime_dvd_prime_iff_eq Hp.out Nat.prime_two).1 h2)) hpk'
+  -- The unit is `-2 k' / (p Bₖ)`.
+  have h2k' : IsUnit (-(2 * k') : pLocalInt p) := by
+    simpa using (pLocalInt.isUnit_natCast hp2k').neg
+  have hβ := isUnit_mul_bernoulli (p := p) (by lia) hk2 hpk
+  refine ⟨h2k'.unit * hβ.unit⁻¹, ?_⟩
+  have hkQ : (k : ℚ) = p ^ multiplicity p k * k' := by exact_mod_cast hk'
+  rw [Nat.padicValNat_def]
+  ext
+  push_cast [Units.val_mul, IsUnit.unit_spec, pLocalInt.coe_units_inv]
+  grind
+
+/-- **The exact Eisenstein quotient**: for `p` odd and `p - 1 ∣ k`, writing `r = v_p(k) + 1`,
+there is a unit `λ` of `ℤ₍ₚ₎` with `Eₖ - 1 = p^r λ Φₖ`, where `Φₖ = ∑ σ_{k-1}(n) qⁿ`. In
+particular `Eₖ ≡ 1` modulo `p^r`, and modulo no higher power of `p` since the coefficient of `q`
+in `Φₖ` is `1`. -/
+public theorem E_int_sub_one_eq_unit_smul_sigmaSeries (hp2 : p ≠ 2) (hk : 3 ≤ k) (hk2 : Even k)
+    (hpk : p - 1 ∣ k) :
+    ∃ u : (pLocalInt p)ˣ, E_int hk hk2 (inv_bernoulli_mem_pLocalInt hk hk2 hpk) - 1 =
+      ((p : pLocalInt p) ^ (padicValNat p k + 1) * u) • sigmaSeries (pLocalInt p) (k - 1) := by
+  obtain ⟨u, hu⟩ := associated_pow_neg_two_mul_inv_bernoulli hp2 hk hk2 hpk
+  exact ⟨u, by rw [E_int_sub_one_eq_smul_sigmaSeries, ← hu]⟩
+
+end EisensteinSeries

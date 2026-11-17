@@ -1,0 +1,48 @@
+import Dubon2026.SourceFiniteSubfieldIrreducible
+import Dubon2026.SourceSubfieldSymmetricAbsolute
+import Dubon2026.SourceFiniteLinearSymmetric
+import Dubon2026.SourceGammaOneAbsoluteSymmetricResidual
+import Dubon2026.SourceSubfieldKernelIrreducible
+import Dubon2026.SourceFiniteLinearKernelSymmetric
+import Dubon2026.SourceGammaOneCyclotomicSymmetricResidual
+import Dubon2026.SourceFiniteLinearAbsoluteGalois
+import Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual
+import Dubon2026.SourceResidualConjugateIrreducible
+import Dubon2026.SourceConjugateSymmetricSpanning
+import Dubon2026.SourceFiniteLinearOriginalSpanning
+import Dubon2026.SourceOriginalSymmetricSpanningProperty
+import Dubon2026.SourceGammaOneSymmetricKernelSpanning
+import Dubon2026.SourceSpanningIrreducibility
+import Dubon2026.SourceSpanningCoefficientExtension
+import Dubon2026.SourceOriginalSymmetricAbsolute
+import Dubon2026.SourceGammaOneResidueAbsoluteSymmetric
+import Dubon2026.SourceOriginalSymmetricAdjoint
+import Dubon2026.SourceGammaOneSymmetricAdjointVanishing
+import Dubon2026.SourceFiniteLinearOriginalScalar
+import Dubon2026.SourceFiniteLinearTwistedKernel
+import Dubon2026.SourceOriginalTwistedDetectionProperty
+import Dubon2026.SourceOriginalTwistedTopology
+import Dubon2026.SourceGammaOneTwistedKernelDetection
+import Dubon2026.SourceArithmeticCyclotomicSquare
+import Dubon2026.SourceOriginalArithmeticTwistedDetection
+import Dubon2026.SourceGammaOneArithmeticTwistedDetection
+import Dubon2026.SourceFiniteLinearOriginalConsequences
+import Dubon2026.SourceGammaOneSymmetricResidualCohomology
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceFiniteSubfieldIrreducible, `Dubon2026.SourceSubfieldSymmetricAbsolute, `Dubon2026.SourceFiniteLinearSymmetric, `Dubon2026.SourceGammaOneAbsoluteSymmetricResidual, `Dubon2026.SourceSubfieldKernelIrreducible, `Dubon2026.SourceFiniteLinearKernelSymmetric, `Dubon2026.SourceGammaOneCyclotomicSymmetricResidual, `Dubon2026.SourceFiniteLinearAbsoluteGalois, `Dubon2026.SourceGammaOneAbsoluteCyclotomicResidual, `Dubon2026.SourceResidualConjugateIrreducible, `Dubon2026.SourceConjugateSymmetricSpanning, `Dubon2026.SourceFiniteLinearOriginalSpanning, `Dubon2026.SourceOriginalSymmetricSpanningProperty, `Dubon2026.SourceGammaOneSymmetricKernelSpanning, `Dubon2026.SourceSpanningIrreducibility, `Dubon2026.SourceSpanningCoefficientExtension, `Dubon2026.SourceOriginalSymmetricAbsolute, `Dubon2026.SourceGammaOneResidueAbsoluteSymmetric, `Dubon2026.SourceOriginalSymmetricAdjoint, `Dubon2026.SourceGammaOneSymmetricAdjointVanishing, `Dubon2026.SourceFiniteLinearOriginalScalar, `Dubon2026.SourceFiniteLinearTwistedKernel, `Dubon2026.SourceOriginalTwistedDetectionProperty, `Dubon2026.SourceOriginalTwistedTopology, `Dubon2026.SourceGammaOneTwistedKernelDetection, `Dubon2026.SourceArithmeticCyclotomicSquare, `Dubon2026.SourceOriginalArithmeticTwistedDetection, `Dubon2026.SourceGammaOneArithmeticTwistedDetection, `Dubon2026.SourceFiniteLinearOriginalConsequences, `Dubon2026.SourceGammaOneSymmetricResidualCohomology]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

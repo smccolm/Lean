@@ -1,0 +1,582 @@
+{
+  "status": "Scratch PASS: the same actual modular-form residual representation has native CM symmetric kernel consequences over its original residue field, native polarized symmetric representations, and a genuine constructed CM field in support 4a with the literal original support pullback. The cyclotomic determinant and finite image bounds are preserved by proofs. Every prior original conclusion and the small-image alternative are retained. Production promotion and assembled verification remain pending.",
+  "modules": 14,
+  "publicQueries": 23,
+  "publicTheorems": 19,
+  "publicConstructions": 4,
+  "exhaustiveTheorems": 101,
+  "otherDeclarations": 29,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 223,
+  "typeValueFingerprints": 130,
+  "sourceObligations": [
+    "DUB-17 Theorem 2.6",
+    "DUB-18 Corollary 8.2"
+  ],
+  "priorEvidence": "Tools/original-torus-scratch-20261117-2483/manifest.json",
+  "accepted": 16,
+  "total": 20,
+  "failedAndUnexecutedDraftsRetained": true,
+  "files": [
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences.lean.txt",
+      "sha256": "FB6E729C99C631FF2A7DF53B277DC7DE4ACB6BD401A457F6FF1A6BB7615FB37B"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences2476a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences2476a.lean.txt",
+      "sha256": "C0FF2381EA9618DC670364DBC48D2C5C96CF06CC537CB7FDB822C05E455B33DD"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences2476a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences2476b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences2476b.lean.txt",
+      "sha256": "3843ABB01FF1A8407C2E04575820C140C852F97594B78692A07C4F28A2D50C86"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMConsequences2476b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMPolarized.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMPolarized.lean.txt",
+      "sha256": "B5AA286B5D6C6B1F5D42175136A7356D06C796FF70514C96D1FEE5277B3846AE"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMPolarized.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMPolarized2484a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMPolarized2484a.lean.txt",
+      "sha256": "0DBAAE8927D2DEECAD49C1B6F054E8CC16D564A3C23546E943909F6D55DA911F"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalCMPolarized2484a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalConstructedCM.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalConstructedCM.lean.txt",
+      "sha256": "A027556D4A9AE1BBB6703EE8EE92671A7E1FC50C80B0102256961E22BC776735"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalConstructedCM.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalConstructedCM2490a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalConstructedCM2490a.lean.txt",
+      "sha256": "A62E156DFA5DD0E6E5C454A6587F23896C3AB9D208865D1628E2F519C6D731A0"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceGammaOneOriginalConstructedCM2490a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences.lean.txt",
+      "sha256": "58EDDE68FB4868FF93BE4BA45E0C228049369FFDD59A1AF2CD50DB04F3916497"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences2473a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences2473a.lean.txt",
+      "sha256": "E32D8E81E13F8C88BAD8AAD4452202B1CB4589E0ADFD7740D70CA4E1D5FEC6AE"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences2473a.log",
+      "sha256": "FB1459E358404A3A6E7870D90B761E0289C9A6F789257DC28076456F96295F50"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences2473b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences2473b.lean.txt",
+      "sha256": "58EDDE68FB4868FF93BE4BA45E0C228049369FFDD59A1AF2CD50DB04F3916497"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMKernelConsequences2473b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField.lean.txt",
+      "sha256": "450564D997D9F2C3D60D74AE5587B1BD6A16F61621F985885D99F9B2F310B294"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485a.lean.txt",
+      "sha256": "FF94BDDF87BC685C3C8F7F61845ABE6D098ECEADCEEC141A54338AD16767E86C"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485a.log",
+      "sha256": "6B9F6E542D3F28F29547D932C3D109FF2D387DA26F66ED442E2401814D6F06B3"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485b.lean.txt",
+      "sha256": "398D3281B4F6834367B8142950AFDCB2AF53306B2700410E56400A69C683833D"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485b.log",
+      "sha256": "E5297DFABF53BF5C27189476148069BBADD3FBD94DA8A49A268577DF5EDA5AD8"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485c.lean.txt",
+      "sha256": "035754BA7E71D745151F2E3B3436D22C6608DF7337578B84077FE76D58E2D9C4"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485c.log",
+      "sha256": "5169E237E87710F602AB7262F858A380571C71D4E22BAAB33A0278A0993160D9"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485d.lean.txt",
+      "sha256": "450564D997D9F2C3D60D74AE5587B1BD6A16F61621F985885D99F9B2F310B294"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalCMQuadraticField2485d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAssembly.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAssembly.lean.txt",
+      "sha256": "BA2F52F318AD11C82AE4F655E8E7BD58D3BFA483CF691A99C1D3BA5A2184E563"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAssembly.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAssembly2489a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAssembly2489a.lean.txt",
+      "sha256": "5F87F76E4ACD6B052408F88D0DD851A9DC41735F90B635C9ACDCA462001DF1AF"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAssembly2489a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAudit1.lean.txt",
+      "sha256": "97EBD9A5AD5DAA063F73880484DD1E57AB7CBDAB0DBB8A51C276A40167EB90F9"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMAudit1.log",
+      "sha256": "3099F3884F98D76897CC4C8724E99A89E086498801E095126968D185234591DB"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMDeclarations2491.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMDeclarations2491.lean.txt",
+      "sha256": "EBC578EEAA32805CCDBB511190AA166BE290C2EFE70422D4734C4ACEEF1D157F"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMDeclarations2491.log",
+      "sha256": "A6941CE65E15C0C48CE505F447CB72BBA0FAD67E10DC11B31E0A7DD3E70EC32D"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMDependencyAudit1.lean.txt",
+      "sha256": "123DF1D35E16FA66D1E59BA5C083E4D947026956A2D13B9A1D79CA16738090D1"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMDependencyAudit1.log",
+      "sha256": "381A51F5482FE0318210769376EC35E9529E2147AEE0696C5ABF33645A921809"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProductionSemantic2492.lean.txt",
+      "sha256": "775CEE5AF73406E638C0E730E32CEC892E721B61C3026F4DCDA6E5231B9133D3"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProperty.lean.txt",
+      "sha256": "44D2FBBF19747F33C678571592DDE530C09EF663150875BD72FD15FF425DDBA9"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProperty2488a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProperty2488a.lean.txt",
+      "sha256": "D74EABBDD7FCF40AB11C8EC63EB953EB7B4B03F23935587E3C6DD72FACCC4AAC"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMProperty2488a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMScratchSemantic2492.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMScratchSemantic2492.lean.txt",
+      "sha256": "C2AE2ED8B6897F6EE53FA2B9CAE66C880C6B567ABC698A8AA149D70F76DB541C"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalConstructedCMScratchSemantic2492.log",
+      "sha256": "498710093BDEC90B04027155558F73386E2F0705FF9F997BB9E0010387ED15E0"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd.lean.txt",
+      "sha256": "AA5A8C4CE319E14766A67AF9FEC7253650C0CFDFE920CEC13032C9808B9A5C66"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd2477a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd2477a.lean.txt",
+      "sha256": "B4B62AB9694BD0E771797B1B0DC11CC02C7211725510E0B5228681E3F3D8EB27"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd2477a.log",
+      "sha256": "118167BE420512C910235708FC8839567F56038566AC003C095D6056F1CE643D"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd2477b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd2477b.lean.txt",
+      "sha256": "CB46E996C22EB6775828B679C885D882A2D056DD743EBDF5A306060137F1EB4C"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomOdd2477b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction.lean.txt",
+      "sha256": "C8F02BB47CB13D14E17C09D0424385A04CEB5927E2FD02F7DDAE770A13BF7CFF"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474a.lean.txt",
+      "sha256": "BC81F9808EC160BF5A430214EB360C9407447A4BADB8FAC4C45A0FB752D2A48C"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474a.log",
+      "sha256": "F5030F5A1CB5FF7A3FC08E05BA546C18AAD693B5142BFFF3352554918A64FF85"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474b.lean.txt",
+      "sha256": "103D16613A046C153468E8D8874B3F0FEB54C56A46BED2D808F6882E3A21C307"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474b.log",
+      "sha256": "016BA6D6B10F1FCCD0E74070E365EB64ED83E26A478550BE6AE79BE50B2B993B"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474c.lean.txt",
+      "sha256": "C68BE0F4463C0D83B7657736B950FFBA593138D0367B8DA5DAF5CF6EB6E9CEE4"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474c.log",
+      "sha256": "C509B5C380357B4A52091F2C1109D27D8F4937101B6382B3DA1791B729C8CBDB"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474d.lean.txt",
+      "sha256": "C8F02BB47CB13D14E17C09D0424385A04CEB5927E2FD02F7DDAE770A13BF7CFF"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalBottomRestriction2474d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarizationProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarizationProperty.lean.txt",
+      "sha256": "88EE75B4D83BEA3A965113CED94C70D98F3688A8473AB9C2233DA20B358B94F3"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarizationProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarizationProperty2479a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarizationProperty2479a.lean.txt",
+      "sha256": "95CF46F5D7D26B973E36E214F5A4584C6E6EEFF20E3322645F42536CF3E5B7AC"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarizationProperty2479a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarized.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarized.lean.txt",
+      "sha256": "AC2A42A609FD5E3F5FA472951CE5FB3EB1EFF0B65269C480E366966723F1C78B"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarized.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarized2478a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarized2478a.lean.txt",
+      "sha256": "A7BFA91082A361FA87A7C408C233654BAB5E5C24FB3D737FA6C708F2D1B061C8"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMPolarized2478a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMProperty.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMProperty.lean.txt",
+      "sha256": "262D6431D236759C9B284C85C8B40799D32C185B0D8B96E15AD5897B51FC79EF"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMProperty.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMProperty2475a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMProperty2475a.lean.txt",
+      "sha256": "27423CDD085FA91CD13FEEA18F6600A904D64117405619A8E6FBA404844B2A5E"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalRationalCMProperty2475a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic.lean.txt",
+      "sha256": "E949CF05F4232E7D0FD1466D1DBF413F97178BFC0D6ABEFCF0E606B3F5CA1049"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic2486a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic2486a.lean.txt",
+      "sha256": "E4028C88A67DF9F4850B80412B46894AE8F376EDDFC8C5AC7490D3AEDB3CE3DE"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic2486a.log",
+      "sha256": "DA6146449FB743A8E80C4C3A9CD0DF57016ADDB55261C8CC8318D32BA929AFDD"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic2486b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic2486b.lean.txt",
+      "sha256": "E949CF05F4232E7D0FD1466D1DBF413F97178BFC0D6ABEFCF0E606B3F5CA1049"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportCyclotomic2486b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual.lean.txt",
+      "sha256": "414742F0C997F47A58405147A681D10E2EFCCB64476803C862A56760B7D5DA16"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual2487a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual2487a.lean.txt",
+      "sha256": "3790F51B4A09A35145E3C78CA9541DC3B8F8C0EEFB516334E66D8A03A4316465"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual2487a.log",
+      "sha256": "A735FB9645A2A90A476D17084A2A84E56FC06E8172924CA9C24F5C5138956A58"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual2487b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual2487b.lean.txt",
+      "sha256": "264F547D8650F6A01A70900C9A62620FDB8A0EE52A82E41E86F7C033F1E00D5D"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/SourceOriginalSupportResidual2487b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/archive_original_constructed_cm_scratch_2494.py",
+      "sha256": "1DB22BA1E8CCBE550B0AEB45F3247CD0A5A3F6412F56A2FDC2E66A5CB9D6B302"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/build_original_constructed_cm_2491.ps1",
+      "sha256": "801638C69ED9029D8990EC04317D06A76C698A378166B732129CE55E89B0D45B"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/generate_original_constructed_cm_audits_2491.py",
+      "sha256": "ADB805BB9866ACA9A326170F59D4287A6FD4D12C97F651853225D1CA8AF7B113"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/original-cm-field-support-route-review-2485.json",
+      "sha256": "7BA0633B8E4D39ACF3B38FE253DEAE53D352B1E9218550CDA5D9F2F6FC8BCA8F"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/original-cm-kernel-route-review-2473.json",
+      "sha256": "0EB2646A5D494784D599CD12FFE0DA175067648426577D592DFF3735CD4C049A"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/original-constructed-cm-reuse-review-2491.json",
+      "sha256": "DF74670E851AC82C7AD032285B87E02BA2C26558D52B8D90B088AA280D10403B"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/record_original_constructed_cm_scope_2493.py",
+      "sha256": "3703A7898D869DB4970B50E70279FABB26C767EE4656511C82CF90AC55485281"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/source-original-constructed-cm-1-scratch-receipt.json",
+      "sha256": "0372C6F27357EAFC1306BE3B7042F3B7FE23B87626455766A1F90FDCE776C17E"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/source-original-constructed-cm-audit-config-2491.json",
+      "sha256": "5C2E7B681C924DE3DABE142DAA0A4913C4408622473D1558FB6F325DD63D61E1"
+    },
+    {
+      "path": "Tools/original-constructed-cm-scratch-20261117-2494/source-original-constructed-cm-scratch-summary-2493.json",
+      "sha256": "A720015DC6C53535CA1737560FB456C00964B6648A25577062BE226D864A0F5B"
+    }
+  ]
+}

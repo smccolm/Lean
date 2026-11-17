@@ -1,0 +1,51 @@
+{
+  "reason": "Remove the single unused topology parameter; preserve all proof bodies and all previous evidence. Full fresh compilation and audits required.",
+  "priorArchive": "original-family-failed-audit-2418/manifest.json",
+  "revised": [
+    {
+      "name": "SourceOriginalCoefficientH1Finite.lean",
+      "priorSha256": "A01B51DC4D616E04EC590F5E4E9D09ABBD4185A73232B6560E7D34F9E177D057",
+      "changed": false
+    },
+    {
+      "name": "SourceOriginalClassPrimePredicates.lean",
+      "priorSha256": "E9D71D0EB722DA3362366381E140A718737F55C49921D4235B42045715D5A981",
+      "changed": true
+    },
+    {
+      "name": "SourceOriginalCocycleClassPrimes.lean",
+      "priorSha256": "F616669EE76A83AD2EC4DF02DC387B0F2D80073547520CC248783E2EEA4F83B4",
+      "changed": false
+    },
+    {
+      "name": "SourceOriginalClassRegularPrimes.lean",
+      "priorSha256": "AEAEBD538A3DD3FCE66E53FD95A6522BBB83877A78F462CC3B305E2684D9E7D5",
+      "changed": false
+    },
+    {
+      "name": "SourceOriginalDetectingFamilyProperty.lean",
+      "priorSha256": "D089F893A5F6469473E0554865C2953590D162F65B37154752179740BF0B8003",
+      "changed": false
+    },
+    {
+      "name": "SourcePrimeIndexedDetectingFamily.lean",
+      "priorSha256": "35EDB7230EB319D97CCC93A9F45B9540E2EC2BC9A3EC1612018E6A1DDFBD4A72",
+      "changed": false
+    },
+    {
+      "name": "SourceOriginalFiniteDetectingFamily.lean",
+      "priorSha256": "D1C37096D07F54EB56BEEAEE05F19BA4845E1158799F45AF22C4E96CA77D3865",
+      "changed": false
+    },
+    {
+      "name": "SourceOriginalArithmeticFamilyProperty.lean",
+      "priorSha256": "536E382459E87C962DC98C7A5D692B77AD61AB8788779297D43A0A464DDF7B3E",
+      "changed": false
+    },
+    {
+      "name": "SourceGammaOneOriginalDetectingFamilies.lean",
+      "priorSha256": "718CF8691B872D64B50619F967F1113188E9D69CA283AAE515D1F7FB4980A2FA",
+      "changed": false
+    }
+  ]
+}

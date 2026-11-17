@@ -1,0 +1,5 @@
+{
+  "rejected": "SourceOriginalIntegralCMProperty2498a reports an unused literal integral pullback. The preceding existential-ring theorem constructs the multiplier but does not expose its equality to the original integral determinant character.",
+  "correction": "Strengthen the generic existential-ring conclusion and exact original property by the explicit equality nu = originalIntegralCMSymmetricSimilitude of the literal integral pullback. The old compiling and failed variants and unexecuted assembly are retained. No linter is disabled; the original integral representation now occurs substantively in the result.",
+  "scope": "2497b,2498b,2499b; all are unpromoted and require fresh compile and exhaustive audits."
+}

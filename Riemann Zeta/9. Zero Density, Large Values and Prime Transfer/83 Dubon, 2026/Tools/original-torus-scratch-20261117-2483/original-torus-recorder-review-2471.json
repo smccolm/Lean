@@ -1,0 +1,5 @@
+{
+  "reason": "The shared structural normalizer emits canonical Dubon2026-prefixed owner names even in scratch. Correct the new fail-closed owner-set check to that documented format. Both unused and corrected recorder sources are retained; no Lean proof, normalizer, declaration count or acceptance condition changed.",
+  "oldExecuted": false,
+  "corrected": "E:\\Lean\\.tmp\\dubon83\\record_original_torus_scope_2471b.py"
+}

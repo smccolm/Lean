@@ -1,0 +1,32 @@
+import Dubon2026.SourceOriginalClassPrimePredicates
+
+/-! Transfer the proved original cocycle detection to its actual H1 quotient. -/
+namespace Dubon2026
+noncomputable section
+open scoped NumberField
+attribute [local instance] rationalArithmeticOriginalFiniteGalois
+
+/-- Retain the representation component of the finite affine factor and
+all regular-prime properties for the same original cocycle class. -/
+theorem rationalArithmetic_original_cocycle_class_primes
+    (a : 𝓞 ℚ) (p level : ℕ)
+    {K ι : Type} [Field K] [TopologicalSpace K] [Fintype ι] [DecidableEq ι]
+    (A : Rep.{0} K (rationalArithmeticGaloisGroup a))
+    [TopologicalSpace A] [DiscreteTopology A] [ContinuousSMul K A]
+    (hA : Continuous (fun z : rationalArithmeticGaloisGroup a × A => A.ρ z.1 z.2))
+    (R : rationalArithmeticGaloisGroup a →* Matrix.GeneralLinearGroup ι K)
+    (c : continuousRepresentationCocyclesOne A)
+    (hprimes : HasArithmeticRegularDetectingPrimes a p level A hA R c) :
+    HasArithmeticRegularClassPrimes a p level A hA R (Submodule.Quotient.mk c) := by
+  intro S
+  obtain ⟨D, ψ, hψ, hD⟩ := hprimes
+  obtain ⟨q, hq, hqS, hqa, hmod, hunr, hlocal, hne⟩ := hD S
+  refine ⟨⟨q, hq⟩, hqS, ⟨hqa, hmod, D,
+    (MonoidHom.fst (Matrix.GeneralLinearGroup ι K) (Equiv.Perm A)).comp ψ,
+    ?_, hunr, hlocal⟩, ?_⟩
+  · intro w
+    exact congrArg Prod.fst (hψ w)
+  · exact hne
+
+end
+end Dubon2026
