@@ -1,6 +1,6 @@
 # Research Organization
 
-The research tree mirrors the nine corridors in [`The RH Map - Sep 19, 2026 - Mermaid Diagram.txt`](The%20RH%20Map%20-%20Sep%2019,%202026%20-%20Mermaid%20Diagram.txt):
+The [November 21, 2026 RH map](The%20RH%20Map%20-%20Nov%2021,%202026%20-%20Mermaid%20Diagram.txt) organizes the research tree into nine corridors.
 
 1. `1. Classical Analytic Foundations/`
 2. `2. Computation and Explicit Zero-Free Control/`
@@ -15,6 +15,8 @@ The research tree mirrors the nine corridors in [`The RH Map - Sep 19, 2026 - Me
 Each corridor contains numbered node directories matching the map. These are stable homes for source material, research notes, and Lean packages as each line of work matures. The placeholders do not claim that their corresponding results have been formalized.
 
 ## Current formalizations and groundwork
+
+- [84 Alpöge with Claude, 2026](7.%20Weil,%20Arithmetic%20Geometry%20and%20Noncommutative%20Geometry/84%20Alpoge,%202026/README.md) adds a direct proof edge from Corridor 7 to RH. The node records the original Lean release, its five exported statements and the independent checks. It supplies the November bibliography entry and reading guide for the addition to the [September bibliography](The%20RH%20Map%20-%20Sep%2019,%202026%20-%20Bibliography.docx) and [September explanation](The%20RH%20Map%20-%20Sep%2019,%202026%20-%20Explanation.docx).
 
 - The frozen [Guth--Maynard foundation](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/README.md) occupies node 71. Its `GuthMaynard/`, collision-safe `GuthMaynardExternal/`, and support modules sit directly in that node, while the project-root Lake package and verifier use it as their source root.
 - The [Tao--Trudgian--Yang formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/README.md) occupies node 63. All 42 owner-authorized acceptance gates are complete, including the unchanged density table. Its closed Pintz endpoints are original research strengthenings; both disproved supporting statements and their counterexamples remain preserved.

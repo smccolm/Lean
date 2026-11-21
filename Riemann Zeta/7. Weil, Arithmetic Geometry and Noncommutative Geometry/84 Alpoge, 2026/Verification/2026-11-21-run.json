@@ -1,0 +1,20 @@
+{
+  "checker_commit": "5dc36dc15b7bee891a02406b78a8ac816a47baad",
+  "checker_binary_sha256": "54e51b38494fdc1d424d9cdfac2f229999c7c585edd66ccb1dbd752b7ea5a630",
+  "lean_version": "Lean (version 4.36.0, x86_64-w64-windows-gnu, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)",
+  "command": [
+    "con-leche",
+    "--verified",
+    "--jobs=12",
+    "--progress=30s",
+    "--compare",
+    "challenge.ndjson",
+    "solution.ndjson"
+  ],
+  "challenge_sha256": "bd484ac9886a96f26b1d9a7a59ebd45b7a70d102c015d4f31f9302bbdd6ab2b9",
+  "solution_sha256": "5ea74b912147c5c93cc2b6d70cc727cf908df2f62ac6a20480a3fa02f6be244e",
+  "started_utc": "2026-11-21T09:59:18.921886+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 981.29,
+  "finished_utc": "2026-11-21T10:15:40.212687+00:00"
+}
