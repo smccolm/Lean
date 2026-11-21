@@ -1,0 +1,24 @@
+def RiemannHypothesis :
+  Sort 0 :=
+  forall (s : Complex),
+  Eq (riemannZeta s) (OfNat.ofNat 0) → Not
+      (Exists
+        (fun (n : Nat) => Eq s (HMul.hMul (Neg.neg (OfNat.ofNat 2)) (HAdd.hAdd (Nat.cast n) (OfNat.ofNat 1))))) →
+  Ne s (OfNat.ofNat 1) → Eq (Complex.re s) (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 2))
+
+theorem riemannHypothesis : RiemannHypothesis := _
+
+theorem riemannZeta_eq_zero_re : RiemannZetaZerosOnLine := _
+
+theorem LFunction_ne_zero_of_half_lt_re : DirichletLNonvanishingRightOfHalf := _
+
+theorem LFunction_eq_zero_re : DirichletLZerosOnLine := _
+
+theorem LFunction_eq_zero_re_of_isPrimitive : PrimitiveDirichletLZerosOnLine := _
+
+axiom propext {a b : Sort 0} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Sort 0} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+

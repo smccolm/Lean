@@ -1,0 +1,65 @@
+con-leche: reading E:\Lean\.lake\node84-check\stress-20261121\clean\arithmetic.ndjson
+con-leche: reading E:\Lean\.lake\node84-check\solution.ndjson
+con-leche: checking: 1468418 declarations on 12 workers t=198.5s
+con-leche: check 204671 (13%) t=228.5s busy=11/12
+con-leche: check 281299 (19%) t=258.5s busy=11/12
+con-leche: check 340534 (23%) t=288.5s busy=11/12
+con-leche: check 405012 (27%) t=318.5s busy=11/12
+con-leche: check 472551 (32%) t=348.5s busy=11/12
+con-leche: check 500183 (34%) t=378.5s busy=11/12
+con-leche: check 547957 (37%) t=408.5s busy=11/12
+con-leche: check 605648 (41%) t=438.5s busy=11/12, oldest theorem PI.PC.loop_run._proof_1_1 (#571290) 18.017s
+con-leche: check 639592 (43%) t=468.5s busy=11/12
+con-leche: check 715711 (48%) t=498.5s busy=11/12
+con-leche: check 782834 (53%) t=528.5s busy=11/12
+con-leche: check 827056 (56%) t=558.5s busy=11/12
+con-leche: check 855284 (58%) t=588.5s busy=11/12, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 27.075s
+con-leche: check 886771 (60%) t=618.5s busy=11/12
+con-leche: check 953294 (64%) t=648.5s busy=11/12
+con-leche: check 1025789 (69%) t=678.5s busy=11/12
+con-leche: check 1086594 (73%) t=708.5s busy=11/12
+con-leche: check 1148982 (78%) t=738.5s busy=11/12
+con-leche: check 1209495 (82%) t=768.6s busy=11/12
+con-leche: check 1231997 (83%) t=798.6s busy=11/12
+con-leche: check 1292852 (88%) t=828.6s busy=11/12
+con-leche: check 1355258 (92%) t=858.6s busy=11/12
+con-leche: check 1426354 (97%) t=888.6s busy=11/12
+con-leche: check done: 1468418 declarations t=917.2s (check 718.7s)
+con-leche: done: parse 198.5s, check 718.7s, 12 workers t=917.2s
+con-leche: stats: phases: parse 198.5s (index 2.2s), check 718.7s
+con-leche: stats: check pool: 718.707s wall, 12 workers, 1468418 records, busy 8619.744s (99.9%); tail 0.207s after the last start, 12 busy then, 0.425s worker-time in it (17.1%)
+con-leche: stats: slowest checks: 51.011s theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554); 37.305s theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy (#829660); 29.630s theorem PI.PC.loop_run._proof_1_1 (#571290); 18.762s theorem Formalism.IrreducibleCountingLemmas.GaloisIrreducibility.PrimeCountingLemmas.factorial_ladder_one_forty_one._proof_1_1 (#226690); 14.660s theorem GlobalTheory.PrimeRecip.table_ok._proof_1_1 (#570391)
+con-leche: checking: 69217 declarations on 12 workers t=921.1s
+con-leche: check 67124 (96%) t=953.7s busy=11/12, oldest theorem Robin1984.robinPrimeBlock016_checks._proof_1_1 (#67037) 25.539s
+con-leche: check 67171 (97%) t=984.4s busy=11/12, oldest theorem Robin1984.robinPrimeBlock016_checks._proof_1_1 (#67037) 56.229s
+con-leche: check 67220 (97%) t=1028.5s busy=11/12, oldest theorem Robin1984.robinPrimeBlock026_checks._proof_1_1 (#67117) 87.335s
+con-leche: check 67224 (97%) t=1131.1s busy=11/12, oldest theorem Robin1984.robinPrimeBlock028_checks._proof_1_1 (#67134) 184.887s
+con-leche: check 67244 (97%) t=1161.3s busy=11/12, oldest theorem Robin1984.robinPrimeBlock028_checks._proof_1_1 (#67134) 215.149s
+con-leche: check 67312 (97%) t=1192.3s busy=11/12, oldest theorem Robin1984.robinPrimeBlock047_checks._proof_1_1 (#67252) 57.506s
+con-leche: check 67340 (97%) t=1223.2s busy=11/12, oldest theorem Robin1984.robinPrimeBlock051_checks._proof_1_1 (#67274) 55.371s
+con-leche: check 67381 (97%) t=1253.8s busy=11/12, oldest theorem Robin1984.robinPrimeBlock065_checks._proof_1_1 (#67348) 37.526s
+con-leche: check 67425 (97%) t=1284.0s busy=11/12, oldest theorem Robin1984.robinPrimeBlock071_checks._proof_1_1 (#67376) 48.426s
+con-leche: check 67457 (97%) t=1314.9s busy=11/12, oldest theorem Robin1984.robinPrimeBlock079_checks._proof_1_1 (#67408) 50.102s
+con-leche: check 67495 (97%) t=1347.0s busy=11/12, oldest theorem Robin1984.robinPrimeBlock090_checks._proof_1_1 (#67465) 39.728s
+con-leche: check 68773 (99%) t=1377.5s busy=11/12, oldest theorem Robin1984.robinPrimeBlock098_checks._proof_1_1 (#67499) 40.171s
+con-leche: check 68897 (99%) t=1407.8s busy=11/12, oldest theorem Robin1984.robinPrimeBlock103_checks._proof_1_1 (#67509) 46.902s
+con-leche: check 68965 (99%) t=1440.2s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks02.0.Robin1984.lagariasFiniteBlock38_rangeChunk04._proof_1_1 (#68949) 12.826s
+con-leche: check 69007 (99%) t=1491.0s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks03.0.Robin1984.lagariasFiniteBlock40_rangeChunk14._proof_1_1 (#68995) 31.914s
+con-leche: check 69045 (99%) t=1529.8s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks04.0.Robin1984.lagariasFiniteBlock41_rangeChunk12._proof_1_1 (#69033) 38.522s
+con-leche: check 69075 (99%) t=1563.2s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks04.0.Robin1984.lagariasFiniteBlock41_rangeChunk00._proof_1_1 (#69059) 31.598s
+con-leche: check 69099 (99%) t=1594.1s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks04.0.Robin1984.lagariasFiniteBlock42_rangeChunk06._proof_1_1 (#69081) 42.989s
+con-leche: check 69113 (99%) t=1635.3s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks05.0.Robin1984.lagariasFiniteBlock43_rangeChunk15._proof_1_1 (#69103) 56.316s
+con-leche: check 69139 (99%) t=1667.9s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks05.0.Robin1984.lagariasFiniteBlock43_rangeChunk04._proof_1_1 (#69123) 49.623s
+con-leche: check 69151 (99%) t=1713.2s busy=11/12, oldest theorem _private.Robin1984.Lagarias.Certificates.Blocks05.0.Robin1984.lagariasFiniteBlock44_rangeChunk10._proof_1_1 (#69139) 64.398s
+con-leche: check 69217 (100%) t=1746.8s busy=0/12
+con-leche: check done: 69217 declarations t=1746.8s (check 825.7s)
+con-leche: done: parse 921.1s, check 825.7s, 12 workers t=1746.8s
+con-leche: stats: phases: parse 921.1s (index 0.7s), check 825.7s
+con-leche: stats: check pool: 825.751s wall, 12 workers, 69217 records, busy 9677.597s (97.6%); tail 32.806s after the last start, 12 busy then, 162.380s worker-time in it (41.2%)
+con-leche: stats: slowest checks: 220.382s theorem Robin1984.robinPrimeBlock028_checks._proof_1_1 (#67134); 203.975s theorem Robin1984.robinPrimeBlock031_checks._proof_1_1 (#67153); 194.919s theorem Robin1984.robinPrimeBlock037_checks._proof_1_1 (#67191); 191.927s theorem Robin1984.robinPrimeBlock034_checks._proof_1_1 (#67172); 189.147s theorem Robin1984.robinPrimeBlock036_checks._proof_1_1 (#67189)
+con-leche: accepted 69217 declarations, 5 axioms justified by the solution E:\Lean\.lake\node84-check\solution.ndjson (1468418 declarations accepted) (--verified)
+con-leche: theorem riemannHypothesis justified by the solution
+con-leche: theorem riemannZeta_eq_zero_re justified by the solution
+con-leche: theorem LFunction_ne_zero_of_half_lt_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re_of_isPrimitive justified by the solution

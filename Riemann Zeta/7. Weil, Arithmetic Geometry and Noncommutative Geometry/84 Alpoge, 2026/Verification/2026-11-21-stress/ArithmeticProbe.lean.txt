@@ -1,0 +1,20 @@
+import Challenge
+import Continuation
+import Robin1984.Equivalence.Theorem
+import Robin1984.Lagarias.Theorem
+
+theorem node84_series_rh : Node84SeriesRH :=
+  node84_rh_iff_series_continuation.mp riemannHypothesis
+
+theorem node84_series_dirichlet_grh : Node84SeriesDirichletGRH :=
+  node84_dirichlet_iff_series_continuation.mp LFunction_eq_zero_re
+
+theorem node84_robin : ∀ n : ℕ, 5040 < n →
+    ((ArithmeticFunction.sigma 1 n : ℕ) : ℝ) <
+      Real.exp Real.eulerMascheroniConstant * (n : ℝ) * Real.log (Real.log (n : ℝ)) :=
+  Robin1984.riemannHypothesis_iff_nativeRobinInequalityAll.mp riemannHypothesis
+
+theorem node84_lagarias : ∀ n : ℕ, 0 < n →
+    ((ArithmeticFunction.sigma 1 n : ℕ) : ℝ) ≤
+      (harmonic n : ℝ) + Real.exp (harmonic n : ℝ) * Real.log (harmonic n : ℝ) :=
+  Robin1984.riemannHypothesis_iff_lagariasElementaryCriterion.mp riemannHypothesis

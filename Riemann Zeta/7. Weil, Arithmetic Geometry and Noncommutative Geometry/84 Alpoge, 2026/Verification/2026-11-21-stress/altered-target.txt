@@ -1,0 +1,39 @@
+con-leche: reading E:\Lean\.lake\node84-check\stress-20261121\wrong\with-trivial-zeros.ndjson
+con-leche: reading E:\Lean\.lake\node84-check\solution.ndjson
+con-leche: checking: 1468418 declarations on 12 workers t=196.1s
+con-leche: check 194834 (13%) t=226.1s busy=11/12
+con-leche: check 271149 (18%) t=256.1s busy=11/12, oldest theorem Formalism.IrreducibleCountingLemmas.GaloisIrreducibility.PrimeCountingLemmas.factorial_ladder_one_forty_one._proof_1_1 (#226690) 19.438s
+con-leche: check 326770 (22%) t=286.1s busy=11/12
+con-leche: check 387437 (26%) t=316.1s busy=11/12
+con-leche: check 454142 (30%) t=346.1s busy=11/12
+con-leche: check 486912 (33%) t=376.1s busy=11/12
+con-leche: check 526070 (35%) t=406.1s busy=11/12
+con-leche: check 578849 (39%) t=436.1s busy=11/12
+con-leche: check 615402 (41%) t=466.1s busy=11/12
+con-leche: check 670875 (45%) t=496.1s busy=11/12
+con-leche: check 749384 (51%) t=526.1s busy=10/12
+con-leche: check 796154 (54%) t=556.1s busy=11/12
+con-leche: check 834004 (56%) t=586.1s busy=11/12
+con-leche: check 862608 (58%) t=616.1s busy=11/12, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 37.650s
+con-leche: check 900234 (61%) t=646.1s busy=11/12
+con-leche: check 976653 (66%) t=676.1s busy=11/12
+con-leche: check 1041935 (70%) t=706.1s busy=11/12
+con-leche: check 1106518 (75%) t=736.1s busy=11/12
+con-leche: check 1161935 (79%) t=766.1s busy=11/12
+con-leche: check 1211249 (82%) t=796.1s busy=11/12
+con-leche: check 1236750 (84%) t=826.1s busy=11/12
+con-leche: check 1300789 (88%) t=856.1s busy=11/12
+con-leche: check 1361111 (92%) t=886.1s busy=11/12
+con-leche: check 1427930 (97%) t=916.1s busy=11/12
+con-leche: check done: 1468418 declarations t=943.7s (check 747.5s)
+con-leche: done: parse 196.1s, check 747.5s, 12 workers t=943.7s
+con-leche: stats: phases: parse 196.1s (index 2.6s), check 747.5s
+con-leche: stats: check pool: 747.548s wall, 12 workers, 1468418 records, busy 8965.692s (99.9%); tail 0.214s after the last start, 12 busy then, 0.414s worker-time in it (16.0%)
+con-leche: stats: slowest checks: 49.814s theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554); 37.928s theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy (#829660); 32.550s theorem PI.PC.loop_run._proof_1_1 (#571290); 21.412s theorem Formalism.IrreducibleCountingLemmas.GaloisIrreducibility.PrimeCountingLemmas.factorial_ladder_one_forty_one._proof_1_1 (#226690); 16.714s theorem GlobalTheory.PrimeRecip.table_ok._proof_1_1 (#570391)
+con-leche: checking: 51690 declarations on 12 workers t=946.5s
+con-leche: check failed at fold position 51213 t=948.5s (check 1.9s)
+con-leche: done: parse 946.5s, check 1.9s, 12 workers t=948.5s
+con-leche: stats: phases: parse 946.5s (index 0.7s), check 1.9s
+con-leche: stats: check pool: 1.999s wall, 12 workers, 51214 records, busy 23.853s (99.4%); tail 0.007s after the last start, 12 busy then, 0.023s worker-time in it (25.4%)
+con-leche: stats: slowest checks: 0.041s theorem Lean.Grind.Ring.OfSemiring.mul_helper (#22850); 0.030s theorem HasFPowerSeriesWithinOnBall.hasSum_derivSeries_of_hasFDerivWithinAt (#40423); 0.029s theorem FormalMultilinearSeries.changeOrigin_eval (#40416); 0.027s theorem hasFDerivAt_of_tendstoUniformlyOnFilter (#35284); 0.026s theorem bernsteinPolynomial.variance (#50740)
+con-leche: invalid: axiom riemannHypothesis is not justified by the solution: the solution's riemannHypothesis has another type [at axiom riemannHypothesis, fold position 51213] (--verified) t=948.5s

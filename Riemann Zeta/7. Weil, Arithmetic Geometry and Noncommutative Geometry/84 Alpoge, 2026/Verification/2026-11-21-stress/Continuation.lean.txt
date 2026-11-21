@@ -1,0 +1,68 @@
+import Mathlib.NumberTheory.LSeries.DirichletContinuation
+
+open Complex Set Filter
+
+private theorem eqOn_of_agree_right {f g : ℂ → ℂ}
+    (hf : DifferentiableOn ℂ f ({1}ᶜ : Set ℂ)) (hg : DifferentiableOn ℂ g ({1}ᶜ : Set ℂ))
+    (h : ∀ s : ℂ, 1 < s.re → f s = g s) : EqOn f g ({1}ᶜ : Set ℂ) := by
+  have hconnected : IsPreconnected ({1}ᶜ : Set ℂ) :=
+    (isConnected_compl_singleton_of_one_lt_rank (by simp) 1).isPreconnected
+  have hnear : f =ᶠ[nhds (2 : ℂ)] g := by
+    refine eventually_of_mem ?_ (fun s (hs : 1 < s.re) ↦ h s hs)
+    exact (continuous_re.isOpen_preimage _ isOpen_Ioi).mem_nhds (by simp : 1 < (2 : ℂ).re)
+  exact (hf.analyticOnNhd isOpen_compl_singleton).eqOn_of_preconnected_of_eventuallyEq
+    (hg.analyticOnNhd isOpen_compl_singleton) hconnected (by simp : (2 : ℂ) ∈ ({1}ᶜ : Set ℂ)) hnear
+
+/-- RH stated for any holomorphic continuation of the classical Dirichlet series. -/
+def Node84SeriesRH : Prop :=
+  ∀ f : ℂ → ℂ, DifferentiableOn ℂ f ({1}ᶜ : Set ℂ) →
+    (∀ s : ℂ, 1 < s.re → f s = ∑' n : ℕ, 1 / (n + 1 : ℂ) ^ s) →
+    ∀ s : ℂ, f s = 0 → (¬ ∃ n : ℕ, s = -2 * ((n : ℂ) + 1)) → s ≠ 1 → s.re = 1 / 2
+
+theorem node84_rh_iff_series_continuation : RiemannHypothesis ↔ Node84SeriesRH := by
+  have hz : DifferentiableOn ℂ riemannZeta ({1}ᶜ : Set ℂ) :=
+    fun s hs ↦ (differentiableAt_riemannZeta hs).differentiableWithinAt
+  constructor
+  · intro rh f hf hsum
+    have heq := eqOn_of_agree_right hf hz
+      (fun s hs ↦ (hsum s hs).trans (zeta_eq_tsum_one_div_nat_add_one_cpow hs).symm)
+    intro s hzero hnontrivial hs
+    exact rh s ((heq hs).symm.trans hzero) hnontrivial hs
+  · intro h
+    exact h riemannZeta hz (fun _ hs ↦ zeta_eq_tsum_one_div_nat_add_one_cpow hs)
+
+/-- Critical-strip GRH for analytic continuations of the character-weighted series. -/
+def Node84SeriesDirichletGRH : Prop :=
+  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (f : ℂ → ℂ),
+    DifferentiableOn ℂ f ({1}ᶜ : Set ℂ) →
+    (∀ s : ℂ, 1 < s.re →
+      f s = ∑' n : ℕ, χ ((n + 1 : ℕ) : ZMod N) / (n + 1 : ℂ) ^ s) →
+    ∀ s : ℂ, 0 < s.re → s.re < 1 → f s = 0 → s.re = 1 / 2
+
+private theorem dirichlet_eq_series {N : ℕ} [NeZero N] (χ : DirichletCharacter ℂ N)
+    (s : ℂ) (hs : 1 < s.re) : χ.LFunction s =
+      ∑' n : ℕ, χ ((n + 1 : ℕ) : ZMod N) / (n + 1 : ℂ) ^ s := by
+  have hsum : Summable (LSeries.term (fun n : ℕ ↦ χ (n : ZMod N)) s) :=
+    ZMod.LSeriesSummable_of_one_lt_re χ hs
+  rw [DirichletCharacter.LFunction_eq_LSeries χ hs, LSeries, hsum.tsum_eq_zero_add]
+  simp [LSeries.term]
+
+theorem node84_dirichlet_iff_series_continuation :
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),
+      0 < s.re → s.re < 1 → χ.LFunction s = 0 → s.re = 1 / 2) ↔ Node84SeriesDirichletGRH := by
+  have hdiff {N : ℕ} [NeZero N] (χ : DirichletCharacter ℂ N) :
+      DifferentiableOn ℂ χ.LFunction ({1}ᶜ : Set ℂ) :=
+    fun s hs ↦ (χ.differentiableAt_LFunction s (.inl hs)).differentiableWithinAt
+  constructor
+  · intro h N _ χ f hf hsum s hpos hlt hzero
+    have heq := eqOn_of_agree_right hf (hdiff χ)
+      (fun t ht ↦ (hsum t ht).trans (dirichlet_eq_series χ t ht).symm)
+    have hs : s ≠ 1 := by
+      rintro rfl
+      simp at hlt
+    exact h N χ s hpos hlt ((heq hs).symm.trans hzero)
+  · intro h N _ χ
+    exact h N χ χ.LFunction (hdiff χ) (dirichlet_eq_series χ)
+
+#print axioms node84_rh_iff_series_continuation
+#print axioms node84_dirichlet_iff_series_continuation

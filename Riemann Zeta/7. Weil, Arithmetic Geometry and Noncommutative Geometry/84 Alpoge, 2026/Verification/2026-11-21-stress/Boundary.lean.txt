@@ -1,0 +1,11 @@
+import Mathlib
+
+theorem node84_trivial_zero_counterexample :
+    ¬ (∀ s : ℂ, riemannZeta s = 0 → s ≠ 1 → s.re = 1 / 2) := by
+  intro h
+  have hz : riemannZeta (-2 : ℂ) = 0 := by
+    simpa using riemannZeta_neg_two_mul_nat_add_one 0
+  have hbad := h (-2) hz (by norm_num)
+  norm_num at hbad
+
+#print axioms node84_trivial_zero_counterexample
