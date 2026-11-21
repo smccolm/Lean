@@ -43,7 +43,7 @@ private theorem two_character_band_bound (x : ℝ) :
       apply mul_nonpos_of_nonpos_of_nonneg <;> nlinarith
 
 /-- A prime-count normalized mean transfers to the open/closed dyadic interval. -/
-private theorem dyadic_prime_sum_of_mean {u : ℕ → ℝ} {c : ℝ}
+theorem dyadic_prime_sum_of_mean {u : ℕ → ℝ} {c : ℝ}
     (hu : Tendsto (fun N => (∑ p ∈ Nat.primesLE N, u p) / Nat.primeCounting N)
       atTop (𝓝 c)) :
     Tendsto (fun N => (∑ p ∈ dyadicPrimes N, u p) / ((N : ℝ) / Real.log N))
@@ -119,7 +119,8 @@ theorem primitive_band_count_of_two_prime_means {Q : ℕ} [NeZero Q] {k : ℤ}
   have hlarge := (lt_div_iff₀ hscale).mp hwN
   linarith
 
-private theorem growth_of_band_count {S : ℕ → Prop}
+/-- A fixed positive lower bound on the dyadic prime scale gives the logarithmic size required by H2. -/
+theorem growth_of_band_count {S : ℕ → Prop}
     (hl : ∀ᶠ N : ℕ in atTop, ((N : ℝ) / Real.log N) / 36 ≤
       ((selectedDyadicPrimes S N).card : ℝ)) :
     Tendsto (fun N => (selectedDyadicPrimes S N).card) atTop atTop ∧
@@ -143,6 +144,45 @@ private theorem growth_of_band_count {S : ℕ → Prop}
     have hsub : selectedDyadicPrimes S N ⊆ dyadicPrimes N := Finset.filter_subset _ _
     exact div_le_div_of_nonneg_right (Real.log_le_log (by linarith)
       (Nat.cast_le.mpr (Finset.card_le_card hsub))) (Real.log_pos hNr).le
+
+/-- Apply the proved Rankin mean and transport both normalized limits and the height
+limit to the actual classical coefficients for any isolated block satisfying H2. -/
+theorem primitive_concentration_of_isolated_block {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) {B : ℕ → Finset ℕ}
+    (hQ : IsolatedPrimeBlocks B) (hcard : Tendsto (fun N => (B N).card) atTop atTop)
+    (hc : PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1/2))
+    (hH2 : IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1/2)) :
+    TendstoLocallyUniformly (normalizedJessen (normalizedCuspCoefficients f.toCuspForm))
+      (fun σ => max (1 / 2 - σ) 0) atTop ∧
+    Tendsto (jessenProbability (normalizedCuspCoefficients_one f.toCuspForm f.normalized)) atTop
+      (𝓝 (⟨Measure.dirac (1 / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    TendstoLocallyUniformly (normalizedJessen (cuspCoefficients f.toCuspForm))
+      (fun σ => max ((k : ℝ) / 2 - σ) 0) atTop ∧
+    Tendsto (jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ᶠ N : ℕ in atTop, ∃ hN : 1 ≤ N, 1 < lastIndex (cuspCoefficients f.toCuspForm) N ∧ ∀ l u : ℝ,
+      Tendsto (fun T : ℝ => (2 * Real.pi / Real.log (lastIndex (cuspCoefficients f.toCuspForm) N)) *
+        ((verticalZeroCount (cuspCoefficients f.toCuspForm) N hN (f.normalized.trans_ne one_ne_zero) l u T : ℝ) /
+          (2 * T))) atTop
+        (𝓝 (((jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized N : Measure ℝ) (Ioo l u)).toReal))) := by
+  have ha := normalizedCuspCoefficients_one f.toCuspForm f.normalized
+  have hH1 := globalEnergyAsymptotic_of_mean_isolated ha (tendsto_cusp_square_mean f.toCuspForm hk)
+    hQ hcard hc hH2
+  obtain ⟨hp, _, _, hw, he⟩ := abstract_actual_zero_concentration ha hQ hcard hc hH1 hH2
+  have hne : ∀ᶠ N : ℕ in atTop, 1 ≤ N ∧ 1 < lastIndex (normalizedCuspCoefficients f.toCuspForm) N := by
+    filter_upwards [he] with N hN
+    obtain ⟨hn, hm, _⟩ := hN
+    exact ⟨hn, hm⟩
+  have hcp := shifted_normalizedJessen_limit hp (((k : ℝ) - 1) / 2)
+  have hcw := shifted_jessen_probability_limit ha hne hw (((k : ℝ) - 1) / 2)
+  rw [← cuspCoefficients_eq_shifted_normalized f.toCuspForm, classical_cusp_concentration_line] at hcp
+  rw [← jessenProbability_congr (cuspCoefficients_eq_shifted_normalized f.toCuspForm) f.normalized _,
+    classical_cusp_concentration_line] at hcw
+  refine ⟨hp, hw, hcp, hcw, ?_⟩
+  filter_upwards [hne] with N hn
+  have hm : 1 < lastIndex (cuspCoefficients f.toCuspForm) N := by
+    simpa only [normalizedCuspCoefficients_lastIndex] using hn.2
+  exact ⟨hn.1, hm, tendsto_normalized_verticalZeroCount hn.1 f.normalized hm⟩
 
 /-- Two explicit prime-power means give the normalized and classical concentration
 laws and the actual fixed-length height limit for the original Fourier coefficients. -/
@@ -173,24 +213,7 @@ theorem primitive_concentration_of_two_prime_means {Q : ℕ} [NeZero Q] {k : ℤ
   have hc := primeCoefficientComparability_of_selected_bounds hQ hb (1 / 2)
   have hH2 := (tendstoLocallyUniformly_selected_energy hQ hb hcard hlog).tendstoLocallyUniformlyOn
     (s := Iio (1/2))
-  have ha := normalizedCuspCoefficients_one f.toCuspForm f.normalized
-  have hH1 := globalEnergyAsymptotic_of_mean_isolated ha (tendsto_cusp_square_mean f.toCuspForm hk)
-    hQ hcard hc hH2
-  obtain ⟨hp, _, _, hw, he⟩ := abstract_actual_zero_concentration ha hQ hcard hc hH1 hH2
-  have hne : ∀ᶠ N : ℕ in atTop, 1 ≤ N ∧ 1 < lastIndex (normalizedCuspCoefficients f.toCuspForm) N := by
-    filter_upwards [he] with N hN
-    obtain ⟨hn, hm, _⟩ := hN
-    exact ⟨hn, hm⟩
-  have hcp := shifted_normalizedJessen_limit hp (((k : ℝ) - 1) / 2)
-  have hcw := shifted_jessen_probability_limit ha hne hw (((k : ℝ) - 1) / 2)
-  rw [← cuspCoefficients_eq_shifted_normalized f.toCuspForm, classical_cusp_concentration_line] at hcp
-  rw [← jessenProbability_congr (cuspCoefficients_eq_shifted_normalized f.toCuspForm) f.normalized _,
-    classical_cusp_concentration_line] at hcw
-  refine ⟨hp, hw, hcp, hcw, ?_⟩
-  filter_upwards [hne] with N hn
-  have hm : 1 < lastIndex (cuspCoefficients f.toCuspForm) N := by
-    simpa only [normalizedCuspCoefficients_lastIndex] using hn.2
-  exact ⟨hn.1, hm, tendsto_normalized_verticalZeroCount hn.1 f.normalized hm⟩
+  exact primitive_concentration_of_isolated_block f hk hQ hcard hc hH2
 
 end
 end Dubon2026

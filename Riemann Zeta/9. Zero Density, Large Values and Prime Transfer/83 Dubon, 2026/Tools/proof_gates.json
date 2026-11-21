@@ -3390,7 +3390,11 @@
         "Extension/Dubon2026/RationalPrimeChangedRootAuxiliaryMap.lean",
         "Extension/Dubon2026/RationalPrimeChangedAuxiliaryLocalField.lean",
         "Extension/Dubon2026/RationalPrimeChangedCyclotomicCompositum.lean",
-        "Extension/Dubon2026/RationalPrimeChangedCyclotomicLocalField.lean"
+        "Extension/Dubon2026/RationalPrimeChangedCyclotomicLocalField.lean",
+        "Extension/Dubon2026/AlpogeEigenformInput.lean",
+        "Extension/Dubon2026/MatchedLiftPurity.lean",
+        "Extension/Dubon2026/TwoPrimeMeanConcentration.lean",
+        "Extension/Dubon2026/DeligneConcentration.lean"
       ],
       "evidence": []
     },
@@ -3414,7 +3418,18 @@
         "Extension/Dubon2026/CuspConditionalConcentration.lean",
         "Extension/Dubon2026/CuspArithmeticConcentration.lean",
         "Extension/Dubon2026/PrimitiveArithmeticConcentration.lean",
-        "Extension/Dubon2026/LevelOneSelfTwist.lean"
+        "Extension/Dubon2026/LevelOneSelfTwist.lean",
+        "Extension/Dubon2026/TwoPrimeMeanConcentration.lean",
+        "Extension/Dubon2026/DeligneConcentration.lean",
+        "Extension/Dubon2026/PositiveWiener.lean",
+        "Extension/Dubon2026/SecondSpectralTail.lean",
+        "Extension/Dubon2026/SecondPrimeSeries.lean",
+        "Extension/Dubon2026/SecondPrimeMean.lean",
+        "Extension/Dubon2026/PrimeEnergyMass.lean",
+        "Extension/Dubon2026/EnergyBands.lean",
+        "Extension/Dubon2026/WeightedPrimeEnergy.lean",
+        "Extension/Dubon2026/EnergyBandGrowth.lean",
+        "Extension/Dubon2026/PrimitiveConcentration.lean"
       ],
       "evidence": []
     },

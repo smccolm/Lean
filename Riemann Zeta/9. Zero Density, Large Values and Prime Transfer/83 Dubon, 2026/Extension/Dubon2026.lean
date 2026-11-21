@@ -448,6 +448,11 @@ import Dubon2026.CuspRankinPoleNumerator
 import Dubon2026.CuspRankinRegular
 import Dubon2026.CuspNormalizedEnergy
 import Dubon2026.CuspRankinMean
+import Dubon2026.AlpogeEigenformInput
+import Dubon2026.MatchedLiftPurity
+import Dubon2026.PrimitiveConcentration
+import Dubon2026.DeligneConcentration
+import Dubon2026.TwoPrimeMeanConcentration
 import Dubon2026.CuspSatoTateConcentration
 import Dubon2026.MoebiusSquareSeries
 import Dubon2026.RankinDeconvolution

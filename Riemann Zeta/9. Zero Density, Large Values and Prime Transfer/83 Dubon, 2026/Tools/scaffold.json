@@ -177214,6 +177214,62 @@
     {
       "path": "Tools/original-dihedral-arithmetic-scratch-20261117-2592/SourceProjectiveInvolutionTrace2580b.log",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/AlpogeEigenformInput.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatchedLiftPurity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwoPrimeMeanConcentration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DeligneConcentration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveWiener.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SecondSpectralTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SecondPrimeSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SecondPrimeMean.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeEnergyMass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EnergyBands.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WeightedPrimeEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EnergyBandGrowth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveConcentration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/PositiveWiener-LICENSE.txt",
+      "role": "Dependencies"
     }
   ],
   "statusDocuments": [
@@ -187103,7 +187159,20 @@
     "SourceOriginalIntegralCMDimensionField",
     "SourceOriginalIntegralCMDimensionProperty",
     "SourceOriginalIntegralCMDimensionAssembly",
-    "SourceGammaOneOriginalCMDimensions"
+    "SourceGammaOneOriginalCMDimensions",
+    "AlpogeEigenformInput",
+    "MatchedLiftPurity",
+    "TwoPrimeMeanConcentration",
+    "DeligneConcentration",
+    "PositiveWiener",
+    "SecondSpectralTail",
+    "SecondPrimeSeries",
+    "SecondPrimeMean",
+    "PrimeEnergyMass",
+    "EnergyBands",
+    "WeightedPrimeEnergy",
+    "EnergyBandGrowth",
+    "PrimitiveConcentration"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

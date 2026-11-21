@@ -12289,4 +12289,37 @@ theorem actual_fixed_residual_framed_universality_fixedResidualFramedFiberEquiv_
 end
 
 
+/-- A rank-independent bound on matched spectra at each good prime feeds the
+actual weak limit of the classical Fourier truncations at weight divided by two. -/
+theorem classical_zero_limit_of_matched_lifts {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hlift : ∀ p : Nat.Primes, ¬(p : ℕ) ∣ Q →
+      ∃ (q : ℝ) (B : ℕ → Multiset ℂˣ), (∀ r, ∀ z ∈ B r, ‖(z : ℂ)‖ ^ 2 < q) ∧
+        ∃ᶠ r in atTop, (B r).map (fun z : ℂˣ => (z : ℂ)) =
+          (Finset.univ : Finset (Fin (r+1))).val.map (primitiveSymmetricSpectralRoots f r p)) :
+    Tendsto (jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ)/2), inferInstance⟩ : ProbabilityMeasure ℝ)) := by
+  apply (primitive_concentration_of_good_prime_bound f hk ?_).2.2.2.1
+  intro p hp hgood
+  obtain ⟨q, B, hB, hmatch⟩ := hlift ⟨p, hp⟩ hgood
+  exact primitive_prime_bound_of_matched_lifts f ⟨p, hp⟩ hgood B q hB hmatch
+
+/-- The original, unsmoothed Fourier-coefficient truncations have the source weak
+limit for every primitive form of the stated weight. -/
+theorem classical_zero_limit_from_prime_energy {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    Tendsto (jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ)/2), inferInstance⟩ : ProbabilityMeasure ℝ)) :=
+  (primitive_concentration f hk).2.2.2.1
+
+/-- Level one uses the given normalized eigenform, with no auxiliary arithmetic input. -/
+theorem level_one_zero_limit_from_prime_energy {k : ℤ} (hk : 2 ≤ k)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1)
+    (he : ∀ n : ℕ, 0 < n → n.Coprime 1 → ∃ eigenvalue : ℂ,
+      ∀ τ : UpperHalfPlane, classicalHeckeFunction 1 k n f τ = eigenvalue * f τ) :
+    Tendsto (jessenProbability (a := cuspCoefficients f) hf) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ)/2), inferInstance⟩ : ProbabilityMeasure ℝ)) :=
+  (level_one_eigenform_concentration hk f hf he).2.2.2
+
 end Dubon2026.SemanticRegression
