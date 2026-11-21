@@ -40,3 +40,5 @@ scratch/
 rewrite_env.sh
 review_text.txt
 reaudit_text.txt
+
+/.scratch/dubon-alpoge-20261121/headers.sqlite

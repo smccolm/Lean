@@ -17,17 +17,22 @@ private theorem two_character_band_bound (x : ℝ) :
       if 1 ≤ |x| ∧ |x| ≤ 2 then 9 else 0 := by
   have hid : 1 + 2 * (Chebyshev.S ℝ 2).eval x - (Chebyshev.S ℝ 6).eval x =
       x^2 * ((x^2 - 1) * (4 - x^2)) := by
-    rw [show (6 : ℤ) = 4 + 2 by decide, Chebyshev.S_add_two,
-      show (4 + 1 : ℤ) = 3 + 2 by decide, Chebyshev.S_add_two,
-      show (4 : ℤ) = 2 + 2 by decide, Chebyshev.S_add_two,
-      show (3 : ℤ) = 1 + 2 by decide, Chebyshev.S_add_two]
-    norm_num [Chebyshev.S_two, Chebyshev.S_one, Chebyshev.S_zero] <;> ring
+    have step (n : ℤ) : (Chebyshev.S ℝ (n+2)).eval x =
+        x * (Chebyshev.S ℝ (n+1)).eval x - (Chebyshev.S ℝ n).eval x := by
+      rw [Chebyshev.S_add_two, eval_sub, eval_mul, eval_X]
+    have e3 := step 1
+    have e4 := step 2
+    have e5 := step 3
+    have e6 := step 4
+    norm_num [Chebyshev.S_two, Chebyshev.S_one] at e3 e4 e5 e6 ⊢
+    rw [e6, e5, e4, e3]
+    ring
   rw [hid, ← sq_abs x]
   split_ifs with h
   · have ht : |x| ^ 2 ≤ 4 := by nlinarith [sq_nonneg (2 - |x|), mul_self_le_mul_self (abs_nonneg x) h.2]
     have hb : (|x| ^ 2 - 1) * (4 - |x| ^ 2) ≤ 9 / 4 := by nlinarith [sq_nonneg (|x| ^ 2 - 5 / 2)]
     nlinarith [mul_le_mul_of_nonneg_left hb (sq_nonneg |x|)]
-  · push_neg at h
+  · push Not at h
     apply mul_nonpos_of_nonneg_of_nonpos (sq_nonneg _)
     by_cases hl : 1 ≤ |x|
     · have ht := h hl
@@ -66,7 +71,126 @@ private theorem dyadic_prime_sum_of_mean {u : ℕ → ℝ} {c : ℝ}
   have hq : (Nat.primeCounting (N / 2) : ℝ) ≠ 0 := by exact_mod_cast (show Nat.primeCounting (N / 2) ≠ 0 by omega)
   simp only [Function.comp_apply]
   field_simp
-  <;> ring
+  ring
+
+/-- Averages over all primes suffice. Eventually each prime in the dyadic window is
+above the level, so both character identities apply to the original form. -/
+theorem primitive_band_count_of_two_prime_means {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hmean : ∀ r ∈ ({2, 6} : Finset ℕ), Tendsto (fun N =>
+      (∑ p ∈ Nat.primesLE N, (normalizedCuspCoefficients f.toCuspForm (p^r)).re) /
+        Nat.primeCounting N) atTop (𝓝 0)) :
+    ∀ᶠ N : ℕ in atTop, ((N : ℝ) / Real.log N) / 36 ≤
+      ((selectedDyadicPrimes (cuspPrimeSelection f.toCuspForm) N).card : ℝ) := by
+  classical
+  let a := normalizedCuspCoefficients f.toCuspForm
+  let w := fun p => 1 + 2 * (a (p^2)).re - (a (p^6)).re
+  have h2 := dyadic_prime_sum_of_mean (hmean 2 (by simp))
+  have h6 := dyadic_prime_sum_of_mean (hmean 6 (by simp))
+  have hw : Tendsto (fun N => (∑ p ∈ dyadicPrimes N, w p) / ((N : ℝ) / Real.log N))
+      atTop (𝓝 (1/2)) := by
+    have h := (tendsto_card_dyadicPrimes_ratio.add (h2.const_mul 2)).sub h6
+    norm_num at h
+    apply h.congr
+    intro N
+    simp only [w, Finset.sum_sub_distrib, Finset.sum_add_distrib, Finset.sum_const,
+      nsmul_eq_mul, mul_one, ← Finset.mul_sum, sub_div, add_div, mul_div_assoc, a]
+  filter_upwards [hw.eventually (lt_mem_nhds (by norm_num : (1/4 : ℝ) < 1/2)),
+    eventually_ge_atTop (2 * Q + 2)] with N hwN hN
+  have hNr : (1 : ℝ) < N := by exact_mod_cast (show 1 < N by omega)
+  have hscale : 0 < (N : ℝ) / Real.log N := div_pos (by linarith) (Real.log_pos hNr)
+  have hsum : (∑ p ∈ dyadicPrimes N, w p) ≤
+      9 * ((selectedDyadicPrimes (cuspPrimeSelection f.toCuspForm) N).card : ℝ) := by
+    calc
+      _ ≤ ∑ p ∈ dyadicPrimes N, (if cuspPrimeSelection f.toCuspForm p then (9 : ℝ) else 0) := by
+        apply Finset.sum_le_sum
+        intro p hp
+        obtain ⟨hprime, _, _⟩ := mem_dyadicPrimes.mp hp
+        have hinterval := (Finset.mem_Ioc.mp (Finset.mem_filter.mp hp).1).1
+        have hgood : ¬p ∣ Q := fun hd => by
+          have := Nat.le_of_dvd (Nat.pos_of_neZero Q) hd
+          omega
+        have hreal := primitiveCuspForm_normalizedCoefficient_im f p (hprime.coprime_iff_not_dvd.mpr hgood)
+        simpa only [w, a, cuspPrimeSelection, hgood, not_false_eq_true, true_and,
+          primitiveCuspForm_normalized_primePower_re f hprime hgood,
+          norm_eq_abs_re_of_im_zero hreal, Nat.cast_ofNat] using
+          two_character_band_bound ((a p).re)
+      _ = _ := by rw [← Finset.sum_filter]; simp [selectedDyadicPrimes, mul_comm]
+  have hlarge := (lt_div_iff₀ hscale).mp hwN
+  linarith
+
+private theorem growth_of_band_count {S : ℕ → Prop}
+    (hl : ∀ᶠ N : ℕ in atTop, ((N : ℝ) / Real.log N) / 36 ≤
+      ((selectedDyadicPrimes S N).card : ℝ)) :
+    Tendsto (fun N => (selectedDyadicPrimes S N).card) atTop atTop ∧
+    Tendsto (fun N => Real.log (selectedDyadicPrimes S N).card / Real.log N) atTop (𝓝 1) := by
+  classical
+  have hg := tendsto_nat_div_log_atTop.atTop_div_const (by norm_num : (0 : ℝ) < 36)
+  have hcard := tendsto_atTop_mono' atTop hl hg
+  refine ⟨tendsto_natCast_atTop_iff.mp hcard, ?_⟩
+  have hlogN := Real.tendsto_log_atTop.comp (tendsto_natCast_atTop_atTop (R := ℝ))
+  have hlow := tendsto_log_nat_div_log_ratio.sub (hlogN.const_div_atTop (Real.log 36))
+  rw [sub_zero] at hlow
+  apply tendsto_of_tendsto_of_tendsto_of_le_of_le' hlow tendsto_log_card_dyadicPrimes_ratio
+  · filter_upwards [hl, eventually_ge_atTop 2] with N hb hN
+    have hNr : (1 : ℝ) < N := by exact_mod_cast (show 1 < N by omega)
+    have hs : 0 < (N : ℝ) / Real.log N := div_pos (by linarith) (Real.log_pos hNr)
+    have hlog := Real.log_le_log (div_pos hs (by norm_num : (0 : ℝ) < 36)) hb
+    rw [Real.log_div hs.ne' (by norm_num)] at hlog
+    simpa only [sub_div] using div_le_div_of_nonneg_right hlog (Real.log_pos hNr).le
+  · filter_upwards [hcard.eventually_ge_atTop 1, eventually_ge_atTop 2] with N hc hN
+    have hNr : (1 : ℝ) < N := by exact_mod_cast (show 1 < N by omega)
+    have hsub : selectedDyadicPrimes S N ⊆ dyadicPrimes N := Finset.filter_subset _ _
+    exact div_le_div_of_nonneg_right (Real.log_le_log (by linarith)
+      (Nat.cast_le.mpr (Finset.card_le_card hsub))) (Real.log_pos hNr).le
+
+/-- Two explicit prime-power means give the normalized and classical concentration
+laws and the actual fixed-length height limit for the original Fourier coefficients. -/
+theorem primitive_concentration_of_two_prime_means {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k)
+    (hmean : ∀ r ∈ ({2, 6} : Finset ℕ), Tendsto (fun N =>
+      (∑ p ∈ Nat.primesLE N, (normalizedCuspCoefficients f.toCuspForm (p^r)).re) /
+        Nat.primeCounting N) atTop (𝓝 0)) :
+    TendstoLocallyUniformly (normalizedJessen (normalizedCuspCoefficients f.toCuspForm))
+      (fun σ => max (1 / 2 - σ) 0) atTop ∧
+    Tendsto (jessenProbability (normalizedCuspCoefficients_one f.toCuspForm f.normalized)) atTop
+      (𝓝 (⟨Measure.dirac (1 / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    TendstoLocallyUniformly (normalizedJessen (cuspCoefficients f.toCuspForm))
+      (fun σ => max ((k : ℝ) / 2 - σ) 0) atTop ∧
+    Tendsto (jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ᶠ N : ℕ in atTop, ∃ hN : 1 ≤ N, 1 < lastIndex (cuspCoefficients f.toCuspForm) N ∧ ∀ l u : ℝ,
+      Tendsto (fun T : ℝ => (2 * Real.pi / Real.log (lastIndex (cuspCoefficients f.toCuspForm) N)) *
+        ((verticalZeroCount (cuspCoefficients f.toCuspForm) N hN (f.normalized.trans_ne one_ne_zero) l u T : ℝ) /
+          (2 * T))) atTop
+        (𝓝 (((jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized N : Measure ℝ) (Ioo l u)).toReal))) := by
+  let B := selectedDyadicPrimes (cuspPrimeSelection f.toCuspForm)
+  have hQ := isolatedPrimeBlocks_selectedDyadicPrimes (cuspPrimeSelection f.toCuspForm)
+  obtain ⟨hcard, hlog⟩ := growth_of_band_count (primitive_band_count_of_two_prime_means f hmean)
+  have hb : ∀ᶠ N in atTop, ∀ p ∈ B N,
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2 :=
+    Eventually.of_forall fun _ _ hp => (mem_selectedDyadicPrimes.mp hp).2.2
+  have hc := primeCoefficientComparability_of_selected_bounds hQ hb (1 / 2)
+  have hH2 := (tendstoLocallyUniformly_selected_energy hQ hb hcard hlog).tendstoLocallyUniformlyOn
+    (s := Iio (1/2))
+  have ha := normalizedCuspCoefficients_one f.toCuspForm f.normalized
+  have hH1 := globalEnergyAsymptotic_of_mean_isolated ha (tendsto_cusp_square_mean f.toCuspForm hk)
+    hQ hcard hc hH2
+  obtain ⟨hp, _, _, hw, he⟩ := abstract_actual_zero_concentration ha hQ hcard hc hH1 hH2
+  have hne : ∀ᶠ N : ℕ in atTop, 1 ≤ N ∧ 1 < lastIndex (normalizedCuspCoefficients f.toCuspForm) N := by
+    filter_upwards [he] with N hN
+    obtain ⟨hn, hm, _⟩ := hN
+    exact ⟨hn, hm⟩
+  have hcp := shifted_normalizedJessen_limit hp (((k : ℝ) - 1) / 2)
+  have hcw := shifted_jessen_probability_limit ha hne hw (((k : ℝ) - 1) / 2)
+  rw [← cuspCoefficients_eq_shifted_normalized f.toCuspForm, classical_cusp_concentration_line] at hcp
+  rw [← jessenProbability_congr (cuspCoefficients_eq_shifted_normalized f.toCuspForm) f.normalized _,
+    classical_cusp_concentration_line] at hcw
+  refine ⟨hp, hw, hcp, hcw, ?_⟩
+  filter_upwards [hne] with N hn
+  have hm : 1 < lastIndex (cuspCoefficients f.toCuspForm) N := by
+    simpa only [normalizedCuspCoefficients_lastIndex] using hn.2
+  exact ⟨hn.1, hm, tendsto_normalized_verticalZeroCount hn.1 f.normalized hm⟩
 
 end
 end Dubon2026
